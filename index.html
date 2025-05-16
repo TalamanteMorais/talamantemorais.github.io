@@ -1,103 +1,168 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Talamante Morais - Advocacia Pública Municipal</title>
-
-  <!-- Fonte Montserrat (Google Fonts) -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-
+  <title>Talamante Morais – Advocacia Pública Municipal</title>
   <style>
     body {
+      font-family: Arial, sans-serif;
       margin: 0;
-      font-family: 'Montserrat', sans-serif;
-      background-color: #ffffff;
+      padding: 0;
+      background-image: url('fundo.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
     }
-
     header {
-      background-color: #002b5c;
+      background-color: rgba(0, 51, 102, 0.9);
       color: white;
-      padding: 10px 0;
+      padding: 10px 20px;
       text-align: center;
     }
-
     nav {
-      background-color: #001d3d;
-      display: flex;
-      justify-content: center;
+      background-color: rgba(0, 85, 153, 0.95);
       padding: 10px 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
-
     nav a {
       color: white;
       text-decoration: none;
-      margin: 0 20px;
-      font-weight: 600;
-      transition: color 0.3s;
+      margin: 0 15px;
+      font-weight: bold;
     }
-
-    nav a:hover {
-      color: #ffc107;
-    }
-
-    .logo-container {
-      background-color: #003366;
-      text-align: center;
-      padding: 20px 0;
-    }
-
-    .logo-container img {
-      max-width: 100%;
-      height: auto;
-    }
-
-    .main-content {
+    section {
       padding: 40px 20px;
-      text-align: center;
+      background-color: rgba(255, 255, 255, 0.92);
+      margin: 20px;
+      border-radius: 8px;
     }
-
-    .main-content h1 {
-      font-weight: 700;
-      color: #002b5c;
-    }
-
-    .main-content p {
-      font-weight: 400;
-      color: #333;
-    }
-
     footer {
-      background-color: #002b5c;
+      background-color: rgba(0, 51, 102, 0.9);
       color: white;
       text-align: center;
-      padding: 10px;
-      font-size: 0.9em;
+      padding: 15px;
+      font-size: 14px;
+    }
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: white;
+      padding: 15px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
     }
   </style>
 </head>
 <body>
 
-  <div class="logo-container">
-    <img src="Logo_Original_Site_500x150.webp" alt="Talamante Morais - Advocacia Pública Municipal">
-  </div>
+  <header>
+    <h1>Talamante Morais</h1>
+    <p>Advocacia Pública Municipal</p>
+  </header>
 
   <nav>
-    <a href="#">Início</a>
-    <a href="#">Sobre</a>
-    <a href="#">Serviços</a>
-    <a href="#">Publicações</a>
-    <a href="#">Contato</a>
+    <a href="#inicio">Início</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#atuacao">Atuação</a>
+    <a href="#publicacoes">Publicações</a>
+    <a href="#contato">Contato</a>
   </nav>
 
-  <div class="main-content">
-    <h1>Bem-vindo ao site institucional</h1>
-    <p>Este espaço está em desenvolvimento. Em breve, mais informações sobre serviços jurídicos especializados em Direito Público Municipal.</p>
+  <section id="inicio">
+    <h2>Bem-vindo</h2>
+    <p>Este é o site oficial do escritório Talamante Morais – Advocacia Pública Municipal. Especializado em consultoria e atuação estratégica junto à Administração Pública.</p>
+  </section>
+
+  <section id="sobre">
+    <h2>Sobre</h2>
+    <p>Advogado com experiência em Direito Administrativo, Licitações e Contratos, Direito Municipal e Processo Legislativo. Atuação independente com foco técnico e preventivo.</p>
+  </section>
+
+  <section id="atuacao">
+    <h2>Áreas de Atuação</h2>
+    <ul>
+      <li>Licitações e Contratos Administrativos</li>
+      <li>Consultoria em Direito Municipal</li>
+      <li>Processo Legislativo</li>
+      <li>Compliance no Setor Público</li>
+    </ul>
+  </section>
+
+  
+  
+<section id="publicacoes">
+  <h2>Publicações</h2>
+
+  <div style="margin-top: 20px;">
+    <h3>Vídeos no YouTube</h3>
+    <p>Assista a vídeos sobre temas relevantes do Direito Público:</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/JtECSgHf4iM" title="Palestra sobre Licitações" frameborder="0" allowfullscreen></iframe>
   </div>
 
+  <div style="margin-top: 40px;">
+    <h3>Documentos em PDF</h3>
+    <ul>
+      <li><a href="parecer_comissao_educacao.pdf" target="_blank">Parecer Técnico – Comissão de Educação</a></li>
+      <li><a href="manual_compliance.pdf" target="_blank">Manual de Compliance Público Municipal</a></li>
+    </ul>
+  </div>
+
+  <div style="margin-top: 40px;">
+    <h3>Vídeos Gravados</h3>
+    <p>Assista a vídeos gravados de eventos e cursos diretamente no navegador:</p>
+    <video width="560" height="315" controls>
+      <source src="palestra_completa.mp4" type="video/mp4">
+      Seu navegador não suporta a reprodução de vídeo.
+    </video>
+  </div>
+
+    <h2>Publicações</h2>
+    <p>Abaixo você poderá inserir imagens e vídeos relacionados à sua atuação.</p>
+
+    <div style="margin-top: 20px;">
+      <h3>Imagens</h3>
+      <p>Substitua as imagens abaixo pelos seus arquivos reais:</p>
+      <img src="exemplo1.jpg" alt="Exemplo de imagem 1" style="max-width: 100%; height: auto; margin-bottom: 10px;">
+      <img src="exemplo2.jpg" alt="Exemplo de imagem 2" style="max-width: 100%; height: auto;">
+    </div>
+
+    <div style="margin-top: 40px;">
+      <h3>Vídeos</h3>
+      <p>Você pode incorporar vídeos do YouTube ou outras plataformas:</p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </section>
+
+
+  <section id="contato">
+    <h2>Contato</h2>
+    <p><strong>E-mail:</strong> talamantemorais@gmail.com</p>
+    <p><strong>WhatsApp:</strong> (62) 9 99631-8340</p>
+    <p><strong>Redes Sociais:</strong></p>
+    <ul>
+      <li><a href="https://www.instagram.com/talamantemorais/" target="_blank">Instagram</a></li>
+      <li><a href="https://www.facebook.com/talamante.morais.100" target="_blank">Facebook</a></li>
+      <li><a href="https://www.linkedin.com/in/talamante-morais-a51535221/" target="_blank">LinkedIn</a></li>
+      <li><a href="https://www.youtube.com/@TalamanteMorais" target="_blank">YouTube</a></li>
+    </ul>
+  </section>
+
   <footer>
-    &copy; 2025 Talamante Morais. Todos os direitos reservados.
+    &copy; 2025 Talamante Morais – Todos os direitos reservados.
   </footer>
+
+  <a class="whatsapp-button" href="https://wa.me/55629996318340" target="_blank">
+    WhatsApp
+  </a>
 
 </body>
 </html>
