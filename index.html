@@ -12,8 +12,15 @@
     header {
       background-color: #003366;
       color: #fff;
-      padding: 20px;
+      padding: 10px 20px;
       text-align: center;
+    }
+    .logo-placeholder {
+      background-color: #ffffff;
+      color: #003366;
+      font-weight: bold;
+      padding: 20px;
+      margin-bottom: 10px;
     }
     nav {
       background-color: #005599;
@@ -36,11 +43,34 @@
       padding: 15px;
       font-size: 14px;
     }
+    .social-links {
+      margin-top: 10px;
+    }
+    .social-links a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: white;
+      border: none;
+      padding: 15px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
   </style>
 </head>
 <body>
 
   <header>
+    <div class="logo-placeholder">Sua Logomarca Aqui</div>
     <h1>Talamante Morais</h1>
     <p>Advocacia Pública Municipal</p>
   </header>
@@ -67,13 +97,23 @@
 
   <section id="contato">
     <h2>Contato</h2>
-    <p>E-mail: talamantemorais@gmail.com</p>
-    <p>Telefone: (62) 99999-9999</p>
+    <p><strong>E-mail:</strong> talamantemorais@gmail.com</p>
+    <p><strong>WhatsApp:</strong> (62) 9 99631-8340</p>
+    <div class="social-links">
+      <a href="#">Instagram</a> |
+      <a href="#">YouTube</a> |
+      <a href="#">Facebook</a> |
+      <a href="#">LinkedIn</a>
+    </div>
   </section>
 
   <footer>
     &copy; 2025 Talamante Morais – Todos os direitos reservados.
   </footer>
+
+  <a class="whatsapp-button" href="https://wa.me/55629996318340" target="_blank">
+    WhatsApp
+  </a>
 
 </body>
 </html>
