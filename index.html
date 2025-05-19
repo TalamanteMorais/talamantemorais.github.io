@@ -12,9 +12,8 @@
       background: url('Arte_Fundo_1.jpg') no-repeat center center fixed;
       background-size: cover;
     }
-
     header, footer, nav, section {
-      background-color: rgba(255, 255, 255, 0.92);
+      background-color: rgba(255, 255, 255, 0.94);
       padding: 20px;
       margin: 0 auto;
       max-width: 1100px;
@@ -22,28 +21,24 @@
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-
     header {
       text-align: center;
       color: #002b50;
     }
-
     nav {
       background-color: #005599;
       text-align: center;
+      border-radius: 8px;
     }
-
     nav a {
       color: white;
       margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
     }
-
     section {
       margin-top: 20px;
     }
-
     .button {
       background-color: #005599;
       color: white;
@@ -55,7 +50,6 @@
       cursor: pointer;
       border: none;
     }
-
     .whatsapp-button {
       position: fixed;
       bottom: 20px;
@@ -68,6 +62,14 @@
       font-weight: bold;
       box-shadow: 0 0 10px rgba(0,0,0,0.3);
       z-index: 9999;
+    }
+    .qrcode-container {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .qrcode-container img {
+      max-width: 200px;
+      margin-top: 10px;
     }
   </style>
 </head>
@@ -138,6 +140,12 @@
     <li><a href="https://www.linkedin.com/in/talamante-morais-a51535221/" target="_blank">LinkedIn</a></li>
     <li><a href="https://www.youtube.com/@TalamanteMorais" target="_blank">YouTube</a></li>
   </ul>
+
+  <div class="qrcode-container">
+    <h3>Acesso Rápido ao Site</h3>
+    <p>Escaneie o QR Code abaixo para acessar diretamente o site:</p>
+    <img src="qrcode_talamante_site.png" alt="QR Code para o site">
+  </div>
 </section>
 
 <footer>
