@@ -6,46 +6,56 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Montserrat', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f4f4f4;
+      font-family: 'Montserrat', sans-serif;
+      background: url('Arte_Fundo_1.jpg') no-repeat center center fixed;
+      background-size: cover;
     }
+
     header, footer, nav, section {
+      background-color: rgba(255, 255, 255, 0.92);
       padding: 20px;
       margin: 0 auto;
       max-width: 1100px;
       width: 90%;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
+
     header {
-      background-color: #002b50;
-      color: white;
       text-align: center;
+      color: #002b50;
     }
+
     nav {
       background-color: #005599;
       text-align: center;
     }
+
     nav a {
       color: white;
       margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
     }
+
     section {
-      background-color: white;
       margin-top: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.1);
     }
-    footer {
-      background-color: #002b50;
+
+    .button {
+      background-color: #005599;
       color: white;
-      text-align: center;
-      font-size: 14px;
-      margin-top: 40px;
-      padding-top: 30px;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+      margin: 10px 10px 10px 0;
+      cursor: pointer;
+      border: none;
     }
+
     .whatsapp-button {
       position: fixed;
       bottom: 20px;
@@ -58,17 +68,6 @@
       font-weight: bold;
       box-shadow: 0 0 10px rgba(0,0,0,0.3);
       z-index: 9999;
-    }
-    .button {
-      background-color: #005599;
-      color: white;
-      padding: 10px 20px;
-      text-decoration: none;
-      border-radius: 5px;
-      display: inline-block;
-      margin: 10px 10px 10px 0;
-      cursor: pointer;
-      border: none;
     }
   </style>
 </head>
@@ -84,62 +83,49 @@
   <a href="#sobre">Sobre</a>
   <a href="#servicos">Serviços</a>
   <a href="#publicacoes">Publicações</a>
+  <a href="#banners">Banners</a>
   <a href="#curriculo">Currículo</a>
   <a href="#contato">Contato</a>
 </nav>
 
 <section id="inicio">
   <h2>Bem-vindo</h2>
-  <p>Bem-vindo ao site oficial do escritório Talamante Morais – Advocacia Pública Municipal, especializado em consultoria técnica e atuação jurídica junto a prefeituras e entes públicos.</p>
+  <p>Site oficial do escritório Talamante Morais – Advocacia Pública Municipal.</p>
 </section>
 
 <section id="sobre">
   <h2>Sobre o Escritório</h2>
-  <p>O escritório Talamante Morais é conduzido por profissional com ampla atuação no Direito Público, oferecendo soluções jurídicas estratégicas, consultivas e preventivas, com foco em ética, responsabilidade institucional e valorização da gestão pública eficiente.</p>
+  <p><strong>Missão:</strong> Fortalecer a gestão pública com assessoria técnica responsável.</p>
+  <p><strong>Visão:</strong> Ser referência em Direito Administrativo Municipal.</p>
+  <p><strong>Valores:</strong> Ética, Transparência, Técnica e Comprometimento.</p>
 </section>
 
 <section id="servicos">
   <h2>Áreas de Atuação</h2>
   <ul>
     <li>Licitações e Contratos Administrativos</li>
-    <li>Consultoria em Direito Municipal</li>
-    <li>Processo Legislativo e Assessoria Parlamentar</li>
+    <li>Direito Municipal</li>
+    <li>Processo Legislativo</li>
     <li>Compliance e Controle Interno</li>
-    <li>Defesas e pareceres junto a Tribunais de Contas</li>
+    <li>Tribunais de Contas</li>
   </ul>
 </section>
 
 <section id="publicacoes">
   <h2>Publicações Técnicas</h2>
-  <h3>Vídeo Institucional</h3>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/JtECSgHf4iM" frameborder="0" allowfullscreen></iframe>
+  <p>Espaço reservado para artigos, vídeos e pareceres técnicos.</p>
+</section>
 
-  <h3 style="margin-top: 30px;">Documentos em PDF</h3>
-  <ul>
-    <li><a href="parecer_comissao_educacao.pdf" target="_blank" rel="noopener">📄 Parecer Técnico – Comissão de Educação</a></li>
-    <li><a href="manual_compliance.pdf" target="_blank" rel="noopener">📄 Manual de Compliance Público Municipal</a></li>
-  </ul>
-
-  <h3 style="margin-top: 30px;">Vídeo de Palestra</h3>
-  <video width="560" height="315" controls>
-    <source src="palestra_completa.mp4" type="video/mp4">
-    Seu navegador não suporta reprodução de vídeo.
-  </video>
+<section id="banners">
+  <h2>Materiais Visuais</h2>
+  <p>Divulgação de banners, folders e flyers:</p>
+  <img src="Arte_Fundo_1.jpg" alt="Banner exemplo" style="max-width:100%; border-radius: 8px;">
 </section>
 
 <section id="curriculo">
   <h2>Currículo Profissional</h2>
-  <p>Atuação jurídica especializada com ênfase em Direito Administrativo e Municipal:</p>
-  <ul>
-    <li>Especialização em Direito Municipal e Magistério Superior</li>
-    <li>Experiência com assessoria legislativa e pareceres jurídicos</li>
-    <li>Participação ativa em cursos e treinamentos voltados à Administração Pública</li>
-  </ul>
-  <div>
-    <button class="button" onclick="window.open('curriculo_talamante.pdf', '_blank')">
-      📄 Baixar Currículo em PDF
-    </button>
-  </div>
+  <p>Especialização em Direito Administrativo e experiência em gestão pública.</p>
+  <button class="button" onclick="window.open('curriculo_talamante.pdf', '_blank')">📄 Baixar Currículo em PDF</button>
 </section>
 
 <section id="contato">
@@ -147,26 +133,18 @@
   <p><strong>Email:</strong> talamantemorais@gmail.com</p>
   <p><strong>WhatsApp:</strong> (62) 99631-8340</p>
   <ul>
-    <li><a href="https://www.instagram.com/talamantemorais/" target="_blank" rel="noopener">Instagram</a></li>
-    <li><a href="https://www.facebook.com/talamante.morais.100" target="_blank" rel="noopener">Facebook</a></li>
-    <li><a href="https://www.linkedin.com/in/talamante-morais-a51535221/" target="_blank" rel="noopener">LinkedIn</a></li>
-    <li><a href="https://www.youtube.com/@TalamanteMorais" target="_blank" rel="noopener">YouTube</a></li>
+    <li><a href="https://www.instagram.com/talamantemorais/" target="_blank">Instagram</a></li>
+    <li><a href="https://www.facebook.com/talamante.morais.100" target="_blank">Facebook</a></li>
+    <li><a href="https://www.linkedin.com/in/talamante-morais-a51535221/" target="_blank">LinkedIn</a></li>
+    <li><a href="https://www.youtube.com/@TalamanteMorais" target="_blank">YouTube</a></li>
   </ul>
-
-  <h3 style="margin-top: 30px;">Formulário de Contato</h3>
-  <form action="https://formspree.io/f/xldbzygq" method="POST">
-    <label>Nome:<br><input type="text" name="name" required style="width: 100%; padding: 8px;"></label><br><br>
-    <label>E-mail:<br><input type="email" name="email" required style="width: 100%; padding: 8px;"></label><br><br>
-    <label>Mensagem:<br><textarea name="message" rows="5" required style="width: 100%; padding: 8px;"></textarea></label><br><br>
-    <button type="submit" style="background-color: #003366; color: white; padding: 10px 20px; border: none;">Enviar</button>
-  </form>
 </section>
 
 <footer>
   &copy; 2025 Talamante Morais – Todos os direitos reservados.
 </footer>
 
-<a class="whatsapp-button" href="https://wa.me/556296318340" target="_blank" rel="noopener">WhatsApp</a>
+<a class="whatsapp-button" href="https://wa.me/556296318340" target="_blank">WhatsApp</a>
 
 </body>
 </html>
