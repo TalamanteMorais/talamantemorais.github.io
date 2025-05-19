@@ -67,6 +67,8 @@
       border-radius: 5px;
       display: inline-block;
       margin: 10px 10px 10px 0;
+      cursor: pointer;
+      border: none;
     }
   </style>
 </head>
@@ -134,7 +136,9 @@
     <li>Participação ativa em cursos e treinamentos voltados à Administração Pública</li>
   </ul>
   <div>
-    <a href="curriculo_talamante.pdf" download class="button" rel="noopener noreferrer">📄 Baixar Currículo em PDF</a>
+    <button class="button" onclick="window.open('curriculo_talamante.pdf', '_blank')">
+      📄 Baixar Currículo em PDF
+    </button>
   </div>
 </section>
 
