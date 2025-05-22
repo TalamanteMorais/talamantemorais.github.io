@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -86,82 +85,29 @@
   <a href="#contato">Contato</a>
 </nav>
 
-<!-- Carrossel com JavaScript para rotação -->
-<style>
-  .slider-container {
-    max-width: 1100px;
-    margin: 20px auto;
-    position: relative;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
-  }
-  .slide-js {
-    display: none;
-    padding: 40px;
-    box-sizing: border-box;
-    color: white;
-    text-align: center;
-    background-image: url('Arte_Fundo_1.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: rgba(0, 0, 0, 0.4);
-    background-blend-mode: darken;
-  }
-  .slide-js h2 {
-    font-size: 2em;
-    margin-bottom: 0.5em;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
-  }
-  .slide-js p {
-    font-size: 1.2em;
-    max-width: 800px;
-    margin: 0 auto;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
-  }
-</style>
-
-<div class="slider-container">
-  <div class="slide-js">
-    <h2>Estudo Técnico Preliminar</h2>
-    <p>Instrumento essencial para justificar a contratação pública. Sua elaboração fortalece o planejamento e confere segurança jurídica à administração municipal.</p>
-  </div>
-  <div class="slide-js">
-    <h2>Credenciamento</h2>
-    <p>Modelo de contratação que permite a adesão de interessados de forma contínua, sem exclusividade. É amplamente utilizado em saúde, assistência e educação.</p>
-  </div>
-  <div class="slide-js">
-    <h2>Termo de Referência</h2>
-    <p>Documento obrigatório que detalha o objeto da contratação, requisitos, critérios de julgamento, estimativas de custo e gestão contratual. Fundamenta o edital.</p>
-  </div>
-</div>
-
-<script>
-  let currentSlide = 0;
-  const slides = document.getElementsByClassName("slide-js");
-
-  function showSlides() {
-    for (let i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-    currentSlide++;
-    if (currentSlide > slides.length) { currentSlide = 1; }
-    slides[currentSlide - 1].style.display = "block";
-    setTimeout(showSlides, 5000);
-  }
-
-  window.onload = showSlides;
-</script>
-
 <section id="inicio"><h2>Bem-vindo</h2><p>Site oficial do escritório Talamante Morais – Advocacia Pública Municipal.</p></section>
+
 <section id="sobre"><h2>Sobre o Escritório</h2><p><strong>Missão:</strong> Fortalecer a gestão pública com assessoria técnica responsável.</p><p><strong>Visão:</strong> Ser referência em Direito Administrativo Municipal.</p><p><strong>Valores:</strong> Ética, Transparência, Técnica e Comprometimento.</p></section>
+
 <section id="servicos"><h2>Serviços</h2><ul><li>Licitações e Contratos Administrativos</li><li>Direito Municipal</li><li>Processo Legislativo</li><li>Compliance e Controle Interno</li><li>Tribunais de Contas</li></ul></section>
+
 <section id="publicacoes"><h2>Publicações Técnicas</h2><ul><li><strong>Parecer Técnico:</strong> <a href="docs/parecer_lei_14133_municipios.pdf" target="_blank">Download</a></li><li><strong>Artigo:</strong> <a href="docs/artigo_implementacao_local.pdf" target="_blank">Download</a></li><li><strong>Vídeo:</strong> <a href="https://www.youtube.com/watch?v=EXEMPLO_VIDEO" target="_blank">Assistir</a></li></ul></section>
+
 <section id="experiencias"><h2>Casos e Experiências Atendidas</h2><ul><li><strong>Legislação de Consórcio:</strong> revisão contratual sob a Lei nº 14.133/2021.</li><li><strong>Comissões Legislativas:</strong> consultoria técnica na redação de normas.</li><li><strong>Capacitações:</strong> formação em fiscalização e contratos.</li><li><strong>Sindicância:</strong> apoio jurídico a processos internos.</li></ul></section>
+
 <section id="curriculo"><h2>Currículo Profissional</h2><button class="button" onclick="window.open('curriculo_talamante.pdf', '_blank')">📄 Baixar Currículo</button></section>
+
 <section id="contato">
   <h2>Contato</h2>
+  <form action="https://formspree.io/f/xldbzygq" method="POST">
+    <label for="nome">Nome:</label><br>
+    <input type="text" id="nome" name="nome" required><br><br>
+    <label for="email">E-mail:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+    <label for="mensagem">Mensagem:</label><br>
+    <textarea id="mensagem" name="mensagem" rows="5" required></textarea><br><br>
+    <button type="submit">Enviar</button>
+  </form>
   <p><strong>Email:</strong> talamantemorais@gmail.com</p>
   <p><strong>WhatsApp:</strong> (62) 99631-8340</p>
   <ul>
@@ -171,24 +117,13 @@
     <li><a href="https://www.youtube.com/@TalamanteMorais" target="_blank">YouTube</a></li>
   </ul>
   <div class="qrcode-container">
+    <h3>Acesso Rápido ao Site</h3>
     <img src="qrcode_talamante_site.png" alt="QR Code para o site">
   </div>
+</section>
 
-  <h3>Envie sua mensagem:</h3>
-  <form action="https://formspree.io/f/xldbzygq" method="POST">
-    <label>Nome:<br>
-      <input type="text" name="nome" required style="width:100%; padding:8px; margin-bottom:10px;">
-    </label><br>
-    <label>E-mail:<br>
-      <input type="email" name="email" required style="width:100%; padding:8px; margin-bottom:10px;">
-    </label><br>
-    <label>Mensagem:<br>
-      <textarea name="mensagem" rows="5" required style="width:100%; padding:8px; margin-bottom:10px;"></textarea>
-    </label><br>
-    <input type="text" name="_honey" style="display:none">
-    <button type="submit" class="button">Enviar</button>
-  </form>
-</section><h2>Contato</h2><p><strong>Email:</strong> talamantemorais@gmail.com</p><p><strong>WhatsApp:</strong> (62) 99631-8340</p><ul><li><a href="https://www.instagram.com/talamantemorais/" target="_blank">Instagram</a></li><li><a href="https://www.facebook.com/talamante.morais.100" target="_blank">Facebook</a></li><li><a href="https://www.linkedin.com/in/talamante-morais-a51535221/" target="_blank">LinkedIn</a></li><li><a href="https://www.youtube.com/@TalamanteMorais" target="_blank">YouTube</a></li></ul><div class="qrcode-container"><img src="qrcode_talamante_site.png" alt="QR Code para o site"></div></section>
 <footer>&copy; 2025 Talamante Morais – Todos os direitos reservados.</footer>
 <a class="whatsapp-button" href="https://wa.me/556296318340" target="_blank">WhatsApp</a>
-</body></html>
+
+</body>
+</html>
