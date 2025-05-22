@@ -86,24 +86,18 @@
   <a href="#contato">Contato</a>
 </nav>
 
-<!-- Carrossel com Imagem de Fundo Personalizada e Temas Corrigidos -->
+<!-- Carrossel com JavaScript para rotação -->
 <style>
   .slider-container {
     max-width: 1100px;
     margin: 20px auto;
     position: relative;
-    overflow: hidden;
     border-radius: 12px;
+    overflow: hidden;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
   }
-  .slider-wrapper {
-    display: flex;
-    width: 300%;
-    animation: slide 12s infinite;
-  }
-  .slide {
-    width: 100%;
-    flex-shrink: 0;
+  .slide-js {
+    display: none;
     padding: 40px;
     box-sizing: border-box;
     color: white;
@@ -115,45 +109,50 @@
     background-color: rgba(0, 0, 0, 0.4);
     background-blend-mode: darken;
   }
-  .slide h2 {
+  .slide-js h2 {
     font-size: 2em;
     margin-bottom: 0.5em;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
   }
-  .slide p {
+  .slide-js p {
     font-size: 1.2em;
     max-width: 800px;
     margin: 0 auto;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
   }
-  @keyframes slide {
-    0%   { margin-left: 0%; }
-    33%  { margin-left: -100%; }
-    66%  { margin-left: -200%; }
-    100% { margin-left: 0%; }
-  }
-  @media (max-width: 768px) {
-    .slide h2 { font-size: 1.5em; }
-    .slide p { font-size: 1em; }
-  }
 </style>
 
 <div class="slider-container">
-  <div class="slider-wrapper">
-    <div class="slide">
-      <h2>Estudo Técnico Preliminar</h2>
-      <p>Instrumento essencial para justificar a contratação pública. Sua elaboração fortalece o planejamento e confere segurança jurídica à administração municipal.</p>
-    </div>
-    <div class="slide">
-      <h2>Credenciamento</h2>
-      <p>Modelo de contratação que permite a adesão de interessados de forma contínua, sem exclusividade. É amplamente utilizado em saúde, assistência e educação.</p>
-    </div>
-    <div class="slide">
-      <h2>Termo de Referência</h2>
-      <p>Documento obrigatório que detalha o objeto da contratação, requisitos, critérios de julgamento, estimativas de custo e gestão contratual. Fundamenta o edital.</p>
-    </div>
+  <div class="slide-js">
+    <h2>Estudo Técnico Preliminar</h2>
+    <p>Instrumento essencial para justificar a contratação pública. Sua elaboração fortalece o planejamento e confere segurança jurídica à administração municipal.</p>
+  </div>
+  <div class="slide-js">
+    <h2>Credenciamento</h2>
+    <p>Modelo de contratação que permite a adesão de interessados de forma contínua, sem exclusividade. É amplamente utilizado em saúde, assistência e educação.</p>
+  </div>
+  <div class="slide-js">
+    <h2>Termo de Referência</h2>
+    <p>Documento obrigatório que detalha o objeto da contratação, requisitos, critérios de julgamento, estimativas de custo e gestão contratual. Fundamenta o edital.</p>
   </div>
 </div>
+
+<script>
+  let currentSlide = 0;
+  const slides = document.getElementsByClassName("slide-js");
+
+  function showSlides() {
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    currentSlide++;
+    if (currentSlide > slides.length) { currentSlide = 1; }
+    slides[currentSlide - 1].style.display = "block";
+    setTimeout(showSlides, 5000);
+  }
+
+  window.onload = showSlides;
+</script>
 
 <section id="inicio"><h2>Bem-vindo</h2><p>Site oficial do escritório Talamante Morais – Advocacia Pública Municipal.</p></section>
 <section id="sobre"><h2>Sobre o Escritório</h2><p><strong>Missão:</strong> Fortalecer a gestão pública com assessoria técnica responsável.</p><p><strong>Visão:</strong> Ser referência em Direito Administrativo Municipal.</p><p><strong>Valores:</strong> Ética, Transparência, Técnica e Comprometimento.</p></section>
