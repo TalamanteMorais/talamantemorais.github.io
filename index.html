@@ -48,20 +48,10 @@
     section h2 {
       color: #002b50;
     }
-    .cards {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
+    .group {
+      margin-bottom: 20px;
     }
-    .card {
-      flex: 1 1 30%;
-      background: #ffffff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.1);
-      min-width: 250px;
-    }
-    .card h3 {
+    .group h3 {
       color: #005599;
       margin-top: 0;
     }
@@ -70,22 +60,6 @@
       padding: 20px;
       background-color: #eeeeee;
       color: #333;
-    }
-
-    @media (max-width: 768px) {
-      .cards {
-        flex-direction: column;
-      }
-      nav a {
-        display: block;
-        margin: 10px 0;
-      }
-      .container {
-        padding: 10px;
-      }
-      header, footer, nav, section {
-        padding: 15px;
-      }
     }
   </style>
 </head>
@@ -99,10 +73,9 @@
 <nav class="container">
   <a href="#inicio">Início</a>
   <a href="#sobre">Sobre</a>
-  <a href="#atuacao">Áreas de Atuação</a>
+  <a href="#servicos">Serviços</a>
   <a href="#publicacoes">Publicações</a>
   <a href="#experiencias">Experiências</a>
-  <a href="#curriculo">Currículo</a>
   <a href="#contato">Contato</a>
 </nav>
 
@@ -117,29 +90,42 @@
   <p><strong>Perfil Profissional:</strong> Advogado individual, experiente, especializado em consultoria jurídica para entes públicos municipais.</p>
 </section>
 
-<section id="atuacao" class="container">
-  <h2>Áreas de Atuação</h2>
-  <div class="cards">
-    <div class="card">
-      <h3>Consultoria Jurídica Municipal</h3>
-      <p>Assessoria técnica a Prefeituras e Câmaras Municipais com foco em governança, legalidade e eficiência institucional.</p>
-    </div>
-    <div class="card">
-      <h3>Licitações e Contratos</h3>
-      <p>Especialização em editais, gestão contratual, pareceres e documentos estratégicos conforme a Lei nº 14.133/2021.</p>
-    </div>
-    <div class="card">
-      <h3>Gestão e Controle Institucional</h3>
-      <p>Estruturação de fluxos, regulamentos internos, relatórios de controle e planos de conformidade institucional.</p>
-    </div>
-    <div class="card">
-      <h3>Processo Legislativo Municipal</h3>
-      <p>Revisão de regimentos, apoio às comissões e acompanhamento técnico em projetos de lei e normas internas.</p>
-    </div>
-    <div class="card">
-      <h3>Capacitação de Agentes Públicos</h3>
-      <p>Oficinas, treinamentos e cursos técnicos com foco na prática administrativa e controle da gestão pública.</p>
-    </div>
+<section id="servicos" class="container">
+  <h2>Serviços</h2>
+
+  <div class="group">
+    <h3>Licitações e Contratos</h3>
+    <p>Licitações e Contratos Administrativos, incluindo assessoria completa nos processos e fiscalização do Executivo.</p>
+  </div>
+
+  <div class="group">
+    <h3>Governança, Compliance e Controle</h3>
+    <p>Atuação em Governança, Compliance, Controle Interno, Auditoria e Gestão de Riscos na Administração Pública.</p>
+  </div>
+
+  <div class="group">
+    <h3>Tribunais e Defesa Técnica</h3>
+    <p>Atuação estratégica junto aos Tribunais de Contas e defesa técnica de Prefeituras, agentes públicos e vereadores.</p>
+  </div>
+
+  <div class="group">
+    <h3>Consultoria Jurídica e Pareceres</h3>
+    <p>Elaboração de pareceres administrativos e consultoria técnica ao Poder Legislativo Municipal e ao Processo Legislativo.</p>
+  </div>
+
+  <div class="group">
+    <h3>Modernização da Gestão e Políticas Públicas</h3>
+    <p>Consultoria em Políticas Públicas, inovação institucional e regularização fundiária e urbanística.</p>
+  </div>
+
+  <div class="group">
+    <h3>Capacitação e Formação Técnica</h3>
+    <p>Capacitação de servidores e vereadores por meio de treinamentos, oficinas e eventos técnicos.</p>
+  </div>
+
+  <div class="group">
+    <h3>Suporte Legislativo e Comissões</h3>
+    <p>Atuação em comissões parlamentares, CPIs e comissões especiais de apuração e sindicância.</p>
   </div>
 </section>
 
