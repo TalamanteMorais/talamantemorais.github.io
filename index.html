@@ -6,7 +6,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js/id=G-ZKCPTG7K1T"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZKCPTG7K1T"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -15,46 +15,141 @@
   </script>
 
   <style>
+    /* --- ESTILOS GERAIS E MODERNIZADOS --- */
     body {
       margin: 0;
       padding: 0;
       font-family: 'Montserrat', sans-serif;
-      background: url('Arte_Fundo_1.jpg') no-repeat center center fixed;
-      background-size: cover;
+      background: linear-gradient(120deg, #e0ecfd 0%, #f7faff 100%); /* Fundo gradiente suave */
+      color: #333; /* Cor de texto padrão mais suave */
+      line-height: 1.6; /* Melhorar legibilidade do texto */
     }
+
     header, footer, nav, section {
-      background-color: rgba(255, 255, 255, 0.94);
-      padding: 20px;
+      background-color: #ffffff; /* Fundo branco sólido */
+      padding: 30px; /* Mais respiro para o conteúdo */
       margin: 0 auto;
       max-width: 1100px;
       width: 90%;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 15px; /* Bordas mais arredondadas */
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08); /* Sombra mais suave e espalhada */
+      margin-top: 20px; /* Mantém o espaçamento entre seções */
     }
-    header { text-align: center; color: #002b50; }
-    nav {
-      background-color: #005599;
+
+    header {
       text-align: center;
-      border-radius: 8px;
+      color: #23407e; /* Cor do cabeçalho alinhada com os títulos */
+      padding-bottom: 20px; /* Espaçamento interno */
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 5px;
+      color: #23407e;
+    }
+    header p {
+      font-size: 1.1rem;
+      color: #555;
+    }
+
+    nav {
+      background: linear-gradient(90deg, #23407e, #316cd4); /* Gradiente na navegação */
+      text-align: center;
+      border-radius: 15px; /* Bordas arredondadas */
+      padding: 15px 20px; /* Mais padding */
+      margin-top: 20px;
     }
     nav a {
       color: white;
       margin: 0 15px;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 600; /* Mais peso na fonte */
+      font-size: 1.05rem; /* Tamanho da fonte ligeiramente maior */
+      padding: 8px 12px; /* Área de clique maior */
+      transition: background 0.2s, transform 0.1s;
+      border-radius: 8px;
     }
-    section { margin-top: 20px; }
-    .button {
-      background-color: #005599;
+    nav a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      transform: translateY(-2px);
+    }
+
+    /* --- ESTILO UNIFICADO PARA BOTÕES --- */
+    .main-btn { /* Nova classe para botões gerais */
+      background: linear-gradient(90deg, #316cd4, #54d2f7);
       color: white;
-      padding: 10px 20px;
+      padding: 12px 24px;
       text-decoration: none;
-      border-radius: 5px;
+      border-radius: 14px; /* Bordas mais arredondadas */
       display: inline-block;
       margin: 10px 10px 10px 0;
       cursor: pointer;
       border: none;
+      font-size: 1rem;
+      font-weight: 600;
+      box-shadow: 0 1px 6px rgba(25,127,217,0.23);
+      transition: background 0.2s, transform 0.16s;
     }
+    .main-btn:hover {
+      background: linear-gradient(90deg, #223b8b, #14b0dd);
+      transform: scale(1.04);
+    }
+
+    /* --- ESTILOS DO FORMULÁRIO DE CONTATO --- */
+    form {
+      background-color: #ffffff; /* Mantém o fundo branco */
+      padding: 25px; /* Ajuste de padding */
+      border-radius: 15px; /* Bordas arredondadas */
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08); /* Sombra consistente */
+    }
+
+    form label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 8px; /* Mais espaçamento */
+      color: #23407e; /* Cor alinhada */
+    }
+
+    form input[type="text"],
+    form input[type="email"],
+    form textarea {
+      width: 100%;
+      padding: 12px; /* Mais padding */
+      margin-bottom: 18px; /* Mais espaçamento */
+      border: 1px solid #ccc;
+      border-radius: 8px; /* Bordas mais arredondadas */
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1rem;
+      box-sizing: border-box;
+      box-shadow: inset 0 1px 3px rgba(0,0,0,0.06); /* Sombra interna sutil */
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    form input[type="text"]:focus,
+    form input[type="email"]:focus,
+    form textarea:focus {
+      outline: none;
+      border-color: #316cd4; /* Borda azul no foco */
+      box-shadow: 0 0 0 3px rgba(49,108,212,0.2); /* Sombra azul no foco */
+    }
+
+    form button[type="submit"] {
+      /* Usa o estilo unificado de botão */
+      background: linear-gradient(90deg, #316cd4, #54d2f7);
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 14px;
+      font-size: 1rem;
+      cursor: pointer;
+      font-weight: 600;
+      box-shadow: 0 1px 6px rgba(25,127,217,0.23);
+      transition: background 0.2s, transform 0.16s;
+    }
+    form button[type="submit"]:hover {
+      background: linear-gradient(90deg, #223b8b, #14b0dd);
+      transform: scale(1.04);
+    }
+
+    /* --- ESTILOS DO WHATSAPP E QR CODE --- */
     .whatsapp-button {
       position: fixed;
       bottom: 20px;
@@ -67,6 +162,10 @@
       font-weight: bold;
       box-shadow: 0 0 10px rgba(0,0,0,0.3);
       z-index: 9999;
+      transition: transform 0.2s;
+    }
+    .whatsapp-button:hover {
+      transform: scale(1.1);
     }
     .qrcode-container {
       text-align: center;
@@ -75,53 +174,16 @@
     .qrcode-container img {
       max-width: 200px;
       margin-top: 10px;
-    }
-  
-    form {
-      background-color: #ffffff;
-      padding: 20px;
       border-radius: 10px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     }
 
-    form label {
-      display: block;
-      font-weight: 600;
-      margin-bottom: 5px;
-      color: #002b50;
-    }
-
-    form input[type="text"],
-    form input[type="email"],
-    form textarea {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 14px;
-      box-sizing: border-box;
-    }
-
-    form button[type="submit"] {
-      background-color: #005599;
-      color: white;
-      padding: 12px 24px;
-      border: none;
-      border-radius: 5px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-
-    form button[type="submit"]:hover {
-      background-color: #004080;
-    }
-
-    /* --- NOVOS ESTILOS PARA OS SERVIÇOS --- */
+    /* --- ESTILOS DA SEÇÃO DE SERVIÇOS (JÁ MODERNIZADOS) --- */
     #servicos {
       background: linear-gradient(120deg, #e0ecfd 0%, #f7faff 100%); /* Fundo mais moderno para a seção */
       padding: 40px 20px; /* Aumenta o padding da seção */
+      border-radius: 15px; /* Bordas arredondadas */
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08); /* Sombra consistente */
     }
     #servicos h2 {
       text-align: center;
@@ -194,6 +256,10 @@
 
     /* Media queries para responsividade */
     @media (max-width: 768px) {
+      header h1 { font-size: 2rem; }
+      header p { font-size: 1rem; }
+      nav a { font-size: 0.95rem; margin: 0 8px; }
+      section { padding: 25px; }
       #servicos h2 {
         font-size: 1.8rem;
         margin-bottom: 25px;
@@ -211,8 +277,17 @@
       .service-desc {
         font-size: 0.95rem;
       }
+      .main-btn, form button[type="submit"] {
+        padding: 10px 20px;
+        font-size: 0.95rem;
+      }
     }
     @media (max-width: 480px) {
+      header h1 { font-size: 1.8rem; }
+      header p { font-size: 0.9rem; }
+      nav { padding: 10px 15px; }
+      nav a { display: block; margin: 5px 0; }
+      section { padding: 20px; }
       #servicos {
         padding: 30px 15px;
       }
@@ -224,6 +299,10 @@
       }
       .service-card {
         border-radius: 15px 40px 15px 40px;
+      }
+      .main-btn, form button[type="submit"] {
+        width: 100%;
+        margin: 10px 0;
       }
     }
   </style>
@@ -240,7 +319,7 @@
   <a href="#sobre">Sobre</a>
   <a href="#servicos">Serviços</a>
   <a href="#publicacoes">Publicações</a>
-  <a href="#experiencias">Experiências</a>
+  <a href="#experiencias">Experiencias</a>
   <a href="#curriculo">Currículo</a>
   <a href="#contato">Contato</a>
 </nav>
@@ -254,7 +333,7 @@
   <div class="services-grid">
 
     <div class="service-card">
-      <div class="service-icon">📝</div>
+      <div class="service-icon">  </div>
       <div class="service-title">Licitações e Contratos Públicos</div>
       <div class="service-desc">
         Consultoria e assessoria para Prefeituras e Câmaras em processos licitatórios e gestão contratual, conforme a legislação vigente.
@@ -281,7 +360,7 @@
     </div>
 
     <div class="service-card">
-      <div class="service-icon">  </div>
+      <div class="service-icon">📑</div>
       <div class="service-title">Pareceres e Auditorias Jurídicas</div>
       <div class="service-desc">
         Emissão de pareceres fundamentados e revisão de procedimentos administrativos para as administrações municipais.
@@ -314,7 +393,7 @@
 
 <section id="experiencias"><h2>Casos e Experiências Atendidas</h2><ul><li><strong>Legislação de Consórcio:</strong> revisão contratual sob a Lei nº 14.133/2021.</li><li><strong>Comissões Legislativas:</strong> consultoria técnica na redação de normas.</li><li><strong>Capacitações:</strong> formação em fiscalização e contratos.</li><li><strong>Sindicância:</strong> apoio jurídico a processos internos.</li></ul></section>
 
-<section id="curriculo"><h2>Currículo Profissional</h2><button class="button" onclick="window.open('curriculo_talamante.pdf', '_blank')">📄 Baixar Currículo</button></section>
+<section id="curriculo"><h2>Currículo Profissional</h2><button class="main-btn" onclick="window.open('curriculo_talamante.pdf', '_blank')">   Baixar Currículo</button></section>
 
 <section id="contato">
   <h2>Contato</h2>
