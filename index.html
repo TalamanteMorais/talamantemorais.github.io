@@ -1,203 +1,148 @@
-
 <!DOCTYPE html>
-
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-<meta charset="utf-8"/>
-<title>Talamante Morais – Advocacia Pública Municipal</title>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
-<style>
+  <meta charset="UTF-8">
+  <title>Serviços Jurídicos Municipais</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
     body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f8f9fa;
       margin: 0;
-      font-family: 'Montserrat', sans-serif;
-      background: #f4f4f4;
+      padding: 0;
+      color: #222;
     }
     .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 20px;
+      max-width: 1080px;
+      margin: 40px auto;
+      padding: 0 16px;
     }
-    header, footer, nav, section {
-      background-color: white;
-      margin-bottom: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    header {
+    h1 {
       text-align: center;
-      padding: 30px;
-      background-color: #ffffff;
-      color: #002b50;
+      color: #10447a;
+      margin-bottom: 32px;
     }
-    nav {
-      background-color: #005599;
-      padding: 15px;
-      text-align: center;
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
     }
-    nav a {
-      color: white;
-      margin: 0 10px;
-      text-decoration: none;
+    .service-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(16,68,122,0.15);
+      padding: 28px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      transition: box-shadow 0.2s;
+    }
+    .service-card:hover {
+      box-shadow: 0 4px 18px rgba(16,68,122,0.25);
+    }
+    .service-icon {
+      font-size: 2.6rem;
+      margin-bottom: 12px;
+      color: #2575c8;
+    }
+    .service-title {
+      margin: 0 0 10px 0;
       font-weight: bold;
-      display: inline-block;
-      padding: 5px 10px;
+      color: #1767aa;
+      font-size: 1.15rem;
     }
-    nav a:hover {
-      background-color: #003f73;
-      border-radius: 4px;
+    .service-desc {
+      font-size: 1rem;
+      color: #444;
+      margin-bottom: 6px;
     }
-    section h2 {
-      color: #002b50;
-    }
-    .group {
-      margin-bottom: 20px;
-    }
-    .group h3 {
-      color: #005599;
-      margin-top: 0;
-    }
-    footer {
+    .cta-block {
+      margin: 38px 0 0 0;
       text-align: center;
-      padding: 20px;
-      background-color: #eeeeee;
-      color: #333;
     }
-  section p {
-  text-align: justify;
-}
+    .cta-block p {
+      font-size: 1.08rem;
+      margin: 0 0 18px 0;
+      color: #18497a;
+    }
+    .cta-btn {
+      background: #2471c7;
+      color: #fff;
+      border: none;
+      font-size: 1.09rem;
+      border-radius: 8px;
+      padding: 12px 32px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.18s;
+      box-shadow: 0 2px 6px rgba(36,113,199, 0.10);
+      display: inline-block;
+    }
+    .cta-btn:hover {
+      background: #155287;
+    }
 
-  .servico-container {
-    background-color: #ffffff;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 8px rgba(0,0,0,0.1);
-  }
-  .servico-container h3 {
-    color: #002b50;
-  }
-  .servico-container .button {
-    background-color: #005599;
-    color: white;
-    padding: 10px 16px;
-    border-radius: 5px;
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 10px;
-  }
-</style>
+    @media (max-width: 600px) {
+      .service-card { padding: 18px 12px; }
+      h1 { font-size: 1.42rem; }
+    }
+  </style>
 </head>
 <body>
-<header class="container">
-<h1>Talamante Morais</h1>
-<p>Advocacia Pública Municipal</p>
-</header>
-<nav class="container">
-<a href="#inicio">Início</a>
-<a href="#sobre">Sobre nós</a>
-<a href="#servicos">Serviços</a>
-<a href="#publicacoes">Publicações</a>
-<a href="#experiencias">Experiências</a>
-<a href="#contato">Contato</a>
-</nav>
-<section class="container" id="inicio">
-<h2>Bem-vindo</h2>
-<p>Site oficial do advogado Talamante Morais – Advocacia Pública Municipal.</p>
-</section>
-<section class="container" id="sobre">
-<h2>Sobre nós</h2>
-<p><strong>Quem Somos:</strong> Atuamos com excelência em Direito Público Municipal, oferecendo assessoria e consultoria jurídica para prefeituras, câmaras de vereadores e órgãos municipais. Nosso escritório é especializado em licitações e contratos administrativos (Lei 8.666/93 e Lei 14.133), compliance, ética na administração pública, processo legislativo, controle interno e governança.</p>
-<p>Trabalhamos de forma estratégica e personalizada, sempre comprometidos com a transparência, segurança jurídica e eficiência nas decisões do Executivo e Legislativo. Nossa missão é fortalecer a gestão pública municipal por meio de soluções jurídicas inovadoras e alinhadas às melhores práticas.</p>
-</section>
+  <div class="container">
+    <h1>Serviços Jurídicos para Municípios</h1>
+    <div class="services-grid">
 
-<section class="container" id="servicos">
-<h2>Áreas de Atuação</h2>
-<div class="servico-container">
-<h3>Licitações e Contratos Administrativos</h3>
-<p>Condução jurídica de todas as fases do processo de contratação pública, com base na Lei nº 14.133/2021 e controle de riscos contratuais.</p>
-<a class="button" href="#">Saiba mais</a>
-</div>
-<div class="servico-container">
-<h3>Governança, Compliance e Controle Interno</h3>
-<p>Implantação e revisão de mecanismos de integridade e controle institucional em órgãos públicos municipais.</p>
-<a class="button" href="#">Saiba mais</a>
-</div>
-<div class="servico-container">
-<h3>Tribunais de Contas e Defesa Técnica</h3>
-<p>Assessoria para defesa de gestores e elaboração de memoriais técnicos perante órgãos de controle externo.</p>
-<a class="button" href="#">Saiba mais</a>
-</div>
-<div class="servico-container">
-<h3>Consultoria Jurídica e Pareceres</h3>
-<p>Elaboração de pareceres jurídicos técnicos e acompanhamento consultivo na gestão de políticas públicas.</p>
-<a class="button" href="#">Saiba mais</a>
-</div>
-<div class="servico-container">
-<h3>Modernização da Gestão e Políticas Públicas</h3>
-<p>Estruturação normativa, institucional e procedimental para modernização da gestão municipal.</p>
-<a class="button" href="#">Saiba mais</a>
-</div>
-<div class="servico-container">
-<h3>Capacitação e Formação Técnica</h3>
-<p>Realização de cursos e treinamentos jurídicos voltados à prática da administração pública local.</p>
-<a class="button" href="#">Saiba mais</a>
-</div>
-<div class="servico-container">
-<h3>Suporte Legislativo e Comissões</h3>
-<p>Consultoria técnica a comissões legislativas, estruturação de regimentos e assessoramento na produção normativa.</p>
-<a class="button" href="#">Saiba mais</a>
-</div>
-</section>
+      <div class="service-card">
+        <div class="service-icon">📝</div>
+        <div class="service-title">Licitações e Contratos Públicos</div>
+        <div class="service-desc">
+          Consultoria e assessoria em processos licitatórios e gestão contratual para prefeituras e câmaras municipais.
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">⚖️</div>
+        <div class="service-title">Direito Administrativo</div>
+        <div class="service-desc">
+          Orientação jurídica em rotinas administrativas, defesa institucional e regularidade dos atos públicos.
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🏛️</div>
+        <div class="service-title">Processo Legislativo</div>
+        <div class="service-desc">
+          Apoio na elaboração de projetos de lei, análise de regimentos e assessoria parlamentar.
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📑</div>
+        <div class="service-title">Pareceres e Auditorias Jurídicas</div>
+        <div class="service-desc">
+          Emissão de pareceres fundamentados e revisão de procedimentos administrativos.
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">👥</div>
+        <div class="service-title">PAD, Sindicâncias & Defesa de Agentes Públicos</div>
+        <div class="service-desc">
+          Defesa técnica e acompanhamento de processos disciplinares e sindicâncias.
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🛡️</div>
+        <div class="service-title">Compliance e Integridade Pública</div>
+        <div class="service-desc">
+          Implementação de programas de compliance, ética e integridade para órgãos municipais.
+        </div>
+      </div>
 
-<section class="container" id="contato">
-<h2>Contato</h2>
-<div id="mensagem-sucesso" style="display: none; background-color: #dff0d8; color: #3c763d; padding: 15px; border-radius: 5px; margin-bottom: 20px;">
-    ✅ Mensagem enviada com sucesso. Obrigado pelo contato!
+    </div>
+
+    <div class="cta-block">
+      <p><strong>Precisa de orientação especializada para o setor público municipal?</strong><br>
+      Entre em contato para saber mais detalhes sobre cada serviço.</p>
+      <a href="mailto:seuemail@dominio.com" class="cta-btn">Fale Conosco</a>
+    </div>
   </div>
-<script>
-    window.onload = function() {
-      const urlParams = new URLSearchParams(window.location.search);
-      if (urlParams.get('sucesso') === 'true') {
-        document.getElementById('mensagem-sucesso').style.display = 'block';
-        setTimeout(() => {
-          window.history.replaceState({}, document.title, window.location.pathname);
-        }, 3000);
-      }
-    };
-  </script>
-<form action="https://formsubmit.co/talamantemorais@talamante-adv.com.br" method="POST">
-<input name="_next" type="hidden" value="https://talamante-adv.com.br/?sucesso=true"/>
-<input name="_captcha" type="hidden" value="false"/>
-<input name="_honey" style="display:none" type="text"/>
-<div style="margin-bottom: 15px;">
-<label for="nome">Nome:</label>
-<input id="nome" name="nome" required="" type="text"/>
-</div>
-<div style="margin-bottom: 15px;">
-<label for="email">E-mail:</label>
-<input id="email" name="email" required="" type="email"/>
-</div>
-<div style="margin-bottom: 15px;">
-<label for="mensagem">Mensagem:</label>
-<textarea id="mensagem" name="mensagem" required="" rows="5"></textarea>
-</div>
-<button type="submit">Enviar</button>
-</form>
-<p><strong>Email:</strong> talamantemorais@gmail.com</p>
-<p><strong>WhatsApp:</strong> (62) 99631-8340</p>
-<ul>
-<li><a href="https://www.instagram.com/talamantemorais/" target="_blank">Instagram</a></li>
-<li><a href="https://www.facebook.com/talamante.morais.100" target="_blank">Facebook</a></li>
-<li><a href="https://www.linkedin.com/in/talamante-morais-a51535221/" target="_blank">LinkedIn</a></li>
-<li><a href="https://www.youtube.com/@TalamanteMorais" target="_blank">YouTube</a></li>
-</ul>
-<div class="qrcode-container">
-<h3>Acesso Rápido ao Site</h3>
-<img alt="QR Code para o site" src="qrcode_talamante_site.png"/>
-</div>
-</section>
-<footer class="container">
-  © 2025 Talamante Morais – Todos os direitos reservados.
-</footer>
 </body>
 </html>
