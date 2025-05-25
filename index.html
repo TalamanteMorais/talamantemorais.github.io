@@ -2,8 +2,12 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Talamante Morais – Advocacia Pública Municipal</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Advogado especializado em Direito Público Municipal, licitações, contratos administrativos e assessoria para prefeituras e câmaras.">
+  <meta name="keywords" content="direito público municipal, licitações, contratos administrativos, consultoria jurídica, advogado para prefeituras, advogado municipalista">
+  <link href="favicon.ico" rel="icon" type="image/x-icon">
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZKCPTG7K1T"></script>
@@ -15,141 +19,107 @@
   </script>
 
   <style>
-    /* --- ESTILOS GERAIS E MODERNIZADOS --- */
     body {
       margin: 0;
-      padding: 0;
       font-family: 'Montserrat', sans-serif;
-      background: linear-gradient(120deg, #e0ecfd 0%, #f7faff 100%); /* Fundo gradiente suave */
-      color: #333; /* Cor de texto padrão mais suave */
-      line-height: 1.6; /* Melhorar legibilidade do texto */
+      background: #f4f4f4; /* Fundo claro para combinar com o layout de containers */
     }
-
-    header, footer, nav, section {
-      background-color: #ffffff; /* Fundo branco sólido */
-      padding: 30px; /* Mais respiro para o conteúdo */
-      margin: 0 auto;
+    .container {
       max-width: 1100px;
-      width: 90%;
-      border-radius: 15px; /* Bordas mais arredondadas */
-      box-shadow: 0 8px 25px rgba(0,0,0,0.08); /* Sombra mais suave e espalhada */
-      margin-top: 20px; /* Mantém o espaçamento entre seções */
+      margin: auto;
+      padding: 20px;
     }
-
+    header, footer, nav, section {
+      background-color: white;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
     header {
       text-align: center;
-      color: #23407e; /* Cor do cabeçalho alinhada com os títulos */
-      padding-bottom: 20px; /* Espaçamento interno */
+      padding: 30px;
+      background-color: #ffffff;
+      color: #002b50;
     }
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 5px;
-      color: #23407e;
-    }
-    header p {
-      font-size: 1.1rem;
-      color: #555;
-    }
-
     nav {
-      background: linear-gradient(90deg, #23407e, #316cd4); /* Gradiente na navegação */
+      background-color: #005599;
+      padding: 15px;
       text-align: center;
-      border-radius: 15px; /* Bordas arredondadas */
-      padding: 15px 20px; /* Mais padding */
-      margin-top: 20px;
     }
     nav a {
       color: white;
-      margin: 0 15px;
+      margin: 0 10px;
       text-decoration: none;
-      font-weight: 600; /* Mais peso na fonte */
-      font-size: 1.05rem; /* Tamanho da fonte ligeiramente maior */
-      padding: 8px 12px; /* Área de clique maior */
-      transition: background 0.2s, transform 0.1s;
-      border-radius: 8px;
+      font-weight: bold;
+      display: inline-block;
+      padding: 5px 10px;
     }
     nav a:hover {
-      background-color: rgba(255, 255, 255, 0.2);
-      transform: translateY(-2px);
+      background-color: #003f73;
+      border-radius: 4px;
     }
-
-    /* --- ESTILO UNIFICADO PARA BOTÕES --- */
-    .main-btn { /* Nova classe para botões gerais */
-      background: linear-gradient(90deg, #316cd4, #54d2f7);
-      color: white;
-      padding: 12px 24px;
-      text-decoration: none;
-      border-radius: 14px; /* Bordas mais arredondadas */
-      display: inline-block;
-      margin: 10px 10px 10px 0;
-      cursor: pointer;
-      border: none;
-      font-size: 1rem;
-      font-weight: 600;
-      box-shadow: 0 1px 6px rgba(25,127,217,0.23);
-      transition: background 0.2s, transform 0.16s;
+    section h2 {
+      color: #002b50;
+      padding-left: 20px; /* Ajuste para o padding do container */
+      padding-top: 10px;
     }
-    .main-btn:hover {
-      background: linear-gradient(90deg, #223b8b, #14b0dd);
-      transform: scale(1.04);
+    section p {
+      text-align: justify;
+      padding: 0 20px; /* Ajuste para o padding do container */
     }
-
-    /* --- ESTILOS DO FORMULÁRIO DE CONTATO --- */
+    .group {
+      margin-bottom: 20px;
+      padding: 0 20px; /* Ajuste para o padding do container */
+    }
+    .group h3 {
+      color: #005599;
+      margin-top: 0;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #eeeeee;
+      color: #333;
+    }
+    /* Estilos do formulário */
     form {
-      background-color: #ffffff; /* Mantém o fundo branco */
-      padding: 25px; /* Ajuste de padding */
-      border-radius: 15px; /* Bordas arredondadas */
-      box-shadow: 0 8px 25px rgba(0,0,0,0.08); /* Sombra consistente */
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      margin: 0 20px; /* Ajuste para o padding do container */
     }
-
     form label {
       display: block;
       font-weight: 600;
-      margin-bottom: 8px; /* Mais espaçamento */
-      color: #23407e; /* Cor alinhada */
+      margin-bottom: 5px;
+      color: #002b50;
     }
-
     form input[type="text"],
     form input[type="email"],
     form textarea {
       width: 100%;
-      padding: 12px; /* Mais padding */
-      margin-bottom: 18px; /* Mais espaçamento */
+      padding: 10px;
+      margin-bottom: 15px;
       border: 1px solid #ccc;
-      border-radius: 8px; /* Bordas mais arredondadas */
+      border-radius: 6px;
       font-family: 'Montserrat', sans-serif;
-      font-size: 1rem;
+      font-size: 14px;
       box-sizing: border-box;
-      box-shadow: inset 0 1px 3px rgba(0,0,0,0.06); /* Sombra interna sutil */
-      transition: border-color 0.2s, box-shadow 0.2s;
     }
-    form input[type="text"]:focus,
-    form input[type="email"]:focus,
-    form textarea:focus {
-      outline: none;
-      border-color: #316cd4; /* Borda azul no foco */
-      box-shadow: 0 0 0 3px rgba(49,108,212,0.2); /* Sombra azul no foco */
-    }
-
     form button[type="submit"] {
-      /* Usa o estilo unificado de botão */
-      background: linear-gradient(90deg, #316cd4, #54d2f7);
+      background-color: #005599;
       color: white;
       padding: 12px 24px;
       border: none;
-      border-radius: 14px;
-      font-size: 1rem;
+      border-radius: 5px;
+      font-size: 16px;
       cursor: pointer;
-      font-weight: 600;
-      box-shadow: 0 1px 6px rgba(25,127,217,0.23);
-      transition: background 0.2s, transform 0.16s;
     }
     form button[type="submit"]:hover {
-      background: linear-gradient(90deg, #223b8b, #14b0dd);
-      transform: scale(1.04);
+      background-color: #004080;
     }
-
-    /* --- ESTILOS DO WHATSAPP E QR CODE --- */
+    /* Botão flutuante do WhatsApp */
     .whatsapp-button {
       position: fixed;
       bottom: 20px;
@@ -162,271 +132,152 @@
       font-weight: bold;
       box-shadow: 0 0 10px rgba(0,0,0,0.3);
       z-index: 9999;
-      transition: transform 0.2s;
-    }
-    .whatsapp-button:hover {
-      transform: scale(1.1);
     }
     .qrcode-container {
       text-align: center;
       margin-top: 30px;
+      padding-bottom: 20px; /* Ajuste para o padding do container */
     }
     .qrcode-container img {
       max-width: 200px;
       margin-top: 10px;
-      border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     }
-
-    /* --- ESTILOS DA SEÇÃO DE SERVIÇOS (JÁ MODERNIZADOS) --- */
-    #servicos {
-      background: linear-gradient(120deg, #e0ecfd 0%, #f7faff 100%); /* Fundo mais moderno para a seção */
-      padding: 40px 20px; /* Aumenta o padding da seção */
-      border-radius: 15px; /* Bordas arredondadas */
-      box-shadow: 0 8px 25px rgba(0,0,0,0.08); /* Sombra consistente */
-    }
-    #servicos h2 {
-      text-align: center;
-      color: #23407e;
-      font-weight: 700;
-      letter-spacing: .02em;
-      margin-bottom: 38px;
-      font-size: 2.3rem;
-    }
-    .services-grid {
-      display: grid;
-      gap: 30px;
-      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-    }
-    .service-card {
-      background: rgba(255,255,255,0.95);
-      border-radius: 22px 55px 22px 55px; /* Bordas mais orgânicas */
-      box-shadow: 0 6px 22px rgba(68,134,255,0.08);
-      padding: 32px 22px 28px 22px;
-      border-left: 5px solid #548eed; /* Borda lateral colorida */
-      min-height: 200px;
-      transition: transform .18s, box-shadow .22s;
-      position: relative;
-      overflow: hidden;
-      display: flex; /* Para alinhar conteúdo */
-      flex-direction: column;
-      justify-content: space-between; /* Empurra o botão para baixo */
-    }
-    .service-card:hover {
-      transform: translateY(-8px) scale(1.04);
-      box-shadow: 0 14px 34px rgba(52,120,220,0.13);
-    }
-    .service-icon {
-      font-size: 2.7rem;
-      margin-bottom: 16px;
-      color: #316cd4;
-    }
-    .service-title {
-      color: #23407e;
-      font-size: 1.18rem;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-    .service-desc {
-      color: #363845;
-      font-size: 1rem;
-      margin-bottom: 20px;
-      opacity: 0.87;
-      flex-grow: 1; /* Faz a descrição ocupar o espaço restante */
-    }
-    .cta-btn-service { /* Renomeado para não conflitar com .button */
-      background: linear-gradient(90deg, #316cd4, #54d2f7);
-      color: #fff;
-      border: none;
-      border-radius: 14px;
-      padding: 10px 22px;
-      font-size: 1rem;
-      cursor: pointer;
+    .button { /* Estilo para o botão de download de currículo */
+      background-color: #005599;
+      color: white;
+      padding: 10px 20px;
       text-decoration: none;
-      font-weight: 600;
-      transition: background 0.2s, transform 0.16s;
+      border-radius: 5px;
       display: inline-block;
-      box-shadow: 0 1px 6px #197fd93c;
-      margin-top: 10px; /* Espaçamento do botão */
-    }
-    .cta-btn-service:hover {
-      background: linear-gradient(90deg, #223b8b, #14b0dd);
-      transform: scale(1.04);
-    }
-
-    /* Media queries para responsividade */
-    @media (max-width: 768px) {
-      header h1 { font-size: 2rem; }
-      header p { font-size: 1rem; }
-      nav a { font-size: 0.95rem; margin: 0 8px; }
-      section { padding: 25px; }
-      #servicos h2 {
-        font-size: 1.8rem;
-        margin-bottom: 25px;
-      }
-      .service-card {
-        padding: 25px 18px 20px 18px;
-        min-height: auto; /* Ajusta altura em telas menores */
-      }
-      .service-icon {
-        font-size: 2.2rem;
-      }
-      .service-title {
-        font-size: 1.1rem;
-      }
-      .service-desc {
-        font-size: 0.95rem;
-      }
-      .main-btn, form button[type="submit"] {
-        padding: 10px 20px;
-        font-size: 0.95rem;
-      }
-    }
-    @media (max-width: 480px) {
-      header h1 { font-size: 1.8rem; }
-      header p { font-size: 0.9rem; }
-      nav { padding: 10px 15px; }
-      nav a { display: block; margin: 5px 0; }
-      section { padding: 20px; }
-      #servicos {
-        padding: 30px 15px;
-      }
-      #servicos h2 {
-        font-size: 1.5rem;
-      }
-      .services-grid {
-        grid-template-columns: 1fr; /* Uma coluna em telas muito pequenas */
-      }
-      .service-card {
-        border-radius: 15px 40px 15px 40px;
-      }
-      .main-btn, form button[type="submit"] {
-        width: 100%;
-        margin: 10px 0;
-      }
+      margin: 10px 10px 10px 20px; /* Ajuste para o padding do container */
+      cursor: pointer;
+      border: none;
     }
   </style>
 </head>
 <body>
 
-<header>
+<header class="container">
   <h1>Talamante Morais</h1>
   <p>Advocacia Pública Municipal</p>
 </header>
 
-<nav>
+<nav class="container">
   <a href="#inicio">Início</a>
-  <a href="#sobre">Sobre</a>
+  <a href="#sobre">Sobre nós</a>
   <a href="#servicos">Serviços</a>
   <a href="#publicacoes">Publicações</a>
-  <a href="#experiencias">Experiencias</a>
+  <a href="#experiencias">Experiências</a>
   <a href="#curriculo">Currículo</a>
   <a href="#contato">Contato</a>
 </nav>
 
-<section id="inicio"><h2>Bem-vindo</h2><p>Site oficial do escritório Talamante Morais – Advocacia Pública Municipal.</p></section>
+<section class="container" id="inicio">
+  <h2>Bem-vindo</h2>
+  <p>Site oficial do advogado Talamante Morais – Advocacia Pública Municipal.</p>
+</section>
 
-<section id="sobre"><h2>Sobre o Escritório</h2><p><strong>Missão:</strong> Fortalecer a gestão pública com assessoria técnica responsável.</p><p><strong>Visão:</strong> Ser referência em Direito Administrativo Municipal.</p><p><strong>Valores:</strong> Ética, Transparência, Técnica e Comprometimento.</p></section>
+<section class="container" id="sobre">
+  <h2>Sobre nós</h2>
+  <p><strong>Quem Somos:</strong> Atuamos com excelência em Direito Público Municipal, oferecendo assessoria e consultoria jurídica para prefeituras, câmaras de vereadores e órgãos municipais. Nosso escritório é especializado em licitações e contratos administrativos (Lei 8.666/93 e Lei 14.133), compliance, ética na administração pública, processo legislativo, controle interno e governança.</p>
+  <p>Trabalhamos de forma estratégica e personalizada, sempre comprometidos com a transparência, segurança jurídica e eficiência nas decisões do Executivo e Legislativo. Nossa missão é fortalecer a gestão pública municipal por meio de soluções jurídicas inovadoras e alinhadas às melhores práticas.</p>
+</section>
 
-<section id="servicos">
-  <h2>Nossos Serviços</h2>
-  <div class="services-grid">
-
-    <div class="service-card">
-      <div class="service-icon">📝</div>
-      <div class="service-title">Licitações e Contratos Públicos</div>
-      <div class="service-desc">
-        Consultoria e assessoria para Prefeituras e Câmaras em processos licitatórios e gestão contratual, conforme a legislação vigente.
-      </div>
-      <a class="cta-btn-service" href="mailto:talamantemorais@gmail.com">Fale Conosco</a>
-    </div>
-
-    <div class="service-card">
-      <div class="service-icon">⚖️</div>
-      <div class="service-title">Direito Administrativo</div>
-      <div class="service-desc">
-        Orientação jurídica em rotinas administrativas e defesa institucional para órgãos executivos e legislativos.
-      </div>
-      <a class="cta-btn-service" href="mailto:talamantemorais@gmail.com">Saiba Mais</a>
-    </div>
-
-    <div class="service-card">
-      <div class="service-icon">🏛️</div>
-      <div class="service-title">Processo Legislativo</div>
-      <div class="service-desc">
-        Apoio jurídico em projetos de lei, regimentos internos e assessoria parlamentar a vereadores e servidores.
-      </div>
-      <a class="cta-btn-service" href="mailto:talamantemorais@gmail.com">Solicitar Atendimento</a>
-    </div>
-
-    <div class="service-card">
-      <div class="service-icon">📑</div>
-      <div class="service-title">Pareceres e Auditorias Jurídicas</div>
-      <div class="service-desc">
-        Emissão de pareceres fundamentados e revisão de procedimentos administrativos para as administrações municipais.
-      </div>
-      <a class="cta-btn-service" href="mailto:talamantemorais@gmail.com">Entre em Contato</a>
-    </div>
-
-    <div class="service-card">
-      <div class="service-icon">👥</div>
-      <div class="service-title">PAD, Sindicâncias & Defesa de Agentes Públicos</div>
-      <div class="service-desc">
-        Defesa técnica e acompanhamento de processos administrativos disciplinares tanto no Executivo quanto no Legislativo Municipal.
-      </div>
-      <a class="cta-btn-service" href="mailto:talamantemorais@gmail.com">Agende uma Consulta</a>
-    </div>
-
-    <div class="service-card">
-      <div class="service-icon">  ️</div>
-      <div class="service-title">Compliance e Integridade Pública</div>
-      <div class="service-desc">
-        Implementação de programas de compliance, ética e integridade para Prefeituras e Câmaras.
-      </div>
-      <a class="cta-btn-service" href="mailto:talamantemorais@gmail.com">Converse Conosco</a>
-    </div>
-
+<section class="container" id="servicos">
+  <h2>Serviços</h2>
+  <div class="group">
+    <h3>Licitações e Contratos</h3>
+    <p>Licitações e Contratos Administrativos, incluindo assessoria completa nos processos e fiscalização do Executivo.</p>
+  </div>
+  <div class="group">
+    <h3>Governança, Compliance e Controle</h3>
+    <p>Atuação em Governança, Compliance, Controle Interno, Auditoria e Gestão de Riscos na Administração Pública.</p>
+  </div>
+  <div class="group">
+    <h3>Tribunais e Defesa Técnica</h3>
+    <p>Atuação estratégica junto aos Tribunais de Contas e defesa técnica de Prefeituras, agentes públicos e vereadores.</p>
+  </div>
+  <div class="group">
+    <h3>Consultoria Jurídica e Pareceres</h3>
+    <p>Elaboração de pareceres administrativos e consultoria técnica ao Poder Legislativo Municipal e ao Processo Legislativo.</p>
+  </div>
+  <div class="group">
+    <h3>Modernização da Gestão e Políticas Públicas</h3>
+    <p>Consultoria em Políticas Públicas, inovação institucional e regularização fundiária e urbanística.</p>
+  </div>
+  <div class="group">
+    <h3>Capacitação e Formação Técnica</h3>
+    <p>Capacitação de servidores e vereadores por meio de treinamentos, oficinas e eventos técnicos.</p>
+  </div>
+  <div class="group">
+    <h3>Suporte Legislativo e Comissões</h3>
+    <p>Atuação em comissões parlamentares, CPIs e comissões especiais de apuração e sindicância.</p>
   </div>
 </section>
 
-<section id="publicacoes"><h2>Publicações Técnicas</h2><ul><li><strong>Parecer Técnico:</strong> <a href="docs/parecer_lei_14133_municipios.pdf" >Download</a></li><li><strong>Artigo:</strong> <a href="docs/artigo_implementacao_local.pdf" >Download</a></li><li><strong>Vídeo:</strong> <a href="<div className="video-container mb-3"><iframe width="100%" height="315" src="https://www.youtube.com/embed/EXEMPLO_VIDEO" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>" >Assistir</a></li></ul></section>
+<section class="container" id="publicacoes">
+  <h2>Publicações Técnicas</h2>
+  <ul style="padding-left: 40px; padding-bottom: 20px;">
+    <li><strong>Parecer Técnico:</strong> <a href="docs/parecer_lei_14133_municipios.pdf" >Download</a></li>
+    <li><strong>Artigo:</strong> <a href="docs/artigo_implementacao_local.pdf" >Download</a></li>
+    <li><strong>Vídeo:</strong> <a href="<div className="video-container mb-3"><iframe width="100%" height="315" src="https://www.youtube.com/embed/EXEMPLO_VIDEO" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>" >Assistir</a></li>
+  </ul>
+</section>
 
-<section id="experiencias"><h2>Casos e Experiências Atendidas</h2><ul><li><strong>Legislação de Consórcio:</strong> revisão contratual sob a Lei nº 14.133/2021.</li><li><strong>Comissões Legislativas:</strong> consultoria técnica na redação de normas.</li><li><strong>Capacitações:</strong> formação em fiscalização e contratos.</li><li><strong>Sindicância:</strong> apoio jurídico a processos internos.</li></ul></section>
+<section class="container" id="experiencias">
+  <h2>Casos e Experiências Atendidas</h2>
+  <ul style="padding-left: 40px; padding-bottom: 20px;">
+    <li><strong>Legislação de Consórcio:</strong> revisão contratual sob a Lei nº 14.133/2021.</li>
+    <li><strong>Comissões Legislativas:</strong> consultoria técnica na redação de normas.</li>
+    <li><strong>Capacitações:</strong> formação em fiscalização e contratos.</li>
+    <li><strong>Sindicância:</strong> apoio jurídico a processos internos.</li>
+  </ul>
+</section>
 
-<section id="curriculo"><h2>Currículo Profissional</h2><button class="main-btn" onclick="window.open('curriculo_talamante.pdf', '_blank')">📄 Baixar Currículo</button></section>
+<section class="container" id="curriculo">
+  <h2>Currículo Profissional</h2>
+  <button class="button" onclick="window.open('curriculo_talamante.pdf', '_blank')">   Baixar Currículo</button>
+  <p style="padding-bottom: 20px;"></p> <!-- Espaçamento para o botão -->
+</section>
 
-<section id="contato">
+<section class="container" id="contato">
   <h2>Contato</h2>
-  
-<div id="mensagem-sucesso" style="display: none; background-color: #dff0d8; color: #3c763d; padding: 15px; border-radius: 5px; margin-bottom: 20px;">
-  ✅ Mensagem enviada com sucesso. Obrigado pelo contato!
-</div>
-<script>
-  window.onload = function() {
-    const urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.get('sucesso') === 'true') {
-      document.getElementById('mensagem-sucesso').style.display = 'block';
-    }
-  };
-</script>
+  <div id="mensagem-sucesso" style="display: none; background-color: #dff0d8; color: #3c763d; padding: 15px; border-radius: 5px; margin-bottom: 20px; margin-left: 20px; margin-right: 20px;">
+    ✅ Mensagem enviada com sucesso. Obrigado pelo contato!
+  </div>
+  <script>
+    window.onload = function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get('sucesso') === 'true') {
+        document.getElementById('mensagem-sucesso').style.display = 'block';
+        setTimeout(() => {
+          window.history.replaceState({}, document.title, window.location.pathname);
+        }, 3000);
+      }
+    };
+  </script>
+  <form action="https://formsubmit.co/talamantemorais@talamante-adv.com.br" method="POST">
+    <input type="hidden" name="_next" value="https://talamante-adv.com.br/?sucesso=true">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="text" name="_honey" style="display:none" tabindex="-1"> <!-- tabindex="-1" para não ser focado por tab -->
 
-<form action="https://formsubmit.co/talamantemorais@gmail.com" method="POST">
-  <input type="hidden" name="_next" value="https://talamante-adv.com.br/?sucesso=true">
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_honey" style="display:none">
-
-    <label for="nome">Nome:</label><br>
-    <input type="text" id="nome" name="nome" required><br><br>
-    <label for="email">E-mail:</label><br>
-    <input type="email" id="email" name="email" required><br><br>
-    <label for="mensagem">Mensagem:</label><br>
-    <textarea id="mensagem" name="mensagem" rows="5" required></textarea><br><br>
-    
-  <button type="submit">Enviar</button>
+    <div style="margin-bottom: 15px;">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required tabindex="1">
+    </div>
+    <div style="margin-bottom: 15px;">
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required tabindex="2">
+    </div>
+    <div style="margin-bottom: 15px;">
+      <label for="mensagem">Mensagem:</label>
+      <textarea id="mensagem" name="mensagem" rows="5" required tabindex="3"></textarea>
+    </div>
+    <button type="submit" tabindex="4">Enviar</button>
   </form>
-  <p><strong>Email:</strong> talamantemorais@gmail.com</p>
-  <p><strong>WhatsApp:</strong> (62) 99631-8340</p>
-  <ul>
+  <p style="padding-left: 20px; padding-top: 20px;"><strong>Email:</strong> talamantemorais@gmail.com</p>
+  <p style="padding-left: 20px;"><strong>WhatsApp:</strong> (62) 99631-8340</p>
+  <ul style="padding-left: 40px;">
     <li><a href="https://www.instagram.com/talamantemorais/" >Instagram</a></li>
     <li><a href="https://www.facebook.com/talamante.morais.100" >Facebook</a></li>
     <li><a href="https://www.linkedin.com/in/talamante-morais-a51535221/" >LinkedIn</a></li>
@@ -438,7 +289,10 @@
   </div>
 </section>
 
-<footer>&copy; 2025 Talamante Morais – Todos os direitos reservados.</footer>
+<footer class="container">
+  © 2025 Talamante Morais – Todos os direitos reservados.
+</footer>
+
 <a class="whatsapp-button" href="https://wa.me/556296318340" >WhatsApp</a>
 
 </body>
