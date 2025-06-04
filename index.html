@@ -5,7 +5,7 @@
   <title>Talamante Morais – Advocacia Pública Municipal</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Google tag (gtag.js) -->
+  <!-- Google tag (gtag.js) - NÃO ALTERAR ESTA SEÇÃO, A MENOS QUE SEJA UM TÉCNICO -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZKCPTG7K1T"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -14,7 +14,7 @@
     gtag('config', 'G-ZKCPTG7K1T');
   </script>
 <style>
-    /* --- ESTILOS GERAIS E MODERNIZADOS --- */
+    /* --- ESTILOS GERAIS E MODERNIZADOS --- NÃO ALTERAR ESTA SEÇÃO, A MENOS QUE SEJA UM TÉCNICO */
     body {
       margin: 0;
       padding: 0;
@@ -254,6 +254,38 @@
       transform: translateY(-2px);
     }
 
+    /* Estilos para a nova seção de Artigos */
+    #artigos ul {
+      list-style: none;
+      padding: 0;
+    }
+    #artigos li {
+      margin-bottom: 15px;
+      background-color: #f9f9f9;
+      padding: 15px 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      transition: transform 0.2s;
+    }
+    #artigos li:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    #artigos li a {
+      font-size: 1.1rem;
+      color: #23407e;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    #artigos li a:hover {
+      text-decoration: underline;
+    }
+    #artigos .artigo-meta {
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 5px;
+    }
+
     @media (max-width: 768px) {
       header h1 { font-size: 2rem; }
       header p { font-size: 1rem; }
@@ -308,25 +340,44 @@
 </head>
 <body>
 <header>
+  <!-- INÍCIO DA SEÇÃO EDITÁVEL: CABEÇALHO DO SITE -->
   <h1>Talamante Morais</h1>
   <p>Advocacia Pública Municipal</p>
+  <!-- FIM DA SEÇÃO EDITÁVEL: CABEÇALHO DO SITE -->
 </header>
 
 <nav>
+  <!-- INÍCIO DA SEÇÃO EDITÁVEL: NAVEGAÇÃO PRINCIPAL -->
+  <!-- Altere o texto entre <a> e </a>. Não altere o href="#..." -->
   <a href="#inicio">Início</a>
   <a href="#sobre">Sobre</a>
   <a href="#servicos">Serviços</a>
   <a href="#publicacoes">Publicações</a>
   <a href="#experiencias">Experiências</a>
-  <a href="#codigo-recursos">Código</a>
+  <a href="#artigos">Artigos</a>
+  <a href="#codigo-recursos">Recursos</a>
   <a href="#contato">Contato</a>
+  <!-- FIM DA SEÇÃO EDITÁVEL: NAVEGAÇÃO PRINCIPAL -->
 </nav>
 
-<section id="inicio"><h2>Bem-vindo</h2><p>Site oficial do escritório Talamante Morais – Advocacia Pública Municipal.</p></section>
+<section id="inicio">
+  <!-- INÍCIO DA SEÇÃO EDITÁVEL: BEM-VINDO -->
+  <h2>Bem-vindo</h2>
+  <p>Site oficial do escritório Talamante Morais – Advocacia Pública Municipal.</p>
+  <!-- FIM DA SEÇÃO EDITÁVEL: BEM-VINDO -->
+</section>
 
-<section id="sobre"><h2>Sobre o Escritório</h2><p><strong>Missão:</strong> Fortalecer a gestão pública com assessoria técnica responsável.</p><p><strong>Visão:</strong> Ser referência em Direito Administrativo Municipal.</p><p><strong>Valores:</strong> Ética, Transparência, Técnica e Comprometimento.</p></section>
+<section id="sobre">
+  <!-- INÍCIO DA SEÇÃO EDITÁVEL: SOBRE O ESCRITÓRIO -->
+  <h2>Sobre o Escritório</h2>
+  <p><strong>Missão:</strong> Fortalecer a gestão pública com assessoria técnica responsável.</p>
+  <p><strong>Visão:</strong> Ser referência em Direito Administrativo Municipal.</p>
+  <p><strong>Valores:</strong> Ética, Transparência, Técnica e Comprometimento.</p>
+  <!-- FIM DA SEÇÃO EDITÁVEL: SOBRE O ESCRITÓRIO -->
+</section>
 
 <section id="servicos">
+  <!-- INÍCIO DA SEÇÃO EDITÁVEL: NOSSOS SERVIÇOS -->
   <h2>Nossos Serviços</h2>
   <div class="services-grid">
     <div class="service-card">
@@ -334,6 +385,7 @@
       <div class="service-desc">
         Fortalecemos a gestão pública com assessoria técnica responsável. Atuamos em Licitações e Contratos (Lei 14.133/2021), consultoria legislativa, pareceres e compliance.
       </div>
+      <!-- Altere o texto do botão e o link (href) se necessário. -->
       <a class="cta-btn" href="direito-publico.html">Acessar</a>
     </div>
     <div class="service-card">
@@ -341,6 +393,7 @@
       <div class="service-desc">
         Oferecemos assessoria jurídica especializada para indivíduos e empresas, com foco em demandas cíveis, contratuais, familiares e patrimoniais.
       </div>
+      <!-- Altere o texto do botão e o link (href) se necessário. -->
       <a class="cta-btn" href="direito-privado.html">Acessar</a>
     </div>
     <div class="service-card">
@@ -348,73 +401,115 @@
       <div class="service-desc">
         Capacitação para servidores e gestores em formatos presenciais, online e in company. Cursos técnicos em direito administrativo e gestão pública.
       </div>
+      <!-- Altere o texto do botão e o link (href) se necessário. -->
       <a class="cta-btn" href="cursos.html">Acessar</a>
     </div>
   </div>
+  <!-- FIM DA SEÇÃO EDITÁVEL: NOSSOS SERVIÇOS -->
 </section>
 
-<section id="publicacoes"><h2>Publicações Técnicas</h2><ul><li><strong>Artigo:</strong> <a href="docs/artigo_implementacao_local.pdf" target="_blank" rel="noopener noreferrer">Download</a></li><li><strong>Vídeo:</strong> <a href="https://www.youtube.com/@TalamanteMorais" target="_blank" rel="noopener noreferrer">Assistir</a></li></ul></section>
+<section id="publicacoes">
+  <!-- INÍCIO DA SEÇÃO EDITÁVEL: PUBLICAÇÕES TÉCNICAS -->
+  <h2>Publicações Técnicas</h2>
+  <ul>
+    <li><strong>Artigo:</strong> <a href="docs/artigo_implementacao_local.pdf" target="_blank" rel="noopener noreferrer">Download</a></li>
+    <li><strong>Vídeo:</strong> <a href="https://www.youtube.com/@TalamanteMorais" target="_blank" rel="noopener noreferrer">Assistir</a></li>
+  </ul>
+  <!-- FIM DA SEÇÃO EDITÁVEL: PUBLICAÇÕES TÉCNICAS -->
+</section>
 
-<section id="experiencias"><h2>Casos e Experiências Atendidas</h2><ul><li><strong>Legislação de Consórcio:</strong> revisão contratual sob a Lei nº 14.133/2021.</li><li><strong>Comissões Legislativas:</strong> consultoria técnica na redação de normas.</li><li><strong>Capacitações:</strong> formação em fiscalização e contratos.</li><li><strong>Sindicância:</strong> apoio jurídico a processos internos.</li></ul></section>
+<section id="experiencias">
+  <!-- INÍCIO DA SEÇÃO EDITÁVEL: CASOS E EXPERIÊNCIAS ATENDIDAS -->
+  <h2>Casos e Experiências Atendidas</h2>
+  <ul>
+    <li><strong>Legislação de Consórcio:</strong> revisão contratual sob a Lei nº 14.133/2021.</li>
+    <li><strong>Comissões Legislativas:</strong> consultoria técnica na redação de normas.</li>
+    <li><strong>Capacitações:</strong> formação em fiscalização e contratos.</li>
+    <li><strong>Sindicância:</strong> apoio jurídico a processos internos.</li>
+  </ul>
+  <!-- FIM DA SEÇÃO EDITÁVEL: CASOS E EXPERIÊNCIAS ATENDIDAS -->
+</section>
+
+<section id="artigos">
+  <!-- INÍCIO DA SEÇÃO EDITÁVEL: ARTIGOS E PARECERES -->
+  <h2>Artigos e Pareceres</h2>
+  <p>Confira nossa biblioteca de artigos e pareceres sobre temas relevantes da Advocacia Pública Municipal.</p>
+  <ul>
+    <!-- PARA ADICIONAR UM NOVO ARTIGO: -->
+    <!-- 1. Crie um novo arquivo HTML para o artigo (use o artigo-modelo.html como base). -->
+    <!-- 2. Copie e cole o bloco <li> abaixo. -->
+    <!-- 3. Altere o texto do link (entre <a> e </a>) para o título do seu novo artigo. -->
+    <!-- 4. MUITO IMPORTANTE: Altere o 'href="..."' para o nome do arquivo HTML que você criou para o artigo. -->
+    <!-- 5. Altere a data e o autor. -->
+    <li>
+      <a href="artigo-licitacoes-nova-lei.html">A Nova Lei de Licitações (Lei 14.133/2021) e Seus Impactos nos Municípios</a>
+      <p class="artigo-meta">Publicado em: 01/06/2024 | Autor: Equipe Talamante Morais</p>
+    </li>
+    <li>
+      <a href="artigo-compliance-publico.html">Compliance e Integridade na Gestão Pública Municipal: Desafios e Soluções</a>
+      <p class="artigo-meta">Publicado em: 15/05/2024 | Autor: [Nome do Advogado]</p>
+    </li>
+    <li>
+      <a href="artigo-processo-legislativo.html">O Papel da Assessoria Jurídica no Processo Legislativo Municipal</a>
+      <p class="artigo-meta">Publicado em: 20/04/2024 | Autor: [Nome do Advogado]</p>
+    </li>
+    <!-- FIM DOS ARTIGOS. ADICIONE NOVOS ACIMA DESTA LINHA. -->
+  </ul>
+  <!-- FIM DA SEÇÃO EDITÁVEL: ARTIGOS E PARECERES -->
+</section>
 
 <section id="codigo-recursos">
-  <h2>Código e Recursos</h2>
-  <p>Aqui você encontrará exemplos de estruturas e snippets de código que podem ser úteis para a organização de documentos ou para aprimorar a apresentação de informações técnicas.</p>
+  <!-- INÍCIO DA SEÇÃO EDITÁVEL: RECURSOS E SNIPPETS DE CÓDIGO -->
+  <h2>Recursos e Snippets de Código</h2>
+  <p>Aqui compartilhamos pequenos trechos de código ou exemplos de formatação que podem ser úteis para profissionais do direito e da gestão pública.</p>
   <pre><code>
-    &lt;!-- Exemplo de estrutura HTML para um Artigo Jurídico --&gt;
-    &lt;div class="artigo-juridico"&gt;
-      &lt;h3&gt;Título do Artigo/Parecer&lt;/h3&gt;
-      &lt;p class="autor"&gt;Por: [Nome do Autor]&lt;/p&gt;
-      &lt;p class="data"&gt;Data: [DD/MM/AAAA]&lt;/p&gt;
-      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
-      &lt;blockquote class="citacao-legal"&gt;
-        "Art. 5º Todos são iguais perante a lei, sem distinção de qualquer natureza, garantindo-se aos brasileiros e aos estrangeiros residentes no País a inviolabilidade do direito à vida, à liberdade, à igualdade, à segurança e à propriedade..."
-        &lt;cite&gt;Constituição Federal de 1988&lt;/cite&gt;
-      &lt;/blockquote&gt;
-      &lt;p&gt;Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
-    &lt;/div&gt;
-
-    /* Exemplo de estilo CSS para elementos jurídicos */
-    .artigo-juridico {
-      font-family: 'Georgia', serif;
-      line-height: 1.8;
-      color: #333;
-      margin-bottom: 30px;
-    }
-    .citacao-legal {
-      background-color: #f9f9f9;
-      border-left: 5px solid #23407e;
-      margin: 1.5em 10px;
-      padding: 0.5em 15px;
-      quotes: "\201C""\201D""\2018""\2019";
+    /* Exemplo de Classe CSS para destaque de texto */
+    .destaque-legal {
+      background-color: #e0ecfd; /* Azul claro */
+      border-left: 4px solid #23407e; /* Linha azul escura na esquerda */
+      padding: 10px 15px;
+      margin: 15px 0;
       font-style: italic;
+      color: #23407e;
+      border-radius: 5px;
     }
-    .citacao-legal cite {
-      display: block;
-      text-align: right;
-      color: #666;
-      font-size: 0.9em;
-      margin-top: 10px;
-    }
+
+    &lt;!-- Como usar no HTML --&gt;
+    &lt;p class="destaque-legal"&gt;
+      &lt;strong&gt;Importante:&lt;/strong&gt; A interpretação da lei deve sempre considerar o contexto e a jurisprudência atual.
+    &lt;/p&gt;
   </code></pre>
-  <p>Este é um exemplo de como você pode estruturar e estilizar conteúdo técnico ou jurídico. Sinta-se à vontade para adaptar ou substituir este conteúdo pelos seus próprios exemplos e recursos.</p>
+  <p>Este é um exemplo de um recurso de código. Você pode substituir este conteúdo por outros snippets de CSS, HTML, ou até mesmo links para ferramentas úteis.</p>
+  <!-- FIM DA SEÇÃO EDITÁVEL: RECURSOS E SNIPPETS DE CÓDIGO -->
 </section>
 
 <section id="video-recente">
+  <!-- INÍCIO DA SEÇÃO EDITÁVEL: ÚLTIMO VÍDEO -->
   <h2>Último Vídeo</h2>
   <div class="video-container">
+    <!-- Para alterar o vídeo, substitua 'EXEMPLO_VIDEO' pelo ID do vídeo do YouTube. -->
     <iframe width="560" height="315" src="https://www.youtube.com/embed/EXEMPLO_VIDEO" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
+  <!-- FIM DA SEÇÃO EDITÁVEL: ÚLTIMO VÍDEO -->
 </section>
 
-<section id="curriculo"><h2>Currículo Profissional</h2><button class="main-btn" onclick="window.open('curriculo_talamante.pdf', '_blank')">📄 Baixar Currículo</button></section>
+<section id="curriculo">
+  <!-- INÍCIO DA SEÇÃO EDITÁVEL: CURRÍCULO PROFISSIONAL -->
+  <h2>Currículo Profissional</h2>
+  <!-- Para alterar o arquivo do currículo, substitua 'curriculo_talamante.pdf' pelo nome do seu arquivo PDF. -->
+  <button class="main-btn" onclick="window.open('curriculo_talamante.pdf', '_blank')">📄 Baixar Currículo</button>
+  <!-- FIM DA SEÇÃO EDITÁVEL: CURRÍCULO PROFISSIONAL -->
+</section>
 
 <section id="contato">
+  <!-- INÍCIO DA SEÇÃO EDITÁVEL: CONTATO -->
   <h2>Contato</h2>
   <div id="mensagem-sucesso" style="display: none; background-color: #dff0d8; color: #3c763d; padding: 15px; border-radius: 5px; margin-bottom: 20px;">
     ✅ Mensagem enviada com sucesso. Obrigado pelo contato!
   </div>
   <form action="https://formsubmit.co/talamantemorais@gmail.com" method="POST">
+    <!-- IMPORTANTE: Altere o e-mail no 'action' para o seu e-mail de contato. -->
+    <!-- IMPORTANTE: Altere o 'value' do '_next' para o endereço do seu site. -->
     <input type="hidden" name="_next" value="https://talamante-adv.com.br/?sucesso=true">
     <input type="hidden" name="_honey" style="display:none">
     <label for="nome">Nome:</label><br>
@@ -428,6 +523,7 @@
   <p><strong>Email:</strong> talamantemorais@gmail.com</p>
   <p><strong>WhatsApp:</strong> (62) 99631-8340</p>
   <ul>
+    <!-- Altere os links (href) para suas redes sociais. -->
     <li><a href="https://www.instagram.com/talamantemorais/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
     <li><a href="https://www.facebook.com/talamante.morais.100" target="_blank" rel="noopener noreferrer">Facebook</a></li>
     <li><a href="https://www.linkedin.com/in/talamante-morais-a51535221/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
@@ -435,14 +531,22 @@
   </ul>
   <div class="qrcode-container">
     <h3>Acesso Rápido ao Site</h3>
+    <!-- Para alterar o QR Code, substitua 'qrcode_talamante_site.png' pelo nome do seu arquivo de imagem. -->
     <img src="qrcode_talamante_site.png" alt="QR Code para o site">
   </div>
+  <!-- FIM DA SEÇÃO EDITÁVEL: CONTATO -->
 </section>
 
-<footer>&copy; 2025 Talamante Morais – Todos os direitos reservados.</footer>
+<footer>
+  <!-- INÍCIO DA SEÇÃO EDITÁVEL: RODAPÉ -->
+  &copy; 2025 Talamante Morais – Todos os direitos reservados.
+  <!-- FIM DA SEÇÃO EDITÁVEL: RODAPÉ -->
+</footer>
 
+<!-- BOTÃO FLUTUANTE DO WHATSAPP - NÃO ALTERAR ESTA SEÇÃO, A MENOS QUE SEJA UM TÉCNICO -->
 <a class="whatsapp-button" href="https://wa.me/556296318340" target="_blank" rel="noopener noreferrer">WhatsApp</a>
 
+<!-- SCRIPT PARA MENSAGEM DE SUCESSO DO FORMULÁRIO - NÃO ALTERAR ESTA SEÇÃO, A MENOS QUE SEJA UM TÉCNICO -->
 <script>
   window.onload = function() {
     const urlParams = new URLSearchParams(window.location.search);
