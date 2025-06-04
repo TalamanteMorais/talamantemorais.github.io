@@ -56,11 +56,6 @@
     }
     nav a {
       color: white;
-padding: 15px 20px;
-      margin-top: 20px;
-    }
-    nav a {
-      color: white;
       margin: 0 15px;
       text-decoration: none;
       font-weight: 600;
@@ -91,9 +86,6 @@ padding: 15px 20px;
     .main-btn:hover {
       background: linear-gradient(90deg, #223b8b, #14b0dd);
       transform: scale(1.04);
-    }
-    form {
-transform: scale(1.04);
     }
     form {
       background-color: #ffffff;
@@ -129,9 +121,6 @@ transform: scale(1.04);
       box-shadow: 0 0 0 3px rgba(49,108,212,0.2);
     }
     form button[type="submit"] {
-box-shadow: 0 0 0 3px rgba(49,108,212,0.2);
-    }
-    form button[type="submit"] {
       background: linear-gradient(90deg, #316cd4, #54d2f7);
       color: white;
       padding: 12px 24px;
@@ -161,11 +150,6 @@ box-shadow: 0 0 0 3px rgba(49,108,212,0.2);
       z-index: 9999;
       transition: transform 0.2s;
     }
-    .whatsapp-button:hover {
-      transform: scale(1.1);
-    }
-    .qrcode-container {
-}
     .whatsapp-button:hover {
       transform: scale(1.1);
     }
@@ -203,8 +187,6 @@ box-shadow: 0 0 0 3px rgba(49,108,212,0.2);
       border-radius: 22px 55px 22px 55px;
       box-shadow: 0 6px 22px rgba(68,134,255,0.08);
       padding: 32px 22px 28px 22px;
-box-shadow: 0 6px 22px rgba(68,134,255,0.08);
-      padding: 32px 22px 28px 22px;
       border-left: 5px solid #548eed;
       min-height: 200px;
       transition: transform .18s, box-shadow .22s;
@@ -218,7 +200,7 @@ box-shadow: 0 6px 22px rgba(68,134,255,0.08);
       transform: translateY(-8px) scale(1.04);
       box-shadow: 0 14px 34px rgba(52,120,220,0.13);
     }
-    .service-icon {
+    .service-icon { /* Mantido para compatibilidade, mas não usado nos novos cards */
       font-size: 2.7rem;
       margin-bottom: 16px;
       color: #316cd4;
@@ -236,12 +218,9 @@ box-shadow: 0 6px 22px rgba(68,134,255,0.08);
       opacity: 0.87;
       flex-grow: 1;
     }
-    .cta-btn-service {
+    .cta-btn-service { /* Mantido para compatibilidade, mas não usado nos novos cards */
       background: linear-gradient(90deg, #316cd4, #54d2f7);
       color: #fff;
-      border: none;
-      border-radius: 14px;
-color: #fff;
       border: none;
       border-radius: 14px;
       padding: 10px 22px;
@@ -254,10 +233,27 @@ color: #fff;
       box-shadow: 0 1px 6px #197fd93c;
       margin-top: 10px;
     }
-    .cta-btn-service:hover {
+    .cta-btn-service:hover { /* Mantido para compatibilidade, mas não usado nos novos cards */
       background: linear-gradient(90deg, #223b8b, #14b0dd);
       transform: scale(1.04);
     }
+    /* Estilo para os novos botões CTA */
+    .cta-btn {
+      display: inline-block;
+      margin-top: 15px;
+      background-color: #23407e; /* Cor principal do seu tema */
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background-color 0.2s, transform 0.16s;
+    }
+    .cta-btn:hover {
+      background-color: #316cd4; /* Um tom mais claro ou escuro no hover */
+      transform: translateY(-2px);
+    }
+
     @media (max-width: 768px) {
       header h1 { font-size: 2rem; }
       header p { font-size: 1rem; }
@@ -276,10 +272,6 @@ color: #fff;
       }
       .service-title {
         font-size: 1.1rem;
-      }
-      .service-desc {
-        font-size: 0.95rem;
-font-size: 1.1rem;
       }
       .service-desc {
         font-size: 0.95rem;
@@ -326,13 +318,14 @@ font-size: 1.1rem;
   <a href="#servicos">Serviços</a>
   <a href="#publicacoes">Publicações</a>
   <a href="#experiencias">Experiências</a>
-  <a href="#codigo-recursos">Código</a> <!-- Adicionado link para a nova seção -->
+  <a href="#codigo-recursos">Código</a>
   <a href="#contato">Contato</a>
 </nav>
 
 <section id="inicio"><h2>Bem-vindo</h2><p>Site oficial do escritório Talamante Morais – Advocacia Pública Municipal.</p></section>
 
 <section id="sobre"><h2>Sobre o Escritório</h2><p><strong>Missão:</strong> Fortalecer a gestão pública com assessoria técnica responsável.</p><p><strong>Visão:</strong> Ser referência em Direito Administrativo Municipal.</p><p><strong>Valores:</strong> Ética, Transparência, Técnica e Comprometimento.</p></section>
+
 <section id="servicos">
   <h2>Nossos Serviços</h2>
   <div class="services-grid">
@@ -359,35 +352,53 @@ font-size: 1.1rem;
     </div>
   </div>
 </section>
+
 <section id="publicacoes"><h2>Publicações Técnicas</h2><ul><li><strong>Artigo:</strong> <a href="docs/artigo_implementacao_local.pdf" target="_blank" rel="noopener noreferrer">Download</a></li><li><strong>Vídeo:</strong> <a href="https://www.youtube.com/@TalamanteMorais" target="_blank" rel="noopener noreferrer">Assistir</a></li></ul></section>
 
 <section id="experiencias"><h2>Casos e Experiências Atendidas</h2><ul><li><strong>Legislação de Consórcio:</strong> revisão contratual sob a Lei nº 14.133/2021.</li><li><strong>Comissões Legislativas:</strong> consultoria técnica na redação de normas.</li><li><strong>Capacitações:</strong> formação em fiscalização e contratos.</li><li><strong>Sindicância:</strong> apoio jurídico a processos internos.</li></ul></section>
 
-<!-- Nova Seção: Código e Recursos -->
 <section id="codigo-recursos">
   <h2>Código e Recursos</h2>
-  <p>Aqui você pode compartilhar trechos de código, exemplos de scripts ou recursos técnicos relevantes para seus visitantes.</p>
+  <p>Aqui você encontrará exemplos de estruturas e snippets de código que podem ser úteis para a organização de documentos ou para aprimorar a apresentação de informações técnicas.</p>
   <pre><code>
-    // Exemplo de código JavaScript
-    function saudar(nome) {
-      console.log("Olá, " + nome + "!");
-    }
-    saudar("Visitante");
+    &lt;!-- Exemplo de estrutura HTML para um Artigo Jurídico --&gt;
+    &lt;div class="artigo-juridico"&gt;
+      &lt;h3&gt;Título do Artigo/Parecer&lt;/h3&gt;
+      &lt;p class="autor"&gt;Por: [Nome do Autor]&lt;/p&gt;
+      &lt;p class="data"&gt;Data: [DD/MM/AAAA]&lt;/p&gt;
+      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+      &lt;blockquote class="citacao-legal"&gt;
+        "Art. 5º Todos são iguais perante a lei, sem distinção de qualquer natureza, garantindo-se aos brasileiros e aos estrangeiros residentes no País a inviolabilidade do direito à vida, à liberdade, à igualdade, à segurança e à propriedade..."
+        &lt;cite&gt;Constituição Federal de 1988&lt;/cite&gt;
+      &lt;/blockquote&gt;
+      &lt;p&gt;Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
+    &lt;/div&gt;
 
-    /*
-    * Exemplo de estilo CSS
-    */
-    .destaque {
-      background-color: #f0f8ff;
-      border-left: 4px solid #316cd4;
-      padding: 15px;
-      margin-top: 20px;
-      border-radius: 8px;
+    /* Exemplo de estilo CSS para elementos jurídicos */
+    .artigo-juridico {
+      font-family: 'Georgia', serif;
+      line-height: 1.8;
+      color: #333;
+      margin-bottom: 30px;
+    }
+    .citacao-legal {
+      background-color: #f9f9f9;
+      border-left: 5px solid #23407e;
+      margin: 1.5em 10px;
+      padding: 0.5em 15px;
+      quotes: "\201C""\201D""\2018""\2019";
+      font-style: italic;
+    }
+    .citacao-legal cite {
+      display: block;
+      text-align: right;
+      color: #666;
+      font-size: 0.9em;
+      margin-top: 10px;
     }
   </code></pre>
-  <p>Sinta-se à vontade para substituir este conteúdo pelos seus próprios exemplos de código, links para repositórios ou outras informações técnicas.</p>
+  <p>Este é um exemplo de como você pode estruturar e estilizar conteúdo técnico ou jurídico. Sinta-se à vontade para adaptar ou substituir este conteúdo pelos seus próprios exemplos e recursos.</p>
 </section>
-<!-- Fim da Nova Seção -->
 
 <section id="video-recente">
   <h2>Último Vídeo</h2>
@@ -397,6 +408,7 @@ font-size: 1.1rem;
 </section>
 
 <section id="curriculo"><h2>Currículo Profissional</h2><button class="main-btn" onclick="window.open('curriculo_talamante.pdf', '_blank')">📄 Baixar Currículo</button></section>
+
 <section id="contato">
   <h2>Contato</h2>
   <div id="mensagem-sucesso" style="display: none; background-color: #dff0d8; color: #3c763d; padding: 15px; border-radius: 5px; margin-bottom: 20px;">
@@ -415,7 +427,6 @@ font-size: 1.1rem;
   </form>
   <p><strong>Email:</strong> talamantemorais@gmail.com</p>
   <p><strong>WhatsApp:</strong> (62) 99631-8340</p>
-<p><strong>WhatsApp:</strong> (62) 99631-8340</p>
   <ul>
     <li><a href="https://www.instagram.com/talamantemorais/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
     <li><a href="https://www.facebook.com/talamante.morais.100" target="_blank" rel="noopener noreferrer">Facebook</a></li>
@@ -427,7 +438,9 @@ font-size: 1.1rem;
     <img src="qrcode_talamante_site.png" alt="QR Code para o site">
   </div>
 </section>
+
 <footer>&copy; 2025 Talamante Morais – Todos os direitos reservados.</footer>
+
 <a class="whatsapp-button" href="https://wa.me/556296318340" target="_blank" rel="noopener noreferrer">WhatsApp</a>
 
 <script>
