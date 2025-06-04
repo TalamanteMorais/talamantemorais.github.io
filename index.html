@@ -182,7 +182,7 @@
     .services-grid {
       display: grid;
       gap: 30px;
-      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      grid-template-columns: 1fr; /* ALTERADO: Agora os cards sempre empilham */
     }
     .service-card {
       background: rgba(255,255,255,0.95);
@@ -351,9 +351,7 @@
       #servicos h2 {
         font-size: 1.5rem;
       }
-      .services-grid {
-        grid-template-columns: 1fr;
-      }
+      /* A regra grid-template-columns: 1fr; já está no padrão, então esta media query para .services-grid é redundante aqui */
       .service-card {
         border-radius: 15px 40px 15px 40px; /* Mantido para mobile, se for o desejado */
       }
@@ -432,8 +430,8 @@
   <!-- INÍCIO DA SEÇÃO EDITÁVEL: PUBLICAÇÕES TÉCNICAS -->
   <h2>Publicações Técnicas</h2>
   <ul>
-    <li><strong>Artigo:</strong> <a href="docs/artigo_implementacao_local.pdf"  rel="noopener noreferrer">Download</a></li>
-    <li><strong>Vídeo:</strong> <a href="https://www.youtube.com/@TalamanteMorais"  rel="noopener noreferrer">Assistir</a></li>
+    <li><strong>Artigo:</strong> <a href="docs/artigo_implementacao_local.pdf" target="_blank" rel="noopener noreferrer">Download</a></li>
+    <li><strong>Vídeo:</strong> <a href="https://www.youtube.com/@TalamanteMorais" target="_blank" rel="noopener noreferrer">Assistir</a></li>
   </ul>
   <!-- FIM DA SEÇÃO EDITÁVEL: PUBLICAÇÕES TÉCNICAS -->
 </section>
@@ -514,10 +512,10 @@
   <p><strong>WhatsApp:</strong> (62) 99631-8340</p>
   <ul>
     <!-- Altere os links (href) para suas redes sociais. -->
-    <li><a href="https://www.instagram.com/talamantemorais/"  rel="noopener noreferrer">Instagram</a></li>
-    <li><a href="https://www.facebook.com/talamante.morais.100"  rel="noopener noreferrer">Facebook</a></li>
-    <li><a href="https://www.linkedin.com/in/talamante-morais-a51535221/"  rel="noopener noreferrer">LinkedIn</a></li>
-    <li><a href="https://www.youtube.com/@TalamanteMorais"  rel="noopener noreferrer">YouTube</a></li>
+    <li><a href="https://www.instagram.com/talamantemorais/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+    <li><a href="https://www.facebook.com/talamante.morais.100" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+    <li><a href="https://www.linkedin.com/in/talamante-morais-a51535221/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+    <li><a href="https://www.youtube.com/@TalamanteMorais" target="_blank" rel="noopener noreferrer">YouTube</a></li>
   </ul>
   <div class="qrcode-container">
     <h3>Acesso Rápido ao Site</h3>
@@ -532,7 +530,7 @@
   <!-- FIM DA SEÇÃO EDITÁVEL: RODAPÉ -->
 </footer>
 <!-- BOTÃO FLUTUANTE DO WHATSAPP -->
-<a class="whatsapp-button" href="https://wa.me/556296318340"  rel="noopener noreferrer">WhatsApp</a>
+<a class="whatsapp-button" href="https://wa.me/556296318340" target="_blank" rel="noopener noreferrer">WhatsApp</a>
 
 <!-- SCRIPT PARA MENSAGEM DE SUCESSO DO FORMULÁRIO -->
 <script>
