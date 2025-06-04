@@ -28,77 +28,75 @@
         h1, h2 {
             color: #23407e;
         }
-        form {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            margin-top: 20px;
-        }
-        input, textarea {
+        form input, form textarea {
+            width: 100%;
             padding: 12px;
-            border-radius: 6px;
+            margin-bottom: 10px;
             border: 1px solid #ccc;
+            border-radius: 8px;
             font-size: 1rem;
         }
-        button {
+        form button {
+            padding: 10px 20px;
             background-color: #23407e;
-            color: white;
+            color: #fff;
             border: none;
-            padding: 12px;
-            border-radius: 6px;
+            border-radius: 8px;
             cursor: pointer;
         }
-        .qrcode-section {
-            text-align: center;
-            margin-top: 40px;
-        }
-        .curriculo-button {
+        .qrcode-container {
             text-align: center;
             margin-top: 20px;
         }
-        .curriculo-button a {
+        .qrcode-container img {
+            width: 200px;
+            height: auto;
+        }
+        .btn-curriculo {
             display: inline-block;
+            margin: 10px auto;
+            padding: 10px 20px;
             background-color: #23407e;
             color: white;
-            padding: 10px 20px;
-            border-radius: 8px;
             text-decoration: none;
-            font-weight: bold;
+            border-radius: 8px;
         }
     </style>
 </head>
 <body>
 
 <header class="container">
-  <h1>Talamante Morais</h1>
-  <p>Advocacia Pública Municipal</p>
+    <h1>Talamante Morais</h1>
+    <p>Advocacia Pública Municipal</p>
 </header>
 
 <main class="container">
-  <section id="curriculo">
-    <div class="curriculo-button">
-      <a href="curriculo_talamante.pdf" target="_blank">📄 Currículo Profissional</a>
-    </div>
-  </section>
+    <section id="curriculo">
+        <h2>Currículo Profissional</h2>
+        <a class="btn-curriculo" href="curriculo_talamante.pdf" target="_blank">Acessar Currículo em PDF</a>
+    </section>
 
-  <section id="contato">
-    <h2>Contato</h2>
-    <form action="https://formsubmit.co/seudominio@exemplo.com" method="POST">
-        <input type="text" name="name" placeholder="Nome:" required>
-        <input type="email" name="email" placeholder="E-mail:" required>
-        <textarea name="message" rows="6" placeholder="Mensagem:" required></textarea>
-        <button type="submit">Enviar</button>
-    </form>
-  </section>
+    <section id="contato">
+        <h2>Contato</h2>
+        <form action="https://formsubmit.co/contato@talamantemorais.com.br" method="POST">
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" id="nome" required />
+            <label for="email">E-mail:</label>
+            <input type="email" name="email" id="email" required />
+            <label for="mensagem">Mensagem:</label>
+            <textarea name="mensagem" id="mensagem" rows="6" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
 
-  <section class="qrcode-section">
-    <h2>🔗 Acesso Rápido ao Site</h2>
-    <img src="qrcode_talamante_site.png" alt="QR Code para o site" width="200">
-  </section>
+    <section id="qrcode" class="qrcode-container">
+        <h2>Acesso Rápido ao Site</h2>
+        <img src="qrcode_talamante_site.png" alt="QR Code para acesso rápido ao site" />
+    </section>
 </main>
 
 <footer class="container">
-  &copy; 2025 Talamante Morais – Todos os direitos reservados.
+    &copy; 2025 Talamante Morais – Todos os direitos reservados.
 </footer>
 
 </body>
