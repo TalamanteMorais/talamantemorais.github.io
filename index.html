@@ -1,559 +1,638 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <title>Talamante Morais – Advocacia Pública Municipal</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-<!-- Google tag (gtag.js) - NÃO ALTERAR ESTA SEÇÃO, A MENOS QUE SEJA UM TÉCNICO -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZKCPTG7K1T"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-ZKCPTG7K1T');
-  </script>
-<style>
-    /* --- ESTILOS GERAIS E MODERNIZADOS --- NÃO ALTERAR ESTA SEÇÃO, A MENOS QUE SEJA UM TÉCNICO */
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Montserrat', sans-serif;
-      background: linear-gradient(120deg, #e0ecfd 0%, #f7faff 100%);
-      color: #333;
-      line-height: 1.6;
-    }
-    header, footer, nav, section {
-      background-color: #ffffff;
-      padding: 30px;
-      margin: 0 auto;
-      max-width: 1100px;
-      width: 90%;
-      border-radius: 15px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-      margin-top: 20px;
-    }
-    header {
-      text-align: center;
-      color: #23407e;
-margin-top: 20px;
-    }
-    header {
-      text-align: center;
-      color: #23407e;
-      padding-bottom: 20px;
-    }
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 5px;
-      color: #23407e;
-    }
-    header p {
-      font-size: 1.1rem;
-      color: #555;
-    }
-    nav {
-      background: linear-gradient(90deg, #23407e, #316cd4);
-      text-align: center;
-      border-radius: 15px;
-      padding: 15px 20px;
-      margin-top: 20px;
-    }
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1.05rem;
-      padding: 8px 12px;
-      transition: background 0.2s, transform 0.1s;
-      border-radius: 8px;
-    }
-    nav a:hover {
-      background-color: rgba(255, 255, 255, 0.2);
-      transform: translateY(-2px);
-    }
-    .main-btn {
-      background: linear-gradient(90deg, #316cd4, #54d2f7);
-      color: white;
-      padding: 12px 24px;
-      text-decoration: none;
-      border-radius: 14px;
-padding: 12px 24px;
-      text-decoration: none;
-      border-radius: 14px;
-      display: inline-block;
-      margin: 10px 10px 10px 0;
-      cursor: pointer;
-      border: none;
-      font-size: 1rem;
-      font-weight: 600;
-      box-shadow: 0 1px 6px rgba(25,127,217,0.23);
-      transition: background 0.2s, transform 0.16s;
-    }
-    .main-btn:hover {
-      background: linear-gradient(90deg, #223b8b, #14b0dd);
-      transform: scale(1.04);
-    }
-    form {
-      background-color: #ffffff;
-      padding: 25px;
-      border-radius: 15px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-    }
-    form label {
-      display: block;
-      font-weight: 600;
-      margin-bottom: 8px;
-      color: #23407e;
-    }
-    form input[type="text"],
-    form input[type="email"],
-    form textarea {
-      width: 100%;
-      padding: 12px;
-      margin-bottom: 18px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 1rem;
-border-radius: 8px;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 1rem;
-      box-sizing: border-box;
-      box-shadow: inset 0 1px 3px rgba(0,0,0,0.06);
-      transition: border-color 0.2s, box-shadow 0.2s;
-    }
-    form input[type="text"]:focus,
-    form input[type="email"]:focus,
-    form textarea:focus {
-      outline: none;
-      border-color: #316cd4;
-      box-shadow: 0 0 0 3px rgba(49,108,212,0.2);
-    }
-    form button[type="submit"] {
-      background: linear-gradient(90deg, #316cd4, #54d2f7);
-      color: white;
-      padding: 12px 24px;
-      border: none;
-      border-radius: 14px;
-      font-size: 1rem;
-      cursor: pointer;
-      font-weight: 600;
-      box-shadow: 0 1px 6px rgba(25,127,217,0.23);
-      transition: background 0.2s, transform 0.16s;
-    }
-    form button[type="submit"]:hover {
-      background: linear-gradient(90deg, #223b8b, #14b0dd);
-      transform: scale(1.04);
-    }
-    .whatsapp-button {
-      position: fixed;
-transform: scale(1.04);
-    }
-    .whatsapp-button {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25d366;
-      color: white;
-      padding: 12px 16px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: bold;
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
-      z-index: 9999;
-      transition: transform 0.2s;
-    }
-    .whatsapp-button:hover {
-      transform: scale(1.1);
-    }
-    .qrcode-container {
-      text-align: center;
-      margin-top: 30px;
-    }
-    .qrcode-container img {
-      max-width: 200px;
-      margin-top: 10px;
-      border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    }
-    #servicos {
-      background: linear-gradient(120deg, #e0ecfd 0%, #f7faff 100%);
-      padding: 40px 20px;
-      border-radius: 15px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-    }
-    #servicos h2 {
-      text-align: center;
-      color: #23407e;
-      font-weight: 700;
-      letter-spacing: .02em;
-color: #23407e;
-      font-weight: 700;
-      letter-spacing: .02em;
-      margin-bottom: 38px;
-      font-size: 2.3rem;
-    }
-    .services-grid {
-      display: grid;
-      gap: 30px;
-      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-    }
-    .service-card {
-      background: rgba(255,255,255,0.95);
-      border-radius: 22px 55px 22px 55px;
-      box-shadow: 0 6px 22px rgba(68,134,255,0.08);
-      padding: 32px 22px 28px 22px;
-      border-left: 5px solid #548eed;
-      min-height: 200px;
-      transition: transform .18s, box-shadow .22s;
-      position: relative;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-    .service-card:hover {
-      transform: translateY(-8px) scale(1.04);
-      box-shadow: 0 14px 34px rgba(52,120,220,0.13);
-    }
-    .service-icon { /* Mantido para compatibilidade, mas não usado nos novos cards */
-      font-size: 2.7rem;
-      margin-bottom: 16px;
-font-size: 2.7rem;
-      margin-bottom: 16px;
-      color: #316cd4;
-    }
-    .service-title {
-      color: #23407e;
-      font-size: 1.18rem;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-    .service-desc {
-      color: #363845;
-      font-size: 1rem;
-      margin-bottom: 20px;
-      opacity: 0.87;
-      flex-grow: 1;
-    }
-    .cta-btn-service { /* Mantido para compatibilidade, mas não usado nos novos cards */
-      background: linear-gradient(90deg, #316cd4, #54d2f7);
-      color: #fff;
-      border: none;
-      border-radius: 14px;
-      padding: 10px 22px;
-      font-size: 1rem;
-      cursor: pointer;
-      text-decoration: none;
-      font-weight: 600;
-      transition: background 0.2s, transform 0.16s;
-      display: inline-block;
-      box-shadow: 0 1px 6px #197fd93c;
-      margin-top: 10px;
-    }
-    .cta-btn-service:hover { /* Mantido para compatibilidade, mas não usado nos novos cards */
-      background: linear-gradient(90deg, #223b8b, #14b0dd);
-background: linear-gradient(90deg, #223b8b, #14b0dd);
-      transform: scale(1.04);
-    }
-    /* Estilo para os novos botões CTA */
-    .cta-btn {
-      display: inline-block;
-      margin-top: 15px;
-      background-color: #23407e; /* Cor principal do seu tema */
-      color: white;
-      padding: 10px 20px;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: background-color 0.2s, transform 0.16s;
-    }
-    .cta-btn:hover {
-      background-color: #316cd4; /* Um tom mais claro ou escuro no hover */
-      transform: translateY(-2px);
-    }
-/* Estilos para a nova seção de Artigos */
-    #artigos ul {
-      list-style: none;
-      padding: 0;
-    }
-    #artigos li {
-      margin-bottom: 15px;
-      background-color: #f9f9f9;
-      padding: 15px 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      transition: transform 0.2s;
-    }
-    #artigos li:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    }
-    #artigos li a {
-      font-size: 1.1rem;
-      color: #23407e;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    #artigos li a:hover {
-      text-decoration: underline;
-    }
-    #artigos .artigo-meta {
-      font-size: 0.9rem;
-      color: #666;
-      margin-top: 5px;
-    }
+/* --- Variáveis CSS para Cores e Espaçamento --- */
+:root {
+  --primary-color: #23407e; /* Azul escuro principal */
+  --secondary-color: #316cd4; /* Azul médio para botões/destaques */
+  --accent-color: #54d2f7; /* Azul claro para detalhes */
+  --text-dark: #333; /* Cor de texto principal */
+  --text-light: #555; /* Cor de texto secundária */
+  --bg-light: #f7faff; /* Fundo claro */
+  --bg-white: #ffffff; /* Fundo branco para cards/seções */
+  --border-color: #e0ecfd; /* Cor de borda suave */
+
+  --spacing-xs: 8px;
+  --spacing-sm: 16px;
+  --spacing-md: 24px;
+  --spacing-lg: 48px;
+  --spacing-xl: 80px;
+
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Montserrat', sans-serif;
+
+  --border-radius-sm: 8px;
+  --border-radius-md: 15px;
+  --border-radius-lg: 22px;
+
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.05);
+  --shadow-md: 0 8px 25px rgba(0,0,0,0.08);
+  --shadow-lg: 0 14px 34px rgba(52,120,220,0.13);
+}
+
+/* --- Reset Básico --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  background: linear-gradient(120deg, var(--border-color) 0%, var(--bg-light) 100%);
+  color: var(--text-dark);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- Utilitários --- */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-sm);
+}
+
+.section-padding {
+  padding: var(--spacing-xl) 0;
+}
+
+.bg-light {
+  background-color: var(--bg-light);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mt-4 {
+  margin-top: var(--spacing-lg);
+}
+
+/* --- Títulos de Seção --- */
+.section-title {
+  font-family: var(--font-heading);
+  font-size: 2.8rem;
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: var(--spacing-md);
+  position: relative;
+  padding-bottom: var(--spacing-sm);
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: var(--secondary-color);
+  margin: var(--spacing-xs) auto 0;
+  border-radius: 2px;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* --- Botões --- */
+.btn {
+  display: inline-block;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--border-radius-sm);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
+  color: white;
+  box-shadow: var(--shadow-md);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(90deg, #223b8b, #14b0dd);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.btn-secondary {
+  background-color: var(--primary-color);
+  color: white;
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-secondary:hover {
+  background-color: #1a3060;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.btn-large {
+  padding: var(--spacing-md) var(--spacing-lg);
+  font-size: 1.1rem;
+  border-radius: var(--border-radius-md);
+}
+
+/* --- Header Principal --- */
+.main-header {
+  background-color: var(--bg-white);
+  padding: var(--spacing-md) 0;
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.main-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.main-header .logo h1 {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  color: var(--primary-color);
+  margin: 0;
+}
+
+.main-header .logo p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-top: 2px;
+}
+
+.main-nav .nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.main-nav .nav-list li {
+  margin-left: var(--spacing-md);
+}
+
+.main-nav .nav-list a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-sm);
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.main-nav .nav-list a:hover {
+  background-color: var(--border-color);
+  color: var(--secondary-color);
+}
+
+.main-nav .nav-list .btn-primary {
+  margin-left: var(--spacing-md);
+}
+
+.menu-toggle {
+  display: none; /* Escondido por padrão em desktop */
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+  position: relative;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: white;
+  padding: var(--spacing-xl) 0;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://via.placeholder.com/1920x600/23407e/FFFFFF?text=IMAGEM+DE+FUNDO+ABSTRATA'); /* Placeholder */
+  background-size: cover;
+  background-position: center;
+  opacity: 0.15; /* Sutil */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+}
+
+.hero-content h2 {
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  margin-bottom: var(--spacing-sm);
+  line-height: 1.2;
+}
+
+.hero-content p {
+  font-size: 1.3rem;
+  margin-bottom: var(--spacing-lg);
+  opacity: 0.9;
+}
+
+/* --- Sobre o Escritório --- */
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-lg);
+}
+
+.about-item {
+  background-color: var(--bg-white);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.about-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.about-item .icon-large {
+  font-size: 3rem;
+  color: var(--secondary-color);
+  margin-bottom: var(--spacing-sm);
+}
+
+.about-item h3 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-xs);
+}
+
+.about-item p {
+  color: var(--text-light);
+}
+
+/* --- Nossos Serviços --- */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.service-card {
+  background: var(--bg-white);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: var(--spacing-md) var(--spacing-md) var(--spacing-lg) var(--spacing-md);
+  border-left: 5px solid var(--secondary-color);
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.service-card .service-icon {
+  font-size: 2.5rem;
+  color: var(--secondary-color);
+  margin-bottom: var(--spacing-sm);
+}
+
+.service-card .service-title {
+  font-size: 1.4rem;
+  color: var(--primary-color);
+  font-weight: 700;
+  margin-bottom: var(--spacing-xs);
+}
+
+.service-card .service-desc {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  flex-grow: 1;
+  margin-bottom: var(--spacing-sm);
+}
+
+/* --- Experiências Atendidas --- */
+.experience-list {
+  list-style: none;
+  max-width: 800px;
+  margin: var(--spacing-lg) auto 0;
+}
+
+.experience-list li {
+  background-color: var(--bg-white);
+  padding: var(--spacing-sm) var(--spacing-md);
+  margin-bottom: var(--spacing-xs);
+  border-radius: var(--border-radius-sm);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  color: var(--text-dark);
+}
+
+.experience-list li i {
+  color: var(--accent-color);
+  margin-right: var(--spacing-xs);
+  font-size: 1.2rem;
+}
+
+/* --- Publicações e Artigos --- */
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.article-card {
+  background-color: var(--bg-white);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.article-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.article-card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.article-card h3 {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-xs);
+  line-height: 1.4;
+}
+
+.article-card .article-meta {
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+/* --- Contato --- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: var(--spacing-lg);
+  background-color: var(--bg-white);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-md);
+}
+
+.contact-info h3, .contact-form h3 {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-md);
+}
+
+.contact-info p {
+  font-size: 1.1rem;
+  margin-bottom: var(--spacing-sm);
+  color: var(--text-dark);
+}
+
+.contact-info p i {
+  color: var(--secondary-color);
+  margin-right: var(--spacing-xs);
+}
+
+.social-links {
+  margin-top: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.social-links a {
+  display: inline-block;
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin-right: var(--spacing-sm);
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.social-links a:hover {
+  color: var(--secondary-color);
+  transform: translateY(-3px);
+}
+
+.qrcode-container {
+  text-align: center;
+  margin-top: var(--spacing-md);
+}
+
+.qrcode-img {
+  max-width: 180px;
+  border-radius: var(--border-radius-sm);
+  box-shadow: var(--shadow-sm);
+  margin-top: var(--spacing-xs);
+}
+
+.form-group {
+  margin-bottom: var(--spacing-md);
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: var(--spacing-xs);
+  color: var(--primary-color);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+  width: 100%;
+  padding: var(--spacing-sm);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-sm);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.06);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 3px rgba(49,108,212,0.2);
+}
+
+textarea {
+  resize: vertical;
+}
+
+.success-message {
+  background-color: #d4edda;
+  color: #155724;
+  padding: var(--spacing-sm);
+  border-radius: var(--border-radius-sm);
+  margin-bottom: var(--spacing-md);
+  text-align: center;
+  font-weight: 500;
+}
+
+/* --- Footer --- */
+.main-footer {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: var(--spacing-md) 0;
+  font-size: 0.9rem;
+}
+
+/* --- WhatsApp Flutuante --- */
+.whatsapp-float {
+  position: fixed;
+  bottom: var(--spacing-md);
+  right: var(--spacing-md);
+  background-color: #25d366;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  z-index: 999;
+  transition: transform 0.2s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+/* --- Responsividade --- */
+@media (max-width: 992px) {
+  .hero-content h2 {
+    font-size: 2.8rem;
+  }
+  .section-title {
+    font-size: 2.2rem;
+  }
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  .contact-info {
+    text-align: center;
+  }
+  .social-links {
+    justify-content: center;
+    display: flex;
+  }
+}
+
 @media (max-width: 768px) {
-      header h1 { font-size: 2rem; }
-      header p { font-size: 1rem; }
-      nav a { font-size: 0.95rem; margin: 0 8px; }
-      section { padding: 25px; }
-      #servicos h2 {
-        font-size: 1.8rem;
-        margin-bottom: 25px;
-      }
-      .service-card {
-        padding: 25px 18px 20px 18px;
-        min-height: auto;
-      }
-      .service-icon {
-        font-size: 2.2rem;
-      }
-      .service-title {
-        font-size: 1.1rem;
-      }
-      .service-desc {
-        font-size: 0.95rem;
-      }
-      .main-btn, form button[type="submit"] {
-        padding: 10px 20px;
-        font-size: 0.95rem;
-      }
-    }
-    @media (max-width: 480px) {
-      header h1 { font-size: 1.8rem; }
-      header p { font-size: 0.9rem; }
-      nav { padding: 10px 15px; }
-      nav a { display: block; margin: 5px 0; }
-      section { padding: 20px; }
-      #servicos {
-        padding: 30px 15px;
-      }
-      #servicos h2 {
-        font-size: 1.5rem;
-      }
-padding: 30px 15px;
-      }
-      #servicos h2 {
-        font-size: 1.5rem;
-      }
-      .services-grid {
-        grid-template-columns: 1fr;
-      }
-      .service-card {
-        border-radius: 15px 40px 15px 40px;
-      }
-      .main-btn, form button[type="submit"] {
-        width: 100%;
-        margin: 10px 0;
-      }
-    }
-  </style>
-</head>
-<body>
-<header>
-  <!-- INÍCIO DA SEÇÃO EDITÁVEL: CABEÇALHO DO SITE -->
-  <h1>Talamante Morais</h1>
-  <p>Advocacia Pública Municipal</p>
-  <!-- FIM DA SEÇÃO EDITÁVEL: CABEÇALHO DO SITE -->
-</header>
-<nav>
-  <!-- INÍCIO DA SEÇÃO EDITÁVEL: NAVEGAÇÃO PRINCIPAL -->
-  <!-- Altere o texto entre <a> e </a>. Não altere o href="#..." -->
-  <a href="#inicio">Início</a>
-  <a href="#sobre">Sobre</a>
-  <a href="#servicos">Serviços</a>
-  <a href="#publicacoes">Publicações</a>
-  <a href="#experiencias">Experiências</a>
-  <a href="#artigos">Artigos</a>
-  <a href="#contato">Contato</a>
-  <!-- FIM DA SEÇÃO EDITÁVEL: NAVEGAÇÃO PRINCIPAL -->
-</nav>
+  .main-header .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .main-nav {
+    width: 100%;
+    margin-top: var(--spacing-sm);
+  }
+  .menu-toggle {
+    display: block;
+    align-self: flex-end;
+    margin-top: -40px; /* Ajuste para posicionar o ícone */
+  }
+  .main-nav .nav-list {
+    flex-direction: column;
+    width: 100%;
+    display: none; /* Escondido por padrão em mobile */
+    background-color: var(--bg-white);
+    border-top: 1px solid var(--border-color);
+    padding-top: var(--spacing-sm);
+  }
+  .main-nav .nav-list.active {
+    display: flex; /* Mostra quando ativo */
+  }
+  .main-nav .nav-list li {
+    margin: var(--spacing-xs) 0;
+    width: 100%;
+    text-align: center;
+  }
+  .main-nav .nav-list a {
+    display: block;
+    padding: var(--spacing-xs) 0;
+  }
+  .main-nav .nav-list .btn-primary {
+    margin: var(--spacing-sm) 0;
+    width: 80%;
+    max-width: 200px;
+  }
 
-<section id="inicio">
-  <!-- INÍCIO DA SEÇÃO EDITÁVEL: BEM-VINDO -->
-  <h2>Bem-vindo</h2>
-  <p>Site oficial do escritório Talamante Morais – Advocacia Pública Municipal.</p>
-  <!-- FIM DA SEÇÃO EDITÁVEL: BEM-VINDO -->
-</section>
-<section id="sobre">
-  <!-- INÍCIO DA SEÇÃO EDITÁVEL: SOBRE O ESCRITÓRIO -->
-  <h2>Sobre o Escritório</h2>
-  <p><strong>Missão:</strong> Fortalecer a gestão pública com assessoria técnica responsável.</p>
-  <p><strong>Visão:</strong> Ser referência em Direito Administrativo Municipal.</p>
-  <p><strong>Valores:</strong> Ética, Transparência, Técnica e Comprometimento.</p>
-  <!-- FIM DA SEÇÃO EDITÁVEL: SOBRE O ESCRITÓRIO -->
-</section>
-<section id="servicos">
-  <!-- INÍCIO DA SEÇÃO EDITÁVEL: NOSSOS SERVIÇOS -->
-  <h2>Nossos Serviços</h2>
-  <div class="services-grid">
-    <div class="service-card">
-      <div class="service-title">Direito Público</div>
-      <div class="service-desc">
-        Fortalecemos a gestão pública com assessoria técnica responsável. Atuamos em Licitações e Contratos (Lei 14.133/2021), consultoria legislativa, pareceres e compliance.
-      </div>
-      <!-- Altere o texto do botão e o link (href) se necessário. -->
-      <a class="cta-btn" href="direito-publico.html">Acessar</a>
-    </div>
-    <div class="service-card">
-      <div class="service-title">Direito Privado</div>
-      <div class="service-desc">
-        Oferecemos assessoria jurídica especializada para indivíduos e empresas, com foco em demandas cíveis, contratuais, familiares e patrimoniais.
-      </div>
-      <!-- Altere o texto do botão e o link (href) se necessário. -->
-</div>
-      <!-- Altere o texto do botão e o link (href) se necessário. -->
-      <a class="cta-btn" href="direito-privado.html">Acessar</a>
-    </div>
-    <div class="service-card">
-      <div class="service-title">Cursos e Treinamentos</div>
-      <div class="service-desc">
-        Capacitação para servidores e gestores em formatos presenciais, online e in company. Cursos técnicos em direito administrativo e gestão pública.
-      </div>
-      <!-- Altere o texto do botão e o link (href) se necessário. -->
-      <a class="cta-btn" href="cursos.html">Acessar</a>
-    </div>
-  </div>
-  <!-- FIM DA SEÇÃO EDITÁVEL: NOSSOS SERVIÇOS -->
-</section>
-<section id="publicacoes">
-  <!-- INÍCIO DA SEÇÃO EDITÁVEL: PUBLICAÇÕES TÉCNICAS -->
-  <h2>Publicações Técnicas</h2>
-  <ul>
-    <li><strong>Artigo:</strong> <a href="docs/artigo_implementacao_local.pdf" target="_blank" rel="noopener noreferrer">Download</a></li>
-    <li><strong>Vídeo:</strong> <a href="https://www.youtube.com/@TalamanteMorais" target="_blank" rel="noopener noreferrer">Assistir</a></li>
-  </ul>
-  <!-- FIM DA SEÇÃO EDITÁVEL: PUBLICAÇÕES TÉCNICAS -->
-</section>
-<section id="experiencias">
-  <!-- INÍCIO DA SEÇÃO EDITÁVEL: CASOS E EXPERIÊNCIAS ATENDIDAS -->
-  <h2>Casos e Experiências Atendidas</h2>
-  <ul>
-    <li><strong>Legislação de Consórcio:</strong> revisão contratual sob a Lei nº 14.133/2021.</li>
-    <li><strong>Comissões Legislativas:</strong> consultoria técnica na redação de normas.</li>
-    <li><strong>Capacitações:</strong> formação em fiscalização e contratos.</li>
-    <li><strong>Sindicância:</strong> apoio jurídico a processos internos.</li>
-  </ul>
-  <!-- FIM DA SEÇÃO EDITÁVEL: CASOS E EXPERIÊNCIAS ATENDIDAS -->
-</section>
-<section id="artigos">
-  <!-- INÍCIO DA SEÇÃO EDITÁVEL: ARTIGOS E PARECERES -->
-  <h2>Artigos e Pareceres</h2>
-  <p>Confira nossa biblioteca de artigos e pareceres sobre temas relevantes da Advocacia Pública Municipal.</p>
-  <ul>
-    <!-- PARA ADICIONAR UM NOVO ARTIGO: -->
-    <!-- 1. Crie um novo arquivo HTML para o artigo (use o artigo-modelo.html como base). -->
-    <!-- 2. Copie e cole o bloco <li> abaixo. -->
-    <!-- 3. Altere o texto do link (entre <a> e </a>) para o título do seu novo artigo. -->
-    <!-- 4. MUITO IMPORTANTE: Altere o 'href="..."' para o nome do arquivo HTML que você criou para o artigo. -->
-    <!-- 5. Altere a data e o autor. -->
-    <li>
-      <a href="artigo-licitacoes-nova-lei.html">A Nova Lei de Licitações (Lei 14.133/2021) e Seus Impactos nos Municípios</a>
-      <p class="artigo-meta">Publicado em: 01/06/2024 | Autor: Equipe Talamante Morais</p>
-    </li>
-    <li>
-</li>
-    <li>
-      <a href="artigo-compliance-publico.html">Compliance e Integridade na Gestão Pública Municipal: Desafios e Soluções</a>
-      <p class="artigo-meta">Publicado em: 15/05/2024 | Autor: [Nome do Advogado]</p>
-    </li>
-    <li>
-      <a href="artigo-processo-legislativo.html">O Papel da Assessoria Jurídica no Processo Legislativo Municipal</a>
-      <p class="artigo-meta">Publicado em: 20/04/2024 | Autor: [Nome do Advogado]</p>
-    </li>
-    <!-- FIM DOS ARTIGOS. ADICIONE NOVOS ACIMA DESTA LINHA. -->
-  </ul>
-  <!-- FIM DA SEÇÃO EDITÁVEL: ARTIGOS E PARECERES -->
-</section>
-<section id="video-recente">
-  <!-- INÍCIO DA SEÇÃO EDITÁVEL: ÚLTIMO VÍDEO -->
-  <h2>Último Vídeo</h2>
-  <div class="video-container">
-    <!-- Para alterar o vídeo, substitua 'EXEMPLO_VIDEO' pelo ID do vídeo do YouTube. -->
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/EXEMPLO_VIDEO" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div>
-  <!-- FIM DA SEÇÃO EDITÁVEL: ÚLTIMO VÍDEO -->
-</section>
+  .hero-content h2 {
+    font-size: 2.2rem;
+  }
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+  .section-padding {
+    padding: var(--spacing-lg) 0;
+  }
+  .about-grid, .services-grid, .articles-grid {
+    grid-template-columns: 1fr;
+  }
+  .service-card {
+    min-height: auto;
+  }
+}
 
-<section id="curriculo">
-  <!-- INÍCIO DA SEÇÃO EDITÁVEL: CURRÍCULO PROFISSIONAL -->
-  <h2>Currículo Profissional</h2>
-  <!-- Para alterar o arquivo do currículo, substitua 'curriculo_talamante.pdf' pelo nome do seu arquivo PDF. -->
-  <button class="main-btn" onclick="window.open('curriculo_talamante.pdf', '_blank')">📄 Baixar Currículo</button>
-  <!-- FIM DA SEÇÃO EDITÁVEL: CURRÍCULO PROFISSIONAL -->
-</section>
-<section id="contato">
-  <!-- INÍCIO DA SEÇÃO EDITÁVEL: CONTATO -->
-  <h2>Contato</h2>
-  <div id="mensagem-sucesso" style="display: none; background-color: #dff0d8; color: #3c763d; padding: 15px; border-radius: 5px; margin-bottom: 20px;">
-    ✅ Mensagem enviada com sucesso. Obrigado pelo contato!
-  </div>
-  <form action="https://formsubmit.co/talamantemorais@gmail.com" method="POST">
-    <!-- IMPORTANTE: Altere o e-mail no 'action' para o seu e-mail de contato. -->
-    <!-- IMPORTANTE: Altere o 'value' do '_next' para o endereço do seu site. -->
-    <input type="hidden" name="_next" value="https://talamante-adv.com.br/?sucesso=true">
-    <input type="hidden" name="_honey" style="display:none">
-    <label for="nome">Nome:</label><br>
-    <input type="text" id="nome" name="nome" required><br><br>
-    <label for="email">E-mail:</label><br>
-    <input type="email" id="email" name="email" required><br><br>
-    <label for="mensagem">Mensagem:</label><br>
-<label for="mensagem">Mensagem:</label><br>
-    <textarea id="mensagem" name="mensagem" rows="5" required></textarea><br><br>
-    <button type="submit">Enviar</button>
-  </form>
-  <p><strong>Email:</strong> talamantemorais@gmail.com</p>
-  <p><strong>WhatsApp:</strong> (62) 99631-8340</p>
-  <ul>
-    <!-- Altere os links (href) para suas redes sociais. -->
-    <li><a href="https://www.instagram.com/talamantemorais/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-    <li><a href="https://www.facebook.com/talamante.morais.100" target="_blank" rel="noopener noreferrer">Facebook</a></li>
-    <li><a href="https://www.linkedin.com/in/talamante-morais-a51535221/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-    <li><a href="https://www.youtube.com/@TalamanteMorais" target="_blank" rel="noopener noreferrer">YouTube</a></li>
-  </ul>
-  <div class="qrcode-container">
-    <h3>Acesso Rápido ao Site</h3>
-</ul>
-  <div class="qrcode-container">
-    <h3>Acesso Rápido ao Site</h3>
-    <!-- Para alterar o QR Code, substitua 'qrcode_talamante_site.png' pelo nome do seu arquivo de imagem. -->
-    <img src="qrcode_talamante_site.png" alt="QR Code para o site">
-  </div>
-  <!-- FIM DA SEÇÃO EDITÁVEL: CONTATO -->
-</section>
-<footer>
-  <!-- INÍCIO DA SEÇÃO EDITÁVEL: RODAPÉ -->
-  &copy; 2025 Talamante Morais – Todos os direitos reservados.
-  <!-- FIM DA SEÇÃO EDITÁVEL: RODAPÉ -->
-</footer>
-
-<!-- BOTÃO FLUTUANTE DO WHATSAPP - NÃO ALTERAR ESTA SEÇÃO, A MENOS QUE SEJA UM TÉCNICO -->
-<a class="whatsapp-button" href="https://wa.me/556296318340" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-
-<!-- SCRIPT PARA MENSAGEM DE SUCESSO DO FORMULÁRIO - NÃO ALTERAR ESTA SEÇÃO, A MENOS QUE SEJA UM TÉCNICO -->
-<script>
-  window.onload = function() {
-    const urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.get('sucesso') === 'true') {
-      document.getElementById('mensagem-sucesso').style.display = 'block';
-      setTimeout(() => {
-        document.getElementById('mensagem-sucesso').style.display = 'none';
-        window.history.replaceState({}, document.title, window.location.pathname);
-      }, 5000);
-    }
-  };
-</script>
-</body>
-</html>
+@media (max-width: 480px) {
+  .main-header .logo h1 {
+    font-size: 1.8rem;
+  }
+  .main-header .logo p {
+    font-size: 0.8rem;
+  }
+  .hero-content h2 {
+    font-size: 1.8rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
+  }
+  .btn-large {
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: 1rem;
+  }
+  .section-title {
+    font-size: 1.8rem;
+  }
+  .contact-grid {
+    padding: var(--spacing-md);
+  }
+}
