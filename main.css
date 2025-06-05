@@ -1,0 +1,231 @@
+/* main.css – Estilo principal do site Talamante Morais */
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', Arial, sans-serif;
+  background: #f7f7f7;
+  color: #222;
+  line-height: 1.7;
+  padding-bottom: 60px;
+}
+
+header {
+  background: #223b53;
+  color: #fff;
+  padding: 2rem 0 1rem 0;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  margin-bottom: .5rem;
+}
+
+nav {
+  background: #1c2d3a;
+  text-align: center;
+  padding: .7rem 0;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 1.2rem;
+  font-weight: 600;
+  transition: color .2s;
+}
+
+nav a:hover {
+  color: #a3d3ff;
+}
+
+section {
+  max-width: 850px;
+  background: #fff;
+  margin: 2rem auto;
+  padding: 2rem 2.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(60,60,60,0.04);
+}
+
+section h2 {
+  color: #223b53;
+  margin-bottom: 1.2rem;
+  font-size: 1.6rem;
+}
+
+.services-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.service-card {
+  flex: 1 1 260px;
+  background: #f3f9ff;
+  border-radius: 12px;
+  padding: 1.3rem 1rem;
+  box-shadow: 0 1px 8px rgba(30,40,80,0.08);
+  min-width: 240px;
+}
+
+.service-title {
+  color: #1864ab;
+  font-weight: 700;
+  font-size: 1.15rem;
+  margin-bottom: .8rem;
+}
+
+.service-desc {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.cta-btn, .main-btn {
+  display: inline-block;
+  background: #1864ab;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  padding: .6rem 1.2rem;
+  border-radius: 24px;
+  cursor: pointer;
+  transition: background .18s;
+}
+
+.cta-btn:hover, .main-btn:hover {
+  background: #1560a1;
+}
+
+ul {
+  margin: 1rem 0 0 1rem;
+}
+
+ul li {
+  margin-bottom: .7rem;
+}
+
+.artigo-meta {
+  color: #6c757d;
+  font-size: 0.96rem;
+  margin-top: .1rem;
+}
+
+.video-container {
+  text-align: center;
+}
+
+.video-container iframe {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(60,60,60,0.09);
+}
+
+.qrcode-container {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.qrcode-container img {
+  width: 130px;
+  height: 130px;
+}
+
+footer {
+  width: 100%;
+  background: #223b53;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  font-size: 1rem;
+}
+
+.whatsapp-button {
+  position: fixed;
+  right: 18px;
+  bottom: 85px;
+  background: #25D366;
+  color: #fff;
+  padding: 14px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 16px rgba(40,120,60,0.13);
+  font-size: 1rem;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.whatsapp-button:hover {
+  background: #1ebe57;
+}
+
+form {
+  margin-top: 1rem;
+}
+
+input[type="text"], input[type="email"], textarea {
+  width: 100%;
+  padding: .7rem;
+  margin: .25rem 0 1rem 0;
+  border-radius: 8px;
+  border: 1px solid #aac6e3;
+  font-size: 1rem;
+  background: #f8fbff;
+  resize: vertical;
+}
+
+button[type="submit"] {
+  background: #1864ab;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: .6rem 1.3rem;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background .18s;
+}
+
+button[type="submit"]:hover {
+  background: #12568c;
+}
+
+@media (max-width: 700px) {
+  section {
+    padding: 1.1rem .8rem;
+  }
+  .services-grid {
+    flex-direction: column;
+  }
+  .whatsapp-button {
+    right: 8px;
+    bottom: 70px;
+    font-size: .9rem;
+    padding: 10px 13px;
+  }
+  footer {
+    font-size: 0.96rem;
+    padding: .7rem 0;
+  }
+}
+
