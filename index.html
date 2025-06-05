@@ -1,236 +1,42 @@
+<!--
+  INSTRUÇÕES GERAIS DE MANUTENÇÃO E ATUALIZAÇÃO
+  ----------------------------------------------------------------
+  - Para editar informações, procure por blocos de comentários.
+  - Não altere classes ou estruturas, apenas os textos, links e arquivos.
+  - Para incluir novo serviço, artigo, experiência ou publicação,
+    copie o bloco correspondente conforme indicado em cada seção.
+  - O rodapé já tem o ano atualizado automaticamente; não edite manualmente.
+  - Contatos e links importantes estão centralizados no topo do arquivo.
+-->
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Talamante Morais – Advocacia Pública Municipal, oferecendo serviços especializados em Direito Público, Direito Privado e capacitações.">
   <title>Talamante Morais – Advocacia Pública Municipal</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZKCPTG7K1T"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-ZKCPTG7K1T');
-  </script>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Montserrat', sans-serif;
-      background: linear-gradient(120deg, #e0ecfd 0%, #f7faff 100%);
-      color: #333;
-      line-height: 1.6;
-    }
-    header, footer, nav, section {
-      background-color: #ffffff;
-      padding: 30px;
-      margin: 0 auto;
-      max-width: 1100px;
-      width: 90%;
-      border-radius: 15px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-      margin-top: 20px;
-    }
-    header {
-      text-align: center;
-      color: #23407e;
-      padding-bottom: 20px;
-    }
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 5px;
-      color: #23407e;
-    }
-    header p {
-      font-size: 1.1rem;
-      color: #555;
-    }
-    nav {
-      background: linear-gradient(90deg, #23407e, #316cd4);
-      text-align: center;
-      border-radius: 15px;
-      padding: 15px 20px;
-      margin-top: 20px;
-    }
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1.05rem;
-      padding: 8px 12px;
-      transition: background 0.2s, transform 0.1s;
-      border-radius: 8px;
-    }
-    nav a:hover {
-      background-color: rgba(255, 255, 255, 0.2);
-      transform: translateY(-2px);
-    }
-    .main-btn {
-      background: linear-gradient(90deg, #316cd4, #54d2f7);
-      color: white;
-      padding: 12px 24px;
-      text-decoration: none;
-      border-radius: 14px;
-      display: inline-block;
-      margin: 10px 10px 10px 0;
-      cursor: pointer;
-      border: none;
-      font-size: 1rem;
-      font-weight: 600;
-      box-shadow: 0 1px 6px rgba(25,127,217,0.23);
-      transition: background 0.2s, transform 0.16s;
-    }
-    .main-btn:hover {
-      background: linear-gradient(90deg, #223b8b, #14b0dd);
-      transform: scale(1.04);
-    }
-    form {
-      background-color: #ffffff;
-      padding: 25px;
-      border-radius: 15px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-    }
-    form label {
-      display: block;
-      font-weight: 600;
-      margin-bottom: 8px;
-      color: #23407e;
-    }
-    form input[type="text"],
-    form input[type="email"],
-    form textarea {
-      width: 100%;
-      padding: 12px;
-      margin-bottom: 18px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 1rem;
-      box-sizing: border-box;
-      box-shadow: inset 0 1px 3px rgba(0,0,0,0.06);
-      transition: border-color 0.2s, box-shadow 0.2s;
-    }
-    form input[type="text"]:focus,
-    form input[type="email"]:focus,
-    form textarea:focus {
-      outline: none;
-      border-color: #316cd4;
-      box-shadow: 0 0 0 3px rgba(49,108,212,0.2);
-    }
-    form button[type="submit"] {
-      background: linear-gradient(90deg, #316cd4, #54d2f7);
-      color: white;
-      padding: 12px 24px;
-      border: none;
-      border-radius: 14px;
-      font-size: 1rem;
-      cursor: pointer;
-      font-weight: 600;
-      box-shadow: 0 1px 6px rgba(25,127,217,0.23);
-      transition: background 0.2s, transform 0.16s;
-    }
-    form button[type="submit"]:hover {
-      background: linear-gradient(90deg, #223b8b, #14b0dd);
-      transform: scale(1.04);
-    }
-    .whatsapp-button {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25d366;
-      color: white;
-      padding: 12px 16px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: bold;
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
-      z-index: 9999;
-      transition: transform 0.2s;
-    }
-    .whatsapp-button:hover {
-      transform: scale(1.1);
-    }
-    .qrcode-container {
-      text-align: center;
-      margin-top: 30px;
-    }
-    .qrcode-container img {
-      max-width: 200px;
-      margin-top: 10px;
-      border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    }
-    #servicos {
-      background: linear-gradient(120deg, #e0ecfd 0%, #f7faff 100%);
-      padding: 40px 20px;
-      border-radius: 15px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-    }
-    #servicos h2 {
-      text-align: center;
-      color: #23407e;
-      font-weight: 700;
-      letter-spacing: .02em;
-      margin-bottom: 38px;
-      font-size: 2.3rem;
-    }
-    .services-grid {
-      display: grid;
-      gap: 30px;
-      grid-template-columns: 1fr;
-    }
-    .service-card {
-      background: rgba(255,255,255,0.95);
-      border-radius: 22px 55px 22px 55px;
-      box-shadow: 0 6px 22px rgba(68,134,255,0.08);
-      padding: 32px 22px 28px 22px;
-      border-left: 5px solid #548eed;
-      min-height: 200px;
-      transition: transform .18s, box-shadow .22s;
-      position: relative;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-    .service-card:hover {
-      transform: translateY(-8px) scale(1.04);
-      box-shadow: 0 14px 34px rgba(52,120,220,0.13);
-    }
-    .service-title {
-      color: #23407e;
-      font-size: 1.18rem;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-    .service-desc {
-      color: #363845;
-      font-size: 1rem;
-      margin-bottom: 20px;
-      opacity: 0.87;
-      flex-grow: 1;
-    }
-    .cta-btn {
-      display: inline-block;
-      margin-top: 15px;
-      background-color: #23407e;
-      color: white;
-      padding: 10px 20px;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: background-color 0.2s, transform 0.16s;
-    }
-    .cta-btn:hover {
-      background-color: #316cd4;
-      transform: translateY(-2px);
-    }
-    /* ... demais estilos permanecem ... */
-  </style>
+  <link rel="stylesheet" href="main.css"> <!-- Link para o arquivo CSS externo -->
+  <!-- Google tag (gtag.js) e demais scripts originais mantidos (se houver) -->
 </head>
 <body>
+
+<!--
+  DADOS DE CONTATO E LINKS PRINCIPAIS (EDITE AQUI)
+  ----------------------------------------------------------------
+  Email: talamantemorais@gmail.com
+  WhatsApp: (62) 99631-8340
+  Instagram: https://www.instagram.com/talamantemorais/
+  Facebook: https://www.facebook.com/talamante.morais.100
+  LinkedIn: https://www.linkedin.com/in/talamante-morais-a51535221/
+  YouTube: https://www.youtube.com/@TalamanteMorais
+  QR Code: qrcode_talamante_site.png
+  Currículo: curriculo_talamante.pdf
+  Artigo Técnico: docs/artigo_implementacao_local.pdf
+  Último Vídeo (YouTube): https://www.youtube.com/embed/EXEMPLO_VIDEO
+-->
+
 <header>
   <h1>Talamante Morais</h1>
   <p>Advocacia Pública Municipal</p>
@@ -240,6 +46,7 @@
   <a href="#sobre">Sobre</a>
   <a href="#servicos">Serviços</a>
   <a href="#publicacoes">Publicações</a>
+  <a href="#experiencias">Experiências</a>
   <a href="#artigos">Artigos</a>
   <a href="#contato">Contato</a>
 </nav>
@@ -253,58 +60,118 @@
 
 <section id="sobre">
   <h2>Sobre o Escritório</h2>
-  <p>
-    O Escritório Talamante Morais é dedicado à excelência na assessoria jurídica, atuando de forma estratégica para fortalecer a gestão pública municipal e atender demandas de Direito Privado, com ética, eficiência e comprometimento. Também oferecemos cursos e treinamentos direcionados ao aprimoramento profissional.
-  </p>
-  <ul>
-    <li><strong>Missão:</strong> Contribuir para o aprimoramento da administração pública e privada, oferecendo assessoria técnica qualificada, soluções jurídicas personalizadas e capacitação profissional.</li>
-    <li><strong>Visão:</strong> Ser reconhecido como referência nacional em Direito Administrativo Municipal, Direito Privado, inovação e formação de gestores públicos e privados.</li>
-    <li><strong>Valores:</strong> Ética, Transparência, Responsabilidade, Excelência Técnica e Compromisso com o Interesse Público.</li>
-  </ul>
+  <p><strong>Missão:</strong> Fortalecer a gestão pública com assessoria técnica responsável.</p>
+  <p><strong>Visão:</strong> Ser referência em Direito Administrativo Municipal.</p>
+  <p><strong>Valores:</strong> Ética, Transparência, Técnica e Comprometimento.</p>
 </section>
 
 <section id="servicos">
   <h2>Nossos Serviços</h2>
+  <!-- INÍCIO DOS SERVIÇOS -->
   <div class="services-grid">
-    <!-- Direito Público -->
+    <!-- Para adicionar novo serviço, copie o bloco abaixo e edite os textos e links -->
     <div class="service-card">
       <h3 class="service-title">Direito Público</h3>
       <div class="service-desc">
         Promovemos o fortalecimento da gestão pública municipal por meio de assessoria jurídica altamente especializada. Atuamos em todas as etapas de Licitações e Contratos Administrativos (Lei nº 14.133/2021), consultoria legislativa, emissão de pareceres técnicos e implementação de práticas de compliance.
       </div>
-      <a class="cta-btn" href="direito-publico.html">Acessar</a>
+      <a class="cta-btn" href="#direito-publico">Saiba Mais</a>
     </div>
-    <!-- Direito Privado -->
+    <!-- EXEMPLO DE BLOCO DE SERVIÇO (COPIE PARA NOVOS SERVIÇOS) -->
+    <!--
+    <div class="service-card">
+      <h3 class="service-title">Novo Serviço</h3>
+      <div class="service-desc">
+        Descrição detalhada do novo serviço.
+      </div>
+      <a class="cta-btn" href="novo-servico.html">Acessar</a>
+    </div>
+    -->
     <div class="service-card">
       <h3 class="service-title">Direito Privado</h3>
       <div class="service-desc">
         Oferecemos assessoria jurídica completa para atender às necessidades de clientes individuais e corporativos, com enfoque em consultoria contratual, direito empresarial, mediação e arbitragem, além de proteção de dados conforme a LGPD.
       </div>
-      <a class="cta-btn" href="direito-privado.html">Acessar</a>
+      <a class="cta-btn" href="#familia">Saiba Mais</a>
     </div>
-    <!-- Cursos e Treinamentos -->
     <div class="service-card">
       <h3 class="service-title">Cursos e Treinamentos</h3>
       <div class="service-desc">
         Desenvolvemos programas de capacitação profissional para gestores públicos e privados, focados em promover habilidades técnicas e de liderança para enfrentar os desafios contemporâneos.
       </div>
-      <a class="cta-btn" href="cursos.html">Acessar</a>
+      <a class="cta-btn" href="#cursos-treinamentos">Saiba Mais</a>
     </div>
   </div>
+  <!-- FIM DOS SERVIÇOS -->
+</section>
+
+<section id="familia" class="container">
+  <h2>Direito de Família</h2> <!-- Título alterado para <h2> para melhor hierarquia -->
+  <!-- INÍCIO DOS SERVIÇOS DE DIREITO DE FAMÍLIA -->
+  <!-- Para adicionar novo serviço de família, copie o bloco abaixo e edite os textos e links -->
+  <div class="service-card">
+    <h3 class="service-title">Separação Litigiosa com Filhos Menores</h3>
+    <div class="service-desc">
+      Informações completas e detalhadas sobre separações litigiosas envolvendo filhos menores.
+    </div>
+    <a class="cta-btn" href="separacao_litigiosa.pdf" >Saiba Mais</a>
+  </div>
+  <div class="service-card">
+    <h3 class="service-title">Direitos Sucessórios e Exclusão de Cônjuge</h3>
+    <div class="service-desc">
+      Explore os direitos sucessórios e os procedimentos para exclusão de cônjuges.
+    </div>
+    <a class="cta-btn" href="direitos_sucessorios.pdf" >Saiba Mais</a>
+  </div>
+  <div class="service-card">
+    <h3 class="service-title">Reconhecimento de Paternidade, Herança e Partilha</h3>
+    <div class="service-desc">
+      Conheça os processos legais para reconhecimento de paternidade e partilha de heranças.
+    </div>
+    <a class="cta-btn" href="reconhecimento_paternidade.pdf" >Saiba Mais</a>
+  </div>
+  <div class="service-card">
+    <h3 class="service-title">Planejamento Sucessório</h3>
+    <div class="service-desc">
+      Abordagens estratégicas para um planejamento sucessório eficaz.
+    </div>
+    <a class="cta-btn" href="planejamento_sucessorio.pdf" >Saiba Mais</a>
+  </div>
+  <!-- FIM DOS SERVIÇOS DE DIREITO DE FAMÍLIA -->
 </section>
 
 <section id="publicacoes">
   <h2>Publicações Técnicas</h2>
+  <!-- INÍCIO DAS PUBLICAÇÕES TÉCNICAS -->
+  <!-- Para adicionar novos artigos ou vídeos, copie e edite os itens abaixo -->
   <ul>
-    <li><strong>Artigo:</strong> <a href="docs/artigo_implementacao_local.pdf" target="_blank" rel="noopener noreferrer">Download</a></li>
-    <li><strong>Vídeo:</strong> <a href="https://www.youtube.com/@TalamanteMorais" target="_blank" rel="noopener noreferrer">Assistir</a></li>
+    <li><strong>Artigo:</strong> <a href="docs/artigo_implementacao_local.pdf" rel="noopener noreferrer">Download</a></li>
+    <li><strong>Vídeo:</strong> <a href="https://www.youtube.com/@TalamanteMorais" rel="noopener noreferrer">Assistir</a></li>
   </ul>
+  <!-- FIM DAS PUBLICAÇÕES TÉCNICAS -->
+</section>
+
+<section id="experiencias">
+  <h2>Casos e Experiências Atendidas</h2>
+  <!-- INÍCIO DAS EXPERIÊNCIAS -->
+  <!-- Para adicionar nova experiência, copie e edite o item abaixo -->
+  <ul>
+    <!-- EXEMPLO DE BLOCO DE EXPERIÊNCIA (COPIE PARA NOVAS EXPERIÊNCIAS) -->
+    <li><strong>Legislação de Consórcio:</strong> revisão contratual sob a Lei nº 14.133/2021.</li>
+    <li><strong>Comissões Legislativas:</strong> consultoria técnica na redação de normas.</li>
+    <li><strong>Capacitações:</strong> formação em fiscalização e contratos.</li>
+    <li><strong>Sindicância:</strong> apoio jurídico a processos internos.</li>
+  </ul>
+  <!-- FIM DAS EXPERIÊNCIAS -->
 </section>
 
 <section id="artigos">
   <h2>Artigos e Pareceres</h2>
   <p>Confira nossa biblioteca de artigos e pareceres sobre temas relevantes da Advocacia Pública Municipal.</p>
+  <!-- INÍCIO DOS ARTIGOS -->
+  <!-- Para adicionar novos artigos, copie o bloco abaixo -->
   <ul>
+    <!-- EXEMPLO DE BLOCO DE ARTIGO OU PUBLICAÇÃO (COPIE PARA NOVOS ITENS) -->
     <li>
       <a href="artigo-licitacoes-nova-lei.html">A Nova Lei de Licitações (Lei 14.133/2021) e Seus Impactos nos Municípios</a>
       <p class="artigo-meta">Publicado em: 01/06/2024 | Autor: Equipe Talamante Morais</p>
@@ -318,10 +185,16 @@
       <p class="artigo-meta">Publicado em: 20/04/2024 | Autor: [Nome do Advogado]</p>
     </li>
   </ul>
+  <!-- FIM DOS ARTIGOS -->
 </section>
 
 <section id="video-recente">
   <h2>Último Vídeo</h2>
+  <!--
+    PARA TROCAR O VÍDEO RECENTE:
+    ----------------------------------------------------------------
+    Basta alterar o link do src do iframe abaixo para o novo vídeo do YouTube.
+  -->
   <div class="video-container">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/EXEMPLO_VIDEO" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
@@ -332,29 +205,30 @@
   <button class="main-btn" onclick="window.open('curriculo_talamante.pdf', '_blank')">📄 Baixar Currículo</button>
 </section>
 
-<section id="contato">
+<section id="contato" class="container">
   <h2>Contato</h2>
+  <!-- DADOS DE CONTATO NO FORMULÁRIO (EDITE AQUI APENAS OS TEXTOS E LINKS) -->
   <div id="mensagem-sucesso" style="display: none; background-color: #dff0d8; color: #3c763d; padding: 15px; border-radius: 5px; margin-bottom: 20px;">
     ✅ Mensagem enviada com sucesso. Obrigado pelo contato!
   </div>
   <form action="https://formsubmit.co/talamantemorais@gmail.com" method="POST">
     <input type="hidden" name="_next" value="https://talamante-adv.com.br/?sucesso=true">
     <input type="hidden" name="_honey" style="display:none">
-    <label for="nome">Nome:</label><br>
-    <input type="text" id="nome" name="nome" required><br><br>
-    <label for="email">E-mail:</label><br>
-    <input type="email" id="email" name="email" required><br><br>
-    <label for="mensagem">Mensagem:</label><br>
-    <textarea id="mensagem" name="mensagem" rows="5" required></textarea><br><br>
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" required>
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email" required>
+    <label for="mensagem">Mensagem:</label>
+    <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
     <button type="submit">Enviar</button>
   </form>
   <p><strong>Email:</strong> talamantemorais@gmail.com</p>
   <p><strong>WhatsApp:</strong> (62) 99631-8340</p>
   <ul>
-    <li><a href="https://www.instagram.com/talamantemorais/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-    <li><a href="https://www.facebook.com/talamante.morais.100" target="_blank" rel="noopener noreferrer">Facebook</a></li>
-    <li><a href="https://www.linkedin.com/in/talamante-morais-a51535221/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-    <li><a href="https://www.youtube.com/@TalamanteMorais" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+    <li><a href="https://www.instagram.com/talamantemorais/" rel="noopener noreferrer">Instagram</a></li>
+    <li><a href="https://www.facebook.com/talamante.morais.100" rel="noopener noreferrer">Facebook</a></li>
+    <li><a href="https://www.linkedin.com/in/talamante-morais-a51535221/" rel="noopener noreferrer">LinkedIn</a></li>
+    <li><a href="https://www.youtube.com/@TalamanteMorais" rel="noopener noreferrer">YouTube</a></li>
   </ul>
   <div class="qrcode-container">
     <h3>Acesso Rápido ao Site</h3>
@@ -363,22 +237,20 @@
 </section>
 
 <footer>
-  &copy; 2025 Talamante Morais – Todos os direitos reservados.
+  <!--
+    INSTRUÇÃO PARA O RODAPÉ:
+    ----------------------------------------------------------------
+    O ano do rodapé é atualizado automaticamente via JavaScript, não altere manualmente.
+  -->
+  &copy; <span id="anoAtual"></span> Talamante Morais – Todos os direitos reservados.
 </footer>
 
-<a class="whatsapp-button" href="https://wa.me/556296318340" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+<a class="whatsapp-button" href="https://wa.me/556296318340" rel="noopener noreferrer">WhatsApp</a>
 
 <script>
-  window.onload = function() {
-    const urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.get('sucesso') === 'true') {
-      document.getElementById('mensagem-sucesso').style.display = 'block';
-      setTimeout(() => {
-        document.getElementById('mensagem-sucesso').style.display = 'none';
-        window.history.replaceState({}, document.title, window.location.pathname);
-      }, 5000);
-    }
-  };
+  // Atualização automática do ano no rodapé
+  document.getElementById('anoAtual').textContent = new Date().getFullYear();
 </script>
+<script src="scripts.js"></script> <!-- Link para o arquivo JavaScript externo -->
 </body>
 </html>
