@@ -239,9 +239,11 @@ button[type="submit"]:hover {
   section {
     padding: 1.1rem .8rem;
   }
-  .services-grid {
-    flex-direction: column;
-  }
+.services-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
   .whatsapp-button {
     right: 8px;
     bottom: 70px;
