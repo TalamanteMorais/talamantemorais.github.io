@@ -59,34 +59,39 @@ section {
   border-radius: 10px;
   box-shadow: 0 2px 12px rgba(60,60,60,0.04);
 }
-section h2 {
-  color: #223b53;
-  margin-bottom: 1.2rem;
-  font-size: 1.6rem;
-}
+text-align: center;
+      color: #23407e;
+      font-weight: 700;
+      letter-spacing: .02em;
+color: #23407e;
+      font-weight: 700;
+      letter-spacing: .02em;
+      margin-bottom: 38px;
+      font-size: 2.3rem;
+    }
+    .services-grid {
+      display: grid;
+      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    }
+    .service-card {
+      background: rgba(255,255,255,0.95);
+      border-radius: 22px 55px 22px 55px;
+      box-shadow: 0 6px 22px rgba(68,134,255,0.08);
+      padding: 32px 22px 28px 22px;
+      border-left: 5px solid #548eed;
+      min-height: 200px;
+      transition: transform .18s, box-shadow .22s;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .service-card:hover {
+      transform: translateY(-8px) scale(1.04);
+      box-shadow: 0 14px 34px rgba(52,120,220,0.13);
 
-.services-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
-.service-card {
-  flex: 0 0 32%; /* Largura fixa percentual para 3 cards na linha */
-  min-width: 280px; /* Responsividade */
-  max-width: 370px;
-  background: rgba(255,255,255,0.95);
-  border-radius: 22px 55px 22px 55px;
-  box-shadow: 0 6px 22px rgba(68,134,255,0.08);
-  padding: 32px 22px 28px 22px;
-  border-left: 5px solid #548eed;
-  min-height: 200px;
-  transition: transform 0.18s ease, box-shadow 0.22s ease;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .service-card:hover {
