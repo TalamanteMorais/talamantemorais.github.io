@@ -59,7 +59,6 @@ section {
   border-radius: 10px;
   box-shadow: 0 2px 12px rgba(60,60,60,0.04);
 }
-
 section h2 {
   color: #223b53;
   margin-bottom: 1.2rem;
@@ -68,18 +67,47 @@ section h2 {
 
 .services-grid {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  margin-top: 1rem;
+  gap: 30px;
+  flex-wrap: nowrap; /* <-- Alinha todos horizontalmente */
+  justify-content: space-between;
+  overflow-x: auto; /* Permite rolagem horizontal */
+  padding-bottom: 10px;
 }
 
 .service-card {
-  flex: 1 1 260px;
-  background: #f3f9ff;
-  border-radius: 12px;
-  padding: 1.3rem 1rem;
-  box-shadow: 0 1px 8px rgba(30,40,80,0.08);
-  min-width: 240px;
+  flex: 0 0 32%; /* Largura fixa percentual para 3 cards na linha */
+  min-width: 280px; /* Responsividade */
+  max-width: 370px;
+  background: rgba(255,255,255,0.95);
+  border-radius: 22px 55px 22px 55px;
+  box-shadow: 0 6px 22px rgba(68,134,255,0.08);
+  padding: 32px 22px 28px 22px;
+  border-left: 5px solid #548eed;
+  min-height: 200px;
+  transition: transform 0.18s ease, box-shadow 0.22s ease;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(68,134,255,0.15);
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+  .services-grid {
+    flex-wrap: wrap; /* Empilha verticalmente */
+    overflow-x: visible;
+  }
+  .service-card {
+    flex: 1 1 100%;
+    min-width: auto;
+    margin-bottom: 20px;
+  }
 }
 
 .service-title {
