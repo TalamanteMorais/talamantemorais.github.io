@@ -67,11 +67,8 @@ section h2 {
 
 .services-grid {
   display: flex;
+  flex-direction: column;
   gap: 30px;
-  flex-wrap: nowrap; /* <-- Alinha todos horizontalmente */
-  justify-content: space-between;
-  overflow-x: auto; /* Permite rolagem horizontal */
-  padding-bottom: 10px;
 }
 
 .service-card {
