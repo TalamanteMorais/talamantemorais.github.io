@@ -84,9 +84,9 @@ section {
 
 /* ======================== GRID DE SERVIÇOS ======================== */
 .services-grid {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 30px;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
 }
 
 /* ======================== CARTÕES DE SERVIÇOS ======================== */
@@ -248,17 +248,6 @@ button[type="submit"]:hover {
 }
 
 /* ======================== RESPONSIVO ======================== */
-@media (max-width: 768px) {
-  .services-grid {
-    flex-wrap: wrap;
-    overflow-x: visible;
-  }
-  .service-card {
-    flex: 1 1 100%;
-    min-width: auto;
-    margin-bottom: 20px;
-  }
-}
 
 @media (max-width: 700px) {
   section {
@@ -275,6 +264,11 @@ button[type="submit"]:hover {
     font-size: .9rem;
     padding: 10px 13px;
   }
+  footer {
+    font-size: 0.96rem;
+    padding: .7rem 0;
+  }
+}
   footer {
     font-size: 0.96rem;
     padding: .7rem 0;
