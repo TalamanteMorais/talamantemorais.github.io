@@ -8,11 +8,14 @@ window.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// Exibe mensagem de sucesso após envio do formulário se houver parâmetro na URL
-(function () {
-  var params = new URLSearchParams(window.location.search);
-  if (params.get('sucesso') === 'true') {
-    var msg = document.getElementById('mensagem-sucesso');
-    if (msg) msg.style.display = 'block';
+// Exibe alerta visual após envio do formulário via Google Apps Script
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.querySelector('form');
+  if (form) {
+    form.addEventListener('submit', function () {
+      setTimeout(() => {
+        alert("✅ Mensagem enviada com sucesso!\n\nObrigado pelo contato. Retornaremos em breve.");
+      }, 300);
+    });
   }
-})();
+});
