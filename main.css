@@ -1,6 +1,25 @@
+/* ======================== ÍNDICE DE SEÇÕES ========================
+01. RESET E CONFIGURAÇÕES GERAIS
+02. CABEÇALHO
+03. MENU DE NAVEGAÇÃO
+04. SEÇÕES GERAIS
+05. GRID DE SERVIÇOS
+06. CARTÕES DE SERVIÇOS
+07. TÍTULO E DESCRIÇÃO DOS SERVIÇOS
+08. BOTÕES
+09. LISTAS
+10. ARTIGOS
+11. VÍDEOS
+12. QR CODE
+13. RODAPÉ
+14. BOTÃO WHATSAPP
+15. FORMULÁRIO
+16. RESPONSIVO
+=================================================================== */
+
 /* main.css – Estilo principal do site Talamante Morais */
 
-/* Reset básico */
+/* ======================== RESET E CONFIGURAÇÕES GERAIS ======================== */
 * {
   margin: 0;
   padding: 0;
@@ -20,6 +39,7 @@ body {
   padding-bottom: 60px;
 }
 
+/* ======================== CABEÇALHO ======================== */
 header {
   background: #223b53;
   color: #fff;
@@ -32,6 +52,7 @@ header h1 {
   margin-bottom: .5rem;
 }
 
+/* ======================== MENU DE NAVEGAÇÃO ======================== */
 nav {
   background: #1c2d3a;
   text-align: center;
@@ -51,6 +72,7 @@ nav a:hover {
   color: #a3d3ff;
 }
 
+/* ======================== SEÇÕES GERAIS ======================== */
 section {
   max-width: 850px;
   background: #fff;
@@ -59,39 +81,28 @@ section {
   border-radius: 10px;
   box-shadow: 0 2px 12px rgba(60,60,60,0.04);
 }
-text-align: center;
-      color: #23407e;
-      font-weight: 700;
-      letter-spacing: .02em;
-color: #23407e;
-      font-weight: 700;
-      letter-spacing: .02em;
-      margin-bottom: 38px;
-      font-size: 2.3rem;
-    }
-    .services-grid {
-      display: grid;
-      gap: 30px;
-      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-    }
-    .service-card {
-      background: rgba(255,255,255,0.95);
-      border-radius: 22px 55px 22px 55px;
-      box-shadow: 0 6px 22px rgba(68,134,255,0.08);
-      padding: 32px 22px 28px 22px;
-      border-left: 5px solid #548eed;
-      min-height: 200px;
-      transition: transform .18s, box-shadow .22s;
-      position: relative;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-    .service-card:hover {
-      transform: translateY(-8px) scale(1.04);
-      box-shadow: 0 14px 34px rgba(52,120,220,0.13);
 
+/* ======================== GRID DE SERVIÇOS ======================== */
+.services-grid {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+}
+
+/* ======================== CARTÕES DE SERVIÇOS ======================== */
+.service-card {
+  background: rgba(255,255,255,0.95);
+  border-radius: 22px 55px 22px 55px;
+  box-shadow: 0 6px 22px rgba(68,134,255,0.08);
+  padding: 32px 22px 28px 22px;
+  border-left: 5px solid #548eed;
+  min-height: 200px;
+  transition: transform .18s, box-shadow .22s;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .service-card:hover {
@@ -99,19 +110,7 @@ color: #23407e;
   box-shadow: 0 12px 30px rgba(68,134,255,0.15);
 }
 
-/* Responsividade para telas pequenas */
-@media (max-width: 768px) {
-  .services-grid {
-    flex-wrap: wrap; /* Empilha verticalmente */
-    overflow-x: visible;
-  }
-  .service-card {
-    flex: 1 1 100%;
-    min-width: auto;
-    margin-bottom: 20px;
-  }
-}
-
+/* ======================== TÍTULO E DESCRIÇÃO DOS SERVIÇOS ======================== */
 .service-title {
   color: #1864ab;
   font-weight: 700;
@@ -124,6 +123,7 @@ color: #23407e;
   margin-bottom: 1rem;
 }
 
+/* ======================== BOTÕES ======================== */
 .cta-btn, .main-btn {
   display: inline-block;
   background: #1864ab;
@@ -141,6 +141,7 @@ color: #23407e;
   background: #1560a1;
 }
 
+/* ======================== LISTAS ======================== */
 ul {
   margin: 1rem 0 0 1rem;
 }
@@ -149,12 +150,14 @@ ul li {
   margin-bottom: .7rem;
 }
 
+/* ======================== ARTIGOS ======================== */
 .artigo-meta {
   color: #6c757d;
   font-size: 0.96rem;
   margin-top: .1rem;
 }
 
+/* ======================== VÍDEOS ======================== */
 .video-container {
   text-align: center;
 }
@@ -165,6 +168,7 @@ ul li {
   box-shadow: 0 2px 12px rgba(60,60,60,0.09);
 }
 
+/* ======================== QR CODE ======================== */
 .qrcode-container {
   margin-top: 1.5rem;
   text-align: center;
@@ -175,6 +179,7 @@ ul li {
   height: 130px;
 }
 
+/* ======================== RODAPÉ ======================== */
 footer {
   width: 100%;
   background: #223b53;
@@ -187,6 +192,7 @@ footer {
   font-size: 1rem;
 }
 
+/* ======================== BOTÃO WHATSAPP ======================== */
 .whatsapp-button {
   position: fixed;
   right: 18px;
@@ -209,6 +215,7 @@ footer {
   background: #1ebe57;
 }
 
+/* ======================== FORMULÁRIO ======================== */
 form {
   margin-top: 1rem;
 }
@@ -240,15 +247,28 @@ button[type="submit"]:hover {
   background: #12568c;
 }
 
+/* ======================== RESPONSIVO ======================== */
+@media (max-width: 768px) {
+  .services-grid {
+    flex-wrap: wrap;
+    overflow-x: visible;
+  }
+  .service-card {
+    flex: 1 1 100%;
+    min-width: auto;
+    margin-bottom: 20px;
+  }
+}
+
 @media (max-width: 700px) {
   section {
     padding: 1.1rem .8rem;
   }
-.services-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
+  .services-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
   .whatsapp-button {
     right: 8px;
     bottom: 70px;
@@ -260,4 +280,3 @@ button[type="submit"]:hover {
     padding: .7rem 0;
   }
 }
-
