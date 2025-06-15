@@ -8,14 +8,21 @@ window.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// Exibe alerta visual após envio do formulário via Google Apps Script
-document.addEventListener('DOMContentLoaded', function () {
-  const form = document.querySelector('form');
-  if (form) {
-    form.addEventListener('submit', function () {
+// Exibe mensagem embutida na página após envio bem-sucedido do formulário
+document.addEventListener("DOMContentLoaded", function () {
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("sucesso") === "true") {
+    const mensagem = document.getElementById("mensagem-sucesso");
+    if (mensagem) {
+      mensagem.style.display = "block";
       setTimeout(() => {
-        alert("✅ Mensagem enviada com sucesso!\n\nObrigado pelo contato. Retornaremos em breve.");
-      }, 300);
-    });
+        mensagem.style.opacity = 1;
+        mensagem.style.transition = "opacity 0.8s ease-in-out";
+      }, 100);
+      // Opcional: esconder automaticamente após 6 segundos
+      setTimeout(() => {
+        mensagem.style.opacity = 0;
+      }, 6000);
+    }
   }
 });
