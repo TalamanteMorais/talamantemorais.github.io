@@ -40,18 +40,19 @@ body {
 }
 
 /* ======================== CABEÇALHO ======================== */
+
+/* ======================== CABEÇALHO ======================== */
 header {
-  background: #e7dbc6; /* cor clara institucional */
+  background: #1c2d3a; /* tom escuro institucional */
   padding: 2rem 0 1rem 0;
   text-align: center;
-  color: #222;
+  color: #ffffff;
 }
 
 header h1 {
   font-size: 2.2rem;
   margin-bottom: .5rem;
-text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
-
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
 }
 
 /* ======================== MENU DE NAVEGAÇÃO ======================== */
