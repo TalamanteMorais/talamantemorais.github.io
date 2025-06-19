@@ -135,7 +135,10 @@ section {
   margin-bottom: .8rem;
 }
 
-.service-desc {
+.service-desc,
+#inicio p,
+#sobre p {
+  text-align: justify;
   font-size: 1rem;
   margin-bottom: 1rem;
 }
