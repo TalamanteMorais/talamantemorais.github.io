@@ -40,16 +40,29 @@ body {
 }
 
 /* ======================== CABEÇALHO ======================== */
+
 header {
-  background: #223b53;
-  color: #fff;
+  background-image: url('Arte_Fundo_1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   padding: 2rem 0 1rem 0;
   text-align: center;
+  color: #ffffff; /* texto branco padrão para o header */
 }
 
 header h1 {
   font-size: 2.2rem;
   margin-bottom: .5rem;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5); /* sombra para melhorar contraste */
+}
+
+header p {
+  color: #ffffff; /* texto branco */
+  font-size: 1.2rem;
+  margin-top: 0;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5); /* mesma sombra para uniformidade */
+  font-weight: 400;
 }
 
 /* ======================== MENU DE NAVEGAÇÃO ======================== */
@@ -83,14 +96,23 @@ section {
 }
 
 /* ======================== GRID DE SERVIÇOS ======================== */
+/* Atualizado para alinhamento horizontal fixo, sem rolagem, ocupando 100% */
 .services-grid {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 30px;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  width: 100%;
+  overflow-x: visible;
+  padding: 0 1rem;
 }
 
 /* ======================== CARTÕES DE SERVIÇOS ======================== */
+/* Flexível para três cards lado a lado e responsivo */
 .service-card {
+  flex: 1 1 0;
+  max-width: 32%;
   background: rgba(255,255,255,0.95);
   border-radius: 22px 55px 22px 55px;
   box-shadow: 0 6px 22px rgba(68,134,255,0.08);
@@ -249,14 +271,18 @@ button[type="submit"]:hover {
 
 /* ======================== RESPONSIVO ======================== */
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
   section {
     padding: 1.1rem .8rem;
   }
   .services-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
+    flex-wrap: wrap;        /* Permite quebra para múltiplas linhas no mobile */
+    justify-content: center;
+  }
+  .service-card {
+    max-width: 90%;         /* Cards quase em tela cheia no mobile */
+    flex: 1 1 100%;
+    margin-bottom: 20px;    /* Espaço vertical entre cards empilhados */
   }
   .whatsapp-button {
     right: 8px;
@@ -264,11 +290,6 @@ button[type="submit"]:hover {
     font-size: .9rem;
     padding: 10px 13px;
   }
-  footer {
-    font-size: 0.96rem;
-    padding: .7rem 0;
-  }
-}
   footer {
     font-size: 0.96rem;
     padding: .7rem 0;
