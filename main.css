@@ -40,6 +40,7 @@ body {
 }
 
 /* ======================== CABEÇALHO ======================== */
+
 header {
   background-image: url('Arte_Fundo_1.jpg');
   background-size: cover;
@@ -47,13 +48,21 @@ header {
   background-repeat: no-repeat;
   padding: 2rem 0 1rem 0;
   text-align: center;
-  color: #ffffff;
+  color: #ffffff; /* texto branco padrão para o header */
 }
 
 header h1 {
   font-size: 2.2rem;
   margin-bottom: .5rem;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5); /* sombra para melhorar contraste */
+}
+
+header p {
+  color: #ffffff; /* texto branco */
+  font-size: 1.2rem;
+  margin-top: 0;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5); /* mesma sombra para uniformidade */
+  font-weight: 400;
 }
 
 /* ======================== MENU DE NAVEGAÇÃO ======================== */
