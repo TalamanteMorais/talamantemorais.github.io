@@ -23,15 +23,12 @@ window.addEventListener("DOMContentLoaded", function () {
   // Destacar link ativo do menu conforme a seção visível na tela
   const sections = document.querySelectorAll("section[id]");
   const navLinks = document.querySelectorAll("nav a[href^='#']");
-
   function destacarMenu() {
     let scrollPos = window.scrollY || window.pageYOffset;
-
     sections.forEach(section => {
-      const top = section.offsetTop - 100; // Ajuste de offset para antecipar ativação
+      const top = section.offsetTop - 100;
       const height = section.offsetHeight;
       const id = section.getAttribute('id');
-
       if (scrollPos >= top && scrollPos < top + height) {
         navLinks.forEach(link => {
           link.classList.remove('active');
@@ -42,11 +39,10 @@ window.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
-
   window.addEventListener('scroll', destacarMenu);
-  destacarMenu(); // Executar ao carregar a página para marcar menu inicial
+  destacarMenu();
 
-  // Bloqueio de múltiplos envios no formulário e validação simples
+  // Validação simples e bloqueio de múltiplos envios no formulário
   const form = document.querySelector("form");
   if (form) {
     form.addEventListener("submit", function (e) {
@@ -55,14 +51,12 @@ window.addEventListener("DOMContentLoaded", function () {
       const mensagem = form.querySelector('textarea[name="mensagem"]');
       const botaoEnviar = form.querySelector('button[type="submit"]');
 
-      // Validação simples
       if (!nome.value.trim() || !email.value.trim() || !mensagem.value.trim()) {
         e.preventDefault();
         alert("Por favor, preencha todos os campos obrigatórios.");
         return;
       }
 
-      // Validação básica do email
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!emailRegex.test(email.value.trim())) {
         e.preventDefault();
@@ -70,13 +64,12 @@ window.addEventListener("DOMContentLoaded", function () {
         return;
       }
 
-      // Bloquear botão para evitar múltiplos envios
       botaoEnviar.disabled = true;
       botaoEnviar.textContent = "Enviando...";
     });
   }
 
-  // Exibe mensagem embutida na página após envio bem-sucedido do formulário com fade
+  // Exibe mensagem de sucesso com fade após envio
   const params = new URLSearchParams(window.location.search);
   if (params.get("sucesso") === "true") {
     const mensagem = document.getElementById("mensagem-sucesso");
