@@ -96,9 +96,10 @@ section {
 }
 
 /* ======================== GRID DE SERVIÇOS ======================== */
+
 .services-grid {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
 }
 
@@ -262,13 +263,13 @@ button[type="submit"]:hover {
 
 /* ======================== RESPONSIVO ======================== */
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
   section {
     padding: 1.1rem .8rem;
   }
   .services-grid {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
   }
   .whatsapp-button {
@@ -282,8 +283,8 @@ button[type="submit"]:hover {
     padding: .7rem 0;
   }
 }
-  footer {
-    font-size: 0.96rem;
-    padding: .7rem 0;
-  }
+
+footer {
+  font-size: 1rem;
+  padding: 1rem 0;
 }
