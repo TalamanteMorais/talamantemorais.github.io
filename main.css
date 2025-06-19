@@ -251,6 +251,14 @@ input[type="text"], input[type="email"], textarea {
   resize: vertical;
 }
 
+/* Campo honeypot oculto com segurança */
+input[name="honeypot"] {
+  display: none !important;
+  visibility: hidden;
+  position: absolute;
+  left: -9999px;
+}
+
 button[type="submit"] {
   background: #1864ab;
   color: #fff;
