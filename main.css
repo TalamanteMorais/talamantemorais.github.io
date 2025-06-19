@@ -40,29 +40,16 @@ body {
 }
 
 /* ======================== CABEÇALHO ======================== */
-
 header {
-  background-image: url('Arte_Fundo_1.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: #223b53;
+  color: #fff;
   padding: 2rem 0 1rem 0;
   text-align: center;
-  color: #ffffff; /* texto branco padrão para o header */
 }
 
 header h1 {
   font-size: 2.2rem;
   margin-bottom: .5rem;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.5); /* sombra para melhorar contraste */
-}
-
-header p {
-  color: #ffffff; /* texto branco */
-  font-size: 1.2rem;
-  margin-top: 0;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.5); /* mesma sombra para uniformidade */
-  font-weight: 400;
 }
 
 /* ======================== MENU DE NAVEGAÇÃO ======================== */
@@ -96,10 +83,9 @@ section {
 }
 
 /* ======================== GRID DE SERVIÇOS ======================== */
-
 .services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  display: flex;
+  flex-direction: column;
   gap: 30px;
 }
 
@@ -263,13 +249,13 @@ button[type="submit"]:hover {
 
 /* ======================== RESPONSIVO ======================== */
 
-@media (max-width: 900px) {
+@media (max-width: 700px) {
   section {
     padding: 1.1rem .8rem;
   }
   .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    display: flex;
+    flex-direction: column;
     gap: 30px;
   }
   .whatsapp-button {
@@ -283,8 +269,8 @@ button[type="submit"]:hover {
     padding: .7rem 0;
   }
 }
-
-footer {
-  font-size: 1rem;
-  padding: 1rem 0;
+  footer {
+    font-size: 0.96rem;
+    padding: .7rem 0;
+  }
 }
