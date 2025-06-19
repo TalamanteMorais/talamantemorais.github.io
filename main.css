@@ -99,20 +99,15 @@ section {
 /* Atualizado para alinhamento horizontal fixo, sem rolagem, ocupando 100% */
 .services-grid {
   display: flex;
-  flex-direction: row;
-  gap: 30px;
-  flex-wrap: nowrap;
-  justify-content: space-between;
+  flex-direction: column;  /* empilha verticalmente, um container por linha */
+  gap: 20px;               /* espaço entre containers */
   width: 100%;
-  overflow-x: visible;
   padding: 0 1rem;
+  overflow-x: visible;     /* sem rolagem horizontal */
 }
 
-/* ======================== CARTÕES DE SERVIÇOS ======================== */
-/* Flexível para três cards lado a lado e responsivo */
 .service-card {
-  flex: 1 1 0;
-  max-width: 32%;
+  width: 100%;             /* container ocupa toda a largura da grid */
   background: rgba(255,255,255,0.95);
   border-radius: 22px 55px 22px 55px;
   box-shadow: 0 6px 22px rgba(68,134,255,0.08);
@@ -276,13 +271,13 @@ button[type="submit"]:hover {
     padding: 1.1rem .8rem;
   }
   .services-grid {
-    flex-wrap: wrap;        /* Permite quebra para múltiplas linhas no mobile */
+    flex-wrap: nowrap;   /* sem quebra, já está empilhado */
     justify-content: center;
   }
   .service-card {
-    max-width: 90%;         /* Cards quase em tela cheia no mobile */
-    flex: 1 1 100%;
-    margin-bottom: 20px;    /* Espaço vertical entre cards empilhados */
+    max-width: 90%;      /* ocupa quase toda a largura no mobile */
+    width: 100%;         /* garante largura plena */
+    margin-bottom: 20px; /* espaço vertical entre containers */
   }
   .whatsapp-button {
     right: 8px;
