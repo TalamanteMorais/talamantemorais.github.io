@@ -102,4 +102,17 @@ window.addEventListener("DOMContentLoaded", function () {
       }, 6800);
     }
   }
+
+  // ======================== INÍCIO: Execução do reCAPTCHA v3 ========================
+  if (typeof grecaptcha !== "undefined") {
+    grecaptcha.ready(function () {
+      grecaptcha.execute('6LdEyWYrAAAAAPhawhaXU0w1ZJpRsr2k-ZuhxLu4', { action: 'submit' }).then(function (token) {
+        const tokenField = document.getElementById('recaptcha-token');
+        if (tokenField) {
+          tokenField.value = token;
+        }
+      });
+    });
+  }
+  // ======================== FIM: Execução do reCAPTCHA v3 ========================
 });
