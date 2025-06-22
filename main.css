@@ -310,3 +310,16 @@ button[type="submit"]:hover {
     padding: .7rem 0;
   }
 }
+
+@media (max-width: 600px) {
+  .btn-group {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+  }
+
+  .btn-group a {
+    width: 100%;
+    text-align: center;
+  }
+}
