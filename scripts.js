@@ -103,16 +103,17 @@ window.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // ======================== INÍCIO: Execução do reCAPTCHA v3 ========================
-  if (typeof grecaptcha !== "undefined") {
-    grecaptcha.ready(function () {
-      grecaptcha.execute('6LdEyWYrAAAAAPhawhaXU0w1ZJpRsr2k-ZuhxLu4', { action: 'submit' }).then(function (token) {
-        const tokenField = document.getElementById('recaptcha-token');
-        if (tokenField) {
-          tokenField.value = token;
-        }
-      });
+// ======================== INÍCIO: Execução do reCAPTCHA v3 ========================
+if (typeof grecaptcha !== "undefined") {
+  grecaptcha.ready(function () {
+    grecaptcha.execute('6LdEyWYrAAAAALdfXa6R6BprCQbpPW7KxuySJr43', { action: 'submit' }).then(function (token) {
+      const tokenField = document.getElementById('recaptcha-token');
+      if (tokenField) {
+        tokenField.value = token;
+      }
     });
-  }
-  // ======================== FIM: Execução do reCAPTCHA v3 ========================
+  });
+}
+// ======================== FIM: Execução do reCAPTCHA v3 ========================
+
 });
