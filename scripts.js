@@ -20,7 +20,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const carouselContainer = document.querySelector(".carousel-container");
   if (carouselContainer && track && items.length > 0) {
     iniciarCarrossel();
+
     carouselContainer.addEventListener("mouseenter", pausarCarrossel);
-    carouselContainer.addEventListener("mouseleave", iniciarCarrossel);
+
+    carouselContainer.addEventListener("mouseleave", () => {
+      pausarCarrossel();
+      iniciarCarrossel(); // reinicia corretamente
+    });
   }
 });

@@ -355,9 +355,11 @@ button[type="submit"]:hover {
   display: flex;
   transition: transform 0.5s ease-in-out;
   will-change: transform;
+  width: 300%; /* Três itens, cada um ocupando 100% */
 }
 
 .carousel-item {
+  flex: 0 0 100%;
   min-width: 100%;
   box-sizing: border-box;
   padding: 1rem;
