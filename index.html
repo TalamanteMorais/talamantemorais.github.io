@@ -38,7 +38,7 @@
   <link rel="stylesheet" href="main.css">
 
   <!-- Script do reCAPTCHA v3 -->
-<script src="https://www.google.com/recaptcha/api.js?render=6LeV_I0rAAAAAC-HV2gx4ckrF5t95NntLUJgzR6n"></script>
+<script src="https://www.google.com/recaptcha/api.js?render=6LdEyWYrAAAAALdfXa6R6BprCQbpPW7KxuySJr43"></script>
 </head>
 <body>
 <!--
@@ -165,14 +165,16 @@
 <form id="contato-form" action="https://script.google.com/macros/s/AKfycbwLMhh70Fg3bhQRo8iVfDNPlvMtMY2o2bR0ukJixPjmGoB6NNNP_9ssY5-dkK66nlGS/exec" method="POST">
   <label for="nome">Nome completo</label>
   <input type="text" id="nome" name="nome" required aria-label="Nome completo">
-
   <label for="email">E-mail</label>
-  <input type="email" id="email" name="email" required aria-label="E-mail">
+  <input type="email" id="email" name="email" required aria-label="Endereço de e-mail">
 
   <label for="mensagem">Mensagem</label>
-  <textarea id="mensagem" name="mensagem" required aria-label="Mensagem" rows="5"></textarea>
+  <textarea id="mensagem" name="mensagem" rows="4" required aria-label="Sua mensagem"></textarea>
 
+  <!-- Campo honeypot oculto para antispam -->
   <input type="text" name="honeypot" style="display:none">
+
+  <!-- Campo obrigatório para o token do reCAPTCHA v3 -->
   <input type="hidden" name="token" id="recaptcha-token">
 
   <button type="submit" class="main-btn">Enviar</button>
