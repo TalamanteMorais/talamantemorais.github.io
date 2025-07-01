@@ -74,13 +74,13 @@ document.addEventListener("DOMContentLoaded", function () {
   if (form) {
     form.addEventListener("submit", function (e) {
       e.preventDefault();
-
       grecaptcha.ready(function () {
+
         grecaptcha.execute("6LeV_I0rAAAAAC-HV2gx4ckrF5t95NntLUJgzR6n", { action: "submit" }).then(function (token) {
           document.getElementById("recaptcha-token").value = token;
+console.log("Token gerado:", token);
 
           const formData = new FormData(form);
-
           fetch(form.action, {
             method: "POST",
             body: formData
