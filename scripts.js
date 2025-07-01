@@ -75,8 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       grecaptcha.ready(function () {
-
-        grecaptcha.execute("6LeV_I0rAAAAAC-HV2gx4ckrF5t95NntLUJgzR6n", { action: "submit" }).then(function (token) {
+grecaptcha.execute("6LdZFnQrAAAAABafHl6mffcrhuI8cbfsoGTm9cfL", { action: "submit" }).then(function (token) {
           document.getElementById("recaptcha-token").value = token;
 console.log("Token gerado:", token);
 
