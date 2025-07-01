@@ -52,28 +52,30 @@
   <a href="#sobre">Sobre</a>
   <a href="#servicos">Serviços</a>
   <a href="#artigos">Publicações</a>
-
 <a href="#contato">Contato</a>
 </nav>
 <main>
 <!-- INÍCIO: CARROSSEL TEMÁTICO AUTOMÁTICO -->
-<section class="carousel-container">
-  <div class="carousel-wrapper" style="overflow: hidden; width: 100%;">
-    <div class="carousel-track">
+<section class="carousel-container" role="region" aria-roledescription="carousel">
+   <!-- BOTÕES DE NAVEGAÇÃO MANUAL DO CARROSSEL -->
+ <button class="carousel-btn prev-btn" aria-label="Slide anterior">‹</button>
+  <button class="carousel-btn next-btn" aria-label="Próximo slide">›</button>
+<div class="carousel-wrapper" style="overflow: hidden; width: 100%;">
+    <div class="carousel-track" aria-live="polite">
       <div class="carousel-item">
-        <div class="destaque-card" style="background: url('img_credenciamento.jpg') center/cover no-repeat;">
+        <div class="destaque-card credenciamento" style="background: url('img_credenciamento.jpg') center/cover no-repeat;">
           Credenciamento
-        </div>
+</div>
       </div>
       <div class="carousel-item">
-        <div class="destaque-card" style="background: url('img_contratacao.jpg') center/cover no-repeat;">
+        <div class="destaque-card contratacao-direta" style="background: url('img_contratacao.jpg') center/cover no-repeat;">
           Contratação Direta
         </div>
       </div>
       <div class="carousel-item">
-        <div class="destaque-card" style="background: url('img_contratos.jpg') center/cover no-repeat;">
+        <div class="destaque-card contratos-administrativos" style="background: url('img_contratos.jpg') center/cover no-repeat;">
           Contratos Administrativos
-        </div>
+ </div>
       </div>
     </div>
   </div>
@@ -197,7 +199,7 @@
     ----------------------------------------------------------------
     O ano do rodapé é atualizado automaticamente via JavaScript, não altere manualmente.
   -->
-  &copy; <span id="anoAtual"></span> Talamante Morais – Todos os direitos reservados.
+&copy; <span id="anoAtual"></span> Talamante Morais – Todos os direitos reservados.
 </footer>
 <a class="whatsapp-button" href="https://wa.me/556296318340" rel="noopener noreferrer" aria-label="Abrir WhatsApp para contato">WhatsApp</a>
 

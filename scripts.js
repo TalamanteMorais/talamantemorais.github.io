@@ -59,3 +59,9 @@ document.addEventListener("DOMContentLoaded", function () {
     iniciarCarrossel();
   }
 });
+// Atualiza automaticamente o ano no rodapé
+document.addEventListener("DOMContentLoaded", function () {
+  const ano = new Date().getFullYear();
+  const anoSpan = document.getElementById("anoAtual");
+  if (anoSpan) anoSpan.textContent = ano;
+});
