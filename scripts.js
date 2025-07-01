@@ -66,3 +66,40 @@ document.addEventListener("DOMContentLoaded", function () {
   const anoSpan = document.getElementById("anoAtual");
   if (anoSpan) anoSpan.textContent = ano;
 });
+// ======================== ENVIO DO FORMULÁRIO COM reCAPTCHA v3 ========================
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("contato-form");
+  const mensagemSucesso = document.getElementById("mensagem-sucesso");
+
+  if (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      grecaptcha.ready(function () {
+        grecaptcha.execute("6LeV_I0rAAAAAC-HV2gx4ckrF5t95NntLUJgzR6n", { action: "submit" }).then(function (token) {
+          document.getElementById("recaptcha-token").value = token;
+
+          const formData = new FormData(form);
+
+          fetch(form.action, {
+            method: "POST",
+            body: formData
+          })
+            .then(response => response.text())
+            .then(responseText => {
+              if (mensagemSucesso) {
+                mensagemSucesso.style.display = "block";
+                form.reset();
+                setTimeout(() => {
+                  mensagemSucesso.style.display = "none";
+                }, 6000);
+              }
+            })
+            .catch(error => {
+              console.error("Erro ao enviar:", error);
+            });
+        });
+      });
+    });
+  }
+});
