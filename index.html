@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +18,6 @@
     style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
     font-src https://fonts.gstatic.com;
     img-src 'self' https: data:;
-    frame-src 'self' https://www.google.com/ https://www.gstatic.com;
   ">
   <title>Talamante Morais – Advocacia Pública Municipal</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -27,4 +26,140 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
   <script src="https://www.google.com/recaptcha/api.js?render=6LdZFnQrAAAAABafHl6mffcrhuI8cbfsoGTm9cfL"></script>
 </head>
-<body>...</body></html>
+
+<body>
+  <header id="inicio">
+    <h1>Talamante Morais</h1>
+    <p>Advocacia Pública Municipal</p>
+  </header>
+
+  <nav role="navigation" aria-label="Menu principal">
+    <a href="#inicio">Início</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#artigos">Publicações</a>
+    <a href="#curriculo">Currículo</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <main>
+    <!-- Carrossel -->
+    <section class="carousel-container" role="region" aria-roledescription="carousel">
+      <button class="carousel-btn prev-btn" aria-label="Slide anterior">‹</button>
+      <button class="carousel-btn next-btn" aria-label="Próximo slide">›</button>
+      <div class="carousel-wrapper">
+        <div class="carousel-track">
+          <div class="carousel-item">
+            <div class="destaque-card">Compromisso com a Gestão Pública de Excelência</div>
+          </div>
+          <div class="carousel-item">
+            <div class="destaque-card">Especialista em Licitações, Contratos e Capacitação</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre">
+      <h2>Sobre o Escritório</h2>
+      <p><strong>Missão:</strong> Fortalecer a gestão pública com assessoria técnica responsável.</p>
+      <p><strong>Visão:</strong> Ser referência nacional em Direito Administrativo Municipal.</p>
+      <p><strong>Valores:</strong> Ética, Transparência, Técnica, Comprometimento e Responsabilidade Social.</p>
+    </section>
+
+    <!-- Serviços -->
+    <section id="servicos">
+      <h2>Nossos Serviços</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3 class="service-title">Direito Público</h3>
+          <div class="service-desc">
+            Atuação em todas as fases de Licitações e Contratos (Lei 14.133/2021), consultoria legislativa, pareceres jurídicos, compliance público e assessoria à administração municipal.
+          </div>
+          <a class="cta-btn" href="#">Saiba Mais</a>
+        </div>
+
+        <div class="service-card">
+          <h3 class="service-title">Direito Privado</h3>
+          <div class="service-desc">
+            Consultoria contratual, direito civil, empresarial, mediação, arbitragem e proteção de dados com base na LGPD.
+          </div>
+          <a class="cta-btn" href="#">Saiba Mais</a>
+        </div>
+
+        <div class="service-card">
+          <h3 class="service-title">Cursos e Treinamentos</h3>
+          <div class="service-desc">
+            Capacitação jurídica e técnica para servidores públicos, vereadores e gestores, com foco em práticas legais atualizadas.
+          </div>
+          <a class="cta-btn" href="#">Saiba Mais</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Artigos -->
+    <section id="artigos">
+      <h2>Matérias Jurídicas</h2>
+      <p>Publicações, vídeos e decisões organizadas pelo escritório em temas relevantes do Direito Público e Administrativo.</p>
+      <div class="btn-group">
+        <a class="main-btn" href="https://drive.google.com/drive/folders/1aD5HiPgSbpgfxmNlpV_T0AwpriohELGF" target="_blank" rel="noopener noreferrer">📁 Acessar Publicações</a>
+        <a class="main-btn" href="https://drive.google.com/drive/folders/1uI6S_jfsF_iIAZY_jZpc5BX6oDrrRAVn" target="_blank" rel="noopener noreferrer">🎥 Momentos Públicos</a>
+        <a class="main-btn" href="https://drive.google.com/drive/folders/1ehXtes-FmIIE4JehFvbDKu6YejVkcm1W" target="_blank" rel="noopener noreferrer">⚖️ Jurisprudência</a>
+      </div>
+    </section>
+
+    <!-- Currículo -->
+    <section id="curriculo">
+      <h2>Currículo Profissional</h2>
+      <p>Conheça a trajetória, formação e experiências jurídicas do advogado Talamante Morais.</p>
+      <div style="margin-top: 20px; text-align: center;">
+        <a class="main-btn" href="http://lattes.cnpq.br/1142865105467699" target="_blank" rel="noopener noreferrer">🔗 Currículo Lattes</a>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato">
+      <h2>Contato</h2>
+      <div id="mensagem-sucesso" style="display: none; background: #dff0d8; color: #3c763d; padding: 15px; border-radius: 5px; margin-bottom: 20px;">
+        ✅ Mensagem enviada com sucesso. Obrigado pelo contato!
+      </div>
+      <form id="contato-form" action="https://script.google.com/macros/s/AKfycbwLMhh70Fg3bhQRo8iVfDNPlvMtMY2o2bR0ukJixPjmGoB6NNNP_9ssY5-dkK66nlGS/exec" method="POST">
+        <label for="nome">Nome completo</label>
+        <input type="text" id="nome" name="nome" required aria-label="Nome completo">
+
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" required aria-label="E-mail">
+
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" rows="4" required aria-label="Mensagem"></textarea>
+
+        <input type="text" name="honeypot" style="display:none">
+        <input type="hidden" name="token" id="recaptcha-token">
+
+        <button type="submit" class="main-btn">Enviar</button>
+      </form>
+
+      <p><strong>Email:</strong> talamante.contato@gmail.com</p>
+      <p><strong>WhatsApp:</strong> (62) 99631-8340</p>
+      <ul>
+        <li><a href="https://www.instagram.com/talamantemorais/" target="_blank">Instagram</a></li>
+        <li><a href="https://www.facebook.com/talamante.morais.100" target="_blank">Facebook</a></li>
+        <li><a href="https://www.linkedin.com/in/talamante-morais-a51535221/" target="_blank">LinkedIn</a></li>
+        <li><a href="https://www.youtube.com/@TalamanteMorais" target="_blank">YouTube</a></li>
+      </ul>
+
+      <div class="qrcode-container">
+        <h3>Acesso Rápido</h3>
+        <img src="qrcode_talamante_site.png" alt="QR Code para acesso ao site">
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; <span id="anoAtual"></span> Talamante Morais – Todos os direitos reservados.
+  </footer>
+
+  <a class="whatsapp-button" href="https://wa.me/556296318340" rel="noopener noreferrer" aria-label="Abrir WhatsApp">WhatsApp</a>
+  <script src="scripts.js"></script>
+</body>
+</html>
