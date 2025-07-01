@@ -9,19 +9,20 @@ document.addEventListener("DOMContentLoaded", function () {
   const totalItems = items.length;
   let index = 0;
   let intervalo;
+// Ajusta dinamicamente a largura da trilha e dos itens com base no total de itens
+if (track && items.length > 0) {
+  track.style.width = `${totalItems * 100}%`;
+  items.forEach(item => {
+    item.style.width = `${100 / totalItems}%`;
+  });
+  track.setAttribute("aria-live", "polite");
+}
 
-  // Ajusta dinamicamente a largura da trilha com base no total de itens
-  if (track && items.length > 0) {
-    track.style.width = `${totalItems * 100}%`;
-    track.setAttribute("aria-live", "polite");
+function atualizarSlide() {
+  if (track) {
+    track.style.transform = `translateX(-${index * (100 / totalItems)}%)`;
   }
-
-  function atualizarSlide() {
-    if (track) {
-      track.style.transform = `translateX(-${index * 100}%)`;
-    }
-  }
-
+}
   function iniciarCarrossel() {
     intervalo = setInterval(() => {
       index = (index + 1) % totalItems;
