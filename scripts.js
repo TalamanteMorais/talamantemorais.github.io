@@ -65,29 +65,35 @@ document.addEventListener("DOMContentLoaded", () => {
   const mensagemSucesso = document.getElementById("mensagem-sucesso");
 
   if (form) {
-    form.addEventListener("submit", async (e) => {
+    form.addEventListener("submit", (e) => {
       e.preventDefault();
 
-      try {
-        const token = await grecaptcha.execute("6LdZFnQrAAAAABafHl6mffcrhuI8cbfsoGTm9cfL", { action: "submit" });
-        document.getElementById("recaptcha-token").value = token;
+      grecaptcha.ready(() => {
+        grecaptcha.execute("6LdZFnQrAAAAABafHl6mffcrhuI8cbfsoGTm9cfL", { action: "submit" })
+          .then((token) => {
+            document.getElementById("recaptcha-token").value = token;
 
-        const formData = new FormData(form);
-        const response = await fetch(form.action, {
-          method: "POST",
-          body: formData
-        });
+            const formData = new FormData(form);
 
-        if (response.ok && mensagemSucesso) {
-          mensagemSucesso.style.display = "block";
-          form.reset();
-          setTimeout(() => {
-            mensagemSucesso.style.display = "none";
-          }, 6000);
-        }
-      } catch (error) {
-        console.error("Erro ao enviar:", error);
-      }
+            fetch(form.action, {
+              method: "POST",
+              body: formData
+            })
+              .then(response => response.text())
+              .then(() => {
+                if (mensagemSucesso) {
+                  mensagemSucesso.style.display = "block";
+                  form.reset();
+                  setTimeout(() => {
+                    mensagemSucesso.style.display = "none";
+                  }, 6000);
+                }
+              })
+              .catch(error => {
+                console.error("Erro ao enviar:", error);
+              });
+          });
+      });
     });
   }
 });

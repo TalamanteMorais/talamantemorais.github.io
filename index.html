@@ -1,11 +1,3 @@
-<!--
-  INSTRUÇÕES GERAIS DE MANUTENÇÃO E ATUALIZAÇÃO
-  ----------------------------------------------------------------
-  - Este arquivo foi revisado e otimizado com foco em acessibilidade, SEO, performance e segurança.
-  - Estrutura HTML semântica e modular.
-  - Compatível com GitHub Pages + Cloudflare + Google reCAPTCHA.
--->
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -20,13 +12,13 @@
   <meta property="og:image" content="qrcode_talamante_site.png">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
-<meta http-equiv="Content-Security-Policy" content="
-  default-src 'self';
-  script-src 'self' https://www.google.com/recaptcha/ https://www.gstatic.com https://www.googletagmanager.com;
-  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-  font-src https://fonts.gstatic.com;
-  img-src 'self' https: data:;
-">
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self' https://www.google.com/recaptcha/ https://www.gstatic.com https://www.googletagmanager.com;
+    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+    font-src https://fonts.gstatic.com;
+    img-src 'self' https: data:;
+  ">
   <title>Talamante Morais – Advocacia Pública Municipal</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="preload" as="image" href="Arte_Fundo_1.jpg">
@@ -51,6 +43,7 @@
   </nav>
 
   <main>
+    <!-- Carrossel -->
     <section class="carousel-container" role="region" aria-roledescription="carousel">
       <button class="carousel-btn prev-btn" aria-label="Slide anterior">‹</button>
       <button class="carousel-btn next-btn" aria-label="Próximo slide">›</button>
@@ -66,6 +59,7 @@
       </div>
     </section>
 
+    <!-- Sobre -->
     <section id="sobre">
       <h2>Sobre o Escritório</h2>
       <p><strong>Missão:</strong> Fortalecer a gestão pública com assessoria técnica responsável.</p>
@@ -73,6 +67,7 @@
       <p><strong>Valores:</strong> Ética, Transparência, Técnica, Comprometimento e Responsabilidade Social.</p>
     </section>
 
+    <!-- Serviços -->
     <section id="servicos">
       <h2>Nossos Serviços</h2>
       <div class="services-grid">
@@ -102,6 +97,7 @@
       </div>
     </section>
 
+    <!-- Artigos -->
     <section id="artigos">
       <h2>Matérias Jurídicas</h2>
       <p>Publicações, vídeos e decisões organizadas pelo escritório em temas relevantes do Direito Público e Administrativo.</p>
@@ -112,14 +108,16 @@
       </div>
     </section>
 
+    <!-- Currículo -->
     <section id="curriculo">
       <h2>Currículo Profissional</h2>
       <p>Conheça a trajetória, formação e experiências jurídicas do advogado Talamante Morais.</p>
       <div style="margin-top: 20px; text-align: center;">
-<a class="main-btn" href="http://lattes.cnpq.br/1142865105467699" target="_blank" rel="noopener noreferrer">🔗 Currículo Lattes</a>
+        <a class="main-btn" href="http://lattes.cnpq.br/1142865105467699" target="_blank" rel="noopener noreferrer">🔗 Currículo Lattes</a>
       </div>
     </section>
 
+    <!-- Contato -->
     <section id="contato">
       <h2>Contato</h2>
       <div id="mensagem-sucesso" style="display: none; background: #dff0d8; color: #3c763d; padding: 15px; border-radius: 5px; margin-bottom: 20px;">
@@ -137,6 +135,7 @@
 
         <input type="text" name="honeypot" style="display:none">
         <input type="hidden" name="token" id="recaptcha-token">
+
         <button type="submit" class="main-btn">Enviar</button>
       </form>
 
