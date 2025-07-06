@@ -1,14 +1,3 @@
-<!--
-  INSTRUÇÕES GERAIS DE MANUTENÇÃO E ATUALIZAÇÃO
-  ----------------------------------------------------------------
-  - Para editar informações, procure por blocos de comentários.
-  - Não altere classes ou estruturas, apenas os textos, links e arquivos.
-  - Para incluir novo serviço, artigo, experiência ou publicação,
-    copie o bloco correspondente conforme indicado em cada seção.
-  - O rodapé já tem o ano atualizado automaticamente; não edite manualmente.
-  - Contatos e links importantes estão centralizados no topo do arquivo.
--->
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -18,172 +7,101 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https: data:;">
   <title>Talamante Morais – Advocacia Pública Municipal</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="main.css"> <!-- Link para o arquivo CSS externo -->
-  <!-- Google tag (gtag.js) e demais scripts originais mantidos (se houver) -->
+  <link rel="stylesheet" href="main.css">
 </head>
+
 <body>
+  <header id="inicio">
+    <h1>Talamante Morais</h1>
+    <p>Advocacia Pública Municipal</p>
+    <nav role="navigation" aria-label="Menu principal">
+      <a href="#inicio">Início</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#artigos">Publicações</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
 
-<!--
-  DADOS DE CONTATO E LINKS PRINCIPAIS (EDITE AQUI)
-  ----------------------------------------------------------------
-  Email: talamantemorais@gmail.com
-  WhatsApp: (62) 99631-8340
-  Instagram: https://www.instagram.com/talamantemorais/
-  Facebook: https://www.facebook.com/talamante.morais.100
-  LinkedIn: https://www.linkedin.com/in/talamante-morais-a51535221/
-  YouTube: https://www.youtube.com/@TalamanteMorais
-  QR Code: qrcode_talamante_site.png
-  Currículo: curriculo_talamante.pdf
-  Artigo Técnico: docs/artigo_implementacao_local.pdf
-  Último Vídeo (YouTube): https://www.youtube.com/embed/EXEMPLO_VIDEO
--->
-
-<header>
-  <h1>Talamante Morais</h1>
-  <p>Advocacia Pública Municipal</p>
-</header>
-<nav>
-  <a href="#inicio">Início</a>
-  <a href="#sobre">Sobre</a>
-  <a href="#servicos">Serviços</a>
-  <a href="#publicacoes">Publicações</a>
-  <a href="#artigos">Artigos</a>
-  <a href="#contato">Contato</a>
-</nav>
-<main>
-<section id="inicio">
-  <div style="border: 1px solid #ddd; background-color: #f9f9f9; padding: 16px; border-radius: 8px; margin-bottom: 20px;">
-    <strong>Nota Oficial:</strong><br>
-    Este é o <strong>site institucional oficial</strong> do escritório <strong>Talamante Morais – Advocacia Pública Municipal</strong>.<br>
-    O conteúdo está em fase inicial de implantação. Algumas seções, como <em>vídeos, artigos técnicos e links complementares</em>, estão sendo gradualmente inseridas.<br>
-    Os dados de contato informados são oficiais e plenamente funcionais.<br>
-    Agradecemos sua compreensão e permanecemos à disposição.
-  </div>
-
-  <h2>Seja Bem-vindo ao Escritório Talamante Morais</h2>
-  <p>
-    Somos uma referência em Advocacia Pública Municipal, Direito Privado e capacitação profissional. Nosso compromisso é unir experiência, ética e técnica para oferecer assessoria jurídica e treinamentos de excelência a clientes públicos e privados.
-  </p>
-</section>
-
-<section id="sobre">
-  <h2>Sobre o Escritório</h2>
-  <p><strong>Missão:</strong> Fortalecer a gestão pública com assessoria técnica responsável.</p>
-  <p><strong>Visão:</strong> Ser referência em Direito Administrativo Municipal.</p>
-  <p><strong>Valores:</strong> Ética, Transparência, Técnica e Comprometimento.</p>
-</section>
-
-<section id="servicos">
-  <h2>Nossos Serviços</h2>
-  <!-- INÍCIO DOS SERVIÇOS -->
-  <div class="services-grid">
-    <!-- Para adicionar novo serviço, copie o bloco abaixo e edite os textos e links -->
-    <div class="service-card">
-      <h3 class="service-title">Direito Público</h3>
-      <div class="service-desc">
-        Promovemos o fortalecimento da gestão pública municipal por meio de assessoria jurídica altamente especializada. Atuamos em todas as etapas de Licitações e Contratos Administrativos (Lei nº 14.133/2021), consultoria legislativa, emissão de pareceres técnicos e implementação de práticas de compliance.
+  <!-- Carrossel rotativo com 3 imagens -->
+  <section class="carousel-container" aria-roledescription="carousel">
+    <div class="carousel-wrapper">
+      <div class="carousel-track">
+        <div class="carousel-item">
+          <img src="img_credenciamento.jpg" alt="Imagem 1 - Credenciamento">
+        </div>
+        <div class="carousel-item">
+          <img src="img_evento.jpg" alt="Imagem 2 - Evento Jurídico">
+        </div>
+        <div class="carousel-item">
+          <img src="img_parceria.jpg" alt="Imagem 3 - Parceria Institucional">
+        </div>
       </div>
-      <a class="cta-btn" href="#direito-publico">Saiba Mais</a>
+      <button class="carousel-btn prev-btn" aria-label="Slide anterior">&#10094;</button>
+      <button class="carousel-btn next-btn" aria-label="Próximo slide">&#10095;</button>
     </div>
-    <!-- EXEMPLO DE BLOCO DE SERVIÇO (COPIE PARA NOVOS SERVIÇOS) -->
-    <!--
-    <div class="service-card">
-      <h3 class="service-title">Novo Serviço</h3>
-      <div class="service-desc">
-        Descrição detalhada do novo serviço.
+  </section>
+
+  <!-- Seção Sobre o Escritório -->
+  <section id="sobre">
+    <h2>Sobre o Escritório</h2>
+    <p><strong>Missão:</strong> Fortalecer a gestão pública com assessoria técnica jurídica de excelência.</p>
+    <p><strong>Visão:</strong> Ser referência nacional em Direito Administrativo Municipal.</p>
+    <p><strong>Valores:</strong> Ética, Comprometimento, Transparência e Responsabilidade Pública.</p>
+  </section>
+
+  <!-- Nossos Serviços -->
+  <section id="servicos">
+    <h2>Nossos Serviços</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <h3 class="service-title">Direito Público</h3>
+        <div class="service-desc">
+          Atuação em Licitações e Contratos (Lei 14.133/2021), consultoria legislativa, pareceres jurídicos e compliance público.
+        </div>
+        <a class="cta-btn" href="#">Saiba Mais</a>
       </div>
-      <a class="cta-btn" href="novo-servico.html">Acessar</a>
-    </div>
-    -->
-    <div class="service-card">
-      <h3 class="service-title">Direito Privado</h3>
-      <div class="service-desc">
-        Oferecemos assessoria jurídica completa para atender às necessidades de clientes individuais e corporativos, com enfoque em consultoria contratual, direito empresarial, mediação e arbitragem, além de proteção de dados conforme a LGPD.
+      <div class="service-card">
+        <h3 class="service-title">Direito Privado</h3>
+        <div class="service-desc">
+          Consultoria contratual, mediação, arbitragem, empresarial e proteção de dados (LGPD).
+        </div>
+        <a class="cta-btn" href="#">Saiba Mais</a>
       </div>
-      <a class="cta-btn" href="#familia">Saiba Mais</a>
-    </div>
-    <div class="service-card">
-      <h3 class="service-title">Cursos e Treinamentos</h3>
-      <div class="service-desc">
-        Desenvolvemos programas de capacitação profissional para gestores públicos e privados, focados em promover habilidades técnicas e de liderança para enfrentar os desafios contemporâneos.
+      <div class="service-card">
+        <h3 class="service-title">Cursos e Treinamentos</h3>
+        <div class="service-desc">
+          Capacitação jurídica e técnica para servidores, gestores e parlamentos municipais.
+        </div>
+        <a class="cta-btn" href="#">Saiba Mais</a>
       </div>
-      <a class="cta-btn" href="#cursos-treinamentos">Saiba Mais</a>
     </div>
-  </div>
-  <!-- FIM DOS SERVIÇOS -->
-</section>
-<section id="artigos">
-  <h2>Matérias Jurídicas</h2>
-  <p>
-    Nesta seção estão disponíveis materiais organizados pelo escritório, incluindo publicações doutrinárias, vídeos e decisões jurídicas de interesse institucional.
-  </p>
-  <div class="btn-group">
-    <a class="main-btn" href="https://drive.google.com/drive/folders/1aD5HiPgSbpgfxmNlpV_T0AwpriohELGF" target="_blank" aria-label="Acessar Publicações">
-      📁 Acessar Publicações
-    </a>
-    <a class="main-btn" href="https://drive.google.com/drive/folders/1uI6S_jfsF_iIAZY_jZpc5BX6oDrrRAVn" target="_blank" aria-label="Acessar Momentos Públicos">
-      🎥 Acessar Momentos Públicos
-    </a>
-    <a class="main-btn" href="https://drive.google.com/drive/folders/1ehXtes-FmIIE4JehFvbDKu6YejVkcm1W" target="_blank" aria-label="Acessar Decisões e Jurisprudência">
-      ⚖️ Acessar Decisões & Jurisprudência
-    </a>
-  </div>
-</section>
+  </section>
 
-<section id="curriculo" class="container">
-  <h2>Currículo Profissional</h2>
-  <p>Conheça a trajetória, titulação e áreas de atuação do advogado responsável pelo escritório.</p>
-  <div style="margin-top: 20px; text-align: center;">
-    <a href="curriculo_talamante.pdf" target="_blank" class="main-btn">📄 Baixar Currículo</a>
-  </div>
-</section>
+  <!-- Matérias Jurídicas -->
+  <section id="artigos">
+    <h2>Matérias Jurídicas</h2>
+    <p>Conteúdo técnico, artigos e materiais atualizados.</p>
+  </section>
 
-<section id="contato" class="container">
-  <h2>Contato</h2>
-  <!-- DADOS DE CONTATO NO FORMULÁRIO (EDITE AQUI APENAS OS TEXTOS E LINKS) -->
-  <div id="mensagem-sucesso" style="display: none; background-color: #dff0d8; color: #3c763d; padding: 15px; border-radius: 5px; margin-bottom: 20px;">
-    ✅ Mensagem enviada com sucesso. Obrigado pelo contato!
-  </div>
+  <!-- Currículo Profissional -->
+  <section id="curriculo">
+    <h2>Currículo Profissional</h2>
+    <p>Conheça a trajetória, formação e experiências do advogado Talamante Morais.</p>
+    <a class="main-btn" href="http://lattes.cnpq.br/1142865105467699" target="_blank" rel="noopener noreferrer">🔗 Currículo Lattes</a>
+  </section>
 
-<form id="contato-form" action="https://script.google.com/macros/s/AKfycbxFFSraYqDxhOCq0i_ZtT67cutziLPwkNG1u6bqpN_UnxxqOq8RrxKwJS3kuuKibQd22g/exec" method="POST">
-  <input type="hidden" name="_next" value="https://talamante-adv.com.br/?sucesso=true">
+  <!-- Contato -->
+  <section id="contato">
+    <h2>Contato</h2>
+    <p>Email: talamante.contato@gmail.com</p>
+    <p>WhatsApp: (62) 99631-8340</p>
+  </section>
 
-  <label for="nome">Nome completo</label>
-  <input type="text" id="nome" name="nome" required aria-label="Nome completo">
+  <footer>
+    <p>&copy; <span id="anoAtual"></span> Talamante Morais. Todos os direitos reservados.</p>
+  </footer>
 
-  <label for="email">E-mail</label>
-  <input type="email" id="email" name="email" required aria-label="E-mail">
-
-  <label for="mensagem">Mensagem</label>
-  <textarea id="mensagem" name="mensagem" required aria-label="Mensagem" rows="5"></textarea>
-
-  <input type="text" name="honeypot" style="display:none">
-  <input type="hidden" name="token" id="recaptcha-token">
-
-  <button type="submit" class="main-btn">Enviar</button>
-</form>
-
-  <p><strong>Email:</strong> talamantemorais@gmail.com</p>
-  <p><strong>WhatsApp:</strong> (62) 99631-8340</p>
-  <ul>
-    <li><a href="https://www.instagram.com/talamantemorais/" rel="noopener noreferrer">Instagram</a></li>
-    <li><a href="https://www.facebook.com/talamante.morais.100" rel="noopener noreferrer">Facebook</a></li>
-    <li><a href="https://www.linkedin.com/in/talamante-morais-a51535221/" rel="noopener noreferrer">LinkedIn</a></li>
-    <li><a href="https://www.youtube.com/@TalamanteMorais" rel="noopener noreferrer">YouTube</a></li>
-  </ul>
-  <div class="qrcode-container">
-    <h3>Acesso Rápido ao Site</h3>
-    <img src="qrcode_talamante_site.png" alt="QR Code para o site">
-  </div>
-</section>
-</main>
-<footer>
-  <!--
-    INSTRUÇÃO PARA O RODAPÉ:
-    ----------------------------------------------------------------
-    O ano do rodapé é atualizado automaticamente via JavaScript, não altere manualmente.
-  -->
-  &copy; <span id="anoAtual"></span> Talamante Morais – Todos os direitos reservados.
-</footer>
-<a class="whatsapp-button" href="https://wa.me/556296318340" rel="noopener noreferrer" aria-label="Abrir WhatsApp para contato">WhatsApp</a>
-
+  <script src="scripts.js"></script>
+</body>
+</html>
