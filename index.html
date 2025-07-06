@@ -18,20 +18,15 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https: data:;">
   <title>Talamante Morais – Advocacia Pública Municipal</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="main.css"> <!-- Link para o arquivo CSS externo -->
+  <link rel="stylesheet" href="main.css"> <!-- Link para o arquivo CSS externo -->
   <!-- Google tag (gtag.js) e demais scripts originais mantidos (se houver) -->
-<!-- INÍCIO: Script do reCAPTCHA v3 -->
-<script src="https://www.google.com/recaptcha/api.js?render=6LdEyWYrAAAAALdfXa6R6BprCQbpPW7KxuySJr43"></script>
-
-<!-- FIM: Script do reCAPTCHA v3 -->
-
 </head>
 <body>
 
 <!--
   DADOS DE CONTATO E LINKS PRINCIPAIS (EDITE AQUI)
   ----------------------------------------------------------------
-  Email: talamante.contato@gmail.com
+  Email: talamantemorais@gmail.com
   WhatsApp: (62) 99631-8340
   Instagram: https://www.instagram.com/talamantemorais/
   Facebook: https://www.facebook.com/talamante.morais.100
@@ -51,36 +46,26 @@
   <a href="#inicio">Início</a>
   <a href="#sobre">Sobre</a>
   <a href="#servicos">Serviços</a>
-  <a href="#artigos">Publicações</a>
-
-<a href="#contato">Contato</a>
+  <a href="#publicacoes">Publicações</a>
+  <a href="#artigos">Artigos</a>
+  <a href="#contato">Contato</a>
 </nav>
 <main>
-<!-- INÍCIO: CARROSSEL TEMÁTICO AUTOMÁTICO -->
-<section class="carousel-container">
-  <div class="carousel-wrapper" style="overflow: hidden; width: 100%;">
-    <div class="carousel-track">
-      <div class="carousel-item">
-        <div class="destaque-card" style="background: url('img_credenciamento.jpg') center/cover no-repeat;">
-          Credenciamento
-        </div>
-      </div>
-      <div class="carousel-item">
-        <div class="destaque-card" style="background: url('img_contratacao.jpg') center/cover no-repeat;">
-          Contratação Direta
-        </div>
-      </div>
-      <div class="carousel-item">
-        <div class="destaque-card" style="background: url('img_contratos.jpg') center/cover no-repeat;">
-          Contratos Administrativos
-        </div>
-      </div>
-    </div>
+<section id="inicio">
+  <div style="border: 1px solid #ddd; background-color: #f9f9f9; padding: 16px; border-radius: 8px; margin-bottom: 20px;">
+    <strong>Nota Oficial:</strong><br>
+    Este é o <strong>site institucional oficial</strong> do escritório <strong>Talamante Morais – Advocacia Pública Municipal</strong>.<br>
+    O conteúdo está em fase inicial de implantação. Algumas seções, como <em>vídeos, artigos técnicos e links complementares</em>, estão sendo gradualmente inseridas.<br>
+    Os dados de contato informados são oficiais e plenamente funcionais.<br>
+    Agradecemos sua compreensão e permanecemos à disposição.
   </div>
-</section>
-<!-- FIM: CARROSSEL TEMÁTICO AUTOMÁTICO -->
 
-<!-- INÍCIO: CONTAINERS TEMÁTICOS VISUAIS -->
+  <h2>Seja Bem-vindo ao Escritório Talamante Morais</h2>
+  <p>
+    Somos uma referência em Advocacia Pública Municipal, Direito Privado e capacitação profissional. Nosso compromisso é unir experiência, ética e técnica para oferecer assessoria jurídica e treinamentos de excelência a clientes públicos e privados.
+  </p>
+</section>
+
 <section id="sobre">
   <h2>Sobre o Escritório</h2>
   <p><strong>Missão:</strong> Fortalecer a gestão pública com assessoria técnica responsável.</p>
@@ -149,19 +134,20 @@
   <h2>Currículo Profissional</h2>
   <p>Conheça a trajetória, titulação e áreas de atuação do advogado responsável pelo escritório.</p>
   <div style="margin-top: 20px; text-align: center;">
-    <a href="https://lattes.cnpq.br/K4253854P2" class="main-btn" target="_blank" rel="noopener noreferrer">🔗 Currículo Lattes</a>
+    <a href="curriculo_talamante.pdf" target="_blank" class="main-btn">📄 Baixar Currículo</a>
   </div>
 </section>
 
 <section id="contato" class="container">
   <h2>Contato</h2>
+  <!-- DADOS DE CONTATO NO FORMULÁRIO (EDITE AQUI APENAS OS TEXTOS E LINKS) -->
+  <div id="mensagem-sucesso" style="display: none; background-color: #dff0d8; color: #3c763d; padding: 15px; border-radius: 5px; margin-bottom: 20px;">
+    ✅ Mensagem enviada com sucesso. Obrigado pelo contato!
+  </div>
 
-<!-- DADOS DE CONTATO NO FORMULÁRIO (EDITE AQUI APENAS OS TEXTOS E LINKS) -->
-<div id="mensagem-sucesso" style="display: none; background-color: #dff0d8; color: #3c763d; padding: 15px; border-radius: 5px; margin-bottom: 20px;">
-  ✅ Mensagem enviada com sucesso. Obrigado pelo contato!
-</div>
+<form id="contato-form" action="https://script.google.com/macros/s/AKfycbxFFSraYqDxhOCq0i_ZtT67cutziLPwkNG1u6bqpN_UnxxqOq8RrxKwJS3kuuKibQd22g/exec" method="POST">
+  <input type="hidden" name="_next" value="https://talamante-adv.com.br/?sucesso=true">
 
-<form id="contato-form" action="https://script.google.com/macros/s/AKfycbx4heLVf0fBtNXHgHEuvE0lLMwA3ynHgfEHNN8Amjk1G6knDx2dGrCXLedP1VBgvwsN/exec" method="POST">
   <label for="nome">Nome completo</label>
   <input type="text" id="nome" name="nome" required aria-label="Nome completo">
 
@@ -177,7 +163,7 @@
   <button type="submit" class="main-btn">Enviar</button>
 </form>
 
-  <p><strong>Email:</strong> talamante.contato@gmail.com</p>
+  <p><strong>Email:</strong> talamantemorais@gmail.com</p>
   <p><strong>WhatsApp:</strong> (62) 99631-8340</p>
   <ul>
     <li><a href="https://www.instagram.com/talamantemorais/" rel="noopener noreferrer">Instagram</a></li>
@@ -201,4 +187,3 @@
 </footer>
 <a class="whatsapp-button" href="https://wa.me/556296318340" rel="noopener noreferrer" aria-label="Abrir WhatsApp para contato">WhatsApp</a>
 
- 
