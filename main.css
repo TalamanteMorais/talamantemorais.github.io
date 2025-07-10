@@ -327,3 +327,7 @@ button[type="submit"]:hover {
   text-align: justify;
 }
 
+/* Inserir aqui ↓ */
+#mensagem-sucesso {
+  display: none;
+}
