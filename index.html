@@ -158,8 +158,7 @@
   <textarea id="mensagem" name="mensagem" required aria-label="Mensagem" rows="5"></textarea>
 
   <input type="text" name="honeypot" style="display:none">
-  <input type="hidden" name="token" id="recaptcha-token">
-
+  <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response">
   <button type="submit" class="main-btn">Enviar</button>
 </form>
 
@@ -186,4 +185,52 @@
   &copy; <span id="anoAtual"></span> Talamante Morais – Todos os direitos reservados.
 </footer>
 <a class="whatsapp-button" href="https://wa.me/556296318340" rel="noopener noreferrer" aria-label="Abrir WhatsApp para contato">WhatsApp</a>
+<script>
+document.getElementById('contato-form').addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  const nome = document.getElementById('nome').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const mensagem = document.getElementById('mensagem').value.trim();
+
+  if (!nome || !email || !mensagem) {
+    alert('Por favor, preencha todos os campos obrigatórios.');
+    return;
+  }
+
+  grecaptcha.ready(function () {
+    grecaptcha.execute('6LdEyWYrAAAAALdfXa6R6BprCQbpPW7KxuySJr43', { action: 'submit' }).then(function (token) {
+      document.getElementById('g-recaptcha-response').value = token;
+
+      const formData = new URLSearchParams();
+      formData.append("nome", nome);
+      formData.append("email", email);
+      formData.append("mensagem", mensagem);
+      formData.append("g-recaptcha-response", token);
+
+      fetch("https://script.google.com/macros/s/AKfycbzNBq6CxcKfqvgLRGQS9rjQKLA6J-ft3upd7GqxKEHJbkUbY283y9nNy_9WnS3AX4l2/exec", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: formData.toString()
+      })
+      .then(response => response.text())
+      .then(data => {
+        if (data === "OK") {
+          document.getElementById('mensagem-sucesso').style.display = 'block';
+          document.getElementById('contato-form').reset();
+        } else {
+          alert("Erro ao enviar: " + data);
+        }
+      })
+      .catch(error => {
+        alert("Erro de conexão: " + error.message);
+      });
+    });
+  });
+});
+</script>
+
+</body>
+</html>
+
 
