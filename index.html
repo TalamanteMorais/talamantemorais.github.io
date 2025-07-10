@@ -8,22 +8,56 @@
   - O rodapé já tem o ano atualizado automaticamente; não edite manualmente.
   - Contatos e links importantes estão centralizados no topo do arquivo.
 -->
-
 <!DOCTYPE html>
 <html lang="pt-BR">
+<!--
+  METADADOS E CONFIGURAÇÕES DO SITE
+  ----------------------------------------------------------------
+  Esta seção contém configurações essenciais para SEO, segurança, visual e fontes.
+  Não remova ou reordene as linhas abaixo sem revisão técnica.
+-->
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Talamante Morais – Advocacia Pública Municipal, oferecendo serviços especializados em Direito Público, Direito Privado e capacitações.">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https: data:;">
-  <title>Talamante Morais – Advocacia Pública Municipal</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="main.css"> <!-- Link para o arquivo CSS externo -->
-  <!-- Google tag (gtag.js) e demais scripts originais mantidos (se houver) -->
+  <meta name="theme-color" content="#1864ab">
+  <!-- SEO -->
+  <meta name="description" content="Talamante Morais – Advocacia Pública Municipal. Especializado em Direito Administrativo, Licitações, Contratos e Capacitação Técnica. Atuação em assessoria jurídica e consultoria estratégica.">
+  <meta name="author" content="Talamante Morais">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.talamante-adv.com.br/">
+
+  <!-- Segurança -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com https://www.google.com https://www.gstatic.com https://script.google.com https://www.recaptcha.net; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https: data:;">
+<!-- Título -->
+<title>Talamante Morais | Advocacia Pública Municipal e Direito Administrativo</title>
+
+<!-- Fontes Google otimizadas -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="main.css"> <!-- Link para o arquivo CSS externo -->
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+<!-- Favicon -->
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
 </head>
 <body>
 
 <!--
+
   DADOS DE CONTATO E LINKS PRINCIPAIS (EDITE AQUI)
   ----------------------------------------------------------------
   Email: talamantemorais@gmail.com
@@ -146,7 +180,7 @@
   <div id="mensagem-sucesso" style="display: none; background-color: #dff0d8; color: #3c763d; padding: 15px; border-radius: 5px; margin-bottom: 20px;">
     ✅ Mensagem enviada com sucesso. Obrigado pelo contato!
   </div>
-<form id="contato-form" action="https://script.google.com/macros/s/AKfycbzGJ1yKQ5tZphIQnMkBG7fBGP8nfzyNSRXwZMQOU93U6kTJ9PJj7nfOoBICIFzK_cuw/exec" method="POST">
+<form id="contato-form" action="https://script.google.com/macros/s/AKfycbzNBq6CxcKfqvgLRGQS9rjQKLA6J-ft3upd7GqxKEHJbkUbY283y9nNy_9WnS3AX4l2/exec" method="POST">
 
   <label for="nome">Nome completo</label>
   <input type="text" id="nome" name="nome" required aria-label="Nome completo">
