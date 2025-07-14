@@ -232,8 +232,19 @@ document.getElementById('contato-form').addEventListener('submit', function (e) 
     return;
   }
 
+  const botao = document.querySelector("#contato-form button[type='submit']");
+  botao.disabled = true;
+  botao.innerText = "Enviando...";
+
   grecaptcha.ready(function () {
     grecaptcha.execute('6LdEyWYrAAAAALdfXa6R6BprCQbpPW7KxuySJr43', { action: 'submit' }).then(function (token) {
+      if (!token || token.trim() === "") {
+        alert("Erro ao validar reCAPTCHA. Atualize a página ou tente novamente.");
+        botao.disabled = false;
+        botao.innerText = "Enviar";
+        return;
+      }
+
       document.getElementById('g-recaptcha-response').value = token;
 
       const formData = new URLSearchParams();
@@ -255,10 +266,19 @@ document.getElementById('contato-form').addEventListener('submit', function (e) 
         } else {
           alert("Erro ao enviar: " + data);
         }
+        botao.disabled = false;
+        botao.innerText = "Enviar";
       })
       .catch(error => {
         alert("Erro de conexão: " + error.message);
+        botao.disabled = false;
+        botao.innerText = "Enviar";
       });
+    }).catch(function (error) {
+      alert("Erro ao carregar o reCAPTCHA.");
+      console.error(error);
+      botao.disabled = false;
+      botao.innerText = "Enviar";
     });
   });
 });
@@ -266,5 +286,3 @@ document.getElementById('contato-form').addEventListener('submit', function (e) 
 
 </body>
 </html>
-
-
