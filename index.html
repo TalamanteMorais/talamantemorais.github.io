@@ -219,7 +219,10 @@
   &copy; <span id="anoAtual"></span> Talamante Morais – Todos os direitos reservados.
 </footer>
 <a class="whatsapp-button" href="https://wa.me/556296318340" rel="noopener noreferrer" aria-label="Abrir WhatsApp para contato">WhatsApp</a>
+
+<!-- reCAPTCHA v3 script -->
 <script src="https://www.recaptcha.net/recaptcha/api.js?render=6LdEyWYrAAAAALdfXa6R6BprCQbpPW7KxuySJr43"></script>
+
 <script>
 document.getElementById('contato-form').addEventListener('submit', function (e) {
   e.preventDefault();
@@ -236,11 +239,10 @@ document.getElementById('contato-form').addEventListener('submit', function (e) 
   const botao = document.querySelector("#contato-form button[type='submit']");
   botao.disabled = true;
   botao.innerText = "Enviando...";
-
-  grecaptcha.ready(function () {
-    grecaptcha.execute('6LdEyWYrAAAAALdfXa6R6BprCQbpPW7KxuySJr43', { action: 'submit' }).then(function (token) {
-      if (!token || token.trim() === "") {
-        alert("Erro ao validar reCAPTCHA. Atualize a página ou tente novamente.");
+grecaptcha.execute('6LdEyWYrAAAAALdfXa6R6BprCQbpPW7KxuySJr43', { action: 'submit' }).then(function (token) {
+  console.log("Token reCAPTCHA:", token); // Teste temporário
+  if (!token || token.trim() === "") {
+    alert("Erro ao validar reCAPTCHA. Atualize a página ou tente novamente.");
         botao.disabled = false;
         botao.innerText = "Enviar";
         return;
