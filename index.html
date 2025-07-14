@@ -221,8 +221,8 @@
 <a class="whatsapp-button" href="https://wa.me/556296318340" rel="noopener noreferrer" aria-label="Abrir WhatsApp para contato">WhatsApp</a>
 
 <!-- reCAPTCHA v3 script -->
-<script src="https://www.recaptcha.net/recaptcha/api.js?render=6LdEyWYrAAAAALdfXa6R6BprCQbpPW7KxuySJr43"></script>
 
+<script src="https://www.recaptcha.net/recaptcha/api.js?render=6LdEyWYrAAAAALdfXa6R6BprCQbpPW7KxuySJr43"></script>
 <script>
 document.getElementById('contato-form').addEventListener('submit', function (e) {
   e.preventDefault();
@@ -239,18 +239,17 @@ document.getElementById('contato-form').addEventListener('submit', function (e) 
   const botao = document.querySelector("#contato-form button[type='submit']");
   botao.disabled = true;
   botao.innerText = "Enviando...";
-grecaptcha.execute('6LdEyWYrAAAAALdfXa6R6BprCQbpPW7KxuySJr43', { action: 'submit' }).then(function (token) {
-  console.log("Token reCAPTCHA:", token); // Teste temporário
-  if (!token || token.trim() === "") {
-    alert("Erro ao validar reCAPTCHA. Atualize a página ou tente novamente.");
+
+  grecaptcha.ready(function () {
+    grecaptcha.execute('6LdEyWYrAAAAALdfXa6R6BprCQbpPW7KxuySJr43', { action: 'submit' }).then(function (token) {
+      if (!token || token.trim() === "") {
+        alert("Erro ao validar reCAPTCHA. Atualize a página ou tente novamente.");
         botao.disabled = false;
         botao.innerText = "Enviar";
         return;
       }
 
-      document.getElementById('g-recaptcha-response').value = token;
-
-      const formData = new URLSearchParams();
+      const formData = new FormData();
       formData.append("nome", nome);
       formData.append("email", email);
       formData.append("mensagem", mensagem);
@@ -258,8 +257,7 @@ grecaptcha.execute('6LdEyWYrAAAAALdfXa6R6BprCQbpPW7KxuySJr43', { action: 'submit
 
       fetch("https://script.google.com/macros/s/AKfycbzNBq6CxcKfqvgLRGQS9rjQKLA6J-ft3upd7GqxKEHJbkUbY283y9nNy_9WnS3AX4l2/exec", {
         method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: formData.toString()
+        body: formData
       })
       .then(response => response.text())
       .then(data => {
@@ -277,15 +275,9 @@ grecaptcha.execute('6LdEyWYrAAAAALdfXa6R6BprCQbpPW7KxuySJr43', { action: 'submit
         botao.disabled = false;
         botao.innerText = "Enviar";
       });
-    }).catch(function (error) {
-      alert("Erro ao carregar o reCAPTCHA.");
-      console.error(error);
-      botao.disabled = false;
-      botao.innerText = "Enviar";
     });
   });
 });
 </script>
-
 </body>
 </html>
