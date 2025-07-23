@@ -26,8 +26,9 @@
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.talamante-adv.com.br/">
 
-  <!-- Segurança -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com https://www.google.com https://www.gstatic.com https://script.google.com https://www.recaptcha.net; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https: data:;">
+<!-- Segurança -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; frame-src https://www.recaptcha.net https://www.google.com; script-src 'self' https://www.googletagmanager.com https://www.google.com https://www.gstatic.com https://script.google.com https://www.recaptcha.net 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src https://fonts.gstatic.com; img-src 'self' https: data:;">
+
 <!-- Título -->
 <title>Talamante Morais | Advocacia Pública Municipal e Direito Administrativo</title>
 
@@ -223,6 +224,19 @@
 
 <!-- reCAPTCHA v3 script -->
 
+
+
+
+
+
+
+
+<!-- reCAPTCHA v3 script -->
+
+
+
+
+<!-- reCAPTCHA v3 script -->
 <script src="https://www.recaptcha.net/recaptcha/api.js?render=6LdEyWYrAAAAALdfXa6R6BprCQbpPW7KxuySJr43"></script>
 <script>
 document.getElementById('contato-form').addEventListener('submit', function (e) {
@@ -249,21 +263,20 @@ document.getElementById('contato-form').addEventListener('submit', function (e) 
         return;
       }
 
-const dados = {
-  nome: nome,
-  email: email,
-  mensagem: mensagem,
-  "g-recaptcha-response": token
-};
+      const dados = {
+        nome: nome,
+        email: email,
+        mensagem: mensagem,
+        "g-recaptcha-response": token
+      };
 
-fetch("https://script.google.com/macros/s/AKfycbzNBq6CxcKfqvgLRGQS9rjQKLA6J-ft3upd7GqxKEHJbkUbY283y9nNy_9WnS3AX4l2/exec", {
-  method: "POST",
-  body: JSON.stringify(dados),
-  headers: {
-    "Content-Type": "application/json"
-  }
-})
-
+      fetch("https://script.google.com/macros/s/AKfycbzNBq6CxcKfqvgLRGQS9rjQKLA6J-ft3upd7GqxKEHJbkUbY283y9nNy_9WnS3AX4l2/exec", {
+        method: "POST",
+        body: JSON.stringify(dados),
+        headers: {
+          "Content-Type": "application/json"
+        }
+      })
       .then(response => response.text())
       .then(data => {
         if (data === "OK") {
