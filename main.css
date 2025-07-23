@@ -330,11 +330,4 @@ button[type="submit"]:hover {
 /* Inserir aqui ↓ */
 #mensagem-sucesso {
   display: none;
-  background-color: #dff0d8;
-  color: #3c763d;
-  padding: 15px;
-  border-radius: 5px;
-  margin-bottom: 20px;
-  font-weight: bold;
-  text-align: center;
 }
