@@ -93,6 +93,11 @@ section {
   font-family: 'Inter', sans-serif;
 }
 
+/* ======================== INFO BOX ======================== */
+.info-box {
+  text-align: justify;
+}
+
 /* ======================== GRID DE SERVIÇOS ======================== */
 .services-grid {
   display: flex;
