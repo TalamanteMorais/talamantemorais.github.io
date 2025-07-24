@@ -23,12 +23,12 @@ document.addEventListener("DOMContentLoaded", function () {
     iniciarCarrossel();
 
     carouselContainer.addEventListener("mouseenter", pausarCarrossel);
-
     carouselContainer.addEventListener("mouseleave", function () {
       iniciarCarrossel(); // reinicia corretamente sem pausar duplamente
     });
   }
 });
+
 // ======================== ENVIO DO FORMULÁRIO COM reCAPTCHA v3 ========================
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("contato-form");
@@ -41,6 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const email = document.getElementById("email").value.trim();
       const mensagem = document.getElementById("mensagem").value.trim();
       const botao = form.querySelector("button[type='submit']");
+      const mensagemSucesso = document.getElementById("mensagem-sucesso");
 
       if (!nome || !email || !mensagem) {
         alert("Por favor, preencha todos os campos obrigatórios.");
@@ -53,35 +54,44 @@ document.addEventListener("DOMContentLoaded", function () {
       grecaptcha.ready(function () {
         grecaptcha.execute('6LdEyWYrAAAAALdfXa6R6BprCQbpPW7KxuySJr43', { action: 'submit' }).then(function (token) {
           if (!token || token.trim() === "") {
-            alert("Erro ao validar reCAPTCHA. Atualize a página ou tente novamente.");
+            alert("Erro ao validar o reCAPTCHA. Atualize a página e tente novamente.");
             botao.disabled = false;
             botao.innerText = "Enviar";
             return;
           }
 
-fetch("https://script.google.com/macros/s/AKfycbzvgpuIDGGkpm6hj4WaV7TNVcIJe6BTbIqfjL2ItxrqW2z80ZwyU0Ik3arvIF6R-6Hg/exec", {
-method: "POST",
-  headers: {
-    "Content-Type": "application/x-www-form-urlencoded"
-  },
-  body: new URLSearchParams({
-    nome: nome,
-    email: email,
-    mensagem: mensagem,
-    "g-recaptcha-response": token
-  })
-})
+          fetch("https://script.google.com/macros/s/AKfycbzvgpuIDGGkpm6hj4WaV7TNVcIJe6BTbIqfjL2ItxrqW2z80ZwyU0Ik3arvIF6R-6Hg/exec", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/x-www-form-urlencoded"
+            },
+            body: new URLSearchParams({
+              nome: nome,
+              email: email,
+              mensagem: mensagem,
+              "g-recaptcha-response": token
+            })
+          })
           .then(response => response.text())
           .then(data => {
             if (data.includes("OK")) {
-              alert("Mensagem enviada com sucesso!");
+              if (mensagemSucesso) {
+                mensagemSucesso.style.display = "block";
+                mensagemSucesso.innerText = "✅ Mensagem enviada com sucesso!";
+                setTimeout(() => {
+                  mensagemSucesso.style.display = "none";
+                  mensagemSucesso.innerText = "";
+                }, 5000);
+              } else {
+                alert("✅ Mensagem enviada com sucesso!");
+              }
               form.reset();
             } else {
-              alert(data);
+              alert("⚠️ Erro ao enviar: " + data);
             }
           })
           .catch(error => {
-            alert("Erro ao enviar. Tente novamente.");
+            alert("❌ Ocorreu um erro. Tente novamente.");
             console.error("Erro:", error);
           })
           .finally(() => {
@@ -93,4 +103,3 @@ method: "POST",
     });
   }
 });
-

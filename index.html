@@ -37,7 +37,9 @@
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="main.css"> <!-- Link para o arquivo CSS externo -->
+<!-- Fontes refinadas: Inter (texto), Merriweather (títulos) -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="main.css">
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=SEU_ID_DO_GOOGLE_ANALYTICS"></script>
@@ -71,12 +73,11 @@
   Artigo Técnico: docs/artigo_implementacao_local.pdf
   Último Vídeo (YouTube): https://www.youtube.com/embed/EXEMPLO_VIDEO
 -->
-
-<header>
+<header class="section-header">
   <h1>Talamante Morais</h1>
   <p>Advocacia Pública Municipal</p>
 </header>
-<nav>
+<nav class="main-nav">
   <a href="#inicio">Início</a>
   <a href="#sobre">Sobre</a>
   <a href="#servicos">Serviços</a>
@@ -85,7 +86,7 @@
 </nav>
 <main>
 <section id="inicio">
-  <div style="border: 1px solid #ddd; background-color: #f9f9f9; padding: 16px; border-radius: 8px; margin-bottom: 20px;">
+  <div class="info-box">
     <strong>Nota Oficial:</strong><br>
     Este é o <strong>site institucional oficial</strong> do escritório <strong>Talamante Morais – Advocacia Pública Municipal</strong>.<br>
     O conteúdo está em fase inicial de implantação. Algumas seções, como <em>vídeos, artigos técnicos e links complementares</em>, estão sendo gradualmente inseridas.<br>
@@ -94,19 +95,19 @@
   </div>
 
   <h2>Seja Bem-vindo ao Escritório Talamante Morais</h2>
-<p style="text-align: justify;">
-  Somos uma referência em Advocacia Pública Municipal, Direito Privado e capacitação profissional. Nosso compromisso é unir experiência, ética e técnica para oferecer assessoria jurídica e treinamentos de excelência a clientes públicos e privados.
-</p>
+  <p class="intro-text">
+    Somos uma referência em Advocacia Pública Municipal, Direito Privado e capacitação profissional. Nosso compromisso é unir experiência, ética e técnica para oferecer assessoria jurídica e treinamentos de excelência a clientes públicos e privados.
+  </p>
 </section>
 
 <section id="sobre">
   <h2>Sobre o Escritório</h2>
-<p style="text-align: justify;"><strong>Missão:</strong> Fortalecer a gestão pública com assessoria técnica responsável.</p>
-<p style="text-align: justify;"><strong>Visão:</strong> Ser referência em Direito Administrativo Municipal.</p>
-<p style="text-align: justify;"><strong>Valores:</strong> Ética, Transparência, Técnica e Comprometimento.</p>
-
+  <ul class="valores-lista">
+    <li><strong>Missão:</strong> Fortalecer a gestão pública com assessoria técnica responsável.</li>
+    <li><strong>Visão:</strong> Ser referência em Direito Administrativo Municipal.</li>
+    <li><strong>Valores:</strong> Ética, Transparência, Técnica e Comprometimento.</li>
+  </ul>
 </section>
-
 <section id="servicos">
   <h2>Nossos Serviços</h2>
   <!-- INÍCIO DOS SERVIÇOS -->
