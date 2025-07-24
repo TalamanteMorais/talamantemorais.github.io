@@ -37,18 +37,16 @@ body {
   line-height: 1.7;
   padding-bottom: 60px;
 }
-
 /* ======================== CABEÇALHO ======================== */
 header {
-  background-image: url('Arte_Fundo_1.jpg');
-  background-size: cover;
+  background-image: url('../img/Arte_Fundo_1.jpg'); /* Caminho da imagem corrigido */
+  background-size: cover; /* Esta e as demais propriedades devem estar aqui dentro */
   background-position: center;
   background-repeat: no-repeat;
   padding: 2rem 0 1rem 0;
   text-align: center;
   color: #ffffff;
 }
-
 header h1 {
   font-size: 2.2rem;
   margin-bottom: .5rem;
