@@ -18,14 +18,79 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   const carouselContainer = document.querySelector(".carousel-container");
+
   if (carouselContainer && track && items.length > 0) {
     iniciarCarrossel();
 
     carouselContainer.addEventListener("mouseenter", pausarCarrossel);
 
-    carouselContainer.addEventListener("mouseleave", () => {
-      pausarCarrossel();
-      iniciarCarrossel(); // reinicia corretamente
+    carouselContainer.addEventListener("mouseleave", function () {
+      iniciarCarrossel(); // reinicia corretamente sem pausar duplamente
     });
   }
 });
+// ======================== ENVIO DO FORMULÁRIO COM reCAPTCHA v3 ========================
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("contato-form");
+
+  if (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const nome = document.getElementById("nome").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const mensagem = document.getElementById("mensagem").value.trim();
+      const botao = form.querySelector("button[type='submit']");
+
+      if (!nome || !email || !mensagem) {
+        alert("Por favor, preencha todos os campos obrigatórios.");
+        return;
+      }
+
+      botao.disabled = true;
+      botao.innerText = "Enviando...";
+
+      grecaptcha.ready(function () {
+        grecaptcha.execute('6LdEyWYrAAAAALdfXa6R6BprCQbpPW7KxuySJr43', { action: 'submit' }).then(function (token) {
+          if (!token || token.trim() === "") {
+            alert("Erro ao validar reCAPTCHA. Atualize a página ou tente novamente.");
+            botao.disabled = false;
+            botao.innerText = "Enviar";
+            return;
+          }
+
+          fetch("https://script.google.com/macros/s/AKfycbzNBq6CxcKfqvgLRGQS9rjQKLA6J-ft3upd7GqxKEHJbkUbY283y9nNy_9WnS3AX4l2/exec", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+              nome: nome,
+              email: email,
+              mensagem: mensagem,
+              "g-recaptcha-response": token
+            })
+          })
+          .then(response => response.text())
+          .then(data => {
+            if (data.includes("OK")) {
+              alert("Mensagem enviada com sucesso!");
+              form.reset();
+            } else {
+              alert(data);
+            }
+          })
+          .catch(error => {
+            alert("Erro ao enviar. Tente novamente.");
+            console.error("Erro:", error);
+          })
+          .finally(() => {
+            botao.disabled = false;
+            botao.innerText = "Enviar";
+          });
+        });
+      });
+    });
+  }
+});
+
