@@ -244,8 +244,25 @@ ul li {
 }
 .btn-group a:hover {
   background-color: #12568c;
-  transform: translate
+  transform: translateY(-2px);
 }
+/* Ajuste visual específico para os botões da seção Matérias Jurídicas */
+#artigos .btn-group {
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 14px;
+  overflow-x: auto;
+}
+
+#artigos .btn-group a {
+  flex: 1;
+  min-width: 220px;
+  text-align: center;
+  font-size: 0.96rem;
+  white-space: nowrap;
+}
+
 pornto 
 /* ======================== RODAPÉ ======================== */
 
