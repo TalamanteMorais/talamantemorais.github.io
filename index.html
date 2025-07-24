@@ -221,66 +221,6 @@
 </footer>
 <a class="whatsapp-button" href="https://wa.me/556296318340" rel="noopener noreferrer" aria-label="Abrir WhatsApp para contato">WhatsApp</a>
 <!-- reCAPTCHA v3 script -->
-<script src="https://www.recaptcha.net/recaptcha/api.js?render=6LdEyWYrAAAAALdfXa6R6BprCQbpPW7KxuySJr43"></script>
-<script>
-document.getElementById('contato-form').addEventListener('submit', function (e) {
-  e.preventDefault();
-  const nome = document.getElementById('nome').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const mensagem = document.getElementById('mensagem').value.trim();
 
-  if (!nome || !email || !mensagem) {
-    alert('Por favor, preencha todos os campos obrigatórios.');
-    return;
-  }
-
-  const botao = document.querySelector("#contato-form button[type='submit']");
-  botao.disabled = true;
-  botao.innerText = "Enviando...";
-
-  grecaptcha.ready(function () {
-    grecaptcha.execute('6LdEyWYrAAAAALdfXa6R6BprCQbpPW7KxuySJr43', { action: 'submit' }).then(function (token) {
-      if (!token || token.trim() === "") {
-        alert("Erro ao validar reCAPTCHA. Atualize a página ou tente novamente.");
-        botao.disabled = false;
-        botao.innerText = "Enviar";
-        return;
-      }
-
-      const dados = {
-        nome: nome,
-        email: email,
-        mensagem: mensagem,
-        "g-recaptcha-response": token
-      };
-
-fetch("https://script.google.com/macros/s/AKfycbzygG5iP1WOw0nUbgabm0tPy_az1ddjG8GLsAcxW12okAETAx3hXNUQWSopEKu1edU/exec", {
-
-        method: "POST",
-        body: JSON.stringify(dados),
-        headers: {
-          "Content-Type": "application/json"
-        }
-      })
-      .then(response => response.text())
-      .then(data => {
-        if (data === "OK") {
-          document.getElementById('mensagem-sucesso').style.display = 'block';
-          document.getElementById('contato-form').reset();
-        } else {
-          alert("Erro ao enviar: " + data);
-        }
-        botao.disabled = false;
-        botao.innerText = "Enviar";
-      })
-      .catch(error => {
-        alert("Erro de conexão: " + error.message);
-        botao.disabled = false;
-        botao.innerText = "Enviar";
-      });
-    });
-  });
-});
-</script>
 </body>
 </html>
