@@ -58,9 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
             botao.innerText = "Enviar";
             return;
           }
-
-fetch("https://script.google.com/macros/s/AKfycbzygG5iP1WOw0nUbgabm0tPy_az1ddjG8GLsAcxW12okAETAx3hXNUQWSopEKu1edU/exec", {
-
+fetch("https://script.google.com/macros/s/AKfycbzvgpuIDGGkpm6hj4WaV7TNVcIJe6BTbIqfjL2ItxrqW2z80ZwyU0Ik3arvIF6R-6Hg/exec", {
   method: "POST",
   headers: {
     "Content-Type": "application/x-www-form-urlencoded"
