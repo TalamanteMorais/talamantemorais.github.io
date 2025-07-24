@@ -248,13 +248,12 @@ ul li {
 }
 /* Ajuste visual específico para os botões da seção Matérias Jurídicas */
 #artigos .btn-group {
-  flex-wrap: nowrap;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
   flex-direction: row;
-  gap: 14px;
-  overflow-x: auto;
+  gap: 12px;
+  overflow: visible;
 }
-
 #artigos .btn-group a {
   flex: 1;
   min-width: 220px;
