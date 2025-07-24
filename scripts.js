@@ -59,18 +59,19 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
           }
 
-          fetch("https://script.google.com/macros/s/AKfycbzNBq6CxcKfqvgLRGQS9rjQKLA6J-ft3upd7GqxKEHJbkUbY283y9nNy_9WnS3AX4l2/exec", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-              nome: nome,
-              email: email,
-              mensagem: mensagem,
-              "g-recaptcha-response": token
-            })
-          })
+fetch("https://script.google.com/macros/s/AKfycbzygG5iP1WOw0nUbgabm0tPy_az1ddjG8GLsAcxW12okAETAx3hXNUQWSopEKu1edU/exec", {
+
+  method: "POST",
+  headers: {
+    "Content-Type": "application/x-www-form-urlencoded"
+  },
+  body: new URLSearchParams({
+    nome: nome,
+    email: email,
+    mensagem: mensagem,
+    "g-recaptcha-response": token
+  })
+})
           .then(response => response.text())
           .then(data => {
             if (data.includes("OK")) {

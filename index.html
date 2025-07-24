@@ -182,8 +182,7 @@
     ✅ Mensagem enviada com sucesso. Obrigado pelo contato!
   </div>
 
-<form id="contato-form" action="https://script.google.com/macros/s/AKfycbzNBq6CxcKfqvgLRGQS9rjQKLA6J-ft3upd7GqxKEHJbkUbY283y9nNy_9WnS3AX4l2/exec" method="POST">
-
+<form id="contato-form" action="https://script.google.com/macros/s/AKfycbzygG5iP1WOw0nUbgabm0tPy_az1ddjG8GLsAcxW12okAETAx3hXNUQWSopEKu1edU/exec" method="POST">
   <label for="nome">Nome completo</label>
   <input type="text" id="nome" name="nome" placeholder="Seu nome" required aria-label="Nome completo">
 
@@ -254,8 +253,8 @@ document.getElementById('contato-form').addEventListener('submit', function (e) 
         mensagem: mensagem,
         "g-recaptcha-response": token
       };
+      fetch("https://script.google.com/macros/s/AKfycbzygG5iP1WOw0nUbgabm0tPy_az1ddjG8GLsAcxW12okAETAx3hXNUQWSopEKu1edU/exec", {
 
-      fetch("https://script.google.com/macros/s/AKfycbzNBq6CxcKfqvgLRGQS9rjQKLA6J-ft3upd7GqxKEHJbkUbY283y9nNy_9WnS3AX4l2/exec", {
         method: "POST",
         body: JSON.stringify(dados),
         headers: {
