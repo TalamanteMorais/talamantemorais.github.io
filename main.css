@@ -38,11 +38,10 @@ body {
   margin: 0;
   padding: 0 0 60px 0;
 }
-
 /* ======================== CABEÇALHO ======================== */
 header {
-  background-image: url('../img/Arte_Fundo_1.jpg'); /* Caminho da imagem corrigido */
-  background-size: cover; /* Esta e as demais propriedades devem estar aqui dentro */
+  background-image: url('img/Arte_Fundo_1.jpg');
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   padding: 2rem 0 1rem 0;
@@ -103,7 +102,7 @@ section {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  justify-content: space-between;
+justify-content: space-between;
   width: 100%;
   padding: 0 1rem;
 }
@@ -261,8 +260,6 @@ ul li {
   font-size: 0.96rem;
   white-space: nowrap;
 }
-
-pornto 
 /* ======================== RODAPÉ ======================== */
 
 footer {
@@ -420,4 +417,45 @@ button[type="submit"]:hover {
   font-weight: bold;
   text-align: center;
 }
+/* ======================== CARROSSEL – FUNDO COM GRADIENTE ======================== */
+.bg-fade {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 1;
+  z-index: 0;
+  transition: opacity 0.6s ease-in-out;
+  border-radius: 16px; /* mantém arredondado como o container */
 
+  /* Gradiente escuro sobre a imagem */
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0.45), 
+    rgba(0, 0, 0, 0.45)
+  ), url('img/card_1.png');
+}
+/* === Carrossel: layout e transição (mínimo necessário) === */
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  margin: 1.2rem 0;
+}
+
+.carousel-track {
+  display: flex;
+  width: 100%;
+  transition: transform 0.6s ease;
+  will-change: transform;
+  position: relative;
+  z-index: 1; /* acima do .bg-fade */
+}
+
+.carousel-item {
+  min-width: 100%;
+  padding: 2rem;
+  color: #fff;
+  position: relative;
+  z-index: 1; /* acima do .bg-fade */
+}
