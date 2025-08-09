@@ -446,6 +446,7 @@ button[type="submit"]:hover {
 .carousel-track {
   display: flex;
   width: 100%;
+  align-items: stretch;          /* mantém os containers verticais preenchendo a linha */
   transition: transform 0.6s ease;
   will-change: transform;
   position: relative;
@@ -453,8 +454,18 @@ button[type="submit"]:hover {
 }
 
 .carousel-item {
+  /* containers verticais, largura exatamente da linha (um por “vista”) */
   min-width: 100%;
-  padding: 2rem;
+  inline-size: 100%;
+
+  /* tamanho proporcional à linha: padding responsivo, não “fixo” */
+  padding-block: 1rem;
+  padding-inline: clamp(1rem, 4vw, 2rem);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
   color: #fff;
   position: relative;
   z-index: 1; /* acima do .bg-fade */
