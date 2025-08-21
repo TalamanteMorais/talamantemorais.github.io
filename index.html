@@ -97,8 +97,8 @@
   </div>
 
   <h2>Seja Bem-vindo ao Escritório Talamante Morais</h2>
-<div class="carousel-container">
-  <div class="carousel-track">
+<div class="carousel-container" role="region" aria-label="Carrossel de destaques" tabindex="0">
+  <div class="carousel-track" id="carousel-track" aria-live="polite">
     <div class="carousel-item">
       <h3>Credenciamento – Lei nº 14.133/2021</h3>
       <p>Quando utilizar o credenciamento? Entenda hipóteses legais e aplicações práticas.</p>
@@ -113,6 +113,11 @@
     </div>
   </div>
 </div>
+<div class="carousel-nav" aria-label="Controles do carrossel">
+  <button type="button" class="carousel-prev" aria-label="Slide anterior" aria-controls="carousel-track">◀</button>
+  <button type="button" class="carousel-next" aria-label="Próximo slide" aria-controls="carousel-track">▶</button>
+</div>
+<div class="carousel-dots" role="tablist" aria-label="Paginação de slides"></div>
   <p class="intro-text">
     Somos uma referência em Advocacia Pública Municipal, Direito Privado e capacitação profissional. Nosso compromisso é unir experiência, ética e técnica para oferecer assessoria jurídica e treinamentos de excelência a clientes públicos e privados.
   </p>
@@ -217,7 +222,7 @@
   </ul>
   <div class="qrcode-container">
     <h3>Acesso Rápido ao Site</h3>
-    <img src="qrcode_talamante_site.png" alt="QR Code para o site">
+<img src="qrcode_talamante_site.png" alt="QR Code para o site" loading="lazy" decoding="async">
   </div>
 </section>
 </main>

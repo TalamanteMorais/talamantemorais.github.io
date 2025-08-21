@@ -1,19 +1,44 @@
 // ======================== SCRIPT GERAL DO SITE ========================
 document.addEventListener("DOMContentLoaded", function () {
-  // ======================== CARROSSEL AUTOMÁTICO TEMÁTICO ========================
+// ======================== CARROSSEL AUTOMÁTICO TEMÁTICO ========================
   const track = document.querySelector(".carousel-track");
   const items = document.querySelectorAll(".carousel-item");
   const carouselContainer = document.querySelector(".carousel-container");
+  const prevBtn = document.querySelector(".carousel-prev");
+  const nextBtn = document.querySelector(".carousel-next");
+  const dotsWrap = document.querySelector(".carousel-dots");
+
   const totalItems = items.length;
   let indexSlide = 0;
   let intervaloSlide;
 
+  function atualizarTransform() {
+    if (!track) return;
+    track.style.transform = `translateX(-${indexSlide * 100}%)`;
+    // Atualiza bullets
+    if (dotsWrap && dotsWrap.children.length === totalItems) {
+      [...dotsWrap.children].forEach((btn, i) => {
+        if (i === indexSlide) btn.setAttribute("aria-current", "true");
+        else btn.removeAttribute("aria-current");
+      });
+    }
+  }
+
+  function goToSlide(n) {
+    if (!totalItems) return;
+    indexSlide = (n + totalItems) % totalItems;
+    atualizarTransform();
+  }
+
+  // Respeita prefers-reduced-motion: sem autoplay
+  const reduzMovimento = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   function iniciarCarrossel() {
     if (!track || totalItems === 0) return;
-    pararCarrossel(); // evita múltiplos intervals
+    pararCarrossel();
+    if (reduzMovimento) return;
     intervaloSlide = setInterval(() => {
-      indexSlide = (indexSlide + 1) % totalItems;
-      track.style.transform = `translateX(-${indexSlide * 100}%)`;
+      goToSlide(indexSlide + 1);
     }, 4000);
   }
 
@@ -24,11 +49,27 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  // Botões Prev/Next
+  if (prevBtn) prevBtn.addEventListener("click", () => goToSlide(indexSlide - 1));
+  if (nextBtn) nextBtn.addEventListener("click", () => goToSlide(indexSlide + 1));
+
+  // Paginação (bullets)
+  if (dotsWrap && totalItems > 1) {
+    dotsWrap.innerHTML = "";
+    for (let i = 0; i < totalItems; i++) {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.setAttribute("aria-label", `Ir para o slide ${i + 1}`);
+      b.setAttribute("aria-controls", "carousel-track");
+      b.addEventListener("click", () => goToSlide(i));
+      dotsWrap.appendChild(b);
+    }
+  }
+
   if (carouselContainer && track && totalItems > 0) {
-    // Respeita prefers-reduced-motion: desliga autoplay se o usuário preferir menos movimento
-    const reduzMovimento = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (!reduzMovimento) iniciarCarrossel();
 
+    // Hover pausa/retoma
     carouselContainer.addEventListener("mouseenter", pararCarrossel);
     carouselContainer.addEventListener("mouseleave", () => {
       if (!reduzMovimento) iniciarCarrossel();
@@ -39,41 +80,29 @@ document.addEventListener("DOMContentLoaded", function () {
       if (document.hidden) pararCarrossel();
       else if (!reduzMovimento) iniciarCarrossel();
     });
-  }
 
-/* ROTAÇÃO DE FUNDO COM FADE — DESATIVADA (sem .bg-fade no HTML) */
-  ;(() => {
-    const bgFades = document.querySelectorAll('.bg-fade');
-    if (!bgFades.length) return;
-
-    const imagens = ['img/card_1.png', 'img/card_2.png', 'img/card_3.png'];
-    let indexFundo = 0;
-
-    // Pré-carrega as imagens para evitar flicker na troca
-    imagens.forEach(src => { const pic = new Image(); pic.src = src; });
-
-    // Define a primeira imagem com gradiente em todos
-    bgFades.forEach(el => {
-      el.style.backgroundImage =
-        `linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)), url('${imagens[0]}')`;
+    // Pausa enquanto o foco estiver dentro do carrossel; retoma ao sair
+    carouselContainer.addEventListener("focusin", pararCarrossel);
+    carouselContainer.addEventListener("focusout", () => {
+      if (!reduzMovimento) iniciarCarrossel();
     });
 
-    setInterval(() => {
-      indexFundo = (indexFundo + 1) % imagens.length;
+    // Navegação por teclado (← →)
+    carouselContainer.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowLeft") {
+        e.preventDefault();
+        goToSlide(indexSlide - 1);
+      } else if (e.key === "ArrowRight") {
+        e.preventDefault();
+        goToSlide(indexSlide + 1);
+      }
+    });
 
-      // fade-out
-      bgFades.forEach(el => { el.style.opacity = 0; });
+    // Estado inicial
+    atualizarTransform();
+  } // fecha if (carouselContainer && track && totalItems > 0)
 
-      setTimeout(() => {
-        // troca imagem + fade-in
-        bgFades.forEach(el => {
-          el.style.backgroundImage =
-            `linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)), url('${imagens[indexFundo]}')`;
-          el.style.opacity = 1;
-        });
-      }, 600); // mantenha igual ao transition do CSS (.bg-fade)
-    }, 4000);
-  })();
+/* (removido: bloco duplicado) */
 
   // ======================== ENVIO DO FORMULÁRIO COM reCAPTCHA v3 ========================
   const form = document.getElementById("contato-form");
@@ -99,9 +128,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
       botao.disabled = true;
       botao.innerText = "Enviando...";
-
       // Guarda para reCAPTCHA ausente
-      if (typeof grecaptcha === "undefined" || !grecaptcha.ready) {
+      if (typeof grecaptcha === "undefined" || typeof grecaptcha.ready !== "function") {
         alert("Erro ao carregar o reCAPTCHA. Atualize a página e tente novamente.");
         botao.disabled = false;
         botao.innerText = "Enviar";
@@ -109,7 +137,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       grecaptcha.ready(function () {
-        grecaptcha.execute('6LdEyWYrAAAAALdfXa6R6BprCQbpPW7KxuySJr43', { action: 'submit' })
+       grecaptcha.execute('6LdEyWYrAAAAALdfXa6R6BprCQbpPW7KxuySJr43', { action: 'submit' })
           .then(function (token) {
             if (!token || token.trim() === "") {
               alert("Erro ao validar o reCAPTCHA. Atualize a página e tente novamente.");
