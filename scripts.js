@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // ======================== ROTAÇÃO DE FUNDO COM FADE ========================
+/* ROTAÇÃO DE FUNDO COM FADE — DESATIVADA (sem .bg-fade no HTML) */
   ;(() => {
     const bgFades = document.querySelectorAll('.bg-fade');
     if (!bgFades.length) return;

@@ -363,24 +363,6 @@ button[type="submit"]:hover {
   text-align: center;
 }
 
-/* ======================== CARROSSEL – FUNDO COM GRADIENTE ======================== */
-.bg-fade {
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  opacity: 1;
-  z-index: 0;
-  transition: opacity 0.6s ease-in-out;
-  border-radius: 16px; /* mantém arredondado como o container */
-  /* Gradiente escuro sobre a imagem melhora contraste do texto */
-  background-image: linear-gradient(
-    rgba(0, 0, 0, 0.45),
-    rgba(0, 0, 0, 0.45)
-  ), url('img/card_1.png');
-}
-
 /* ======================== CARROSSEL (layout e transição) ======================== */
 .carousel-container {
   position: relative;
@@ -388,53 +370,75 @@ button[type="submit"]:hover {
   border-radius: 16px;
   margin: 1.2rem auto;
   width: 100%;
-  max-width: 1100px;   /* limite em telas muito largas */
-  height: 400px;       /* altura ideal para desktop */
+  max-width: 1100px;
+  height: 420px; /* um pouco maior para valorizar as imagens */
+  touch-action: pan-y; /* melhora o gesto de rolagem vertical no mobile */
+
 }
+
 .carousel-track {
   display: flex;
   width: 100%;
-  align-items: stretch;          /* mantém os containers verticais preenchendo a linha */
+  align-items: stretch;
   transition: transform 0.6s ease;
   will-change: transform;
   position: relative;
-  z-index: 1; /* acima do .bg-fade */
+  z-index: 1;
 }
+
 .carousel-item {
-  /* containers verticais, largura exatamente da linha (um por “vista”) */
   min-width: 100%;
   inline-size: 100%;
-  /* tamanho proporcional à linha: padding responsivo, não “fixo” */
+  height: 100%;
   padding-block: 1rem;
   padding-inline: clamp(1rem, 4vw, 2rem);
+
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; /* NOVO: centraliza horizontalmente */
-  height: 100%;        /* NOVO: ocupa toda a altura do container */
+  align-items: center;
+
+  /* imagem de fundo por slide */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 16px; /* mantém os cantos arredondados */
+
   color: #fff;
   position: relative;
-  z-index: 1; /* acima do .bg-fade */
+  overflow: hidden;
 }
-/* títulos e parágrafos do slide com boa legibilidade */
+
+/* overlay para legibilidade do texto */
+.carousel-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45));
+  z-index: 0;
+}
+
+/* conteúdo acima do overlay */
+.carousel-item > * { position: relative; z-index: 1; }
+
+/* defina a imagem de cada slide */
+.carousel-item:nth-child(1) { background-image: url('img/card_1.png'); }
+.carousel-item:nth-child(2) { background-image: url('img/card_2.png'); }
+.carousel-item:nth-child(3) { background-image: url('img/card_3.png'); }
+
+/* tipografia dentro do slide */
 .carousel-item h3 {
   font-weight: 700;
-  font-size: clamp(1.2rem, 2.4vw, 1.6rem);
+  font-size: clamp(1.3rem, 2.6vw, 1.8rem);
   margin-bottom: .4rem;
   text-align: center;
   text-shadow: 1px 1px 6px rgba(0,0,0,.35);
 }
 .carousel-item p {
-  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  font-size: clamp(1rem, 2.1vw, 1.15rem);
   max-width: 900px;
   text-align: center;
   text-shadow: 1px 1px 6px rgba(0,0,0,.35);
-}
-
-/* Respeita preferências de movimento reduzido */
-@media (prefers-reduced-motion: reduce) {
-  .carousel-track { transition: none; }
-  .bg-fade { transition: none; }
 }
 
 /* ======================== RESPONSIVO ======================== */
