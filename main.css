@@ -48,21 +48,19 @@ body {
   background-repeat: no-repeat;
   padding: 2rem 0 1rem 0;
   text-align: center;
-  color: #0f2743;           /* cor base do cabeçalho */
+  color: #0f2743;
 }
 .section-header h1 {
   font-size: 2.2rem;
   margin-bottom: .5rem;
-  color: #0f2743;           /* título escuro */
-  text-shadow: none;        /* remove o brilho */
-  /* font-family: 'Montserrat', 'Inter', sans-serif;  opcional */
-  /* font-weight: 700;                                    opcional */
+  color: #0f2743;
+  text-shadow: none;
 }
 .section-header p {
-  color: #2c4660;           /* subtítulo um tom mais claro */
+  color: #2c4660;
   font-size: 1.2rem;
   margin-top: 0;
-  text-shadow: none;        /* remove o brilho */
+  text-shadow: none;
   font-weight: 400;
 }
 
@@ -95,9 +93,9 @@ section {
   font-family: 'Inter', sans-serif;
 }
 
-/* (Override) Largura maior apenas na seção inicial que contém o carrossel */
+/* (Override) Largura do bloco inicial que contém o carrossel */
 #inicio {
-  max-width: 1100px;
+  max-width: 880px;
 }
 
 /* ======================== INFO BOX ======================== */
@@ -246,7 +244,6 @@ ul li {
   background-color: #12568c;
   transform: translateY(-2px);
 }
-/* Ajuste visual específico para os botões da seção Matérias Jurídicas */
 #artigos .btn-group {
   flex-wrap: wrap;
   justify-content: center;
@@ -371,12 +368,10 @@ button[type="submit"]:hover {
   position: relative;
   overflow: hidden;
   border-radius: 16px;
-  margin: 1.2rem auto;
+  margin: 0.75rem auto 0.25rem; /* aproxima dos controles/conteúdo */
   width: 100%;
-  max-width: 1100px;     /* ocupa toda a “linha” do conteúdo */
-  aspect-ratio: 21 / 9;  /* largura total x altura confortável de leitura */
-  min-height: 340px;     /* não fica baixo demais */
-  max-height: 560px;     /* não vira um “hero” gigante */
+  max-width: 880px;            /* mesma largura dos outros blocos */
+  height: 378px;               /* ≈ 10 cm (96 dpi) */
   touch-action: pan-y;
 }
 
@@ -389,6 +384,7 @@ button[type="submit"]:hover {
 .carousel-track {
   display: flex;
   width: 100%;
+  height: 100%;               /* ocupa a altura do container */
   align-items: stretch;
   transition: transform 0.6s ease;
   will-change: transform;
@@ -407,11 +403,10 @@ button[type="submit"]:hover {
   justify-content: center;
   align-items: center;
 
-  /* imagem de fundo por slide */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  border-radius: 16px; /* mantém os cantos arredondados */
+  border-radius: 16px;
 
   color: #fff;
   position: relative;
@@ -426,15 +421,14 @@ button[type="submit"]:hover {
   background: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45));
   z-index: 0;
 }
-/* conteúdo acima do overlay */
 .carousel-item > * { position: relative; z-index: 1; }
 
-/* defina a imagem de cada slide */
+/* imagens de fundo de cada slide */
 .carousel-item:nth-child(1) { background-image: url('img/card_1.png'); }
 .carousel-item:nth-child(2) { background-image: url('img/card_2.png'); }
 .carousel-item:nth-child(3) { background-image: url('img/card_3.png'); }
 
-/* tipografia dentro do slide */
+/* tipografia do slide */
 .carousel-item h3 {
   font-weight: 700;
   font-size: clamp(1.3rem, 2.6vw, 1.8rem);
@@ -449,13 +443,13 @@ button[type="submit"]:hover {
   text-shadow: 1px 1px 6px rgba(0,0,0,.35);
 }
 
-/* ===== Controles (Anterior/Próximo) ===== */
+/* controles prev/next */
 .carousel-nav {
   display: flex;
   gap: .75rem;
   justify-content: center;
   align-items: center;
-  margin: .6rem auto 0;
+  margin: 0.25rem auto 0;   /* menor espaço */
 }
 .carousel-nav button {
   appearance: none;
@@ -473,19 +467,13 @@ button[type="submit"]:hover {
 .carousel-nav button:hover { background-color: #12568c; transform: translateY(-1px); }
 .carousel-nav button:focus-visible { outline: 3px solid #a3d3ff; outline-offset: 2px; }
 
-/* Respeito a prefers-reduced-motion em nível de CSS */
-@media (prefers-reduced-motion: reduce) {
-  .carousel-track { transition: none !important; }
-  .carousel-nav button { transition: none !important; }
-}
-
-/* ===== Paginação (bullets) ===== */
+/* paginação (bullets) */
 .carousel-dots {
   display: flex;
   gap: .5rem;
   justify-content: center;
   align-items: center;
-  margin: .6rem auto 0;
+  margin: 0.2rem auto 0;    /* menor espaço */
 }
 .carousel-dots button {
   width: 10px;
@@ -497,6 +485,7 @@ button[type="submit"]:hover {
 }
 .carousel-dots button[aria-current="true"] { background: #1864ab; }
 .carousel-dots button:focus-visible { outline: 2px solid #1864ab; outline-offset: 2px; }
+
 /* ======================== RESPONSIVO ======================== */
 @media (max-width: 900px) {
   section {
@@ -524,14 +513,13 @@ button[type="submit"]:hover {
     font-size: 0.96rem;
     padding: 0.8rem 0;
   }
-/* Carrossel em tablets/notebooks menores */
-.carousel-container {
-  aspect-ratio: 16 / 7;  /* um pouco mais alto para leitura */
-  min-height: 320px;
-  max-height: 480px;
-  max-width: 100%;
-}
 
+  /* carrossel em tablets/notebooks menores */
+  .carousel-container {
+    height: 340px;
+    max-width: 880px;
+    margin: 0.5rem auto 0.25rem;
+  }
 }
 
 @media (max-width: 600px) {
@@ -545,10 +533,12 @@ button[type="submit"]:hover {
     width: 100%;
     text-align: center;
   }
-  /* Carrossel em smartphones */
+
+  /* carrossel em smartphones */
   .carousel-container {
-    height: 320px; /* ↑ melhor presença visual */
+    height: 300px;
     max-width: 100%;
+    margin: 0.5rem auto 0.25rem;
   }
   .carousel-item h3 { font-size: 1.25rem; }
   .carousel-item p  { font-size: 1rem;  }
