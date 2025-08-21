@@ -30,6 +30,7 @@ html {
   font-size: 16px;
   scroll-behavior: smooth;
 }
+
 body {
   font-family: 'Inter', Arial, sans-serif;
   font-size: clamp(1rem, 2.5vw, 1.2rem);
@@ -80,6 +81,12 @@ nav a {
 }
 nav a:hover {
   color: #a3d3ff;
+}
+/* Acessibilidade: foco visível nos links do menu */
+nav a:focus-visible {
+  outline: 3px solid #a3d3ff;
+  outline-offset: 2px;
+  border-radius: 6px;
 }
 
 /* ======================== SEÇÕES GERAIS ======================== */
@@ -220,6 +227,13 @@ ul li {
 }
 
 /* ======================== BOTÕES ESPECIAIS – MATÉRIAS JURÍDICAS ======================== */
+#artigos .btn-group {
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row;
+  gap: 12px;
+  overflow: visible;
+}
 .btn-group {
   display: flex;
   justify-content: center;
@@ -243,13 +257,6 @@ ul li {
 .btn-group a:hover {
   background-color: #12568c;
   transform: translateY(-2px);
-}
-#artigos .btn-group {
-  flex-wrap: wrap;
-  justify-content: center;
-  flex-direction: row;
-  gap: 12px;
-  overflow: visible;
 }
 #artigos .btn-group a {
   flex: 1;
@@ -374,24 +381,20 @@ button[type="submit"]:hover {
   height: 378px;               /* ≈ 10 cm (96 dpi) */
   touch-action: pan-y;
 }
-
-/* A11y: contorno ao navegar por teclado */
 .carousel-container:focus-visible {
   outline: 3px solid #a3d3ff;
   outline-offset: 3px;
 }
-
 .carousel-track {
   display: flex;
   width: 100%;
-  height: 100%;               /* ocupa a altura do container */
+  height: 100%;
   align-items: stretch;
   transition: transform 0.6s ease;
   will-change: transform;
   position: relative;
   z-index: 1;
 }
-
 .carousel-item {
   min-width: 100%;
   inline-size: 100%;
@@ -402,18 +405,14 @@ button[type="submit"]:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 16px;
-
   color: #fff;
   position: relative;
   overflow: hidden;
 }
-
-/* overlay para legibilidade do texto */
 .carousel-item::before {
   content: "";
   position: absolute;
@@ -422,13 +421,9 @@ button[type="submit"]:hover {
   z-index: 0;
 }
 .carousel-item > * { position: relative; z-index: 1; }
-
-/* imagens de fundo de cada slide */
 .carousel-item:nth-child(1) { background-image: url('img/card_1.png'); }
 .carousel-item:nth-child(2) { background-image: url('img/card_2.png'); }
 .carousel-item:nth-child(3) { background-image: url('img/card_3.png'); }
-
-/* tipografia do slide */
 .carousel-item h3 {
   font-weight: 700;
   font-size: clamp(1.3rem, 2.6vw, 1.8rem);
@@ -442,14 +437,12 @@ button[type="submit"]:hover {
   text-align: center;
   text-shadow: 1px 1px 6px rgba(0,0,0,.35);
 }
-
-/* controles prev/next */
 .carousel-nav {
   display: flex;
   gap: .75rem;
   justify-content: center;
   align-items: center;
-  margin: 0.25rem auto 0;   /* menor espaço */
+  margin: 0.25rem auto 0;
 }
 .carousel-nav button {
   appearance: none;
@@ -466,14 +459,12 @@ button[type="submit"]:hover {
 }
 .carousel-nav button:hover { background-color: #12568c; transform: translateY(-1px); }
 .carousel-nav button:focus-visible { outline: 3px solid #a3d3ff; outline-offset: 2px; }
-
-/* paginação (bullets) */
 .carousel-dots {
   display: flex;
   gap: .5rem;
   justify-content: center;
   align-items: center;
-  margin: 0.2rem auto 0;    /* menor espaço */
+  margin: 0.2rem auto 0;
 }
 .carousel-dots button {
   width: 10px;
@@ -491,7 +482,6 @@ button[type="submit"]:hover {
   section {
     padding: 1.2rem 1rem;
   }
-
   .services-grid {
     flex-wrap: wrap;
     justify-content: center;
@@ -501,20 +491,16 @@ button[type="submit"]:hover {
     max-width: 92%;
     margin-bottom: 24px;
   }
-
   .whatsapp-button {
     right: 10px;
     bottom: 70px;
     font-size: 0.95rem;
     padding: 11px 14px;
   }
-
   footer {
     font-size: 0.96rem;
     padding: 0.8rem 0;
   }
-
-  /* carrossel em tablets/notebooks menores */
   .carousel-container {
     height: 340px;
     max-width: 880px;
@@ -523,7 +509,6 @@ button[type="submit"]:hover {
 }
 
 @media (max-width: 600px) {
-  /* Botões empilhados quando necessário */
   .btn-group {
     flex-direction: column;
     align-items: stretch;
@@ -533,8 +518,6 @@ button[type="submit"]:hover {
     width: 100%;
     text-align: center;
   }
-
-  /* carrossel em smartphones */
   .carousel-container {
     height: 300px;
     max-width: 100%;
