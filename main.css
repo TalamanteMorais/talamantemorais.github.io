@@ -41,25 +41,28 @@ body {
 }
 
 /* ======================== CABEÇALHO ======================== */
-header {
+.section-header {
   background-image: url('img/Arte_Fundo_1.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   padding: 2rem 0 1rem 0;
   text-align: center;
-  color: #ffffff;
+  color: #0f2743;           /* cor base do cabeçalho */
 }
-header h1 {
+.section-header h1 {
   font-size: 2.2rem;
   margin-bottom: .5rem;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+  color: #0f2743;           /* título escuro */
+  text-shadow: none;        /* remove o brilho */
+  /* font-family: 'Montserrat', 'Inter', sans-serif;  opcional */
+  /* font-weight: 700;                                    opcional */
 }
-header p {
-  color: #ffffff;
+.section-header p {
+  color: #2c4660;           /* subtítulo um tom mais claro */
   font-size: 1.2rem;
   margin-top: 0;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+  text-shadow: none;        /* remove o brilho */
   font-weight: 400;
 }
 
@@ -370,9 +373,11 @@ button[type="submit"]:hover {
   border-radius: 16px;
   margin: 1.2rem auto;
   width: 100%;
-  max-width: 1100px;
-  height: 460px; /* impacto visual em desktop */
-  touch-action: pan-y; /* gesto vertical no mobile */
+  max-width: 1100px;     /* ocupa toda a “linha” do conteúdo */
+  aspect-ratio: 21 / 9;  /* largura total x altura confortável de leitura */
+  min-height: 340px;     /* não fica baixo demais */
+  max-height: 560px;     /* não vira um “hero” gigante */
+  touch-action: pan-y;
 }
 
 /* A11y: contorno ao navegar por teclado */
@@ -519,12 +524,14 @@ button[type="submit"]:hover {
     font-size: 0.96rem;
     padding: 0.8rem 0;
   }
+/* Carrossel em tablets/notebooks menores */
+.carousel-container {
+  aspect-ratio: 16 / 7;  /* um pouco mais alto para leitura */
+  min-height: 320px;
+  max-height: 480px;
+  max-width: 100%;
+}
 
-  /* Carrossel em tablets/notebooks menores */
-  .carousel-container {
-    height: 380px; /* valor intermediário para melhor impacto visual */
-    max-width: 100%;
-  }
 }
 
 @media (max-width: 600px) {
@@ -538,10 +545,9 @@ button[type="submit"]:hover {
     width: 100%;
     text-align: center;
   }
-
   /* Carrossel em smartphones */
   .carousel-container {
-    height: 300px; /* mais alto que 280px para valorizar o conteúdo */
+    height: 320px; /* ↑ melhor presença visual */
     max-width: 100%;
   }
   .carousel-item h3 { font-size: 1.25rem; }
