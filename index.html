@@ -35,15 +35,18 @@
 <!-- Título -->
 <title>Talamante Morais | Advocacia Pública Municipal e Direito Administrativo</title>
 <!-- Fontes Google otimizadas -->
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+<!-- Preload da 1ª imagem do carrossel para pintura mais rápida -->
+<link rel="preload" as="image" href="card_credenciamento_1024x1536.png">
+
 <!-- Fontes refinadas: Inter (texto), Merriweather (títulos) -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="main.css">
-
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZKCPTG7K1T"></script>
 <script>
@@ -87,6 +90,7 @@
   <a href="#contato">Contato</a>
 </nav>
 <main>
+
 <section id="inicio">
   <div class="info-box">
     <strong>Nota Oficial:</strong><br>
@@ -97,27 +101,37 @@
   </div>
 
   <h2>Seja Bem-vindo ao Escritório Talamante Morais</h2>
+
 <div class="carousel-container" role="region" aria-label="Carrossel de destaques" tabindex="0">
   <div class="carousel-track" id="carousel-track" aria-live="polite">
     <div class="carousel-item">
-      <h3>Credenciamento – Lei nº 14.133/2021</h3>
-      <p>Quando utilizar o credenciamento? Entenda hipóteses legais e aplicações práticas.</p>
+      <img class="carousel-img" src="card_credenciamento_1024x1536.png"
+           width="880" height="378"
+           loading="eager" decoding="async"
+           alt="Credenciamento — Lei nº 14.133/2021. Quando utilizar? Hipóteses legais e aplicações práticas.">
     </div>
+
     <div class="carousel-item">
-      <h3>Inteligência Artificial em Licitações</h3>
-      <p>Como a IA está transformando processos licitatórios conforme a Lei nº 14.133/2021.</p>
+      <img class="carousel-img" src="ChatGPT%20Image%2021%20de%20ago.%20de%202025%2C%2015_39_19.png"
+           width="880" height="378"
+           loading="lazy" decoding="async"
+           alt="Inteligência Artificial em Licitações — como a IA transforma processos conforme a Lei 14.133/2021.">
     </div>
+
     <div class="carousel-item">
-      <h3>Novas Relações de Trabalho</h3>
-      <p>Uberização, vínculo empregatício e precarização do trabalho sob a ótica jurídica.</p>
+      <img class="carousel-img" src="card_novas_relacoes_1024x1536.png"
+           width="880" height="378"
+           loading="lazy" decoding="async"
+           alt="Novas Relações de Trabalho — Uberização, vínculo empregatício e precarização sob a ótica jurídica.">
     </div>
   </div>
+  <div class="carousel-nav" aria-label="Controles do carrossel">
+    <button type="button" class="carousel-prev" aria-label="Slide anterior" aria-controls="carousel-track">◀</button>
+    <button type="button" class="carousel-next" aria-label="Próximo slide" aria-controls="carousel-track">▶</button>
+  </div>
+  <div class="carousel-dots" role="tablist" aria-label="Paginação de slides"></div>
 </div>
-<div class="carousel-nav" aria-label="Controles do carrossel">
-  <button type="button" class="carousel-prev" aria-label="Slide anterior" aria-controls="carousel-track">◀</button>
-  <button type="button" class="carousel-next" aria-label="Próximo slide" aria-controls="carousel-track">▶</button>
-</div>
-<div class="carousel-dots" role="tablist" aria-label="Paginação de slides"></div>
+
   <p class="intro-text">
     Somos uma referência em Advocacia Pública Municipal, Direito Privado e capacitação profissional. Nosso compromisso é unir experiência, ética e técnica para oferecer assessoria jurídica e treinamentos de excelência a clientes públicos e privados.
   </p>
