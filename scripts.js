@@ -41,6 +41,7 @@ function goToSlide(n) {
   indexSlide = ((n % totalItems) + totalItems) % totalItems;
   atualizarTransform();
 }
+
 function iniciarCarrossel() {
   if (!track || totalItems <= 1 || isHovered) return;
 
@@ -169,9 +170,10 @@ function finalizarSwipe(commit) {
   iniciarCarrossel();
 }
 
-// (removido bloco duplicado)
-
-// (removido bloco duplicado)
+// Eventos que concluem o swipe
+carouselContainer.addEventListener("pointerup",  () => finalizarSwipe(true));
+carouselContainer.addEventListener("pointerleave", () => finalizarSwipe(false));
+carouselContainer.addEventListener("pointercancel", () => finalizarSwipe(false));
 
   // Pausa quando a aba fica oculta e retoma quando volta (evita reiniciar se estiver em hover)
   document.addEventListener("visibilitychange", () => {
@@ -315,4 +317,6 @@ if (carouselContainer) {
   const anoEl = document.getElementById("anoAtual");
   if (anoEl) anoEl.textContent = new Date().getFullYear();
 });
+
+// (removido: inicialização duplicada — já iniciamos/pausamos o carrossel no bloco principal)
 

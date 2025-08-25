@@ -34,18 +34,14 @@
 
 <!-- Título -->
 <title>Talamante Morais | Advocacia Pública Municipal e Direito Administrativo</title>
-<!-- Fontes Google otimizadas -->
+<!-- Fontes Google (Inter) -->
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-<!-- Preload da 1ª imagem do carrossel para pintura mais rápida -->
-<link rel="preload" as="image" href="card_credenciamento_1024x1536.png">
-
-<!-- Fontes refinadas: Inter (texto), Merriweather (títulos) -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+<!-- Preload da 1ª imagem do carrossel (.webp 880x378) -->
+<link rel="preload" as="image" href="img/card_1_880x378.webp" type="image/webp">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="main.css">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZKCPTG7K1T"></script>
@@ -53,7 +49,6 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-ZKCPTG7K1T');
 </script>
 <!-- Favicon -->
@@ -104,27 +99,46 @@
 
 <div class="carousel-container" role="region" aria-label="Carrossel de destaques" tabindex="0">
   <div class="carousel-track" id="carousel-track" aria-live="polite">
+
     <div class="carousel-item">
-      <img class="carousel-img" src="card_credenciamento_1024x1536.png"
-           width="880" height="378"
-           loading="eager" decoding="async"
-           alt="Credenciamento — Lei nº 14.133/2021. Quando utilizar? Hipóteses legais e aplicações práticas.">
+<picture>
+  <source type="image/webp"
+          srcset="img/card_1_880x378.webp 880w"
+          sizes="(max-width: 900px) 100vw, 880px">
+  <img class="carousel-img" src="img/card_1_880x378.webp" fetchpriority="high"
+       width="880" height="378" loading="eager" decoding="async"
+       alt="Credenciamento — Lei nº 14.133/2021. Quando utilizar? Hipóteses legais e aplicações práticas.">
+</picture>
+
     </div>
 
     <div class="carousel-item">
-      <img class="carousel-img" src="ChatGPT%20Image%2021%20de%20ago.%20de%202025%2C%2015_39_19.png"
-           width="880" height="378"
-           loading="lazy" decoding="async"
-           alt="Inteligência Artificial em Licitações — como a IA transforma processos conforme a Lei 14.133/2021.">
+<picture>
+  <source type="image/webp"
+          srcset="img/card_2_880x378.webp 880w"
+          sizes="(max-width: 900px) 100vw, 880px">
+  <img class="carousel-img" src="img/card_2_880x378.webp"
+       width="880" height="378" loading="lazy" decoding="async"
+       alt="Inteligência Artificial em Licitações — como a IA transforma processos conforme a Lei 14.133/2021.">
+</picture>
+
     </div>
 
     <div class="carousel-item">
-      <img class="carousel-img" src="card_novas_relacoes_1024x1536.png"
-           width="880" height="378"
-           loading="lazy" decoding="async"
-           alt="Novas Relações de Trabalho — Uberização, vínculo empregatício e precarização sob a ótica jurídica.">
+
+<picture>
+  <source type="image/webp"
+          srcset="img/card_3_880x378.webp 880w"
+          sizes="(max-width: 900px) 100vw, 880px">
+  <img class="carousel-img" src="img/card_3_880x378.webp"
+       width="880" height="378" loading="lazy" decoding="async"
+       alt="Novas Relações de Trabalho — Uberização, vínculo empregatício e precarização sob a ótica jurídica.">
+</picture>
+
     </div>
+
   </div>
+
   <div class="carousel-nav" aria-label="Controles do carrossel">
     <button type="button" class="carousel-prev" aria-label="Slide anterior" aria-controls="carousel-track">◀</button>
     <button type="button" class="carousel-next" aria-label="Próximo slide" aria-controls="carousel-track">▶</button>
