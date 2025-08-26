@@ -440,45 +440,13 @@ button[type="submit"]:focus-visible{
 }
 
 /* Botões (Anterior/Próximo) */
-
-/* Botões (Anterior/Próximo) — overlay “colado” ao card */
-.carousel-nav{
-  position: static;
-  margin: 0;
-}
+/* Navegação manual desativada — esconder completamente os botões */
+.carousel-nav,
 .carousel-prev,
 .carousel-next{
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  inline-size: 44px;  /* alvo mínimo confortável */
-  block-size: 44px;
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.8);
-  background: var(--brand);
-  color: #fff;
-  display: grid;
-  place-items: center;
-  padding: 0;
-  cursor: pointer;
-  user-select: none;
-  -webkit-tap-highlight-color: transparent;
-  box-shadow: 0 4px 14px rgba(24, 100, 171, 0.15);
-  transition: transform .15s ease, background-color .25s ease;
-  z-index: 2;
+  display: none !important;
 }
-.carousel-prev{ left: 0.25rem; }
-.carousel-next{ right: 0.25rem; }
-.carousel-prev:hover,
-.carousel-next:hover{
-  background: var(--brand-dark);
-  transform: translateY(-50%) scale(1.02);
-}
-.carousel-prev:focus-visible,
-.carousel-next:focus-visible{
-  outline: 3px solid #a3d3ff;
-  outline-offset: 2px;
-}
+
 /* Dots/pagers — overlay “colado” ao card */
 .carousel-dots{
   position: absolute;

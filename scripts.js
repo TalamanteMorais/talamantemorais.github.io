@@ -54,7 +54,6 @@ function iniciarCarrossel() {
     goToSlide(indexSlide + 1);
   }, AUTO_INTERVAL_MS);
 }
-
   function pararCarrossel() {
     if (intervaloSlide) {
       clearInterval(intervaloSlide);
@@ -100,84 +99,83 @@ if (dotsWrap && totalItems > 1) {
 if (carouselContainer && track && totalItems > 0) {
   iniciarCarrossel();
 
-// Hover/Toque pausa/retoma + Swipe (arrasto horizontal)
-carouselContainer.addEventListener("mouseenter", () => {
-  isHovered = true;
-  pararCarrossel();
-});
-carouselContainer.addEventListener("mouseleave", () => {
-  isHovered = false;
-  iniciarCarrossel();
-});
+  // Evita pausar imediatamente no carregamento se o cursor já estiver sobre o carrossel
+  let interactionsReady = false;
+  setTimeout(() => { interactionsReady = true; }, 800);
 
-// Dados de swipe
-let swipe = {
-  dragging: false,
-  startX: 0,
-  deltaX: 0,
-  width: 0,
-  threshold: 0
-};
+  // Hover/Toque pausa/retoma + Swipe (arrasto horizontal)
+  carouselContainer.addEventListener("mouseenter", () => {
+    if (!interactionsReady) return; // só passa a pausar após o pequeno delay
+    isHovered = true;
+    pararCarrossel();
+  });
+  carouselContainer.addEventListener("mouseleave", () => {
+    isHovered = false;
+    iniciarCarrossel();
+  });
 
-// Início do toque/arrasto
-carouselContainer.addEventListener("pointerdown", (e) => {
-  isHovered = true;
-  pararCarrossel();
+  // Dados de swipe
+  let swipe = {
+    dragging: false,
+    startX: 0,
+    deltaX: 0,
+    width: 0,
+    threshold: 0
+  };
 
-  swipe.dragging = true;
-  swipe.startX = e.clientX;
-  swipe.width = carouselContainer.clientWidth || 1;
-  swipe.threshold = Math.max(40, swipe.width * 0.12); // ~12% da largura (mín. 40px)
-  swipe.deltaX = 0;
+  // Início do toque/arrasto
+  carouselContainer.addEventListener("pointerdown", (e) => {
+    isHovered = true;
+    pararCarrossel();
 
-  // desliga a transição para mover “na mão”
-  track.style.transition = "none";
+    swipe.dragging = true;
+    swipe.startX = e.clientX;
+    swipe.width = carouselContainer.clientWidth || 1;
+    swipe.threshold = Math.max(40, swipe.width * 0.12); // ~12% da largura (mín. 40px)
+    swipe.deltaX = 0;
 
-  try { carouselContainer.setPointerCapture(e.pointerId); } catch (_) {}
-});
+    // desliga a transição para mover “na mão”
+    track.style.transition = "none";
 
-// Movimento do arrasto
-carouselContainer.addEventListener("pointermove", (e) => {
-  if (!swipe.dragging) return;
+    try { carouselContainer.setPointerCapture(e.pointerId); } catch (_) {}
+  });
 
-  swipe.deltaX = e.clientX - swipe.startX;
-  const deltaPct = (swipe.deltaX / swipe.width) * 100;
+  // Movimento do arrasto
+  carouselContainer.addEventListener("pointermove", (e) => {
+    if (!swipe.dragging) return;
 
-  // aplica o deslocamento relativo ao slide atual
-  track.style.transform = `translateX(calc(${-indexSlide * 100}% + ${deltaPct}%))`;
-});
+    swipe.deltaX = e.clientX - swipe.startX;
+    const deltaPct = (swipe.deltaX / swipe.width) * 100;
 
-// Fim/cancelamento do arrasto
-function finalizarSwipe(commit) {
-  // restaura a transição padrão
-  track.style.transition = "";
+    // aplica o deslocamento relativo ao slide atual
+    track.style.transform = `translateX(calc(${-indexSlide * 100}% + ${deltaPct}%))`;
+  });
 
-  if (commit && Math.abs(swipe.deltaX) > swipe.threshold) {
-    if (swipe.deltaX < 0) {
-      goToSlide(indexSlide + 1); // arrasto p/ esquerda -> próximo
+  // Fim/cancelamento do arrasto
+  function finalizarSwipe(commit) {
+    // restaura a transição padrão
+    track.style.transition = "";
+
+    if (commit && Math.abs(swipe.deltaX) > swipe.threshold) {
+      if (swipe.deltaX < 0) {
+        goToSlide(indexSlide + 1); // arrasto p/ esquerda -> próximo
+      } else {
+        goToSlide(indexSlide - 1); // arrasto p/ direita -> anterior
+      }
     } else {
-      goToSlide(indexSlide - 1); // arrasto p/ direita -> anterior
+      // volta para a posição do slide atual
+      atualizarTransform();
     }
-  } else {
-    // volta para a posição do slide atual
-    atualizarTransform();
+
+    swipe.dragging = false;
+    swipe.startX = 0;
+    swipe.deltaX = 0;
+    isHovered = false;
+    iniciarCarrossel();
   }
-
-  swipe.dragging = false;
-  swipe.startX = 0;
-  swipe.deltaX = 0;
-  isHovered = false;
-  iniciarCarrossel();
-}
-
-// Eventos que concluem o swipe
-carouselContainer.addEventListener("pointerup",  () => finalizarSwipe(true));
-carouselContainer.addEventListener("pointerleave", () => finalizarSwipe(false));
-carouselContainer.addEventListener("pointercancel", () => finalizarSwipe(false));
 
   // Pausa quando a aba fica oculta e retoma quando volta (evita reiniciar se estiver em hover)
   document.addEventListener("visibilitychange", () => {
-
     if (document.hidden) {
       pararCarrossel();
     } else if (!isHovered) {
@@ -206,6 +204,7 @@ carouselContainer.addEventListener("pointercancel", () => finalizarSwipe(false))
     io.observe(carouselContainer);
   }
 }
+
   // Navegação por teclado (← →)
 
 // Navegação por teclado (← →)
