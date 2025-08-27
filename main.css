@@ -376,23 +376,16 @@ button[type="submit"]:focus-visible{
 }
 
 /* ======================== 18. CARROSSEL ======================== */
-
-@media (max-width: 600px){
-  section{ padding: 1.8rem 1.4rem; }
-  .btn-group{ flex-direction: column; align-items: stretch; gap: 16px; }
-  .btn-group a{ width: 100%; text-align: center; }
-
-  .carousel-container{
-    position: relative;
-    overflow: hidden;
-    border-radius: 16px;
-    width: 100%;
-    max-width: var(--container-max);
-    height: var(--carousel-h-sm);
-    touch-action: pan-y;
-    overscroll-behavior: contain;
-    margin: var(--gap-top) auto 0;
-  }
+.carousel-container{
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  width: 100%;
+  max-width: var(--container-max);
+  height: var(--carousel-h-desktop);
+  background: #000; /* evita flash claro enquanto as imagens carregam */
+  touch-action: pan-y;
+  margin: var(--gap-top) auto 0;
 }
 
 .carousel-container:focus-visible{
@@ -495,12 +488,9 @@ button[type="submit"]:focus-visible{
   .carousel-container{
     height: var(--carousel-h-md);
     max-width: var(--container-max);
-    touch-action: pan-y;
-    overscroll-behavior: contain;
     margin: var(--gap-top) auto 0;
   }
 }
-
 @media (max-width: 600px){
   section{ padding: 1.8rem 1.4rem; }
   .btn-group{ flex-direction: column; align-items: stretch; gap: 16px; }
@@ -514,8 +504,6 @@ button[type="submit"]:focus-visible{
     max-width: var(--container-max);
     height: var(--carousel-h-sm);
     touch-action: pan-y;
-    overscroll-behavior: contain;
     margin: var(--gap-top) auto 0;
   }
 }
-

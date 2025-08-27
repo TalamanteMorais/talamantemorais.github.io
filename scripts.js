@@ -2,13 +2,8 @@
 document.addEventListener("DOMContentLoaded", function () {
 // ======================== CARROSSEL AUTOMÁTICO TEMÁTICO ========================
   const track = document.querySelector(".carousel-track");
-const items = document.querySelectorAll(".carousel-item");
-const carouselContainer = document.querySelector(".carousel-container");
-
-// Bloqueia arrasto nativo que interfere no swipe
-items.forEach((el) => {
-  el.addEventListener("dragstart", (e) => e.preventDefault());
-});
+  const items = document.querySelectorAll(".carousel-item");
+  const carouselContainer = document.querySelector(".carousel-container");
   const prevBtn = document.querySelector(".carousel-prev");
   const nextBtn = document.querySelector(".carousel-next");
   const dotsWrap = document.querySelector(".carousel-dots");
@@ -128,7 +123,6 @@ if (carouselContainer && track && totalItems > 0) {
     threshold: 0
   };
 
-
   // Início do toque/arrasto
   carouselContainer.addEventListener("pointerdown", (e) => {
     isHovered = true;
@@ -157,32 +151,7 @@ if (carouselContainer && track && totalItems > 0) {
     track.style.transform = `translateX(calc(${-indexSlide * 100}% + ${deltaPct}%))`;
   });
 
-  // Fallback para navegadores sem Pointer Events (iOS antigos)
-  if (!("PointerEvent" in window)) {
-    carouselContainer.addEventListener("touchstart", (e) => {
-      const t = e.touches[0];
-      isHovered = true;
-      pararCarrossel();
-      swipe.dragging = true;
-      swipe.startX = t.clientX;
-      swipe.width = carouselContainer.clientWidth || 1;
-      swipe.threshold = Math.max(40, swipe.width * 0.12);
-      swipe.deltaX = 0;
-      track.style.transition = "none";
-    }, { passive: true });
-
-    carouselContainer.addEventListener("touchmove", (e) => {
-      if (!swipe.dragging) return;
-      const t = e.touches[0];
-      swipe.deltaX = t.clientX - swipe.startX;
-      const deltaPct = (swipe.deltaX / swipe.width) * 100;
-      track.style.transform = `translateX(calc(${-indexSlide * 100}% + ${deltaPct}%))`;
-    }, { passive: true });
-
-    carouselContainer.addEventListener("touchend", () => finalizarSwipe(true));
-    carouselContainer.addEventListener("touchcancel", () => finalizarSwipe(false));
-  }
-// Fim/cancelamento do arrasto
+  // Fim/cancelamento do arrasto
   function finalizarSwipe(commit) {
     // restaura a transição padrão
     track.style.transition = "";
@@ -205,17 +174,7 @@ if (carouselContainer && track && totalItems > 0) {
     iniciarCarrossel();
   }
 
-  // Finalização do gesto em dispositivos de toque
-  carouselContainer.addEventListener("pointerup", () => finalizarSwipe(true));
-  carouselContainer.addEventListener("pointercancel", () => finalizarSwipe(false));
-  carouselContainer.addEventListener("pointerleave", () => {
-    if (swipe.dragging) finalizarSwipe(false);
-  });
-
-  // (removido bloco duplicado de finalização do gesto)
-
   // Pausa quando a aba fica oculta e retoma quando volta (evita reiniciar se estiver em hover)
-
   document.addEventListener("visibilitychange", () => {
     if (document.hidden) {
       pararCarrossel();
