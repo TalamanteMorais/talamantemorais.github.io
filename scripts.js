@@ -1,9 +1,18 @@
 // ======================== SCRIPT GERAL DO SITE ========================
 document.addEventListener("DOMContentLoaded", function () {
+
 // ======================== CARROSSEL AUTOMÁTICO TEMÁTICO ========================
-  const track = document.querySelector(".carousel-track");
-  const items = document.querySelectorAll(".carousel-item");
-  const carouselContainer = document.querySelector(".carousel-container");
+const track = document.querySelector(".carousel-track");
+const items = document.querySelectorAll(".carousel-item");
+const carouselContainer = document.querySelector(".carousel-container");
+
+// garante id compatível com aria-controls dos dots
+if (track && !track.id) track.id = "carousel-track";
+
+// bloqueia arrasto nativo que interfere no swipe
+items.forEach((el) => {
+  el.addEventListener("dragstart", (e) => e.preventDefault());
+});
   const prevBtn = document.querySelector(".carousel-prev");
   const nextBtn = document.querySelector(".carousel-next");
   const dotsWrap = document.querySelector(".carousel-dots");
@@ -19,17 +28,18 @@ const RESTART_GAP_MS = 300;
 const AUTO_INTERVAL_MS = 4000;   // intervalo do autoplay
 const SLIDE_MIN_GAP_MS = 900;    // tempo mínimo entre trocas
 let lastMoveAt = 0;              // último momento de troca
-  function atualizarTransform() {
-    if (!track) return;
-    track.style.transform = `translateX(-${indexSlide * 100}%)`;
-    // Atualiza bullets
-    if (dotsWrap && dotsWrap.children.length === totalItems) {
-      [...dotsWrap.children].forEach((btn, i) => {
-        if (i === indexSlide) btn.setAttribute("aria-current", "true");
-        else btn.removeAttribute("aria-current");
-      });
-    }
+
+function atualizarTransform() {
+  if (!track) return;
+  track.style.transform = `translate3d(-${indexSlide * 100}%, 0, 0)`;
+  // Atualiza bullets
+  if (dotsWrap && dotsWrap.children.length === totalItems) {
+    [...dotsWrap.children].forEach((btn, i) => {
+      if (i === indexSlide) btn.setAttribute("aria-current", "true");
+      else btn.removeAttribute("aria-current");
+    });
   }
+}
 
 function goToSlide(n) {
   if (!totalItems) return;
@@ -146,9 +156,9 @@ if (carouselContainer && track && totalItems > 0) {
 
     swipe.deltaX = e.clientX - swipe.startX;
     const deltaPct = (swipe.deltaX / swipe.width) * 100;
+// aplica o deslocamento relativo ao slide atual
+track.style.transform = `translate3d(calc(${-indexSlide * 100}% + ${deltaPct}%), 0, 0)`;
 
-    // aplica o deslocamento relativo ao slide atual
-    track.style.transform = `translateX(calc(${-indexSlide * 100}% + ${deltaPct}%))`;
   });
 
   // Fim/cancelamento do arrasto
@@ -174,6 +184,13 @@ if (carouselContainer && track && totalItems > 0) {
     iniciarCarrossel();
   }
 
+  // Finalização do gesto em dispositivos de toque
+  carouselContainer.addEventListener("pointerup", () => finalizarSwipe(true));
+  carouselContainer.addEventListener("pointercancel", () => finalizarSwipe(false));
+  carouselContainer.addEventListener("pointerleave", () => {
+    if (swipe.dragging) finalizarSwipe(false);
+  });
+
   // Pausa quando a aba fica oculta e retoma quando volta (evita reiniciar se estiver em hover)
   document.addEventListener("visibilitychange", () => {
     if (document.hidden) {
@@ -181,12 +198,6 @@ if (carouselContainer && track && totalItems > 0) {
     } else if (!isHovered) {
       iniciarCarrossel();
     }
-  });
-
-  // Pausa enquanto o foco estiver dentro do carrossel; retoma ao sair
-  carouselContainer.addEventListener("focusin", pararCarrossel);
-  carouselContainer.addEventListener("focusout", () => {
-    if (!isHovered) iniciarCarrossel();
   });
 
   // Pausa quando o carrossel sai do viewport; retoma quando volta (economia de recursos)
@@ -205,8 +216,6 @@ if (carouselContainer && track && totalItems > 0) {
   }
 }
 
-  // Navegação por teclado (← →)
-
 // Navegação por teclado (← →)
 if (carouselContainer) {
   carouselContainer.addEventListener("keydown", (e) => {
@@ -219,7 +228,6 @@ if (carouselContainer) {
     }
   });
 }
-
   // Estado inicial
   atualizarTransform();
 
