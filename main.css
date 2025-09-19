@@ -94,8 +94,9 @@ img, picture, svg, video { max-width: 100%; height: auto; display: block; }
 }
 /* ======================== 04. SEÇÕES GERAIS ======================== */
 section{
+section{
   max-width: var(--container-max);
-  background: #ffffff;
+  background: transparent;
   margin: var(--gap-top) auto var(--gap-bottom);
   padding: 2.2rem 2.8rem;
   border-radius: 14px;
