@@ -190,16 +190,8 @@ ul li{
   line-height: 1.5;
 }
 /* ======================== 11. VÍDEOS ======================== */
-.video-container{ 
-  text-align: center; 
-  margin-bottom: var(--gap-bottom); 
-}
-.video-container iframe{
-  max-width: 100%;
-  aspect-ratio: 16 / 9;
-  border-radius: 8px;
-  box-shadow: 0 2px 12px rgba(60,60,60,0.09);
-}
+/* (removido: substituído por .video-embed e .video-grid nas seções 21 e 22) */
+
 /* ======================== 12. QR CODE ======================== */
 .qrcode-container{
   margin: 2.2rem auto 0;
@@ -394,8 +386,55 @@ button[type="submit"]:focus-visible{
     margin: var(--gap-top) auto 0;
   }
 }
-@media (max-width: 600px){
-  .carousel-container{
-    height: var(--carousel-h-sm);
-  }
+
+/* ======================== 21. VÍDEOS — grade (cards com link) ======================== */
+.video-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+}
+@media (max-width: 900px){ .video-grid{ grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px){ .video-grid{ grid-template-columns: 1fr; } }
+
+.video-card a{
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+  text-decoration: none;
+  background: rgba(255,255,255,0.95);
+  border-left: 5px solid #548eed;
+  border-radius: 14px;
+  padding: .9rem;
+  box-shadow: 0 4px 14px rgba(24,100,171,0.08);
+  transition: transform .15s ease, box-shadow .2s ease;
+}
+.video-card a:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(24,100,171,0.18);
+}
+.video-card img{
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+.video-title{
+  font-weight: 700;
+  color: var(--brand);
+  font-size: clamp(1rem, 2.5vw, 1.15rem);
+}
+.video-desc{
+  color: #334;
+  font-size: clamp(0.95rem, 2vw, 1rem);
+}
+
+/* ======================== 22. VÍDEOS — embed (destaque único) ======================== */
+.video-embed iframe{
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(60,60,60,0.09);
 }
