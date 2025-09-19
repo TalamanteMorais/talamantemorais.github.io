@@ -52,7 +52,6 @@ body {
 
 /* elementos de mídia nunca estouram o container */
 img, picture, svg, video { max-width: 100%; height: auto; display: block; }
-
 /* ======================== 02. CABEÇALHO ======================== */
 .section-header{
   background-image: url('img/Arte_Fundo_1.jpg');
@@ -61,43 +60,38 @@ img, picture, svg, video { max-width: 100%; height: auto; display: block; }
   background-repeat: no-repeat;
   padding: 2rem 0 1rem 0;
   text-align: center;
-  color: #0f2743;
+  color: #0f2743; /* define cor padrão já usada no h1 */
 }
 .section-header h1{
   font-size: 2.2rem;
   margin-bottom: .5rem;
-  color: #0f2743;
-  text-shadow: none;
 }
 .section-header p{
   color: #2c4660;
   font-size: 1.2rem;
   margin-top: 0;
-  text-shadow: none;
   font-weight: 400;
 }
-
 /* ======================== 03. MENU DE NAVEGAÇÃO ======================== */
-nav{
+.main-nav{
   background: #1c2d3a;
   text-align: center;
   padding: .7rem 0;
   box-shadow: 0 1px 4px rgba(0,0,0,0.03);
 }
-nav a{
+.main-nav a{
   color: #fff;
   text-decoration: none;
   margin: 0 1.2rem;
   font-weight: 600;
   transition: color .2s;
 }
-nav a:hover{ color: #a3d3ff; }
-nav a:focus-visible{
+.main-nav a:hover{ color: #a3d3ff; }
+.main-nav a:focus-visible{
   outline: 3px solid #a3d3ff;
   outline-offset: 2px;
   border-radius: 6px;
 }
-
 /* ======================== 04. SEÇÕES GERAIS ======================== */
 section{
   max-width: var(--container-max);
@@ -109,25 +103,18 @@ section{
   font-family: 'Inter', sans-serif;
 }
 
-/* (Override) Largura do bloco inicial que contém o carrossel */
-#inicio{ max-width: var(--container-max); }
-
 /* Ajuste opcional para textos longos justificados */
 .info-box{ text-align: justify; }
-
 /* ======================== 05. GRID DE SERVIÇOS ======================== */
 .services-grid{
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: space-between;
-  width: 100%;
   padding: 0 1rem;
 }
-
 /* ======================== 06. CARTÕES DE SERVIÇOS ======================== */
 .service-card{
-  width: 100%;
   background: rgba(255,255,255,0.95);
   border-radius: 22px 55px 22px 55px;
   box-shadow: 0 6px 22px rgba(68,134,255,0.08);
@@ -145,29 +132,25 @@ section{
   transform: translateY(-6px);
   box-shadow: 0 12px 30px rgba(68,134,255,0.15);
 }
-
 /* ======================== 07. TÍTULO E DESCRIÇÃO DOS SERVIÇOS ======================== */
 .service-title{
   color: var(--brand);
   font-weight: 700;
-  font-size: 1.15rem;
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
   margin-bottom: .8rem;
 }
-.service-desc,
-#inicio p,
-#sobre p{
+.service-desc{
   text-align: justify;
-  font-size: 1rem;
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
   margin-bottom: 1rem;
 }
-
 /* ======================== 08. BOTÕES ======================== */
 .cta-btn, .main-btn{
   display: inline-block;
   background: var(--brand);
   color: #ffffff;
   font-family: 'Inter', sans-serif;
-  font-size: 1rem;
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
   font-weight: 600;
   padding: 0.7rem 1.4rem;
   border: none;
@@ -176,6 +159,7 @@ section{
   text-decoration: none;
   transition: background-color 0.25s, transform 0.15s ease;
   box-shadow: 0 4px 14px rgba(24, 100, 171, 0.15);
+  min-width: 120px; /* garante legibilidade em telas pequenas */
 }
 .cta-btn:hover, .main-btn:hover{
   background-color: var(--brand-dark);
@@ -186,30 +170,34 @@ section{
   outline: 3px solid #a3d3ff;
   outline-offset: 2px;
 }
-
 /* ======================== 09. LISTAS ======================== */
-ul{ margin: 1rem 0 0 1rem; }
-ul li{ margin-bottom: .7rem; }
-
+ul{ 
+  margin: 1rem 0 0 clamp(0.5rem, 2vw, 1rem); 
+}
+ul li{ 
+  margin-bottom: .7rem; 
+}
 /* ======================== 10. ARTIGOS ======================== */
 .artigo-meta{
   color: #7c8a97;
   font-family: 'Inter', sans-serif;
-  font-size: 0.92rem;
+  font-size: clamp(0.85rem, 1.8vw, 1rem);
   font-style: italic;
   margin-top: 0.3rem;
   margin-bottom: 1rem;
   line-height: 1.5;
 }
-
 /* ======================== 11. VÍDEOS ======================== */
-.video-container{ text-align: center; margin-bottom: var(--gap-bottom); }
+.video-container{ 
+  text-align: center; 
+  margin-bottom: var(--gap-bottom); 
+}
 .video-container iframe{
   max-width: 100%;
+  aspect-ratio: 16 / 9;
   border-radius: 8px;
   box-shadow: 0 2px 12px rgba(60,60,60,0.09);
 }
-
 /* ======================== 12. QR CODE ======================== */
 .qrcode-container{
   margin: 2.2rem auto 0;
@@ -222,49 +210,26 @@ ul li{ margin-bottom: .7rem; }
   background-color: #f0f4f9;
   border-radius: 12px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
-  max-width: 300px;
+  max-width: clamp(220px, 90%, 300px);
 }
 .qrcode-container img{
-  width: 120px;
-  height: 120px;
+  width: clamp(90px, 25vw, 120px);
+  height: auto;
   border-radius: 8px;
 }
-
 /* ======================== 13. BOTÕES ESPECIAIS – MATÉRIAS JURÍDICAS ======================== */
-#artigos .btn-group{
-  flex-wrap: wrap;
-  justify-content: center;
-  flex-direction: row;
-  gap: 12px;
-  overflow: visible;
-}
-.btn-group{
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin: 20px auto 30px auto;
-}
 .btn-group a{
   display: inline-block;
   background-color: var(--brand);
   color: #ffffff;
   font-family: 'Inter', sans-serif;
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 2vw, 1rem);
   font-weight: 600;
   padding: 0.6rem 1.3rem;
   border-radius: 28px;
   text-decoration: none;
   transition: background-color 0.25s, transform 0.15s ease;
   box-shadow: 0 4px 12px rgba(24, 100, 171, 0.15);
-}
-.btn-group a:hover{ background-color: var(--brand-dark); transform: translateY(-2px); }
-#artigos .btn-group a{
-  flex: 1;
-  min-width: 220px;
-  text-align: center;
-  font-size: 0.96rem;
-  white-space: nowrap;
 }
 
 /* ======================== 14. RODAPÉ ======================== */
@@ -273,8 +238,8 @@ footer{
   background: #223b53;
   color: #ffffff;
   text-align: center;
-  padding: 1.2rem 0;
-  font-size: 1rem;
+  padding: clamp(0.8rem, 2vw, 1.2rem) 0;
+  font-size: clamp(0.9rem, 1.8vw, 1rem);
   font-family: 'Inter', sans-serif;
   box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
   position: fixed;
@@ -282,23 +247,22 @@ footer{
   left: 0;
   z-index: 99;
 }
-
 /* ======================== 15. BOTÃO WHATSAPP ======================== */
 .whatsapp-button{
   position: fixed;
-  right: 18px;
-  bottom: 85px;
+  right: clamp(12px, 3vw, 18px);
+  bottom: clamp(70px, 10vw, 85px);
   background: #25D366;
   color: #ffffff;
-  padding: 14px 22px;
+  padding: clamp(10px, 2vw, 14px) clamp(16px, 4vw, 22px);
   border-radius: 48px;
   text-decoration: none;
   font-family: 'Inter', sans-serif;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 2vw, 1rem);
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: clamp(6px, 2vw, 10px);
   box-shadow: 0 6px 20px rgba(40, 120, 60, 0.15);
   z-index: 100;
   transition: background-color 0.2s ease, transform 0.2s ease;
@@ -312,18 +276,17 @@ footer{
   outline: 3px solid #b6f5cc;
   outline-offset: 2px;
 }
-
 /* ======================== 16. FORMULÁRIO ======================== */
 form{ margin-top: 1rem; }
 input[type="text"], input[type="email"], textarea{
   width: 100%;
-  padding: 0.75rem 1rem;
+  padding: clamp(0.6rem, 2vw, 0.75rem) clamp(0.8rem, 2vw, 1rem);
   margin: 0.25rem 0 1rem 0;
   border-radius: 10px;
   border: 1px solid #c7d7e6;
   background: #f9fbfc;
   font-family: 'Inter', sans-serif;
-  font-size: 1rem;
+  font-size: clamp(0.95rem, 2vw, 1rem);
   line-height: 1.5;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
   transition: border 0.2s, box-shadow 0.2s;
@@ -346,9 +309,9 @@ button[type="submit"]{
   font-family: 'Inter', sans-serif;
   border: none;
   border-radius: 32px;
-  padding: 0.7rem 1.4rem;
+  padding: clamp(0.6rem, 2vw, 0.7rem) clamp(1rem, 3vw, 1.4rem);
   font-weight: 600;
-  font-size: 1rem;
+  font-size: clamp(0.95rem, 2vw, 1rem);
   cursor: pointer;
   transition: background-color 0.25s, transform 0.15s ease;
   box-shadow: 0 4px 14px rgba(24, 100, 171, 0.15);
@@ -362,19 +325,16 @@ button[type="submit"]:focus-visible{
   outline: 3px solid #a3d3ff;
   outline-offset: 2px;
 }
-
 /* ======================== 17. MENSAGEM DE SUCESSO ======================== */
 #mensagem-sucesso{
   display: none;
   background-color: #dff0d8;
   color: #3c763d;
-  padding: 15px;
+  padding: clamp(10px, 2vw, 15px);
   border-radius: 5px;
-  margin-bottom: 20px;
-  font-weight: bold;
-  text-align: center;
+  margin-bottom: clamp(12px, 3vw, 20px);
+  font-size: clamp(0.9rem, 2vw, 1rem);
 }
-
 /* ======================== 18. CARROSSEL ======================== */
 .carousel-container{
   position: relative;
@@ -390,106 +350,50 @@ button[type="submit"]:focus-visible{
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
 }
-.carousel-container:focus-visible{
-  outline: 3px solid #a3d3ff;
-  outline-offset: 3px;
-}
 .carousel-track{
   display: flex;
-  width: 100%;
-  height: 100%;
-  align-items: stretch;
-  transition: transform 0.6s ease;
+  transition: transform 0.5s ease;
   will-change: transform;
-  position: relative;
-  z-index: 1;
-  touch-action: pan-y;
 }
 .carousel-item{
   flex: 0 0 100%;
-  min-width: 100%;
-  width: 100%;
-  height: 100%;
-  padding: 0; /* slide é a imagem */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 16px;
-  position: relative;
-  overflow: hidden;
-  background: #0f2743; /* letterbox discreto */
-}
-.carousel-item img.carousel-img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-  border-radius: 16px;
-  -webkit-user-drag: none;
   user-select: none;
-}  /* ← fecha aqui o bloco da imagem */
-.carousel-item p{
-  font-size: clamp(1rem, 2.1vw, 1.15rem);
-  max-width: 900px;
-  text-align: center;
-  text-shadow: 1px 1px 6px rgba(0,0,0,.35);
 }
-
-/* Botões (Anterior/Próximo) */
-/* Navegação manual desativada — esconder completamente os botões */
-.carousel-nav,
 .carousel-prev,
 .carousel-next{
-  display: none !important;
-}
-
-/* Dots/pagers — overlay “colado” ao card */
-.carousel-dots{
   position: absolute;
-  inset-inline: 0.25rem;
-  bottom: 0.25rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.375rem;
-  padding: 0.125rem 0.25rem;
-  margin: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.4); /* corrigido */
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: clamp(28px, 5vw, 36px);
+  height: clamp(28px, 5vw, 36px);
+  cursor: pointer;
   z-index: 2;
 }
-.carousel-dots button{
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.9);
-  background: rgba(255, 255, 255, 0.3);
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-}
-.carousel-dots button[aria-current="true"]{ background: #ffffff; }
-.carousel-dots button:focus-visible{ outline: 2px solid var(--brand); outline-offset: 2px; }
 
 /* ======================== 19. ACESSIBILIDADE / PREFERÊNCIAS DE MOVIMENTO ======================== */
-@media (prefers-reduced-motion: reduce){
-  *{ animation: none !important; transition: none !important; }
-  .carousel-track{ transition: none !important; }
-}
-/* Ajuste de textos justificados em seções específicas */
-#artigos p{ text-align: justify; }
-@media (max-width: 900px){
-  .carousel-container{
-    height: var(--carousel-h-md);
-    max-width: var(--container-max);
-    touch-action: pan-y;
-    overscroll-behavior: contain;
-    margin: var(--gap-top) auto 0;
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
   }
 }
 
+/* Ajuste de textos justificados em seções específicas */
+#artigos p{ text-align: justify; }
+
+@media (max-width: 900px){
+  .carousel-container{
+    height: var(--carousel-h-md);
+    margin: var(--gap-top) auto 0;
+  }
+}
 @media (max-width: 600px){
   .carousel-container{
     height: var(--carousel-h-sm);
   }
 }
-
-
