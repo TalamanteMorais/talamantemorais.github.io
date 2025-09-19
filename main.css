@@ -383,12 +383,13 @@ button[type="submit"]:focus-visible{
   width: 100%;
   max-width: var(--container-max);
   height: var(--carousel-h-desktop);
-  background: #000; /* evita flash claro enquanto as imagens carregam */
+  background: #000;
   touch-action: pan-y;
   overscroll-behavior: contain;
   margin: var(--gap-top) auto 0;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
 }
-
 .carousel-container:focus-visible{
   outline: 3px solid #a3d3ff;
   outline-offset: 3px;
@@ -427,37 +428,7 @@ button[type="submit"]:focus-visible{
   border-radius: 16px;
   -webkit-user-drag: none;
   user-select: none;
-}
-/* títulos/descrições opcionais sobre a imagem (se usados) */
-.carousel-item h3{
-  font-weight: 700;
-  font-size: clamp(1.3rem, 2.6vw, 1.8rem);
-  margin-bottom: .4rem;
-  text-align: center;
-  text-shadow: 1px 1px 6px rgba(0,0,0,.35);
-}
-
-.carousel-item p{
-  font-size: clamp(1rem, 2.1vw, 1.15rem);
-  max-width: 900px;
-  text-align: center;
-  text-shadow: 1px 1px 6px rgba(0,0,0,.35);
-}
-
-``` :contentReference[oaicite:0]{index=0}
-
-### NOVO (substitui o bloco acima por este)
-```css
-
-/* títulos/descrições opcionais sobre a imagem (se usados) */
-.carousel-item h3{
-  font-weight: 700;
-  font-size: clamp(1.3rem, 2.6vw, 1.8rem);
-  margin-bottom: .4rem;
-  text-align: center;
-  text-shadow: 1px 1px 6px rgba(0,0,0,.35);
-}
-
+}  /* ← fecha aqui o bloco da imagem */
 .carousel-item p{
   font-size: clamp(1rem, 2.1vw, 1.15rem);
   max-width: 900px;
@@ -503,10 +474,8 @@ button[type="submit"]:focus-visible{
   *{ animation: none !important; transition: none !important; }
   .carousel-track{ transition: none !important; }
 }
-
 /* Ajuste de textos justificados em seções específicas */
-#artigos p, #curriculo p{ text-align: justify; }
-
+#artigos p{ text-align: justify; }
 @media (max-width: 900px){
   .carousel-container{
     height: var(--carousel-h-md);
@@ -516,3 +485,11 @@ button[type="submit"]:focus-visible{
     margin: var(--gap-top) auto 0;
   }
 }
+
+@media (max-width: 600px){
+  .carousel-container{
+    height: var(--carousel-h-sm);
+  }
+}
+
+
