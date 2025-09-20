@@ -319,28 +319,26 @@ if (carouselContainer) {
       });
     });
   }
-
-  // Atualiza o ano do rodapé
 // Atualiza o ano do rodapé
 const anoEl = document.getElementById("ano");
 if (anoEl) anoEl.textContent = new Date().getFullYear();
 
 // (removido: inicialização duplicada — já iniciamos/pausamos o carrossel no bloco principal)
-// ======================== AGENDA DE VÍDEOS — 14:00 → 13:59 DA PRÓXIMA SESSÃO ========================
+// ======================== AGENDA DE VÍDEOS — AUTOMÁTICA (CANAL AO VIVO + PLAYLIST) ========================
 (function(){
   const iframe = document.getElementById("ao-vivo-frame");
   if (!iframe) return;
 
-  // Vídeo padrão caso não haja sessão vigente/cadastrada
+  // Fallback geral
   const VIDEOID_DEFAULT = "r8mShBxMobY";
 
-  // Sessões conhecidas — começam às 14:00 (America/Sao_Paulo)
-  // Mantém o vídeo ATÉ 13:59 do dia da PRÓXIMA sessão.
-  // ⚠️ Substitua o ID do dia 23/09 pelo real quando disponível.
-  const SESSOES = [
-    { id: "853hbpSLp1k", inicio: "2025-09-18T14:00:00-03:00" }, // 18/09/2025 14:00
-    { id: "VIDEO_ID_2025_09_23", inicio: "2025-09-23T14:00:00-03:00" } // 23/09/2025 14:00
-  ];
+  // Canal oficial do TCM GO (para live no horário da sessão)
+  const CHANNEL_ID_TCMGO = "UCZ5_VJLOFbxhXZzPtqbTDZA";
+
+  // Playlist oficial (fora do horário, mostra sempre o vídeo mais recente)
+  // Confirmada pelo seu link: watch?v=853hbpSLp1k&list=PL8nJKs1bbIhqYIQP9g4b7_uh3BAFtWGcC
+  const PLAYLIST_ID_TCMGO = "PL8nJKs1bbIhqYIQP9g4b7_uh3BAFtWGcC";
+
   function nowSP(){
     const n = new Date();
     return new Date(n.toLocaleString("en-US", { timeZone: "America/Sao_Paulo" }));
@@ -348,38 +346,29 @@ if (anoEl) anoEl.textContent = new Date().getFullYear();
 
   try {
     const t = nowSP();
-    let src = `https://www.youtube-nocookie.com/embed/${VIDEOID_DEFAULT}`;
+    const dia = t.getDay(); // 0=Dom,1=Seg,2=Ter,3=Qua,4=Qui,5=Sex,6=Sáb
+    const hora = t.getHours();
 
-    if (SESSOES.length) {
-      // Ordena por início
-      const ordenadas = [...SESSOES].sort((a,b) => new Date(a.inicio) - new Date(b.inicio));
+    // Janela operacional: ter/qua/qui a partir de 14:00 → tenta live do canal
+    const dentroJanelaLive = (dia === 2 || dia === 3 || dia === 4) && (hora >= 14);
 
-      // Última sessão cujo início <= agora
-      let idx = -1;
-      for (let i = 0; i < ordenadas.length; i++) {
-        if (new Date(ordenadas[i].inicio) <= t) idx = i; else break;
-      }
-
-      if (idx >= 0) {
-        const atual = ordenadas[idx];
-        const prox  = ordenadas[idx + 1] ? new Date(ordenadas[idx + 1].inicio) : null;
-
-        // Janela: [início da sessão atual, 13:59:59 do dia da próxima sessão]
-        const inicioAtual = new Date(atual.inicio);
-        const limiteAtual = prox
-          ? new Date(prox.getFullYear(), prox.getMonth(), prox.getDate(), 13, 59, 59)
-          : null; // sem próxima → mantém indefinidamente
-
-        const dentroDaJanela = t >= inicioAtual && (!limiteAtual || t <= limiteAtual);
-        if (dentroDaJanela) {
-          src = `https://www.youtube-nocookie.com/embed/${atual.id}`;
-        }
-      }
+    let src;
+    if (dentroJanelaLive) {
+      // Se houver transmissão ao vivo, o player exibirá; se não houver, indicará indisponível
+      src = `https://www.youtube-nocookie.com/embed/live_stream?channel=${CHANNEL_ID_TCMGO}`;
+    } else {
+      // Fora do horário de sessão → playlist com o vídeo mais recente
+      src = `https://www.youtube-nocookie.com/embed/videoseries?list=${PLAYLIST_ID_TCMGO}`;
     }
 
     if (iframe.src !== src) iframe.src = src;
   } catch (e) {
-    console.error("Erro na agenda de vídeos (14:00 → 13:59):", e);
+    console.error("Erro na agenda automática (canal + playlist):", e);
+    // Fallback de segurança
+    try {
+      const fallback = `https://www.youtube-nocookie.com/embed/${VIDEOID_DEFAULT}`;
+      if (iframe.src !== fallback) iframe.src = fallback;
+    } catch(_) {}
   }
 })();
 
