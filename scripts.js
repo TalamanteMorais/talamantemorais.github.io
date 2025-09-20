@@ -321,9 +321,10 @@ if (carouselContainer) {
   }
 
   // Atualiza o ano do rodapé
-  const anoEl = document.getElementById("anoAtual");
-  if (anoEl) anoEl.textContent = new Date().getFullYear();
-});
+// Atualiza o ano do rodapé
+const anoEl = document.getElementById("ano");
+if (anoEl) anoEl.textContent = new Date().getFullYear();
+
 // (removido: inicialização duplicada — já iniciamos/pausamos o carrossel no bloco principal)
 // ======================== AGENDA DE VÍDEOS — 14:00 → 13:59 DA PRÓXIMA SESSÃO ========================
 (function(){
