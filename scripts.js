@@ -326,4 +326,35 @@ if (carouselContainer) {
 });
 
 // (removido: inicialização duplicada — já iniciamos/pausamos o carrossel no bloco principal)
+// ======================== AGENDA DE VÍDEOS — AO VIVO ========================
+(function(){
+  const iframe = document.getElementById("ao-vivo-frame");
+  if (!iframe) return;
+
+  const VIDEOID_DEFAULT = "r8mShBxMobY"; // atual padrão
+  const VIDEOID_TCMGO   = "fZTDyTXom0w"; // TCM GO
+
+  try {
+    const agora = new Date();
+    const opcoes = { timeZone: "America/Sao_Paulo", hour12: false };
+    const dataLocal = new Date(agora.toLocaleString("en-US", opcoes));
+
+    const dia = dataLocal.getDay();   // 0=Dom, 1=Seg, 2=Ter, 3=Qua, 4=Qui, 5=Sex, 6=Sáb
+    const hora = dataLocal.getHours();
+    const minuto = dataLocal.getMinutes();
+    const minutosTotais = hora * 60 + minuto;
+
+    const inicio = 14 * 60;        // 14:00 → 840 minutos
+    const fim = 18 * 60 + 30;      // 18:30 → 1110 minutos
+
+    let videoId = VIDEOID_DEFAULT;
+    if ((dia === 2 || dia === 3 || dia === 4) && (minutosTotais >= inicio && minutosTotais <= fim)) {
+      videoId = VIDEOID_TCMGO;
+    }
+
+    iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}`;
+  } catch(e) {
+    console.error("Erro ao definir vídeo ao vivo:", e);
+  }
+})();
 
