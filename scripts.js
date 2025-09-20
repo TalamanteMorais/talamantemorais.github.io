@@ -324,37 +324,62 @@ if (carouselContainer) {
   const anoEl = document.getElementById("anoAtual");
   if (anoEl) anoEl.textContent = new Date().getFullYear();
 });
-
 // (removido: inicialização duplicada — já iniciamos/pausamos o carrossel no bloco principal)
-// ======================== AGENDA DE VÍDEOS — AO VIVO ========================
+// ======================== AGENDA DE VÍDEOS — 14:00 → 13:59 DA PRÓXIMA SESSÃO ========================
 (function(){
   const iframe = document.getElementById("ao-vivo-frame");
   if (!iframe) return;
 
-  const VIDEOID_DEFAULT = "r8mShBxMobY"; // atual padrão
-  const VIDEOID_TCMGO   = "fZTDyTXom0w"; // TCM GO
+  // Vídeo padrão caso não haja sessão vigente/cadastrada
+  const VIDEOID_DEFAULT = "r8mShBxMobY";
+
+  // Sessões conhecidas — começam às 14:00 (America/Sao_Paulo)
+  // Mantém o vídeo ATÉ 13:59 do dia da PRÓXIMA sessão.
+  // ⚠️ Substitua o ID do dia 23/09 pelo real quando disponível.
+  const SESSOES = [
+    { id: "fZTDyTXom0w", inicio: "2025-09-18T14:00:00-03:00" }, // 18/09/2025 14:00
+    { id: "VIDEO_ID_2025_09_23", inicio: "2025-09-23T14:00:00-03:00" } // 23/09/2025 14:00
+  ];
+
+  function nowSP(){
+    const n = new Date();
+    return new Date(n.toLocaleString("en-US", { timeZone: "America/Sao_Paulo" }));
+  }
 
   try {
-    const agora = new Date();
-    const opcoes = { timeZone: "America/Sao_Paulo", hour12: false };
-    const dataLocal = new Date(agora.toLocaleString("en-US", opcoes));
+    const t = nowSP();
+    let src = `https://www.youtube-nocookie.com/embed/${VIDEOID_DEFAULT}`;
 
-    const dia = dataLocal.getDay();   // 0=Dom, 1=Seg, 2=Ter, 3=Qua, 4=Qui, 5=Sex, 6=Sáb
-    const hora = dataLocal.getHours();
-    const minuto = dataLocal.getMinutes();
-    const minutosTotais = hora * 60 + minuto;
+    if (SESSOES.length) {
+      // Ordena por início
+      const ordenadas = [...SESSOES].sort((a,b) => new Date(a.inicio) - new Date(b.inicio));
 
-    const inicio = 14 * 60;        // 14:00 → 840 minutos
-    const fim = 18 * 60 + 30;      // 18:30 → 1110 minutos
+      // Última sessão cujo início <= agora
+      let idx = -1;
+      for (let i = 0; i < ordenadas.length; i++) {
+        if (new Date(ordenadas[i].inicio) <= t) idx = i; else break;
+      }
 
-    let videoId = VIDEOID_DEFAULT;
-    if ((dia === 2 || dia === 3 || dia === 4) && (minutosTotais >= inicio && minutosTotais <= fim)) {
-      videoId = VIDEOID_TCMGO;
+      if (idx >= 0) {
+        const atual = ordenadas[idx];
+        const prox  = ordenadas[idx + 1] ? new Date(ordenadas[idx + 1].inicio) : null;
+
+        // Janela: [início da sessão atual, 13:59:59 do dia da próxima sessão]
+        const inicioAtual = new Date(atual.inicio);
+        const limiteAtual = prox
+          ? new Date(prox.getFullYear(), prox.getMonth(), prox.getDate(), 13, 59, 59)
+          : null; // sem próxima → mantém indefinidamente
+
+        const dentroDaJanela = t >= inicioAtual && (!limiteAtual || t <= limiteAtual);
+        if (dentroDaJanela) {
+          src = `https://www.youtube-nocookie.com/embed/${atual.id}`;
+        }
+      }
     }
 
-    iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}`;
-  } catch(e) {
-    console.error("Erro ao definir vídeo ao vivo:", e);
+    if (iframe.src !== src) iframe.src = src;
+  } catch (e) {
+    console.error("Erro na agenda de vídeos (14:00 → 13:59):", e);
   }
 })();
 
