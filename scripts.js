@@ -324,7 +324,7 @@ const anoEl = document.getElementById("ano");
 if (anoEl) anoEl.textContent = new Date().getFullYear();
 
 // (removido: inicialização duplicada — já iniciamos/pausamos o carrossel no bloco principal)
-// ======================== AGENDA DE VÍDEOS — AUTOMÁTICA (CANAL AO VIVO + PLAYLIST) ========================
+// ======================== AGENDA DE VÍDEOS — AUTOMÁTICA (CANAL AO VIVO + PLAYLIST, COM FIM DO AO VIVO) ========================
 (function(){
   const iframe = document.getElementById("ao-vivo-frame");
   if (!iframe) return;
@@ -336,7 +336,6 @@ if (anoEl) anoEl.textContent = new Date().getFullYear();
   const CHANNEL_ID_TCMGO = "UCZ5_VJLOFbxhXZzPtqbTDZA";
 
   // Playlist oficial (fora do horário, mostra sempre o vídeo mais recente)
-  // Confirmada pelo seu link: watch?v=853hbpSLp1k&list=PL8nJKs1bbIhqYIQP9g4b7_uh3BAFtWGcC
   const PLAYLIST_ID_TCMGO = "PL8nJKs1bbIhqYIQP9g4b7_uh3BAFtWGcC";
 
   function nowSP(){
@@ -347,23 +346,27 @@ if (anoEl) anoEl.textContent = new Date().getFullYear();
   try {
     const t = nowSP();
     const dia = t.getDay(); // 0=Dom,1=Seg,2=Ter,3=Qua,4=Qui,5=Sex,6=Sáb
-    const hora = t.getHours();
+    const minutos = t.getHours() * 60 + t.getMinutes();
 
-    // Janela operacional: ter/qua/qui a partir de 14:00 → tenta live do canal
-    const dentroJanelaLive = (dia === 2 || dia === 3 || dia === 4) && (hora >= 14);
+    // Janela de live com término definido:
+    // TER/QUA/QUI das 14:00 até 18:59 → tenta live do canal
+    const INICIO_LIVE = 14 * 60;         // 14:00
+    const FIM_LIVE    = 18 * 60 + 59;    // 18:59
+    const eDiaDeSessao = (dia === 2 || dia === 3 || dia === 4);
+    const dentroJanelaLive = eDiaDeSessao && (minutos >= INICIO_LIVE && minutos <= FIM_LIVE);
 
     let src;
     if (dentroJanelaLive) {
-      // Se houver transmissão ao vivo, o player exibirá; se não houver, indicará indisponível
+      // Durante a janela → tenta ao vivo
       src = `https://www.youtube-nocookie.com/embed/live_stream?channel=${CHANNEL_ID_TCMGO}`;
     } else {
-      // Fora do horário de sessão → playlist com o vídeo mais recente
+      // Fora da janela → imediatamente volta para a playlist (evita tela "indisponível")
       src = `https://www.youtube-nocookie.com/embed/videoseries?list=${PLAYLIST_ID_TCMGO}`;
     }
 
     if (iframe.src !== src) iframe.src = src;
   } catch (e) {
-    console.error("Erro na agenda automática (canal + playlist):", e);
+    console.error("Erro na agenda automática (live+playlist com término):", e);
     // Fallback de segurança
     try {
       const fallback = `https://www.youtube-nocookie.com/embed/${VIDEOID_DEFAULT}`;
@@ -371,4 +374,5 @@ if (anoEl) anoEl.textContent = new Date().getFullYear();
     } catch(_) {}
   }
 })();
+
 
