@@ -1,21 +1,9 @@
 <!--
   INSTRUÇÕES GERAIS DE MANUTENÇÃO E ATUALIZAÇÃO
   ----------------------------------------------------------------
-  - Para editar informações, procure por blocos de comentários.
-  - Não altere classes ou estruturas, apenas os textos, links e arquivos.
-  - Para incluir novo serviço, artigo, experiência ou publicação,
-    copie o bloco correspondente conforme indicado em cada seção.
-  - O rodapé já tem o ano atualizado automaticamente; não edite manualmente.
-  - Contatos e links importantes estão centralizados no topo do arquivo.
--->
 <!DOCTYPE html>
 <html lang="pt-BR">
-<!--
-  METADADOS E CONFIGURAÇÕES DO SITE
-  ----------------------------------------------------------------
-  Esta seção contém configurações essenciais para SEO, segurança, visual e fontes.
-  Não remova ou reordene as linhas abaixo sem revisão técnica.
--->
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,11 +17,6 @@
   <!-- Segurança -->
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://script.google.com https://script.googleusercontent.com https://www.google-analytics.com https://www.recaptcha.net https://www.google.com https://www.gstatic.com; frame-src https://www.recaptcha.net https://www.google.com https://www.youtube-nocookie.com; script-src 'self' https://www.googletagmanager.com https://www.google.com https://www.gstatic.com https://script.google.com https://www.recaptcha.net 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src https://fonts.gstatic.com; img-src 'self' https: data:;">
  <meta name="referrer" content="strict-origin-when-cross-origin">
-  <!-- X-Frame-Options deve ser definido via servidor. Configure como:
-       X-Frame-Options: SAMEORIGIN -->
-
-  <!-- Título -->
-  <title>Talamante Morais | Advocacia Pública Municipal e Direito Administrativo</title>
 
   <!-- Fontes Google (Inter) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -61,22 +44,6 @@
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-
-<!--
-  DADOS DE CONTATO E LINKS PRINCIPAIS (EDITE AQUI)
-  ----------------------------------------------------------------
-  Email: talamantemorais@gmail.com
-  WhatsApp: (62) 99631-8340
-  Instagram: https://www.instagram.com/talamantemorais/
-  Facebook: https://www.facebook.com/talamante.morais.100
-  LinkedIn: https://www.linkedin.com/in/talamante-morais-a51535221/
-  YouTube: https://www.youtube.com/@TalamanteMorais
-  QR Code: qrcode_talamante_site.png
-  Currículo: curriculo_talamante.pdf
-  Artigo Técnico: docs/artigo_implementacao_local.pdf
-  Último Vídeo (YouTube): https://www.youtube.com/embed/EXEMPLO_VIDEO
--->
-
 <header class="section-header">
   <h1>Talamante Morais</h1>
   <p>Advocacia Pública Municipal</p>
@@ -129,10 +96,7 @@
     <p class="intro-text">
       Somos uma referência em Advocacia Pública Municipal, Direito Privado e capacitação profissional. Nosso compromisso é unir experiência, ética e técnica para oferecer assessoria jurídica e treinamentos de excelência a clientes públicos e privados.
     </p>
-<!-- (removido) -->
 </section>
-
-
   <section id="sobre">
     <h2>Sobre o Escritório</h2>
     <ul class="valores-lista">
@@ -140,66 +104,13 @@
       <li><strong>Visão:</strong> Ser referência em Direito Administrativo Municipal.</li>
       <li><strong>Valores:</strong> Ética, Transparência, Técnica e Comprometimento.</li>
     </ul>
+</section>
   <!-- Vídeos: Ao vivo agora -->
   <section aria-describedby="descricao-ao-vivo">
     <h2 class="service-title">Ao vivo agora</h2>
     <p id="descricao-ao-vivo" class="service-desc">
       Um único destaque embutido para melhor desempenho e estabilidade 24/7.
     </p>
-
-    <figure class="video-embed" style="max-width: var(--container-max); margin: 0 auto 1rem;">
-      <iframe
-        src="https://www.youtube-nocookie.com/embed/EXEMPLOIDLIVE"
-        title="Transmissão ao vivo"
-        loading="lazy"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
-        style="width:100%; aspect-ratio:16/9; border:0; border-radius:10px;"></iframe>
-      <figcaption style="text-align:center; margin-top:.4rem;">Transmissão ao vivo — substitua o ID pelo seu vídeo/live.</figcaption>
-    </figure>
-  </section>
-
-  <!-- Vídeos: Grade -->
-  <section aria-labelledby="titulo-grade">
-    <h2 id="titulo-grade" class="service-title">Vídeos do YouTube</h2>
-    <p class="service-desc">
-      Cada item é um <code>&lt;li&gt;</code> com <strong>título</strong>, <strong>link</strong> e miniatura opcional.
-    </p>
-
-    <ul class="video-grid" aria-label="Lista de vídeos">
-      <li class="video-card">
-        <a href="https://www.youtube.com/watch?v=EXEMPLOID1" target="_blank" rel="noopener noreferrer"
-           aria-label="Abrir no YouTube: Título do Vídeo 1 (abre em nova aba)">
-          <img src="https://img.youtube.com/vi/EXEMPLOID1/hqdefault.jpg" alt="Miniatura do vídeo: Título do Vídeo 1" loading="lazy">
-          <span class="video-title">Título do Vídeo 1</span>
-          <span class="video-desc">Descrição opcional.</span>
-        </a>
-      </li>
-
-      <li class="video-card">
-        <a href="https://www.youtube.com/watch?v=EXEMPLOID2" target="_blank" rel="noopener noreferrer"
-           aria-label="Abrir no YouTube: Título do Vídeo 2 (abre em nova aba)">
-          <img src="https://img.youtube.com/vi/EXEMPLOID2/hqdefault.jpg" alt="Miniatura do vídeo: Título do Vídeo 2" loading="lazy">
-          <span class="video-title">Título do Vídeo 2</span>
-          <span class="video-desc">Descrição opcional.</span>
-        </a>
-      </li>
-
-      <li class="video-card">
-        <a href="https://www.youtube.com/watch?v=EXEMPLOID3" target="_blank" rel="noopener noreferrer"
-           aria-label="Abrir no YouTube: Título do Vídeo 3 (abre em nova aba)">
-          <span class="video-title">Título do Vídeo 3</span>
-          <span class="video-desc">Minimalista (sem miniatura).</span>
-        </a>
-      </li>
-  <!-- Vídeos: Ao vivo agora -->
-  <section aria-describedby="descricao-ao-vivo">
-    <h2 class="service-title">Ao vivo agora</h2>
-    <p id="descricao-ao-vivo" class="service-desc">
-      Um único destaque embutido para melhor desempenho e estabilidade 24/7.
-    </p>
-
     <figure class="video-embed" style="max-width: var(--container-max); margin: 0 auto 1rem;">
       <iframe
         src="https://www.youtube-nocookie.com/embed/r8mShBxMobY"
@@ -212,30 +123,11 @@
       <figcaption style="text-align:center; margin-top:.4rem;">Transmissão ao vivo</figcaption>
     </figure>
   </section>
+<section id="servicos">
 
-  <!-- Vídeos: Grade -->
-  <section aria-labelledby="titulo-grade">
-    <h2 id="titulo-grade" class="service-title">Vídeos do YouTube</h2>
-    <p class="service-desc">
-      Cada item é um <code>&lt;li&gt;</code> com <strong>título</strong>, <strong>link</strong> e miniatura opcional.
-    </p>
-
-    <ul class="video-grid" aria-label="Lista de vídeos">
-      <li class="video-card">
-        <a href="https://www.youtube.com/watch?v=r8mShBxMobY" target="_blank" rel="noopener noreferrer"
-           aria-label="Abrir no YouTube: Transmissão ao vivo (abre em nova aba)">
-          <img src="https://img.youtube.com/vi/r8mShBxMobY/hqdefault.jpg" alt="Miniatura do vídeo: Transmissão ao vivo" loading="lazy">
-          <span class="video-title">Transmissão ao vivo</span>
-          <span class="video-desc">Vídeo destacado no canal do YouTube.</span>
-        </a>
-      </li>
-    </ul>
-  </section>
     <h2>Nossos Serviços</h2>
-
     <!-- INÍCIO DOS SERVIÇOS -->
     <div class="services-grid">
-
       <div class="service-card" id="direito-publico">
         <h3 class="service-title">Direito Público</h3>
         <div class="service-desc">
@@ -245,17 +137,6 @@
         </div>
         <a class="cta-btn" href="#direito-publico">Saiba Mais</a>
       </div>
-
-      <!-- EXEMPLO DE BLOCO DE SERVIÇO (COPIE PARA NOVOS SERVIÇOS) -->
-      <!--
-      <div class="service-card">
-        <h3 class="service-title">Novo Serviço</h3>
-        <div class="service-desc">
-          Descrição detalhada do novo serviço.
-        </div>
-        <a class="cta-btn" href="novo-servico.html">Acessar</a>
-      </div>
-      -->
 
       <div class="service-card" id="direito-privado">
         <h3 class="service-title">Direito Privado</h3>
@@ -340,13 +221,9 @@
   </section>
 
 </main>
-
-<!-- INSTRUÇÃO PARA O RODAPÉ:
-     O ano do rodapé é atualizado automaticamente via JavaScript, não altere manualmente. -->
-<footer>
+<footer role="contentinfo">
   &copy; <span id="anoAtual"></span> Talamante Morais – Todos os direitos reservados.
 </footer>
-
 <a class="whatsapp-button"
    href="https://wa.me/556296318340"
    target="_blank"
