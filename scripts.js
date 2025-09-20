@@ -337,10 +337,10 @@ if (carouselContainer) {
   // Mantém o vídeo ATÉ 13:59 do dia da PRÓXIMA sessão.
   // ⚠️ Substitua o ID do dia 23/09 pelo real quando disponível.
   const SESSOES = [
-    { id: "fZTDyTXom0w", inicio: "2025-09-18T14:00:00-03:00" }, // 18/09/2025 14:00
-    { id: "VIDEO_ID_2025_09_23", inicio: "2025-09-23T14:00:00-03:00" } // 23/09/2025 14:00
-  ];
-
+const SESSOES = [
+  { id: "853hbpSLp1k", inicio: "2025-09-18T14:00:00-03:00" }, // 18/09/2025 14:00
+  { id: "VIDEO_ID_2025_09_23", inicio: "2025-09-23T14:00:00-03:00" } // 23/09/2025 14:00
+];
   function nowSP(){
     const n = new Date();
     return new Date(n.toLocaleString("en-US", { timeZone: "America/Sao_Paulo" }));
