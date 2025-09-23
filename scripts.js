@@ -326,9 +326,12 @@ if (anoEl) anoEl.textContent = new Date().getFullYear();
 // (removido: inicialização duplicada — já iniciamos/pausamos o carrossel no bloco principal)
 // ======================== AGENDA DE VÍDEOS — AUTOMÁTICA (PLAYLIST COMO BASE + LIVE NO HORÁRIO) ========================
 (function(){
-  const iframe = document.getElementById("ao-vivo-frame");
+    const iframe = document.getElementById("ao-vivo-frame");
   if (!iframe) return;
-
+// Se o HTML já definiu um vídeo específico (não 'videoseries' nem 'live_stream'), não alterar:
+const currentSrc = iframe.getAttribute('src') || '';
+const isSpecificVideo = currentSrc.includes('/embed/') && !currentSrc.includes('videoseries') && !currentSrc.includes('live_stream');
+if (isSpecificVideo) return;
   const VIDEOID_DEFAULT = "r8mShBxMobY";
   const CHANNEL_ID_TCMGO = "UCZ5_VJLOFbxhXZzPtqbTDZA";
   const PLAYLIST_ID_TCMGO = "PL8nJKs1bbIhqYIQP9g4b7_uh3BAFtWGcC";
