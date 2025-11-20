@@ -1,5 +1,49 @@
 // ======================== SCRIPT GERAL DO SITE ========================
 document.addEventListener("DOMContentLoaded", function () {
+  // Último vídeo publicado no canal YouTube (YouTube Data API v3)
+  (function () {
+    var iframeUltimo = document.getElementById("ultimo-video-youtube");
+    if (!iframeUltimo) return;
+
+    // Preencher com os dados reais do projeto YouTube:
+var API_KEY = ""; // deixe vazio até adicionar a chave real
+var CHANNEL_ID = "UCifA0MpzCwCYfiuQY4E6S9A";
+var url = "https://www.googleapis.com/youtube/v3/search"
+  + "?key=" + encodeURIComponent(API_KEY || "INVALID")
+  + "&channelId=" + encodeURIComponent(CHANNEL_ID)
+  + "&part=snippet"
+  + "&order=date"
+  + "&maxResults=1";
+
+    fetch(url)
+      .then(function (response) {
+        if (!response.ok) {
+          throw new Error("Erro ao consultar a API do YouTube: " + response.status);
+        }
+        return response.json();
+      })
+      .then(function (data) {
+        if (!data.items || data.items.length === 0) {
+          return;
+        }
+
+        var item = data.items[0];
+        var videoId = item.id && item.id.videoId ? item.id.videoId : null;
+        if (!videoId) {
+          return;
+        }
+
+        var novoSrc = "https://www.youtube-nocookie.com/embed/" + videoId;
+
+        if (iframeUltimo.src !== novoSrc) {
+          iframeUltimo.src = novoSrc;
+          iframeUltimo.title = "Último vídeo publicado no canal Talamante Morais";
+        }
+      })
+      .catch(function (erro) {
+        console.error("Erro ao carregar o último vídeo do canal:", erro);
+      });
+  })();
 
 // ======================== CARROSSEL AUTOMÁTICO TEMÁTICO ========================
 const track = document.querySelector(".carousel-track");
@@ -319,56 +363,12 @@ if (carouselContainer) {
       });
     });
   }
+  }
 // Atualiza o ano do rodapé
 const anoEl = document.getElementById("ano");
 if (anoEl) anoEl.textContent = new Date().getFullYear();
 
-// (removido: inicialização duplicada — já iniciamos/pausamos o carrossel no bloco principal)
-// ======================== AGENDA DE VÍDEOS — AUTOMÁTICA (PLAYLIST COMO BASE + LIVE NO HORÁRIO) ========================
-(function(){
-    const iframe = document.getElementById("ao-vivo-frame");
-  if (!iframe) return;
-// Se o HTML já definiu um vídeo específico (não 'videoseries' nem 'live_stream'), não alterar:
-const currentSrc = iframe.getAttribute('src') || '';
-const isSpecificVideo = currentSrc.includes('/embed/') && !currentSrc.includes('videoseries') && !currentSrc.includes('live_stream');
-if (isSpecificVideo) return;
-  const VIDEOID_DEFAULT = "r8mShBxMobY";
-  const CHANNEL_ID_TCMGO = "UCZ5_VJLOFbxhXZzPtqbTDZA";
-  const PLAYLIST_ID_TCMGO = "PL8nJKs1bbIhqYIQP9g4b7_uh3BAFtWGcC";
 
-  function nowSP(){
-    const n = new Date();
-    return new Date(n.toLocaleString("en-US", { timeZone: "America/Sao_Paulo" }));
-  }
-
-  try {
-    const t = nowSP();
-    const dia = t.getDay(); // 0=Dom ... 2=Ter, 3=Qua, 4=Qui
-    const minutos = t.getHours() * 60 + t.getMinutes();
-
-    // 1) Sempre garante algo na tela: playlist
-    let src = `https://www.youtube-nocookie.com/embed/videoseries?list=${PLAYLIST_ID_TCMGO}`;
-
-    // 2) Dentro do horário (TER/QUA/QUI 14:00–18:59), tenta live do canal
-    const INICIO_LIVE = 14 * 60;       // 14:00
-    const FIM_LIVE    = 18 * 60 + 59;  // 18:59
-    const eDiaDeSessao = (dia === 2 || dia === 3 || dia === 4);
-    const dentroJanelaLive = eDiaDeSessao && (minutos >= INICIO_LIVE && minutos <= FIM_LIVE);
-
-    if (dentroJanelaLive) {
-      src = `https://www.youtube-nocookie.com/embed/live_stream?channel=${CHANNEL_ID_TCMGO}`;
-    }
-
-    if (iframe.src !== src) iframe.src = src;
-  } catch (e) {
-    console.error("Erro na agenda automática (playlist como base):", e);
-    // Fallback duro
-    try {
-      const fallback = `https://www.youtube-nocookie.com/embed/${VIDEOID_DEFAULT}`;
-      if (iframe.src !== fallback) iframe.src = fallback;
-    } catch(_) {}
-  }
-})();
 
 
 
