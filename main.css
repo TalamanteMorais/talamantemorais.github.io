@@ -365,20 +365,6 @@ button[type="submit"]:focus-visible{
   flex: 0 0 100%;
   user-select: none;
 }
-.carousel-prev,
-.carousel-next{
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0,0,0,0.4); /* corrigido */
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  width: clamp(28px, 5vw, 36px);
-  height: clamp(28px, 5vw, 36px);
-  cursor: pointer;
-  z-index: 2;
-}
 
 /* ======================== 19. ACESSIBILIDADE / PREFERÊNCIAS DE MOVIMENTO ======================== */
 @media (prefers-reduced-motion: reduce) {
@@ -449,4 +435,34 @@ button[type="submit"]:focus-visible{
   border: 0;
   border-radius: 10px;
   box-shadow: 0 2px 12px rgba(60,60,60,0.09);
+}
+/* Botões do carrossel */
+
+.carousel-prev,
+.carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.35);
+  color: #fff;
+  font-size: 2rem;
+  border: none;
+  padding: 0.3rem 0.8rem;
+  cursor: pointer;
+  border-radius: 6px;
+  z-index: 10;
+  transition: background 0.25s ease;
+}
+
+.carousel-prev:hover,
+.carousel-next:hover {
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.carousel-prev {
+  left: 10px;
+}
+
+.carousel-next {
+  right: 10px;
 }
