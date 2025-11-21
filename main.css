@@ -7,18 +7,6 @@
 06. CARTÕES DE SERVIÇOS
 07. TÍTULO E DESCRIÇÃO DOS SERVIÇOS
 08. BOTÕES
-09. LISTAS
-10. ARTIGOS
-11. VÍDEOS
-12. QR CODE
-13. BOTÕES ESPECIAIS – MATÉRIAS JURÍDICAS
-14. RODAPÉ
-15. BOTÃO WHATSAPP
-16. FORMULÁRIO
-17. MENSAGEM DE SUCESSO
-18. CARROSSEL
-19. ACESSIBILIDADE / PREFERÊNCIAS DE MOVIMENTO
-20. RESPONSIVO
 =================================================================== */
 
 /* ======================== 01. VARIÁVEIS / RESET E CONFIGURAÇÕES GERAIS ======================== */
@@ -31,17 +19,23 @@
   --brand-dark: #12568c;
   --ink: #222222;
 
-  --carousel-h-desktop: 378px; /* ~10 cm */
+  --carousel-h-desktop: 378px;
   --carousel-h-md: 340px;
   --carousel-h-sm: 300px;
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-html { font-size: 16px; scroll-behavior: smooth; }
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
 
 body {
-
   font-family: 'Inter', Arial, sans-serif;
   font-size: clamp(1rem, 2.5vw, 1.2rem);
   background: url('img/Arte_Fundo_1.jpg') no-repeat center center fixed;
@@ -49,11 +43,15 @@ body {
   color: var(--ink);
   line-height: 1.6;
   margin: 0;
-  padding: 0 0 60px 0; /* espaço para rodapé fixo */
+  padding: 0 0 60px 0;
 }
 
-/* elementos de mídia nunca estouram o container */
-img, picture, svg, video { max-width: 100%; height: auto; display: block; }
+img, picture, svg, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* ======================== 02. CABEÇALHO ======================== */
 .section-header{
   background-image: url('img/Arte_Fundo_1.jpg');
@@ -62,18 +60,21 @@ img, picture, svg, video { max-width: 100%; height: auto; display: block; }
   background-repeat: no-repeat;
   padding: 2rem 0 1rem 0;
   text-align: center;
-  color: #0f2743; /* define cor padrão já usada no h1 */
+  color: #0f2743;
 }
+
 .section-header h1{
   font-size: 2.2rem;
   margin-bottom: .5rem;
 }
+
 .section-header p{
   color: #2c4660;
   font-size: 1.2rem;
   margin-top: 0;
   font-weight: 400;
 }
+
 /* ======================== 03. MENU DE NAVEGAÇÃO ======================== */
 .main-nav{
   background: #1c2d3a;
@@ -81,6 +82,7 @@ img, picture, svg, video { max-width: 100%; height: auto; display: block; }
   padding: .7rem 0;
   box-shadow: 0 1px 4px rgba(0,0,0,0.03);
 }
+
 .main-nav a{
   color: #fff;
   text-decoration: none;
@@ -88,12 +90,17 @@ img, picture, svg, video { max-width: 100%; height: auto; display: block; }
   font-weight: 600;
   transition: color .2s;
 }
-.main-nav a:hover{ color: #a3d3ff; }
+
+.main-nav a:hover{
+  color: #a3d3ff;
+}
+
 .main-nav a:focus-visible{
   outline: 3px solid #a3d3ff;
   outline-offset: 2px;
   border-radius: 6px;
 }
+
 /* ======================== 04. SEÇÕES GERAIS ======================== */
 section{
   max-width: var(--container-max);
@@ -105,8 +112,10 @@ section{
   font-family: 'Inter', sans-serif;
 }
 
-/* Ajuste opcional para textos longos justificados */
-.info-box{ text-align: justify; }
+.info-box{
+  text-align: justify;
+}
+
 /* ======================== 05. GRID DE SERVIÇOS ======================== */
 .services-grid{
   display: flex;
@@ -115,6 +124,7 @@ section{
   justify-content: space-between;
   padding: 0 1rem;
 }
+
 /* ======================== 06. CARTÕES DE SERVIÇOS ======================== */
 .service-card{
   background: rgba(255,255,255,0.95);
@@ -130,10 +140,12 @@ section{
   flex-direction: column;
   justify-content: space-between;
 }
+
 .service-card:hover{
   transform: translateY(-6px);
   box-shadow: 0 12px 30px rgba(68,134,255,0.15);
 }
+
 /* ======================== 07. TÍTULO E DESCRIÇÃO DOS SERVIÇOS ======================== */
 .service-title{
   color: var(--brand);
@@ -141,11 +153,13 @@ section{
   font-size: clamp(1rem, 2.5vw, 1.3rem);
   margin-bottom: .8rem;
 }
+
 .service-desc{
   text-align: justify;
   font-size: clamp(0.95rem, 2vw, 1.1rem);
   margin-bottom: 1rem;
 }
+
 /* ======================== 08. BOTÕES ======================== */
 .cta-btn, .main-btn{
   display: inline-block;
@@ -161,13 +175,15 @@ section{
   text-decoration: none;
   transition: background-color 0.25s, transform 0.15s ease;
   box-shadow: 0 4px 14px rgba(24, 100, 171, 0.15);
-  min-width: 120px; /* garante legibilidade em telas pequenas */
+  min-width: 120px;
 }
+
 .cta-btn:hover, .main-btn:hover{
   background-color: var(--brand-dark);
   transform: translateY(-2px);
   box-shadow: 0 6px 18px rgba(24, 100, 171, 0.2);
 }
+
 .cta-btn:focus-visible, .main-btn:focus-visible{
   outline: 3px solid #a3d3ff;
   outline-offset: 2px;
@@ -179,6 +195,7 @@ ul{
 ul li{ 
   margin-bottom: .7rem; 
 }
+
 /* ======================== 10. ARTIGOS ======================== */
 .artigo-meta{
   color: #7c8a97;
@@ -189,8 +206,9 @@ ul li{
   margin-bottom: 1rem;
   line-height: 1.5;
 }
+
 /* ======================== 11. VÍDEOS ======================== */
-/* (removido: substituído por .video-embed e .video-grid nas seções 21 e 22) */
+/* substituído por .video-embed e .video-grid nas seções 21 e 22 */
 
 /* ======================== 12. QR CODE ======================== */
 .qrcode-container{
@@ -206,11 +224,13 @@ ul li{
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
   max-width: clamp(220px, 90%, 300px);
 }
+
 .qrcode-container img{
   width: clamp(90px, 25vw, 120px);
   height: auto;
   border-radius: 8px;
 }
+
 /* ======================== 13. BOTÕES ESPECIAIS – MATÉRIAS JURÍDICAS ======================== */
 .btn-group a{
   display: inline-block;
@@ -224,6 +244,28 @@ ul li{
   text-decoration: none;
   transition: background-color 0.25s, transform 0.15s ease;
   box-shadow: 0 4px 12px rgba(24, 100, 171, 0.15);
+}
+
+/* CENTRALIZAÇÃO DOS BOTÕES INFERIORES */
+.bottom-links,
+.links-footer,
+.section-links,
+.materiais-links{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 2.5rem auto 1rem;
+  text-align: center;
+}
+
+.bottom-links a,
+.links-footer a,
+.section-links a,
+.materiais-links a{
+  margin: 0;
 }
 
 /* ======================== 14. RODAPÉ ======================== */
@@ -241,6 +283,7 @@ footer{
   left: 0;
   z-index: 99;
 }
+
 /* ======================== 15. BOTÃO WHATSAPP ======================== */
 .whatsapp-button{
   position: fixed;
@@ -261,29 +304,38 @@ footer{
   z-index: 100;
   transition: background-color 0.2s ease, transform 0.2s ease;
 }
+
 .whatsapp-button:hover{
   background: #1ebe57;
   transform: translateY(-2px);
   box-shadow: 0 8px 22px rgba(40, 120, 60, 0.2);
 }
+
 .whatsapp-button:focus-visible{
   outline: 3px solid #b6f5cc;
   outline-offset: 2px;
 }
-/* Ajuste para listas de definições usadas em #sobre */
+
+/* Ajuste para listas de definições (#sobre) */
 .valores-lista {
   margin: 1rem 0;
   padding: 0;
 }
+
 .valores-lista dt {
   font-weight: bold;
   margin-top: .5rem;
 }
+
 .valores-lista dd {
   margin: 0 0 .5rem 1.5rem;
 }
+
 /* ======================== 16. FORMULÁRIO ======================== */
-form{ margin-top: 1rem; }
+form{
+  margin-top: 1rem;
+}
+
 input[type="text"], input[type="email"], textarea{
   width: 100%;
   padding: clamp(0.6rem, 2vw, 0.75rem) clamp(0.8rem, 2vw, 1rem);
@@ -298,17 +350,20 @@ input[type="text"], input[type="email"], textarea{
   transition: border 0.2s, box-shadow 0.2s;
   resize: vertical;
 }
+
 input[type="text"]:focus, input[type="email"]:focus, textarea:focus{
   border-color: var(--brand);
   box-shadow: 0 0 0 2px rgba(24, 100, 171, 0.2);
   outline: none;
 }
+
 input[name="honeypot"]{
   display: none !important;
   visibility: hidden;
   position: absolute;
   left: -9999px;
 }
+
 button[type="submit"]{
   background: var(--brand);
   color: #ffffff;
@@ -322,11 +377,13 @@ button[type="submit"]{
   transition: background-color 0.25s, transform 0.15s ease;
   box-shadow: 0 4px 14px rgba(24, 100, 171, 0.15);
 }
+
 button[type="submit"]:hover{
   background-color: var(--brand-dark);
   transform: translateY(-2px);
   box-shadow: 0 6px 18px rgba(24, 100, 171, 0.2);
 }
+
 button[type="submit"]:focus-visible{
   outline: 3px solid #a3d3ff;
   outline-offset: 2px;
@@ -341,6 +398,7 @@ button[type="submit"]:focus-visible{
   margin-bottom: clamp(12px, 3vw, 20px);
   font-size: clamp(0.9rem, 2vw, 1rem);
 }
+
 /* ======================== 18. CARROSSEL ======================== */
 .carousel-container{
   position: relative;
@@ -356,11 +414,13 @@ button[type="submit"]:focus-visible{
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
 }
+
 .carousel-track{
   display: flex;
   transition: transform 0.5s ease;
   will-change: transform;
 }
+
 .carousel-item{
   flex: 0 0 100%;
   user-select: none;
@@ -376,7 +436,9 @@ button[type="submit"]:focus-visible{
 }
 
 /* Ajuste de textos justificados em seções específicas */
-#artigos p{ text-align: justify; }
+#artigos p{
+  text-align: justify;
+}
 
 @media (max-width: 900px){
   .carousel-container{
@@ -394,8 +456,18 @@ button[type="submit"]:focus-visible{
   padding: 0;
   margin: 1rem 0 0;
 }
-@media (max-width: 900px){ .video-grid{ grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 600px){ .video-grid{ grid-template-columns: 1fr; } }
+
+@media (max-width: 900px){
+  .video-grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px){
+  .video-grid{
+    grid-template-columns: 1fr;
+  }
+}
 
 .video-card a{
   display: flex;
@@ -409,26 +481,37 @@ button[type="submit"]:focus-visible{
   box-shadow: 0 4px 14px rgba(24,100,171,0.08);
   transition: transform .15s ease, box-shadow .2s ease;
 }
+
 .video-card a:hover{
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(24,100,171,0.18);
 }
+
 .video-card img{
   width: 100%;
   height: auto;
   border-radius: 10px;
 }
+
 .video-title{
   font-weight: 700;
   color: var(--brand);
   font-size: clamp(1rem, 2.5vw, 1.15rem);
 }
+
 .video-desc{
   color: #334;
   font-size: clamp(0.95rem, 2vw, 1rem);
 }
 
 /* ======================== 22. VÍDEOS — embed (destaque único) ======================== */
+.video-embed{
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0;
+  display: block;
+}
+
 .video-embed iframe{
   width: 100%;
   aspect-ratio: 16 / 9;
@@ -436,8 +519,8 @@ button[type="submit"]:focus-visible{
   border-radius: 10px;
   box-shadow: 0 2px 12px rgba(60,60,60,0.09);
 }
-/* Botões do carrossel */
 
+/* Botões do carrossel */
 .carousel-prev,
 .carousel-next {
   position: absolute;
