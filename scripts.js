@@ -1,113 +1,104 @@
-// ======================== SCRIPT GERAL DO SITE ========================
+/* ======================== SCRIPT GERAL DO SITE ======================== */
 document.addEventListener("DOMContentLoaded", function () {
-  // Último vídeo publicado no canal YouTube (YouTube Data API v3)
-  (function () {
-    var iframeUltimo = document.getElementById("ultimo-video-youtube");
-    if (!iframeUltimo) return;
 
-    // Preencher com os dados reais do projeto YouTube:
-var API_KEY = ""; // deixe vazio até adicionar a chave real
-var CHANNEL_ID = "UCifA0MpzCwCYfiuQY4E6S9A";
-var url = "https://www.googleapis.com/youtube/v3/search"
-  + "?key=" + encodeURIComponent(API_KEY || "INVALID")
-  + "&channelId=" + encodeURIComponent(CHANNEL_ID)
-  + "&part=snippet"
-  + "&order=date"
-  + "&maxResults=1";
 
-    fetch(url)
-      .then(function (response) {
-        if (!response.ok) {
-          throw new Error("Erro ao consultar a API do YouTube: " + response.status);
-        }
-        return response.json();
-      })
-      .then(function (data) {
-        if (!data.items || data.items.length === 0) {
-          return;
-        }
+  /* ======================== ÚLTIMO VÍDEO DO YOUTUBE ======================== */
+/* ======================== ÚLTIMO VÍDEO DO YOUTUBE ======================== */
+(function () {
+  const iframeUltimo = document.getElementById("ultimo-video-youtube");
+  if (!iframeUltimo) return;
 
-        var item = data.items[0];
-        var videoId = item.id && item.id.videoId ? item.id.videoId : null;
-        if (!videoId) {
-          return;
-        }
+  const RSS_URL =
+    "https://www.youtube.com/feeds/videos.xml?channel_id=UCifA0MpzCwCYfiuQY4E6S9A";
 
-        var novoSrc = "https://www.youtube-nocookie.com/embed/" + videoId;
+  fetch(RSS_URL)
+    .then(r => r.text())
+    .then(str => {
+      const xml = new window.DOMParser().parseFromString(str, "text/xml");
+      const entry = xml.querySelector("entry > id");
 
-        if (iframeUltimo.src !== novoSrc) {
-          iframeUltimo.src = novoSrc;
-          iframeUltimo.title = "Último vídeo publicado no canal Talamante Morais";
-        }
-      })
-      .catch(function (erro) {
-        console.error("Erro ao carregar o último vídeo do canal:", erro);
-      });
-  })();
+      if (!entry) {
+        iframeUltimo.src =
+          "https://www.youtube-nocookie.com/embed/fy2a2YcozUE";
+        return;
+      }
 
-// ======================== CARROSSEL AUTOMÁTICO TEMÁTICO ========================
-const track = document.querySelector(".carousel-track");
-const items = document.querySelectorAll(".carousel-item");
-const carouselContainer = document.querySelector(".carousel-container");
+      const fullId = entry.textContent.trim();
+      const videoId = fullId.replace("yt:video:", "");
 
-// garante id compatível com aria-controls dos dots
-if (track && !track.id) track.id = "carousel-track";
+      iframeUltimo.src =
+        "https://www.youtube-nocookie.com/embed/" + videoId;
+      iframeUltimo.title =
+        "Último vídeo publicado — carregamento automático";
+    })
+    .catch(() => {
+      iframeUltimo.src =
+        "https://www.youtube-nocookie.com/embed/fy2a2YcozUE";
+    });
+})();
 
-// bloqueia arrasto nativo que interfere no swipe
-items.forEach((el) => {
-  el.addEventListener("dragstart", (e) => e.preventDefault());
-});
+  /* ======================== CARROSSEL ======================== */
+  const track = document.querySelector(".carousel-track");
+  const items = document.querySelectorAll(".carousel-item");
+  const carouselContainer = document.querySelector(".carousel-container");
+
+  if (track && !track.id) track.id = "carousel-track";
+
+  items.forEach((el) => {
+    el.addEventListener("dragstart", (e) => e.preventDefault());
+  });
+
   const prevBtn = document.querySelector(".carousel-prev");
   const nextBtn = document.querySelector(".carousel-next");
   const dotsWrap = document.querySelector(".carousel-dots");
 
-const totalItems = items.length;
-let indexSlide = 0;
-let intervaloSlide;
-let isHovered = false; // flag de hover
-let lastStart = 0;     // proteção contra reinício em sequência
-const RESTART_GAP_MS = 300;
+  const totalItems = items.length;
+  let indexSlide = 0;
+  let intervaloSlide;
+  let isHovered = false;
+  let lastStart = 0;
+  const RESTART_GAP_MS = 300;
 
-// Controle fino de cadência para evitar “saltos” em cliques/toques rápidos
-const AUTO_INTERVAL_MS = 4000;   // intervalo do autoplay
-const SLIDE_MIN_GAP_MS = 900;    // tempo mínimo entre trocas
-let lastMoveAt = 0;              // último momento de troca
+  const AUTO_INTERVAL_MS = 4000;
+  const SLIDE_MIN_GAP_MS = 900;
+  let lastMoveAt = 0;
 
-function atualizarTransform() {
-  if (!track) return;
-  track.style.transform = `translate3d(-${indexSlide * 100}%, 0, 0)`;
-  // Atualiza bullets
-  if (dotsWrap && dotsWrap.children.length === totalItems) {
-    [...dotsWrap.children].forEach((btn, i) => {
-      if (i === indexSlide) btn.setAttribute("aria-current", "true");
-      else btn.removeAttribute("aria-current");
-    });
+  function atualizarTransform() {
+    if (!track) return;
+    track.style.transform = `translate3d(-${indexSlide * 100}%, 0, 0)`;
+
+    if (dotsWrap && dotsWrap.children.length === totalItems) {
+      [...dotsWrap.children].forEach((btn, i) => {
+        if (i === indexSlide) btn.setAttribute("aria-current", "true");
+        else btn.removeAttribute("aria-current");
+      });
+    }
   }
-}
 
-function goToSlide(n) {
-  if (!totalItems) return;
+  function goToSlide(n) {
+    if (!totalItems) return;
 
-  const now = Date.now();
-  if (now - lastMoveAt < SLIDE_MIN_GAP_MS) return; // evita trocas muito rápidas
-  lastMoveAt = now;
+    const now = Date.now();
+    if (now - lastMoveAt < SLIDE_MIN_GAP_MS) return;
+    lastMoveAt = now;
 
-  indexSlide = ((n % totalItems) + totalItems) % totalItems;
-  atualizarTransform();
-}
+    indexSlide = ((n % totalItems) + totalItems) % totalItems;
+    atualizarTransform();
+  }
 
-function iniciarCarrossel() {
-  if (!track || totalItems <= 1 || isHovered) return;
+  function iniciarCarrossel() {
+    if (!track || totalItems <= 1 || isHovered) return;
 
-  const now = Date.now();
-  if (now - lastStart < RESTART_GAP_MS) return;
-  lastStart = now;
+    const now = Date.now();
+    if (now - lastStart < RESTART_GAP_MS) return;
+    lastStart = now;
 
-  pararCarrossel();
-  intervaloSlide = setInterval(() => {
-    goToSlide(indexSlide + 1);
-  }, AUTO_INTERVAL_MS);
-}
+    pararCarrossel();
+    intervaloSlide = setInterval(() => {
+      goToSlide(indexSlide + 1);
+    }, AUTO_INTERVAL_MS);
+  }
+
   function pararCarrossel() {
     if (intervaloSlide) {
       clearInterval(intervaloSlide);
@@ -115,169 +106,152 @@ function iniciarCarrossel() {
     }
   }
 
-// Botões Prev/Next — retoma autoplay ~3s após interação
-if (prevBtn) prevBtn.addEventListener("click", () => {
-  pararCarrossel();
-  goToSlide(indexSlide - 1);
-  if (!isHovered) {
-    setTimeout(() => { if (!isHovered) iniciarCarrossel(); }, 3000);
-  }
-});
-if (nextBtn) nextBtn.addEventListener("click", () => {
-  pararCarrossel();
-  goToSlide(indexSlide + 1);
-  if (!isHovered) {
-    setTimeout(() => { if (!isHovered) iniciarCarrossel(); }, 3000);
-  }
-});
-
-// Paginação (bolinhas) — retoma autoplay ~3s após clique
-if (dotsWrap && totalItems > 1) {
-  dotsWrap.innerHTML = "";
-  for (let i = 0; i < totalItems; i++) {
-    const b = document.createElement("button");
-    b.type = "button";
-    b.setAttribute("aria-label", `Ir para o slide ${i + 1}`);
-    b.setAttribute("aria-controls", "carousel-track");
-    b.addEventListener("click", () => {
-      pararCarrossel();
-      goToSlide(i);
-      if (!isHovered) {
-        setTimeout(() => { if (!isHovered) iniciarCarrossel(); }, 3000);
-      }
-    });
-    dotsWrap.appendChild(b);
-  }
-}
-
-if (carouselContainer && track && totalItems > 0) {
-  iniciarCarrossel();
-
-  // Evita pausar imediatamente no carregamento se o cursor já estiver sobre o carrossel
-  let interactionsReady = false;
-  setTimeout(() => { interactionsReady = true; }, 800);
-
-  // Hover/Toque pausa/retoma + Swipe (arrasto horizontal)
-  carouselContainer.addEventListener("mouseenter", () => {
-    if (!interactionsReady) return; // só passa a pausar após o pequeno delay
-    isHovered = true;
+  if (prevBtn) prevBtn.addEventListener("click", () => {
     pararCarrossel();
-  });
-  carouselContainer.addEventListener("mouseleave", () => {
-    isHovered = false;
-    iniciarCarrossel();
-  });
-
-  // Dados de swipe
-  let swipe = {
-    dragging: false,
-    startX: 0,
-    deltaX: 0,
-    width: 0,
-    threshold: 0
-  };
-
-  // Início do toque/arrasto
-  carouselContainer.addEventListener("pointerdown", (e) => {
-    isHovered = true;
-    pararCarrossel();
-
-    swipe.dragging = true;
-    swipe.startX = e.clientX;
-    swipe.width = carouselContainer.clientWidth || 1;
-    swipe.threshold = Math.max(40, swipe.width * 0.12); // ~12% da largura (mín. 40px)
-    swipe.deltaX = 0;
-
-    // desliga a transição para mover “na mão”
-    track.style.transition = "none";
-
-    try { carouselContainer.setPointerCapture(e.pointerId); } catch (_) {}
-  });
-
-  // Movimento do arrasto
-  carouselContainer.addEventListener("pointermove", (e) => {
-    if (!swipe.dragging) return;
-
-    swipe.deltaX = e.clientX - swipe.startX;
-    const deltaPct = (swipe.deltaX / swipe.width) * 100;
-// aplica o deslocamento relativo ao slide atual
-track.style.transform = `translate3d(calc(${-indexSlide * 100}% + ${deltaPct}%), 0, 0)`;
-
-  });
-
-  // Fim/cancelamento do arrasto
-  function finalizarSwipe(commit) {
-    // restaura a transição padrão
-    track.style.transition = "";
-
-    if (commit && Math.abs(swipe.deltaX) > swipe.threshold) {
-      if (swipe.deltaX < 0) {
-        goToSlide(indexSlide + 1); // arrasto p/ esquerda -> próximo
-      } else {
-        goToSlide(indexSlide - 1); // arrasto p/ direita -> anterior
-      }
-    } else {
-      // volta para a posição do slide atual
-      atualizarTransform();
+    goToSlide(indexSlide - 1);
+    if (!isHovered) {
+      setTimeout(() => { if (!isHovered) iniciarCarrossel(); }, 3000);
     }
-
-    swipe.dragging = false;
-    swipe.startX = 0;
-    swipe.deltaX = 0;
-    isHovered = false;
-    iniciarCarrossel();
-  }
-
-  // Finalização do gesto em dispositivos de toque
-  carouselContainer.addEventListener("pointerup", () => finalizarSwipe(true));
-  carouselContainer.addEventListener("pointercancel", () => finalizarSwipe(false));
-  carouselContainer.addEventListener("pointerleave", () => {
-    if (swipe.dragging) finalizarSwipe(false);
   });
 
-  // Pausa quando a aba fica oculta e retoma quando volta (evita reiniciar se estiver em hover)
-  document.addEventListener("visibilitychange", () => {
-    if (document.hidden) {
+  if (nextBtn) nextBtn.addEventListener("click", () => {
+    pararCarrossel();
+    goToSlide(indexSlide + 1);
+    if (!isHovered) {
+      setTimeout(() => { if (!isHovered) iniciarCarrossel(); }, 3000);
+    }
+  });
+
+  if (dotsWrap && totalItems > 1) {
+    dotsWrap.innerHTML = "";
+    for (let i = 0; i < totalItems; i++) {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.setAttribute("aria-label", `Ir para o slide ${i + 1}`);
+      b.setAttribute("aria-controls", "carousel-track");
+      b.addEventListener("click", () => {
+        pararCarrossel();
+        goToSlide(i);
+        if (!isHovered) {
+          setTimeout(() => { if (!isHovered) iniciarCarrossel(); }, 3000);
+        }
+      });
+      dotsWrap.appendChild(b);
+    }
+  }
+
+  if (carouselContainer && track && totalItems > 0) {
+    iniciarCarrossel();
+
+    let interactionsReady = false;
+    setTimeout(() => { interactionsReady = true; }, 800);
+
+    carouselContainer.addEventListener("mouseenter", () => {
+      if (!interactionsReady) return;
+      isHovered = true;
       pararCarrossel();
-    } else if (!isHovered) {
+    });
+
+    carouselContainer.addEventListener("mouseleave", () => {
+      isHovered = false;
+      iniciarCarrossel();
+    });
+
+    let swipe = {
+      dragging: false,
+      startX: 0,
+      deltaX: 0,
+      width: 0,
+      threshold: 0
+    };
+
+    carouselContainer.addEventListener("pointerdown", (e) => {
+      isHovered = true;
+      pararCarrossel();
+
+      swipe.dragging = true;
+      swipe.startX = e.clientX;
+      swipe.width = carouselContainer.clientWidth || 1;
+      swipe.threshold = Math.max(40, swipe.width * 0.12);
+      swipe.deltaX = 0;
+
+      track.style.transition = "none";
+
+      try { carouselContainer.setPointerCapture(e.pointerId); } catch (_) { }
+    });
+
+    carouselContainer.addEventListener("pointermove", (e) => {
+      if (!swipe.dragging) return;
+
+      swipe.deltaX = e.clientX - swipe.startX;
+      const deltaPct = (swipe.deltaX / swipe.width) * 100;
+
+      track.style.transform =
+        `translate3d(calc(${-indexSlide * 100}% + ${deltaPct}%), 0, 0)`;
+    });
+
+    function finalizarSwipe(commit) {
+      track.style.transition = "";
+
+      if (commit && Math.abs(swipe.deltaX) > swipe.threshold) {
+        if (swipe.deltaX < 0) {
+          goToSlide(indexSlide + 1);
+        } else {
+          goToSlide(indexSlide - 1);
+        }
+      } else {
+        atualizarTransform();
+      }
+
+      swipe.dragging = false;
+      swipe.startX = 0;
+      swipe.deltaX = 0;
+      isHovered = false;
       iniciarCarrossel();
     }
-  });
 
-  // Pausa quando o carrossel sai do viewport; retoma quando volta (economia de recursos)
-  if ('IntersectionObserver' in window) {
-    const io = new IntersectionObserver((entries) => {
-      const entry = entries[0];
-      if (!entry) return;
-      if (entry.isIntersecting) {
-        if (!isHovered) iniciarCarrossel();
-      } else {
-        pararCarrossel();
-      }
-    }, { root: null, threshold: 0.25 });
+    carouselContainer.addEventListener("pointerup", () => finalizarSwipe(true));
+    carouselContainer.addEventListener("pointercancel", () => finalizarSwipe(false));
+    carouselContainer.addEventListener("pointerleave", () => {
+      if (swipe.dragging) finalizarSwipe(false);
+    });
 
-    io.observe(carouselContainer);
-  }
-}
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden) pararCarrossel();
+      else if (!isHovered) iniciarCarrossel();
+    });
 
-// Navegação por teclado (← →)
-if (carouselContainer) {
-  carouselContainer.addEventListener("keydown", (e) => {
-    if (e.key === "ArrowLeft") {
-      e.preventDefault();
-      goToSlide(indexSlide - 1);
-    } else if (e.key === "ArrowRight") {
-      e.preventDefault();
-      goToSlide(indexSlide + 1);
+    if ("IntersectionObserver" in window) {
+      const io = new IntersectionObserver((entries) => {
+        const entry = entries[0];
+        if (!entry) return;
+
+        if (entry.isIntersecting) {
+          if (!isHovered) iniciarCarrossel();
+        } else {
+          pararCarrossel();
+        }
+      }, { root: null, threshold: 0.25 });
+
+      io.observe(carouselContainer);
     }
-  });
-}
-  // Estado inicial
+  }
+
+  if (carouselContainer) {
+    carouselContainer.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowLeft") {
+        e.preventDefault();
+        goToSlide(indexSlide - 1);
+      } else if (e.key === "ArrowRight") {
+        e.preventDefault();
+        goToSlide(indexSlide + 1);
+      }
+    });
+  }
+
   atualizarTransform();
 
-/* (removido: bloco duplicado) */
-
-  // ======================== ENVIO DO FORMULÁRIO COM reCAPTCHA v3 ========================
+  /* ======================== FORMULÁRIO + reCAPTCHA ======================== */
   const form = document.getElementById("contato-form");
 
   if (form) {
@@ -290,7 +264,6 @@ if (carouselContainer) {
       const botao = form.querySelector("button[type='submit']");
       const mensagemSucesso = document.getElementById("mensagem-sucesso");
 
-      // Honeypot opcional (campo oculto no HTML). Se existir e vier preenchido, aborta silenciosamente.
       const honey = form.querySelector('input[name="honeypot"]');
       if (honey && honey.value) return;
 
@@ -301,8 +274,9 @@ if (carouselContainer) {
 
       botao.disabled = true;
       botao.innerText = "Enviando...";
-      // Guarda para reCAPTCHA ausente
-      if (typeof grecaptcha === "undefined" || typeof grecaptcha.ready !== "function") {
+
+      if (typeof grecaptcha === "undefined" ||
+        typeof grecaptcha.ready !== "function") {
         alert("Erro ao carregar o reCAPTCHA. Atualize a página e tente novamente.");
         botao.disabled = false;
         botao.innerText = "Enviar";
@@ -310,7 +284,8 @@ if (carouselContainer) {
       }
 
       grecaptcha.ready(function () {
-       grecaptcha.execute('6LdEyWYrAAAAALdfXa6R6BprCQbpPW7KxuySJr43', { action: 'submit' })
+        grecaptcha.execute('6LdEyWYrAAAAALdfXa6R6BprCQbpPW7KxuySJr43',
+          { action: "submit" })
           .then(function (token) {
             if (!token || token.trim() === "") {
               alert("Erro ao validar o reCAPTCHA. Atualize a página e tente novamente.");
@@ -329,47 +304,44 @@ if (carouselContainer) {
                 "g-recaptcha-response": token
               })
             })
-            .then(response => {
-              if (!response.ok) throw new Error(`HTTP ${response.status}`);
-              return response.text();
-            })
-            .then(data => {
-              const texto = String(data || "").toUpperCase();
-              if (texto.includes("OK") || texto.includes("SUCCESS")) {
-                if (mensagemSucesso) {
-                  mensagemSucesso.style.display = "block";
-                  mensagemSucesso.innerText = "✅ Mensagem enviada com sucesso!";
-                  setTimeout(() => {
-                    mensagemSucesso.style.display = "none";
-                    mensagemSucesso.innerText = "";
-                  }, 5000);
+              .then(response => {
+                if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                return response.text();
+              })
+              .then(data => {
+                const texto = String(data || "").toUpperCase();
+
+                if (texto.includes("OK") || texto.includes("SUCCESS")) {
+                  if (mensagemSucesso) {
+                    mensagemSucesso.style.display = "block";
+                    mensagemSucesso.innerText = "Mensagem enviada com sucesso.";
+
+                    setTimeout(() => {
+                      mensagemSucesso.style.display = "none";
+                      mensagemSucesso.innerText = "";
+                    }, 5000);
+                  } else {
+                    alert("Mensagem enviada com sucesso.");
+                  }
                 } else {
-                  alert("✅ Mensagem enviada com sucesso!");
+                  alert("Não foi possível confirmar o envio. Tente novamente.");
                 }
-              } else {
-                // Retorno não confirmou sucesso
-                alert("⚠️ Não foi possível confirmar o envio. Tente novamente.");
-                }
-            })
-            .catch(error => {
-              alert("❌ Ocorreu um erro. Tente novamente.");
-              console.error("Erro:", error);
-            })
-            .finally(() => {
-              botao.disabled = false;
-              botao.innerText = "Enviar";
-            });
+              })
+              .catch(error => {
+                alert("Ocorreu um erro ao enviar sua mensagem. Tente novamente.");
+                console.error("Erro:", error);
+              })
+              .finally(() => {
+                botao.innerText = "Enviar";
+                botao.disabled = false;
+              });
           });
       });
     });
   }
-  }
-// Atualiza o ano do rodapé
-const anoEl = document.getElementById("ano");
-if (anoEl) anoEl.textContent = new Date().getFullYear();
 
+  /* ======================== RODAPÉ — ANO AUTOMÁTICO ======================== */
+  const anoEl = document.getElementById("ano");
+  if (anoEl) anoEl.textContent = new Date().getFullYear();
 
-
-
-
-
+});

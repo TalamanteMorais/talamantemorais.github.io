@@ -21,28 +21,30 @@
     </nav>
     <h1 id="titulo-momentos" style="max-width: var(--container-max); margin: .8rem auto 0; padding: 0 1rem;">Momentos Públicos</h1>
   </header>
-  <main id="conteudo" role="main" aria-labelledby="titulo-momentos">
-<section>
-  <h2 class="service-title">Ao vivo agora</h2>
-<section>
-  <h2 class="service-title">Último Vídeo Publicado</h2>
+<main id="conteudo" role="main" aria-labelledby="titulo-momentos">
+  <section aria-labelledby="titulo-ao-vivo">
+    <h2 id="titulo-ao-vivo" class="service-title">Ao vivo agora</h2>
+  </section>
+  <section aria-labelledby="titulo-ultimo-video">
+
+  <h2 id="titulo-ultimo-video" class="service-title">Último Vídeo Publicado</h2>
   <figure class="video-embed" style="max-width: var(--container-max); margin: 0 auto 1rem;">
     <iframe
-      id="ao-vivo-frame"
+id="ultimo-video-youtube"
       src="https://www.youtube-nocookie.com/embed/0qPjzYePzCQ"
-      title="Vídeo provisório — Talamante Morais"
+    title="Último vídeo publicado — carregamento automático"
       loading="eager"
       referrerpolicy="strict-origin-when-cross-origin"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       allowfullscreen
       style="width:100%; aspect-ratio:16/9; border:0; border-radius:10px;">
     </iframe>
-    <figcaption style="text-align:center; margin-top:.4rem;">
-      Vídeo provisório — aguardando publicação oficial do canal Talamante Morais.
-    </figcaption>
-  </figure>
+<figcaption style="text-align:center; margin-top:.4rem;">
+  Último vídeo carregado automaticamente do canal Talamante Morais.
+</figcaption>
+</figure>
 </section>
-    <section aria-labelledby="titulo-grade">
+<section aria-labelledby="titulo-grade">
       <h2 id="titulo-grade" class="service-title">Vídeos do YouTube</h2>
       <p class="service-desc">
         Cada item é um <code>&lt;li&gt;</code> com <strong>título</strong>, <strong>link</strong> e miniatura opcional.
