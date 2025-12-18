@@ -75,6 +75,42 @@ img, picture, svg, video {
   font-weight: 400;
 }
 
+.section-header .brand{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.section-header .brand-logo-wrap{
+  width: 84px;
+  height: 84px;
+  flex: 0 0 auto;
+}
+
+.section-header .brand-logo-img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.section-header .brand-text{
+  text-align: left;
+}
+
+@media (max-width: 520px){
+  .section-header .brand{
+    flex-direction: column;
+  }
+
+  .section-header .brand-text{
+    text-align: center;
+  }
+}
+
 /* ======================== 03. MENU DE NAVEGAÇÃO ======================== */
 .main-nav{
   background: #1c2d3a;
