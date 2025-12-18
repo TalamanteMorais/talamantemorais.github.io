@@ -7,7 +7,21 @@
   <meta name="description" content="Momentos públicos em vídeo: destaque ao vivo e grade de vídeos do YouTube." />
   <link rel="preconnect" href="https://www.youtube-nocookie.com">
   <link rel="preconnect" href="https://img.youtube.com">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; frame-src https://www.youtube-nocookie.com https://www.youtube.com; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' https: data:;">
+<meta http-equiv="Content-Security-Policy" content="
+  default-src 'self';
+  base-uri 'self';
+  object-src 'none';
+  frame-ancestors 'none';
+  connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://www.youtube.com;
+  frame-src https://www.youtube-nocookie.com https://www.youtube.com;
+  script-src 'self' https://www.googletagmanager.com;
+  style-src 'self' 'unsafe-inline';
+  img-src 'self' https: data:;
+">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZKCPTG7K1T"></script>
+<script src="gtag-init.js"></script>
 </head>
 <body>
   <!-- Cabeçalho + breadcrumb -->
@@ -64,24 +78,12 @@
     </section>
 
   </main>
+<footer role="contentinfo">
+  <a href="privacidade.html" class="footer-link">Privacidade</a>
+  <a class="whatsapp-button" href="https://wa.me/556296318340" target="_blank" rel="noopener noreferrer" aria-label="Abrir WhatsApp em nova aba">WhatsApp</a>
+</footer>
+<script src="scripts.js" defer></script>
 
-  <footer role="contentinfo">
-    <small>&copy; <span id="ano"></span> Talamante Morais — Todos os direitos reservados.</small>
-  </footer>
-<a class="whatsapp-button"
-   href="https://wa.me/556296318340"
-   target="_blank"
-   rel="noopener noreferrer"
-   aria-label="Abrir WhatsApp em nova aba">
-    WhatsApp
-</a>
-  <script src="scripts.js" defer></script>
-  <script>
-    (function(){ try {
-      var el = document.getElementById('ano');
-      if(el){ el.textContent = new Date().getFullYear(); }
-    } catch(e){} })();
-  </script>
 </body>
 </html>
 

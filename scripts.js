@@ -1,13 +1,11 @@
 /* ======================== SCRIPT GERAL DO SITE ======================== */
 document.addEventListener("DOMContentLoaded", function () {
 
-
-  /* ======================== ÚLTIMO VÍDEO DO YOUTUBE ======================== */
 /* ======================== ÚLTIMO VÍDEO DO YOUTUBE ======================== */
 (function () {
+
   const iframeUltimo = document.getElementById("ultimo-video-youtube");
   if (!iframeUltimo) return;
-
   const RSS_URL =
     "https://www.youtube.com/feeds/videos.xml?channel_id=UCifA0MpzCwCYfiuQY4E6S9A";
 
@@ -293,17 +291,19 @@ document.addEventListener("DOMContentLoaded", function () {
               botao.innerText = "Enviar";
               return;
             }
-
-            fetch("https://script.google.com/macros/s/AKfycbzvgpuIDGGkpm6hj4WaV7TNVcIJe6BTbIqfjL2ItxrqW2z80ZwyU0Ik3arvIF6R-6Hg/exec", {
-              method: "POST",
-              headers: { "Content-Type": "application/x-www-form-urlencoded" },
-              body: new URLSearchParams({
-                nome: nome,
-                email: email,
-                mensagem: mensagem,
-                "g-recaptcha-response": token
-              })
-            })
+fetch("https://script.google.com/macros/s/AKfycbzvgpuIDGGkpm6hj4WaV7TNVcIJe6BTbIqfjL2ItxrqW2z80ZwyU0Ik3arvIF6R-6Hg/exec", {
+  method: "POST",
+  credentials: "omit",
+  referrerPolicy: "no-referrer",
+  cache: "no-store",
+  headers: { "Content-Type": "application/x-www-form-urlencoded" },
+  body: new URLSearchParams({
+    nome: nome,
+    email: email,
+    mensagem: mensagem,
+    "g-recaptcha-response": token
+  })
+})
               .then(response => {
                 if (!response.ok) throw new Error(`HTTP ${response.status}`);
                 return response.text();

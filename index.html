@@ -14,17 +14,19 @@
   <meta name="author" content="Talamante Morais">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.talamantemorais.com.br/">
-
   <!-- Segurança -->
-  <meta http-equiv="Content-Security-Policy" content="
-    default-src 'self';
-    connect-src 'self' https://script.google.com https://script.googleusercontent.com https://www.google-analytics.com https://www.recaptcha.net https://www.google.com https://www.gstatic.com https://www.youtube.com https://www.googleapis.com;
-    frame-src https://www.recaptcha.net https://www.google.com https://www.youtube-nocookie.com https://www.youtube.com;
-    script-src 'self' https://www.googletagmanager.com https://www.google.com https://www.gstatic.com https://script.google.com https://www.recaptcha.net;
-    style-src 'self' https://fonts.googleapis.com 'unsafe-inline';
-    font-src https://fonts.gstatic.com;
-    img-src 'self' https: data:;
-  ">
+<meta http-equiv="Content-Security-Policy" content="
+  default-src 'self';
+  base-uri 'self';
+  object-src 'none';
+  frame-ancestors 'none';
+connect-src 'self' https://script.google.com https://script.googleusercontent.com https://www.google-analytics.com https://region1.google-analytics.com https://www.recaptcha.net https://www.google.com https://www.gstatic.com https://www.youtube.com https://www.googleapis.com;
+  frame-src https://www.recaptcha.net https://www.google.com https://www.youtube-nocookie.com https://www.youtube.com;
+  script-src 'self' https://www.googletagmanager.com https://www.google.com https://www.gstatic.com https://script.google.com https://www.recaptcha.net;
+  style-src 'self' https://fonts.googleapis.com 'unsafe-inline';
+  font-src https://fonts.gstatic.com;
+  img-src 'self' https: data:;
+">
   <meta name="referrer" content="strict-origin-when-cross-origin">
 
   <!-- Fontes Google (Inter) -->
@@ -37,16 +39,9 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="main.css">
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZKCPTG7K1T"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-ZKCPTG7K1T');
-  </script>
-
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZKCPTG7K1T"></script>
+<script src="gtag-init.js"></script>
   <!-- Favicon -->
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -57,16 +52,16 @@
   <h1>Talamante Morais</h1>
   <p>Advocacia Pública Municipal</p>
 </header>
-
 <nav class="main-nav" aria-label="Menu principal">
   <a href="#inicio">Início</a>
   <a href="#sobre">Sobre</a>
   <a href="#servicos">Serviços</a>
-  <a href="#artigos">Publicações</a>
+  <a href="#publicacoes">Publicações</a>
   <a href="#contato">Contato</a>
 </nav>
 
 <main>
+
 <section id="inicio">
   <div class="info-box">
     <strong>Nota Oficial:</strong><br>
@@ -181,10 +176,9 @@
   Abrir Documento
 </a>
     </div>
-    </div> <!-- fechamento do último service-card -->
   </div> <!-- fechamento do services-grid -->
 </section> <!-- fechamento correto da seção serviços -->
-<div class="bottom-links" aria-label="Acessos rápidos a materiais (OneDrive)">
+<div id="publicacoes" class="bottom-links" aria-label="Acessos rápidos a materiais (OneDrive)">
 <a href="https://1drv.ms/f/c/e3aa378c8fe2c063/Et_KsK8twYtCjg-dNswS8ssB1bqbRcJ66z4zIvw0ClmeOg?e=LAbQLr"
    target="_blank" rel="noopener noreferrer"
    class="cta-btn"
@@ -204,7 +198,18 @@
    Publicações
 </a>
 </div>
+
+<div class="bottom-links" aria-label="Acessos rápidos (Currículo)">
+  <a href="curriculo_talamante.pdf"
+     target="_blank" rel="noopener noreferrer"
+     class="cta-btn"
+     aria-label="Abrir currículo em PDF">
+     Currículo
+  </a>
+</div>
+
 <section id="contato" class="container">
+
   <h2>Contato</h2>
 
   <div id="mensagem-sucesso" style="display: none; background-color: #dff0d8; color: #3c763d; padding: 15px; border-radius: 5px; margin-bottom: 20px;">
@@ -245,11 +250,10 @@
 </section>
 
 </main>
-
 <footer role="contentinfo">
   &copy; <span id="ano"></span> Talamante Morais – Todos os direitos reservados.
+  <a href="privacidade.html" class="footer-link">Privacidade</a>
 </footer>
-
 <a class="whatsapp-button"
    href="https://wa.me/556296318340"
    target="_blank"
