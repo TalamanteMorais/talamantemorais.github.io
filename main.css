@@ -139,6 +139,8 @@ img, picture, svg, video {
 
 /* ======================== 04. SEÇÕES GERAIS ======================== */
 section{
+/* ======================== 04. SEÇÕES GERAIS ======================== */
+section{
   max-width: var(--container-max);
   background: transparent;
   margin: var(--gap-top) auto var(--gap-bottom);
@@ -150,6 +152,13 @@ section{
 
 .info-box{
   text-align: justify;
+}
+
+/* Justificar textos das páginas de apresentação (3 páginas) */
+.page-section p{
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
 }
 
 /* ======================== 05. GRID DE SERVIÇOS ======================== */
