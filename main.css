@@ -136,6 +136,9 @@ img, picture, svg, video {
   outline-offset: 2px;
   border-radius: 6px;
 }
+
+/* ======================== 04. SEÇÕES GERAIS ======================== */
+section{
 /* ======================== 04. SEÇÕES GERAIS ======================== */
 section{
   max-width: var(--container-max);
@@ -150,10 +153,11 @@ section{
 .info-box{
   text-align: justify;
 }
-
 /* Justificar textos das páginas de apresentação (3 páginas) */
 .page-section p,
-.page-section li{
+.page-section li,
+main p,
+main li{
   text-align: justify;
   text-justify: inter-word;
   hyphens: auto;
