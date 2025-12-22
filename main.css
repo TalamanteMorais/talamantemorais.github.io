@@ -153,9 +153,11 @@ section{
 .info-box{
   text-align: justify;
 }
-
 /* Justificar textos das páginas de apresentação (3 páginas) */
-.page-section p{
+.page-section p,
+.page-section li,
+main p,
+main li{
   text-align: justify;
   text-justify: inter-word;
   hyphens: auto;
