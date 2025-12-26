@@ -266,6 +266,15 @@ ul li{
   height: auto;
   border-radius: 8px;
 }
+.qrcode-actions{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 0.8rem;
+}
 
 /* ======================== 13. BOTÕES ESPECIAIS – MATÉRIAS JURÍDICAS ======================== */
 .btn-group a{
