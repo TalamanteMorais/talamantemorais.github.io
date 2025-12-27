@@ -609,3 +609,52 @@ button[type="submit"]:focus-visible{
 .carousel-next {
   right: 10px;
 }
+.info-cartao {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 8px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #1864ab;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.info-cartao .info-tooltip {
+  display: none;
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  background-color: #223b53;
+  color: #ffffff;
+  padding: 8px 10px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  width: 260px;
+  text-align: center;
+  z-index: 10;
+}
+
+/* seta discreta do tooltip */
+.info-cartao .info-tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px 6px 0 6px;
+  border-style: solid;
+  border-color: #223b53 transparent transparent transparent;
+}
+.info-cartao:hover .info-tooltip,
+.info-cartao:focus .info-tooltip,
+.info-cartao:active .info-tooltip {
+  display: block;
+}
+
