@@ -1,9 +1,0 @@
-<section class="page-section">
-  <h1>Cursos e Capacitações – Contratações Públicas</h1>
-
-  <p>Atuação como professor e palestrante em temas de Direito Público Municipal, com foco em contratações públicas, licitações, contratos administrativos, governança, gestão de riscos e controles internos. Ministra cursos, oficinas e capacitações para equipes e gestores, com metodologia voltada à construção de instrumentos de trabalho e à padronização de rotinas, priorizando aplicabilidade prática, organização de procedimentos e consistência documental.</p>
-
-  <p>As atividades podem ser estruturadas por ementa, objetivos e entregáveis, com roteiros operacionais, modelos, checklists e exercícios de aplicação, conforme o formato contratado. Realiza treinamentos presenciais, on-line ou híbridos, em módulos ou eventos únicos, direcionados a gestores, comissões de contratação, fiscais de contratos, controle interno, procuradorias e áreas de apoio.</p>
-
-  <p>Emite certificado exclusivamente de participação, sem certificações condicionadas a vínculo ou chancela do MEC, observadas as regras de presença e conclusão previamente definidas.</p>
-</section>
