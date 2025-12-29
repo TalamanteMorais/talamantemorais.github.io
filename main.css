@@ -103,11 +103,12 @@ img, picture, svg, video {
     flex-direction: column;
     align-items: center;
   }
-
-  .section-header .brand-logo-wrap{
-    width: 84px;
-    height: 84px;
-  }
+.section-header .brand-logo-wrap{
+  width: 115px;
+  height: 115px;
+  flex: 0 0 auto;
+  padding-right: 6px;
+}
 
 .section-header .brand-text{
   text-align: left;
