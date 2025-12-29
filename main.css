@@ -83,11 +83,11 @@ img, picture, svg, video {
   margin: 0 auto;
   padding: 0 1rem;
 }
-
 .section-header .brand-logo-wrap{
-  width: 108px;                     /* aumenta o tamanho proporcional */
-  height: 108px;
+  width: 115px;
+  height: 115px;
   flex: 0 0 auto;
+  padding-right: 6px;
 }
 
 .section-header .brand-logo-img{
