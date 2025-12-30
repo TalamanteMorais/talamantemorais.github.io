@@ -87,20 +87,27 @@ img, picture, svg, video {
 }
 .section-header .brand{
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: 1fr auto;
   align-items: center;
-  gap: clamp(1.5rem, 3vw, 2.5rem);
+  gap: clamp(1.8rem, 3.5vw, 3rem);
   max-width: var(--container-max);
   margin: 0 auto;
   padding: 0 1.5rem;
 }
 
-.section-header .brand-logo-wrap{
-  width: clamp(130px, 15vw, 180px);
-  height: clamp(130px, 15vw, 180px);
-  justify-self: start;
+/* Texto institucional permanece à esquerda,
+   mas o conjunto inteiro passa a se alinhar ao eixo central */
+.section-header .brand-text{
+  justify-self: end;
+  text-align: right;
 }
 
+/* Aumento discreto e proporcional do logo */
+.section-header .brand-logo-wrap{
+  width: clamp(145px, 16vw, 200px);
+  height: clamp(145px, 16vw, 200px);
+  justify-self: start;
+}
 .section-header .brand-text{
   text-align: center;
   justify-self: center;
