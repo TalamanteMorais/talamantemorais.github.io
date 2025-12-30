@@ -132,7 +132,7 @@ img, picture, svg, video {
   max-width: var(--container-max);
   margin: 0 auto;
   padding: 0 1.5rem;
-  transform: translateX(12px);
+  transform: translateX(200px);
 }
   .section-header .brand-text{
     justify-self: center;
