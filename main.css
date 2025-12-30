@@ -74,49 +74,43 @@ img, picture, svg, video {
   text-align: center;
   color: #0f2743;
 }
-
 .section-header h1{
-  font-size: 2.2rem;
+  font-size: clamp(1.85rem, 4vw, 2.2rem);
   margin-bottom: .5rem;
 }
 
 .section-header p{
   color: #2c4660;
-  font-size: 1.2rem;
+  font-size: clamp(1.05rem, 2.6vw, 1.2rem);
   margin-top: 0;
   font-weight: 400;
 }
 .section-header .brand{
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: auto 1fr;
   align-items: center;
-  gap: 1rem;
+  gap: clamp(1.5rem, 3vw, 2.5rem);
   max-width: var(--container-max);
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 1.5rem;
 }
 
 .section-header .brand-logo-wrap{
-  width: clamp(96px, 12vw, 140px);
-  height: clamp(96px, 12vw, 140px);
-  justify-self: end;
-  flex: 0 0 auto;
-}
-
-.section-header .brand-logo-img{
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+  width: clamp(130px, 15vw, 180px);
+  height: clamp(130px, 15vw, 180px);
+  justify-self: start;
 }
 
 .section-header .brand-text{
-  text-align: left;
+  text-align: center;
+  justify-self: center;
 }
 
 @media (max-width: 520px){
   .section-header .brand{
     grid-template-columns: 1fr;
     justify-items: center;
+    gap: 1rem;
   }
 
   .section-header .brand-text{
