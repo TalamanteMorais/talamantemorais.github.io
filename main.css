@@ -121,18 +121,16 @@ img, picture, svg, video {
     text-align: center;
     color: #0f2743;
   }
-
-  .section-header .brand{
-    display: grid;
-    grid-template-columns: 1fr;
-    align-items: center;
-    justify-items: center;
-    gap: 1rem;
-    max-width: var(--container-max);
-    margin: 0 auto;
-    padding: 0 1.5rem;
-  }
-
+.section-header .brand{
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: clamp(1.6rem, 3vw, 2.4rem);
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  transform: translateX(12px);
+}
   .section-header .brand-text{
     justify-self: center;
     text-align: center;
