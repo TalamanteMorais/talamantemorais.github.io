@@ -93,7 +93,7 @@ img, picture, svg, video {
   max-width: var(--container-max);
   margin: 0 auto;
   padding: 0 1.5rem;
-  transform: translateX(28px);
+  transform: translateX(58px);
 }
 .section-header .brand-text{
   text-align: center;
