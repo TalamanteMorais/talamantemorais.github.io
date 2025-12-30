@@ -75,51 +75,44 @@ img, picture, svg, video {
   font-weight: 400;
 }
 .section-header .brand{
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto;
   align-items: center;
-  justify-content: space-between;   /* afasta texto e logo */
   gap: 1rem;
   max-width: var(--container-max);
   margin: 0 auto;
   padding: 0 1rem;
 }
+
 .section-header .brand-logo-wrap{
-  width: 115px;
-  height: 115px;
+  width: clamp(96px, 12vw, 140px);
+  height: clamp(96px, 12vw, 140px);
+  justify-self: end;
   flex: 0 0 auto;
-  padding-right: 6px;
 }
 
 .section-header .brand-logo-img{
   width: 100%;
   height: 100%;
   object-fit: contain;
-  margin-left: auto;                /* posiciona no canto direito */
-  display: block;
-}
-
-@media (max-width: 520px){
-  .section-header .brand{
-    flex-direction: column;
-    align-items: center;
-  }
-.section-header .brand-logo-wrap{
-  width: 115px;
-  height: 115px;
-  flex: 0 0 auto;
-  padding-right: 6px;
 }
 
 .section-header .brand-text{
   text-align: left;
 }
+
 @media (max-width: 520px){
   .section-header .brand{
-    flex-direction: column;
+    grid-template-columns: 1fr;
+    justify-items: center;
   }
 
   .section-header .brand-text{
     text-align: center;
+  }
+
+  .section-header .brand-logo-wrap{
+    justify-self: center;
   }
 }
 
