@@ -34,7 +34,9 @@ html {
   font-size: 16px;
   scroll-behavior: smooth;
 }
+ARQUIVO: main.css
 
+TRECHO ATUAL:
 body {
   font-family: 'Inter', Arial, sans-serif;
   font-size: clamp(1rem, 2.5vw, 1.2rem);
@@ -44,6 +46,30 @@ body {
   line-height: 1.6;
   margin: 0;
   padding: 0 0 60px 0;
+}
+
+TRECHO NOVO (SUBSTITUIR PELO BLOCO ABAIXO):
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: clamp(1rem, 1.1vw, 1.0625rem);
+  background: url('img/Arte_Fundo_1.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: var(--ink);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0 0 60px 0;
+}
+
+h2{
+  font-size: clamp(1.5rem, 2.2vw, 1.9rem);
+}
+
+h3{
+  font-size: clamp(1.15rem, 1.6vw, 1.35rem);
+}
+
+.main-nav a{
+  font-size: 1.05rem;
 }
 
 img, picture, svg, video {
