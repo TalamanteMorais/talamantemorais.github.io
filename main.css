@@ -70,7 +70,7 @@ img, picture, svg, video {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 2rem 0 1rem 0;
+  padding: 1.1rem 0 0.9rem 0;
   text-align: center;
   color: #0f2743;
 }
@@ -89,7 +89,7 @@ img, picture, svg, video {
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: center;
-  gap: clamp(1.8rem, 3.5vw, 3rem);
+  gap: clamp(1.6rem, 3vw, 2.4rem);
   max-width: var(--container-max);
   margin: 0 auto;
   padding: 0 1.5rem;
@@ -98,16 +98,10 @@ img, picture, svg, video {
 /* Texto institucional permanece à esquerda,
    mas o conjunto inteiro passa a se alinhar ao eixo central */
 .section-header .brand-text{
-  justify-self: end;
-  text-align: right;
+  justify-self: center;
+  text-align: center;
 }
 
-/* Aumento discreto e proporcional do logo */
-.section-header .brand-logo-wrap{
-  width: clamp(145px, 16vw, 200px);
-  height: clamp(145px, 16vw, 200px);
-  justify-self: start;
-}
 .section-header .brand-text{
   text-align: center;
   justify-self: center;
@@ -142,8 +136,8 @@ img, picture, svg, video {
 
 /* Logo dominante, quase da altura da faixa */
 .section-header .brand-logo-wrap{
-  width: clamp(190px, 20vw, 240px);
-  height: clamp(190px, 20vw, 240px);
+  width: clamp(220px, 24vw, 280px);
+  height: clamp(220px, 24vw, 280px);
   justify-self: start;
 }
 
