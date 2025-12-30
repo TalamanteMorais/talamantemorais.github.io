@@ -94,61 +94,56 @@ img, picture, svg, video {
   margin: 0 auto;
   padding: 0 1.5rem;
 }
-
-/* Texto institucional permanece à esquerda,
-   mas o conjunto inteiro passa a se alinhar ao eixo central */
 .section-header .brand-text{
-  justify-self: center;
   text-align: center;
+  justify-self: center;
 }
 
-.section-header .brand-text{
-  text-align: center;
-  justify-self: center;
+.section-header .brand-logo-wrap{
+  width: clamp(110px, 14vw, 170px);
+  height: clamp(110px, 14vw, 170px);
+  justify-self: end;
+}
+
+.section-header .brand-logo-img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 @media (max-width: 520px){
-.section-header{
-  background-image: url('img/Arte_Fundo_1.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 1.2rem 0 0.8rem 0; /* faixa mais compacta */
-  text-align: center;
-  color: #0f2743;
-}
+  .section-header{
+    background-image: url('img/Arte_Fundo_1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 1.2rem 0 0.8rem 0;
+    text-align: center;
+    color: #0f2743;
+  }
 
-.section-header .brand{
-  display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: center;
-  gap: clamp(1.4rem, 3vw, 2.2rem); /* aproxima texto e logo */
-  max-width: var(--container-max);
-  margin: 0 auto;
-  padding: 0 1.5rem;
-}
+  .section-header .brand{
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+    gap: 1rem;
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
 
-/* Texto é o eixo central */
-.section-header .brand-text{
-  justify-self: center;
-  text-align: center;
-}
+  .section-header .brand-text{
+    justify-self: center;
+    text-align: center;
+  }
 
-/* Logo dominante, quase da altura da faixa */
-.section-header .brand-logo-wrap{
-  width: clamp(220px, 24vw, 280px);
-  height: clamp(220px, 24vw, 280px);
-  justify-self: start;
+  .section-header .brand-logo-wrap{
+    width: clamp(140px, 34vw, 200px);
+    height: auto;
+    justify-self: center;
+  }
 }
-
-/* ======================== 03. MENU DE NAVEGAÇÃO ======================== */
-.main-nav{
-  background: #1c2d3a;
-  text-align: center;
-  padding: .7rem 0;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.03);
-}
-
 .main-nav a{
   color: #fff;
   text-decoration: none;
