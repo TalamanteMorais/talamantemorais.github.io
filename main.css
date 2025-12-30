@@ -114,19 +114,37 @@ img, picture, svg, video {
 }
 
 @media (max-width: 520px){
-  .section-header .brand{
-    grid-template-columns: 1fr;
-    justify-items: center;
-    gap: 1rem;
-  }
+.section-header{
+  background-image: url('img/Arte_Fundo_1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 1.2rem 0 0.8rem 0; /* faixa mais compacta */
+  text-align: center;
+  color: #0f2743;
+}
 
-  .section-header .brand-text{
-    text-align: center;
-  }
+.section-header .brand{
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: clamp(1.4rem, 3vw, 2.2rem); /* aproxima texto e logo */
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
 
-  .section-header .brand-logo-wrap{
-    justify-self: center;
-  }
+/* Texto é o eixo central */
+.section-header .brand-text{
+  justify-self: center;
+  text-align: center;
+}
+
+/* Logo dominante, quase da altura da faixa */
+.section-header .brand-logo-wrap{
+  width: clamp(190px, 20vw, 240px);
+  height: clamp(190px, 20vw, 240px);
+  justify-self: start;
 }
 
 /* ======================== 03. MENU DE NAVEGAÇÃO ======================== */
