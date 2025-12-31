@@ -530,11 +530,10 @@ button[type="submit"]:focus-visible{
   user-select: none;
   height: 100%;
 }
-
 .carousel-item img{
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 /* ======================== 19. ACESSIBILIDADE / PREFERÊNCIAS DE MOVIMENTO ======================== */
