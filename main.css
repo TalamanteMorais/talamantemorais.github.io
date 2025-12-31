@@ -503,7 +503,6 @@ button[type="submit"]:focus-visible{
   margin-bottom: clamp(12px, 3vw, 20px);
   font-size: clamp(0.9rem, 2vw, 1rem);
 }
-
 /* ======================== 18. CARROSSEL ======================== */
 .carousel-container{
   position: relative;
@@ -596,7 +595,8 @@ button[type="submit"]:focus-visible{
   }
 
   .carousel-container{
-    height: var(--carousel-h-md);
+    height: auto;
+    aspect-ratio: 880 / 378;
     margin: var(--gap-top) auto 0;
   }
 }
