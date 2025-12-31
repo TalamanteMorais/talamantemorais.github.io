@@ -103,23 +103,33 @@ document.addEventListener("DOMContentLoaded", function () {
       intervaloSlide = null;
     }
   }
-
-  if (prevBtn) prevBtn.addEventListener("click", () => {
+if (prevBtn) {
+  prevBtn.addEventListener("pointerdown", (e) => {
+    e.stopPropagation();
+  });
+  prevBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
     pararCarrossel();
     goToSlide(indexSlide - 1);
     if (!isHovered) {
       setTimeout(() => { if (!isHovered) iniciarCarrossel(); }, 3000);
     }
   });
+}
 
-  if (nextBtn) nextBtn.addEventListener("click", () => {
+if (nextBtn) {
+  nextBtn.addEventListener("pointerdown", (e) => {
+    e.stopPropagation();
+  });
+  nextBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
     pararCarrossel();
     goToSlide(indexSlide + 1);
     if (!isHovered) {
       setTimeout(() => { if (!isHovered) iniciarCarrossel(); }, 3000);
     }
   });
-
+}
   if (dotsWrap && totalItems > 1) {
     dotsWrap.innerHTML = "";
     for (let i = 0; i < totalItems; i++) {
