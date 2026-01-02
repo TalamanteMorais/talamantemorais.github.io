@@ -1,32 +1,51 @@
+<!--
+  INSTRUÇÕES GERAIS DE MANUTENÇÃO E ATUALIZAÇÃO
+  Página institucional destinada à organização de links externos permanentes.
+  Inserções, substituições e remoções de links devem ocorrer exclusivamente
+  nos blocos de lista (<ul>) identificados abaixo.
+-->
+
+<!-- DECLARAÇÃO DO DOCUMENTO HTML -->
 <!doctype html>
 <html lang="pt-BR">
+
+<!-- CABEÇALHO DO DOCUMENTO: METADADOS, SEO E ESTILOS -->
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<title>Links Externos – Conteúdos Jurídicos | Talamante Morais</title>
-  <meta name="description" content="Página institucional de links externos relacionados a legislação, jurisprudência e publicações jurídicas do escritório Talamante Morais." />
+  <!-- METADADOS PRINCIPAIS DA PÁGINA -->
+  <title>Links Externos – Conteúdos Jurídicos | Talamante Morais</title>
+  <meta name="description" content="Página institucional destinada à organização e ao acesso a links externos permanentes de legislação, jurisprudência e publicações jurídicas." />
   <meta name="author" content="Talamante Morais" />
   <meta name="robots" content="index, follow" />
 
+  <!-- IMPORTAÇÃO DO ARQUIVO DE ESTILOS PRINCIPAL -->
   <link rel="stylesheet" href="main.css" />
 </head>
 
+<!-- INÍCIO DO CORPO DO DOCUMENTO -->
 <body>
+
+<!-- CABEÇALHO DA PÁGINA: IDENTIFICAÇÃO INSTITUCIONAL -->
 <header class="section-header">
-<h1>Links Externos – Conteúdos Jurídicos</h1>
-
-<p>Página institucional destinada ao acesso organizado a links externos de legislação, jurisprudência e publicações jurídicas.</p>
-
+  <h1>Links Externos – Conteúdos Jurídicos</h1>
+  <p>Página institucional destinada ao acesso organizado a links externos permanentes de legislação, jurisprudência e publicações jurídicas.</p>
 </header>
+
+<!-- CONTEÚDO PRINCIPAL DA PÁGINA -->
 <main class="container">
 
+  <!-- SEÇÃO: PUBLICAÇÕES JURÍDICAS (LINKS EXTERNOS PERMANENTES) -->
   <section>
-<h2 class="service-title">Publicações Jurídicas</h2>
+
+    <h2 class="service-title">Publicações Jurídicas</h2>
 
     <p class="service-desc">
       Links externos para artigos, notas técnicas, entrevistas, matérias jornalísticas e conteúdos publicados em plataformas de terceiros.
     </p>
+<!-- LISTA DE NAVEGAÇÃO INTERNA – PUBLICAÇÕES JURÍDICAS -->
+<!-- NÃO INSERIR LINKS EXTERNOS NESTE BLOCO -->
 <ul>
   <li>
     <a href="links-do-dia.html">
@@ -34,21 +53,41 @@
     </a>
   </li>
 </ul>
+
   </section>
 
+  <!-- SEÇÃO: LEGISLAÇÃO E JURISPRUDÊNCIA (LINKS EXTERNOS PERMANENTES) -->
   <section>
-<h2 class="service-title">Legislação e Jurisprudência</h2>
-<p class="service-desc">
-  Links externos para acesso a normas legais, atos normativos e decisões judiciais em fontes oficiais.
-</p>
+
+    <h2 class="service-title">Legislação e Jurisprudência</h2>
+
+    <p class="service-desc">
+      Links externos para acesso a normas legais, atos normativos e decisões judiciais em fontes oficiais.
+    </p>
+
+<!-- LISTA DE LINKS EXTERNOS – LEGISLAÇÃO E JURISPRUDÊNCIA -->
+<!-- INSERIR, SUBSTITUIR OU REMOVER LINKS EXTERNOS SOMENTE DENTRO DESTE BLOCO -->
 <ul>
-  <li><a href="https://www.planalto.gov.br" target="_blank" rel="noopener noreferrer">Planalto – Legislação Federal</a></li>
-  <li><a href="https://www.stf.jus.br" target="_blank" rel="noopener noreferrer">Supremo Tribunal Federal – Jurisprudência</a></li>
-  <li><a href="https://www.stj.jus.br" target="_blank" rel="noopener noreferrer">Superior Tribunal de Justiça – Jurisprudência</a></li>
-</ul>
-      
+      <li>
+        <a href="https://www.planalto.gov.br" target="_blank" rel="noopener noreferrer">
+          Planalto – Legislação Federal
+        </a>
+      </li>
+      <li>
+        <a href="https://www.stf.jus.br" target="_blank" rel="noopener noreferrer">
+          Supremo Tribunal Federal – Jurisprudência
+        </a>
+      </li>
+      <li>
+        <a href="https://www.stj.jus.br" target="_blank" rel="noopener noreferrer">
+          Superior Tribunal de Justiça – Jurisprudência
+        </a>
+      </li>
+    </ul>
+
   </section>
 
+  <!-- BLOCO DE AÇÕES E NAVEGAÇÃO DE RETORNO -->
   <section class="page-actions">
     <a class="cta-btn" href="conteudos.html">Voltar aos Conteúdos Jurídicos</a>
     <a class="cta-btn" href="index.html">Voltar ao site</a>
@@ -56,10 +95,12 @@
 
 </main>
 
+<!-- RODAPÉ INSTITUCIONAL -->
 <footer role="contentinfo">
   &copy; <span id="ano"></span> Talamante Morais – Todos os direitos reservados.
 </footer>
 
+<!-- SCRIPT PARA ATUALIZAÇÃO AUTOMÁTICA DO ANO -->
 <script>
   document.getElementById("ano").textContent = new Date().getFullYear();
 </script>

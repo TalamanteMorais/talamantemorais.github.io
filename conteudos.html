@@ -21,7 +21,6 @@
 <meta name="twitter:title" content="Conteúdos Jurídicos – Talamante Morais Advocacia" />
   <meta name="twitter:description" content="Repositório institucional de conteúdos jurídicos, publicações e materiais técnicos sobre contratações públicas, concessões e parcerias administrativas." />
   <meta name="twitter:image" content="https://www.talamantemorais.adv.br/img/og_image_talamante.jpg" />
-  
   <meta http-equiv="Content-Security-Policy" content="
     default-src 'self';
     base-uri 'self';
@@ -32,7 +31,7 @@
     style-src 'self' https://fonts.googleapis.com 'unsafe-inline';
     font-src https://fonts.gstatic.com;
     img-src 'self' https: data:;
-  ">
+">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://www.googletagmanager.com">
@@ -70,13 +69,12 @@
 </p>
 <ul>
   <li>
-<ul>
-  <li>
 <strong>Legislação e Jurisprudência</strong><br>
     Acesso organizado a legislação e decisões judiciais em fontes externas.<br>
     <a href="links-externos.html" class="cta-btn">Acessar links</a>
   </li>
 </ul>
+
 
   </section>
   <section id="publicacoes-e-atuacao" aria-labelledby="titulo-publicacoes-atuacao">
@@ -111,12 +109,14 @@
     </div>
   </section>
 </main>
-
 <footer role="contentinfo">
   &copy; <span id="ano"></span> Talamante Morais – Todos os direitos reservados.
   <a href="privacidade.html" class="footer-link">Privacidade</a>
 </footer>
 
+<script>
+  document.getElementById("ano").textContent = new Date().getFullYear();
+</script>
 <script src="scripts.js" defer></script>
 </body>
 </html>
