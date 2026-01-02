@@ -1,12 +1,28 @@
-<!doctype html>
+<!--
+  INSTRUÇÕES GERAIS DE MANUTENÇÃO E ATUALIZAÇÃO
+  Este arquivo apresenta registros audiovisuais da atuação pública.
+  Alterações devem preservar estrutura, IDs e integração com YouTube.
+-->
+
+<!-- DECLARAÇÃO DO DOCUMENTO HTML -->
+
 <html lang="pt-BR">
+
+<!-- CABEÇALHO DO DOCUMENTO: METADADOS, SEO, SEGURANÇA E RECURSOS EXTERNOS -->
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<!-- METADADOS PRINCIPAIS E SEO DA PÁGINA -->
+
   <title>Momentos Públicos — Vídeos | Talamante Morais</title>
   <meta name="description" content="Momentos públicos em vídeo: destaque ao vivo e grade de vídeos do YouTube." />
   <link rel="preconnect" href="https://www.youtube-nocookie.com">
   <link rel="preconnect" href="https://img.youtube.com">
+
+<!-- POLÍTICA DE SEGURANÇA DO CONTEÚDO (CSP) -->
+
 <meta http-equiv="Content-Security-Policy" content="
   default-src 'self';
   base-uri 'self';
@@ -19,12 +35,18 @@
   img-src 'self' https: data:;
 ">
 
-<!-- Google tag (gtag.js) -->
+<!-- INTEGRAÇÃO COM GOOGLE ANALYTICS -->
+
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZKCPTG7K1T"></script>
 <script src="gtag-init.js"></script>
 </head>
+
+<!-- INÍCIO DO CORPO DO DOCUMENTO -->
+
 <body>
-  <!-- Cabeçalho + breadcrumb -->
+
+<!-- CABEÇALHO DA PÁGINA: TÍTULO E NAVEGAÇÃO BREADCRUMB -->
+
   <header class="section-header" role="banner">
     <nav aria-label="breadcrumb" style="max-width: var(--container-max); margin: 0 auto; padding: 0 1rem;">
       <ol style="list-style: none; display: flex; gap: .5rem; padding: 0; margin: 0;">
@@ -35,13 +57,24 @@
     </nav>
     <h1 id="titulo-momentos" style="max-width: var(--container-max); margin: .8rem auto 0; padding: 0 1rem;">Momentos Públicos</h1>
   </header>
+
+<!-- CONTEÚDO PRINCIPAL DA PÁGINA -->
+
 <main id="conteudo" role="main" aria-labelledby="titulo-momentos">
+
+<!-- SEÇÃO: TRANSMISSÃO AO VIVO -->
+
   <section aria-labelledby="titulo-ao-vivo">
     <h2 id="titulo-ao-vivo" class="service-title">Ao vivo agora</h2>
   </section>
+
+<!-- SEÇÃO: ÚLTIMO VÍDEO PUBLICADO -->
+
   <section aria-labelledby="titulo-ultimo-video">
 
   <h2 id="titulo-ultimo-video" class="service-title">Último Vídeo Publicado</h2>
+
+<!-- BLOCO DE VÍDEO EM DESTAQUE (EMBED DO YOUTUBE) -->
 
 <figure class="video-embed">
   <iframe
@@ -60,11 +93,17 @@
 </figure>
 
 </section>
+
+<!-- SEÇÃO: GRADE DE VÍDEOS DO YOUTUBE -->
+
 <section aria-labelledby="titulo-grade">
       <h2 id="titulo-grade" class="service-title">Vídeos do YouTube</h2>
       <p class="service-desc">
         Cada item é um <code>&lt;li&gt;</code> com <strong>título</strong>, <strong>link</strong> e miniatura opcional.
       </p>
+
+<!-- LISTA DE VÍDEOS COM LINKS EXTERNOS -->
+
       <ul class="video-grid" aria-label="Lista de vídeos">
         <li class="video-card">
         <a href="https://www.youtube.com/watch?v=grOYhQbdrLs" target="_blank" rel="noopener noreferrer"
@@ -78,6 +117,9 @@
     </section>
 
   </main>
+
+<!-- RODAPÉ DA PÁGINA -->
+
 <footer role="contentinfo">
   <a href="privacidade.html" class="footer-link">Privacidade</a>
   <a class="whatsapp-button" href="https://wa.me/556296318340" target="_blank" rel="noopener noreferrer" aria-label="Abrir WhatsApp em nova aba">WhatsApp</a>

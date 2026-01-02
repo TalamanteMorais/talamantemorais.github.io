@@ -1,4 +1,11 @@
-/* ======================== SCRIPT GERAL DO SITE ======================== */
+/*
+  INSTRUÇÕES GERAIS DE MANUTENÇÃO E ATUALIZAÇÃO
+  Script geral de funcionalidades do site.
+  As seções estão organizadas por blocos funcionais comentados.
+*/
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
 
 /* ======================== ÚLTIMO VÍDEO DO YOUTUBE ======================== */
