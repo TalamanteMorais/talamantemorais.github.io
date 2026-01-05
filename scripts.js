@@ -4,17 +4,14 @@
   As seções estão organizadas por blocos funcionais comentados.
 */
 
-
-
 document.addEventListener("DOMContentLoaded", function () {
 
 /* ======================== ÚLTIMO VÍDEO DO YOUTUBE ======================== */
 (function () {
-
   const iframeUltimo = document.getElementById("ultimo-video-youtube");
   if (!iframeUltimo) return;
   const RSS_URL =
-    "https://www.youtube.com/feeds/videos.xml?channel_id=UCifA0MpzCwCYfiuQY4E6S9A";
+    "https://www.youtube.com/feeds/videos.xml?channel_id=UC68CTKq-xA8qG0oDMEcWtfg";
 
   fetch(RSS_URL)
     .then(r => r.text())
@@ -24,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (!entry) {
         iframeUltimo.src =
-          "https://www.youtube-nocookie.com/embed/fy2a2YcozUE";
+          "https://www.youtube-nocookie.com/embed?listType=playlist&list=UU68CTKq-xA8qG0oDMEcWtfg";
         return;
       }
 
@@ -38,8 +35,9 @@ document.addEventListener("DOMContentLoaded", function () {
     })
     .catch(() => {
       iframeUltimo.src =
-        "https://www.youtube-nocookie.com/embed/fy2a2YcozUE";
+        "https://www.youtube-nocookie.com/embed?listType=playlist&list=UU68CTKq-xA8qG0oDMEcWtfg";
     });
+
 })();
 
   /* ======================== CARROSSEL ======================== */
