@@ -7,38 +7,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
 /* ======================== ÚLTIMO VÍDEO DO YOUTUBE ======================== */
-(function () {
-  const iframeUltimo = document.getElementById("ultimo-video-youtube");
-  if (!iframeUltimo) return;
-  const RSS_URL =
-    "https://www.youtube.com/feeds/videos.xml?channel_id=UC68CTKq-xA8qG0oDMEcWtfg";
-
-  fetch(RSS_URL)
-    .then(r => r.text())
-    .then(str => {
-      const xml = new window.DOMParser().parseFromString(str, "text/xml");
-      const entry = xml.querySelector("entry > id");
-
-      if (!entry) {
-        iframeUltimo.src =
-          "https://www.youtube-nocookie.com/embed?listType=playlist&list=UU68CTKq-xA8qG0oDMEcWtfg";
-        return;
-      }
-
-      const fullId = entry.textContent.trim();
-      const videoId = fullId.replace("yt:video:", "");
-
-      iframeUltimo.src =
-        "https://www.youtube-nocookie.com/embed/" + videoId;
-      iframeUltimo.title =
-        "Último vídeo publicado — carregamento automático";
-    })
-    .catch(() => {
-      iframeUltimo.src =
-        "https://www.youtube-nocookie.com/embed?listType=playlist&list=UU68CTKq-xA8qG0oDMEcWtfg";
-    });
-
-})();
+/* Carregamento automático feito exclusivamente via playlist de uploads no iframe */
 
   /* ======================== CARROSSEL ======================== */
   const track = document.querySelector(".carousel-track");
