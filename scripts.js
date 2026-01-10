@@ -328,3 +328,4 @@ fetch("https://script.google.com/macros/s/AKfycbzvgpuIDGGkpm6hj4WaV7TNVcIJe6BTbI
   if (anoEl) anoEl.textContent = new Date().getFullYear();
 
 });
+(últimas linhas do scrip
