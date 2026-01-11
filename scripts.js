@@ -322,10 +322,54 @@ fetch("https://script.google.com/macros/s/AKfycbzvgpuIDGGkpm6hj4WaV7TNVcIJe6BTbI
       });
     });
   }
+  /* ======================== LISTA DE LINKS — PUBLICAÇÕES JURÍDICAS (JSON) ======================== */
+  const linksPublicacoesEl = document.getElementById("links-publicacoes");
+
+  if (linksPublicacoesEl) {
+    const jsonUrl = linksPublicacoesEl.getAttribute("data-json") || "links-publicacoes.json";
+
+    fetch(jsonUrl, { cache: "no-store" })
+      .then((res) => {
+        if (!res.ok) throw new Error("Falha ao carregar JSON de links.");
+        return res.json();
+      })
+      .then((links) => {
+        if (!Array.isArray(links)) return;
+
+        const validos = links.filter((item) =>
+          item &&
+          typeof item === "object" &&
+          typeof item.title === "string" &&
+          item.title.trim() &&
+          typeof item.url === "string" &&
+          item.url.trim()
+        );
+
+        if (validos.length === 0) return;
+
+        linksPublicacoesEl.innerHTML = "";
+
+        validos.forEach((item) => {
+          const li = document.createElement("li");
+          const a = document.createElement("a");
+
+          a.href = item.url.trim();
+          a.target = "_blank";
+          a.rel = "noopener noreferrer";
+          a.textContent = item.title.trim();
+
+          li.appendChild(a);
+          linksPublicacoesEl.appendChild(li);
+        });
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  }
 
   /* ======================== RODAPÉ — ANO AUTOMÁTICO ======================== */
   const anoEl = document.getElementById("ano");
   if (anoEl) anoEl.textContent = new Date().getFullYear();
 
 });
-(últimas linhas do scrip
+

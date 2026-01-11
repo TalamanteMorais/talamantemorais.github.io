@@ -9,9 +9,21 @@
   <meta name="description" content="Acesso às publicações jurídicas organizadas em repositório institucional externo." />
   <meta name="author" content="Talamante Morais" />
   <meta name="robots" content="index, follow" />
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    base-uri 'self';
+    object-src 'none';
+    frame-ancestors 'none';
+    connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com;
+    script-src 'self' https://www.googletagmanager.com;
+    style-src 'self' https://fonts.googleapis.com 'unsafe-inline';
+    font-src https://fonts.gstatic.com;
+    img-src 'self' https: data:;
+">
 
   <link rel="stylesheet" href="main.css" />
 </head>
+
 <body>
 <header class="section-header">
   <h1>Publicações Jurídicas</h1>
@@ -24,58 +36,8 @@
 <p class="service-desc">
   As publicações jurídicas são organizadas em repositório institucional próprio, abrangendo artigos, notas técnicas, entrevistas e registros de atuação pública. Abaixo seguem os acessos diretos aos conteúdos e pastas correspondentes.
 </p>
-
-<!-- Botão de Atuação Pública transformado em botão de pasta -->
-    <ul class="link-list">
-      <li>
-        <a href="https://www.tst.jus.br/-/justica-do-trabalho-decreta-suspensao-de-precatorios-dos-correios-por-90-dias"
-           target="_blank"
-           rel="noopener noreferrer">
-          Justiça do Trabalho decreta suspensão de precatórios dos Correios por 90 dias
-        </a>
-      </li>
-      <li>
-        <a href="#"
-           target="_blank"
-           rel="noopener noreferrer">
-          [Inserir novo link 2]
-        </a>
-      </li>
-      <li>
-        <a href="#"
-           target="_blank"
-           rel="noopener noreferrer">
-          [Inserir novo link 3]
-        </a>
-      </li>
-      <li>
-        <a href="#"
-           target="_blank"
-           rel="noopener noreferrer">
-          [Inserir novo link 4]
-        </a>
-      </li>
-      <li>
-        <a href="#"
-           target="_blank"
-           rel="noopener noreferrer">
-          [Inserir novo link 5]
-        </a>
-      </li>
-      <li>
-        <a href="#"
-           target="_blank"
-           rel="noopener noreferrer">
-          [Inserir novo link 6]
-        </a>
-      </li>
-      <li>
-        <a href="#"
-           target="_blank"
-           rel="noopener noreferrer">
-          [Inserir novo link 7]
-        </a>
-      </li>
+    <ul class="link-list" id="links-publicacoes" data-json="links-publicacoes.json">
+      <li>Links em atualização.</li>
     </ul>
   </section>
   <section class="page-actions">
@@ -86,5 +48,9 @@
 <footer role="contentinfo">
   &copy; <span id="ano"></span> Talamante Morais – Todos os direitos reservados.
 </footer>
+<script src="scripts.js" defer></script>
 </body>
 </html>
+
+
+
