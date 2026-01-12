@@ -93,24 +93,6 @@ img, picture, svg, video {
   max-width: var(--container-max);
   margin: 0 auto;
   padding: 0 1.5rem;
-  transform: translateX(95px);
-}
-
-.section-header .brand-text{
-  text-align: center;
-  justify-self: center;
-}
-
-.section-header .brand-logo-wrap{
-  width: clamp(110px, 14vw, 170px);
-  height: clamp(110px, 14vw, 170px);
-  justify-self: end;
-}
-
-.section-header .brand-logo-img{
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
 }
 
 @media (max-width: 520px){
@@ -125,13 +107,12 @@ img, picture, svg, video {
   }
 .section-header .brand{
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 1fr;
   align-items: center;
-  gap: clamp(1.6rem, 3vw, 2.4rem);
+  gap: 0.9rem;
   max-width: var(--container-max);
   margin: 0 auto;
   padding: 0 1.5rem;
-  transform: translateX(200px);
 }
   .section-header .brand-text{
     justify-self: center;
@@ -144,6 +125,7 @@ img, picture, svg, video {
     justify-self: center;
   }
 }
+
 /* ======================== 03. MENU DE NAVEGAÇÃO ======================== */
 .main-nav {
   background: #0f2743; /* fundo escuro original */
