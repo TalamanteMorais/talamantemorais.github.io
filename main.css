@@ -602,62 +602,9 @@ button[type="submit"]:focus-visible{
     scroll-behavior: auto !important;
   }
 }
-
 /* Ajuste de textos justificados em seções específicas */
 #artigos p{
   text-align: justify;
-}
-@media (max-width: 900px){
-  body {
-    font-size: 0.95rem;
-    line-height: 1.55;
-  }
-
-  .section-header h1 {
-    font-size: 1.8rem;
-  }
-
-  .section-header p {
-    font-size: 1.05rem;
-  }
-
-  .main-nav a {
-    font-size: 0.95rem;
-  }
-
-  .service-title {
-    font-size: 1.1rem;
-  }
-
-  .service-desc {
-    font-size: 0.95rem;
-  }
-
-  footer {
-    font-size: 0.9rem;
-  }
-
-  .whatsapp-button {
-    font-size: 0.9rem;
-    padding: 0.6rem 1.2rem;
-  }
-
-  button[type="submit"],
-  .cta-btn,
-  .main-btn {
-    font-size: 0.9rem;
-    padding: 0.6rem 1.2rem;
-  }
-
-  input[type="text"], input[type="email"], textarea {
-    font-size: 0.9rem;
-  }
-
-  .carousel-container{
-    height: auto;
-    aspect-ratio: 880 / 378;
-    margin: var(--gap-top) auto 0;
-  }
 }
 
 @media (max-width: 600px){
@@ -681,7 +628,6 @@ button[type="submit"]:focus-visible{
     font-size: 0.85rem;
   }
 }
-
 /* ======================== 21. VÍDEOS — grade (cards com link) ======================== */
 .video-grid{
   display: grid;
