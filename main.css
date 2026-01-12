@@ -417,7 +417,6 @@ ul li{
 body{
   padding-bottom: clamp(110px, 14vw, 150px);
 }
-
 footer{
   width: 100%;
   background: #223b53;
@@ -431,6 +430,16 @@ footer{
   bottom: 0;
   left: 0;
   z-index: 99;
+}
+
+@media (max-width: 900px){
+  body{
+    padding-bottom: 0;
+  }
+
+  footer{
+    position: static;
+  }
 }
 
 .footer-link{
