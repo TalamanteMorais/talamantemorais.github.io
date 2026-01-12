@@ -481,9 +481,20 @@ footer{
 }
 
 @media (max-width: 900px){
+/* Ajuste do badge do reCAPTCHA (quadrado no canto direito) */
+.grecaptcha-badge{
+  right: calc(12px + env(safe-area-inset-right)) !important;
+  bottom: calc(12px + env(safe-area-inset-bottom)) !important;
+  z-index: 90;
+  transform-origin: 100% 100%;
+}
+
+@media (max-width: 900px){
   .grecaptcha-badge{
+    position: fixed !important;
     left: calc(12px + env(safe-area-inset-left)) !important;
     right: auto !important;
+    top: auto !important;
     bottom: calc(12px + env(safe-area-inset-bottom)) !important;
     z-index: 90;
     transform: scale(0.92);
