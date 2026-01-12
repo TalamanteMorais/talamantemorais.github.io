@@ -221,11 +221,6 @@ section{
   margin: 0 auto;
 }
 
-
-
-
-
-
 /* ======================== 08. BOTÕES ======================== */
 .cta-btn, .main-btn{
   display: inline-block;
@@ -431,17 +426,11 @@ footer{
   left: 0;
   z-index: 99;
 }
-
 @media (max-width: 900px){
-  body{
-    padding-bottom: 0;
-  }
-
   footer{
     position: static;
   }
 }
-
 .footer-link{
   color: #ffffff;
   text-decoration: underline;
@@ -474,10 +463,23 @@ footer{
   transform: translateY(-2px);
   box-shadow: 0 8px 22px rgba(40, 120, 60, 0.2);
 }
-
 .whatsapp-button:focus-visible{
   outline: 3px solid #b6f5cc;
   outline-offset: 2px;
+}
+
+/* Ajuste do badge do reCAPTCHA (quadrado no canto direito) */
+.grecaptcha-badge{
+  right: calc(12px + env(safe-area-inset-right)) !important;
+  bottom: calc(12px + env(safe-area-inset-bottom)) !important;
+  z-index: 90;
+  transform-origin: 100% 100%;
+}
+
+@media (max-width: 900px){
+  .grecaptcha-badge{
+    transform: scale(0.92);
+  }
 }
 
 /* Ajuste para listas de definições (#sobre) */
@@ -485,7 +487,6 @@ footer{
   margin: 1rem 0;
   padding: 0;
 }
-
 .valores-lista dt {
   font-weight: bold;
   margin-top: .5rem;
