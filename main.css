@@ -112,7 +112,6 @@ img, picture, svg, video {
   height: 100%;
   object-fit: contain;
 }
-
 @media (max-width: 520px){
   .section-header{
     background-image: url('img/Arte_Fundo_1.jpg');
@@ -123,16 +122,19 @@ img, picture, svg, video {
     text-align: center;
     color: #0f2743;
   }
-.section-header .brand{
-  display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: center;
-  gap: clamp(1.6rem, 3vw, 2.4rem);
-  max-width: var(--container-max);
-  margin: 0 auto;
-  padding: 0 1.5rem;
-  transform: translateX(200px);
-}
+
+  .section-header .brand{
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+    gap: 0.6rem;
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    transform: none;
+  }
+
   .section-header .brand-text{
     justify-self: center;
     text-align: center;
@@ -142,6 +144,7 @@ img, picture, svg, video {
     width: clamp(140px, 34vw, 200px);
     height: auto;
     justify-self: center;
+    margin-top: 0.3rem;
   }
 }
 /* ======================== 03. MENU DE NAVEGAÇÃO ======================== */
@@ -190,35 +193,6 @@ img, picture, svg, video {
     padding: 0.3rem 0.5rem;
     line-height: 1.2;
     font-size: 1rem;
-  }
-}
-@media (max-width: 600px){
-  .main-nav{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 10px 18px;
-    padding: 0.75rem 0.6rem;
-  }
-
-  .main-nav a{
-    margin: 0;
-    padding: 0.3rem 0.5rem;
-    line-height: 1.2;
-    font-size: 0.95rem;
-  }
-}
-
-@media (max-width: 600px){
-  .main-nav{
-    padding: 0.85rem 0.6rem;
-  }
-
-  .main-nav a{
-    margin: 0.25rem 0.9rem;
-    font-size: 1rem;
-    padding: 0.25rem 0.35rem;
   }
 }
 .main-nav a:hover{
