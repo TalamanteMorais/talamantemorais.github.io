@@ -360,7 +360,6 @@ ul li{
   transition: background-color 0.25s, transform 0.15s ease;
   box-shadow: 0 4px 12px rgba(24, 100, 171, 0.15);
 }
-
 /* CENTRALIZAÇÃO DOS BOTÕES INFERIORES */
 .bottom-links,
 .links-footer,
@@ -382,7 +381,12 @@ ul li{
 .materiais-links a{
   margin: 0;
 }
+
 /* ======================== 14. RODAPÉ ======================== */
+body{
+  padding-bottom: clamp(110px, 14vw, 150px);
+}
+
 footer{
   width: 100%;
   background: #223b53;
@@ -404,21 +408,11 @@ footer{
   text-underline-offset: 3px;
 }
 
-.footer-link:hover{
-  color: #a3d3ff;
-}
-
-.footer-link:focus-visible{
-  outline: 3px solid #a3d3ff;
-  outline-offset: 2px;
-  border-radius: 6px;
-}
-
 /* ======================== 15. BOTÃO WHATSAPP ======================== */
 .whatsapp-button{
   position: fixed;
   right: clamp(12px, 3vw, 18px);
-  bottom: clamp(70px, 10vw, 85px);
+  bottom: clamp(95px, 12vw, 120px);
   background: #25D366;
   color: #ffffff;
   padding: clamp(10px, 2vw, 14px) clamp(16px, 4vw, 22px);
@@ -434,7 +428,6 @@ footer{
   z-index: 100;
   transition: background-color 0.2s ease, transform 0.2s ease;
 }
-
 .whatsapp-button:hover{
   background: #1ebe57;
   transform: translateY(-2px);
