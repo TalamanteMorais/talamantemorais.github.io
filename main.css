@@ -589,13 +589,30 @@ button[type="submit"]:focus-visible{
     margin: var(--gap-top) auto 0;
   }
 }
-
 @media (max-width: 600px){
   .section-header h1 {
     font-size: 1.6rem;
   }
 
   .section-header p {
+    font-size: 1rem;
+  }
+
+  .main-nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px 22px;
+    padding: 0.85rem 0.75rem;
+    text-align: center;
+  }
+
+  .main-nav a{
+    margin: 0;
+    padding: 0.35rem 0.55rem;
+    line-height: 1.2;
+    white-space: nowrap;
     font-size: 1rem;
   }
 
