@@ -238,6 +238,12 @@ section{
   box-shadow: 0 4px 14px rgba(24, 100, 171, 0.15);
   min-width: 120px;
 }
+
+
+
+
+
+
 @media (max-width: 900px){
   body {
     font-size: 0.95rem;
@@ -479,8 +485,6 @@ footer{
   outline: 3px solid #b6f5cc;
   outline-offset: 2px;
 }
-
-@media (max-width: 900px){
 /* Ajuste do badge do reCAPTCHA (quadrado no canto direito) */
 .grecaptcha-badge{
   right: calc(12px + env(safe-area-inset-right)) !important;
