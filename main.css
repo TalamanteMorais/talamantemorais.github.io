@@ -221,66 +221,10 @@ section{
   margin: 0 auto;
 }
 
-@media (max-width: 900px){
-  section{
-    margin: 2.5rem auto 2rem;
-    padding: 1.9rem 1.6rem;
-  }
-}
 
-@media (max-width: 600px){
-  section{
-    margin: 2rem auto 1.6rem;
-    padding: 1.6rem 1.1rem;
-  }
-  .info-box{
-    max-width: 100%;
-  }
-}
 
-/* ======================== 05. GRID DE SERVIÇOS ======================== */
-.services-grid{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: space-between;
-  padding: 0 1rem;
-}
 
-/* ======================== 06. CARTÕES DE SERVIÇOS ======================== */
-.service-card{
-  background: rgba(255,255,255,0.95);
-  border-radius: 22px 55px 22px 55px;
-  box-shadow: 0 6px 22px rgba(68,134,255,0.08);
-  padding: 32px 22px 28px 22px;
-  border-left: 5px solid #548eed;
-  min-height: 200px;
-  transition: transform .18s, box-shadow .22s;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
 
-.service-card:hover{
-  transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(68,134,255,0.15);
-}
-
-/* ======================== 07. TÍTULO E DESCRIÇÃO DOS SERVIÇOS ======================== */
-.service-title{
-  color: var(--brand);
-  font-weight: 700;
-  font-size: clamp(1rem, 2.5vw, 1.3rem);
-  margin-bottom: .8rem;
-}
-.service-desc{
-  text-align: justify;
-  text-justify: inter-word;
-  font-size: clamp(0.95rem, 2vw, 1.1rem);
-  margin-bottom: 1rem;
-}
 
 /* ======================== 08. BOTÕES ======================== */
 .cta-btn, .main-btn{
@@ -299,7 +243,78 @@ section{
   box-shadow: 0 4px 14px rgba(24, 100, 171, 0.15);
   min-width: 120px;
 }
+@media (max-width: 900px){
+  body {
+    font-size: 0.95rem;
+    line-height: 1.55;
+    padding-bottom: calc(140px + env(safe-area-inset-bottom));
+    overflow-x: hidden;
+  }
 
+  .section-header .brand{
+    transform: none;
+  }
+
+  .section-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .section-header p {
+    font-size: 1.05rem;
+  }
+
+  .main-nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px 18px;
+    padding: 0.85rem 0.6rem;
+    text-align: center;
+  }
+
+  .main-nav a {
+    font-size: 0.95rem;
+    margin: 0;
+    padding: 0.3rem 0.5rem;
+    line-height: 1.2;
+  }
+
+  .service-title {
+    font-size: 1.1rem;
+  }
+
+  .service-desc {
+    font-size: 0.95rem;
+  }
+
+  footer {
+    font-size: 0.9rem;
+  }
+
+  .whatsapp-button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+    bottom: calc(clamp(95px, 12vw, 120px) + env(safe-area-inset-bottom));
+  }
+
+  button[type="submit"],
+  .cta-btn,
+  .main-btn {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  input[type="text"], input[type="email"], textarea {
+    font-size: 0.9rem;
+  }
+
+  .carousel-container{
+    height: auto;
+    aspect-ratio: 880 / 378;
+    margin: var(--gap-top) auto 0;
+  }
+}
 .cta-btn:hover, .main-btn:hover{
   background-color: var(--brand-dark);
   transform: translateY(-2px);
