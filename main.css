@@ -144,11 +144,9 @@ img, picture, svg, video {
     justify-self: center;
   }
 }
-TRECHO NOVO (integral):
-
 /* ======================== 03. MENU DE NAVEGAÇÃO ======================== */
 .main-nav{
-  background: #0f2743; /* azul-escuro institucional */
+  background: #0f2743;
   text-align: center;
   padding: 0.75rem 0;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
