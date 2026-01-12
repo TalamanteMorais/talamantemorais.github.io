@@ -608,27 +608,6 @@ button[type="submit"]:focus-visible{
   text-align: justify;
 }
 
-@media (max-width: 600px){
-  .section-header h1 {
-    font-size: 1.6rem;
-  }
-
-  .section-header p {
-    font-size: 1rem;
-  }
-
-  .service-title {
-    font-size: 1rem;
-  }
-
-  .service-desc {
-    font-size: 0.9rem;
-  }
-
-  footer {
-    font-size: 0.85rem;
-  }
-}
 /* ======================== 21. VÍDEOS — grade (cards com link) ======================== */
 .video-grid{
   display: grid;
