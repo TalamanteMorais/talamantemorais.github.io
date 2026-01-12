@@ -440,7 +440,7 @@ footer{
 .whatsapp-button{
   position: fixed;
   right: clamp(12px, 3vw, 18px);
-  bottom: clamp(70px, 10vw, 85px);
+  bottom: clamp(100px, 12vw, 110px); /* sobe o botão para liberar espaço para o reCAPTCHA */
   background: #25D366;
   color: #ffffff;
   padding: clamp(10px, 2vw, 14px) clamp(16px, 4vw, 22px);
@@ -457,6 +457,12 @@ footer{
   transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
+/* Ajuste para o reCAPTCHA */
+.grecaptcha-badge{
+  bottom: 10px !important;
+  left: 10px !important; /* move para o canto inferior esquerdo */
+  right: auto !important;
+}
 .whatsapp-button:hover{
   background: #1ebe57;
   transform: translateY(-2px);
