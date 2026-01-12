@@ -206,7 +206,6 @@ img, picture, svg, video {
   outline-offset: 2px;
   border-radius: 6px;
 }
-
 /* ======================== 04. SEÇÕES GERAIS ======================== */
 section{
   max-width: var(--container-max);
@@ -220,6 +219,25 @@ section{
 .info-box{
   text-align: justify;
   text-justify: inter-word;
+  max-width: 72ch;
+  margin: 0 auto;
+}
+
+@media (max-width: 900px){
+  section{
+    margin: 2.5rem auto 2rem;
+    padding: 1.9rem 1.6rem;
+  }
+}
+
+@media (max-width: 600px){
+  section{
+    margin: 2rem auto 1.6rem;
+    padding: 1.6rem 1.1rem;
+  }
+  .info-box{
+    max-width: 100%;
+  }
 }
 
 /* ======================== 05. GRID DE SERVIÇOS ======================== */
