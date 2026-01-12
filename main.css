@@ -132,6 +132,9 @@ img, picture, svg, video {
     margin-top: 0.3rem;
   }
 }
+main.css
+
+TRECHO ATUAL (integral):
 
 /* ======================== 03. MENU DE NAVEGAÇÃO ======================== */
 .main-nav {
@@ -168,6 +171,59 @@ img, picture, svg, video {
   outline: 3px solid #a3d3ff;
   outline-offset: 2px;
   border-radius: 6px;
+}
+
+TRECHO SUBSTITUTIVO (integral):
+
+/* ======================== 03. MENU DE NAVEGAÇÃO ======================== */
+.main-nav {
+  background: #0f2743; /* fundo escuro original */
+  text-align: center;
+  padding: 0.75rem 0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.main-nav a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 1.2rem;
+  font-weight: 600;
+  font-size: 1.05rem;
+  transition: color 0.2s ease;
+}
+
+.main-nav a:hover {
+  color: #a3d3ff;
+}
+
+.main-nav a:focus-visible {
+  outline: 3px solid #a3d3ff;
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+@media (max-width: 520px){
+  .main-nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem 1.2rem;
+    padding: 0.85rem 0.9rem;
+    text-align: center;
+  }
+
+  .main-nav a{
+    margin: 0;
+    padding: 0.25rem 0.5rem;
+    flex: 1 1 42%;
+    text-align: center;
+    font-size: 1.05rem;
+    white-space: nowrap;
+  }
+
+  .main-nav a:last-child{
+    flex-basis: 100%;
+  }
 }
 
 /* ======================== 04. SEÇÕES GERAIS ======================== */
