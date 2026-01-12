@@ -89,15 +89,28 @@ img, picture, svg, video {
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: center;
-  gap: 0.5rem;
+  gap: clamp(1.6rem, 3vw, 2.4rem);
   max-width: var(--container-max);
   margin: 0 auto;
-  padding: 0.5rem 1rem 0.8rem 1rem;
+  padding: 0 1.5rem;
+  transform: translateX(95px);
+}
+
+.section-header .brand-text{
+  text-align: center;
+  justify-self: center;
 }
 
 .section-header .brand-logo-wrap{
+  width: clamp(110px, 14vw, 170px);
+  height: clamp(110px, 14vw, 170px);
   justify-self: end;
-  margin-top: 0;
+}
+
+.section-header .brand-logo-img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 @media (max-width: 520px){
@@ -112,13 +125,13 @@ img, picture, svg, video {
   }
 .section-header .brand{
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr auto;
   align-items: center;
-  justify-items: center;
-  gap: 0.5rem;
+  gap: clamp(1.6rem, 3vw, 2.4rem);
   max-width: var(--container-max);
   margin: 0 auto;
-  padding: 0.5rem 1rem 0.8rem 1rem;
+  padding: 0 1.5rem;
+  transform: translateX(200px);
 }
   .section-header .brand-text{
     justify-self: center;
@@ -129,30 +142,51 @@ img, picture, svg, video {
     width: clamp(140px, 34vw, 200px);
     height: auto;
     justify-self: center;
-    margin-top: 0.3rem;
   }
 }
-main.css
-
-TRECHO ATUAL (integral):
-
 /* ======================== 03. MENU DE NAVEGAÇÃO ======================== */
 .main-nav {
-  background: #0f2743; /* fundo escuro original */
+  background: #0f2743; /* azul-escuro institucional restaurado */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem 1.4rem;
   text-align: center;
-  padding: 0.75rem 0;
+  padding: 0.85rem 1rem;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
 }
 
 .main-nav a {
   color: #ffffff;
   text-decoration: none;
-  margin: 0 1.2rem;
   font-weight: 600;
   font-size: 1.05rem;
   transition: color 0.2s ease;
+  white-space: nowrap;
+  padding: 0.25rem 0.75rem;
 }
 
+.main-nav a:hover {
+  color: #a3d3ff;
+}
+
+@media (max-width: 520px) {
+  .main-nav {
+    gap: 0.5rem 1rem;
+    padding: 0.8rem 0.6rem;
+  }
+
+  .main-nav a {
+    flex: 1 1 40%;
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .main-nav a:last-child {
+    flex-basis: 100%;
+  }
+}
 .main-nav a:hover {
   color: #a3d3ff;
 }
@@ -171,59 +205,6 @@ TRECHO ATUAL (integral):
   outline: 3px solid #a3d3ff;
   outline-offset: 2px;
   border-radius: 6px;
-}
-
-TRECHO SUBSTITUTIVO (integral):
-
-/* ======================== 03. MENU DE NAVEGAÇÃO ======================== */
-.main-nav {
-  background: #0f2743; /* fundo escuro original */
-  text-align: center;
-  padding: 0.75rem 0;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
-}
-
-.main-nav a {
-  color: #ffffff;
-  text-decoration: none;
-  margin: 0 1.2rem;
-  font-weight: 600;
-  font-size: 1.05rem;
-  transition: color 0.2s ease;
-}
-
-.main-nav a:hover {
-  color: #a3d3ff;
-}
-
-.main-nav a:focus-visible {
-  outline: 3px solid #a3d3ff;
-  outline-offset: 2px;
-  border-radius: 6px;
-}
-
-@media (max-width: 520px){
-  .main-nav{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.6rem 1.2rem;
-    padding: 0.85rem 0.9rem;
-    text-align: center;
-  }
-
-  .main-nav a{
-    margin: 0;
-    padding: 0.25rem 0.5rem;
-    flex: 1 1 42%;
-    text-align: center;
-    font-size: 1.05rem;
-    white-space: nowrap;
-  }
-
-  .main-nav a:last-child{
-    flex-basis: 100%;
-  }
 }
 
 /* ======================== 04. SEÇÕES GERAIS ======================== */
@@ -645,30 +626,13 @@ button[type="submit"]:focus-visible{
     margin: var(--gap-top) auto 0;
   }
 }
+
 @media (max-width: 600px){
   .section-header h1 {
     font-size: 1.6rem;
   }
 
   .section-header p {
-    font-size: 1rem;
-  }
-
-  .main-nav{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 10px 22px;
-    padding: 0.85rem 0.75rem;
-    text-align: center;
-  }
-
-  .main-nav a{
-    margin: 0;
-    padding: 0.35rem 0.55rem;
-    line-height: 1.2;
-    white-space: nowrap;
     font-size: 1rem;
   }
 
