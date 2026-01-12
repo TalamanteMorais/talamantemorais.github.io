@@ -407,10 +407,11 @@ ul li{
 .materiais-links a{
   margin: 0;
 }
-
 /* ======================== 14. RODAPÉ ======================== */
-body{
-  padding-bottom: clamp(110px, 14vw, 150px);
+@media (min-width: 901px){
+  body{
+    padding-bottom: clamp(110px, 14vw, 150px);
+  }
 }
 footer{
   width: 100%;
@@ -436,6 +437,7 @@ footer{
   text-decoration: underline;
   text-underline-offset: 3px;
 }
+
 /* ======================== 15. BOTÃO WHATSAPP ======================== */
 .whatsapp-button{
   position: fixed;
@@ -463,30 +465,7 @@ footer{
   transform: translateY(-2px);
   box-shadow: 0 8px 22px rgba(40, 120, 60, 0.2);
 }
-.whatsapp-button:focus-visible{
-  outline: 3px solid #b6f5cc;
-  outline-offset: 2px;
-}
 
-/* Ajuste do badge do reCAPTCHA (quadrado no canto direito) */
-.grecaptcha-badge{
-  right: calc(12px + env(safe-area-inset-right)) !important;
-  bottom: calc(12px + env(safe-area-inset-bottom)) !important;
-  z-index: 90;
-  transform-origin: 100% 100%;
-}
-
-@media (max-width: 900px){
-  .grecaptcha-badge{
-    transform: scale(0.92);
-  }
-}
-
-/* Ajuste para listas de definições (#sobre) */
-.valores-lista {
-  margin: 1rem 0;
-  padding: 0;
-}
 .valores-lista dt {
   font-weight: bold;
   margin-top: .5rem;
@@ -495,6 +474,27 @@ footer{
   margin: 0 0 .5rem 1.5rem;
   text-align: justify;
   text-justify: inter-word;
+}
+.whatsapp-button:focus-visible{
+  outline: 3px solid #b6f5cc;
+  outline-offset: 2px;
+}
+
+@media (max-width: 900px){
+  .grecaptcha-badge{
+    left: calc(12px + env(safe-area-inset-left)) !important;
+    right: auto !important;
+    bottom: calc(12px + env(safe-area-inset-bottom)) !important;
+    z-index: 90;
+    transform: scale(0.92);
+    transform-origin: 0% 100%;
+  }
+}
+
+/* Ajuste para listas de definições (#sobre) */
+.valores-lista {
+  margin: 1rem 0;
+  padding: 0;
 }
 
 /* ======================== 16. FORMULÁRIO ======================== */
