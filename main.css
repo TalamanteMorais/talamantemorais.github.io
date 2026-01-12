@@ -87,9 +87,8 @@ img, picture, svg, video {
 }
 .section-header .brand{
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr auto;
   align-items: center;
-  justify-items: center;
   gap: 0.5rem;
   max-width: var(--container-max);
   margin: 0 auto;
@@ -97,7 +96,8 @@ img, picture, svg, video {
 }
 
 .section-header .brand-logo-wrap{
-  margin-top: 0.3rem;
+  justify-self: end;
+  margin-top: 0;
 }
 
 @media (max-width: 520px){
@@ -114,10 +114,11 @@ img, picture, svg, video {
   display: grid;
   grid-template-columns: 1fr;
   align-items: center;
-  gap: 0.9rem;
+  justify-items: center;
+  gap: 0.5rem;
   max-width: var(--container-max);
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0.5rem 1rem 0.8rem 1rem;
 }
   .section-header .brand-text{
     justify-self: center;
@@ -128,6 +129,7 @@ img, picture, svg, video {
     width: clamp(140px, 34vw, 200px);
     height: auto;
     justify-self: center;
+    margin-top: 0.3rem;
   }
 }
 
