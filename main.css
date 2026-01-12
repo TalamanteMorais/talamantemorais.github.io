@@ -447,12 +447,13 @@ footer{
   text-decoration: underline;
   text-underline-offset: 3px;
 }
-
 /* ======================== 15. BOTÃO WHATSAPP ======================== */
 .whatsapp-button{
   position: fixed;
-  right: clamp(12px, 3vw, 18px);
-  bottom: clamp(95px, 12vw, 120px);
+  right: calc(clamp(12px, 3vw, 18px) + env(safe-area-inset-right));
+  bottom: calc(clamp(95px, 12vw, 120px) + env(safe-area-inset-bottom));
+  max-width: calc(100vw - 24px - env(safe-area-inset-left) - env(safe-area-inset-right));
+  white-space: nowrap;
   background: #25D366;
   color: #ffffff;
   padding: clamp(10px, 2vw, 14px) clamp(16px, 4vw, 22px);
