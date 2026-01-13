@@ -220,7 +220,6 @@ section{
   max-width: 72ch;
   margin: 0 auto;
 }
-}
 
 /* ======================== 08. BOTÕES ======================== */
 .cta-btn, .main-btn{
@@ -243,10 +242,6 @@ section{
   text-align: justify;
   text-justify: inter-word;
 }
-
-@media (max-width: 900px){
-  body {
-
 @media (max-width: 900px){
   body {
     font-size: 0.95rem;
@@ -254,7 +249,6 @@ section{
     padding-bottom: calc(140px + env(safe-area-inset-bottom));
     overflow-x: hidden;
   }
-
   .section-header .brand{
     transform: none;
   }
