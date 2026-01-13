@@ -220,6 +220,7 @@ section{
   max-width: 72ch;
   margin: 0 auto;
 }
+}
 
 /* ======================== 08. BOTÕES ======================== */
 .cta-btn, .main-btn{
@@ -238,11 +239,13 @@ section{
   box-shadow: 0 4px 14px rgba(24, 100, 171, 0.15);
   min-width: 120px;
 }
+.service-desc {
+  text-align: justify;
+  text-justify: inter-word;
+}
 
-
-
-
-
+@media (max-width: 900px){
+  body {
 
 @media (max-width: 900px){
   body {
