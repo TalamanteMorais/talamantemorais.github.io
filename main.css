@@ -284,9 +284,10 @@ section{
   .service-title {
     font-size: 1.1rem;
   }
-
-  .service-desc {
+.service-desc {
     font-size: 0.95rem;
+    text-align: justify;
+    text-justify: inter-word;
   }
 
   footer {
