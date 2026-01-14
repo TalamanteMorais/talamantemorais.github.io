@@ -290,13 +290,9 @@ section{
   footer {
     font-size: 0.9rem;
   }
-
   .whatsapp-button {
-    font-size: 0.9rem;
-    padding: 0.6rem 1.2rem;
     bottom: calc(clamp(95px, 12vw, 120px) + env(safe-area-inset-bottom));
   }
-
   button[type="submit"],
   .cta-btn,
   .main-btn {
@@ -431,11 +427,6 @@ footer{
   left: 0;
   z-index: 99;
 }
-@media (max-width: 900px){
-  footer{
-    position: static;
-  }
-}
 .footer-link{
   color: #ffffff;
   text-decoration: underline;
@@ -484,51 +475,29 @@ footer{
   transform: translateY(-2px);
   box-shadow: 0 8px 22px rgba(40, 120, 60, 0.2);
 }
-
-.whatsapp-button:focus-visible{
-  outline: 3px solid #b6f5cc;
+.whatsapp-button:focus-visible {
+  outline: 2px solid rgba(255,255,255,.95);
   outline-offset: 2px;
 }
-@media (max-width: 900px){
-  .grecaptcha-badge{
-    position: fixed !important;
-    left: calc(12px + env(safe-area-inset-left)) !important;
-    right: auto !important;
-    top: auto !important;
-    bottom: calc(12px + env(safe-area-inset-bottom)) !important;
-    z-index: 120;
-    transform: scale(0.92);
-    transform-origin: 0% 100%;
-  }
-}
 
-/* Ajuste para listas de definições (#sobre) */
-.valores-lista {
-  margin: 1rem 0;
-  padding: 0;
-}
-/* Ajuste do badge do reCAPTCHA (quadrado no canto direito) */
-.grecaptcha-badge{
-  position: fixed !important;
-  left: calc(10px + env(safe-area-inset-left)) !important;
+/* reCAPTCHA badge (v3) - canto inferior esquerdo, menor e mais baixo */
+.grecaptcha-badge {
+  left: 10px !important;
   right: auto !important;
-  top: auto !important;
-  bottom: calc(10px + env(safe-area-inset-bottom) + 56px) !important;
-  z-index: 120;
-  transform: scale(0.72);
-  transform-origin: 0% 100%;
+  bottom: calc(8px + env(safe-area-inset-bottom) + 56px) !important;
+  transform: scale(0.80) !important;
+  transform-origin: left bottom !important;
+  z-index: 120 !important;
 }
 
-@media (max-width: 900px){
-  .grecaptcha-badge{
-    position: fixed !important;
-    left: calc(12px + env(safe-area-inset-left)) !important;
+@media (max-width: 900px) {
+  .grecaptcha-badge {
+    left: 8px !important;
     right: auto !important;
-    top: auto !important;
-    bottom: calc(12px + env(safe-area-inset-bottom)) !important;
-    z-index: 120;
-    transform: scale(0.92);
-    transform-origin: 0% 100%;
+    bottom: calc(8px + env(safe-area-inset-bottom) + 40px) !important;
+    transform: scale(0.70) !important;
+    transform-origin: left bottom !important;
+    z-index: 120 !important;
   }
 }
 
