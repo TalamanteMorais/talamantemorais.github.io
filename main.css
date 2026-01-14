@@ -489,14 +489,6 @@ footer{
   outline: 3px solid #b6f5cc;
   outline-offset: 2px;
 }
-
-
-
-
-
-
-
-
 @media (max-width: 900px){
   .grecaptcha-badge{
     position: fixed !important;
