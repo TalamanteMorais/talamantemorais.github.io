@@ -447,48 +447,56 @@ footer{
   position: fixed;
   right: calc(clamp(12px, 3vw, 18px) + env(safe-area-inset-right));
   bottom: calc(clamp(95px, 12vw, 120px) + env(safe-area-inset-bottom));
-  max-width: calc(100vw - 24px - env(safe-area-inset-left) - env(safe-area-inset-right));
-  white-space: nowrap;
+  width: 56px;
+  height: 56px;
+  padding: 0;
+  max-width: none;
+  white-space: normal;
   background: #25D366;
   color: #ffffff;
-  padding: clamp(10px, 2vw, 14px) clamp(16px, 4vw, 22px);
-  border-radius: 48px;
+  border-radius: 50%;
   text-decoration: none;
   font-family: 'Inter', sans-serif;
   font-weight: 600;
-  font-size: clamp(0.9rem, 2vw, 1rem);
+  font-size: 0;
+  line-height: 0;
   display: flex;
   align-items: center;
-  gap: clamp(6px, 2vw, 10px);
+  justify-content: center;
+  gap: 0;
   box-shadow: 0 6px 20px rgba(40, 120, 60, 0.15);
   z-index: 100;
   transition: background-color 0.2s ease, transform 0.2s ease;
 }
+
+.whatsapp-button::before{
+  content: "";
+  width: 26px;
+  height: 26px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%20fill='none'%20stroke='%23ffffff'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'%3E%3Cpath%20d='M22%2016.92v3a2%202%200%200%201-2.18%202%2019.79%2019.79%200%200%201-8.63-3.07%2019.5%2019.5%200%200%201-6-6A19.79%2019.79%200%200%201%203.11%204.18%202%202%200%200%201%205.11%202h3a2%202%200%200%201%202%201.72%2012.84%2012.84%200%200%200%20.7%202.81%202%202%200%200%201-.45%202.11L9.91%209.91a16%2016%200%200%200%206%206l1.27-1.27a2%202%200%200%201%202.11-.45%2012.84%2012.84%200%200%200%202.81.7A2%202%200%200%201%2022%2016.92z'/%3E%3C/svg%3E");
+}
+
 .whatsapp-button:hover{
   background: #1ebe57;
   transform: translateY(-2px);
   box-shadow: 0 8px 22px rgba(40, 120, 60, 0.2);
 }
 
-.valores-lista dt {
-  font-weight: bold;
-  margin-top: .5rem;
-}
-.valores-lista dd {
-  margin: 0 0 .5rem 1.5rem;
-  text-align: justify;
-  text-justify: inter-word;
-}
 .whatsapp-button:focus-visible{
   outline: 3px solid #b6f5cc;
   outline-offset: 2px;
 }
+
 /* Ajuste do badge do reCAPTCHA (quadrado no canto direito) */
 .grecaptcha-badge{
-  right: calc(12px + env(safe-area-inset-right)) !important;
-  bottom: calc(12px + env(safe-area-inset-bottom)) !important;
-  z-index: 90;
-  transform-origin: 100% 100%;
+  left: calc(12px + env(safe-area-inset-left)) !important;
+  right: auto !important;
+  bottom: calc(clamp(110px, 14vw, 150px) + 12px + env(safe-area-inset-bottom)) !important;
+  z-index: 120;
+  transform-origin: 0% 100%;
 }
 
 @media (max-width: 900px){
@@ -498,7 +506,7 @@ footer{
     right: auto !important;
     top: auto !important;
     bottom: calc(12px + env(safe-area-inset-bottom)) !important;
-    z-index: 90;
+    z-index: 120;
     transform: scale(0.92);
     transform-origin: 0% 100%;
   }
