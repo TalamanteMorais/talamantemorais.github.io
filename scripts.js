@@ -231,7 +231,6 @@ if (nextBtn) {
   }
 
   atualizarTransform();
-
   /* ======================== FORMULÁRIO + reCAPTCHA ======================== */
   const form = document.getElementById("contato-form");
 
@@ -239,11 +238,21 @@ if (nextBtn) {
     form.addEventListener("submit", function (e) {
       e.preventDefault();
 
-      const nome = document.getElementById("nome").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const mensagem = document.getElementById("mensagem").value.trim();
+      const nomeEl = document.getElementById("nome");
+      const emailEl = document.getElementById("email");
+      const mensagemEl = document.getElementById("mensagem");
       const botao = form.querySelector("button[type='submit']");
       const mensagemSucesso = document.getElementById("mensagem-sucesso");
+
+      if (!nomeEl || !emailEl || !mensagemEl || !botao) {
+        console.error("Formulário: campos obrigatórios ou botão submit não encontrados.");
+        alert("Não foi possível enviar no momento. Atualize a página e tente novamente.");
+        return;
+      }
+
+      const nome = nomeEl.value.trim();
+      const email = emailEl.value.trim();
+      const mensagem = mensagemEl.value.trim();
 
       const honey = form.querySelector('input[name="honeypot"]');
       if (honey && honey.value) return;
@@ -327,12 +336,16 @@ fetch("https://script.google.com/macros/s/AKfycbzvgpuIDGGkpm6hj4WaV7TNVcIJe6BTbI
 
   if (linksPublicacoesEl) {
     const jsonUrl = linksPublicacoesEl.getAttribute("data-json") || "links-publicacoes.json";
-
-    fetch(jsonUrl, { cache: "no-store" })
+    fetch(jsonUrl, {
+      cache: "no-store",
+      credentials: "omit",
+      referrerPolicy: "no-referrer"
+    })
       .then((res) => {
         if (!res.ok) throw new Error("Falha ao carregar JSON de links.");
         return res.json();
       })
+
       .then((links) => {
         if (!Array.isArray(links)) return;
 
