@@ -492,11 +492,22 @@ footer{
 
 /* Ajuste do badge do reCAPTCHA (quadrado no canto direito) */
 .grecaptcha-badge{
-  left: calc(12px + env(safe-area-inset-left)) !important;
+  position: fixed !important;
+  left: calc(10px + env(safe-area-inset-left)) !important;
   right: auto !important;
-  bottom: calc(clamp(110px, 14vw, 150px) + 12px + env(safe-area-inset-bottom)) !important;
+  top: auto !important;
+
+  bottom: calc(10px + env(safe-area-inset-bottom) + 56px) !important;
+
   z-index: 120;
+  transform: scale(0.72);
   transform-origin: 0% 100%;
+}
+@media (max-width: 900px){
+  .grecaptcha-badge{
+    bottom: calc(10px + env(safe-area-inset-bottom)) !important;
+    transform: scale(0.78);
+  }
 }
 
 @media (max-width: 900px){
