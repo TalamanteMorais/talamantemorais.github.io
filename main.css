@@ -167,16 +167,6 @@ img, picture, svg, video {
   padding: 0.15rem 0;
 }
 
-.main-nav a:hover{
-  color: #a3d3ff;
-}
-
-.main-nav a:focus-visible{
-  outline: 3px solid #a3d3ff;
-  outline-offset: 2px;
-  border-radius: 6px;
-}
-
 @media (max-width: 600px){
   .main-nav{
     display: flex;
@@ -238,7 +228,8 @@ section{
   box-shadow: 0 4px 14px rgba(24, 100, 171, 0.15);
   min-width: 120px;
 }
-.service-desc {
+.service-desc,
+.intro-text p {
   text-align: justify;
   text-justify: inter-word;
 }
@@ -283,8 +274,6 @@ section{
   }
 .service-desc {
     font-size: 0.95rem;
-    text-align: justify;
-    text-justify: inter-word;
   }
 
   footer {
