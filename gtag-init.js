@@ -12,4 +12,8 @@ gtag('js', new Date());
 
 /* CONFIGURAÇÃO DO GOOGLE ANALYTICS */
 
-gtag('config', 'G-ZKCPTG7K1T');
+gtag('config', 'G-ZKCPTG7K1T', {
+  anonymize_ip: true,
+  allow_google_signals: false,
+  allow_ad_personalization_signals: false
+});
