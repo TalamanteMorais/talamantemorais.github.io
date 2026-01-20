@@ -666,13 +666,21 @@ button[type="submit"]:focus-visible{
   padding: 0;
   display: block;
 }
-
 .video-embed iframe{
   width: 100%;
   aspect-ratio: 16 / 9;
   border: 0;
   border-radius: 10px;
   box-shadow: 0 2px 12px rgba(60,60,60,0.09);
+}
+
+.video-embed video{
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(60,60,60,0.09);
+  display: block;
 }
 
 /* Botões do carrossel */

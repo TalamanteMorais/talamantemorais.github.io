@@ -6,8 +6,8 @@
 
 document.addEventListener("DOMContentLoaded", function () {
 
-/* ======================== ÚLTIMO VÍDEO DO YOUTUBE ======================== */
-/* Carregamento automático feito exclusivamente via playlist de uploads no iframe */
+/* ======================== VÍDEO INSTITUCIONAL (ARQUIVO LOCAL) ======================== */
+/* Exibição por play do usuário via <video>, sem autoplay e sem integração automática com YouTube */
 
   /* ======================== CARROSSEL ======================== */
   const track = document.querySelector(".carousel-track");

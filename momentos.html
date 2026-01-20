@@ -2,7 +2,7 @@
 <!--
   INSTRUÇÕES GERAIS DE MANUTENÇÃO E ATUALIZAÇÃO
   Este arquivo apresenta registros audiovisuais da atuação pública.
-  Alterações devem preservar estrutura, IDs e integração com YouTube.
+  Alterações devem preservar estrutura e IDs existentes.
 -->
 
 <!-- DECLARAÇÃO DO DOCUMENTO HTML -->
@@ -14,9 +14,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Momentos Públicos — Vídeos | Talamante Morais</title>
-  <meta name="description" content="Momentos públicos em vídeo: destaque ao vivo e grade de vídeos do YouTube." />
-  <link rel="preconnect" href="https://www.youtube-nocookie.com">
-  <link rel="preconnect" href="https://img.youtube.com">
+  <meta name="description" content="Momentos públicos em vídeo: vídeo institucional fixo e registros audiovisuais." />
 
 <!-- POLÍTICA DE SEGURANÇA DO CONTEÚDO (CSP) -->
 
@@ -24,9 +22,8 @@
   default-src 'self';
   base-uri 'self';
   object-src 'none';
-  frame-ancestors 'none';
-  connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://www.youtube.com;
-  frame-src https://www.youtube-nocookie.com https://www.youtube.com;
+frame-ancestors 'none';
+  connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com;
   script-src 'self' https://www.googletagmanager.com;
   style-src 'self' 'unsafe-inline';
   img-src 'self' https: data:;
@@ -65,53 +62,32 @@
     <h2 id="titulo-ao-vivo" class="service-title">Ao vivo agora</h2>
   </section>
 
-<!-- SEÇÃO: ÚLTIMO VÍDEO PUBLICADO -->
+<!-- SEÇÃO: VÍDEO INSTITUCIONAL -->
 
   <section aria-labelledby="titulo-ultimo-video">
 
-  <h2 id="titulo-ultimo-video" class="service-title">Último Vídeo Publicado</h2>
+  <h2 id="titulo-ultimo-video" class="service-title">Vídeo Institucional</h2>
 
-<!-- BLOCO DE VÍDEO EM DESTAQUE (EMBED DO YOUTUBE) -->
+<!-- BLOCO DE VÍDEO INSTITUCIONAL FIXO (ARQUIVO LOCAL) -->
 
 <figure class="video-embed">
-  <iframe
-    id="ultimo-video-youtube"
-    src="https://www.youtube-nocookie.com/embed/0qPjzYePzCQ"
-    title="Último vídeo publicado — carregamento automático"
-    loading="eager"
-    referrerpolicy="strict-origin-when-cross-origin"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    allowfullscreen>
-  </iframe>
+  <video
+    controls
+    preload="metadata"
+    playsinline
+    controlsList="nodownload"
+    poster="img/video-institucional.webp"
+    aria-label="Vídeo institucional: apresentação do escritório">
+    <source src="media/video-institucional.mp4" type="video/mp4">
+    Seu navegador não suporta o elemento de vídeo.
+  </video>
 <figcaption style="text-align:center; margin-top:.4rem;">
-  Último vídeo carregado automaticamente do canal no YouTube.
+  Vídeo institucional fixo: apresentação profissional.
 </figcaption>
 
 </figure>
 
 </section>
-
-<!-- SEÇÃO: GRADE DE VÍDEOS DO YOUTUBE -->
-
-<section aria-labelledby="titulo-grade">
-      <h2 id="titulo-grade" class="service-title">Vídeos do YouTube</h2>
-      <p class="service-desc">
-        Cada item é um <code>&lt;li&gt;</code> com <strong>título</strong>, <strong>link</strong> e miniatura opcional.
-      </p>
-
-<!-- LISTA DE VÍDEOS COM LINKS EXTERNOS -->
-
-      <ul class="video-grid" aria-label="Lista de vídeos">
-        <li class="video-card">
-        <a href="https://www.youtube.com/watch?v=grOYhQbdrLs" target="_blank" rel="noopener noreferrer"
-   aria-label="Abrir no YouTube: Sessão 23/09 (abre em nova aba)">
-  <img src="https://img.youtube.com/vi/grOYhQbdrLs/hqdefault.jpg" alt="Miniatura do vídeo: Sessão 23/09" loading="lazy">
-  <span class="video-title">Sessão 23/09</span>
-  <span class="video-desc">Gravação mais recente.</span>
-</a>
-        </li>
-      </ul>
-    </section>
 
   </main>
 
