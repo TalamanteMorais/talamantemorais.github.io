@@ -100,12 +100,12 @@ img, picture, svg, video {
   text-align: center;
   justify-self: center;
 }
-
-.section-header .brand-logo-wrap{
-  width: clamp(110px, 14vw, 170px);
-  height: clamp(110px, 14vw, 170px);
-  justify-self: end;
-}
+  .section-header .brand-logo-wrap{
+    width: clamp(140px, 34vw, 200px);
+    height: clamp(140px, 34vw, 200px);
+    justify-self: center;
+    margin-top: 0.3rem;
+  }
 
 .section-header .brand-logo-img{
   width: 100%;
@@ -204,11 +204,10 @@ section{
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.035);
   font-family: 'Inter', sans-serif;
 }
-.info-box{
-  text-align: justify;
-  text-justify: inter-word;
-  max-width: 72ch;
-  margin: 0 auto;
+@media (max-width: 600px){
+  section{
+    padding: 1.6rem 1.2rem;
+  }
 }
 
 /* ======================== 08. BOTÕES ======================== */
