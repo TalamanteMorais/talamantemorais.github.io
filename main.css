@@ -100,7 +100,7 @@ img, picture, svg, video {
   text-align: center;
   justify-self: center;
 }
-   .section-header .brand-logo-wrap{
+  .section-header .brand-logo-wrap{
     width: clamp(140px, 34vw, 200px);
     height: clamp(140px, 34vw, 200px);
     justify-self: center;
@@ -482,7 +482,7 @@ footer{
   .grecaptcha-badge {
     left: 8px !important;
     right: auto !important;
-    bottom: calc(8px + env(safe-area-inset-bottom) + 120px) !important;
+    bottom: calc(8px + env(safe-area-inset-bottom) + clamp(190px, 24vw, 240px)) !important;
     transform: scale(0.70) !important;
     transform-origin: left bottom !important;
     z-index: 120 !important;
@@ -570,6 +570,14 @@ button[type="submit"]:focus-visible{
   margin: calc(var(--gap-top) + 38px) auto 0;
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
+}
+
+@media (max-width: 900px){
+  .carousel-container{
+    height: auto;
+    aspect-ratio: 880 / 378;
+    margin: var(--gap-top) auto 0;
+  }
 }
 
 .carousel-track{
