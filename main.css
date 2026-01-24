@@ -166,7 +166,6 @@ img, picture, svg, video {
   white-space: nowrap;
   padding: 0.15rem 0;
 }
-
 @media (max-width: 600px){
   .main-nav{
     display: flex;
@@ -185,6 +184,20 @@ img, picture, svg, video {
     font-size: 1rem;
   }
 }
+
+@media (max-width: 420px){
+  .main-nav{
+    gap: 8px 14px;
+    padding: 0.75rem 0.55rem;
+  }
+
+  .main-nav a{
+    padding: 0.25rem 0.45rem;
+    font-size: 0.98rem;
+    line-height: 1.15;
+  }
+}
+
 .main-nav a:hover{
   color: #a3d3ff;
 }
@@ -240,7 +253,14 @@ section{
     overflow-x: hidden;
   }
   .section-header .brand{
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 0.8rem;
     transform: none;
+  }
+
+  .section-header .brand-logo-wrap{
+    height: auto;
   }
 
   .section-header h1 {
@@ -482,7 +502,7 @@ footer{
   .grecaptcha-badge {
     left: 8px !important;
     right: auto !important;
-    bottom: calc(8px + env(safe-area-inset-bottom) + clamp(190px, 24vw, 240px)) !important;
+    bottom: calc(8px + env(safe-area-inset-bottom) + 56px) !important;
     transform: scale(0.70) !important;
     transform-origin: left bottom !important;
     z-index: 120 !important;
