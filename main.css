@@ -582,6 +582,7 @@ button[type="submit"]:focus-visible{
 
 .carousel-track{
   display: flex;
+  height: 100%;
   transition: transform 0.5s ease;
   will-change: transform;
 }
@@ -590,10 +591,16 @@ button[type="submit"]:focus-visible{
   user-select: none;
   height: 100%;
 }
+.carousel-item picture{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
 .carousel-item img{
   width: 100%;
   height: 100%;
   object-fit: contain;
+  display: block;
 }
 
 /* ======================== 19. ACESSIBILIDADE / PREFERÊNCIAS DE MOVIMENTO ======================== */
