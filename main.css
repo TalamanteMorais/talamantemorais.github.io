@@ -269,24 +269,35 @@ section{
     overflow-x: hidden;
   }
   .section-header .brand{
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr auto;
+    align-items: center;
     justify-items: center;
-    gap: 0.7rem;
+    gap: 0.9rem;
     transform: none;
   }
 
+  .section-header .brand-text{
+    text-align: center;
+    justify-self: center;
+  }
+
   .section-header .brand-logo-wrap{
-    width: min(175px, 42vw);
-    aspect-ratio: 1 / 1;
-    height: auto;
+    width: clamp(110px, 26vw, 150px);
+    height: clamp(110px, 26vw, 150px);
+    justify-self: center;
+    margin-top: 0.3rem;
   }
 
   .section-header .brand-logo-img{
-    height: auto;
+    height: 100%;
   }
 
   .section-header h1 {
     font-size: 1.65rem;
+  }
+
+  .section-header p {
+    font-size: 1rem;
   }
 
   .section-header p {
