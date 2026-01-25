@@ -276,6 +276,12 @@ section{
   }
 
   .section-header .brand-logo-wrap{
+    width: min(220px, 52vw);
+    aspect-ratio: 1 / 1;
+    height: auto;
+  }
+
+  .section-header .brand-logo-img{
     height: auto;
   }
 
