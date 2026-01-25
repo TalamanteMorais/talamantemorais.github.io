@@ -271,12 +271,12 @@ section{
   .section-header .brand{
     grid-template-columns: 1fr;
     justify-items: center;
-    gap: 0.8rem;
+    gap: 0.7rem;
     transform: none;
   }
 
   .section-header .brand-logo-wrap{
-    width: min(190px, 46vw);
+    width: min(175px, 42vw);
     aspect-ratio: 1 / 1;
     height: auto;
   }
@@ -286,11 +286,11 @@ section{
   }
 
   .section-header h1 {
-    font-size: 1.8rem;
+    font-size: 1.65rem;
   }
 
   .section-header p {
-    font-size: 1.05rem;
+    font-size: 1rem;
   }
 
   .service-title {
