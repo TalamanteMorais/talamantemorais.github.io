@@ -275,7 +275,7 @@ section{
     transform: none;
   }
 
-    .section-header .brand-logo-wrap{
+  .section-header .brand-logo-wrap{
     width: min(190px, 46vw);
     aspect-ratio: 1 / 1;
     height: auto;
@@ -284,13 +284,6 @@ section{
   .section-header .brand-logo-img{
     height: auto;
   }
-}
-
-@media (max-width: 520px){
-  .section-header .brand-logo-wrap{
-    width: min(170px, 60vw);
-  }
-}
 
   .section-header h1 {
     font-size: 1.8rem;
@@ -303,7 +296,7 @@ section{
   .service-title {
     font-size: 1.1rem;
   }
-.service-desc {
+  .service-desc {
     font-size: 0.95rem;
   }
 
@@ -330,6 +323,13 @@ section{
     margin: var(--gap-top) auto 0;
   }
 }
+
+@media (max-width: 520px){
+  .section-header .brand-logo-wrap{
+    width: min(170px, 60vw);
+  }
+}
+
 @media (min-width: 601px) and (max-width: 900px){
   .main-nav{
     display: flex;
