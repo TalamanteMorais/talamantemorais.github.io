@@ -123,20 +123,20 @@ img, picture, svg, video {
   }
 
   .section-header h1{
-    font-size: 2.2rem;
+    font-size: 1.95rem;
     line-height: 1.15;
     text-align: center;
   }
 
   .section-header p{
-    font-size: 1.1rem;
+    font-size: 1.02rem;
     text-align: center;
   }
 
   .section-header .brand{
     grid-template-columns: 1fr;
     justify-items: center;
-    gap: 0.8rem;
+    gap: 0.7rem;
     padding: 0 0.9rem;
     transform: none;
   }
@@ -147,7 +147,7 @@ img, picture, svg, video {
   }
 
   .section-header .brand-logo-wrap{
-    width: min(220px, 70vw);
+    width: min(200px, 62vw);
     aspect-ratio: 1 / 1;
     justify-self: center;
     margin-top: 0.3rem;
