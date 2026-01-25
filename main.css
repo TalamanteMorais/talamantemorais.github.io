@@ -124,6 +124,7 @@ img, picture, svg, video {
 
   .section-header h1{
     font-size: 2.2rem;
+    line-height: 1.15;
     text-align: center;
   }
 
@@ -136,6 +137,7 @@ img, picture, svg, video {
     grid-template-columns: 1fr;
     justify-items: center;
     gap: 0.8rem;
+    padding: 0 0.9rem;
     transform: none;
   }
 
@@ -145,8 +147,8 @@ img, picture, svg, video {
   }
 
   .section-header .brand-logo-wrap{
-    width: clamp(140px, 34vw, 200px);
-    height: auto;
+    width: min(220px, 70vw);
+    aspect-ratio: 1 / 1;
     justify-self: center;
     margin-top: 0.3rem;
   }
@@ -512,23 +514,21 @@ footer{
   outline: 2px solid rgba(255,255,255,.95);
   outline-offset: 2px;
 }
-/* reCAPTCHA badge (v3) - canto inferior esquerdo, alinhado à altura do botão do WhatsApp */
-.grecaptcha-badge {
+/* reCAPTCHA badge (v3) - canto inferior esquerdo, acima do rodapé */
+.grecaptcha-badge{
   left: 10px !important;
   right: auto !important;
-  bottom: calc(clamp(95px, 12vw, 120px) + env(safe-area-inset-bottom)) !important;
+  bottom: calc(env(safe-area-inset-bottom) + 64px) !important;
   transform: scale(0.80) !important;
   transform-origin: left bottom !important;
   z-index: 120 !important;
 }
-@media (max-width: 900px) {
-  .grecaptcha-badge {
+
+@media (max-width: 900px){
+  .grecaptcha-badge{
     left: 8px !important;
-    right: auto !important;
-    bottom: calc(clamp(95px, 12vw, 120px) + env(safe-area-inset-bottom)) !important;
+    bottom: calc(env(safe-area-inset-bottom) + 64px) !important;
     transform: scale(0.70) !important;
-    transform-origin: left bottom !important;
-    z-index: 120 !important;
   }
 }
 
