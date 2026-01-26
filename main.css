@@ -300,10 +300,6 @@ section{
     font-size: 1rem;
   }
 
-  .section-header p {
-    font-size: 1rem;
-  }
-
   .service-title {
     font-size: 1.1rem;
   }
@@ -326,12 +322,6 @@ section{
 
   input[type="text"], input[type="email"], textarea {
     font-size: 0.9rem;
-  }
-
-  .carousel-container{
-    height: auto;
-    aspect-ratio: 880 / 378;
-    margin: var(--gap-top) auto 0;
   }
 }
 
