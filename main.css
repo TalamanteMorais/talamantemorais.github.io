@@ -306,13 +306,10 @@ section{
   .service-desc {
     font-size: 0.95rem;
   }
-
   footer {
     font-size: 0.9rem;
   }
-  .whatsapp-button {
-    bottom: calc(clamp(95px, 12vw, 120px) + env(safe-area-inset-bottom));
-  }
+  
   button[type="submit"],
   .cta-btn,
   .main-btn {
