@@ -624,7 +624,7 @@ button[type="submit"]:focus-visible{
   height: var(--carousel-h-desktop);
   background: #000;
   touch-action: pan-y;
-  overscroll-behavior: contain;
+  overscroll-behavior: auto;
   margin: calc(var(--gap-top) + 38px) auto 0;
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;

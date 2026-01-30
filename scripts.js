@@ -123,20 +123,8 @@ if (nextBtn) {
 
   if (carouselContainer && track && totalItems > 0) {
     iniciarCarrossel();
-
     let interactionsReady = false;
     setTimeout(() => { interactionsReady = true; }, 800);
-
-    carouselContainer.addEventListener("mouseenter", () => {
-      if (!interactionsReady) return;
-      isHovered = true;
-      pararCarrossel();
-    });
-
-    carouselContainer.addEventListener("mouseleave", () => {
-      isHovered = false;
-      iniciarCarrossel();
-    });
 
     let swipe = {
       dragging: false,
