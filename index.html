@@ -192,7 +192,7 @@
 <!-- SEÇÃO DE CONTATO E FORMULÁRIO -->
 <section id="contato" class="container">
   <h2>Contato</h2>
-  <div id="mensagem-sucesso">
+  <div id="mensagem-sucesso" role="status" aria-live="polite" aria-atomic="true">
     Mensagem enviada com sucesso. Obrigado pelo contato!
   </div>
 
@@ -206,11 +206,12 @@
     <label for="mensagem">Mensagem</label>
     <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem" required aria-label="Mensagem" rows="5"></textarea>
 
-    <input type="text" name="honeypot">
+    <input type="text" name="honeypot" autocomplete="off" tabindex="-1" aria-hidden="true">
     <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response">
 
     <button type="submit" class="main-btn">Enviar</button>
   </form>
+
   <p><strong>Email:</strong> talamantemorais@gmail.com</p>
     <p><strong>WhatsApp:</strong> (62) 99631-8340</p>
 <p>

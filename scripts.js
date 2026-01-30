@@ -231,7 +231,7 @@ if (nextBtn) {
   }
 
   atualizarTransform();
-  /* ======================== FORMULÁRIO + reCAPTCHA ======================== */
+/* ======================== FORMULÁRIO + reCAPTCHA ======================== */
   const form = document.getElementById("contato-form");
 
   if (form) {
@@ -244,64 +244,77 @@ if (nextBtn) {
       const botao = form.querySelector("button[type='submit']");
       const mensagemSucesso = document.getElementById("mensagem-sucesso");
 
+      const exibirMensagem = (texto) => {
+        if (mensagemSucesso) {
+          mensagemSucesso.style.display = "block";
+          mensagemSucesso.innerText = texto;
+
+          setTimeout(() => {
+            mensagemSucesso.style.display = "none";
+            mensagemSucesso.innerText = "";
+          }, 5000);
+        } else {
+          alert(texto);
+        }
+      };
+
       if (!nomeEl || !emailEl || !mensagemEl || !botao) {
         console.error("Formulário: campos obrigatórios ou botão submit não encontrados.");
-        alert("Não foi possível enviar no momento. Atualize a página e tente novamente.");
+        exibirMensagem("Não foi possível enviar no momento. Atualize a página e tente novamente.");
         return;
       }
 
       const nome = nomeEl.value.trim();
       const email = emailEl.value.trim();
       const mensagem = mensagemEl.value.trim();
-
-      const honey = form.querySelector('input[name="honeypot"]');
-      if (honey && honey.value) return;
+      const honeypot = document.getElementById("website");
 
       if (!nome || !email || !mensagem) {
-        alert("Por favor, preencha todos os campos obrigatórios.");
+        exibirMensagem("Por favor, preencha todos os campos obrigatórios.");
+        return;
+      }
+
+      if (honeypot && honeypot.value) {
         return;
       }
 
       botao.disabled = true;
       botao.innerText = "Enviando...";
 
-      if (typeof grecaptcha === "undefined" ||
-        typeof grecaptcha.ready !== "function") {
-        alert("Erro ao carregar o reCAPTCHA. Atualize a página e tente novamente.");
-        botao.disabled = false;
+      const tokenField = document.getElementById("recaptcha_token");
+      const formData = new FormData(form);
+
+      if (!tokenField) {
+        console.error("reCAPTCHA: campo hidden recaptcha_token não encontrado.");
+        exibirMensagem("Erro ao carregar o reCAPTCHA. Atualize a página e tente novamente.");
         botao.innerText = "Enviar";
+        botao.disabled = false;
+        return;
+      }
+
+      if (typeof grecaptcha === "undefined") {
+        console.error("reCAPTCHA: grecaptcha não definido.");
+        exibirMensagem("Erro ao validar o reCAPTCHA. Atualize a página e tente novamente.");
+        botao.innerText = "Enviar";
+        botao.disabled = false;
         return;
       }
 
       grecaptcha.ready(function () {
-        grecaptcha.execute('6LdEyWYrAAAAALdfXa6R6BprCQbpPW7KxuySJr43',
-          { action: "submit" })
+        grecaptcha.execute("6LdEyWYrAAAAALdfXa6R6BprCQbpPW7KxuySJr43", { action: "contato" })
           .then(function (token) {
-            if (!token || token.trim() === "") {
-              alert("Erro ao validar o reCAPTCHA. Atualize a página e tente novamente.");
-              botao.disabled = false;
-              botao.innerText = "Enviar";
-              return;
-            }
-fetch("https://script.google.com/macros/s/AKfycbzvgpuIDGGkpm6hj4WaV7TNVcIJe6BTbIqfjL2ItxrqW2z80ZwyU0Ik3arvIF6R-6Hg/exec", {
-  method: "POST",
-  credentials: "omit",
-  referrerPolicy: "no-referrer",
-  cache: "no-store",
-  headers: { "Content-Type": "application/x-www-form-urlencoded" },
-  body: new URLSearchParams({
-    nome: nome,
-    email: email,
-    mensagem: mensagem,
-    "g-recaptcha-response": token
-  })
-})
-              .then(response => {
-                if (!response.ok) throw new Error(`HTTP ${response.status}`);
-                return response.text();
-              })
-              .then(data => {
-                const texto = String(data || "").toUpperCase();
+            tokenField.value = token;
+
+            fetch(form.action, {
+              method: "POST",
+              body: formData,
+              headers: {
+                "Accept": "application/json"
+              }
+            })
+              .then((response) => response.text())
+              .then((texto) => {
+                const upper = (texto || "").toUpperCase();
 
                 if (texto.includes("OK") || texto.includes("SUCCESS")) {
                   if (mensagemSucesso) {
@@ -313,15 +326,17 @@ fetch("https://script.google.com/macros/s/AKfycbzvgpuIDGGkpm6hj4WaV7TNVcIJe6BTbI
                       mensagemSucesso.innerText = "";
                     }, 5000);
                   } else {
-                    alert("Mensagem enviada com sucesso.");
+                    exibirMensagem("Mensagem enviada com sucesso.");
                   }
                 } else {
-                  alert("Não foi possível confirmar o envio. Tente novamente.");
+                  exibirMensagem("Não foi possível confirmar o envio. Tente novamente.");
                 }
+
+                form.reset();
               })
-              .catch(error => {
-                alert("Ocorreu um erro ao enviar sua mensagem. Tente novamente.");
-                console.error("Erro:", error);
+              .catch((error) => {
+                console.error("Envio do formulário: erro:", error);
+                exibirMensagem("Ocorreu um erro ao enviar sua mensagem. Tente novamente.");
               })
               .finally(() => {
                 botao.innerText = "Enviar";
@@ -331,6 +346,7 @@ fetch("https://script.google.com/macros/s/AKfycbzvgpuIDGGkpm6hj4WaV7TNVcIJe6BTbI
       });
     });
   }
+
   /* ======================== LISTA DE LINKS — PUBLICAÇÕES JURÍDICAS (JSON) ======================== */
   const linksPublicacoesEl = document.getElementById("links-publicacoes");
 
