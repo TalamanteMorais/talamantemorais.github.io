@@ -1,390 +1,322 @@
-/*
+<!--
   INSTRUÇÕES GERAIS DE MANUTENÇÃO E ATUALIZAÇÃO
-  Script geral de funcionalidades do site.
-  As seções estão organizadas por blocos funcionais comentados.
-*/
-
-document.addEventListener("DOMContentLoaded", function () {
-
-/* ======================== VÍDEO INSTITUCIONAL (ARQUIVO LOCAL) ======================== */
-/* Exibição por play do usuário via <video>, sem autoplay e sem integração automática com YouTube */
-
-  /* ======================== CARROSSEL ======================== */
-  const track = document.querySelector(".carousel-track");
-  const items = document.querySelectorAll(".carousel-item");
-  const carouselContainer = document.querySelector(".carousel-container");
-
-  if (track && !track.id) track.id = "carousel-track";
-
-  items.forEach((el) => {
-    el.addEventListener("dragstart", (e) => e.preventDefault());
-  });
-
-  const prevBtn = document.querySelector(".carousel-prev");
-  const nextBtn = document.querySelector(".carousel-next");
-  const dotsWrap = document.querySelector(".carousel-dots");
-
-  const totalItems = items.length;
-  let indexSlide = 0;
-  let intervaloSlide;
-  let isHovered = false;
-  let lastStart = 0;
-  const RESTART_GAP_MS = 300;
-
-  const AUTO_INTERVAL_MS = 4000;
-  const SLIDE_MIN_GAP_MS = 900;
-  let lastMoveAt = 0;
-
-  function atualizarTransform() {
-    if (!track) return;
-    track.style.transform = `translate3d(-${indexSlide * 100}%, 0, 0)`;
-
-    if (dotsWrap && dotsWrap.children.length === totalItems) {
-      [...dotsWrap.children].forEach((btn, i) => {
-        if (i === indexSlide) btn.setAttribute("aria-current", "true");
-        else btn.removeAttribute("aria-current");
-      });
-    }
-  }
-function goToSlide(n, manual = false) {
-  if (!totalItems) return;
-
-  const now = Date.now();
-  if (!manual && now - lastMoveAt < SLIDE_MIN_GAP_MS) return;
-  lastMoveAt = now;
-
-  indexSlide = ((n % totalItems) + totalItems) % totalItems;
-  atualizarTransform();
-}
-
-  function iniciarCarrossel() {
-    if (!track || totalItems <= 1 || isHovered) return;
-
-    const now = Date.now();
-    if (now - lastStart < RESTART_GAP_MS) return;
-    lastStart = now;
-
-    pararCarrossel();
-    intervaloSlide = setInterval(() => {
-      goToSlide(indexSlide + 1);
-    }, AUTO_INTERVAL_MS);
-  }
-
-  function pararCarrossel() {
-    if (intervaloSlide) {
-      clearInterval(intervaloSlide);
-      intervaloSlide = null;
-    }
-  }
-if (prevBtn) {
-  prevBtn.addEventListener("pointerdown", (e) => {
-    e.stopPropagation();
-  });
-  prevBtn.addEventListener("click", (e) => {
-    e.stopPropagation();
-    pararCarrossel();
-    goToSlide(indexSlide - 1, true);
-
-    if (!isHovered) {
-      setTimeout(() => { if (!isHovered) iniciarCarrossel(); }, 3000);
-    }
-  });
-}
-if (nextBtn) {
-  nextBtn.addEventListener("pointerdown", (e) => {
-    e.stopPropagation();
-  });
-  nextBtn.addEventListener("click", (e) => {
-    e.stopPropagation();
-    pararCarrossel();
-    goToSlide(indexSlide + 1, true);
-    if (!isHovered) {
-      setTimeout(() => { if (!isHovered) iniciarCarrossel(); }, 3000);
-    }
-  });
-}
-  if (dotsWrap && totalItems > 1) {
-    dotsWrap.innerHTML = "";
-    for (let i = 0; i < totalItems; i++) {
-      const b = document.createElement("button");
-      b.type = "button";
-      b.setAttribute("aria-label", `Ir para o slide ${i + 1}`);
-      b.setAttribute("aria-controls", "carousel-track");
-      b.addEventListener("click", () => {
-        pararCarrossel();
-        goToSlide(i);
-        if (!isHovered) {
-          setTimeout(() => { if (!isHovered) iniciarCarrossel(); }, 3000);
-        }
-      });
-      dotsWrap.appendChild(b);
-    }
-  }
-
-  if (carouselContainer && track && totalItems > 0) {
-    iniciarCarrossel();
-    let interactionsReady = false;
-    setTimeout(() => { interactionsReady = true; }, 800);
-
-    let swipe = {
-      dragging: false,
-      startX: 0,
-      deltaX: 0,
-      width: 0,
-      threshold: 0
-    };
-
-    carouselContainer.addEventListener("pointerdown", (e) => {
-      isHovered = true;
-      pararCarrossel();
-
-      swipe.dragging = true;
-      swipe.startX = e.clientX;
-      swipe.width = carouselContainer.clientWidth || 1;
-      swipe.threshold = Math.max(40, swipe.width * 0.12);
-      swipe.deltaX = 0;
-
-      track.style.transition = "none";
-
-      try { carouselContainer.setPointerCapture(e.pointerId); } catch (_) { }
-    });
-
-    carouselContainer.addEventListener("pointermove", (e) => {
-      if (!swipe.dragging) return;
-
-      swipe.deltaX = e.clientX - swipe.startX;
-      const deltaPct = (swipe.deltaX / swipe.width) * 100;
-
-      track.style.transform =
-        `translate3d(calc(${-indexSlide * 100}% + ${deltaPct}%), 0, 0)`;
-    });
-
-    function finalizarSwipe(commit) {
-      track.style.transition = "";
-
-      if (commit && Math.abs(swipe.deltaX) > swipe.threshold) {
-        if (swipe.deltaX < 0) {
-          goToSlide(indexSlide + 1);
-        } else {
-          goToSlide(indexSlide - 1);
-        }
-      } else {
-        atualizarTransform();
-      }
-
-      swipe.dragging = false;
-      swipe.startX = 0;
-      swipe.deltaX = 0;
-      isHovered = false;
-      iniciarCarrossel();
-    }
-
-    carouselContainer.addEventListener("pointerup", () => finalizarSwipe(true));
-    carouselContainer.addEventListener("pointercancel", () => finalizarSwipe(false));
-    carouselContainer.addEventListener("pointerleave", () => {
-      if (swipe.dragging) finalizarSwipe(false);
-    });
-
-    document.addEventListener("visibilitychange", () => {
-      if (document.hidden) pararCarrossel();
-      else if (!isHovered) iniciarCarrossel();
-    });
-
-    if ("IntersectionObserver" in window) {
-      const io = new IntersectionObserver((entries) => {
-        const entry = entries[0];
-        if (!entry) return;
-
-        if (entry.isIntersecting) {
-          if (!isHovered) iniciarCarrossel();
-        } else {
-          pararCarrossel();
-        }
-      }, { root: null, threshold: 0.25 });
-
-      io.observe(carouselContainer);
-    }
-  }
-
-  if (carouselContainer) {
-    carouselContainer.addEventListener("keydown", (e) => {
-      if (e.key === "ArrowLeft") {
-        e.preventDefault();
-        goToSlide(indexSlide - 1);
-      } else if (e.key === "ArrowRight") {
-        e.preventDefault();
-        goToSlide(indexSlide + 1);
-      }
-    });
-  }
-
-  atualizarTransform();
-/* ======================== FORMULÁRIO + reCAPTCHA ======================== */
-  const form = document.getElementById("contato-form");
-
-  if (form) {
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-
-      const nomeEl = document.getElementById("nome");
-      const emailEl = document.getElementById("email");
-      const mensagemEl = document.getElementById("mensagem");
-      const botao = form.querySelector("button[type='submit']");
-      const mensagemSucesso = document.getElementById("mensagem-sucesso");
-
-      const exibirMensagem = (texto) => {
-        if (mensagemSucesso) {
-          mensagemSucesso.style.display = "block";
-          mensagemSucesso.innerText = texto;
-
-          setTimeout(() => {
-            mensagemSucesso.style.display = "none";
-            mensagemSucesso.innerText = "";
-          }, 5000);
-        } else {
-          alert(texto);
-        }
-      };
-
-      if (!nomeEl || !emailEl || !mensagemEl || !botao) {
-        console.error("Formulário: campos obrigatórios ou botão submit não encontrados.");
-        exibirMensagem("Não foi possível enviar no momento. Atualize a página e tente novamente.");
-        return;
-      }
-      const FALLBACK_ENDPOINT = "https://script.google.com/macros/s/AKfycbzvgpuIDGGkpm6hj4WaV7TNVcIJe6BTbIqfjL2ItxrqW2z80ZwyU0Ik3arvIF6R-6Hg/exec";
-      const rawAction = (form.getAttribute("action") || "").trim();
-      const actionUrl = (!rawAction || rawAction.includes("SEU_ID")) ? FALLBACK_ENDPOINT : rawAction;
-
-      if (!actionUrl) {
-        console.error("Formulário: atributo action não definido.");
-        exibirMensagem("Não foi possível enviar no momento. Atualize a página e tente novamente.");
-        return;
-      }
-      const nome = nomeEl.value.trim();
-      const email = emailEl.value.trim();
-      const mensagem = mensagemEl.value.trim();
-      const honeypot = document.getElementById("website");
-
-      if (!nome || !email || !mensagem) {
-        exibirMensagem("Por favor, preencha todos os campos obrigatórios.");
-        return;
-      }
-
-      if (honeypot && honeypot.value) {
-        return;
-      }
-
-      botao.disabled = true;
-      botao.innerText = "Enviando...";
-
-      const tokenField = document.getElementById("recaptcha_token");
-
-      if (!tokenField) {
-        console.error("reCAPTCHA: campo hidden recaptcha_token não encontrado.");
-        exibirMensagem("Erro ao carregar o reCAPTCHA. Atualize a página e tente novamente.");
-        botao.innerText = "Enviar";
-        botao.disabled = false;
-        return;
-      }
-
-      if (typeof grecaptcha === "undefined") {
-        console.error("reCAPTCHA: grecaptcha não definido.");
-        exibirMensagem("Erro ao validar o reCAPTCHA. Atualize a página e tente novamente.");
-        botao.innerText = "Enviar";
-        botao.disabled = false;
-        return;
-      }
-
-      grecaptcha.ready(function () {
-        grecaptcha.execute("6LdEyWYrAAAAALdfXa6R6BprCQbpPW7KxuySJr43", { action: "contato" })
-          .then(function (token) {
-            tokenField.value = token;
-
-            const formData = new FormData(form);
-            fetch(actionUrl, {
-              method: "POST",
-              body: formData,
-              headers: {
-                "Accept": "application/json"
-              }
-            })
-
-              .then(async (response) => {
-                const texto = await response.text();
-
-                if (response.ok) {
-                  exibirMensagem("Mensagem enviada com sucesso.");
-                  form.reset();
-                  return;
-                }
-
-                console.error("Envio do formulário: resposta não OK:", texto);
-                exibirMensagem("Ocorreu um erro ao enviar sua mensagem. Tente novamente.");
-              })
-              .catch((error) => {
-                console.error("Envio do formulário: erro:", error);
-                exibirMensagem("Ocorreu um erro ao enviar sua mensagem. Tente novamente.");
-              })
-              .finally(() => {
-                botao.innerText = "Enviar";
-                botao.disabled = false;
-              });
-          });
-      });
-    });
-  }
-
-  /* ======================== LISTA DE LINKS — PUBLICAÇÕES JURÍDICAS (JSON) ======================== */
-  const linksPublicacoesEl = document.getElementById("links-publicacoes");
-
-  if (linksPublicacoesEl) {
-    const jsonUrl = linksPublicacoesEl.getAttribute("data-json") || "links-publicacoes.json";
-    fetch(jsonUrl, {
-      cache: "no-store",
-      credentials: "omit",
-      referrerPolicy: "no-referrer"
-    })
-      .then((res) => {
-        if (!res.ok) throw new Error("Falha ao carregar JSON de links.");
-        return res.json();
-      })
-
-      .then((links) => {
-        if (!Array.isArray(links)) return;
-
-        const validos = links.filter((item) =>
-          item &&
-          typeof item === "object" &&
-          typeof item.title === "string" &&
-          item.title.trim() &&
-          typeof item.url === "string" &&
-          item.url.trim()
-        );
-
-        if (validos.length === 0) return;
-
-        linksPublicacoesEl.innerHTML = "";
-
-        validos.forEach((item) => {
-          const li = document.createElement("li");
-          const a = document.createElement("a");
-
-          a.href = item.url.trim();
-          a.target = "_blank";
-          a.rel = "noopener noreferrer";
-          a.textContent = item.title.trim();
-
-          li.appendChild(a);
-          linksPublicacoesEl.appendChild(li);
-        });
-      })
-      .catch((err) => {
-        console.error(err);
-      });
-  }
-
-  /* ======================== RODAPÉ — ANO AUTOMÁTICO ======================== */
-  const anoEl = document.getElementById("ano");
-  if (anoEl) anoEl.textContent = new Date().getFullYear();
-
-});
+  Este arquivo concentra a estrutura principal do site institucional.
+  Alterações devem preservar IDs, classes e fluxo de navegação.
+-->
+
+<!-- DECLARAÇÃO DO DOCUMENTO HTML -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<!-- CABEÇALHO DO DOCUMENTO: METADADOS, SEO, SEGURANÇA E RECURSOS EXTERNOS -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1864ab">
+
+<!-- METADADOS DE SEO E INDEXAÇÃO -->
+
+  <meta name="description" content="Talamante Morais – Advocacia Pública Municipal. Especialistas em Direito Administrativo, Licitações, Contratos, Concessões e Terceiro Setor, com atuação técnica, ética e estratégica para a gestão municipal.">
+  <meta name="author" content="Talamante Morais">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.talamantemorais.com.br/">
+
+<!-- POLÍTICA DE SEGURANÇA DO CONTEÚDO (CSP) -->
+
+<meta http-equiv="Content-Security-Policy" content="
+  default-src 'self';
+  base-uri 'self';
+  object-src 'none';
+  frame-ancestors 'none';
+connect-src 'self' https://script.google.com https://script.googleusercontent.com https://www.google-analytics.com https://region1.google-analytics.com https://www.recaptcha.net https://www.google.com https://www.gstatic.com https://www.youtube.com https://www.googleapis.com;
+  frame-src https://www.recaptcha.net https://www.google.com https://www.youtube-nocookie.com https://www.youtube.com;
+  script-src 'self' https://www.googletagmanager.com https://www.google.com https://www.gstatic.com https://script.google.com https://www.recaptcha.net;
+  style-src 'self' https://fonts.googleapis.com 'unsafe-inline';
+  font-src https://fonts.gstatic.com;
+  img-src 'self' https: data:;
+">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <!-- Fontes Google (Inter) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+
+  <!-- Preload da 1ª imagem do carrossel -->
+  <link rel="preload" as="image" href="img/card_1_880x378.webp" type="image/webp">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- FONTES, ESTILOS E RECURSOS VISUAIS -->
+
+  <link rel="stylesheet" href="main.css">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZKCPTG7K1T"></script>
+<script src="gtag-init.js"></script>
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<!-- CABEÇALHO INSTITUCIONAL: IDENTIDADE VISUAL E MARCA -->
+
+<body>
+<header class="section-header">
+  <div class="brand">
+    <div class="brand-text">
+      <h1>Talamante Morais</h1>
+      <p>Advocacia Pública Municipal</p>
+    </div>
+    <div class="brand-logo-wrap" aria-hidden="true">
+      <img class="brand-logo-img" src="img/logo_apm.png" alt="" width="108" height="108" loading="eager" decoding="async">
+    </div>
+  </div>
+</header>
+
+<!-- MENU DE NAVEGAÇÃO PRINCIPAL -->
+
+<nav class="main-nav" aria-label="Menu principal">
+  <a href="#inicio">Início</a>
+  <a href="#sobre">Sobre</a>
+  <a href="#servicos">Serviços</a>
+  <a href="#publicacoes">Publicações</a>
+  <a href="#contato">Contato</a>
+</nav>
+
+<!-- CONTEÚDO PRINCIPAL DO SITE -->
+
+<main>
+
+<!-- SEÇÃO INICIAL: APRESENTAÇÃO INSTITUCIONAL -->
+
+<section id="inicio">
+  <div class="info-box">
+    <strong>Nota Oficial:</strong><br>
+    Este é o <strong>site institucional oficial</strong> do escritório <strong>Talamante Morais – Contratações Públicas e Parcerias Administrativas</strong>.<br>
+    O conteúdo está em fase de consolidação institucional, com foco em contratações públicas, licitações e contratos administrativos, concessões, permissões, terceirizações e parcerias público-privadas.<br>
+    Publicações, jurisprudência e registros de atuação pública são disponibilizados por curadoria técnica, conforme validação e organização do acervo.<br>
+    Os dados de contato informados são oficiais e plenamente funcionais.<br>
+    Permanecemos à disposição.
+  </div>
+
+  <h2>Seja Bem-vindo ao Escritório Talamante Morais</h2>
+
+<!-- BLOCO DE DESTAQUES: CARROSSEL DE IMAGENS -->
+
+  <div class="carousel-container" role="region" aria-label="Carrossel de destaques" tabindex="0">
+    <div class="carousel-track" id="carousel-track" aria-live="polite">
+
+      <!-- Slide 1 -->
+      <div class="carousel-item">
+        <picture>
+          <source type="image/webp" srcset="img/card_1_880x378.webp 880w" sizes="(max-width: 900px) 100vw, 880px">
+          <img class="carousel-img" src="img/card_1_880x378.webp" width="880" height="378" loading="eager" decoding="async" alt="Credenciamento — Lei nº 14.133/2021. Quando utilizar? Hipóteses legais e aplicações práticas.">
+        </picture>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <picture>
+          <source type="image/webp" srcset="img/card_2_880x378.webp 880w" sizes="(max-width: 900px) 100vw, 880px">
+          <img class="carousel-img" src="img/card_2_880x378.webp" width="880" height="378" loading="lazy" decoding="async" alt="Inteligência Artificial em Licitações — como a IA transforma processos conforme a Lei 14.133/2021.">
+        </picture>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="carousel-item">
+        <picture>
+          <source type="image/webp" srcset="img/card_3_880x378.webp 880w" sizes="(max-width: 900px) 100vw, 880px">
+          <img class="carousel-img" src="img/card_3_880x378.webp" width="880" height="378" loading="lazy" decoding="async" alt="Novas Relações de Trabalho — Uberização, vínculo empregatício e precarização sob a ótica jurídica.">
+        </picture>
+      </div>
+
+    </div>
+
+    <button class="carousel-prev" aria-label="Slide anterior">‹</button>
+    <button class="carousel-next" aria-label="Próximo slide">›</button>
+    <div class="carousel-dots" role="tablist" aria-label="Paginação de slides"></div>
+  </div>
+
+<!-- TEXTO INTRODUTÓRIO SOBRE ATUAÇÃO DO ESCRITÓRIO -->
+
+<div class="intro-text">
+  <p class="service-desc">
+    Atuamos em contratações públicas e parcerias administrativas, com foco em licitações e contratos, concessões, permissões, terceirizações e estruturação de soluções em serviços públicos e infraestrutura, mantendo atuação complementar em Direito Privado e na esfera extrajudicial.
+  </p>
+  <p class="service-desc">
+    O compromisso do escritório é oferecer assessoria e consultoria jurídica com técnica, ética e experiência prática, orientadas à redução de riscos, à conformidade e à governança, atendendo com objetividade demandas de clientes públicos e privados e, quando aplicável, realizando capacitações com abordagem aplicada e certificação de participação.
+  </p>
+</div>
+</section>
+
+<!-- SEÇÃO INSTITUCIONAL: SOBRE O ESCRITÓRIO -->
+
+<section id="sobre">
+  <h2>Sobre o Escritório</h2>
+<dl class="valores-lista">
+  <dt>Missão</dt>
+  <dd class="service-desc">Atuar em contratações públicas e parcerias administrativas, com orientação e revisão técnica na elaboração de papéis de trabalho e atos administrativos, redução de riscos, conformidade e governança.</dd>
+
+  <dt>Visão</dt>
+  <dd class="service-desc">Consolidar atuação no Direito Administrativo, com foco em contratações públicas, concessões, permissões, terceirizações e parcerias, especialmente em serviços públicos e infraestrutura, mantendo padrão técnico e responsabilidade institucional.</dd>
+
+  <dt>Valores</dt>
+  <dd class="service-desc">Técnica, responsabilidade, conformidade, governança, transparência e respeito às instituições públicas e privadas atendidas.</dd>
+</dl>
+
+</section>
+
+<!-- VÍDEO INSTITUCIONAL EM DESTAQUE -->
+
+<figure class="video-embed">
+  <iframe
+    id="ultimo-video-youtube"
+    src="https://www.youtube-nocookie.com/embed/fy2a2YcozUE"
+    title="Último vídeo publicado — Talamante Morais"
+    loading="eager"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen>
+  </iframe>
+  <figcaption>Vídeo provisório — aguardando publicação oficial do canal Talamante Morais.</figcaption>
+</figure>
+
+<!-- SEÇÃO DE SERVIÇOS PRESTADOS -->
+
+<section id="servicos">
+  <h2>Nossos Serviços</h2>
+
+<!-- GRID DE SERVIÇOS E CARTÕES INFORMATIVOS -->
+
+  <div class="services-grid">
+
+    <div class="service-card" id="direito-publico">
+      <h3 class="service-title">Direito Público</h3>
+      <div class="service-desc">
+	Atuação em contratações públicas com ênfase na fase preparatória e na elaboração de papéis de trabalho como DFD, ETP, TR, edital, minuta contratual e matriz de riscos, abrangendo também a gestão e a fiscalização da execução contratual, com predominância de consultoria preventiva voltada à redução de riscos, à conformidade e à governança, sem prejuízo da atuação corretiva por meio de recursos e manifestações regimentais perante o TCM-GO quando cabível, alcançando ainda concessões, permissões, terceirizações e parcerias público-privadas.
+
+      </div>
+<a class="cta-btn" href="direito-publico-municipal.html" aria-label="Abrir página de Direito Público Municipal">
+  Acessar
+</a>
+    </div>
+
+    <div class="service-card" id="direito-privado">
+      <h3 class="service-title">Direito Privado</h3>
+      <div class="service-desc">
+        Atuação em Direito Civil, Trabalhista e Contratual com ênfase em consultoria preventiva, elaboração e revisão de instrumentos jurídicos, solução extrajudicial de conflitos e atuação contenciosa quando necessária, incluindo proteção de dados conforme a LGPD e suporte em demandas extrajudiciais, preservando técnica, clareza e responsabilidade
+      </div>
+<a class="cta-btn" href="direito-privado.html" aria-label="Abrir página de Direito Privado">
+  Acessar
+</a>
+    </div>
+    <div class="service-card" id="cursos-treinamentos">
+      <h3 class="service-title">Cursos e Treinamentos</h3>
+      <div class="service-desc">
+        Cursos e treinamentos aplicados em contratações públicas com foco na prática de elaboração de papéis de trabalho e na condução das fases preparatória e de seleção do fornecedor conforme a Lei nº 14.133/2021, abrangendo DFD, ETP, TR, pesquisa de preços, matriz de riscos, gestão e fiscalização, sanções, contratações diretas, credenciamento, impugnações e recursos administrativos, com certificação de participação, direcionados a servidores, comissões, fiscais, gestores, empresas públicas e privadas e profissionais da advocacia
+
+      </div>
+<a class="cta-btn" href="cursos-e-capacitacoes.html" aria-label="Abrir página de Cursos e Capacitações">
+  Acessar
+</a>
+    </div>
+
+  </div> <!-- fechamento do services-grid -->
+</section> <!-- fechamento correto da seção serviços -->
+
+<!-- BLOCO DE ACESSO AO REPOSITÓRIO DE CONTEÚDOS JURÍDICOS -->
+
+<div id="publicacoes" class="bottom-links" aria-label="Acesso ao repositório institucional de conteúdos">
+  <a href="conteudos.html"
+     class="cta-btn"
+     aria-label="Abrir página de Conteúdos Jurídicos">
+     Conteúdos Jurídicos
+  </a>
+</div>
+
+<!-- SEÇÃO DE CONTATO E FORMULÁRIO -->
+
+<section id="contato" class="container">
+
+  <h2>Contato</h2>
+  <div id="mensagem-sucesso" style="display: none; background-color: #dff0d8; color: #3c763d; padding: 15px; border-radius: 5px; margin-bottom: 20px;">
+    Mensagem enviada com sucesso. Obrigado pelo contato!
+  </div>
+
+  <form id="contato-form">
+    <label for="nome">Nome completo</label>
+    <input type="text" id="nome" name="nome" placeholder="Seu nome" required aria-label="Nome completo">
+
+    <label for="email">E-mail</label>
+    <input type="email" id="email" name="email" placeholder="Seu e-mail" required aria-label="E-mail">
+
+    <label for="mensagem">Mensagem</label>
+    <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem" required aria-label="Mensagem" rows="5"></textarea>
+
+    <input type="text" name="honeypot" style="display:none">
+    <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response">
+
+    <button type="submit" class="main-btn">Enviar</button>
+  </form>
+  <p><strong>Email:</strong> talamantemorais@gmail.com</p>
+    <p><strong>WhatsApp:</strong> (62) 99631-8340</p>
+<p>
+  <a href="https://lattes.cnpq.br/1142865105467699"
+     target="_blank" rel="noopener noreferrer">
+     Currículo Lattes
+  </a>
+</p>
+<ul>
+  <li><a href="https://www.instagram.com/talamantemorais/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+  <li><a href="https://www.linkedin.com/in/talamante-morais-a51535221/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+  <li><a href="https://www.youtube.com/@TalamanteMorais" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+</ul>
+  <div class="qrcode-container">
+    <h3>Acesso Rápido</h3>
+    <a href="cartao.html" rel="noopener">
+      <img src="qrcode_talamante_cartao.png" alt="QR Code atualizado para abrir o cartão digital" loading="lazy" decoding="async">
+    </a>
+<div class="qrcode-actions">
+  <a class="cta-btn" href="cartao.html" rel="noopener">Abrir cartão digital</a>
+
+  <span class="info-cartao" aria-label="Informações sobre o cartão digital" tabindex="0">
+    i
+    <span class="info-tooltip">
+      O cartão digital reúne todas as informações profissionais, com opção de salvar ou apenas consultar os dados.
+    </span>
+  </span>
+</div>
+</div>
+</section>
+</main>
+
+<!-- RODAPÉ INSTITUCIONAL -->
+
+<footer role="contentinfo">
+  &copy; <span id="ano"></span> Talamante Morais – Todos os direitos reservados.
+  <a href="privacidade.html" class="footer-link">Privacidade</a>
+</footer>
+
+<!-- BOTÃO FLUTUANTE DE CONTATO VIA WHATSAPP -->
+
+<a class="whatsapp-button"
+   href="https://wa.me/556296318340"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Abrir WhatsApp para contato">
+  WhatsApp
+</a>
+
+<!-- reCAPTCHA v3 -->
+<script src="https://www.google.com/recaptcha/api.js?render=6LdEyWYrAAAAALdfXa6R6BprCQbpPW7KxuySJr43"></script>
+
+<!-- SCRIPTS FINAIS E FUNCIONALIDADES COMPLEMENTARES -->
+
+<script src="scripts.js" defer></script>
+
+</body>
+</html>
+
+
