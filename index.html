@@ -196,8 +196,7 @@
   <div id="mensagem-sucesso" role="status" aria-live="polite" aria-atomic="true">
     Mensagem enviada com sucesso. Obrigado pelo contato!
   </div>
-
-  <form id="contato-form">
+<form id="contato-form" action="https://script.google.com/macros/s/AKfycbzvgpuIDGGkpm6hj4WaV7TNVcIJe6BTbIqfjL2ItxrqW2z80ZwyU0Ik3arvIF6R-6Hg/exec" method="POST" accept-charset="UTF-8">
     <label for="nome">Nome completo</label>
     <input type="text" id="nome" name="nome" placeholder="Seu nome" required aria-label="Nome completo">
 
@@ -207,8 +206,8 @@
     <label for="mensagem">Mensagem</label>
     <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem" required aria-label="Mensagem" rows="5"></textarea>
 
-    <input type="text" name="honeypot" autocomplete="off" tabindex="-1" aria-hidden="true">
-    <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response">
+    <input type="text" id="website" name="honeypot" autocomplete="off" tabindex="-1" aria-hidden="true">
+    <input type="hidden" name="g-recaptcha-response" id="recaptcha_token">
 
     <button type="submit" class="main-btn">Enviar</button>
   </form>
