@@ -255,7 +255,7 @@ if (nextBtn) {
       const nome = nomeEl.value.trim();
       const email = emailEl.value.trim();
       const mensagem = mensagemEl.value.trim();
-      const honeypot = document.getElementById("website");
+      const honeypot = form.querySelector('input[name="honeypot"]');
 
       if (!nome || !email || !mensagem) {
         exibirMensagem("Por favor, preencha todos os campos obrigatórios.");
@@ -285,11 +285,11 @@ if (nextBtn) {
         botao.disabled = false;
         return;
       }
+grecaptcha.ready(function () {
+  grecaptcha.execute('6LcIlF8sAAAAAOPXstdnTTRCUa6eK6W3AI40TpvL',
+    { action: "contato" })
+    .then(function (token) {
 
-      grecaptcha.ready(function () {
-grecaptcha.execute("6LcIlF8sAAAAAOPXstdnTTRCUa6eK6W3AI40TpvL", { action: "contato" })
-
-          .then(function (token) {
             tokenField.value = token;
 
             const formData = new FormData(form);
