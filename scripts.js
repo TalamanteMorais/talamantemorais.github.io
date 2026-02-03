@@ -6,8 +6,8 @@
 
 document.addEventListener("DOMContentLoaded", function () {
 
-/* ======================== VÍDEO INSTITUCIONAL (ARQUIVO LOCAL) ======================== */
-/* Exibição por play do usuário via <video>, sem autoplay e sem integração automática com YouTube */
+  /* ======================== VÍDEO INSTITUCIONAL (ARQUIVO LOCAL) ======================== */
+  /* Exibição por play do usuário via <video>, sem autoplay e sem integração automática com YouTube */
 
   /* ======================== CARROSSEL ======================== */
   const track = document.querySelector(".carousel-track");
@@ -46,16 +46,17 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
   }
-function goToSlide(n, manual = false) {
-  if (!totalItems) return;
 
-  const now = Date.now();
-  if (!manual && now - lastMoveAt < SLIDE_MIN_GAP_MS) return;
-  lastMoveAt = now;
+  function goToSlide(n, manual = false) {
+    if (!totalItems) return;
 
-  indexSlide = ((n % totalItems) + totalItems) % totalItems;
-  atualizarTransform();
-}
+    const now = Date.now();
+    if (!manual && now - lastMoveAt < SLIDE_MIN_GAP_MS) return;
+    lastMoveAt = now;
+
+    indexSlide = ((n % totalItems) + totalItems) % totalItems;
+    atualizarTransform();
+  }
 
   function iniciarCarrossel() {
     if (!track || totalItems <= 1 || isHovered) return;
@@ -76,33 +77,37 @@ function goToSlide(n, manual = false) {
       intervaloSlide = null;
     }
   }
-if (prevBtn) {
-  prevBtn.addEventListener("pointerdown", (e) => {
-    e.stopPropagation();
-  });
-  prevBtn.addEventListener("click", (e) => {
-    e.stopPropagation();
-    pararCarrossel();
-    goToSlide(indexSlide - 1, true);
 
-    if (!isHovered) {
-      setTimeout(() => { if (!isHovered) iniciarCarrossel(); }, 3000);
-    }
-  });
-}
-if (nextBtn) {
-  nextBtn.addEventListener("pointerdown", (e) => {
-    e.stopPropagation();
-  });
-  nextBtn.addEventListener("click", (e) => {
-    e.stopPropagation();
-    pararCarrossel();
-    goToSlide(indexSlide + 1, true);
-    if (!isHovered) {
-      setTimeout(() => { if (!isHovered) iniciarCarrossel(); }, 3000);
-    }
-  });
-}
+  if (prevBtn) {
+    prevBtn.addEventListener("pointerdown", (e) => {
+      e.stopPropagation();
+    });
+    prevBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      pararCarrossel();
+      goToSlide(indexSlide - 1, true);
+
+      if (!isHovered) {
+        setTimeout(() => { if (!isHovered) iniciarCarrossel(); }, 3000);
+      }
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener("pointerdown", (e) => {
+      e.stopPropagation();
+    });
+    nextBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      pararCarrossel();
+      goToSlide(indexSlide + 1, true);
+
+      if (!isHovered) {
+        setTimeout(() => { if (!isHovered) iniciarCarrossel(); }, 3000);
+      }
+    });
+  }
+
   if (dotsWrap && totalItems > 1) {
     dotsWrap.innerHTML = "";
     for (let i = 0; i < totalItems; i++) {
@@ -112,7 +117,8 @@ if (nextBtn) {
       b.setAttribute("aria-controls", "carousel-track");
       b.addEventListener("click", () => {
         pararCarrossel();
-        goToSlide(i);
+        goToSlide(i, true);
+
         if (!isHovered) {
           setTimeout(() => { if (!isHovered) iniciarCarrossel(); }, 3000);
         }
@@ -123,8 +129,6 @@ if (nextBtn) {
 
   if (carouselContainer && track && totalItems > 0) {
     iniciarCarrossel();
-    let interactionsReady = false;
-    setTimeout(() => { interactionsReady = true; }, 800);
 
     let swipe = {
       dragging: false,
@@ -210,16 +214,17 @@ if (nextBtn) {
     carouselContainer.addEventListener("keydown", (e) => {
       if (e.key === "ArrowLeft") {
         e.preventDefault();
-        goToSlide(indexSlide - 1);
+        goToSlide(indexSlide - 1, true);
       } else if (e.key === "ArrowRight") {
         e.preventDefault();
-        goToSlide(indexSlide + 1);
+        goToSlide(indexSlide + 1, true);
       }
     });
   }
 
   atualizarTransform();
-/* ======================== FORMULÁRIO + reCAPTCHA ======================== */
+
+  /* ======================== FORMULÁRIO + reCAPTCHA ======================== */
   const form = document.getElementById("contato-form");
 
   if (form) {
@@ -268,8 +273,8 @@ if (nextBtn) {
 
       botao.disabled = true;
       botao.innerText = "Enviando...";
-      const tokenField = document.getElementById("g-recaptcha-response");
 
+      const tokenField = document.getElementById("g-recaptcha-response");
       if (!tokenField) {
         console.error("reCAPTCHA: campo hidden g-recaptcha-response não encontrado.");
         exibirMensagem("Erro ao carregar o reCAPTCHA. Atualize a página e tente novamente.");
@@ -277,6 +282,7 @@ if (nextBtn) {
         botao.disabled = false;
         return;
       }
+
       const siteKey = "6LcIlF8sAAAAAOPXstdnTTRCUa6eK6W3AI40TpvL";
 
       const falhaRecaptcha = () => {
@@ -289,7 +295,6 @@ if (nextBtn) {
       const executarRecaptcha = () => {
         grecaptcha.ready(function () {
           grecaptcha.execute(siteKey, { action: "contato" }).then(function (token) {
-
             tokenField.value = token;
 
             const formData = new FormData(form);
@@ -298,27 +303,14 @@ if (nextBtn) {
             fetch(form.action, {
               method: "POST",
               body: formData,
-              headers: {
-                "Accept": "application/json"
-              }
+              headers: { "Accept": "application/json" }
             })
-
               .then((response) => response.text())
               .then((texto) => {
                 const upper = (texto || "").toUpperCase();
 
                 if (upper.includes("OK") || upper.includes("SUCCESS")) {
-                  if (mensagemSucesso) {
-                    mensagemSucesso.style.display = "block";
-                    mensagemSucesso.innerText = "Mensagem enviada com sucesso.";
-
-                    setTimeout(() => {
-                      mensagemSucesso.style.display = "none";
-                      mensagemSucesso.innerText = "";
-                    }, 5000);
-                  } else {
-                    exibirMensagem("Mensagem enviada com sucesso.");
-                  }
+                  exibirMensagem("Mensagem enviada com sucesso.");
                 } else {
                   exibirMensagem("Não foi possível confirmar o envio. Tente novamente.");
                 }
@@ -338,18 +330,31 @@ if (nextBtn) {
       };
 
       const carregarRecaptchaSeNecessario = (onReady) => {
-        if (typeof grecaptcha !== "undefined") {
+        if (typeof grecaptcha !== "undefined" && grecaptcha && typeof grecaptcha.ready === "function") {
           onReady();
           return;
         }
 
-        const existente = document.querySelector('script[data-recaptcha-v3="1"]');
-        if (existente) {
-          existente.addEventListener("load", () => {
-            if (typeof grecaptcha !== "undefined") onReady();
-            else falhaRecaptcha();
-          }, { once: true });
-          existente.addEventListener("error", () => falhaRecaptcha(), { once: true });
+        const existing =
+          document.querySelector('script[data-recaptcha-v3="1"]') ||
+          document.querySelector('script[src*="recaptcha/api.js?render="]');
+
+        const esperarGrecaptcha = (tentativasRestantes) => {
+          if (typeof grecaptcha !== "undefined" && grecaptcha && typeof grecaptcha.ready === "function") {
+            onReady();
+            return;
+          }
+          if (tentativasRestantes <= 0) {
+            falhaRecaptcha();
+            return;
+          }
+          setTimeout(() => esperarGrecaptcha(tentativasRestantes - 1), 50);
+        };
+
+        if (existing) {
+          existing.addEventListener("load", () => esperarGrecaptcha(60), { once: true });
+          existing.addEventListener("error", falhaRecaptcha, { once: true });
+          esperarGrecaptcha(2);
           return;
         }
 
@@ -357,13 +362,13 @@ if (nextBtn) {
         s.src = "https://www.google.com/recaptcha/api.js?render=" + encodeURIComponent(siteKey);
         s.defer = true;
         s.setAttribute("data-recaptcha-v3", "1");
-        s.onload = () => {
-          if (typeof grecaptcha !== "undefined") onReady();
-          else falhaRecaptcha();
-        };
-        s.onerror = () => falhaRecaptcha();
+        s.addEventListener("load", () => esperarGrecaptcha(60), { once: true });
+        s.addEventListener("error", falhaRecaptcha, { once: true });
         document.head.appendChild(s);
+
+        esperarGrecaptcha(2);
       };
+
       carregarRecaptchaSeNecessario(executarRecaptcha);
     });
   }
@@ -382,7 +387,6 @@ if (nextBtn) {
         if (!res.ok) throw new Error("Falha ao carregar JSON de links.");
         return res.json();
       })
-
       .then((links) => {
         if (!Array.isArray(links)) return;
 
