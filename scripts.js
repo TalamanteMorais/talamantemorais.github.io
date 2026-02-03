@@ -299,22 +299,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
             const formData = new FormData(form);
             formData.set("g-recaptcha-response", token);
-
-            fetch(form.action, {
+fetch(form.action, {
               method: "POST",
               body: formData,
-              headers: { "Accept": "application/json" }
+              mode: "no-cors"
             })
-              .then((response) => response.text())
-              .then((texto) => {
-                const upper = (texto || "").toUpperCase();
-
-                if (upper.includes("OK") || upper.includes("SUCCESS")) {
-                  exibirMensagem("Mensagem enviada com sucesso.");
-                } else {
-                  exibirMensagem("Não foi possível confirmar o envio. Tente novamente.");
-                }
-
+              .then(() => {
+                exibirMensagem("Mensagem enviada com sucesso.");
                 form.reset();
               })
               .catch((error) => {
