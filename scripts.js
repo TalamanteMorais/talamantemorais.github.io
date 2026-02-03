@@ -282,8 +282,7 @@ document.addEventListener("DOMContentLoaded", function () {
         botao.disabled = false;
         return;
       }
-
-      const siteKey = "6LcIlF8sAAAAAOPXstdnTTRCUa6eK6W3AI40TpvL";
+const siteKey = "6Ld0yF8sAAAAAN5JXxfuWIV3K2nhA9p-r4VWKGKo";
 
       const falhaRecaptcha = () => {
         console.error("reCAPTCHA: grecaptcha não definido.");
