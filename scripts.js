@@ -268,12 +268,10 @@ if (nextBtn) {
 
       botao.disabled = true;
       botao.innerText = "Enviando...";
-
-      const tokenField = document.getElementById("recaptcha_token");
-      const formData = new FormData(form);
+      const tokenField = document.getElementById("g-recaptcha-response");
 
       if (!tokenField) {
-        console.error("reCAPTCHA: campo hidden recaptcha_token não encontrado.");
+        console.error("reCAPTCHA: campo hidden g-recaptcha-response não encontrado.");
         exibirMensagem("Erro ao carregar o reCAPTCHA. Atualize a página e tente novamente.");
         botao.innerText = "Enviar";
         botao.disabled = false;
@@ -289,9 +287,13 @@ if (nextBtn) {
       }
 
       grecaptcha.ready(function () {
-        grecaptcha.execute("6LdEyWYrAAAAALdfXa6R6BprCQbpPW7KxuySJr43", { action: "contato" })
+grecaptcha.execute("6LcIlF8sAAAAAOPXstdnTTRCUa6eK6W3AI40TpvL", { action: "contato" })
+
           .then(function (token) {
             tokenField.value = token;
+
+            const formData = new FormData(form);
+            formData.set("g-recaptcha-response", token);
 
             fetch(form.action, {
               method: "POST",
@@ -300,6 +302,7 @@ if (nextBtn) {
                 "Accept": "application/json"
               }
             })
+
               .then((response) => response.text())
               .then((texto) => {
                 const upper = (texto || "").toUpperCase();
