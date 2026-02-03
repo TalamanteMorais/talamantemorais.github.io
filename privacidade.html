@@ -1,23 +1,24 @@
 <!DOCTYPE html>
-<!--
-  INSTRUÇÕES GERAIS DE MANUTENÇÃO E ATUALIZAÇÃO
-  Página institucional com informações sobre privacidade e uso de dados.
-  Alterações devem preservar conteúdo informativo e links de retorno.
--->
-
 <html lang="pt-BR">
-
-<!-- CABEÇALHO DO DOCUMENTO: METADADOS, SEO E POLÍTICAS DE SEGURANÇA -->
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privacidade</title>
   <meta name="robots" content="index, follow">
-
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    base-uri 'self';
+    object-src 'none';
+    frame-ancestors 'none';
+    connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com;
+    script-src 'self' https://www.googletagmanager.com;
+    style-src 'self' https://fonts.googleapis.com 'unsafe-inline';
+    font-src https://fonts.gstatic.com;
+    img-src 'self' https: data:;
+  ">
   <meta name="referrer" content="strict-origin-when-cross-origin">
 
-<!-- INTEGRAÇÃO COM GOOGLE ANALYTICS -->
-
+  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZKCPTG7K1T"></script>
   <script src="gtag-init.js"></script>
 
@@ -27,19 +28,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="main.css">
 </head>
-
-<!-- INÍCIO DO CORPO DO DOCUMENTO -->
-
 <body>
-
-<!-- CABEÇALHO DA PÁGINA: TÍTULO E DESCRIÇÃO -->
-
 <header class="section-header">
   <h1>Privacidade</h1>
   <p>Informações sobre o uso de dados no site</p>
 </header>
-
-<!-- CONTEÚDO PRINCIPAL: POLÍTICA DE PRIVACIDADE -->
 
 <main class="container">
   <h2>Tratamento de dados</h2>
@@ -61,9 +54,6 @@
     <a class="cta-btn" href="index.html#contato">Contato</a>
   </p>
 </main>
-
-<!-- SCRIPTS FINAIS -->
-
 <footer role="contentinfo">
   &copy; <span id="ano"></span> Talamante Morais – Todos os direitos reservados.
 </footer>

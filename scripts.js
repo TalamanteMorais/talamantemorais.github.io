@@ -1,13 +1,39 @@
-/*
-  INSTRUÇÕES GERAIS DE MANUTENÇÃO E ATUALIZAÇÃO
-  Script geral de funcionalidades do site.
-  As seções estão organizadas por blocos funcionais comentados.
-*/
-
+/* ======================== SCRIPT GERAL DO SITE ======================== */
 document.addEventListener("DOMContentLoaded", function () {
 
-/* ======================== VÍDEO INSTITUCIONAL (ARQUIVO LOCAL) ======================== */
-/* Exibição por play do usuário via <video>, sem autoplay e sem integração automática com YouTube */
+/* ======================== ÚLTIMO VÍDEO DO YOUTUBE ======================== */
+(function () {
+
+  const iframeUltimo = document.getElementById("ultimo-video-youtube");
+  if (!iframeUltimo) return;
+  const RSS_URL =
+    "https://www.youtube.com/feeds/videos.xml?channel_id=UCifA0MpzCwCYfiuQY4E6S9A";
+
+  fetch(RSS_URL)
+    .then(r => r.text())
+    .then(str => {
+      const xml = new window.DOMParser().parseFromString(str, "text/xml");
+      const entry = xml.querySelector("entry > id");
+
+      if (!entry) {
+        iframeUltimo.src =
+          "https://www.youtube-nocookie.com/embed/fy2a2YcozUE";
+        return;
+      }
+
+      const fullId = entry.textContent.trim();
+      const videoId = fullId.replace("yt:video:", "");
+
+      iframeUltimo.src =
+        "https://www.youtube-nocookie.com/embed/" + videoId;
+      iframeUltimo.title =
+        "Último vídeo publicado — carregamento automático";
+    })
+    .catch(() => {
+      iframeUltimo.src =
+        "https://www.youtube-nocookie.com/embed/fy2a2YcozUE";
+    });
+})();
 
   /* ======================== CARROSSEL ======================== */
   const track = document.querySelector(".carousel-track");
@@ -123,8 +149,20 @@ if (nextBtn) {
 
   if (carouselContainer && track && totalItems > 0) {
     iniciarCarrossel();
+
     let interactionsReady = false;
     setTimeout(() => { interactionsReady = true; }, 800);
+
+    carouselContainer.addEventListener("mouseenter", () => {
+      if (!interactionsReady) return;
+      isHovered = true;
+      pararCarrossel();
+    });
+
+    carouselContainer.addEventListener("mouseleave", () => {
+      isHovered = false;
+      iniciarCarrossel();
+    });
 
     let swipe = {
       dragging: false,
@@ -219,90 +257,68 @@ if (nextBtn) {
   }
 
   atualizarTransform();
-/* ======================== FORMULÁRIO + reCAPTCHA ======================== */
+
+  /* ======================== FORMULÁRIO + reCAPTCHA ======================== */
   const form = document.getElementById("contato-form");
 
   if (form) {
     form.addEventListener("submit", function (e) {
       e.preventDefault();
 
-      const nomeEl = document.getElementById("nome");
-      const emailEl = document.getElementById("email");
-      const mensagemEl = document.getElementById("mensagem");
+      const nome = document.getElementById("nome").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const mensagem = document.getElementById("mensagem").value.trim();
       const botao = form.querySelector("button[type='submit']");
       const mensagemSucesso = document.getElementById("mensagem-sucesso");
 
-      const exibirMensagem = (texto) => {
-        if (mensagemSucesso) {
-          mensagemSucesso.style.display = "block";
-          mensagemSucesso.innerText = texto;
-
-          setTimeout(() => {
-            mensagemSucesso.style.display = "none";
-            mensagemSucesso.innerText = "";
-          }, 5000);
-        } else {
-          alert(texto);
-        }
-      };
-
-      if (!nomeEl || !emailEl || !mensagemEl || !botao) {
-        console.error("Formulário: campos obrigatórios ou botão submit não encontrados.");
-        exibirMensagem("Não foi possível enviar no momento. Atualize a página e tente novamente.");
-        return;
-      }
-
-      const nome = nomeEl.value.trim();
-      const email = emailEl.value.trim();
-      const mensagem = mensagemEl.value.trim();
-      const honeypot = document.getElementById("website");
+      const honey = form.querySelector('input[name="honeypot"]');
+      if (honey && honey.value) return;
 
       if (!nome || !email || !mensagem) {
-        exibirMensagem("Por favor, preencha todos os campos obrigatórios.");
-        return;
-      }
-
-      if (honeypot && honeypot.value) {
+        alert("Por favor, preencha todos os campos obrigatórios.");
         return;
       }
 
       botao.disabled = true;
       botao.innerText = "Enviando...";
 
-      const tokenField = document.getElementById("recaptcha_token");
-      const formData = new FormData(form);
-
-      if (!tokenField) {
-        console.error("reCAPTCHA: campo hidden recaptcha_token não encontrado.");
-        exibirMensagem("Erro ao carregar o reCAPTCHA. Atualize a página e tente novamente.");
-        botao.innerText = "Enviar";
+      if (typeof grecaptcha === "undefined" ||
+        typeof grecaptcha.ready !== "function") {
+        alert("Erro ao carregar o reCAPTCHA. Atualize a página e tente novamente.");
         botao.disabled = false;
-        return;
-      }
-
-      if (typeof grecaptcha === "undefined") {
-        console.error("reCAPTCHA: grecaptcha não definido.");
-        exibirMensagem("Erro ao validar o reCAPTCHA. Atualize a página e tente novamente.");
         botao.innerText = "Enviar";
-        botao.disabled = false;
         return;
       }
 
       grecaptcha.ready(function () {
-        grecaptcha.execute("6LdEyWYrAAAAALdfXa6R6BprCQbpPW7KxuySJr43", { action: "contato" })
+        grecaptcha.execute('6LdEyWYrAAAAALdfXa6R6BprCQbpPW7KxuySJr43',
+          { action: "submit" })
           .then(function (token) {
-            tokenField.value = token;
-
-            fetch(form.action, {
-              method: "POST",
-              body: formData,
-              headers: {
-                "Accept": "application/json"
-              }
-            })
-              .then((response) => response.text())
-              .then((texto) => {
-                const upper = (texto || "").toUpperCase();
+            if (!token || token.trim() === "") {
+              alert("Erro ao validar o reCAPTCHA. Atualize a página e tente novamente.");
+              botao.disabled = false;
+              botao.innerText = "Enviar";
+              return;
+            }
+fetch("https://script.google.com/macros/s/AKfycbzvgpuIDGGkpm6hj4WaV7TNVcIJe6BTbIqfjL2ItxrqW2z80ZwyU0Ik3arvIF6R-6Hg/exec", {
+  method: "POST",
+  credentials: "omit",
+  referrerPolicy: "no-referrer",
+  cache: "no-store",
+  headers: { "Content-Type": "application/x-www-form-urlencoded" },
+  body: new URLSearchParams({
+    nome: nome,
+    email: email,
+    mensagem: mensagem,
+    "g-recaptcha-response": token
+  })
+})
+              .then(response => {
+                if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                return response.text();
+              })
+              .then(data => {
+                const texto = String(data || "").toUpperCase();
 
                 if (texto.includes("OK") || texto.includes("SUCCESS")) {
                   if (mensagemSucesso) {
@@ -314,17 +330,15 @@ if (nextBtn) {
                       mensagemSucesso.innerText = "";
                     }, 5000);
                   } else {
-                    exibirMensagem("Mensagem enviada com sucesso.");
+                    alert("Mensagem enviada com sucesso.");
                   }
                 } else {
-                  exibirMensagem("Não foi possível confirmar o envio. Tente novamente.");
+                  alert("Não foi possível confirmar o envio. Tente novamente.");
                 }
-
-                form.reset();
               })
-              .catch((error) => {
-                console.error("Envio do formulário: erro:", error);
-                exibirMensagem("Ocorreu um erro ao enviar sua mensagem. Tente novamente.");
+              .catch(error => {
+                alert("Ocorreu um erro ao enviar sua mensagem. Tente novamente.");
+                console.error("Erro:", error);
               })
               .finally(() => {
                 botao.innerText = "Enviar";
@@ -333,55 +347,6 @@ if (nextBtn) {
           });
       });
     });
-  }
-
-  /* ======================== LISTA DE LINKS — PUBLICAÇÕES JURÍDICAS (JSON) ======================== */
-  const linksPublicacoesEl = document.getElementById("links-publicacoes");
-
-  if (linksPublicacoesEl) {
-    const jsonUrl = linksPublicacoesEl.getAttribute("data-json") || "links-publicacoes.json";
-    fetch(jsonUrl, {
-      cache: "no-store",
-      credentials: "omit",
-      referrerPolicy: "no-referrer"
-    })
-      .then((res) => {
-        if (!res.ok) throw new Error("Falha ao carregar JSON de links.");
-        return res.json();
-      })
-
-      .then((links) => {
-        if (!Array.isArray(links)) return;
-
-        const validos = links.filter((item) =>
-          item &&
-          typeof item === "object" &&
-          typeof item.title === "string" &&
-          item.title.trim() &&
-          typeof item.url === "string" &&
-          item.url.trim()
-        );
-
-        if (validos.length === 0) return;
-
-        linksPublicacoesEl.innerHTML = "";
-
-        validos.forEach((item) => {
-          const li = document.createElement("li");
-          const a = document.createElement("a");
-
-          a.href = item.url.trim();
-          a.target = "_blank";
-          a.rel = "noopener noreferrer";
-          a.textContent = item.title.trim();
-
-          li.appendChild(a);
-          linksPublicacoesEl.appendChild(li);
-        });
-      })
-      .catch((err) => {
-        console.error(err);
-      });
   }
 
   /* ======================== RODAPÉ — ANO AUTOMÁTICO ======================== */

@@ -100,118 +100,75 @@ img, picture, svg, video {
   text-align: center;
   justify-self: center;
 }
-  .section-header .brand-logo-wrap{
-    width: clamp(140px, 34vw, 200px);
-    height: clamp(140px, 34vw, 200px);
-    justify-self: center;
-    margin-top: 0.3rem;
-  }
+
+.section-header .brand-logo-wrap{
+  width: clamp(110px, 14vw, 170px);
+  height: clamp(110px, 14vw, 170px);
+  justify-self: end;
+}
 
 .section-header .brand-logo-img{
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
-@media (max-width: 1100px){
-  .section-header .brand{
-    transform: none;
-  }
-}
+
 @media (max-width: 520px){
   .section-header{
-    padding: 1.1rem 1rem;
-  }
-
-  .section-header h1{
-    font-size: 1.95rem;
-    line-height: 1.15;
+    background-image: url('img/Arte_Fundo_1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 1.2rem 0 0.8rem 0;
     text-align: center;
+    color: #0f2743;
   }
-
-  .section-header p{
-    font-size: 1.02rem;
-    text-align: center;
-  }
-
-  .section-header .brand{
-    grid-template-columns: 1fr;
-    justify-items: center;
-    gap: 0.7rem;
-    padding: 0 0.9rem;
-    transform: none;
-  }
-
+.section-header .brand{
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: clamp(1.6rem, 3vw, 2.4rem);
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  transform: translateX(200px);
+}
   .section-header .brand-text{
     justify-self: center;
     text-align: center;
   }
 
   .section-header .brand-logo-wrap{
-    width: min(200px, 62vw);
-    aspect-ratio: 1 / 1;
+    width: clamp(140px, 34vw, 200px);
+    height: auto;
     justify-self: center;
-    margin-top: 0.3rem;
   }
 }
-
 /* ======================== 03. MENU DE NAVEGAÇÃO ======================== */
-.main-nav{
-  background: #0f2743;
+.main-nav {
+  background: #0f2743; /* fundo escuro original */
   text-align: center;
   padding: 0.75rem 0;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
 }
 
-.main-nav a{
+.main-nav a {
   color: #ffffff;
   text-decoration: none;
   margin: 0 1.2rem;
   font-weight: 600;
   font-size: 1.05rem;
   transition: color 0.2s ease;
-  display: inline-block;
-  white-space: nowrap;
-  padding: 0.15rem 0;
-}
-@media (max-width: 900px){
-  .main-nav{
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 10px;
-    padding: 0.85rem 0.6rem;
-    text-align: center;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-  }
-
-  .main-nav::-webkit-scrollbar{
-    display: none;
-  }
-
-  .main-nav a{
-    flex: 0 0 auto;
-    margin: 0;
-    padding: 0.3rem 0.45rem;
-    line-height: 1.2;
-    font-size: 0.98rem;
-    white-space: nowrap;
-  }
 }
 
-@media (max-width: 420px){
-  .main-nav{
-    gap: 8px;
-    padding: 0.75rem 0.55rem;
-  }
+.main-nav a:hover {
+  color: #a3d3ff;
+}
 
-  .main-nav a{
-    padding: 0.25rem 0.45rem;
-    font-size: 0.98rem;
-    line-height: 1.15;
-  }
+.main-nav a:focus-visible {
+  outline: 3px solid #a3d3ff;
+  outline-offset: 2px;
+  border-radius: 6px;
 }
 
 .main-nav a:hover{
@@ -223,6 +180,7 @@ img, picture, svg, video {
   outline-offset: 2px;
   border-radius: 6px;
 }
+
 /* ======================== 04. SEÇÕES GERAIS ======================== */
 section{
   max-width: var(--container-max);
@@ -233,10 +191,53 @@ section{
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.035);
   font-family: 'Inter', sans-serif;
 }
-@media (max-width: 600px){
-  section{
-    padding: 1.6rem 1.2rem;
-  }
+.info-box{
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* ======================== 05. GRID DE SERVIÇOS ======================== */
+.services-grid{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+
+/* ======================== 06. CARTÕES DE SERVIÇOS ======================== */
+.service-card{
+  background: rgba(255,255,255,0.95);
+  border-radius: 22px 55px 22px 55px;
+  box-shadow: 0 6px 22px rgba(68,134,255,0.08);
+  padding: 32px 22px 28px 22px;
+  border-left: 5px solid #548eed;
+  min-height: 200px;
+  transition: transform .18s, box-shadow .22s;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.service-card:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(68,134,255,0.15);
+}
+
+/* ======================== 07. TÍTULO E DESCRIÇÃO DOS SERVIÇOS ======================== */
+.service-title{
+  color: var(--brand);
+  font-weight: 700;
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  margin-bottom: .8rem;
+}
+.service-desc{
+  text-align: justify;
+  text-justify: inter-word;
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  margin-bottom: 1rem;
 }
 
 /* ======================== 08. BOTÕES ======================== */
@@ -255,105 +256,6 @@ section{
   transition: background-color 0.25s, transform 0.15s ease;
   box-shadow: 0 4px 14px rgba(24, 100, 171, 0.15);
   min-width: 120px;
-}
-.service-desc,
-.intro-text p {
-  text-align: justify;
-  text-justify: inter-word;
-}
-@media (max-width: 900px){
-  body {
-    font-size: 0.95rem;
-    line-height: 1.55;
-    padding-bottom: calc(clamp(190px, 24vw, 240px) + env(safe-area-inset-bottom));
-    overflow-x: hidden;
-  }
-  .section-header .brand{
-    grid-template-columns: 1fr auto;
-    align-items: center;
-    justify-items: center;
-    gap: 0.9rem;
-    transform: none;
-  }
-
-  .section-header .brand-text{
-    text-align: center;
-    justify-self: center;
-  }
-
-  .section-header .brand-logo-wrap{
-    width: clamp(110px, 26vw, 150px);
-    height: clamp(110px, 26vw, 150px);
-    justify-self: center;
-    margin-top: 0.3rem;
-  }
-
-  .section-header .brand-logo-img{
-    height: 100%;
-  }
-
-  .section-header h1 {
-    font-size: 1.65rem;
-  }
-
-  .section-header p {
-    font-size: 1rem;
-  }
-
-  .service-title {
-    font-size: 1.1rem;
-  }
-  .service-desc {
-    font-size: 0.95rem;
-  }
-  footer {
-    font-size: 0.9rem;
-  }
-  
-  button[type="submit"],
-  .cta-btn,
-  .main-btn {
-    font-size: 0.9rem;
-    padding: 0.6rem 1.2rem;
-  }
-
-  input[type="text"], input[type="email"], textarea {
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 520px){
-  .section-header .brand-logo-wrap{
-    width: min(170px, 60vw);
-  }
-}
-
-@media (min-width: 601px) and (max-width: 900px){
-  .main-nav{
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    padding: 0.85rem 0.6rem;
-    text-align: center;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-  }
-
-  .main-nav::-webkit-scrollbar{
-    display: none;
-  }
-
-  .main-nav a{
-    flex: 0 0 auto;
-    margin: 0;
-    padding: 0.3rem 0.45rem;
-    line-height: 1.2;
-    font-size: 0.98rem;
-    white-space: nowrap;
-  }
 }
 
 .cta-btn:hover, .main-btn:hover{
@@ -432,6 +334,7 @@ ul li{
   transition: background-color 0.25s, transform 0.15s ease;
   box-shadow: 0 4px 12px rgba(24, 100, 171, 0.15);
 }
+
 /* CENTRALIZAÇÃO DOS BOTÕES INFERIORES */
 .bottom-links,
 .links-footer,
@@ -454,11 +357,6 @@ ul li{
   margin: 0;
 }
 /* ======================== 14. RODAPÉ ======================== */
-@media (min-width: 901px){
-  body{
-    padding-bottom: clamp(110px, 14vw, 150px);
-  }
-}
 footer{
   width: 100%;
   background: #223b53;
@@ -473,49 +371,42 @@ footer{
   left: 0;
   z-index: 99;
 }
+
 .footer-link{
   color: #ffffff;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
 
+.footer-link:hover{
+  color: #a3d3ff;
+}
+
+.footer-link:focus-visible{
+  outline: 3px solid #a3d3ff;
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
 /* ======================== 15. BOTÃO WHATSAPP ======================== */
 .whatsapp-button{
   position: fixed;
   right: clamp(12px, 3vw, 18px);
-  right: calc(clamp(12px, 3vw, 18px) + env(safe-area-inset-right));
-  bottom: clamp(95px, 12vw, 120px);
-  bottom: calc(clamp(95px, 12vw, 120px) + env(safe-area-inset-bottom));
-  width: 56px;
-  height: 56px;
-  padding: 0;
-  max-width: none;
-  white-space: normal;
+  bottom: clamp(70px, 10vw, 85px);
   background: #25D366;
   color: #ffffff;
-  border-radius: 50%;
+  padding: clamp(10px, 2vw, 14px) clamp(16px, 4vw, 22px);
+  border-radius: 48px;
   text-decoration: none;
   font-family: 'Inter', sans-serif;
   font-weight: 600;
-  font-size: 0;
-  line-height: 0;
+  font-size: clamp(0.9rem, 2vw, 1rem);
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 0;
+  gap: clamp(6px, 2vw, 10px);
   box-shadow: 0 6px 20px rgba(40, 120, 60, 0.15);
   z-index: 100;
   transition: background-color 0.2s ease, transform 0.2s ease;
-}
-
-.whatsapp-button::before{
-  content: "";
-  width: 26px;
-  height: 26px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%20fill='none'%20stroke='%23ffffff'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'%3E%3Cpath%20d='M22%2016.92v3a2%202%200%200%201-2.18%202%2019.79%2019.79%200%200%201-8.63-3.07%2019.5%2019.5%200%200%201-6-6A19.79%2019.79%200%200%201%203.11%204.18%202%202%200%200%201%205.11%202h3a2%202%200%200%201%202%201.72%2012.84%2012.84%200%200%200%20.7%202.81%202%202%200%200%201-.45%202.11L9.91%209.91a16%2016%200%200%200%206%206l1.27-1.27a2%202%200%200%201%202.11-.45%2012.84%2012.84%200%200%200%202.81.7A2%202%200%200%201%2022%2016.92z'/%3E%3C/svg%3E");
 }
 
 .whatsapp-button:hover{
@@ -523,28 +414,26 @@ footer{
   transform: translateY(-2px);
   box-shadow: 0 8px 22px rgba(40, 120, 60, 0.2);
 }
-.whatsapp-button:focus-visible {
-  outline: 2px solid rgba(255,255,255,.95);
+
+.whatsapp-button:focus-visible{
+  outline: 3px solid #b6f5cc;
   outline-offset: 2px;
 }
-/* reCAPTCHA badge (v3) - canto inferior esquerdo, menor e acima do rodapé */
-.grecaptcha-badge{
-  left: 10px !important;
-  right: auto !important;
-  bottom: calc(env(safe-area-inset-bottom) + 72px) !important;
-  transform: scale(0.60) !important;
-  transform-origin: left bottom !important;
-  z-index: 120 !important;
+
+/* Ajuste para listas de definições (#sobre) */
+.valores-lista {
+  margin: 1rem 0;
+  padding: 0;
 }
-@media (max-width: 900px){
-  .grecaptcha-badge{
-    left: 8px !important;
-    right: auto !important;
-    bottom: calc(env(safe-area-inset-bottom) + 72px) !important;
-    transform: scale(0.60) !important;
-    transform-origin: left bottom !important;
-    z-index: 120 !important;
-  }
+
+.valores-lista dt {
+  font-weight: bold;
+  margin-top: .5rem;
+}
+.valores-lista dd {
+  margin: 0 0 .5rem 1.5rem;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 /* ======================== 16. FORMULÁRIO ======================== */
@@ -624,23 +513,14 @@ button[type="submit"]:focus-visible{
   height: var(--carousel-h-desktop);
   background: #000;
   touch-action: pan-y;
-  overscroll-behavior: auto;
+  overscroll-behavior: contain;
   margin: calc(var(--gap-top) + 38px) auto 0;
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
 }
 
-@media (max-width: 900px){
-  .carousel-container{
-    height: auto;
-    aspect-ratio: 880 / 378;
-    margin: var(--gap-top) auto 0;
-  }
-}
-
 .carousel-track{
   display: flex;
-  height: 100%;
   transition: transform 0.5s ease;
   will-change: transform;
 }
@@ -649,16 +529,10 @@ button[type="submit"]:focus-visible{
   user-select: none;
   height: 100%;
 }
-.carousel-item picture{
-  display: block;
-  width: 100%;
-  height: 100%;
-}
 .carousel-item img{
   width: 100%;
   height: 100%;
   object-fit: contain;
-  display: block;
 }
 
 /* ======================== 19. ACESSIBILIDADE / PREFERÊNCIAS DE MOVIMENTO ======================== */
@@ -669,9 +543,84 @@ button[type="submit"]:focus-visible{
     scroll-behavior: auto !important;
   }
 }
+
 /* Ajuste de textos justificados em seções específicas */
 #artigos p{
   text-align: justify;
+}
+@media (max-width: 900px){
+  body {
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+
+  .section-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .section-header p {
+    font-size: 1.05rem;
+  }
+
+  .main-nav a {
+    font-size: 0.95rem;
+  }
+
+  .service-title {
+    font-size: 1.1rem;
+  }
+
+  .service-desc {
+    font-size: 0.95rem;
+  }
+
+  footer {
+    font-size: 0.9rem;
+  }
+
+  .whatsapp-button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  button[type="submit"],
+  .cta-btn,
+  .main-btn {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  input[type="text"], input[type="email"], textarea {
+    font-size: 0.9rem;
+  }
+
+  .carousel-container{
+    height: auto;
+    aspect-ratio: 880 / 378;
+    margin: var(--gap-top) auto 0;
+  }
+}
+
+@media (max-width: 600px){
+  .section-header h1 {
+    font-size: 1.6rem;
+  }
+
+  .section-header p {
+    font-size: 1rem;
+  }
+
+  .service-title {
+    font-size: 1rem;
+  }
+
+  .service-desc {
+    font-size: 0.9rem;
+  }
+
+  footer {
+    font-size: 0.85rem;
+  }
 }
 
 /* ======================== 21. VÍDEOS — grade (cards com link) ======================== */
@@ -738,21 +687,13 @@ button[type="submit"]:focus-visible{
   padding: 0;
   display: block;
 }
+
 .video-embed iframe{
   width: 100%;
   aspect-ratio: 16 / 9;
   border: 0;
   border-radius: 10px;
   box-shadow: 0 2px 12px rgba(60,60,60,0.09);
-}
-
-.video-embed video{
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  border: 0;
-  border-radius: 10px;
-  box-shadow: 0 2px 12px rgba(60,60,60,0.09);
-  display: block;
 }
 
 /* Botões do carrossel */
@@ -832,15 +773,4 @@ button[type="submit"]:focus-visible{
 .info-cartao:active .info-tooltip {
   display: block;
 }
-/* ======================== 23. ACESSIBILIDADE ======================== */
-.visually-hidden {
-  position: absolute !important;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
+
