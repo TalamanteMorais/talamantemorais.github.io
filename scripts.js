@@ -309,6 +309,18 @@ fetch(form.action, {
               })
               .catch((error) => {
                 console.error("Envio do formulário: erro:", error);
+
+                try {
+                  if (navigator && typeof navigator.sendBeacon === "function") {
+                    const ok = navigator.sendBeacon(form.action, formData);
+                    if (ok) {
+                      exibirMensagem("Mensagem enviada com sucesso.");
+                      form.reset();
+                      return;
+                    }
+                  }
+                } catch (_) {}
+
                 exibirMensagem("Ocorreu um erro ao enviar sua mensagem. Tente novamente.");
               })
               .finally(() => {
