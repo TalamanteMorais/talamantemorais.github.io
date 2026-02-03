@@ -69,60 +69,103 @@
 </nav>
 
 <!-- CONTEÚDO PRINCIPAL DO SITE -->
-
 <main>
 <!-- SEÇÃO INICIAL: APRESENTAÇÃO INSTITUCIONAL -->
 <section id="inicio">
 <div class="info-box">
-    <p class="service-desc">Este é o site institucional oficial do Escritório do advogado Talamante Rodrigues de Morais Neto, OAB/GO 25.267, com atuação especializada em Direito Público Municipal, com ênfase em contratações públicas, licitações e contratos administrativos, especialmente na Lei nº 14.133/2021.</p>
-    <p class="service-desc">A atuação é orientativa e preventiva, com assessoria e consultoria jurídica, podendo incluir atuação contenciosa nas esferas administrativa e judicial, bem como perante órgãos de controle, quando couber.</p>
+    <p class="service-desc">Este é o site institucional oficial do Escritório do advogado Talamante Rodrigues de Morais Neto, OAB/GO 25.267, com atuação em Direito Público Municipal e Direito Administrativo, com ênfase em contratações públicas, licitações e contratos administrativos, especialmente na Lei nº 14.133/2021.</p>
+    <p class="service-desc">A atuação pode ocorrer em âmbito consultivo e contencioso, nas esferas administrativa e judicial, conforme a natureza do caso.</p>
     <p class="service-desc">As informações e conteúdos deste site têm finalidade exclusivamente institucional e informativa, não constituem promessa de resultado e não substituem consulta jurídica individualizada.</p>
   </div>
 
+<!-- BLOCO DE DESTAQUES: CARROSSEL DE IMAGENS -->
+  <div class="carousel-container" role="region" aria-label="Carrossel de destaques" tabindex="0">
+    <div class="carousel-track" id="carousel-track" aria-live="polite">
+
+      <!-- Slide 1 -->
+      <div class="carousel-item">
+        <picture>
+          <source type="image/webp" srcset="img/card_1_880x378.webp 880w" sizes="(max-width: 900px) 100vw, 880px">
+          <img class="carousel-img" src="img/card_1_880x378.webp" width="880" height="378" loading="eager" decoding="async" alt="Credenciamento — Lei nº 14.133/2021. Quando utilizar? Hipóteses legais e aplicações práticas.">
+        </picture>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <picture>
+          <source type="image/webp" srcset="img/card_2_880x378.webp 880w" sizes="(max-width: 900px) 100vw, 880px">
+          <img class="carousel-img" src="img/card_2_880x378.webp" width="880" height="378" loading="lazy" decoding="async" alt="Inteligência Artificial em Licitações — como a IA transforma processos conforme a Lei 14.133/2021.">
+        </picture>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="carousel-item">
+        <picture>
+          <source type="image/webp" srcset="img/card_3_880x378.webp 880w" sizes="(max-width: 900px) 100vw, 880px">
+          <img class="carousel-img" src="img/card_3_880x378.webp" width="880" height="378" loading="lazy" decoding="async" alt="Novas Relações de Trabalho — Uberização, vínculo empregatício e precarização sob a ótica jurídica.">
+        </picture>
+      </div>
+
+    </div>
+    <button class="carousel-prev" aria-label="Slide anterior">‹</button>
+    <button class="carousel-next" aria-label="Próximo slide">›</button>
+    <div class="carousel-dots" role="tablist" aria-label="Paginação de slides"></div>
+  </div>
+    
+<!-- TEXTO INTRODUTÓRIO SOBRE ATUAÇÃO DO ESCRITÓRIO -->
 <div class="intro-text">
   <p class="service-desc">
-    Em carta a Wilhelm Fliess (1º fev. 1900), Freud vincula o seu método de investigação à curiosidade, à ousadia e à tenacidade.
+    Freud, em carta a Wilhelm Fliess (1º fev. 1900), associa o seu modo de investigar à curiosidade, à ousadia e à tenacidade.
   </p>
   <p class="service-desc">
-    No exercício profissional, essa referência inspira uma atuação baseada em estudo, estratégia e responsabilidade técnica, com foco em soluções juridicamente seguras.
+    Na advocacia, o advogado Talamante Morais adota essa postura investigativa como referência de método: estudo, estratégia e atuação técnica com responsabilidade e foco em soluções juridicamente seguras.
   </p>
   <p class="service-desc">
     FREUD, Sigmund. Correspondência completa para Wilhelm Fliess (1887-1904). Rio de Janeiro: Imago, 1986. Carta de 1º de fevereiro de 1900.
   </p>
   <!-- Citação apresentada em paráfrase, com referência bibliográfica, para evitar reprodução literal de tradução protegida. -->
 </div>
+</section>
 
+<!-- SEÇÃO INSTITUCIONAL: SOBRE O ESCRITÓRIO -->
 <section id="sobre">
   <h2>Sobre o Escritório</h2>
   <p class="service-desc">
-    O Escritório atua com foco em Direito Público Municipal e contratações públicas, oferecendo suporte jurídico orientativo e preventivo, com atuação contenciosa administrativa e judicial quando necessária, conforme a natureza do caso.
+    O Escritório do advogado Talamante Morais atua em Direito Público Municipal e Direito Administrativo, com foco em contratações públicas, licitações e contratos administrativos, conforme a natureza do caso e as atribuições internas do órgão, entidade ou cliente atendido.
   </p>
   <a class="cta-btn" href="sobre-nos.html" aria-label="Abrir página Sobre o Escritório">
     Acessar
   </a>
 </section>
 
-<div class="service-card" id="direito-publico">
-  <h3 class="service-title">Direito Público</h3>
-  <div class="service-desc">
-    Atuação em Direito Público Municipal, com ênfase em licitações e contratos administrativos, consultoria e assessoria jurídica, e atuação contenciosa administrativa e judicial quando cabível.
-  </div>
+<!-- VÍDEO INSTITUCIONAL EM DESTAQUE -->
+<figure class="video-embed">
+  <video
+    controls
+    preload="metadata"
+    playsinline
+    poster="img/video-institucional.webp">
+    <source src="media/video-institucional.mp4" type="video/mp4">
+    Seu navegador não suporta a reprodução de vídeo.
+  </video>
+</figure>
 
-  <a class="cta-btn" href="direito-publico-municipal.html" aria-label="Abrir página de Direito Público Municipal">
-    Acessar
-  </a>
-</div>
+<!-- SEÇÃO DE SERVIÇOS PRESTADOS -->
+<section id="servicos">
+  <h2>Nossos Serviços</h2>
+<!-- GRID DE SERVIÇOS E CARTÕES INFORMATIVOS -->
+  <div class="services-grid">
+    <div class="service-card" id="direito-publico">
+      <h3 class="service-title">Direito Público</h3>
+      <div class="service-desc">
+        Atuação em Direito Público Municipal e Direito Administrativo, com ênfase em contratações públicas, licitações e contratos administrativos, conforme a natureza do caso e os limites éticos e legais aplicáveis.
+      </div>
 
-<div class="service-card" id="direito-privado">
-  <h3 class="service-title">Direito Privado</h3>
-  <div class="service-desc">
-    Atuação em matérias cíveis e contratuais, com foco em consultoria preventiva, elaboração e revisão de instrumentos e soluções extrajudiciais, com atuação contenciosa quando necessária.
-  </div>
+      <a class="cta-btn" href="direito-publico-municipal.html" aria-label="Abrir página de Direito Público Municipal">
+        Acessar
+      </a>
+    </div>
 
-  <a class="cta-btn" href="direito-privado.html" aria-label="Abrir página de Direito Privado">
-    Acessar
-  </a>
-</div>
     <div class="service-card" id="direito-privado">
       <h3 class="service-title">Direito Privado</h3>
       <div class="service-desc">
