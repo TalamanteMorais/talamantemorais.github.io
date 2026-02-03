@@ -277,18 +277,18 @@ if (nextBtn) {
         botao.disabled = false;
         return;
       }
+      const siteKey = "6LcIlF8sAAAAAOPXstdnTTRCUa6eK6W3AI40TpvL";
 
-      if (typeof grecaptcha === "undefined") {
+      const falhaRecaptcha = () => {
         console.error("reCAPTCHA: grecaptcha não definido.");
         exibirMensagem("Erro ao validar o reCAPTCHA. Atualize a página e tente novamente.");
         botao.innerText = "Enviar";
         botao.disabled = false;
-        return;
-      }
-grecaptcha.ready(function () {
-  grecaptcha.execute('6LcIlF8sAAAAAOPXstdnTTRCUa6eK6W3AI40TpvL',
-    { action: "contato" })
-    .then(function (token) {
+      };
+
+      const executarRecaptcha = () => {
+        grecaptcha.ready(function () {
+          grecaptcha.execute(siteKey, { action: "contato" }).then(function (token) {
 
             tokenField.value = token;
 
@@ -307,7 +307,7 @@ grecaptcha.ready(function () {
               .then((texto) => {
                 const upper = (texto || "").toUpperCase();
 
-                if (texto.includes("OK") || texto.includes("SUCCESS")) {
+                if (upper.includes("OK") || upper.includes("SUCCESS")) {
                   if (mensagemSucesso) {
                     mensagemSucesso.style.display = "block";
                     mensagemSucesso.innerText = "Mensagem enviada com sucesso.";
@@ -334,7 +334,37 @@ grecaptcha.ready(function () {
                 botao.disabled = false;
               });
           });
-      });
+        });
+      };
+
+      const carregarRecaptchaSeNecessario = (onReady) => {
+        if (typeof grecaptcha !== "undefined") {
+          onReady();
+          return;
+        }
+
+        const existente = document.querySelector('script[data-recaptcha-v3="1"]');
+        if (existente) {
+          existente.addEventListener("load", () => {
+            if (typeof grecaptcha !== "undefined") onReady();
+            else falhaRecaptcha();
+          }, { once: true });
+          existente.addEventListener("error", () => falhaRecaptcha(), { once: true });
+          return;
+        }
+
+        const s = document.createElement("script");
+        s.src = "https://www.google.com/recaptcha/api.js?render=" + encodeURIComponent(siteKey);
+        s.defer = true;
+        s.setAttribute("data-recaptcha-v3", "1");
+        s.onload = () => {
+          if (typeof grecaptcha !== "undefined") onReady();
+          else falhaRecaptcha();
+        };
+        s.onerror = () => falhaRecaptcha();
+        document.head.appendChild(s);
+      };
+      carregarRecaptchaSeNecessario(executarRecaptcha);
     });
   }
 
