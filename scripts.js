@@ -251,15 +251,7 @@ if (nextBtn) {
         exibirMensagem("Não foi possível enviar no momento. Atualize a página e tente novamente.");
         return;
       }
-      const FALLBACK_ENDPOINT = "https://script.google.com/macros/s/AKfycbzvgpuIDGGkpm6hj4WaV7TNVcIJe6BTbIqfjL2ItxrqW2z80ZwyU0Ik3arvIF6R-6Hg/exec";
-      const rawAction = (form.getAttribute("action") || "").trim();
-      const actionUrl = (!rawAction || rawAction.includes("SEU_ID")) ? FALLBACK_ENDPOINT : rawAction;
 
-      if (!actionUrl) {
-        console.error("Formulário: atributo action não definido.");
-        exibirMensagem("Não foi possível enviar no momento. Atualize a página e tente novamente.");
-        return;
-      }
       const nome = nomeEl.value.trim();
       const email = emailEl.value.trim();
       const mensagem = mensagemEl.value.trim();
@@ -278,6 +270,7 @@ if (nextBtn) {
       botao.innerText = "Enviando...";
 
       const tokenField = document.getElementById("recaptcha_token");
+      const formData = new FormData(form);
 
       if (!tokenField) {
         console.error("reCAPTCHA: campo hidden recaptcha_token não encontrado.");
@@ -300,26 +293,34 @@ if (nextBtn) {
           .then(function (token) {
             tokenField.value = token;
 
-            const formData = new FormData(form);
-            fetch(actionUrl, {
+            fetch(form.action, {
               method: "POST",
               body: formData,
               headers: {
                 "Accept": "application/json"
               }
             })
+              .then((response) => response.text())
+              .then((texto) => {
+                const upper = (texto || "").toUpperCase();
 
-              .then(async (response) => {
-                const texto = await response.text();
+                if (texto.includes("OK") || texto.includes("SUCCESS")) {
+                  if (mensagemSucesso) {
+                    mensagemSucesso.style.display = "block";
+                    mensagemSucesso.innerText = "Mensagem enviada com sucesso.";
 
-                if (response.ok) {
-                  exibirMensagem("Mensagem enviada com sucesso.");
-                  form.reset();
-                  return;
+                    setTimeout(() => {
+                      mensagemSucesso.style.display = "none";
+                      mensagemSucesso.innerText = "";
+                    }, 5000);
+                  } else {
+                    exibirMensagem("Mensagem enviada com sucesso.");
+                  }
+                } else {
+                  exibirMensagem("Não foi possível confirmar o envio. Tente novamente.");
                 }
 
-                console.error("Envio do formulário: resposta não OK:", texto);
-                exibirMensagem("Ocorreu um erro ao enviar sua mensagem. Tente novamente.");
+                form.reset();
               })
               .catch((error) => {
                 console.error("Envio do formulário: erro:", error);
