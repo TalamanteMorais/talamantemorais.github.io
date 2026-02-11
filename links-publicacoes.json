@@ -1,14 +1,3 @@
-Não.
-
-Problemas objetivos:
-
-1. O último item está aberto `,{` e não tem conteúdo nem fechamento `}`.
-2. A lista termina com `,{` e depois `{ ]` (inválido).
-3. Você repetiu o mesmo link/título duas vezes (não quebra o JSON, mas gera duplicidade).
-
-Versão válida mínima (mantendo os 4 itens, mas fechando corretamente):
-
-```json
 [
   {
     "title": "Justiça do Trabalho decreta suspensão de precatórios dos Correios por 90 dias",
@@ -19,12 +8,7 @@ Versão válida mínima (mantendo os 4 itens, mas fechando corretamente):
     "url": "https://sites.tcu.gov.br/nova-lei-de-licitacoes-e-contratos/#encontrou"
   },
   {
-    "title": "Manual de Licitações e Contratos - TCU - 5ª Edição",
-    "url": "https://licitacoesecontratos.tcu.gov.br/apresentacao/"
-  },
-  {
-    "title": "Avaliação do nível de implementação da Lei 14.133/21 pelos Órgãos e Entidades Públicas",
-    "url": "https://sites.tcu.gov.br/nova-lei-de-licitacoes-e-contratos/#encontrou"
+    "title": "Contratação de Serviços Técnicos Especializados de Natureza Predominantemente Intelectual",
+    "url": "https://www.tcm.ba.gov.br/wp-content/uploads/2023/08/elaboracao-pilulas-art-74-inciso-iii-lei-14-133-2021.pdf"
   }
 ]
-
