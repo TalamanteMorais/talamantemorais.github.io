@@ -34,11 +34,10 @@ html {
   font-size: 16px;
   scroll-behavior: smooth;
 }
-
 body {
   font-family: 'Inter', Arial, sans-serif;
   font-size: clamp(1rem, 1.1vw, 1.0625rem);
-  background: url('img/Arte_Fundo_1.jpg') no-repeat center center fixed;
+  background: linear-gradient(rgba(255,255,255,0.86), rgba(255,255,255,0.86)), url('img/Arte_Fundo_1.jpg') no-repeat center center fixed;
   background-size: cover;
   color: var(--ink);
   line-height: 1.6;
@@ -46,419 +45,23 @@ body {
   padding: 0 0 60px 0;
 }
 
-h2{
-  font-size: clamp(1.5rem, 2.2vw, 1.9rem);
-}
-
-h3{
-  font-size: clamp(1.15rem, 1.6vw, 1.35rem);
-}
-
-.main-nav a{
-  font-size: 1.05rem;
-}
-
-img, picture, svg, video {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* ======================== 02. CABEÇALHO ======================== */
-.section-header{
-  background-image: url('img/Arte_Fundo_1.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 1.1rem 0 0.9rem 0;
-  text-align: center;
-  color: #0f2743;
-}
-.section-header h1{
-  font-size: clamp(1.85rem, 4vw, 2.2rem);
-  margin-bottom: .5rem;
-}
-
-.section-header p{
-  color: #2c4660;
-  font-size: clamp(1.05rem, 2.6vw, 1.2rem);
-  margin-top: 0;
-  font-weight: 400;
-}
-.section-header .brand{
-  display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: center;
-  gap: clamp(1.6rem, 3vw, 2.4rem);
-  max-width: var(--container-max);
-  margin: 0 auto;
-  padding: 0 1.5rem;
-  transform: translateX(95px);
-}
-
-.section-header .brand-text{
-  text-align: center;
-  justify-self: center;
-}
-  .section-header .brand-logo-wrap{
-    width: clamp(140px, 34vw, 200px);
-    height: clamp(140px, 34vw, 200px);
-    justify-self: center;
-    margin-top: 0.3rem;
-  }
-
-.section-header .brand-logo-img{
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-@media (max-width: 1100px){
-  .section-header .brand{
-    transform: none;
-  }
-}
-@media (max-width: 520px){
-  .section-header{
-    padding: 1.1rem 1rem;
-  }
-
-  .section-header h1{
-    font-size: 1.95rem;
-    line-height: 1.15;
-    text-align: center;
-  }
-
-  .section-header p{
-    font-size: 1.02rem;
-    text-align: center;
-  }
-
-  .section-header .brand{
-    grid-template-columns: 1fr;
-    justify-items: center;
-    gap: 0.7rem;
-    padding: 0 0.9rem;
-    transform: none;
-  }
-
-  .section-header .brand-text{
-    justify-self: center;
-    text-align: center;
-  }
-
-  .section-header .brand-logo-wrap{
-    width: min(200px, 62vw);
-    aspect-ratio: 1 / 1;
-    justify-self: center;
-    margin-top: 0.3rem;
-  }
-}
-
-/* ======================== 03. MENU DE NAVEGAÇÃO ======================== */
-.main-nav{
-  background: #0f2743;
-  text-align: center;
-  padding: 0.75rem 0;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
-}
-
-.main-nav a{
-  color: #ffffff;
-  text-decoration: none;
-  margin: 0 1.2rem;
-  font-weight: 600;
-  font-size: 1.05rem;
-  transition: color 0.2s ease;
-  display: inline-block;
-  white-space: nowrap;
-  padding: 0.15rem 0;
-}
-@media (max-width: 900px){
-  .main-nav{
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 10px;
-    padding: 0.85rem 0.6rem;
-    text-align: center;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-  }
-
-  .main-nav::-webkit-scrollbar{
-    display: none;
-  }
-
-  .main-nav a{
-    flex: 0 0 auto;
-    margin: 0;
-    padding: 0.3rem 0.45rem;
-    line-height: 1.2;
-    font-size: 0.98rem;
-    white-space: nowrap;
-  }
-}
-
-@media (max-width: 420px){
-  .main-nav{
-    gap: 8px;
-    padding: 0.75rem 0.55rem;
-  }
-
-  .main-nav a{
-    padding: 0.25rem 0.45rem;
-    font-size: 0.98rem;
-    line-height: 1.15;
-  }
-}
-
-.main-nav a:hover{
-  color: #a3d3ff;
-}
-
-.main-nav a:focus-visible{
-  outline: 3px solid #a3d3ff;
-  outline-offset: 2px;
-  border-radius: 6px;
-}
-/* ======================== 04. SEÇÕES GERAIS ======================== */
 section{
   max-width: var(--container-max);
-  background: transparent;
+  background: rgba(255,255,255,0.92);
   margin: var(--gap-top) auto var(--gap-bottom);
   padding: 2.2rem 2.8rem;
   border-radius: 14px;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.035);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
   font-family: 'Inter', sans-serif;
-}
-@media (max-width: 600px){
-  section{
-    padding: 1.6rem 1.2rem;
-  }
-}
-
-/* ======================== 08. BOTÕES ======================== */
-.cta-btn, .main-btn{
-  display: inline-block;
-  background: var(--brand);
-  color: #ffffff;
-  font-family: 'Inter', sans-serif;
-  font-size: clamp(0.95rem, 2vw, 1.1rem);
-  font-weight: 600;
-  padding: 0.7rem 1.4rem;
-  border: none;
-  border-radius: 32px;
-  cursor: pointer;
-  text-decoration: none;
-  transition: background-color 0.25s, transform 0.15s ease;
-  box-shadow: 0 4px 14px rgba(24, 100, 171, 0.15);
-  min-width: 120px;
-}
-.service-desc,
-.intro-text p {
-  text-align: justify;
-  text-justify: inter-word;
 }
 @media (max-width: 900px){
   body {
     font-size: 0.95rem;
     line-height: 1.55;
-    padding-bottom: calc(clamp(190px, 24vw, 240px) + env(safe-area-inset-bottom));
     overflow-x: hidden;
   }
-  .section-header .brand{
-    grid-template-columns: 1fr auto;
-    align-items: center;
-    justify-items: center;
-    gap: 0.9rem;
-    transform: none;
-  }
-
-  .section-header .brand-text{
-    text-align: center;
-    justify-self: center;
-  }
-
-  .section-header .brand-logo-wrap{
-    width: clamp(110px, 26vw, 150px);
-    height: clamp(110px, 26vw, 150px);
-    justify-self: center;
-    margin-top: 0.3rem;
-  }
-
-  .section-header .brand-logo-img{
-    height: 100%;
-  }
-
-  .section-header h1 {
-    font-size: 1.65rem;
-  }
-
-  .section-header p {
-    font-size: 1rem;
-  }
-
-  .service-title {
-    font-size: 1.1rem;
-  }
-  .service-desc {
-    font-size: 0.95rem;
-  }
-  footer {
-    font-size: 0.9rem;
-  }
-  
-  button[type="submit"],
-  .cta-btn,
-  .main-btn {
-    font-size: 0.9rem;
-    padding: 0.6rem 1.2rem;
-  }
-
-  input[type="text"], input[type="email"], textarea {
-    font-size: 0.9rem;
-  }
 }
 
-@media (max-width: 520px){
-  .section-header .brand-logo-wrap{
-    width: min(170px, 60vw);
-  }
-}
-
-@media (min-width: 601px) and (max-width: 900px){
-  .main-nav{
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    padding: 0.85rem 0.6rem;
-    text-align: center;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-  }
-
-  .main-nav::-webkit-scrollbar{
-    display: none;
-  }
-
-  .main-nav a{
-    flex: 0 0 auto;
-    margin: 0;
-    padding: 0.3rem 0.45rem;
-    line-height: 1.2;
-    font-size: 0.98rem;
-    white-space: nowrap;
-  }
-}
-
-.cta-btn:hover, .main-btn:hover{
-  background-color: var(--brand-dark);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(24, 100, 171, 0.2);
-}
-
-.cta-btn:focus-visible, .main-btn:focus-visible{
-  outline: 3px solid #a3d3ff;
-  outline-offset: 2px;
-}
-/* ======================== 09. LISTAS ======================== */
-ul{ 
-  margin: 1rem 0 0 clamp(0.5rem, 2vw, 1rem); 
-}
-ul li{ 
-  margin-bottom: .7rem; 
-}
-
-/* ======================== 10. ARTIGOS ======================== */
-.artigo-meta{
-  color: #7c8a97;
-  font-family: 'Inter', sans-serif;
-  font-size: clamp(0.85rem, 1.8vw, 1rem);
-  font-style: italic;
-  margin-top: 0.3rem;
-  margin-bottom: 1rem;
-  line-height: 1.5;
-}
-
-/* ======================== 11. VÍDEOS ======================== */
-/* substituído por .video-embed e .video-grid nas seções 21 e 22 */
-
-/* ======================== 12. QR CODE ======================== */
-.qrcode-container{
-  margin: 2.2rem auto 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 0.5rem;
-  padding: 1rem 1.25rem;
-  background-color: #f0f4f9;
-  border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
-  max-width: clamp(220px, 90%, 300px);
-}
-
-.qrcode-container img{
-  width: clamp(90px, 25vw, 120px);
-  height: auto;
-  border-radius: 8px;
-}
-.qrcode-actions{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
-  flex-wrap: wrap;
-  width: 100%;
-  margin-top: 0.8rem;
-}
-
-/* ======================== 13. BOTÕES ESPECIAIS – MATÉRIAS JURÍDICAS ======================== */
-.btn-group a{
-  display: inline-block;
-  background-color: var(--brand);
-  color: #ffffff;
-  font-family: 'Inter', sans-serif;
-  font-size: clamp(0.9rem, 2vw, 1rem);
-  font-weight: 600;
-  padding: 0.6rem 1.3rem;
-  border-radius: 28px;
-  text-decoration: none;
-  transition: background-color 0.25s, transform 0.15s ease;
-  box-shadow: 0 4px 12px rgba(24, 100, 171, 0.15);
-}
-/* CENTRALIZAÇÃO DOS BOTÕES INFERIORES */
-.bottom-links,
-.links-footer,
-.section-links,
-.materiais-links{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 18px;
-  flex-wrap: wrap;
-  width: 100%;
-  margin: 2.5rem auto 1rem;
-  text-align: center;
-}
-
-.bottom-links a,
-.links-footer a,
-.section-links a,
-.materiais-links a{
-  margin: 0;
-}
-/* ======================== 14. RODAPÉ ======================== */
-@media (min-width: 901px){
-  body{
-    padding-bottom: clamp(110px, 14vw, 150px);
-  }
-}
 footer{
   width: 100%;
   background: #223b53;
@@ -468,24 +71,15 @@ footer{
   font-size: clamp(0.9rem, 1.8vw, 1rem);
   font-family: 'Inter', sans-serif;
   box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  z-index: 99;
-}
-.footer-link{
-  color: #ffffff;
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  position: static;
 }
 
-/* ======================== 15. BOTÃO WHATSAPP ======================== */
 .whatsapp-button{
   position: fixed;
   right: clamp(12px, 3vw, 18px);
   right: calc(clamp(12px, 3vw, 18px) + env(safe-area-inset-right));
-  bottom: clamp(95px, 12vw, 120px);
-  bottom: calc(clamp(95px, 12vw, 120px) + env(safe-area-inset-bottom));
+  bottom: clamp(16px, 3vw, 22px);
+  bottom: calc(clamp(16px, 3vw, 22px) + env(safe-area-inset-bottom));
   width: 56px;
   height: 56px;
   padding: 0;
@@ -508,30 +102,11 @@ footer{
   transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
-.whatsapp-button::before{
-  content: "";
-  width: 26px;
-  height: 26px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%20fill='none'%20stroke='%23ffffff'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'%3E%3Cpath%20d='M22%2016.92v3a2%202%200%200%201-2.18%202%2019.79%2019.79%200%200%201-8.63-3.07%2019.5%2019.5%200%200%201-6-6A19.79%2019.79%200%200%201%203.11%204.18%202%202%200%200%201%205.11%202h3a2%202%200%200%201%202%201.72%2012.84%2012.84%200%200%200%20.7%202.81%202%202%200%200%201-.45%202.11L9.91%209.91a16%2016%200%200%200%206%206l1.27-1.27a2%202%200%200%201%202.11-.45%2012.84%2012.84%200%200%200%202.81.7A2%202%200%200%201%2022%2016.92z'/%3E%3C/svg%3E");
-}
-
-.whatsapp-button:hover{
-  background: #1ebe57;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 22px rgba(40, 120, 60, 0.2);
-}
-.whatsapp-button:focus-visible {
-  outline: 2px solid rgba(255,255,255,.95);
-  outline-offset: 2px;
-}
-/* reCAPTCHA badge (v3) - canto inferior esquerdo, menor e acima do rodapé */
+/* reCAPTCHA badge (v3) - canto inferior esquerdo, menor */
 .grecaptcha-badge{
   left: 10px !important;
   right: auto !important;
-  bottom: calc(env(safe-area-inset-bottom) + 72px) !important;
+  bottom: calc(env(safe-area-inset-bottom) + 10px) !important;
   transform: scale(0.60) !important;
   transform-origin: left bottom !important;
   z-index: 120 !important;
@@ -540,7 +115,7 @@ footer{
   .grecaptcha-badge{
     left: 8px !important;
     right: auto !important;
-    bottom: calc(env(safe-area-inset-bottom) + 72px) !important;
+    bottom: calc(env(safe-area-inset-bottom) + 10px) !important;
     transform: scale(0.60) !important;
     transform-origin: left bottom !important;
     z-index: 120 !important;
