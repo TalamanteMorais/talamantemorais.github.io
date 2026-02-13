@@ -391,16 +391,14 @@ fetch(form.action, {
       })
       .then((links) => {
         if (!Array.isArray(links)) return;
-
-        const validos = links.filter((item) =>
-          item &&
-          typeof item === "object" &&
-          typeof item.title === "string" &&
-          item.title.trim() &&
-          typeof item.url === "string" &&
-          item.url.trim()
-        );
-
+const validos = links.filter((item) =>
+  item &&
+  typeof item === "object" &&
+  typeof item.title === "string" &&
+  item.title.trim() &&
+  typeof item.url === "string" &&
+  /^https?:\/\//i.test(item.url.trim())
+);
         if (validos.length === 0) return;
 
         linksPublicacoesEl.innerHTML = "";
