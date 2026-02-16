@@ -456,7 +456,7 @@ ul li{
 /* HUB CONTEÚDOS JURÍDICOS (banner + 3 áreas clicáveis na imagem) */
 .conteudos-hub{
   max-width: var(--container-max);
-  margin: 2.5rem auto 1rem;
+  margin: 2.2rem auto 1rem;
   padding: 0 1.5rem;
   text-align: center;
 }
@@ -464,7 +464,13 @@ ul li{
 .conteudos-banner{
   position: relative;
   margin: 0 auto 1.2rem;
-  max-width: var(--container-max);
+  max-width: min(640px, 92vw);
+}
+
+@media (max-width: 520px){
+  .conteudos-banner{
+    max-width: 96vw;
+  }
 }
 
 .conteudos-banner img{
@@ -473,6 +479,7 @@ ul li{
   border-radius: 16px;
   box-shadow: 0 4px 18px rgba(0,0,0,0.06);
 }
+
 .cj-hotspot{
   position: absolute;
   display: block;
@@ -495,17 +502,24 @@ ul li{
 }
 
 .cj-hotspot--1{
-  left: 7%;
-  top: 58%;
-  width: 27%;
-  height: 28%;
+  left: 8.4%;
+  top: 56.0%;
+  width: 26.0%;
+  height: 24.0%;
 }
 
 .cj-hotspot--2{
-  left: 36.5%;
-  top: 58%;
-  width: 27%;
-  height: 28%;
+  left: 37.2%;
+  top: 56.0%;
+  width: 26.0%;
+  height: 24.0%;
+}
+
+.cj-hotspot--3{
+  left: 66.0%;
+  top: 56.0%;
+  width: 26.0%;
+  height: 24.0%;
 }
 
 .cj-hotspot--3{
