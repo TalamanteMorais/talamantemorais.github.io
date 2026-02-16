@@ -453,6 +453,68 @@ ul li{
 .materiais-links a{
   margin: 0;
 }
+/* HUB CONTEÚDOS JURÍDICOS (banner + 3 áreas clicáveis na imagem) */
+.conteudos-hub{
+  max-width: var(--container-max);
+  margin: 2.5rem auto 1rem;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+.conteudos-banner{
+  position: relative;
+  margin: 0 auto 1.2rem;
+  max-width: var(--container-max);
+}
+
+.conteudos-banner img{
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+}
+.cj-hotspot{
+  position: absolute;
+  display: block;
+  border-radius: 10px;
+  background: transparent;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  z-index: 1;
+  touch-action: manipulation;
+}
+
+.cj-hotspot:hover{
+  background: rgba(24, 100, 171, 0.06);
+}
+
+.cj-hotspot:focus-visible{
+  outline: 3px solid #a3d3ff;
+  outline-offset: 4px;
+  background: rgba(24, 100, 171, 0.08);
+}
+
+.cj-hotspot--1{
+  left: 7%;
+  top: 58%;
+  width: 27%;
+  height: 28%;
+}
+
+.cj-hotspot--2{
+  left: 36.5%;
+  top: 58%;
+  width: 27%;
+  height: 28%;
+}
+
+.cj-hotspot--3{
+  left: 66%;
+  top: 58%;
+  width: 27%;
+  height: 28%;
+}
+
 /* ======================== 14. RODAPÉ ======================== */
 @media (min-width: 901px){
   body{
