@@ -472,10 +472,11 @@ ul li{
     max-width: 96vw;
   }
 }
-
 .conteudos-banner img{
-  width: 100%;
+  display: block;
+  width: min(760px, 100%);
   height: auto;
+  margin: 0 auto;
   border-radius: 16px;
   box-shadow: 0 4px 18px rgba(0,0,0,0.06);
 }
@@ -483,50 +484,35 @@ ul li{
 .cj-hotspot{
   position: absolute;
   display: block;
+  z-index: 2;
   border-radius: 10px;
   background: transparent;
-  -webkit-tap-highlight-color: transparent;
   cursor: pointer;
-  z-index: 1;
-  touch-action: manipulation;
-}
-
-.cj-hotspot:hover{
-  background: rgba(24, 100, 171, 0.06);
+  -webkit-tap-highlight-color: transparent;
 }
 
 .cj-hotspot:focus-visible{
   outline: 3px solid #a3d3ff;
-  outline-offset: 4px;
-  background: rgba(24, 100, 171, 0.08);
+  outline-offset: 2px;
 }
 
 .cj-hotspot--1{
-  left: 8.4%;
-  top: 56.0%;
-  width: 26.0%;
-  height: 24.0%;
+  left: 17.82%;
+  top: 54.51%;
+  width: 17.19%;
+  height: 7.18%;
 }
-
 .cj-hotspot--2{
-  left: 37.2%;
-  top: 56.0%;
-  width: 26.0%;
-  height: 24.0%;
+  left: 35.74%;
+  top: 54.51%;
+  width: 16.70%;
+  height: 7.18%;
 }
-
 .cj-hotspot--3{
-  left: 66.0%;
-  top: 56.0%;
-  width: 26.0%;
-  height: 24.0%;
-}
-
-.cj-hotspot--3{
-  left: 66%;
-  top: 58%;
-  width: 27%;
-  height: 28%;
+  left: 53.27%;
+  top: 54.51%;
+  width: 14.94%;
+  height: 7.18%;
 }
 
 /* ======================== 14. RODAPÉ ======================== */
