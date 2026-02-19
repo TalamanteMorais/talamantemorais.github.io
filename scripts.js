@@ -377,9 +377,10 @@ fetch(form.action, {
 
   /* ======================== LISTA DE LINKS — PUBLICAÇÕES JURÍDICAS (JSON) ======================== */
   const linksPublicacoesEl = document.getElementById("links-publicacoes");
+    const jsonUrl = linksPublicacoesEl.getAttribute("data-json") || "/links-publicacoes.json";
 
   if (linksPublicacoesEl) {
-    const jsonUrl = linksPublicacoesEl.getAttribute("data-json") || "links-publicacoes.json";
+
     fetch(jsonUrl, {
       cache: "no-store",
       credentials: "omit",
