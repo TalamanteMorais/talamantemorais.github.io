@@ -550,7 +550,6 @@ footer{
   text-decoration: underline;
   text-underline-offset: 3px;
 }
-
 /* ======================== 15. BOTÃO WHATSAPP ======================== */
 .whatsapp-button{
   position: fixed;
@@ -566,6 +565,7 @@ footer{
   background: #25D366;
   color: #ffffff;
   border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.55);
   text-decoration: none;
   font-family: 'Inter', sans-serif;
   font-weight: 600;
@@ -575,11 +575,10 @@ footer{
   align-items: center;
   justify-content: center;
   gap: 0;
-  box-shadow: 0 6px 20px rgba(40, 120, 60, 0.15);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.16);
   z-index: 100;
-  transition: background-color 0.2s ease, transform 0.2s ease;
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
-
 .whatsapp-button::before{
   content: "";
   width: 26px;
@@ -599,22 +598,32 @@ footer{
   outline: 2px solid rgba(255,255,255,.95);
   outline-offset: 2px;
 }
-/* reCAPTCHA badge (v3) - canto inferior esquerdo, menor e acima do rodapé */
+/* reCAPTCHA badge (v3) - fica no mesmo canto, mas aparece apenas ao final da página */
+body{
+  position: relative;
+}
+
 .grecaptcha-badge{
+  position: absolute !important;
   left: 10px !important;
   right: auto !important;
-  bottom: calc(env(safe-area-inset-bottom) + 72px) !important;
-  transform: scale(0.60) !important;
+  bottom: 18px !important;
+  transform: scale(0.52) !important;
   transform-origin: left bottom !important;
+  opacity: 0.72 !important;
+  filter: drop-shadow(0 6px 14px rgba(0,0,0,0.12)) !important;
   z-index: 120 !important;
 }
 @media (max-width: 900px){
   .grecaptcha-badge{
+    position: absolute !important;
     left: 8px !important;
     right: auto !important;
-    bottom: calc(env(safe-area-inset-bottom) + 72px) !important;
-    transform: scale(0.60) !important;
+    bottom: 18px !important;
+    transform: scale(0.52) !important;
     transform-origin: left bottom !important;
+    opacity: 0.72 !important;
+    filter: drop-shadow(0 6px 14px rgba(0,0,0,0.12)) !important;
     z-index: 120 !important;
   }
 }
