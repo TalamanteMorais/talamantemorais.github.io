@@ -96,25 +96,27 @@ img, picture, svg, video {
   justify-self: center;
 }
 .brand-logo-wrap{
-    width: clamp(84px, 18vw, 120px);
-    height: clamp(84px, 18vw, 120px);
-    justify-self: center;
-    margin-top: 0.3rem;
-    box-sizing: border-box;
-    padding: 10px;
-    border-radius: 18px;
-    background: rgba(255, 255, 255, 0.86);
-    border: 1px solid rgba(15, 39, 67, 0.08);
-  }
+  width: clamp(64px, 10vw, 92px);
+  height: clamp(64px, 10vw, 92px);
+  justify-self: center;
+  margin-top: 0.15rem;
+  box-sizing: border-box;
+  padding: 6px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(15, 39, 67, 0.08);
+  box-shadow: 0 6px 16px rgba(15, 39, 67, 0.06);
+}
 .section-header .brand-logo-img{
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
-@media (max-width: 1100px){
-  .section-header .brand{
-    transform: none;
+@media (max-width: 520px){
+  .section-header .brand-logo-wrap{
+    width: min(120px, 44vw);
   }
+
 }
 @media (max-width: 520px){
   .section-header{
@@ -1051,24 +1053,31 @@ button[type="submit"]:focus-visible{
 
 /* ======================== 22. VÍDEOS — embed (destaque único) ======================== */
 .video-embed{
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0;
+  max-width: var(--container-max);
+  margin: var(--gap-top) auto var(--gap-bottom);
+  padding: clamp(1rem, 2.4vw, 1.4rem);
+  background: rgba(255,255,255,0.92);
+  border-radius: 14px;
+  border: 1px solid rgba(15, 39, 67, 0.06);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.035);
   display: block;
 }
+
 .video-embed iframe{
   width: 100%;
   aspect-ratio: 16 / 9;
   border: 0;
-  border-radius: 10px;
+  border-radius: 12px;
   box-shadow: 0 2px 12px rgba(60,60,60,0.09);
+  display: block;
 }
 
 .video-embed video{
   width: 100%;
   aspect-ratio: 16 / 9;
   border: 0;
-  border-radius: 10px;
+  border-radius: 12px;
+  background: #000;
   box-shadow: 0 2px 12px rgba(60,60,60,0.09);
   display: block;
 }
