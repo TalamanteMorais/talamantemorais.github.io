@@ -526,7 +526,7 @@ section{
   body {
     font-size: 0.95rem;
     line-height: 1.55;
-    padding-bottom: calc(clamp(190px, 24vw, 240px) + env(safe-area-inset-bottom));
+    padding-bottom: 0;
     overflow-x: hidden;
   }
   .section-header .brand{
@@ -536,6 +536,7 @@ section{
     gap: 0.9rem;
     transform: none;
   }
+
   .section-header .brand-logo-wrap{
     width: clamp(84px, 20vw, 118px);
     height: clamp(84px, 20vw, 118px);
@@ -763,7 +764,7 @@ ul li{
 /* ======================== 14. RODAPÉ ======================== */
 @media (min-width: 901px){
   body{
-    padding-bottom: clamp(110px, 14vw, 150px);
+    padding-bottom: 0;
   }
 }
 footer{
@@ -775,16 +776,15 @@ footer{
   font-size: clamp(0.9rem, 1.8vw, 1rem);
   font-family: 'Inter', sans-serif;
   box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  z-index: 99;
+  position: static;
+  z-index: 1;
 }
 .footer-link{
   color: #ffffff;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
+
 /* ======================== 15. BOTÃO WHATSAPP ======================== */
 .whatsapp-button{
   position: fixed;
