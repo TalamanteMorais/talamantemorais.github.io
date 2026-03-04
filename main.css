@@ -34,18 +34,15 @@ html {
   font-size: 16px;
   scroll-behavior: smooth;
 }
-
 body {
   font-family: 'Inter', Arial, sans-serif;
   font-size: clamp(1rem, 1.1vw, 1.0625rem);
-  background: url('img/Arte_Fundo_1.jpg') no-repeat center center fixed;
-  background-size: cover;
+  background: #f7f9fc;
   color: var(--ink);
   line-height: 1.6;
   margin: 0;
   padding: 0 0 60px 0;
 }
-
 h2{
   font-size: clamp(1.5rem, 2.2vw, 1.9rem);
 }
@@ -63,47 +60,52 @@ img, picture, svg, video {
 
 /* ======================== 02. CABEÇALHO ======================== */
 .section-header{
-  background-image: url('img/Arte_Fundo_1.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: #f7f9fc;
   padding: 1.1rem 0 0.9rem 0;
   text-align: center;
   color: #0f2743;
+  border-bottom: 1px solid rgba(15, 39, 67, 0.08);
+  box-shadow: 0 6px 16px rgba(15, 39, 67, 0.06);
 }
 .section-header h1{
-  font-size: clamp(1.85rem, 4vw, 2.2rem);
-  margin-bottom: .5rem;
+  font-size: clamp(2.15rem, 4.8vw, 2.75rem);
+  margin-bottom: .45rem;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  line-height: 1.1;
 }
-
 .section-header p{
   color: #2c4660;
-  font-size: clamp(1.05rem, 2.6vw, 1.2rem);
+  font-size: clamp(1.02rem, 2.4vw, 1.15rem);
   margin-top: 0;
-  font-weight: 400;
+  font-weight: 500;
+  opacity: 0.9;
 }
 .section-header .brand{
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: center;
-  gap: clamp(1.6rem, 3vw, 2.4rem);
+  gap: clamp(1.2rem, 2.6vw, 2rem);
   max-width: var(--container-max);
   margin: 0 auto;
   padding: 0 1.5rem;
-  transform: translateX(95px);
+  transform: none;
 }
-
 .section-header .brand-text{
   text-align: center;
   justify-self: center;
 }
-  .section-header .brand-logo-wrap{
-    width: clamp(140px, 34vw, 200px);
-    height: clamp(140px, 34vw, 200px);
+.brand-logo-wrap{
+    width: clamp(84px, 18vw, 120px);
+    height: clamp(84px, 18vw, 120px);
     justify-self: center;
     margin-top: 0.3rem;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.86);
+    border: 1px solid rgba(15, 39, 67, 0.08);
   }
-
 .section-header .brand-logo-img{
   width: 100%;
   height: 100%;
@@ -142,27 +144,29 @@ img, picture, svg, video {
     justify-self: center;
     text-align: center;
   }
-
   .section-header .brand-logo-wrap{
-    width: min(200px, 62vw);
+    width: min(160px, 52vw);
     aspect-ratio: 1 / 1;
     justify-self: center;
     margin-top: 0.3rem;
   }
+
 }
 
 /* ======================== 03. MENU DE NAVEGAÇÃO ======================== */
 .main-nav{
   background: #0f2743;
-  text-align: center;
-  padding: 0.75rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem 1.1rem;
+  padding: 0.75rem 1rem;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
 }
-
 .main-nav a{
   color: #ffffff;
   text-decoration: none;
-  margin: 0 1.2rem;
+  margin: 0;
   font-weight: 600;
   font-size: 1.05rem;
   transition: color 0.2s ease;
@@ -223,13 +227,15 @@ img, picture, svg, video {
 /* ======================== 04. SEÇÕES GERAIS ======================== */
 section{
   max-width: var(--container-max);
-  background: transparent;
+  background: rgba(255,255,255,0.92);
   margin: var(--gap-top) auto var(--gap-bottom);
   padding: 2.2rem 2.8rem;
   border-radius: 14px;
+  border: 1px solid rgba(15, 39, 67, 0.06);
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.035);
   font-family: 'Inter', sans-serif;
 }
+
 @media (max-width: 600px){
   section{
     padding: 1.6rem 1.2rem;
@@ -528,18 +534,17 @@ section{
     gap: 0.9rem;
     transform: none;
   }
-
+  .section-header .brand-logo-wrap{
+    width: clamp(84px, 20vw, 118px);
+    height: clamp(84px, 20vw, 118px);
+    justify-self: center;
+    margin-top: 0.3rem;
+  }
   .section-header .brand-text{
     text-align: center;
     justify-self: center;
   }
 
-  .section-header .brand-logo-wrap{
-    width: clamp(110px, 26vw, 150px);
-    height: clamp(110px, 26vw, 150px);
-    justify-self: center;
-    margin-top: 0.3rem;
-  }
 
   .section-header .brand-logo-img{
     height: 100%;
@@ -577,8 +582,9 @@ section{
 
 @media (max-width: 520px){
   .section-header .brand-logo-wrap{
-    width: min(170px, 60vw);
+    width: min(132px, 48vw);
   }
+
 }
 @media (min-width: 601px) and (max-width: 900px){
   .main-nav{
