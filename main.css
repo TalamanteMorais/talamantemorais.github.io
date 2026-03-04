@@ -1045,13 +1045,6 @@ button[type="submit"]:focus-visible{
   color: var(--brand);
   font-size: clamp(1rem, 2.5vw, 1.15rem);
 }
-
-.video-desc{
-  color: #334;
-  font-size: clamp(0.95rem, 2vw, 1rem);
-}
-
-/* ======================== 22. VÍDEOS — embed (destaque único) ======================== */
 .video-embed{
   max-width: var(--container-max);
   margin: clamp(1rem, 2.2vw, 1.35rem) auto clamp(1.1rem, 2.4vw, 1.6rem);
@@ -1095,6 +1088,14 @@ button[type="submit"]:focus-visible{
     border-radius: 10px;
   }
 }
+.video-desc{
+  color: #334;
+  font-size: clamp(0.95rem, 2vw, 1rem);
+}
+
+/* ======================== 22. VÍDEOS — embed (destaque único) ======================== */
+
+
 /* Botões do carrossel */
 .carousel-prev,
 .carousel-next {
