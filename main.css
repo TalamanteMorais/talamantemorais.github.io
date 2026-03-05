@@ -480,8 +480,6 @@ section{
 
   .profile-hero-lattes{
     font-size: 0.72rem;
-    line-height: 1.2;
-    text-align: center;
     margin-top: 2px;
   }
 
@@ -511,7 +509,6 @@ section{
     min-width: 0;
   }
 }
-
 @media (max-width: 420px){
   .profile-hero{
     grid-template-columns: 1fr;
@@ -1283,6 +1280,8 @@ button[type="submit"]:focus-visible{
   border-bottom: 1px solid rgba(15,39,67,0.18);
   padding-bottom: 1px;
   margin-top: 4px;
+  line-height: 1.2;
+  text-align: center;
 }
 .profile-hero-lattes:hover{
   color: #0f2743;
