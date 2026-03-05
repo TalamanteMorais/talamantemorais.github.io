@@ -457,46 +457,75 @@ section{
   outline-offset: 2px;
   border-radius: 32px;
 }
-
 @media (max-width: 700px){
   .profile-hero{
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(88px, 104px) minmax(0, 1fr);
+    align-items: start;
     text-align: left;
     padding: 1rem;
+    gap: 0.75rem 0.9rem;
   }
 
   .profile-hero-media{
+    align-items: center;
     justify-content: flex-start;
+    gap: 6px;
+    padding-top: 2px;
   }
 
   .profile-hero-media img{
-    width: 88px;
-    height: 88px;
+    width: 92px;
+    height: 92px;
+  }
+
+  .profile-hero-lattes{
+    font-size: 0.72rem;
+    line-height: 1.2;
+    text-align: center;
+    margin-top: 2px;
   }
 
   .profile-hero-name{
-    font-size: 1.25rem;
+    font-size: 1.18rem;
+    line-height: 1.12;
   }
 
   .profile-hero-role{
-    gap: 0.45rem 0.5rem;
+    gap: 0.4rem 0.45rem;
   }
 
   .profile-hero-summary{
-    font-size: 0.95rem;
-    line-height: 1.58;
+    font-size: 0.93rem;
+    line-height: 1.52;
     max-width: 100%;
   }
 
   .profile-hero-actions{
     width: 100%;
-    margin-top: 0.5rem;
-    gap: 0.6rem;
+    margin-top: 0.15rem;
+    gap: 0.55rem;
   }
 
   .profile-hero .cta-btn{
     width: 100%;
     min-width: 0;
+  }
+}
+
+@media (max-width: 420px){
+  .profile-hero{
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+  }
+
+  .profile-hero-media{
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .profile-hero-media img{
+    width: 88px;
+    height: 88px;
   }
 }
 
