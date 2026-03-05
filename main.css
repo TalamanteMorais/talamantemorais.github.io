@@ -1138,9 +1138,9 @@ button[type="submit"]:focus-visible{
     scroll-behavior: auto !important;
   }
 }
-/* Ajuste de textos justificados em seções específicas */
+/* Ajuste de textos em seções específicas */
 #artigos p{
-  text-align: justify;
+  text-align: left;
 }
 
 /* ======================== 21. VÍDEOS — grade (cards com link) ======================== */
