@@ -295,16 +295,28 @@ const siteKey = "6Ld0yF8sAAAAAN5JXxfuWIV3K2nhA9p-r4VWKGKo";
         grecaptcha.ready(function () {
           grecaptcha.execute(siteKey, { action: "contato" }).then(function (token) {
             tokenField.value = token;
-
             const formData = new FormData(form);
             formData.set("g-recaptcha-response", token);
-fetch(form.action, {
-              method: "POST",
-              body: formData,
-              mode: "no-cors"
-            })
+
+            const enviarComCors = () =>
+              fetch(form.action, {
+                method: "POST",
+                body: formData,
+                redirect: "follow"
+              }).then((res) => {
+                if (!res.ok) throw new Error("HTTP " + res.status);
+                return res;
+              });
+
+            const enviarSemCors = () =>
+              fetch(form.action, {
+                method: "POST",
+                body: formData,
+                mode: "no-cors"
+              });
+            enviarComCors()
               .then(() => {
-                exibirMensagem("Mensagem enviada com sucesso.");
+                exibirMensagem("Mensagem enviada. Em breve retornaremos.");
                 form.reset();
               })
               .catch((error) => {
@@ -314,14 +326,21 @@ fetch(form.action, {
                   if (navigator && typeof navigator.sendBeacon === "function") {
                     const ok = navigator.sendBeacon(form.action, formData);
                     if (ok) {
-                      exibirMensagem("Mensagem enviada com sucesso.");
+                      exibirMensagem("Mensagem enviada. Em breve retornaremos.");
                       form.reset();
-                      return;
+                      return Promise.resolve();
                     }
                   }
                 } catch (_) {}
 
-                exibirMensagem("Ocorreu um erro ao enviar sua mensagem. Tente novamente.");
+                return enviarSemCors()
+                  .then(() => {
+                    exibirMensagem("Solicitação enviada. Se não receber retorno, tente novamente.");
+                    form.reset();
+                  })
+                  .catch(() => {
+                    exibirMensagem("Ocorreu um erro ao enviar sua mensagem. Tente novamente.");
+                  });
               })
               .finally(() => {
                 botao.innerText = "Enviar";
