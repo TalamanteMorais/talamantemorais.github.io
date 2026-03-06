@@ -448,13 +448,14 @@ section{
   color: #355067;
   font-weight: 600;
 }
-
 .profile-hero-summary{
   margin: 0;
   color: #223240;
   font-size: 0.98rem;
   line-height: 1.6;
-  text-align: left;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
   max-width: 62ch;
 }
 
