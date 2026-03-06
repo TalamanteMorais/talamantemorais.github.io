@@ -585,11 +585,15 @@ section{
   min-width: 120px;
 }
 .service-desc{
-  text-align: left;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
 }
 
 .intro-text p{
-  text-align: left;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
 }
 
 @media (max-width: 900px){
