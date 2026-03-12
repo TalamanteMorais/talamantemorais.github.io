@@ -8,7 +8,6 @@
 <!-- DECLARAÇÃO DO DOCUMENTO HTML -->
 
 <html lang="pt-BR">
-
 <!-- CABEÇALHO DO DOCUMENTO: METADADOS, SEO, SEGURANÇA E RECURSOS EXTERNOS -->
 <head>
   <meta charset="UTF-8">
@@ -20,9 +19,22 @@
   <meta name="description" content="Talamante Morais – Advocacia e Consultoria. Atuação em Direito Público Municipal, licitações e contratos administrativos, defesa em processos políticos e suporte técnico para a gestão municipal.">
 
   <meta name="author" content="Talamante Morais">
-
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://talamante-adv.com.br/">
+  <!-- POLÍTICA DE SEGURANÇA DO CONTEÚDO (CSP) -->
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    base-uri 'self';
+    object-src 'none';
+    frame-ancestors 'none';
+    connect-src 'self' https://script.google.com https://script.googleusercontent.com https://www.google-analytics.com https://region1.google-analytics.com https://www.recaptcha.net https://www.google.com https://www.gstatic.com;
+    frame-src https://www.recaptcha.net https://www.google.com;
+    script-src 'self' https://www.googletagmanager.com https://www.google.com https://www.gstatic.com https://script.google.com https://www.recaptcha.net;
+    style-src 'self' https://fonts.googleapis.com;
+    font-src https://fonts.gstatic.com;
+    img-src 'self' https: data:;
+    media-src 'self';
+  ">
 
   <meta name="referrer" content="strict-origin-when-cross-origin">
 
@@ -30,22 +42,18 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://www.googletagmanager.com">
-  <!-- Preload da 1ª imagem do carrossel -->
-  <link rel="preload" as="image" href="arquivos/slides/slide-1.pdf.webp" type="image/webp">
 
+  <!-- Preload da 1ª imagem do carrossel -->
+  <link rel="preload" as="image" href="img/card_1_880x378.webp" type="image/webp">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
   <!-- FONTES, ESTILOS E RECURSOS VISUAIS -->
   <link rel="stylesheet" href="main.css">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZKCPTG7K1T"></script>
   <script src="gtag-init.js" defer></script>
-  <!-- Favicon e manifest -->
+  <!-- Favicon -->
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <link rel="manifest" href="site.webmanifest">
 </head>
 
 <!-- CABEÇALHO INSTITUCIONAL: IDENTIDADE VISUAL E MARCA -->
@@ -66,80 +74,53 @@
 <!-- MENU DE NAVEGAÇÃO PRINCIPAL -->
 <nav class="main-nav" aria-label="Menu principal">
   <a href="#inicio">Início</a>
-  <a href="#sobre">Sobre o Escritório</a>
+  <a href="#sobre">Sobre Nós</a>
   <a href="#servicos">Serviços</a>
   <a href="#publicacoes">Publicações</a>
   <a href="#contato">Contato</a>
 </nav>
 
 <!-- CONTEÚDO PRINCIPAL DO SITE -->
+
 <main>
 <!-- SEÇÃO INICIAL: APRESENTAÇÃO INSTITUCIONAL -->
 <section id="inicio">
-<div class="profile-hero" aria-label="Apresentação institucional do profissional">
-<div class="profile-hero-media">
-<img src="img/foto-talamante.webp" alt="Talamante Rodrigues de Morais Neto" width="124" height="124" loading="eager" decoding="async">
-  <a class="profile-hero-lattes"
-     href="https://lattes.cnpq.br/1142865105467699"
-     target="_blank"
-     rel="noopener noreferrer">
-    Currículo Lattes
-  </a>
-</div>
-  <div class="profile-hero-content">
-    <p class="profile-hero-kicker">Advocacia Pública Municipal</p>
-
-    <h2 class="profile-hero-name">Talamante Rodrigues de Morais Neto</h2>
-
-    <p class="profile-hero-role">
-      <span class="profile-hero-badge">OAB/GO 25.267</span>
-      <span class="profile-hero-role-text">Direito Administrativo e Direito Público Municipal</span>
-    </p>
-    <p class="profile-hero-summary">
-      Atuação em consultoria e assessoria jurídica no âmbito do Direito Público Municipal, com foco em organização procedimental, segurança jurídica e orientação técnica em matérias administrativas, contratações públicas e temas correlatos.
-    </p>
-
-    <p class="profile-hero-summary">
-      As informações disponibilizadas neste site têm caráter exclusivamente institucional e informativo, não representam promessa de resultado e não substituem a análise individualizada de cada caso.
-    </p>
-
-    <div class="profile-hero-actions">
-      <a class="cta-btn" href="#contato" aria-label="Ir para a seção de contato">
-        Entrar em contato
-      </a>
-      <a class="cta-btn cta-btn--ghost" href="#sobre" aria-label="Ir para a seção Sobre o Escritório">
-        Conhecer atuação
-      </a>
-    </div>
+  <div class="info-box">
+    <p>Este é o site institucional oficial do Escritório do Dr. Talamante Morais, com atuação em Direito Público Municipal e contratações públicas sob a Lei nº 14.133/2021, abrangendo licitações, contratos administrativos, concessões e permissões de serviços públicos, PPP, parcerias com o Terceiro Setor e instrumentos de uso de bens públicos.</p>
+    <p>A atuação é consultiva e contenciosa, em âmbito administrativo e judicial, com acompanhamento perante órgãos de controle interno e externo, inclusive o Tribunal de Contas dos Municípios do Estado de Goiás, com atendimento no Estado de Goiás e atuação em outras localidades conforme a demanda.</p>
+    <p>O escritório também atende demandas em Direito Privado, com atuação cível, trabalhista, contratual e extrajudicial, e desenvolve cursos e treinamentos práticos em contratações públicas, do básico ao avançado, com foco na elaboração de papéis de trabalho e na construção de documentos do zero.</p>
   </div>
-</div>
+
+  <h2>Dr. Talamante Morais "Direito Público Municipal e Contratações Públicas"</h2>
 
 <!-- BLOCO DE DESTAQUES: CARROSSEL DE IMAGENS -->
   <div class="carousel-container" role="region" aria-label="Carrossel de destaques" tabindex="0">
     <div class="carousel-track" id="carousel-track" aria-live="polite">
+
       <!-- Slide 1 -->
       <div class="carousel-item">
         <picture>
-          <source type="image/webp" srcset="arquivos/slides/slide-1.pdf.webp 880w" sizes="(max-width: 900px) 100vw, 880px">
-          <img class="carousel-img" src="arquivos/slides/slide-1.pdf.webp" width="880" height="378" loading="eager" decoding="async" alt="Credenciamento — Lei nº 14.133/2021. Quando utilizar? Hipóteses legais e aplicações práticas.">
+          <source type="image/webp" srcset="img/card_1_880x378.webp 880w" sizes="(max-width: 900px) 100vw, 880px">
+          <img class="carousel-img" src="img/card_1_880x378.webp" width="880" height="378" loading="eager" decoding="async" alt="Credenciamento — Lei nº 14.133/2021. Quando utilizar? Hipóteses legais e aplicações práticas.">
         </picture>
       </div>
 
       <!-- Slide 2 -->
       <div class="carousel-item">
         <picture>
-          <source type="image/webp" srcset="arquivos/slides/slide-2.pdf.webp 880w" sizes="(max-width: 900px) 100vw, 880px">
-          <img class="carousel-img" src="arquivos/slides/slide-2.pdf.webp" width="880" height="378" loading="lazy" decoding="async" alt="Inteligência Artificial em Licitações — como a IA transforma processos conforme a Lei 14.133/2021.">
+          <source type="image/webp" srcset="img/card_2_880x378.webp 880w" sizes="(max-width: 900px) 100vw, 880px">
+          <img class="carousel-img" src="img/card_2_880x378.webp" width="880" height="378" loading="lazy" decoding="async" alt="Inteligência Artificial em Licitações — como a IA transforma processos conforme a Lei 14.133/2021.">
         </picture>
       </div>
 
       <!-- Slide 3 -->
       <div class="carousel-item">
         <picture>
-          <source type="image/webp" srcset="arquivos/slides/slide-3.pdf.webp 880w" sizes="(max-width: 900px) 100vw, 880px">
-          <img class="carousel-img" src="arquivos/slides/slide-3.pdf.webp" width="880" height="378" loading="lazy" decoding="async" alt="Novas Relações de Trabalho — Uberização, vínculo empregatício e precarização sob a ótica jurídica.">
+          <source type="image/webp" srcset="img/card_3_880x378.webp 880w" sizes="(max-width: 900px) 100vw, 880px">
+          <img class="carousel-img" src="img/card_3_880x378.webp" width="880" height="378" loading="lazy" decoding="async" alt="Novas Relações de Trabalho — Uberização, vínculo empregatício e precarização sob a ótica jurídica.">
         </picture>
       </div>
+
     </div>
     <button class="carousel-prev" aria-label="Slide anterior">‹</button>
     <button class="carousel-next" aria-label="Próximo slide">›</button>
@@ -149,13 +130,13 @@
 <!-- TEXTO INTRODUTÓRIO SOBRE ATUAÇÃO DO ESCRITÓRIO -->
 <div class="intro-text">
   <p class="service-desc">
-    Freud, em carta a Wilhelm Fliess (1º fev. 1900), associa o seu modo de investigar à curiosidade, à ousadia e à tenacidade.
+    Freud, em carta a Wilhelm Fliess (1º fev. 1900), registra que não se via como “homem de ciência” no sentido estrito e associa o seu modo de investigar à curiosidade, à ousadia e à tenacidade.
   </p>
   <p class="service-desc">
-    Na advocacia, o advogado Talamante Morais adota essa postura investigativa como referência de método: estudo, estratégia e atuação técnica com responsabilidade e foco em soluções juridicamente seguras.
+    Na advocacia, Dr. Talamante Morais adota essa postura investigativa como referência de método: estudo, estratégia e atuação técnica com curiosidade intelectual, ousadia responsável e tenacidade na busca de soluções jurídicas seguras.
   </p>
   <p class="service-desc">
-    FREUD, Sigmund. Correspondência completa para Wilhelm Fliess (1887-1904). Rio de Janeiro: Imago, 1986. Carta de 1º de fevereiro de 1900.
+    FREUD, Sigmund. A correspondência completa de Sigmund Freud para Wilhelm Fliess (1887-1904). Tradução de Vera Ribeiro; organização de Jeffrey Moussaieff Masson. Rio de Janeiro: Imago, 1986. ISBN 85-312-0112-1. Trecho da carta datada de 1º de fevereiro de 1900.
   </p>
   <!-- Citação apresentada em paráfrase, com referência bibliográfica, para evitar reprodução literal de tradução protegida. -->
 </div>
@@ -165,96 +146,86 @@
 <section id="sobre">
   <h2>Sobre o Escritório</h2>
   <p class="service-desc">
-    O escritório do advogado Talamante Morais desenvolve atuação jurídica voltada à assessoria e consultoria em contratações públicas, licitações, contratos administrativos e procedimentos correlatos, com apoio técnico em análise documental, orientação jurídica e acompanhamento procedimental, sempre conforme a natureza da demanda e os limites éticos e legais aplicáveis.
+    O Escritório do Dr. Talamante Morais presta assessoria e consultoria a órgãos e entidades do Poder Executivo e do Poder Legislativo e a entidades municipais, de direito público ou privado, com foco em Direito Público Municipal e contratações públicas sob a Lei nº 14.133/2021, do planejamento à execução e à fiscalização, com suporte consultivo e contencioso, administrativo e judicial, em matérias de Direito Público e Direito Privado, inclusive perante órgãos de controle, com destaque para o TCM-GO.
   </p>
-  <a class="cta-btn" href="sobre-nos.html" aria-label="Abrir página Sobre o Escritório">
-    Conhecer o Escritório
-  </a>
-</section>
+  <p class="service-desc">
+    A atuação abrange também instrumentos de delegação e parceria administrativa, incluindo concessões e permissões de serviços públicos, PPP, parcerias com o Terceiro Setor e instrumentos de uso de bens públicos, com atendimento no Estado de Goiás e atuação em outras localidades conforme a demanda.
+  </p>
+  <p class="service-desc">
+    O Escritório oferece ainda cursos e treinamentos práticos voltados à capacitação e ao aperfeiçoamento de agentes públicos e equipes técnicas em licitações, contratos administrativos e governança.
+  </p>
 
-<!-- BLOCO DE VÍDEO INSTITUCIONAL (provisório) -->
-<figure class="video-embed" aria-label="Vídeo institucional provisório">
+</section>
+<!-- VÍDEO INSTITUCIONAL EM DESTAQUE -->
+<figure class="video-embed">
   <video
     controls
     preload="metadata"
     playsinline
-    aria-label="Vídeo institucional provisório do advogado Talamante Morais">
-    <source src="video-institucional-home-provisorio.mp4" type="video/mp4">
-    Seu navegador não suporta vídeo em HTML5.
+    poster="img/video-institucional.webp">
+    <source src="media/video-institucional.mp4" type="video/mp4">
+    Seu navegador não suporta a reprodução de vídeo.
   </video>
 </figure>
 
 <!-- SEÇÃO DE SERVIÇOS PRESTADOS -->
 <section id="servicos">
-
   <h2>Nossos Serviços</h2>
+
 <!-- GRID DE SERVIÇOS E CARTÕES INFORMATIVOS -->
+
   <div class="services-grid">
-    <div class="service-card" id="direito-publico">
+<div class="service-card" id="direito-publico">
       <h3 class="service-title">Direito Público</h3>
       <div class="service-desc">
-        Contratações públicas, contratos administrativos, Tribunais de Contas, processo legislativo municipal e manifestações em procedimentos administrativos e judiciais correlatos.
+	Assessoria e consultoria jurídica em Direito Público Municipal, com atuação administrativa e contenciosa judicial e extrajudicial, especialmente em licitações, contratos administrativos, serviços públicos e pareceres, com foco em conformidade, governança e segurança jurídica dos atos, abrangendo planejamento, acompanhamento e fiscalização contratual e, quando cabível, atuação técnica perante órgãos de controle.
       </div>
-
-      <a class="cta-btn" href="direito-publico-municipal.html" aria-label="Abrir página de Direito Público Municipal">
-        Acessar
-      </a>
+<a class="cta-btn" href="direito-publico-municipal.html" aria-label="Abrir página de Direito Público Municipal">
+  Acessar
+</a>
     </div>
 
-    <div class="service-card" id="direito-privado">
+<div class="service-card" id="direito-privado">
       <h3 class="service-title">Direito Privado</h3>
       <div class="service-desc">
-        Direito Civil, Contratual, Trabalhista, Consumidor e Família, com consultoria preventiva, instrumentos jurídicos, suporte extrajudicial e atuação judicial quando cabível.
+	Atuação preventiva e contenciosa em demandas cíveis, trabalhistas e contratuais, com suporte judicial e extrajudicial, elaboração e revisão de instrumentos jurídicos, condução técnica de negociações e soluções extrajudiciais, com clareza, responsabilidade e estratégia voltada ao caso concreto, atendendo pessoas físicas e jurídicas conforme a necessidade.
       </div>
-
-      <a class="cta-btn" href="direito-privado.html" aria-label="Abrir página de Direito Privado">
-        Acessar
-      </a>
+<a class="cta-btn" href="direito-privado.html" aria-label="Abrir página de Direito Privado">
+  Acessar
+</a>
     </div>
+
+<div class="service-card" id="cursos-treinamentos">
+      <h3 class="service-title">Cursos e Treinamentos</h3>
+      <div class="service-desc">
+        Cursos e treinamentos práticos em contratações públicas, do básico ao avançado, com metodologia própria e foco na elaboração de papéis de trabalho e na construção de documentos do zero, com carga horária e certificação, em formato in company, online e presencial.
+      </div>
+<a class="cta-btn" href="cursos-e-capacitacoes.html" aria-label="Abrir página de Cursos e Capacitações">
+  Acessar
+</a>
+    </div>
+
   </div> <!-- fechamento do services-grid -->
 </section> <!-- fechamento correto da seção serviços -->
+
 <!-- BLOCO DE ACESSO AO REPOSITÓRIO DE CONTEÚDOS JURÍDICOS -->
-<div id="publicacoes" class="conteudos-hub" aria-label="Acesso ao repositório institucional de conteúdos jurídicos">
-  <figure class="conteudos-banner" aria-label="Conteúdos Jurídicos">
-    <img
-      src="img/botao-conteudos-juridicos.webp"
-      alt="Conteúdos Jurídicos"
-      width="550"
-      height="256"
-      loading="lazy"
-      decoding="async">
-    <a
-      class="cj-hotspot cj-hotspot--1"
-      href="conteudos-Legislacao-e-Jurisprudencia.html"
-      aria-label="Legislações e Jurisprudência">
-      <span class="visually-hidden">Legislações e Jurisprudência</span>
-    </a>
 
-    <a
-      class="cj-hotspot cj-hotspot--2"
-      href="conteudos-Publicacoes-Juridicas.html"
-      aria-label="Publicações Jurídicas">
-      <span class="visually-hidden">Publicações Jurídicas</span>
-    </a>
-
-    <a
-      class="cj-hotspot cj-hotspot--3"
-      href="conteudos-Atuacao-Publica.html"
-      aria-label="Atuação Institucional">
-      <span class="visually-hidden">Atuação Institucional</span>
-    </a>
-
-  </figure>
+<div id="publicacoes" class="bottom-links" aria-label="Acesso ao repositório institucional de conteúdos">
+  <a href="conteudos.html"
+     class="cta-btn"
+     aria-label="Abrir página de Conteúdos Jurídicos">
+     Conteúdos Jurídicos
+  </a>
 </div>
 
-<section id="contato">
+<!-- SEÇÃO DE CONTATO E FORMULÁRIO -->
+<section id="contato" class="container">
   <h2>Contato</h2>
-
-  <div id="mensagem-sucesso" role="status" aria-live="polite" aria-atomic="true">
+  <div id="mensagem-sucesso">
     Mensagem enviada com sucesso. Obrigado pelo contato!
   </div>
 
-  <form id="contato-form" method="post" accept-charset="UTF-8" action="https://script.google.com/macros/s/AKfycbwPSQbUMh-HPMJrzPQzOQVZ_c-tq1Jjw2xxqpqRosbi4uzltd2SfoL_OPip7mv8rNAG/exec">
+  <form id="contato-form">
     <label for="nome">Nome completo</label>
     <input type="text" id="nome" name="nome" placeholder="Seu nome" required aria-label="Nome completo">
 
@@ -264,17 +235,21 @@
     <label for="mensagem">Mensagem</label>
     <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem" required aria-label="Mensagem" rows="5"></textarea>
 
-    <input type="text" name="honeypot" autocomplete="off" tabindex="-1" aria-hidden="true">
+    <input type="text" name="honeypot">
     <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response">
 
     <button type="submit" class="main-btn">Enviar</button>
   </form>
   <p><strong>Email:</strong> talamantemorais@gmail.com</p>
-    <p><strong>WhatsApp:</strong> (62) 99631-8340</p>
+  <p><strong>WhatsApp:</strong> (62) 99631-8340 <a class="whatsapp-inline-btn" href="https://wa.me/556296318340" target="_blank" rel="noopener noreferrer" aria-label="Abrir conversa no WhatsApp">Abrir</a></p>
 <ul>
   <li><a href="https://www.instagram.com/talamantemorais/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
   <li><a href="https://www.linkedin.com/in/talamante-morais-a51535221/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-  <li><a href="https://www.youtube.com/@talamantemorais6006" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+  <li><a href="https://www.youtube.com/@talamantermorais" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+</ul>
+  <li><a href="https://www.instagram.com/talamantemorais/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+  <li><a href="https://www.linkedin.com/in/talamante-morais-a51535221/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+  <li><a href="https://www.youtube.com/@TalamanteMorais" target="_blank" rel="noopener noreferrer">YouTube</a></li>
 </ul>
   <div class="qrcode-container">
     <h3>Acesso Rápido</h3>
@@ -313,7 +288,7 @@
 </a>
 
 <!-- reCAPTCHA v3 -->
-<script src="https://www.google.com/recaptcha/api.js?render=6Ld0yF8sAAAAAN5JXxfuWIV3K2nhA9p-r4VWKGKo" defer data-recaptcha-v3="1"></script>
+<script src="https://www.google.com/recaptcha/api.js?render=6LdEyWYrAAAAALdfXa6R6BprCQbpPW7KxuySJr43"></script>
 
 <!-- SCRIPTS FINAIS E FUNCIONALIDADES COMPLEMENTARES -->
 
@@ -321,3 +296,5 @@
 
 </body>
 </html>
+
+
