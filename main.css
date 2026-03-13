@@ -956,13 +956,12 @@ footer{
   outline-offset: 2px;
   border-radius: 50%;
 }
-
 /* reCAPTCHA badge (v3) - fica no mesmo canto, mas aparece apenas ao final da página */
 body{
   position: relative;
 }
 .grecaptcha-badge{
-  position: fixed !important;
+  position: absolute !important;
   left: 10px !important;
   right: auto !important;
   bottom: calc(10px + env(safe-area-inset-bottom)) !important;
@@ -975,7 +974,7 @@ body{
 
 @media (max-width: 900px){
   .grecaptcha-badge{
-    position: fixed !important;
+    position: absolute !important;
     left: 8px !important;
     right: auto !important;
     bottom: calc(10px + env(safe-area-inset-bottom)) !important;
@@ -1046,9 +1045,35 @@ button[type="submit"]:focus-visible{
 #contato button[type="submit"]{
   margin-top: 0.25rem;
 }
-
 #contato p{
   margin: 0.65rem 0 0;
+}
+.whatsapp-inline-btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  margin-left: 0.3rem;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+.whatsapp-inline-btn::before{
+  content: "";
+  width: 18px;
+  height: 18px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%20fill='none'%20stroke='%23ffffff'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'%3E%3Cpath%20d='M22%2016.92v3a2%202%200%200%201-2.18%202%2019.79%2019.79%200%200%201-8.63-3.07%2019.5%2019.5%200%200%201-6-6A19.79%2019.79%200%200%201%203.11%204.18%202%202%200%200%201%205.11%202h3a2%202%200%200%201%202%201.72%2012.84%2012.84%200%200%200%20.7%202.81%202%202%200%200%201-.45%202.11L9.91%209.91a16%2016%200%200%200%206%206l1.27-1.27a2%202%200%200%201%202.11-.45%2012.84%2012.84%200%200%200%202.81.7A2%202%200%200%201%2022%2016.92z'/%3E%3C/svg%3E");
+  background-color: #25D366;
+  border-radius: 50%;
+}
+
+.whatsapp-inline-btn:hover,
+.whatsapp-inline-btn:focus-visible{
+  text-decoration: none;
 }
 
 #contato ul{
