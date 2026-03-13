@@ -950,8 +950,7 @@ footer{
   outline-offset: 2px;
   border-radius: 50%;
 }
-
-/* reCAPTCHA badge (v3) - fica no mesmo canto, mas aparece apenas ao final da página */
+/* reCAPTCHA badge (v3) - fica no mesmo canto, sem acompanhar o rolamento */
 body{
   position: relative;
 }
@@ -979,6 +978,16 @@ body{
     filter: drop-shadow(0 6px 14px rgba(0,0,0,0.12)) !important;
     z-index: 80 !important;
   }
+}
+
+@media (max-width: 900px){
+  .grecaptcha-badge{
+    position: fixed !important;
+    left: 8px !important;
+    right: auto !important;
+    bottom: calc(10px + env(safe-area-inset-bottom)) !important;
+    transform: scale(0.48) !
+
 }
 
 /* ======================== 16. FORMULÁRIO ======================== */
@@ -1040,9 +1049,35 @@ button[type="submit"]:focus-visible{
 #contato button[type="submit"]{
   margin-top: 0.25rem;
 }
-
 #contato p{
   margin: 0.65rem 0 0;
+}
+
+.whatsapp-inline-btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.45rem;
+  padding: 0.18rem 0.55rem;
+  border-radius: 999px;
+  background: #25D366;
+  color: #ffffff;
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+  vertical-align: middle;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.whatsapp-inline-btn:hover{
+  background: #1ebe57;
+  transform: translateY(-1px);
+}
+
+.whatsapp-inline-btn:focus-visible{
+  outline: 2px solid #a3d3ff;
+  outline-offset: 2px;
 }
 
 #contato ul{
