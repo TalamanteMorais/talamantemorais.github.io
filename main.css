@@ -485,13 +485,12 @@ section{
   color: #355067;
   font-weight: 600;
 }
-
 .profile-hero-summary{
   margin: 0;
   color: #223240;
   font-size: 0.98rem;
   line-height: 1.6;
-  text-align: left;
+  text-align: justify;
   max-width: 62ch;
 }
 
@@ -956,19 +955,6 @@ footer{
   outline-offset: 2px;
   border-radius: 50%;
 }
-@media (max-width: 700px){
-  .whatsapp-button{
-    right: calc(10px + env(safe-area-inset-right));
-    bottom: calc(30px + env(safe-area-inset-bottom));
-    width: 48px;
-    height: 48px;
-  }
-
-  .whatsapp-button::before{
-    width: 22px;
-    height: 22px;
-  }
-}
 
 @media (max-width: 700px){
   .whatsapp-button{
@@ -1082,9 +1068,11 @@ button[type="submit"]:focus-visible{
   justify-content: center;
   width: 18px;
   height: 18px;
-  margin-left: 0.3rem;
+  margin-left: 0.18rem;
   text-decoration: none;
   vertical-align: middle;
+  position: relative;
+  top: 1px;
 }
 
 .whatsapp-inline-btn::before{
@@ -1098,7 +1086,6 @@ button[type="submit"]:focus-visible{
   background-color: #25D366;
   border-radius: 50%;
 }
-
 .whatsapp-inline-btn:hover,
 .whatsapp-inline-btn:focus-visible{
   text-decoration: none;
