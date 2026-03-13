@@ -60,12 +60,12 @@ img, picture, svg, video {
 
 /* ======================== 02. CABEÇALHO ======================== */
 .section-header{
-  background: linear-gradient(180deg, #f7f9fc 0%, #f9fbfe 100%);
+  background: #f7f9fc;
   padding: 1.1rem 0 0.9rem 0;
   text-align: center;
   color: #0f2743;
-  border-bottom: 1px solid rgba(24, 100, 171, 0.10);
-  box-shadow: 0 8px 20px rgba(15, 39, 67, 0.06);
+  border-bottom: 1px solid rgba(15, 39, 67, 0.08);
+  box-shadow: 0 6px 16px rgba(15, 39, 67, 0.06);
 }
 .section-header h1{
   font-size: clamp(2.15rem, 4.8vw, 2.75rem);
@@ -103,9 +103,9 @@ img, picture, svg, video {
   box-sizing: border-box;
   padding: 6px;
   border-radius: 14px;
-  background: #ffffff;
-  border: 1px solid rgba(24, 100, 171, 0.14);
-  box-shadow: 0 8px 22px rgba(15, 39, 67, 0.08);
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(15, 39, 67, 0.08);
+  box-shadow: 0 6px 16px rgba(15, 39, 67, 0.06);
 }
 .section-header .brand-logo-img{
   width: 100%;
@@ -171,24 +171,61 @@ img, picture, svg, video {
   margin: 0;
   font-weight: 600;
   font-size: 1.05rem;
-  transition: color 0.2s ease, background-color 0.2s ease, transform 0.15s ease;
+  transition: color 0.2s ease;
   display: inline-block;
   white-space: nowrap;
-  padding: 0.28rem 0.6rem;
-  border-radius: 999px;
+  padding: 0.15rem 0;
 }
+@media (max-width: 900px){
+  .main-nav{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    padding: 0.85rem 0.6rem;
+    text-align: center;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .main-nav::-webkit-scrollbar{
+    display: none;
+  }
+
+  .main-nav a{
+    flex: 0 0 auto;
+    margin: 0;
+    padding: 0.3rem 0.45rem;
+    line-height: 1.2;
+    font-size: 0.98rem;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 420px){
+  .main-nav{
+    gap: 8px;
+    padding: 0.75rem 0.55rem;
+  }
+
+  .main-nav a{
+    padding: 0.25rem 0.45rem;
+    font-size: 0.98rem;
+    line-height: 1.15;
+  }
+}
+
 .main-nav a:hover{
-  color: #ffffff;
-  background: rgba(163, 211, 255, 0.14);
-  transform: translateY(-1px);
+  color: #a3d3ff;
 }
 
 .main-nav a:focus-visible{
   outline: 3px solid #a3d3ff;
   outline-offset: 2px;
-  border-radius: 999px;
+  border-radius: 6px;
 }
-
 /* ======================== 04. SEÇÕES GERAIS ======================== */
 section{
   max-width: var(--container-max);
@@ -203,23 +240,6 @@ section{
 @media (max-width: 600px){
   section{
     padding: 1.6rem 1.2rem;
-  }
-}
-
-#inicio{
-  max-width: var(--container-max);
-  background: transparent;
-  margin: 1.1rem auto 1.35rem;
-  padding: 0;
-  border: 0;
-  border-radius: 0;
-  box-shadow: none;
-}
-
-@media (max-width: 600px){
-  #inicio{
-    margin: 0.95rem auto 1.15rem;
-    padding: 0;
   }
 }
 
@@ -465,14 +485,13 @@ section{
   color: #355067;
   font-weight: 600;
 }
+
 .profile-hero-summary{
   margin: 0;
   color: #223240;
   font-size: 0.98rem;
   line-height: 1.6;
-  text-align: justify;
-  text-justify: inter-word;
-  hyphens: auto;
+  text-align: left;
   max-width: 62ch;
 }
 
@@ -602,15 +621,11 @@ section{
   min-width: 120px;
 }
 .service-desc{
-  text-align: justify;
-  text-justify: inter-word;
-  hyphens: auto;
+  text-align: left;
 }
 
 .intro-text p{
-  text-align: justify;
-  text-justify: inter-word;
-  hyphens: auto;
+  text-align: left;
 }
 
 @media (max-width: 900px){
@@ -890,17 +905,8 @@ footer{
   color: #ffffff;
   text-decoration: underline;
   text-underline-offset: 3px;
-  text-decoration-thickness: 1.5px;
-  transition: color 0.2s ease, opacity 0.2s ease;
 }
-.footer-link:hover{
-  color: #d7ebff;
-}
-.footer-link:focus-visible{
-  outline: 2px solid rgba(255, 255, 255, 0.9);
-  outline-offset: 2px;
-  border-radius: 6px;
-}
+
 /* ======================== 15. BOTÃO WHATSAPP ======================== */
 .whatsapp-button{
   position: fixed;
@@ -950,15 +956,16 @@ footer{
   outline-offset: 2px;
   border-radius: 50%;
 }
-/* reCAPTCHA badge (v3) - fica no mesmo canto, sem acompanhar o rolamento */
+
+/* reCAPTCHA badge (v3) - fica no mesmo canto, mas aparece apenas ao final da página */
 body{
   position: relative;
 }
 .grecaptcha-badge{
-  position: absolute !important;
+  position: fixed !important;
   left: 10px !important;
   right: auto !important;
-  bottom: 84px !important;
+  bottom: calc(10px + env(safe-area-inset-bottom)) !important;
   transform: scale(0.48) !important;
   transform-origin: left bottom !important;
   opacity: 0.55 !important;
@@ -968,26 +975,16 @@ body{
 
 @media (max-width: 900px){
   .grecaptcha-badge{
-    position: absolute !important;
+    position: fixed !important;
     left: 8px !important;
     right: auto !important;
-    bottom: 84px !important;
+    bottom: calc(10px + env(safe-area-inset-bottom)) !important;
     transform: scale(0.48) !important;
     transform-origin: left bottom !important;
     opacity: 0.55 !important;
     filter: drop-shadow(0 6px 14px rgba(0,0,0,0.12)) !important;
     z-index: 80 !important;
   }
-}
-
-@media (max-width: 900px){
-  .grecaptcha-badge{
-    position: fixed !important;
-    left: 8px !important;
-    right: auto !important;
-    bottom: calc(10px + env(safe-area-inset-bottom)) !important;
-    transform: scale(0.48) !
-
 }
 
 /* ======================== 16. FORMULÁRIO ======================== */
@@ -1049,35 +1046,9 @@ button[type="submit"]:focus-visible{
 #contato button[type="submit"]{
   margin-top: 0.25rem;
 }
+
 #contato p{
   margin: 0.65rem 0 0;
-}
-
-.whatsapp-inline-btn{
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 0.45rem;
-  padding: 0.18rem 0.55rem;
-  border-radius: 999px;
-  background: #25D366;
-  color: #ffffff;
-  font-size: 0.82rem;
-  font-weight: 600;
-  line-height: 1;
-  text-decoration: none;
-  vertical-align: middle;
-  transition: background-color 0.2s ease, transform 0.15s ease;
-}
-
-.whatsapp-inline-btn:hover{
-  background: #1ebe57;
-  transform: translateY(-1px);
-}
-
-.whatsapp-inline-btn:focus-visible{
-  outline: 2px solid #a3d3ff;
-  outline-offset: 2px;
 }
 
 #contato ul{
