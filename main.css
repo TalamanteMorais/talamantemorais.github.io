@@ -955,11 +955,10 @@ footer{
   outline-offset: 2px;
   border-radius: 50%;
 }
-
 @media (max-width: 700px){
   .whatsapp-button{
     right: calc(10px + env(safe-area-inset-right));
-    bottom: calc(18px + env(safe-area-inset-bottom));
+    bottom: calc(34px + env(safe-area-inset-bottom));
     width: 48px;
     height: 48px;
   }
