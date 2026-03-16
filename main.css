@@ -958,7 +958,7 @@ footer{
 @media (max-width: 700px){
   .whatsapp-button{
     right: calc(10px + env(safe-area-inset-right));
-    bottom: calc(68px + env(safe-area-inset-bottom));
+    bottom: calc(88px + env(safe-area-inset-bottom));
     width: 48px;
     height: 48px;
   }
@@ -1089,26 +1089,56 @@ button[type="submit"]:focus-visible{
 .whatsapp-inline-btn:focus-visible{
   text-decoration: none;
 }
-
 #contato ul{
   list-style: none;
-  margin: 0.85rem 0 0;
+  margin: 0.95rem 0 0;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
 }
 
 #contato ul li{
-  margin: 0.35rem 0;
+  margin: 0;
 }
 
 #contato ul a{
-  color: var(--brand);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 0.55rem 1rem;
+  background: var(--brand);
+  color: #ffffff;
   font-weight: 600;
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  text-decoration: none;
+  border-radius: 999px;
+  box-shadow: 0 4px 12px rgba(24, 100, 171, 0.15);
+  transition: background-color 0.25s, transform 0.15s ease, box-shadow 0.2s ease;
 }
 
 #contato ul a:hover{
-  color: var(--brand-dark);
+  background: var(--brand-dark);
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(24, 100, 171, 0.2);
+}
+
+#contato ul a:focus-visible{
+  outline: 3px solid #a3d3ff;
+  outline-offset: 2px;
+  border-radius: 999px;
+}
+
+@media (max-width: 700px){
+  #contato ul{
+    gap: 0.55rem;
+  }
+
+  #contato ul a{
+    min-height: 38px;
+    padding: 0.5rem 0.95rem;
+  }
 }
 
 /* ======================== 17. MENSAGEM DE SUCESSO ======================== */
