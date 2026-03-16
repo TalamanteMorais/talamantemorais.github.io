@@ -349,7 +349,6 @@ const siteKey = "6Ld0yF8sAAAAAN5JXxfuWIV3K2nhA9p-r4VWKGKo";
           });
         });
       };
-
       const carregarRecaptchaSeNecessario = (onReady) => {
         if (typeof grecaptcha !== "undefined" && grecaptcha && typeof grecaptcha.ready === "function") {
           onReady();
@@ -369,28 +368,19 @@ const siteKey = "6Ld0yF8sAAAAAN5JXxfuWIV3K2nhA9p-r4VWKGKo";
             falhaRecaptcha();
             return;
           }
-          setTimeout(() => esperarGrecaptcha(tentativasRestantes - 1), 50);
+          setTimeout(() => esperarGrecaptcha(tentativasRestantes - 1), 100);
         };
 
         if (existing) {
-          existing.addEventListener("load", () => esperarGrecaptcha(60), { once: true });
-          existing.addEventListener("error", falhaRecaptcha, { once: true });
-          esperarGrecaptcha(2);
+          esperarGrecaptcha(60);
           return;
         }
 
-        const s = document.createElement("script");
-        s.src = "https://www.google.com/recaptcha/api.js?render=" + encodeURIComponent(siteKey);
-        s.defer = true;
-        s.setAttribute("data-recaptcha-v3", "1");
-        s.addEventListener("load", () => esperarGrecaptcha(60), { once: true });
-        s.addEventListener("error", falhaRecaptcha, { once: true });
-        document.head.appendChild(s);
-
-        esperarGrecaptcha(2);
+        falhaRecaptcha();
       };
 
       carregarRecaptchaSeNecessario(executarRecaptcha);
+
     });
   }
   /* ======================== LISTA DE LINKS — PUBLICAÇÕES JURÍDICAS (JSON) ======================== */

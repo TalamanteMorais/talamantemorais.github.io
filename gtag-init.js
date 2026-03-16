@@ -15,5 +15,6 @@ gtag('js', new Date());
 gtag('config', 'G-ZKCPTG7K1T', {
   anonymize_ip: true,
   allow_google_signals: false,
-  allow_ad_personalization_signals: false
+  allow_ad_personalization_signals: false,
+  transport_type: 'beacon'
 });
