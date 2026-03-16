@@ -1281,6 +1281,10 @@ button[type="submit"]:focus-visible{
   overflow: hidden;
 }
 
+.video-embed--thumb{
+  max-width: 620px;
+}
+
 .video-embed iframe{
   width: 100%;
   aspect-ratio: 16 / 9;
@@ -1307,11 +1311,16 @@ button[type="submit"]:focus-visible{
     border-radius: 14px;
   }
 
+  .video-embed--thumb{
+    max-width: 100%;
+  }
+
   .video-embed iframe,
   .video-embed video{
     border-radius: 10px;
   }
 }
+
 .video-desc{
   color: #334;
   font-size: clamp(0.95rem, 2vw, 1rem);
