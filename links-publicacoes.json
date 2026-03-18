@@ -1,5 +1,25 @@
 [
   {
+    "title": "Manual do SICAF - Espanhol",
+    "url": "https://www.gov.br/compras/pt-br/acesso-a-informacao/manuais/manual-fase-externa/manual-sicaf/manual_sicaf_espanhol_telas_atualizadas.pdf/view"
+  },
+  {
+    "title": "Manual do SICAF - Inglês",
+    "url": "https://www.gov.br/compras/pt-br/acesso-a-informacao/manuais/manual-fase-externa/manual-sicaf/sicaf-operational-manual.pdf/view"
+  },
+  {
+    "title": "Modelo de Alteração do Responsável no SICAF",
+    "url": "https://www.gov.br/compras/pt-br/acesso-a-informacao/manuais/manual-fase-externa/manual-sicaf/modelo-de-solicitacao-de-alteracao-do-responsavel-no-sicaf-governo.docx/view"
+  },
+  {
+    "title": "Manual Normativo SICAF",
+    "url": "https://www.gov.br/compras/pt-br/acesso-a-informacao/manuais/manual-fase-externa/manual-sicaf/manual-normativo-sicaf.pdf/view"
+  },
+  {
+    "title": "Manual do SICAF - Fornecedor",
+    "url": "https://www.gov.br/compras/pt-br/acesso-a-informacao/manuais/manual-fase-externa/manual-sicaf/manual_do_sicaf__versao_final_sistema_fornecedor-1-5.pdf/view"
+  },
+  {
     "title": "Justiça do Trabalho decreta suspensão de precatórios dos Correios por 90 dias",
     "url": "https://www.tst.jus.br/-/justica-do-trabalho-decreta-suspensao-de-precatorios-dos-correios-por-90-dias"
   },
@@ -26,5 +46,9 @@
   {
     "title": "STJ Afasta a aplicabilidade de retroatividade no Direito Administrativo Sancionador na Lei 14.133 de 2021",
     "url": "https://processo.stj.jus.br/processo/julgamento/eletronico/documento/mediado/?documento_tipo=5&documento_sequencial=358100040&registro_numero=202402450422&publicacao_data=20260226&formato=PDF"
+  },
+  {
+    "title": "IN nº 3/2018 - Perguntas_Respostas_SICAF_Compras_Gov",
+    "url": "https://www.gov.br/compras/pt-br/acesso-a-informacao/perguntas-frequentes/sicaf-normativo"
   }
 ]
