@@ -5,8 +5,8 @@ import re
 import urllib.request
 import xml.etree.ElementTree as ET
 from pathlib import Path
-
 RSS_URL = "https://www.gov.br/compras/pt-br/acesso-a-informacao/manuais/manual-fase-externa/manual-sicaf/RSS"
+RSS_URL_NORMATIVO = "https://www.gov.br/compras/pt-br/acesso-a-informacao/perguntas-frequentes/sicaf-normativo/RSS"
 LIMITE_SICAF = 5
 ARQUIVO_SAIDA = Path("links-publicacoes.json")
 
@@ -39,11 +39,8 @@ MANUAL_LINKS = [
         "title": "STJ Afasta a aplicabilidade de retroatividade no Direito Administrativo Sancionador na Lei 14.133 de 2021",
         "url": "https://processo.stj.jus.br/processo/julgamento/eletronico/documento/mediado/?documento_tipo=5&documento_sequencial=358100040&registro_numero=202402450422&publicacao_data=20260226&formato=PDF",
     },
-    {
-        "title": "IN nº 3/2018 - Perguntas_Respostas_SICAF_Compras_Gov",
-        "url": "https://www.gov.br/compras/pt-br/acesso-a-informacao/perguntas-frequentes/sicaf-normativo",
-    },
 ]
+
 TITLE_MAP = {
     "MODELO DE SOLICITACAO DE ALTERACAO DO RESPONSAVEL NO SICAF GOVERNO.docx": "Modelo de Alteração do Responsável no SICAF",
     "Manual-Normativo SICAF.pdf": "Manual Normativo SICAF",
@@ -81,9 +78,8 @@ def shorten_title(title: str) -> str:
     clean = compact_spaces(title)
     return TITLE_MAP.get(clean, clean)
 
-
-def load_sicaf_items() -> list[dict[str, str]]:
-    xml_content = fetch_xml(RSS_URL)
+def load_rss_items(url: str, limite: int, title_fixo: str | None = None) -> list[dict[str, str]]:
+    xml_content = fetch_xml(url)
     root = ET.fromstring(xml_content)
     items: list[dict[str, str]] = []
 
@@ -92,16 +88,17 @@ def load_sicaf_items() -> list[dict[str, str]]:
         link_text = item.findtext("rss:link", default="", namespaces=NS)
         date_text = item.findtext("dc:date", default="", namespaces=NS)
 
-        if not title_text or not link_text:
+        if not link_text:
             continue
-        short_title = shorten_title(title_text)
+
+        short_title = title_fixo or shorten_title(title_text)
 
         if short_title in TITLES_EXCLUIDOS:
             continue
 
         items.append(
             {
-                "title": short_title,
+                "title": short_title.strip(),
                 "url": link_text.strip(),
                 "date": date_text.strip(),
             }
@@ -112,12 +109,12 @@ def load_sicaf_items() -> list[dict[str, str]]:
     seen: set[str] = set()
     result: list[dict[str, str]] = []
     for item in items:
-        url = item["url"]
-        if url in seen:
+        url_item = item["url"]
+        if url_item in seen:
             continue
-        seen.add(url)
-        result.append({"title": item["title"], "url": url})
-        if len(result) >= LIMITE_SICAF:
+        seen.add(url_item)
+        result.append({"title": item["title"], "url": url_item})
+        if len(result) >= limite:
             break
 
     return result
@@ -144,9 +141,15 @@ def save_json(data: list[dict[str, str]], output_file: Path) -> None:
         encoding="utf-8",
     )
 
-
 def main() -> None:
-    auto_links = load_sicaf_items()
+    auto_sicaf = load_rss_items(RSS_URL, LIMITE_SICAF)
+    auto_normativo = [
+        {
+            "title": "IN nº 3/2018 - SICAF Normativo",
+            "url": "https://www.gov.br/compras/pt-br/acesso-a-informacao/perguntas-frequentes/sicaf-normativo",
+        }
+    ]
+    auto_links = merge_links(auto_sicaf + auto_normativo, [])
     final_links = merge_links(auto_links, MANUAL_LINKS)
     save_json(final_links, ARQUIVO_SAIDA)
     print(f"Arquivo atualizado com {len(final_links)} links: {ARQUIVO_SAIDA}")
