@@ -44,7 +44,6 @@ MANUAL_LINKS = [
         "url": "https://www.gov.br/compras/pt-br/acesso-a-informacao/perguntas-frequentes/sicaf-normativo",
     },
 ]
-
 TITLE_MAP = {
     "MODELO DE SOLICITACAO DE ALTERACAO DO RESPONSAVEL NO SICAF GOVERNO.docx": "Modelo de Alteração do Responsável no SICAF",
     "Manual-Normativo SICAF.pdf": "Manual Normativo SICAF",
@@ -52,6 +51,11 @@ TITLE_MAP = {
     "Manual do Sicaf para Empresas Estrangeiras.pdf": "Manual do SICAF - Empresas Estrangeiras",
     "Manual_SICAF_Espanhol_.pdf": "Manual do SICAF - Espanhol",
     "SICAF Operational Manual.pdf": "Manual do SICAF - Inglês",
+}
+
+TITLES_EXCLUIDOS = {
+    "Manual do SICAF - Espanhol",
+    "Manual do SICAF - Inglês",
 }
 
 NS = {
@@ -90,10 +94,14 @@ def load_sicaf_items() -> list[dict[str, str]]:
 
         if not title_text or not link_text:
             continue
+        short_title = shorten_title(title_text)
+
+        if short_title in TITLES_EXCLUIDOS:
+            continue
 
         items.append(
             {
-                "title": shorten_title(title_text),
+                "title": short_title,
                 "url": link_text.strip(),
                 "date": date_text.strip(),
             }
