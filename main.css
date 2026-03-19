@@ -843,60 +843,59 @@ ul li{
   border-radius: 16px;
   box-shadow: 0 4px 18px rgba(0,0,0,0.06);
 }
-.cj-hotspot{
+.cj-link-btn{
   position: absolute;
-  display: block;
   z-index: 2;
-  border-radius: 10px;
-  background: rgba(24, 100, 171, 0);
+  display: block;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: transparent;
+  font-size: 0;
+  line-height: 0;
+  text-decoration: none;
+  box-shadow: none;
   cursor: pointer;
+  overflow: hidden;
   -webkit-tap-highlight-color: transparent;
-  min-height: 44px;
-  min-width: 44px;
-  transition: transform 0.08s ease, box-shadow 0.12s ease, background-color 0.12s ease, filter 0.12s ease;
+  transition: none;
 }
 
-.cj-hotspot:hover{
-  background: rgba(24, 100, 171, 0.06);
-  box-shadow: inset 0 0 0 1px rgba(24, 100, 171, 0.10);
+.cj-link-btn:hover{
+  background: transparent;
 }
 
-.cj-hotspot:active{
-  background: rgba(24, 100, 171, 0.12);
-  box-shadow: inset 0 2px 6px rgba(15, 39, 67, 0.18);
-  transform: translateY(1px) scale(0.985);
-  filter: brightness(0.98);
+.cj-link-btn:active{
+  background: transparent;
+  transform: none;
 }
 
-.cj-hotspot:focus-visible{
-  outline: 3px solid #a3d3ff;
-  outline-offset: 2px;
+.cj-link-btn:focus-visible{
+  outline: 2px solid #a3d3ff;
+  outline-offset: 1px;
+  border-radius: 4px;
 }
 
-.cj-hotspot:focus-visible{
-  outline: 3px solid #a3d3ff;
-  outline-offset: 2px;
+.cj-link-btn--1{
+  left: 6.55%;
+  top: 58.15%;
+  width: 18.90%;
+  height: 18.75%;
 }
 
-.cj-hotspot--1{
-  left: 6.45%;
-  top: 47.35%;
-  width: 26.99%;
-  height: 30.02%;
+.cj-link-btn--2{
+  left: 28.85%;
+  top: 58.15%;
+  width: 18.90%;
+  height: 18.75%;
 }
 
-.cj-hotspot--2{
-  left: 35.48%;
-  top: 47.35%;
-  width: 25.47%;
-  height: 30.02%;
-}
-
-.cj-hotspot--3{
-  left: 53.27%;
-  top: 54.51%;
-  width: 14.94%;
-  height: 7.18%;
+.cj-link-btn--3{
+  left: 51.15%;
+  top: 58.15%;
+  width: 18.90%;
+  height: 18.75%;
 }
 
 /* ======================== 14. RODAPÉ ======================== */
