@@ -848,9 +848,9 @@ ul li{
   z-index: 2;
   display: block;
   padding: 0;
-  border: 0;
-  border-radius: 0;
-  background: transparent;
+  border: 1px solid rgba(70, 70, 70, 0.55);
+  border-radius: 4px;
+  background: rgba(120, 120, 120, 0.24);
   color: transparent;
   font-size: 0;
   line-height: 0;
@@ -863,11 +863,11 @@ ul li{
 }
 
 .cj-link-btn:hover{
-  background: transparent;
+  background: rgba(120, 120, 120, 0.30);
 }
 
 .cj-link-btn:active{
-  background: transparent;
+  background: rgba(120, 120, 120, 0.34);
   transform: none;
 }
 
@@ -878,24 +878,24 @@ ul li{
 }
 
 .cj-link-btn--1{
-  left: 7.25%;
-  top: 59.40%;
-  width: 17.10%;
-  height: 15.60%;
+  left: 7.95%;
+  top: 58.95%;
+  width: 17.85%;
+  height: 15.95%;
 }
 
 .cj-link-btn--2{
-  left: 29.55%;
-  top: 59.40%;
-  width: 17.10%;
-  height: 15.60%;
+  left: 30.05%;
+  top: 58.95%;
+  width: 17.85%;
+  height: 15.95%;
 }
 
 .cj-link-btn--3{
-  left: 51.85%;
-  top: 59.40%;
-  width: 17.10%;
-  height: 15.60%;
+  left: 52.20%;
+  top: 58.95%;
+  width: 17.85%;
+  height: 15.95%;
 }
 
 /* ======================== 14. RODAPÉ ======================== */
