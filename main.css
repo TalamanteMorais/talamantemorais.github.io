@@ -834,7 +834,6 @@ ul li{
     max-width: 96vw;
   }
 }
-
 .conteudos-banner img{
   display: block;
   width: min(680px, 100%);
@@ -843,42 +842,31 @@ ul li{
   border-radius: 16px;
   box-shadow: 0 4px 18px rgba(0,0,0,0.06);
 }
-.cj-link-btn--1{
-  left: 8.85%;
-  top: 59.40%;
-  width: 17.10%;
-  height: 15.60%;
-}
 
-.cj-link-btn--2{
-  left: 30.55%;
-  top: 59.40%;
-  width: 17.10%;
-  height: 15.60%;
-}
-
-.cj-link-btn--3{
-  left: 51.85%;
-  top: 59.40%;
-  width: 17.10%;
-  height: 15.60%;
-}
-
-.cj-link-btn:focus-visible{
-  outline: 2px solid #a3d3ff;
-  outline-offset: 1px;
-  border-radius: 4px;
+.cj-link-btn{
+  position: absolute;
+  z-index: 2;
+  display: block;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: transparent;
+  font-size: 0;
+  line-height: 0;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
 }
 
 .cj-link-btn--1{
-  left: 8.55%;
+  left: 9.55%;
   top: 51.10%;
   width: 15.60%;
   height: 10.80%;
 }
 
 .cj-link-btn--2{
-  left: 30.70%;
+  left: 31.70%;
   top: 51.10%;
   width: 15.60%;
   height: 10.80%;
