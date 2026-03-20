@@ -847,25 +847,26 @@ ul li{
   z-index: 2;
   display: block;
   padding: 0;
-  border: 1px solid rgba(60, 60, 60, 0.55);
-  background: rgba(110, 110, 110, 0.22);
+  border: 1px solid rgba(120, 120, 120, 0.18);
+  background: rgba(170, 170, 170, 0.10);
   color: transparent;
   font-size: 0;
   line-height: 0;
   text-decoration: none;
   overflow: hidden;
   cursor: pointer;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
 }
 
 .cj-link-btn--1{
-  left: 9.55%;
+  left: 11.00%;
   top: 51.10%;
   width: 15.60%;
   height: 10.80%;
 }
 
 .cj-link-btn--2{
-  left: 31.70%;
+  left: 32.65%;
   top: 51.10%;
   width: 15.60%;
   height: 10.80%;
