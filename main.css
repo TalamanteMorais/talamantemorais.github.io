@@ -842,14 +842,13 @@ ul li{
   border-radius: 16px;
   box-shadow: 0 4px 18px rgba(0,0,0,0.06);
 }
-
 .cj-link-btn{
   position: absolute;
   z-index: 2;
   display: block;
   padding: 0;
-  border: 0;
-  background: transparent;
+  border: 1px solid rgba(60, 60, 60, 0.55);
+  background: rgba(110, 110, 110, 0.22);
   color: transparent;
   font-size: 0;
   line-height: 0;
