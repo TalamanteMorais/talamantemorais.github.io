@@ -834,6 +834,7 @@ ul li{
     max-width: 96vw;
   }
 }
+
 .conteudos-banner img{
   display: block;
   width: min(680px, 100%);
@@ -847,35 +848,54 @@ ul li{
   z-index: 2;
   display: block;
   padding: 0;
-  border: 1px solid rgba(120, 120, 120, 0.18);
-  background: rgba(170, 170, 170, 0.10);
+  border: 1px solid rgba(90, 90, 90, 0.42);
+  border-radius: 4px;
+  background: rgba(140, 140, 140, 0.14);
   color: transparent;
   font-size: 0;
   line-height: 0;
   text-decoration: none;
-  overflow: hidden;
+  box-shadow: none;
   cursor: pointer;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  -webkit-tap-highlight-color: transparent;
+  transition: none;
 }
+
+.cj-link-btn:hover{
+  background: rgba(140, 140, 140, 0.20);
+}
+
+.cj-link-btn:active{
+  background: rgba(140, 140, 140, 0.24);
+  transform: none;
+}
+
+.cj-link-btn:focus-visible{
+  outline: 2px solid #a3d3ff;
+  outline-offset: 1px;
+  border-radius: 4px;
+}
+
 .cj-link-btn--1{
-  left: 52.00%;
-  top: 51.50%;
-  width: 16.50%;
-  height: 11.30%;
+  left: 8.55%;
+  top: 51.10%;
+  width: 15.60%;
+  height: 10.80%;
 }
 
 .cj-link-btn--2{
-  left: 52.00%;
-  top: 51.50%;
-  width: 16.50%;
-  height: 11.30%;
+  left: 30.70%;
+  top: 51.10%;
+  width: 15.60%;
+  height: 10.80%;
 }
 
 .cj-link-btn--3{
-  left: 52.00%;
-  top: 51.50%;
-  width: 16.50%;
-  height: 11.30%;
+  left: 52.85%;
+  top: 51.10%;
+  width: 15.60%;
+  height: 10.80%;
 }
 
 /* ======================== 14. RODAPÉ ======================== */
