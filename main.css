@@ -876,25 +876,34 @@ ul li{
   outline-offset: 1px;
   border-radius: 4px;
 }
+.conteudos-banner{
+  --cj-top: 51.10%;
+  --cj-width: 15.60%;
+  --cj-height: 10.80%;
+  --cj-anchor-left: 36.50%;
+  --cj-gap-left: 7.90%;
+  --cj-gap-right: 4.75%;
+}
+
 .cj-link-btn--1{
-  left: 13.00%;
-  top: 51.10%;
-  width: 15.60%;
-  height: 10.80%;
+  left: calc(var(--cj-anchor-left) - var(--cj-width) - var(--cj-gap-left));
+  top: var(--cj-top);
+  width: var(--cj-width);
+  height: var(--cj-height);
 }
 
 .cj-link-btn--2{
-  left: 36.50%;
-  top: 51.10%;
-  width: 15.60%;
-  height: 10.80%;
+  left: var(--cj-anchor-left);
+  top: var(--cj-top);
+  width: var(--cj-width);
+  height: var(--cj-height);
 }
 
 .cj-link-btn--3{
-  left: 56.85%;
-  top: 51.10%;
-  width: 15.60%;
-  height: 10.80%;
+  left: calc(var(--cj-anchor-left) + var(--cj-width) + var(--cj-gap-right));
+  top: var(--cj-top);
+  width: var(--cj-width);
+  height: var(--cj-height);
 }
 
 /* ======================== 14. RODAPÉ ======================== */
