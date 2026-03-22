@@ -57,6 +57,45 @@ img, picture, svg, video {
   height: auto;
   display: block;
 }
+.cj-link-btn--1{
+  left: 7.30%;
+  top: 89.15%;
+  width: 26.80%;
+  height: 8.60%;
+}
+.cj-link-btn--2{
+  left: 36.90%;
+  top: 89.15%;
+  width: 28.10%;
+  height: 8.60%;
+}
+.cj-link-btn--3{
+  left: 68.10%;
+  top: 89.15%;
+  width: 27.60%;
+  height: 8.60%;
+}
+
+@media (max-width: 768px){
+  .cj-link-btn--1{
+    left: 7.10%;
+    top: 88.75%;
+    width: 27.10%;
+    height: 8.90%;
+  }
+  .cj-link-btn--2{
+    left: 36.70%;
+    top: 88.75%;
+    width: 28.30%;
+    height: 8.90%;
+  }
+  .cj-link-btn--3{
+    left: 67.90%;
+    top: 88.75%;
+    width: 27.80%;
+    height: 8.90%;
+  }
+}
 
 /* ======================== 02. CABEÇALHO ======================== */
 .section-header{
@@ -884,44 +923,7 @@ ul li{
   --cj-gap-left: 7.90%;
   --cj-gap-right: 4.75%;
 }
-.cj-link-btn--1{
-  left: 8.80%;
-  top: 92.45%;
-  width: 26.30%;
-  height: 6.90%;
-}
-.cj-link-btn--2{
-  left: 38.20%;
-  top: 92.45%;
-  width: 27.80%;
-  height: 6.90%;
-}
-.cj-link-btn--3{
-  left: 69.60%;
-  top: 92.45%;
-  width: 27.20%;
-  height: 6.90%;
-}
 
-@media (max-width: 768px){
-  .cj-link-btn--1{
-    left: 8.50%;
-    top: 92.05%;
-    width: 26.60%;
-    height: 7.20%;
-  }
-  .cj-link-btn--2{
-    left: 37.90%;
-    top: 92.05%;
-    width: 28.00%;
-    height: 7.20%;
-  }
-  .cj-link-btn--3{
-    left: 69.30%;
-    top: 92.05%;
-    width: 27.40%;
-    height: 7.20%;
-  }
 
 /* ======================== 14. RODAPÉ ======================== */
 @media (min-width: 901px){
