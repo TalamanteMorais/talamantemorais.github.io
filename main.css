@@ -51,7 +51,6 @@ h3{
   font-size: clamp(1.15rem, 1.6vw, 1.35rem);
 }
 /* regra removida por redundância: já existe .main-nav a completo abaixo com o mesmo font-size */
-
 img, picture, svg, video {
   max-width: 100%;
   height: auto;
