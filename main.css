@@ -884,27 +884,44 @@ ul li{
   --cj-gap-left: 7.90%;
   --cj-gap-right: 4.75%;
 }
-
 .cj-link-btn--1{
-  left: calc(var(--cj-anchor-left) - var(--cj-width) - var(--cj-gap-left));
-  top: var(--cj-top);
-  width: var(--cj-width);
-  height: var(--cj-height);
+  left: 8.80%;
+  top: 94.10%;
+  width: 26.30%;
+  height: 6.90%;
 }
-
 .cj-link-btn--2{
-  left: var(--cj-anchor-left);
-  top: var(--cj-top);
-  width: var(--cj-width);
-  height: var(--cj-height);
+  left: 38.20%;
+  top: 94.10%;
+  width: 27.80%;
+  height: 6.90%;
+}
+.cj-link-btn--3{
+  left: 69.60%;
+  top: 94.10%;
+  width: 27.20%;
+  height: 6.90%;
 }
 
-.cj-link-btn--3{
-  left: calc(var(--cj-anchor-left) + var(--cj-width) + var(--cj-gap-right));
-  top: var(--cj-top);
-  width: var(--cj-width);
-  height: var(--cj-height);
-}
+@media (max-width: 768px){
+  .cj-link-btn--1{
+    left: 8.50%;
+    top: 93.70%;
+    width: 26.60%;
+    height: 7.20%;
+  }
+  .cj-link-btn--2{
+    left: 37.90%;
+    top: 93.70%;
+    width: 28.00%;
+    height: 7.20%;
+  }
+  .cj-link-btn--3{
+    left: 69.30%;
+    top: 93.70%;
+    width: 27.40%;
+    height: 7.20%;
+  }
 
 /* ======================== 14. RODAPÉ ======================== */
 @media (min-width: 901px){
