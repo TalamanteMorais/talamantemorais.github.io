@@ -886,19 +886,19 @@ ul li{
 }
 .cj-link-btn--1{
   left: 8.80%;
-  top: 94.10%;
+  top: 92.45%;
   width: 26.30%;
   height: 6.90%;
 }
 .cj-link-btn--2{
   left: 38.20%;
-  top: 94.10%;
+  top: 92.45%;
   width: 27.80%;
   height: 6.90%;
 }
 .cj-link-btn--3{
   left: 69.60%;
-  top: 94.10%;
+  top: 92.45%;
   width: 27.20%;
   height: 6.90%;
 }
@@ -906,19 +906,19 @@ ul li{
 @media (max-width: 768px){
   .cj-link-btn--1{
     left: 8.50%;
-    top: 93.70%;
+    top: 92.05%;
     width: 26.60%;
     height: 7.20%;
   }
   .cj-link-btn--2{
     left: 37.90%;
-    top: 93.70%;
+    top: 92.05%;
     width: 28.00%;
     height: 7.20%;
   }
   .cj-link-btn--3{
     left: 69.30%;
-    top: 93.70%;
+    top: 92.05%;
     width: 27.40%;
     height: 7.20%;
   }
