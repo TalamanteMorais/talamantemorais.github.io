@@ -58,39 +58,38 @@ img, picture, svg, video {
 }
 .cj-link-btn--1{
   left: 8.90%;
-  top: 79.20%;
+  top: 78.40%;
   width: 22.90%;
   height: 8.60%;
 }
 .cj-link-btn--2{
   left: 38.60%;
-  top: 79.20%;
+  top: 78.40%;
   width: 24.10%;
   height: 8.60%;
 }
 .cj-link-btn--3{
   left: 69.80%;
-  top: 79.20%;
+  top: 78.40%;
   width: 23.60%;
   height: 8.60%;
 }
-
 @media (max-width: 768px){
   .cj-link-btn--1{
     left: 8.70%;
-    top: 78.50%;
+    top: 77.70%;
     width: 23.20%;
     height: 8.90%;
   }
   .cj-link-btn--2{
     left: 38.40%;
-    top: 78.50%;
+    top: 77.70%;
     width: 24.30%;
     height: 8.90%;
   }
   .cj-link-btn--3{
     left: 69.60%;
-    top: 78.50%;
+    top: 77.70%;
     width: 23.80%;
     height: 8.90%;
   }
