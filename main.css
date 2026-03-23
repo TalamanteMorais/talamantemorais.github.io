@@ -57,42 +57,42 @@ img, picture, svg, video {
   display: block;
 }
 .cj-link-btn--1{
-  left: 14.00%;
-  top: 78.80%;
-  width: 20.00%;
-  height: 8.60%;
+  left: 11.91%;
+  top: 78.03%;
+  width: 22.72%;
+  height: 8.20%;
 }
 .cj-link-btn--2{
-  left: 33.10%;
-  top: 78.80%;
-  width: 20.00%;
-  height: 8.60%;
+  left: 36.85%;
+  top: 77.93%;
+  width: 24.09%;
+  height: 8.40%;
 }
 .cj-link-btn--3{
-  left: 68.00%;
-  top: 78.80%;
-  width: 20.00%;
-  height: 8.60%;
+  left: 63.15%;
+  top: 77.93%;
+  width: 24.87%;
+  height: 8.40%;
 }
 
 @media (max-width: 768px){
   .cj-link-btn--1{
-    left: 18.50%;
-    top: 77.70%;
-    width: 22.00%;
-    height: 8.90%;
+    left: 11.91%;
+    top: 78.03%;
+    width: 22.72%;
+    height: 8.20%;
   }
   .cj-link-btn--2{
-    left: 37.60%;
-    top: 77.70%;
-    width: 23.00%;
-    height: 8.90%;
+    left: 36.85%;
+    top: 77.93%;
+    width: 24.09%;
+    height: 8.40%;
   }
   .cj-link-btn--3{
-    left: 61.50%;
-    top: 77.70%;
-    width: 23.00%;
-    height: 8.90%;
+    left: 63.15%;
+    top: 77.93%;
+    width: 24.87%;
+    height: 8.40%;
   }
 }
 
