@@ -360,12 +360,48 @@ img, picture, svg, video {
     justify-content: center;
   }
 }
+.cta-btn,
+.main-btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0.62rem 1.18rem;
+  background: var(--brand);
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(0.95rem, 2vw, 1rem);
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+  border: none;
+  border-radius: 32px;
+  cursor: pointer;
+  transition: background-color 0.25s, transform 0.15s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 14px rgba(24, 100, 171, 0.15);
+}
+
+.cta-btn--ghost{
+  background: #ffffff;
+  color: #0f2743;
+  border: 1px solid rgba(15, 39, 67, 0.14);
+  box-shadow: 0 4px 12px rgba(15, 39, 67, 0.06);
+}
+
 .cta-btn:hover, .main-btn:hover{
   background-color: var(--brand-dark);
   transform: translateY(-2px);
   box-shadow: 0 6px 18px rgba(24, 100, 171, 0.2);
 }
-.cta-btn:focus-visible, .main-btn:focus-visible{
+
+.cta-btn--ghost:hover{
+  background: #f3f7fb;
+  color: #0f2743;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(15, 39, 67, 0.10);
+}
+
+.cta-btn:focus-visible, .main-btn:focus-visible, .cta-btn--ghost:focus-visible{
   outline: 3px solid #a3d3ff;
   outline-offset: 2px;
   border-radius: 32px;
@@ -719,13 +755,14 @@ button[type="submit"]:focus-visible{
   outline-offset: 2px;
   border-radius: 32px;
 }
-
 #contato button[type="submit"]{
   margin-top: 0.25rem;
 }
+
 #contato p{
-  margin: 0.65rem 0 0;
+  margin: 0.7rem 0 0;
 }
+
 .whatsapp-inline-btn{
   display: inline-flex;
   align-items: center;
@@ -750,18 +787,20 @@ button[type="submit"]:focus-visible{
   background-color: #25D366;
   border-radius: 50%;
 }
+
 .whatsapp-inline-btn:hover,
 .whatsapp-inline-btn:focus-visible{
   text-decoration: none;
 }
+
 #contato ul{
   list-style: none;
-  margin: 0.95rem 0 0;
+  margin: 1rem 0 0;
   padding: 0;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.55rem;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
 }
 
 #contato ul li{
@@ -773,21 +812,23 @@ button[type="submit"]:focus-visible{
   align-items: center;
   justify-content: center;
   min-height: 40px;
-  padding: 0.55rem 1rem;
-  background: var(--brand);
-  color: #ffffff;
+  padding: 0.52rem 0.95rem;
+  background: #ffffff;
+  color: #0f2743;
   font-weight: 600;
   text-decoration: none;
+  border: 1px solid rgba(15, 39, 67, 0.14);
   border-radius: 999px;
-  box-shadow: 0 4px 12px rgba(24, 100, 171, 0.15);
-  transition: background-color 0.25s, transform 0.15s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 12px rgba(15, 39, 67, 0.06);
+  transition: background-color 0.25s, color 0.25s, transform 0.15s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 #contato ul a:hover{
-  background: var(--brand-dark);
-  color: #ffffff;
+  background: #f3f7fb;
+  color: #0f2743;
+  border-color: rgba(15, 39, 67, 0.22);
   transform: translateY(-1px);
-  box-shadow: 0 6px 18px rgba(24, 100, 171, 0.2);
+  box-shadow: 0 6px 18px rgba(15, 39, 67, 0.10);
 }
 
 #contato ul a:focus-visible{
@@ -799,10 +840,12 @@ button[type="submit"]:focus-visible{
 @media (max-width: 700px){
   #contato ul{
     gap: 0.5rem;
-    align-items: flex-start;
+    align-items: stretch;
+    flex-direction: column;
   }
 
   #contato ul a{
+    width: 100%;
     min-height: 38px;
     padding: 0.5rem 0.95rem;
   }
