@@ -1300,6 +1300,118 @@ button[type="submit"]:focus-visible{
   }
 }
 
+/* ======================== 24. BLOCOS TEXTUAIS DA HOME ======================== */
+#sobre,
+#servicos,
+#contato{
+  max-width: var(--container-max);
+  margin: 2.2rem auto 0;
+  padding: clamp(1.2rem, 2.4vw, 1.6rem);
+  background: linear-gradient(180deg, rgba(255,255,255,0.97), rgba(252,253,255,0.93));
+  border: 1px solid rgba(15, 39, 67, 0.08);
+  border-radius: 18px;
+  box-shadow: 0 10px 24px rgba(15, 39, 67, 0.06);
+}
+
+#sobre h2,
+#servicos h2,
+#contato h2{
+  color: #0f2743;
+  margin: 0 0 0.85rem 0;
+  line-height: 1.15;
+}
+
+#sobre .service-desc,
+.service-card .service-desc{
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.68;
+  color: #2d3f52;
+}
+
+#sobre .cta-btn,
+.service-card .cta-btn{
+  min-width: 132px;
+  text-align: center;
+}
+
+#sobre .cta-btn{
+  margin-top: 0.95rem;
+}
+
+.services-grid{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+.service-card{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.8rem;
+  padding: 1.25rem 1.2rem;
+  background: rgba(255,255,255,0.96);
+  border: 1px solid rgba(15, 39, 67, 0.07);
+  border-left: 5px solid rgba(24, 100, 171, 0.52);
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(15, 39, 67, 0.04);
+}
+
+.service-title{
+  margin: 0;
+  color: #0f2743;
+  line-height: 1.2;
+}
+
+.service-card .service-desc{
+  margin: 0;
+}
+
+.service-card .cta-btn{
+  margin-top: 0.15rem;
+}
+
+#contato p{
+  color: #2d3f52;
+  line-height: 1.65;
+}
+
+#contato ul{
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.55rem;
+}
+
+@media (max-width: 700px){
+  #sobre,
+  #servicos,
+  #contato{
+    margin-top: 1.4rem;
+    padding: 1rem;
+    border-radius: 16px;
+  }
+
+  .services-grid{
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .service-card{
+    padding: 1.05rem 1rem;
+  }
+
+  #sobre .cta-btn,
+  .service-card .cta-btn{
+    width: 100%;
+    min-width: 0;
+  }
+}
 @media (max-width: 700px){
   .profile-hero{
     grid-template-columns: 1fr;
