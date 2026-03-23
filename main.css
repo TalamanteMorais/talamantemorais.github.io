@@ -792,62 +792,28 @@ button[type="submit"]:focus-visible{
 .whatsapp-inline-btn:focus-visible{
   text-decoration: none;
 }
-
-#contato ul{
-  list-style: none;
-  margin: 1rem 0 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.6rem;
-}
-
-#contato ul li{
-  margin: 0;
-}
-
-#contato ul a{
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 40px;
-  padding: 0.52rem 0.95rem;
-  background: #ffffff;
-  color: #0f2743;
-  font-weight: 600;
-  text-decoration: none;
-  border: 1px solid rgba(15, 39, 67, 0.14);
-  border-radius: 999px;
-  box-shadow: 0 4px 12px rgba(15, 39, 67, 0.06);
-  transition: background-color 0.25s, color 0.25s, transform 0.15s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-}
-
-#contato ul a:hover{
-  background: #f3f7fb;
-  color: #0f2743;
-  border-color: rgba(15, 39, 67, 0.22);
-  transform: translateY(-1px);
-  box-shadow: 0 6px 18px rgba(15, 39, 67, 0.10);
-}
-
-#contato ul a:focus-visible{
-  outline: 3px solid #a3d3ff;
-  outline-offset: 2px;
-  border-radius: 999px;
-}
-
 @media (max-width: 700px){
-  #contato ul{
-    gap: 0.5rem;
-    align-items: stretch;
-    flex-direction: column;
+  #sobre,
+  #servicos,
+  #contato{
+    margin-top: 1.4rem;
+    padding: 1rem;
+    border-radius: 16px;
   }
 
-  #contato ul a{
+  .services-grid{
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .service-card{
+    padding: 1.05rem 1rem;
+  }
+
+  #sobre .cta-btn,
+  .service-card .cta-btn{
     width: 100%;
-    min-height: 38px;
-    padding: 0.5rem 0.95rem;
+    min-width: 0;
   }
 }
 
@@ -1194,12 +1160,12 @@ button[type="submit"]:focus-visible{
 }
 .profile-hero{
   max-width: var(--container-max);
-  margin: 3rem auto 2.2rem;
-  padding: clamp(1.35rem, 2.4vw, 1.8rem);
+  margin: 3rem auto 2.35rem;
+  padding: clamp(1.45rem, 2.6vw, 1.95rem);
   display: grid;
   grid-template-columns: minmax(120px, 148px) minmax(0, 1fr);
   align-items: start;
-  gap: clamp(1.25rem, 2.6vw, 2rem);
+  gap: clamp(1.45rem, 2.8vw, 2.15rem);
   background: linear-gradient(180deg, rgba(255,255,255,0.97), rgba(252,253,255,0.94));
   border: 1px solid rgba(15, 39, 67, 0.08);
   border-top: 4px solid rgba(24, 100, 171, 0.75);
@@ -1212,12 +1178,13 @@ button[type="submit"]:focus-visible{
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  gap: 0.55rem;
+  gap: 0.7rem;
+  padding-top: 0.15rem;
 }
 
 .profile-hero-media img{
-  width: clamp(112px, 12vw, 124px);
-  height: clamp(112px, 12vw, 124px);
+  width: clamp(114px, 12vw, 126px);
+  height: clamp(114px, 12vw, 126px);
   object-fit: cover;
   border-radius: 50%;
   border: 3px solid rgba(24, 100, 171, 0.14);
@@ -1230,10 +1197,11 @@ button[type="submit"]:focus-visible{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  padding-top: 0.1rem;
 }
 
 .profile-hero-kicker{
-  margin: 0 0 0.45rem 0;
+  margin: 0 0 0.55rem 0;
   color: var(--brand);
   font-size: 0.95rem;
   font-weight: 700;
@@ -1242,14 +1210,14 @@ button[type="submit"]:focus-visible{
 }
 
 .profile-hero-name{
-  margin: 0 0 0.55rem 0;
+  margin: 0 0 0.7rem 0;
   color: #0f2743;
-  font-size: clamp(2rem, 3.5vw, 2.7rem);
-  line-height: 1.08;
+  font-size: clamp(2.05rem, 3.6vw, 2.8rem);
+  line-height: 1.04;
 }
 
 .profile-hero-role{
-  margin: 0 0 0.95rem 0;
+  margin: 0 0 1.1rem 0;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -1280,18 +1248,18 @@ button[type="submit"]:focus-visible{
 .profile-hero-summary{
   width: 100%;
   max-width: 100%;
-  margin: 0 0 0.85rem 0;
+  margin: 0 0 1rem 0;
   text-align: justify;
   text-justify: inter-word;
-  line-height: 1.72;
+  line-height: 1.78;
   color: #2d3f52;
 }
 
 .profile-hero-actions{
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-top: 0.35rem;
+  gap: 0.8rem;
+  margin-top: 0.5rem;
 }
 
 .profile-hero-actions .cta-btn,
@@ -1317,7 +1285,7 @@ button[type="submit"]:focus-visible{
   text-decoration: none;
   border-bottom: 1px solid rgba(15,39,67,0.18);
   padding-bottom: 1px;
-  margin-top: 0.1rem;
+  margin-top: 0.15rem;
   line-height: 1.2;
   text-align: center;
 }
@@ -1329,8 +1297,8 @@ button[type="submit"]:focus-visible{
 @media (max-width: 900px){
   .profile-hero{
     grid-template-columns: 120px minmax(0, 1fr);
-    gap: 1.1rem;
-    padding: 1.25rem;
+    gap: 1.2rem;
+    padding: 1.3rem;
     margin: 2.2rem auto 1.8rem;
   }
 
@@ -1338,8 +1306,13 @@ button[type="submit"]:focus-visible{
     font-size: clamp(1.7rem, 4vw, 2.2rem);
   }
 
+  .profile-hero-role{
+    margin-bottom: 1rem;
+  }
+
   .profile-hero-summary{
     text-align: left;
+    line-height: 1.72;
   }
 }
 
@@ -1420,15 +1393,48 @@ button[type="submit"]:focus-visible{
   color: #2d3f52;
   line-height: 1.65;
 }
-
 #contato ul{
   list-style: none;
   margin: 1rem 0 0;
   padding: 0;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.55rem;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+#contato ul li{
+  margin: 0;
+}
+
+#contato ul a{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 0.52rem 0.95rem;
+  background: #ffffff;
+  color: #0f2743;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid rgba(15, 39, 67, 0.14);
+  border-radius: 999px;
+  box-shadow: 0 4px 12px rgba(15, 39, 67, 0.06);
+  transition: background-color 0.25s, color 0.25s, transform 0.15s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+#contato ul a:hover{
+  background: #f3f7fb;
+  color: #0f2743;
+  border-color: rgba(15, 39, 67, 0.22);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(15, 39, 67, 0.10);
+}
+
+#contato ul a:focus-visible{
+  outline: 3px solid #a3d3ff;
+  outline-offset: 2px;
+  border-radius: 999px;
 }
 
 @media (max-width: 700px){
@@ -1454,7 +1460,20 @@ button[type="submit"]:focus-visible{
     width: 100%;
     min-width: 0;
   }
+
+  #contato ul{
+    gap: 0.5rem;
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  #contato ul a{
+    width: 100%;
+    min-height: 38px;
+    padding: 0.5rem 0.95rem;
+  }
 }
+
 @media (max-width: 700px){
   .profile-hero{
     grid-template-columns: 1fr;
