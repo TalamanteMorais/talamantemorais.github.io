@@ -104,12 +104,12 @@ def compact_spaces(text: str) -> str:
 def shorten_title(title: str) -> str:
     clean = compact_spaces(title)
     return TITLE_MAP.get(clean, clean)
-
 def load_rss_items(url: str, limite: int, title_fixo: str | None = None) -> list[dict[str, str]]:
     xml_content = fetch_xml(url)
-    root = ET.fromstring(xml_content)
+    xml_text = xml_content.decode("utf-8", errors="replace")
+    xml_text = re.sub(r"&(?!#?\w+;)", "&amp;", xml_text)
+    root = ET.fromstring(xml_text)
     items: list[dict[str, str]] = []
-
     for item in root.findall("rss:item", NS):
         title_text = item.findtext("rss:title", default="", namespaces=NS)
         link_text = item.findtext("rss:link", default="", namespaces=NS)
