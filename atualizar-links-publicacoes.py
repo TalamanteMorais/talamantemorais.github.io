@@ -183,8 +183,6 @@ def build_auto_links() -> list[dict[str, str]]:
 
     auto_links = merge_links(auto_links, config.get("fixos", []))
     return auto_links
-
-
 def main() -> None:
     auto_links = build_auto_links()
     final_links = merge_links(auto_links, MANUAL_LINKS)
@@ -193,3 +191,7 @@ def main() -> None:
         f"Arquivo atualizado com {len(final_links)} links: {ARQUIVO_SAIDA} "
         f"(fonte automática: {FONTE_AUTOMATICA_ATIVA})"
     )
+
+
+if __name__ == "__main__":
+    main()
