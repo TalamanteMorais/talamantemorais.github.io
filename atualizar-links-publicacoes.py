@@ -108,28 +108,72 @@ def load_rss_items(url: str, limite: int, title_fixo: str | None = None) -> list
     xml_content = fetch_xml(url)
     xml_text = xml_content.decode("utf-8", errors="replace")
     xml_text = re.sub(r"&(?!#?\w+;)", "&amp;", xml_text)
-    root = ET.fromstring(xml_text)
+
     items: list[dict[str, str]] = []
-    for item in root.findall("rss:item", NS):
-        title_text = item.findtext("rss:title", default="", namespaces=NS)
-        link_text = item.findtext("rss:link", default="", namespaces=NS)
-        date_text = item.findtext("dc:date", default="", namespaces=NS)
 
-        if not link_text:
-            continue
+    try:
+        root = ET.fromstring(xml_text)
 
-        short_title = title_fixo or shorten_title(title_text)
+        rss_items = root.findall(".//item")
+        if not rss_items:
+            rss_items = root.findall("rss:item", NS)
 
-        if short_title in TITLES_EXCLUIDOS:
-            continue
+        for item in rss_items:
+            title_text = (
+                item.findtext("title", default="")
+                or item.findtext("rss:title", default="", namespaces=NS)
+            )
+            link_text = (
+                item.findtext("link", default="")
+                or item.findtext("rss:link", default="", namespaces=NS)
+            )
+            date_text = (
+                item.findtext("pubDate", default="")
+                or item.findtext("dc:date", default="", namespaces=NS)
+            )
 
-        items.append(
-            {
-                "title": short_title.strip(),
-                "url": link_text.strip(),
-                "date": date_text.strip(),
-            }
+            if not link_text:
+                continue
+
+            short_title = title_fixo or shorten_title(title_text)
+
+            if short_title in TITLES_EXCLUIDOS:
+                continue
+
+            items.append(
+                {
+                    "title": short_title.strip(),
+                    "url": link_text.strip(),
+                    "date": date_text.strip(),
+                }
+            )
+
+    except ET.ParseError:
+        pattern = re.compile(
+            r"<item\b.*?>.*?<title>(.*?)</title>.*?<link>(.*?)</link>(?:.*?<pubDate>(.*?)</pubDate>)?.*?</item>",
+            re.IGNORECASE | re.DOTALL,
         )
+
+        for match in pattern.finditer(xml_text):
+            title_text = compact_spaces(match.group(1))
+            link_text = compact_spaces(match.group(2))
+            date_text = compact_spaces(match.group(3) or "")
+
+            if not link_text:
+                continue
+
+            short_title = title_fixo or shorten_title(title_text)
+
+            if short_title in TITLES_EXCLUIDOS:
+                continue
+
+            items.append(
+                {
+                    "title": short_title.strip(),
+                    "url": link_text.strip(),
+                    "date": date_text.strip(),
+                }
+            )
 
     items.sort(key=lambda x: x.get("date", ""), reverse=True)
 
@@ -145,7 +189,6 @@ def load_rss_items(url: str, limite: int, title_fixo: str | None = None) -> list
             break
 
     return result
-
 
 def merge_links(auto_links: list[dict[str, str]], manual_links: list[dict[str, str]]) -> list[dict[str, str]]:
     merged: list[dict[str, str]] = []
