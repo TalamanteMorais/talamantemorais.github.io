@@ -237,6 +237,7 @@ img, picture, svg, video {
   padding: 0.42rem 0.78rem;
   border-radius: 999px;
 }
+
 @media (max-width: 900px){
   .main-nav{
     display: flex;
@@ -830,7 +831,6 @@ button[type="submit"]:focus-visible{
 }
 /* ======================== 18. CARROSSEL ======================== */
 .carousel-container{
-.carousel-container{
   position: relative;
   overflow: hidden;
   border-radius: 16px;
@@ -845,7 +845,6 @@ button[type="submit"]:focus-visible{
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
 }
-
 @media (max-width: 900px){
   .carousel-container{
     height: auto;
@@ -1407,7 +1406,6 @@ button[type="submit"]:focus-visible{
 #contato ul li{
   margin: 0;
 }
-
 #contato ul a{
   display: inline-flex;
   align-items: center;
@@ -1417,6 +1415,11 @@ button[type="submit"]:focus-visible{
   background: #ffffff;
   color: #0f2743;
   font-weight: 600;
+  text-decoration: none;
+  border: 1px solid rgba(15, 39, 67, 0.14);
+  border-radius: 999px;
+  box-shadow: 0 4px 12px rgba(15, 39, 67, 0.06);
+  transition: background-color 0.25s, color 0.25s, transform 0.15s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 /* ======================== 25. SUBPÁGINAS INTERNAS E CONTEÚDOS JURÍDICOS ======================== */
