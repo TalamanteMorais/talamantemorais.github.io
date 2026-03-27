@@ -400,17 +400,24 @@ const siteKey = "6Ld0yF8sAAAAAN5JXxfuWIV3K2nhA9p-r4VWKGKo";
       })
       .then((links) => {
         if (!Array.isArray(links)) return;
-const validos = links.filter((item) =>
-  item &&
-  typeof item === "object" &&
-  typeof item.title === "string" &&
-  item.title.trim() &&
-  typeof item.url === "string" &&
-  /^https?:\/\//i.test(item.url.trim())
-);
-        if (validos.length === 0) return;
+
+        const validos = links.filter((item) =>
+          item &&
+          typeof item === "object" &&
+          typeof item.title === "string" &&
+          item.title.trim() &&
+          typeof item.url === "string" &&
+          /^https?:\/\//i.test(item.url.trim())
+        );
 
         linksPublicacoesEl.innerHTML = "";
+
+        if (validos.length === 0) {
+          const li = document.createElement("li");
+          li.textContent = "Links em atualização.";
+          linksPublicacoesEl.appendChild(li);
+          return;
+        }
 
         validos.forEach((item) => {
           const li = document.createElement("li");

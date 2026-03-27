@@ -555,9 +555,9 @@ ul li{
   cursor: pointer;
   overflow: hidden;
   -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
   transition: none;
 }
-
 .cj-link-btn:hover{
   background: rgba(140, 140, 140, 0.20);
 }
@@ -830,6 +830,7 @@ button[type="submit"]:focus-visible{
 }
 /* ======================== 18. CARROSSEL ======================== */
 .carousel-container{
+.carousel-container{
   position: relative;
   overflow: hidden;
   border-radius: 16px;
@@ -838,7 +839,8 @@ button[type="submit"]:focus-visible{
   height: var(--carousel-h-desktop);
   background: #000;
   touch-action: pan-y;
-  overscroll-behavior: auto;
+  overscroll-behavior-x: contain;
+  overscroll-behavior-y: auto;
   margin: clamp(0.8rem, 2vw, 1.2rem) auto clamp(1rem, 2.2vw, 1.35rem);
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;

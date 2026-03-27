@@ -5,10 +5,37 @@ import re
 import urllib.request
 import xml.etree.ElementTree as ET
 from pathlib import Path
-RSS_URL = "https://www.gov.br/compras/pt-br/acesso-a-informacao/manuais/manual-fase-externa/manual-sicaf/RSS"
-RSS_URL_NORMATIVO = "https://www.gov.br/compras/pt-br/acesso-a-informacao/perguntas-frequentes/sicaf-normativo/RSS"
-LIMITE_SICAF = 5
 ARQUIVO_SAIDA = Path("links-publicacoes.json")
+
+FONTE_AUTOMATICA_ATIVA = "stj"
+LIMITE_AUTOMATICO = 5
+
+FONTES_AUTOMATICAS = {
+    "sicaf": {
+        "feeds": [
+            {
+                "url": "https://www.gov.br/compras/pt-br/acesso-a-informacao/manuais/manual-fase-externa/manual-sicaf/RSS",
+                "title_fixo": None,
+            },
+        ],
+        "fixos": [
+            {
+                "title": "IN nº 3/2018 - SICAF Normativo",
+                "url": "https://www.gov.br/compras/pt-br/acesso-a-informacao/perguntas-frequentes/sicaf-normativo",
+            }
+        ],
+    },
+    "stj": {
+        "feeds": [
+            {
+                "url": "https://res.stj.jus.br/hrestp-c-portalp/RSS.xml",
+                "title_fixo": None,
+            },
+        ],
+        "fixos": [],
+    },
+}
+
 
 MANUAL_LINKS = [
     {
@@ -140,20 +167,29 @@ def save_json(data: list[dict[str, str]], output_file: Path) -> None:
         json.dumps(data, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )
+def build_auto_links() -> list[dict[str, str]]:
+    config = FONTES_AUTOMATICAS[FONTE_AUTOMATICA_ATIVA]
+
+    auto_links: list[dict[str, str]] = []
+
+    for feed in config.get("feeds", []):
+        auto_links.extend(
+            load_rss_items(
+                feed["url"],
+                LIMITE_AUTOMATICO,
+                feed.get("title_fixo"),
+            )
+        )
+
+    auto_links = merge_links(auto_links, config.get("fixos", []))
+    return auto_links
+
 
 def main() -> None:
-    auto_sicaf = load_rss_items(RSS_URL, LIMITE_SICAF)
-    auto_normativo = [
-        {
-            "title": "IN nº 3/2018 - SICAF Normativo",
-            "url": "https://www.gov.br/compras/pt-br/acesso-a-informacao/perguntas-frequentes/sicaf-normativo",
-        }
-    ]
-    auto_links = merge_links(auto_sicaf + auto_normativo, [])
+    auto_links = build_auto_links()
     final_links = merge_links(auto_links, MANUAL_LINKS)
     save_json(final_links, ARQUIVO_SAIDA)
-    print(f"Arquivo atualizado com {len(final_links)} links: {ARQUIVO_SAIDA}")
-
-
-if __name__ == "__main__":
-    main()
+    print(
+        f"Arquivo atualizado com {len(final_links)} links: {ARQUIVO_SAIDA} "
+        f"(fonte automática: {FONTE_AUTOMATICA_ATIVA})"
+    )
