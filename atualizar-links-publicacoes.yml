@@ -1,0 +1,34 @@
+name: Atualizar links publicações
+
+on:
+  schedule:
+    - cron: "0 9 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  atualizar:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar repositório
+        uses: actions/checkout@v5
+      - name: Instalar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      
+      - name: Executar atualizador
+        run: python atualizar-links-publicacoes.py
+
+      - name: Commitar alterações
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add links-publicacoes.json
+          git diff --cached --quiet || git commit -m "Atualiza links-publicacoes automaticamente"
+
+      - name: Enviar alterações
+        run: git push
