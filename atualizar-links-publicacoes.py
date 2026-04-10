@@ -96,11 +96,21 @@ NS = {
     "dc": "http://purl.org/dc/elements/1.1/",
 }
 
-
 def fetch_xml(url: str) -> bytes:
     request = urllib.request.Request(
         url,
-        headers={"User-Agent": "Mozilla/5.0"},
+        headers={
+            "User-Agent": (
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                "AppleWebKit/537.36 (KHTML, like Gecko) "
+                "Chrome/123.0.0.0 Safari/537.36"
+            ),
+            "Accept": "application/rss+xml, application/xml, text/xml;q=0.9, */*;q=0.8",
+            "Accept-Language": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7",
+            "Cache-Control": "no-cache",
+            "Pragma": "no-cache",
+            "Referer": "https://www.stj.jus.br/",
+        },
     )
     with urllib.request.urlopen(request, timeout=30) as response:
         return response.read()
@@ -249,12 +259,15 @@ def build_auto_links() -> list[dict[str, str]]:
     auto_links: list[dict[str, str]] = []
 
     for feed in config.get("feeds", []):
-        current_links = load_rss_items(
-            feed["url"],
-            LIMITE_AUTOMATICO,
-            feed.get("title_fixo"),
-        )
-        auto_links.extend(current_links)
+        try:
+            current_links = load_rss_items(
+                feed["url"],
+                LIMITE_AUTOMATICO,
+                feed.get("title_fixo"),
+            )
+            auto_links.extend(current_links)
+        except Exception as exc:
+            print(f"Falha ao coletar feed {feed['url']}: {exc}")
 
     auto_links = merge_links(auto_links, config.get("fixos", []))
     return auto_links
