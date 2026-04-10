@@ -272,14 +272,24 @@ def build_auto_links() -> list[dict[str, str]]:
     auto_links = merge_links(auto_links, config.get("fixos", []))
     return auto_links
 
-
 def main() -> None:
     auto_links = build_auto_links()
 
     if FONTE_AUTOMATICA_ATIVA and not auto_links:
-        raise RuntimeError(
-            f"Nenhum link automático foi coletado para a fonte ativa: {FONTE_AUTOMATICA_ATIVA}"
+        if ARQUIVO_SAIDA.exists():
+            print(
+                f"Nenhum link automático foi coletado para a fonte ativa: "
+                f"{FONTE_AUTOMATICA_ATIVA}. Mantido o arquivo existente: {ARQUIVO_SAIDA}"
+            )
+            return
+
+        final_links = merge_links([], MANUAL_LINKS)
+        save_json(final_links, ARQUIVO_SAIDA)
+        print(
+            f"Nenhum link automático foi coletado para a fonte ativa: "
+            f"{FONTE_AUTOMATICA_ATIVA}. Gerado arquivo apenas com links manuais."
         )
+        return
 
     final_links = merge_links(auto_links, MANUAL_LINKS)
     save_json(final_links, ARQUIVO_SAIDA)
