@@ -28,12 +28,21 @@ FONTES_AUTOMATICAS = {
     "stj": {
         "feeds": [
             {
-                "url": "https://res.stj.jus.br/hrestp-c-portalp/RSS.xml",
+                "url": "https://processo.stj.jus.br/jurisprudencia/externo/InformativoFeed",
+                "title_fixo": None,
+            },
+            {
+                "url": "https://scon.stj.jus.br/SCON/JurisprudenciaEmTesesFeed",
+                "title_fixo": None,
+            },
+            {
+                "url": "https://scon.stj.jus.br/SCON/PesquisaProntaFeed",
                 "title_fixo": None,
             },
         ],
         "fixos": [],
     },
+
 }
 
 
