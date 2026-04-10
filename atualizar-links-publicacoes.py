@@ -104,6 +104,35 @@ def compact_spaces(text: str) -> str:
 def shorten_title(title: str) -> str:
     clean = compact_spaces(title)
     return TITLE_MAP.get(clean, clean)
+
+
+def get_local_name(tag: str) -> str:
+    return tag.split("}", 1)[-1] if "}" in tag else tag
+
+
+def get_child_text(item: ET.Element, *names: str) -> str:
+    for child in list(item):
+        if get_local_name(child.tag) in names:
+            return compact_spaces("".join(child.itertext()))
+    return ""
+
+
+def get_link_value(item: ET.Element) -> str:
+    for child in list(item):
+        if get_local_name(child.tag) != "link":
+            continue
+
+        text_value = compact_spaces("".join(child.itertext()))
+        if text_value:
+            return text_value
+
+        href_value = compact_spaces(child.attrib.get("href", ""))
+        if href_value:
+            return href_value
+
+    return ""
+
+
 def load_rss_items(url: str, limite: int, title_fixo: str | None = None) -> list[dict[str, str]]:
     xml_content = fetch_xml(url)
     xml_text = xml_content.decode("utf-8", errors="replace")
@@ -114,25 +143,18 @@ def load_rss_items(url: str, limite: int, title_fixo: str | None = None) -> list
     try:
         root = ET.fromstring(xml_text)
 
-        rss_items = root.findall(".//item")
-        if not rss_items:
-            rss_items = root.findall("rss:item", NS)
+        rss_items = [
+            element
+            for element in root.iter()
+            if get_local_name(element.tag) == "item"
+        ]
 
         for item in rss_items:
-            title_text = (
-                item.findtext("title", default="")
-                or item.findtext("rss:title", default="", namespaces=NS)
-            )
-            link_text = (
-                item.findtext("link", default="")
-                or item.findtext("rss:link", default="", namespaces=NS)
-            )
-            date_text = (
-                item.findtext("pubDate", default="")
-                or item.findtext("dc:date", default="", namespaces=NS)
-            )
+            title_text = get_child_text(item, "title")
+            link_text = get_link_value(item)
+            date_text = get_child_text(item, "pubDate", "date", "updated")
 
-            if not link_text:
+            if not title_text or not link_text:
                 continue
 
             short_title = title_fixo or shorten_title(title_text)
@@ -150,16 +172,16 @@ def load_rss_items(url: str, limite: int, title_fixo: str | None = None) -> list
 
     except ET.ParseError:
         pattern = re.compile(
-            r"<item\b.*?>.*?<title>(.*?)</title>.*?<link>(.*?)</link>(?:.*?<pubDate>(.*?)</pubDate>)?.*?</item>",
+            r"<item\b.*?>.*?<title>(.*?)</title>.*?<link(?:\s[^>]*)?>(.*?)</link>(?:.*?<pubDate>(.*?)</pubDate>|.*?<dc:date>(.*?)</dc:date>)?.*?</item>",
             re.IGNORECASE | re.DOTALL,
         )
 
         for match in pattern.finditer(xml_text):
             title_text = compact_spaces(match.group(1))
             link_text = compact_spaces(match.group(2))
-            date_text = compact_spaces(match.group(3) or "")
+            date_text = compact_spaces(match.group(3) or match.group(4) or "")
 
-            if not link_text:
+            if not title_text or not link_text:
                 continue
 
             short_title = title_fixo or shorten_title(title_text)
@@ -190,6 +212,7 @@ def load_rss_items(url: str, limite: int, title_fixo: str | None = None) -> list
 
     return result
 
+
 def merge_links(auto_links: list[dict[str, str]], manual_links: list[dict[str, str]]) -> list[dict[str, str]]:
     merged: list[dict[str, str]] = []
     seen: set[str] = set()
@@ -210,31 +233,38 @@ def save_json(data: list[dict[str, str]], output_file: Path) -> None:
         json.dumps(data, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )
+
 def build_auto_links() -> list[dict[str, str]]:
     config = FONTES_AUTOMATICAS[FONTE_AUTOMATICA_ATIVA]
 
     auto_links: list[dict[str, str]] = []
 
     for feed in config.get("feeds", []):
-        auto_links.extend(
-            load_rss_items(
-                feed["url"],
-                LIMITE_AUTOMATICO,
-                feed.get("title_fixo"),
-            )
+        current_links = load_rss_items(
+            feed["url"],
+            LIMITE_AUTOMATICO,
+            feed.get("title_fixo"),
         )
+        auto_links.extend(current_links)
 
     auto_links = merge_links(auto_links, config.get("fixos", []))
     return auto_links
+
+
 def main() -> None:
     auto_links = build_auto_links()
+
+    if FONTE_AUTOMATICA_ATIVA and not auto_links:
+        raise RuntimeError(
+            f"Nenhum link automático foi coletado para a fonte ativa: {FONTE_AUTOMATICA_ATIVA}"
+        )
+
     final_links = merge_links(auto_links, MANUAL_LINKS)
     save_json(final_links, ARQUIVO_SAIDA)
     print(
         f"Arquivo atualizado com {len(final_links)} links: {ARQUIVO_SAIDA} "
         f"(fonte automática: {FONTE_AUTOMATICA_ATIVA})"
     )
-
 
 if __name__ == "__main__":
     main()
