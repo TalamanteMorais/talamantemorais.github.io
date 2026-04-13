@@ -5,46 +5,34 @@ import re
 import urllib.request
 import xml.etree.ElementTree as ET
 from pathlib import Path
+
 ARQUIVO_SAIDA = Path("links-publicacoes.json")
 
 FONTE_AUTOMATICA_ATIVA = "stj"
 LIMITE_AUTOMATICO = 5
 
 FONTES_AUTOMATICAS = {
-    "sicaf": {
-        "feeds": [
-            {
-                "url": "https://www.gov.br/compras/pt-br/acesso-a-informacao/manuais/manual-fase-externa/manual-sicaf/RSS",
-                "title_fixo": None,
-            },
-        ],
-        "fixos": [
-            {
-                "title": "IN nº 3/2018 - SICAF Normativo",
-                "url": "https://www.gov.br/compras/pt-br/acesso-a-informacao/perguntas-frequentes/sicaf-normativo",
-            }
-        ],
-    },
     "stj": {
         "feeds": [
             {
+                "nome": "Informativo de Jurisprudência",
                 "url": "https://processo.stj.jus.br/jurisprudencia/externo/InformativoFeed",
-                "title_fixo": None,
+                "fallback_url": "https://processo.stj.jus.br/jurisprudencia/externo/informativo/",
             },
             {
+                "nome": "Jurisprudência em Teses",
                 "url": "https://scon.stj.jus.br/SCON/JurisprudenciaEmTesesFeed",
-                "title_fixo": None,
+                "fallback_url": "https://processo.stj.jus.br/SCON/jt/",
             },
             {
+                "nome": "Pesquisa Pronta",
                 "url": "https://scon.stj.jus.br/SCON/PesquisaProntaFeed",
-                "title_fixo": None,
+                "fallback_url": "https://processo.stj.jus.br/SCON/pesquisa_pronta/",
             },
         ],
         "fixos": [],
     },
-
 }
-
 
 MANUAL_LINKS = [
     {
@@ -77,26 +65,12 @@ MANUAL_LINKS = [
     },
 ]
 
-TITLE_MAP = {
-    "MODELO DE SOLICITACAO DE ALTERACAO DO RESPONSAVEL NO SICAF GOVERNO.docx": "Modelo de Alteração do Responsável no SICAF",
-    "Manual-Normativo SICAF.pdf": "Manual Normativo SICAF",
-    "Manual_do_Sicaf__versao_final_sistema_Fornecedor-1.5.pdf": "Manual do SICAF - Fornecedor",
-    "Manual do Sicaf para Empresas Estrangeiras.pdf": "Manual do SICAF - Empresas Estrangeiras",
-    "Manual_SICAF_Espanhol_.pdf": "Manual do SICAF - Espanhol",
-    "SICAF Operational Manual.pdf": "Manual do SICAF - Inglês",
-}
+TITLE_MAP = {}
 
-TITLES_EXCLUIDOS = {
-    "Manual do SICAF - Espanhol",
-    "Manual do SICAF - Inglês",
-}
+TITLES_EXCLUIDOS = {}
 
-NS = {
-    "rss": "http://purl.org/rss/1.0/",
-    "dc": "http://purl.org/dc/elements/1.1/",
-}
 
-def fetch_xml(url: str) -> bytes:
+def fetch_bytes(url: str) -> bytes:
     request = urllib.request.Request(
         url,
         headers={
@@ -105,7 +79,7 @@ def fetch_xml(url: str) -> bytes:
                 "AppleWebKit/537.36 (KHTML, like Gecko) "
                 "Chrome/123.0.0.0 Safari/537.36"
             ),
-            "Accept": "application/rss+xml, application/xml, text/xml;q=0.9, */*;q=0.8",
+            "Accept": "application/rss+xml, application/xml, text/xml;q=0.9, text/html;q=0.8, */*;q=0.7",
             "Accept-Language": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7",
             "Cache-Control": "no-cache",
             "Pragma": "no-cache",
@@ -114,6 +88,10 @@ def fetch_xml(url: str) -> bytes:
     )
     with urllib.request.urlopen(request, timeout=30) as response:
         return response.read()
+
+
+def fetch_text(url: str) -> str:
+    return fetch_bytes(url).decode("utf-8", errors="replace")
 
 
 def compact_spaces(text: str) -> str:
@@ -153,8 +131,7 @@ def get_link_value(item: ET.Element) -> str:
 
 
 def load_rss_items(url: str, limite: int, title_fixo: str | None = None) -> list[dict[str, str]]:
-    xml_content = fetch_xml(url)
-    xml_text = xml_content.decode("utf-8", errors="replace")
+    xml_text = fetch_text(url)
     xml_text = re.sub(r"&(?!#?\w+;)", "&amp;", xml_text)
 
     items: list[dict[str, str]] = []
@@ -232,6 +209,50 @@ def load_rss_items(url: str, limite: int, title_fixo: str | None = None) -> list
     return result
 
 
+def parse_informativo_title(html: str) -> str:
+    match_num = re.search(r"Informativo\s*(?:de Jurisprud[êe]ncia)?\s*n[ºo]\s*(\d+)", html, re.IGNORECASE)
+    match_data = re.search(r"(\d{1,2}\s+de\s+[A-Za-zçÇãõáéíóúâêôÁÉÍÓÚÂÊÔ]+\s+de\s+\d{4})", html, re.IGNORECASE)
+    if match_num and match_data:
+        return f"STJ - Informativo de Jurisprudência nº {match_num.group(1)} - {compact_spaces(match_data.group(1))}"
+    if match_num:
+        return f"STJ - Informativo de Jurisprudência nº {match_num.group(1)}"
+    return "STJ - Informativo de Jurisprudência"
+
+
+def parse_jt_title(html: str) -> str:
+    match_ed = re.search(r"EDI[ÇC][ÃA]O\s+(\d+)", html, re.IGNORECASE)
+    match_data = re.search(r"Edi[çc][ãa]o disponibilizada em:\s*([0-9]{2}/[0-9]{2}/[0-9]{4})", html, re.IGNORECASE)
+    if match_ed and match_data:
+        return f"STJ - Jurisprudência em Teses - Edição {match_ed.group(1)} - {match_data.group(1)}"
+    if match_ed:
+        return f"STJ - Jurisprudência em Teses - Edição {match_ed.group(1)}"
+    return "STJ - Jurisprudência em Teses"
+
+
+def parse_pesquisa_pronta_title(html: str) -> str:
+    match = re.search(r"Pesquisas Recentes.*?<li>\s*(.*?)\s*</li>", html, re.IGNORECASE | re.DOTALL)
+    if match:
+        titulo = compact_spaces(re.sub(r"<.*?>", " ", match.group(1)))
+        if titulo:
+            return f"STJ - Pesquisa Pronta - {titulo}"
+    return "STJ - Pesquisa Pronta"
+
+
+def load_stj_fallback_item(nome: str, fallback_url: str) -> list[dict[str, str]]:
+    html = fetch_text(fallback_url)
+
+    if nome == "Informativo de Jurisprudência":
+        titulo = parse_informativo_title(html)
+    elif nome == "Jurisprudência em Teses":
+        titulo = parse_jt_title(html)
+    elif nome == "Pesquisa Pronta":
+        titulo = parse_pesquisa_pronta_title(html)
+    else:
+        titulo = f"STJ - {nome}"
+
+    return [{"title": titulo, "url": fallback_url}]
+
+
 def merge_links(auto_links: list[dict[str, str]], manual_links: list[dict[str, str]]) -> list[dict[str, str]]:
     merged: list[dict[str, str]] = []
     seen: set[str] = set()
@@ -253,9 +274,9 @@ def save_json(data: list[dict[str, str]], output_file: Path) -> None:
         encoding="utf-8",
     )
 
+
 def build_auto_links() -> list[dict[str, str]]:
     config = FONTES_AUTOMATICAS[FONTE_AUTOMATICA_ATIVA]
-
     auto_links: list[dict[str, str]] = []
 
     for feed in config.get("feeds", []):
@@ -266,11 +287,19 @@ def build_auto_links() -> list[dict[str, str]]:
                 feed.get("title_fixo"),
             )
             auto_links.extend(current_links)
+            print(f"Coleta RSS OK: {feed['nome']}")
         except Exception as exc:
-            print(f"Falha ao coletar feed {feed['url']}: {exc}")
+            print(f"Falha no RSS de {feed['nome']}: {exc}")
+            try:
+                fallback_links = load_stj_fallback_item(feed["nome"], feed["fallback_url"])
+                auto_links.extend(fallback_links)
+                print(f"Fallback HTML OK: {feed['nome']}")
+            except Exception as fallback_exc:
+                print(f"Falha no fallback HTML de {feed['nome']}: {fallback_exc}")
 
     auto_links = merge_links(auto_links, config.get("fixos", []))
     return auto_links
+
 
 def main() -> None:
     auto_links = build_auto_links()
@@ -297,6 +326,7 @@ def main() -> None:
         f"Arquivo atualizado com {len(final_links)} links: {ARQUIVO_SAIDA} "
         f"(fonte automática: {FONTE_AUTOMATICA_ATIVA})"
     )
+
 
 if __name__ == "__main__":
     main()
