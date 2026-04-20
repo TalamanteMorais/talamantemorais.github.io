@@ -5,7 +5,7 @@ from datetime import datetime, timedelta, timezone
 from html import unescape
 from pathlib import Path
 from typing import Iterable
-from urllib.parse import quote_plus, urljoin, urlparse
+from urllib.parse import urljoin, urlparse
 from urllib.request import Request, urlopen
 
 
@@ -21,15 +21,8 @@ TCE_SP_LISTAGENS = [
     "https://www.tce.sp.gov.br/publicacoes",
 ]
 
-TCU_PUBLICACOES_BUSCAS = [
-    "Licitação",
-    "Contratação",
-    "Contrato administrativo",
-    "Lei 14.133",
-]
-
 TCU_LISTAGENS_NOTICIAS = [
-    "https://portal.tcu.gov.br/imprensa",
+    "https://portal.tcu.gov.br/imprensa/noticias",
 ]
 
 
@@ -45,6 +38,7 @@ PALAVRAS_CHAVE = (
     "registro de preços",
     "srp",
     "ata",
+    "compra pública",
 )
 
 
@@ -150,6 +144,7 @@ def extrair_data_tce(html: str) -> datetime | None:
         r"Data de Publicação:\s*(\d{2}/\d{2}/\d{4})",
         r"Data de Publicação\s*(\d{2}/\d{2}/\d{4})",
         r"Publicado em\s*(\d{2}/\d{2}/\d{4})",
+        r"(\d{2}/\d{2}/\d{4})",
     ]
 
     for pattern in patterns:
@@ -166,11 +161,9 @@ def extrair_data_tcu(html: str) -> datetime | None:
     texto = limpar_texto(html)
 
     patterns = [
-        r"Data:\s*(\d{2}/\d{2}/\d{4})",
-        r"Publicado\s*(\d{2}-\d{2}-\d{4})",
-        r"publicado em\s*(\d{2}/\d{2}/\d{4})",
-        r"publicado em\s*(\d{2}-\d{2}-\d{4})",
         r"(\d{2}/\d{2}/\d{4})",
+        r"(\d{2}-\d{2}-\d{4})",
+        r"(\d{4}-\d{2}-\d{2})",
     ]
 
     for pattern in patterns:
@@ -363,62 +356,6 @@ def coletar_tce_sp() -> list[LinkItem]:
     return resultados
 
 
-def coletar_tcu_publicacoes() -> list[LinkItem]:
-    resultados: list[LinkItem] = []
-
-    for termo in TCU_PUBLICACOES_BUSCAS:
-        url_busca = (
-            "https://portal.tcu.gov.br/publicacoes-institucionais/todas"
-            f"?palavra-chave={quote_plus(termo)}"
-        )
-
-        try:
-            html = fetch_text(url_busca)
-        except Exception:
-            continue
-
-        for texto_link, url in extrair_links_html(html, url_busca):
-            if not mesmo_dominio(url, "portal.tcu.gov.br"):
-                continue
-
-            if "/publicacoes-institucionais/" not in url:
-                continue
-
-            if not relevante(f"{termo} {texto_link}"):
-                continue
-
-            try:
-                detalhe = fetch_text(url)
-            except Exception:
-                continue
-
-            titulo = extrair_h1(detalhe) or extrair_title_tag(detalhe) or texto_link
-            descricao = extrair_descricao(detalhe)
-            data_publicacao = extrair_data_tcu(detalhe)
-
-            texto_analise = f"{titulo} {descricao}"
-
-            if not relevante(texto_analise):
-                continue
-
-            if not dentro_da_janela(data_publicacao):
-                continue
-
-            titulo_final = normalizar_titulo("TCU", titulo)
-            if not titulo_final:
-                continue
-
-            resultados.append(
-                LinkItem(
-                    title=titulo_final,
-                    url=url,
-                    published_at=(data_publicacao or agora_utc()).date().isoformat(),
-                )
-            )
-
-    return resultados
-
-
 def coletar_tcu_noticias() -> list[LinkItem]:
     resultados: list[LinkItem] = []
 
@@ -432,7 +369,7 @@ def coletar_tcu_noticias() -> list[LinkItem]:
             if not mesmo_dominio(url, "portal.tcu.gov.br"):
                 continue
 
-            if "/imprensa/noticias/" not in url:
+            if "/imprensa/noticias/" not in url and "/imprensa/noticias" not in url:
                 continue
 
             if not relevante(texto_link):
@@ -473,14 +410,12 @@ def coletar_tcu_noticias() -> list[LinkItem]:
 def main() -> None:
     manuais = carregar_manuais()
     tce_sp = coletar_tce_sp()
-    tcu_publicacoes = coletar_tcu_publicacoes()
     tcu_noticias = coletar_tcu_noticias()
 
     consolidados = normalizar_lista(
         [
             *manuais,
             *tce_sp,
-            *tcu_publicacoes,
             *tcu_noticias,
         ]
     )
