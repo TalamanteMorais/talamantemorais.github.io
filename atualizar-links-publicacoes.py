@@ -1,206 +1,493 @@
 import json
 import re
-import urllib.request
+from dataclasses import dataclass
+from datetime import datetime, timedelta, timezone
+from html import unescape
 from pathlib import Path
-from urllib.parse import urljoin
+from typing import Iterable
+from urllib.parse import quote_plus, urljoin, urlparse
+from urllib.request import Request, urlopen
+
 
 ARQUIVO_SAIDA = Path("links-publicacoes.json")
+ARQUIVO_MANUAIS = Path("links-publicacoes-manuais.json")
+USER_AGENT = "Mozilla/5.0 (compatible; Projeto-Site-60/1.0; +https://talamante-adv.com.br)"
+TIMEOUT = 25
+DIAS_PERMANENCIA = 7
+LIMITE_JSON = 30
 
-LIMITE_TCU = 5
-LIMITE_TCESP = 5
 
-URL_TCU = "https://portal.tcu.gov.br/jurisprudencia?tipo=Informativo+de+Licita%C3%A7%C3%B5es+e+Contratos"
-URL_TCESP_PAGINAS = [
-    "https://www.tce.sp.gov.br/noticias",
-    "https://www.tce.sp.gov.br/noticias?page=1",
-    "https://www.tce.sp.gov.br/noticias?page=2",
-    "https://www.tce.sp.gov.br/noticias?page=3",
+TCE_SP_LISTAGENS = [
+    "https://www.tce.sp.gov.br/publicacoes",
 ]
 
-PREFIXOS_AUTOMATICOS = (
-    "TCU - ",
-    "TCE-SP - ",
+TCU_PUBLICACOES_BUSCAS = [
+    "Licitação",
+    "Contratação",
+    "Contrato administrativo",
+    "Lei 14.133",
+]
+
+TCU_LISTAGENS_NOTICIAS = [
+    "https://portal.tcu.gov.br/imprensa",
+]
+
+
+PALAVRAS_CHAVE = (
+    "14.133",
+    "licita",
+    "contrata",
+    "contrato",
+    "pregão",
+    "edital",
+    "dispensa",
+    "inexig",
+    "registro de preços",
+    "srp",
+    "ata",
 )
 
 
+@dataclass
+class LinkItem:
+    title: str
+    url: str
+    published_at: str
+
+
+def agora_utc() -> datetime:
+    return datetime.now(timezone.utc)
+
+
+def hoje_iso() -> str:
+    return agora_utc().date().isoformat()
+
+
 def fetch_text(url: str) -> str:
-    request = urllib.request.Request(
+    req = Request(
         url,
         headers={
-            "User-Agent": (
-                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-                "AppleWebKit/537.36 (KHTML, like Gecko) "
-                "Chrome/123.0.0.0 Safari/537.36"
-            ),
+            "User-Agent": USER_AGENT,
             "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-            "Accept-Language": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7",
+            "Accept-Language": "pt-BR,pt;q=0.9,en;q=0.8",
             "Cache-Control": "no-cache",
             "Pragma": "no-cache",
         },
     )
-    with urllib.request.urlopen(request, timeout=30) as response:
-        return response.read().decode("utf-8", errors="replace")
+    with urlopen(req, timeout=TIMEOUT) as response:
+        charset = response.headers.get_content_charset() or "utf-8"
+        return response.read().decode(charset, errors="replace")
 
 
-def compact_spaces(text: str) -> str:
-    text = re.sub(r"<.*?>", " ", text, flags=re.DOTALL)
-    text = re.sub(r"&nbsp;|&#160;", " ", text)
-    text = re.sub(r"\s+", " ", text)
-    return text.strip()
+def limpar_texto(texto: str) -> str:
+    texto = re.sub(r"<script\b.*?</script>", " ", texto, flags=re.IGNORECASE | re.DOTALL)
+    texto = re.sub(r"<style\b.*?</style>", " ", texto, flags=re.IGNORECASE | re.DOTALL)
+    texto = re.sub(r"<[^>]+>", " ", texto)
+    texto = unescape(texto)
+    texto = re.sub(r"\s+", " ", texto)
+    return texto.strip()
 
 
-def load_existing_links() -> list[dict[str, str]]:
-    if not ARQUIVO_SAIDA.exists():
+def extrair_title_tag(html: str) -> str:
+    match = re.search(r"<title[^>]*>(.*?)</title>", html, flags=re.IGNORECASE | re.DOTALL)
+    if match:
+        return limpar_texto(match.group(1))
+    return ""
+
+
+def extrair_h1(html: str) -> str:
+    match = re.search(r"<h1[^>]*>(.*?)</h1>", html, flags=re.IGNORECASE | re.DOTALL)
+    if match:
+        return limpar_texto(match.group(1))
+    return ""
+
+
+def extrair_descricao(html: str) -> str:
+    meta_patterns = [
+        r'<meta[^>]+name=["\']description["\'][^>]+content=["\'](.*?)["\']',
+        r'<meta[^>]+property=["\']og:description["\'][^>]+content=["\'](.*?)["\']',
+    ]
+    for pattern in meta_patterns:
+        match = re.search(pattern, html, flags=re.IGNORECASE | re.DOTALL)
+        if match:
+            return limpar_texto(match.group(1))
+    return ""
+
+
+def normalizar_titulo(prefixo: str, titulo: str) -> str:
+    titulo = re.sub(r"\s+", " ", titulo).strip(" -–—")
+    if not titulo:
+        return ""
+    if titulo.lower().startswith(prefixo.lower() + " - "):
+        return titulo
+    return f"{prefixo} - {titulo}"
+
+
+def parse_data(texto: str) -> datetime | None:
+    texto = str(texto).strip()
+
+    formatos = (
+        "%Y-%m-%d",
+        "%d/%m/%Y",
+        "%d-%m-%Y",
+        "%d.%m.%Y",
+        "%d/%m/%y",
+    )
+
+    for fmt in formatos:
+        try:
+            return datetime.strptime(texto, fmt).replace(tzinfo=timezone.utc)
+        except ValueError:
+            continue
+
+    return None
+
+
+def extrair_data_tce(html: str) -> datetime | None:
+    texto = limpar_texto(html)
+
+    patterns = [
+        r"Data de Publicação:\s*(\d{2}/\d{2}/\d{4})",
+        r"Data de Publicação\s*(\d{2}/\d{2}/\d{4})",
+        r"Publicado em\s*(\d{2}/\d{2}/\d{4})",
+    ]
+
+    for pattern in patterns:
+        match = re.search(pattern, texto, flags=re.IGNORECASE)
+        if match:
+            data = parse_data(match.group(1))
+            if data:
+                return data
+
+    return None
+
+
+def extrair_data_tcu(html: str) -> datetime | None:
+    texto = limpar_texto(html)
+
+    patterns = [
+        r"Data:\s*(\d{2}/\d{2}/\d{4})",
+        r"Publicado\s*(\d{2}-\d{2}-\d{4})",
+        r"publicado em\s*(\d{2}/\d{2}/\d{4})",
+        r"publicado em\s*(\d{2}-\d{2}-\d{4})",
+        r"(\d{2}/\d{2}/\d{4})",
+    ]
+
+    for pattern in patterns:
+        match = re.search(pattern, texto, flags=re.IGNORECASE)
+        if match:
+            data = parse_data(match.group(1))
+            if data:
+                return data
+
+    return None
+
+
+def extrair_links_html(html: str, base_url: str) -> list[tuple[str, str]]:
+    encontrados: list[tuple[str, str]] = []
+
+    for href, inner in re.findall(
+        r'<a\b[^>]*href=["\']([^"\']+)["\'][^>]*>(.*?)</a>',
+        html,
+        flags=re.IGNORECASE | re.DOTALL,
+    ):
+        texto = limpar_texto(inner)
+        if not texto:
+            continue
+
+        url = urljoin(base_url, unescape(href).strip())
+        encontrados.append((texto, url))
+
+    return encontrados
+
+
+def mesmo_dominio(url: str, dominio: str) -> bool:
+    try:
+        return urlparse(url).netloc.endswith(dominio)
+    except Exception:
+        return False
+
+
+def relevante(texto: str) -> bool:
+    base = texto.lower()
+    return any(palavra in base for palavra in PALAVRAS_CHAVE)
+
+
+def dentro_da_janela(data_publicacao: datetime | None) -> bool:
+    if data_publicacao is None:
+        return False
+
+    limite = agora_utc() - timedelta(days=DIAS_PERMANENCIA)
+    return data_publicacao >= limite
+
+
+def item_para_dict(item: LinkItem) -> dict[str, str]:
+    return {
+        "title": item.title,
+        "url": item.url,
+        "published_at": item.published_at,
+    }
+
+
+def carregar_manuais() -> list[LinkItem]:
+    if not ARQUIVO_MANUAIS.exists():
         return []
 
     try:
-        data = json.loads(ARQUIVO_SAIDA.read_text(encoding="utf-8"))
+        data = json.loads(ARQUIVO_MANUAIS.read_text(encoding="utf-8"))
     except json.JSONDecodeError:
         return []
 
     if not isinstance(data, list):
         return []
 
-    links: list[dict[str, str]] = []
+    itens: list[LinkItem] = []
 
-    for item in data:
-        if not isinstance(item, dict):
+    for raw in data:
+        if not isinstance(raw, dict):
             continue
 
-        title = str(item.get("title", "")).strip()
-        url = str(item.get("url", "")).strip()
+        title = str(raw.get("title", "")).strip()
+        url = str(raw.get("url", "")).strip()
+        published_at = str(raw.get("published_at", "")).strip() or hoje_iso()
 
         if not title or not url:
             continue
 
-        links.append({"title": title, "url": url})
-
-    return links
-
-
-def split_manual_links(links: list[dict[str, str]]) -> list[dict[str, str]]:
-    manual_links: list[dict[str, str]] = []
-
-    for item in links:
-        title = item["title"]
-        if title.startswith(PREFIXOS_AUTOMATICOS):
-            continue
-        manual_links.append(item)
-
-    return manual_links
-
-
-def unique_links(items: list[dict[str, str]]) -> list[dict[str, str]]:
-    result: list[dict[str, str]] = []
-    seen_urls: set[str] = set()
-
-    for item in items:
-        title = item.get("title", "").strip()
-        url = item.get("url", "").strip()
-
-        if not title or not url or url in seen_urls:
+        if not re.match(r"^https?://", url, flags=re.IGNORECASE):
             continue
 
-        seen_urls.add(url)
-        result.append({"title": title, "url": url})
+        if parse_data(published_at) is None:
+            published_at = hoje_iso()
 
-    return result
-
-
-def extract_tcu_links(html: str, limite: int) -> list[dict[str, str]]:
-    pattern = re.compile(
-        r"Informativo de Licitações e Contratos\s+(\d+).*?href=\"([^\"]+)\"[^>]*>\s*PDF",
-        re.IGNORECASE | re.DOTALL,
-    )
-
-    links: list[dict[str, str]] = []
-
-    for numero, href in pattern.findall(html):
-        url = urljoin(URL_TCU, href)
-        links.append(
-            {
-                "title": f"TCU - Informativo de Licitações e Contratos {numero}",
-                "url": url,
-            }
-        )
-        if len(links) >= limite:
-            break
-
-    return unique_links(links)
-
-
-def extract_tcesp_links(html: str, base_url: str) -> list[dict[str, str]]:
-    pattern = re.compile(
-        r"<a[^>]+href=\"([^\"]*boletim-atualizacao-licitacoes-e-contratos[^\"]*)\"[^>]*>(.*?)</a>",
-        re.IGNORECASE | re.DOTALL,
-    )
-
-    links: list[dict[str, str]] = []
-
-    for href, raw_title in pattern.findall(html):
-        title = compact_spaces(raw_title)
-        if "Boletim de Atualização de Licitações e Contratos" not in title:
-            continue
-
-        url = urljoin(base_url, href)
-        links.append(
-            {
-                "title": f"TCE-SP - {title}",
-                "url": url,
-            }
+        itens.append(
+            LinkItem(
+                title=title,
+                url=url,
+                published_at=published_at,
+            )
         )
 
-    return unique_links(links)
+    return itens
 
 
-def collect_tcu() -> list[dict[str, str]]:
-    html = fetch_text(URL_TCU)
-    return extract_tcu_links(html, LIMITE_TCU)
-
-
-def collect_tcesp() -> list[dict[str, str]]:
-    collected: list[dict[str, str]] = []
-
-    for page_url in URL_TCESP_PAGINAS:
-        html = fetch_text(page_url)
-        collected.extend(extract_tcesp_links(html, page_url))
-        collected = unique_links(collected)
-
-        if len(collected) >= LIMITE_TCESP:
-            break
-
-    return collected[:LIMITE_TCESP]
-
-
-def save_links(data: list[dict[str, str]]) -> None:
+def salvar_links(itens: list[LinkItem]) -> None:
+    payload = [item_para_dict(item) for item in itens]
     ARQUIVO_SAIDA.write_text(
-        json.dumps(data, ensure_ascii=False, indent=2) + "\n",
+        json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )
 
 
-def main() -> None:
-    existing_links = load_existing_links()
-    manual_links = split_manual_links(existing_links)
+def normalizar_lista(itens: Iterable[LinkItem]) -> list[LinkItem]:
+    unicos: dict[str, LinkItem] = {}
 
-    auto_links: list[dict[str, str]] = []
+    for item in itens:
+        chave = item.url.strip().lower()
+        if not chave:
+            continue
 
-    try:
-        auto_links.extend(collect_tcu())
-    except Exception as exc:
-        print(f"Falha TCU: {exc}")
+        atual = unicos.get(chave)
+        if atual is None:
+            unicos[chave] = item
+            continue
 
-    try:
-        auto_links.extend(collect_tcesp())
-    except Exception as exc:
-        print(f"Falha TCE-SP: {exc}")
+        data_item = parse_data(item.published_at) or datetime.min.replace(tzinfo=timezone.utc)
+        data_atual = parse_data(atual.published_at) or datetime.min.replace(tzinfo=timezone.utc)
 
-    final_links = unique_links(auto_links + manual_links)
-    save_links(final_links)
+        if data_item >= data_atual:
+            unicos[chave] = item
 
-    print(
-        f"Arquivo atualizado com {len(final_links)} links: {ARQUIVO_SAIDA}"
+    filtrados = [
+        item
+        for item in unicos.values()
+        if dentro_da_janela(parse_data(item.published_at))
+    ]
+
+    filtrados.sort(
+        key=lambda item: parse_data(item.published_at) or datetime.min.replace(tzinfo=timezone.utc),
+        reverse=True,
     )
+
+    return filtrados[:LIMITE_JSON]
+
+
+def coletar_tce_sp() -> list[LinkItem]:
+    resultados: list[LinkItem] = []
+
+    for url_listagem in TCE_SP_LISTAGENS:
+        try:
+            html = fetch_text(url_listagem)
+        except Exception:
+            continue
+
+        for texto_link, url in extrair_links_html(html, url_listagem):
+            if not mesmo_dominio(url, "tce.sp.gov.br"):
+                continue
+
+            if "/publicacoes" not in url and "/legislacao/comunicado/" not in url and not re.search(r"/\d{4,}-", url):
+                continue
+
+            if not relevante(texto_link):
+                continue
+
+            try:
+                detalhe = fetch_text(url)
+            except Exception:
+                continue
+
+            titulo = extrair_h1(detalhe) or extrair_title_tag(detalhe) or texto_link
+            descricao = extrair_descricao(detalhe)
+            data_publicacao = extrair_data_tce(detalhe)
+
+            texto_analise = f"{titulo} {descricao}"
+
+            if not relevante(texto_analise):
+                continue
+
+            if not dentro_da_janela(data_publicacao):
+                continue
+
+            titulo_final = normalizar_titulo("TCE-SP", titulo)
+            if not titulo_final:
+                continue
+
+            resultados.append(
+                LinkItem(
+                    title=titulo_final,
+                    url=url,
+                    published_at=(data_publicacao or agora_utc()).date().isoformat(),
+                )
+            )
+
+    return resultados
+
+
+def coletar_tcu_publicacoes() -> list[LinkItem]:
+    resultados: list[LinkItem] = []
+
+    for termo in TCU_PUBLICACOES_BUSCAS:
+        url_busca = (
+            "https://portal.tcu.gov.br/publicacoes-institucionais/todas"
+            f"?palavra-chave={quote_plus(termo)}"
+        )
+
+        try:
+            html = fetch_text(url_busca)
+        except Exception:
+            continue
+
+        for texto_link, url in extrair_links_html(html, url_busca):
+            if not mesmo_dominio(url, "portal.tcu.gov.br"):
+                continue
+
+            if "/publicacoes-institucionais/" not in url:
+                continue
+
+            if not relevante(f"{termo} {texto_link}"):
+                continue
+
+            try:
+                detalhe = fetch_text(url)
+            except Exception:
+                continue
+
+            titulo = extrair_h1(detalhe) or extrair_title_tag(detalhe) or texto_link
+            descricao = extrair_descricao(detalhe)
+            data_publicacao = extrair_data_tcu(detalhe)
+
+            texto_analise = f"{titulo} {descricao}"
+
+            if not relevante(texto_analise):
+                continue
+
+            if not dentro_da_janela(data_publicacao):
+                continue
+
+            titulo_final = normalizar_titulo("TCU", titulo)
+            if not titulo_final:
+                continue
+
+            resultados.append(
+                LinkItem(
+                    title=titulo_final,
+                    url=url,
+                    published_at=(data_publicacao or agora_utc()).date().isoformat(),
+                )
+            )
+
+    return resultados
+
+
+def coletar_tcu_noticias() -> list[LinkItem]:
+    resultados: list[LinkItem] = []
+
+    for url_listagem in TCU_LISTAGENS_NOTICIAS:
+        try:
+            html = fetch_text(url_listagem)
+        except Exception:
+            continue
+
+        for texto_link, url in extrair_links_html(html, url_listagem):
+            if not mesmo_dominio(url, "portal.tcu.gov.br"):
+                continue
+
+            if "/imprensa/noticias/" not in url:
+                continue
+
+            if not relevante(texto_link):
+                continue
+
+            try:
+                detalhe = fetch_text(url)
+            except Exception:
+                continue
+
+            titulo = extrair_h1(detalhe) or extrair_title_tag(detalhe) or texto_link
+            descricao = extrair_descricao(detalhe)
+            data_publicacao = extrair_data_tcu(detalhe)
+
+            texto_analise = f"{titulo} {descricao}"
+
+            if not relevante(texto_analise):
+                continue
+
+            if not dentro_da_janela(data_publicacao):
+                continue
+
+            titulo_final = normalizar_titulo("TCU", titulo)
+            if not titulo_final:
+                continue
+
+            resultados.append(
+                LinkItem(
+                    title=titulo_final,
+                    url=url,
+                    published_at=(data_publicacao or agora_utc()).date().isoformat(),
+                )
+            )
+
+    return resultados
+
+
+def main() -> None:
+    manuais = carregar_manuais()
+    tce_sp = coletar_tce_sp()
+    tcu_publicacoes = coletar_tcu_publicacoes()
+    tcu_noticias = coletar_tcu_noticias()
+
+    consolidados = normalizar_lista(
+        [
+            *manuais,
+            *tce_sp,
+            *tcu_publicacoes,
+            *tcu_noticias,
+        ]
+    )
+
+    salvar_links(consolidados)
+
+    print(f"Atualização concluída com {len(consolidados)} links em {ARQUIVO_SAIDA}")
 
 
 if __name__ == "__main__":

@@ -388,6 +388,39 @@ const siteKey = "6Ld0yF8sAAAAAN5JXxfuWIV3K2nhA9p-r4VWKGKo";
 
   if (linksPublicacoesEl) {
     const jsonUrl = linksPublicacoesEl.getAttribute("data-json") || "/links-publicacoes.json";
+    const LIMITE_JSON = 30;
+    const ITENS_VISIVEIS = 10;
+
+    const renderizarMensagemPadrao = () => {
+      linksPublicacoesEl.innerHTML = "";
+
+      const li = document.createElement("li");
+      li.textContent = "Links em atualização.";
+      linksPublicacoesEl.appendChild(li);
+    };
+
+    const aplicarRolagemInterna = () => {
+      const itens = Array.from(linksPublicacoesEl.querySelectorAll("li"));
+
+      if (itens.length <= ITENS_VISIVEIS) {
+        linksPublicacoesEl.style.maxHeight = "";
+        linksPublicacoesEl.style.overflowY = "";
+        linksPublicacoesEl.style.paddingRight = "";
+        return;
+      }
+
+      let altura = 0;
+
+      itens.slice(0, ITENS_VISIVEIS).forEach((item) => {
+        const estilos = window.getComputedStyle(item);
+        const margemInferior = parseFloat(estilos.marginBottom) || 0;
+        altura += item.offsetHeight + margemInferior;
+      });
+
+      linksPublicacoesEl.style.maxHeight = `${Math.ceil(altura)}px`;
+      linksPublicacoesEl.style.overflowY = "auto";
+      linksPublicacoesEl.style.paddingRight = "0.5rem";
+    };
 
     fetch(jsonUrl, {
       cache: "no-store",
@@ -399,41 +432,49 @@ const siteKey = "6Ld0yF8sAAAAAN5JXxfuWIV3K2nhA9p-r4VWKGKo";
         return res.json();
       })
       .then((links) => {
-        if (!Array.isArray(links)) return;
+        if (!Array.isArray(links)) {
+          throw new Error("JSON de links em formato inválido.");
+        }
 
-        const validos = links.filter((item) =>
-          item &&
-          typeof item === "object" &&
-          typeof item.title === "string" &&
-          item.title.trim() &&
-          typeof item.url === "string" &&
-          /^https?:\/\//i.test(item.url.trim())
-        );
+        const validos = links
+          .filter((item) =>
+            item &&
+            typeof item === "object" &&
+            typeof item.title === "string" &&
+            item.title.trim() &&
+            typeof item.url === "string" &&
+            /^https?:\/\//i.test(item.url.trim())
+          )
+          .slice(0, LIMITE_JSON);
 
         linksPublicacoesEl.innerHTML = "";
 
         if (validos.length === 0) {
-          const li = document.createElement("li");
-          li.textContent = "Links em atualização.";
-          linksPublicacoesEl.appendChild(li);
+          renderizarMensagemPadrao();
           return;
         }
 
         validos.forEach((item) => {
           const li = document.createElement("li");
           const a = document.createElement("a");
+          const titulo = item.title.trim();
+          const url = item.url.trim();
 
-          a.href = item.url.trim();
+          a.href = url;
           a.target = "_blank";
           a.rel = "noopener noreferrer";
-          a.textContent = item.title.trim();
+          a.textContent = titulo;
+          a.title = titulo;
 
           li.appendChild(a);
           linksPublicacoesEl.appendChild(li);
         });
+
+        requestAnimationFrame(aplicarRolagemInterna);
       })
       .catch((err) => {
         console.error(err);
+        renderizarMensagemPadrao();
       });
   }
 
@@ -442,3 +483,6 @@ const siteKey = "6Ld0yF8sAAAAAN5JXxfuWIV3K2nhA9p-r4VWKGKo";
   if (anoEl) anoEl.textContent = new Date().getFullYear();
 
 });
+
+
+
