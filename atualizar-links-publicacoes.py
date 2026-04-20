@@ -16,7 +16,6 @@ TIMEOUT = 25
 DIAS_PERMANENCIA = 7
 LIMITE_JSON = 30
 
-
 TCE_SP_LISTAGENS = [
     "https://www.tce.sp.gov.br/publicacoes",
 ]
@@ -24,7 +23,6 @@ TCE_SP_LISTAGENS = [
 TCU_LISTAGENS_NOTICIAS = [
     "https://portal.tcu.gov.br/imprensa/noticias",
 ]
-
 
 PALAVRAS_CHAVE = (
     "14.133",
@@ -145,25 +143,6 @@ def extrair_data_tce(html: str) -> datetime | None:
         r"Data de Publicação\s*(\d{2}/\d{2}/\d{4})",
         r"Publicado em\s*(\d{2}/\d{2}/\d{4})",
         r"(\d{2}/\d{2}/\d{4})",
-    ]
-
-    for pattern in patterns:
-        match = re.search(pattern, texto, flags=re.IGNORECASE)
-        if match:
-            data = parse_data(match.group(1))
-            if data:
-                return data
-
-    return None
-
-
-def extrair_data_tcu(html: str) -> datetime | None:
-    texto = limpar_texto(html)
-
-    patterns = [
-        r"(\d{2}/\d{2}/\d{4})",
-        r"(\d{2}-\d{2}-\d{4})",
-        r"(\d{4}-\d{2}-\d{2})",
     ]
 
     for pattern in patterns:
@@ -318,7 +297,7 @@ def coletar_tce_sp() -> list[LinkItem]:
             if not mesmo_dominio(url, "tce.sp.gov.br"):
                 continue
 
-            if "/publicacoes" not in url and "/legislacao/comunicado/" not in url and not re.search(r"/\d{4,}-", url):
+            if "/publicacoes" not in url:
                 continue
 
             if not relevante(texto_link):
@@ -349,7 +328,7 @@ def coletar_tce_sp() -> list[LinkItem]:
                 LinkItem(
                     title=titulo_final,
                     url=url,
-                    published_at=(data_publicacao or agora_utc()).date().isoformat(),
+                    published_at=data_publicacao.date().isoformat(),
                 )
             )
 
@@ -369,38 +348,35 @@ def coletar_tcu_noticias() -> list[LinkItem]:
             if not mesmo_dominio(url, "portal.tcu.gov.br"):
                 continue
 
-            if "/imprensa/noticias/" not in url and "/imprensa/noticias" not in url:
+            if "/imprensa/noticias/" not in url:
                 continue
 
-            if not relevante(texto_link):
+            match_data = re.match(r"^\s*(\d{2}/\d{2}/\d{4})\s+(.*)$", texto_link, flags=re.DOTALL)
+            if not match_data:
                 continue
 
-            try:
-                detalhe = fetch_text(url)
-            except Exception:
-                continue
-
-            titulo = extrair_h1(detalhe) or extrair_title_tag(detalhe) or texto_link
-            descricao = extrair_descricao(detalhe)
-            data_publicacao = extrair_data_tcu(detalhe)
-
-            texto_analise = f"{titulo} {descricao}"
-
-            if not relevante(texto_analise):
-                continue
+            data_publicacao = parse_data(match_data.group(1))
+            conteudo = re.sub(r"\s+", " ", match_data.group(2)).strip()
 
             if not dentro_da_janela(data_publicacao):
                 continue
 
-            titulo_final = normalizar_titulo("TCU", titulo)
-            if not titulo_final:
+            if not relevante(conteudo):
                 continue
+
+            titulo = conteudo.split(". ")[0].strip()
+            titulo = titulo[:180].strip()
+
+            if not titulo:
+                continue
+
+            titulo_final = normalizar_titulo("TCU", titulo)
 
             resultados.append(
                 LinkItem(
                     title=titulo_final,
                     url=url,
-                    published_at=(data_publicacao or agora_utc()).date().isoformat(),
+                    published_at=data_publicacao.date().isoformat(),
                 )
             )
 
