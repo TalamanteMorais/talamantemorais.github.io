@@ -332,6 +332,11 @@ def carregar_manuais() -> list[LinkItem]:
             )
         )
 
+    itens.sort(
+        key=lambda item: parse_data(item.published_at) or datetime.min.replace(tzinfo=timezone.utc),
+        reverse=True,
+    )
+
     return itens
 
 
