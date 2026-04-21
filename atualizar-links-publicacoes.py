@@ -20,12 +20,17 @@ LIMITE_AUTOMATICO_POR_ORGAO = {
     "TCE-SP": 10,
     "PNCP": 30,
 }
+
 TCE_SP_LISTAGENS = [
     "https://www.tce.sp.gov.br/publicacoes",
 ]
+
 TCU_LISTAGENS_NOTICIAS = [
     "https://portal.tcu.gov.br/imprensa/noticias",
 ]
+
+TCU_LISTAGENS_JURISPRUDENCIA = []
+
 STJ_RSS_JURISPRUDENCIA = "https://res.stj.jus.br/hrestp-c-portalp/RSS.xml"
 PNCP_BASE_URL = "https://pncp.gov.br/api/consulta"
 PNCP_MODALIDADES = (4, 6, 8, 9, 12)
@@ -446,9 +451,8 @@ def coletar_tce_sp() -> list[LinkItem]:
             if not mesmo_dominio(url, "tce.sp.gov.br"):
                 continue
 
-            if "/publicacoes" not in url:
+            if not any(chave in url for chave in ("/publicacoes", "/etcesp", "/diariooficial")):
                 continue
-
             try:
                 detalhe = fetch_text(url)
             except Exception:
@@ -542,6 +546,7 @@ def coletar_tcu_noticias() -> list[LinkItem]:
                     published_at=data_publicacao.date().isoformat(),
                 )
             )
+
 
     return resultados
 
