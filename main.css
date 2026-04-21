@@ -1212,12 +1212,13 @@ button[type="submit"]:focus-visible{
 .profile-hero-name{
   margin: 0 0 0.7rem 0;
   color: #0f2743;
-  font-size: clamp(1.82rem, 3vw, 2.45rem);
+  font-size: clamp(1.62rem, 2.45vw, 2.1rem);
   line-height: 1.04;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
   white-space: nowrap;
   max-width: 100%;
 }
+
 .profile-hero-role{
   margin: 0 0 1.1rem 0;
   display: flex;
@@ -1303,10 +1304,11 @@ button[type="submit"]:focus-visible{
     padding: 1.3rem;
     margin: 2.2rem auto 1.8rem;
   }
+
   .profile-hero-name{
-    font-size: clamp(1.34rem, 2.85vw, 1.82rem);
+    font-size: clamp(1.22rem, 2.45vw, 1.64rem);
     white-space: nowrap;
-    letter-spacing: -0.015em;
+    letter-spacing: -0.02em;
     max-width: 100%;
   }
   .profile-hero-role{
