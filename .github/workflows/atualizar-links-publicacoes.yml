@@ -1,11 +1,9 @@
 name: Atualizar links publicações
-
 on:
   schedule:
-  - cron: "0 9 * * *"
-  - cron: "0 18 * * *"
-      workflow_dispatch:
-
+    - cron: "0 9 * * *"
+    - cron: "0 18 * * *"
+  workflow_dispatch:
 permissions:
   contents: write
 
