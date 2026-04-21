@@ -14,15 +14,19 @@ ARQUIVO_MANUAIS = Path("links-publicacoes-manuais.json")
 USER_AGENT = "Mozilla/5.0 (compatible; Projeto-Site-60/1.0; +https://talamante-adv.com.br)"
 TIMEOUT = 25
 DIAS_PERMANENCIA = 7
-LIMITE_JSON = 30
-
+LIMITE_AUTOMATICO_POR_ORGAO = {
+    "TCU": 10,
+    "STJ": 10,
+    "TCE-SP": 10,
+    "PNCP": 30,
+}
 TCE_SP_LISTAGENS = [
     "https://www.tce.sp.gov.br/publicacoes",
 ]
 TCU_LISTAGENS_NOTICIAS = [
     "https://portal.tcu.gov.br/imprensa/noticias",
 ]
-STJ_RSS_NOTICIAS = "https://res.stj.jus.br/hrestp-c-portalp/RSS.xml"
+STJ_RSS_JURISPRUDENCIA = "https://res.stj.jus.br/hrestp-c-portalp/RSS.xml"
 PNCP_BASE_URL = "https://pncp.gov.br/api/consulta"
 PNCP_MODALIDADES = (4, 6, 8, 9, 12)
 
@@ -43,8 +47,9 @@ PALAVRAS_CHAVE = (
     "credencia",
     "concorrencia",
     "compra pública",
+    "acórdão",
+    "acordao",
 )
-
 @dataclass
 class LinkItem:
     source: str
@@ -140,6 +145,10 @@ def parse_data(texto: str) -> datetime | None:
 
     formatos = (
         "%Y-%m-%d",
+        "%Y-%m-%dT%H:%M:%S",
+        "%Y-%m-%dT%H:%M:%S.%f",
+        "%Y-%m-%dT%H:%M:%S%z",
+        "%Y-%m-%dT%H:%M:%S.%f%z",
         "%d/%m/%Y",
         "%d-%m-%Y",
         "%d.%m.%Y",
@@ -148,11 +157,15 @@ def parse_data(texto: str) -> datetime | None:
 
     for fmt in formatos:
         try:
-            return datetime.strptime(texto, fmt).replace(tzinfo=timezone.utc)
+            data = datetime.strptime(texto, fmt)
+            if data.tzinfo is None:
+                return data.replace(tzinfo=timezone.utc)
+            return data.astimezone(timezone.utc)
         except ValueError:
             continue
 
     return None
+
 
 def parse_data_stj_rss(texto: str) -> datetime | None:
     texto = str(texto).strip()
@@ -329,7 +342,6 @@ def salvar_links(itens: list[LinkItem]) -> None:
         encoding="utf-8",
     )
 
-
 def normalizar_lista(itens: Iterable[LinkItem]) -> list[LinkItem]:
     unicos: dict[str, LinkItem] = {}
 
@@ -355,13 +367,33 @@ def normalizar_lista(itens: Iterable[LinkItem]) -> list[LinkItem]:
         if dentro_da_janela(parse_data(item.published_at))
     ]
 
-    filtrados.sort(
+    por_orgao: dict[str, list[LinkItem]] = {
+        "TCU": [],
+        "STJ": [],
+        "TCE-SP": [],
+        "PNCP": [],
+    }
+
+    for item in filtrados:
+        if item.source in por_orgao:
+            por_orgao[item.source].append(item)
+
+    resultado: list[LinkItem] = []
+
+    for orgao, itens_orgao in por_orgao.items():
+        itens_orgao.sort(
+            key=lambda item: parse_data(item.published_at) or datetime.min.replace(tzinfo=timezone.utc),
+            reverse=True,
+        )
+        limite = LIMITE_AUTOMATICO_POR_ORGAO.get(orgao, 10)
+        resultado.extend(itens_orgao[:limite])
+
+    resultado.sort(
         key=lambda item: parse_data(item.published_at) or datetime.min.replace(tzinfo=timezone.utc),
         reverse=True,
     )
 
-    return filtrados[:LIMITE_JSON]
-
+    return resultado
 
 def coletar_tce_sp() -> list[LinkItem]:
     resultados: list[LinkItem] = []
@@ -379,9 +411,6 @@ def coletar_tce_sp() -> list[LinkItem]:
             if "/publicacoes" not in url:
                 continue
 
-            if not relevante(texto_link):
-                continue
-
             try:
                 detalhe = fetch_text(url)
             except Exception:
@@ -391,7 +420,7 @@ def coletar_tce_sp() -> list[LinkItem]:
             descricao = extrair_descricao(detalhe)
             data_publicacao = extrair_data_tce(detalhe)
 
-            texto_analise = f"{titulo} {descricao}"
+            texto_analise = f"{texto_link} {titulo} {descricao}"
 
             if not relevante(texto_analise):
                 continue
@@ -414,7 +443,6 @@ def coletar_tce_sp() -> list[LinkItem]:
 
     return resultados
 
-
 def coletar_tcu_noticias() -> list[LinkItem]:
     resultados: list[LinkItem] = []
 
@@ -431,12 +459,18 @@ def coletar_tcu_noticias() -> list[LinkItem]:
             if "/imprensa/noticias/" not in url:
                 continue
 
-            match_data = re.match(r"^\s*(\d{2}/\d{2}/\d{4})\s+(.*)$", texto_link, flags=re.DOTALL)
-            if not match_data:
-                continue
+            texto_limpo = re.sub(r"\s+", " ", texto_link).strip()
+            match_data = re.match(r"^\s*(\d{2}/\d{2}/\d{4})\s+(.*)$", texto_limpo, flags=re.DOTALL)
 
-            data_publicacao = parse_data(match_data.group(1))
-            conteudo = re.sub(r"\s+", " ", match_data.group(2)).strip()
+            if match_data:
+                data_publicacao = parse_data(match_data.group(1))
+                conteudo = re.sub(r"\s+", " ", match_data.group(2)).strip()
+            else:
+                data_publicacao = agora_utc()
+                conteudo = texto_limpo
+
+            if not conteudo:
+                continue
 
             if not dentro_da_janela(data_publicacao):
                 continue
@@ -462,13 +496,12 @@ def coletar_tcu_noticias() -> list[LinkItem]:
             )
 
     return resultados
-
-def coletar_stj_noticias() -> list[LinkItem]:
+def coletar_stj_jurisprudencia() -> list[LinkItem]:
     resultados: list[LinkItem] = []
     ns = {"content": "https://purl.org/rss/1.0/modules/content/"}
 
     try:
-        xml_text = fetch_text(STJ_RSS_NOTICIAS)
+        xml_text = fetch_text(STJ_RSS_JURISPRUDENCIA)
         root = ET.fromstring(xml_text)
     except Exception:
         return resultados
@@ -598,30 +631,34 @@ def main() -> None:
     manuais = carregar_manuais()
     tce_sp = coletar_tce_sp()
     tcu_noticias = coletar_tcu_noticias()
-    stj_noticias = coletar_stj_noticias()
+    stj_jurisprudencia = coletar_stj_jurisprudencia()
     pncp_contratacoes = coletar_pncp_contratacoes()
 
     print(f"Manuais: {len(manuais)}")
     print(f"TCE-SP: {len(tce_sp)}")
     print(f"TCU: {len(tcu_noticias)}")
-    print(f"STJ: {len(stj_noticias)}")
+    print(f"STJ: {len(stj_jurisprudencia)}")
     print(f"PNCP: {len(pncp_contratacoes)}")
 
-    consolidados = normalizar_lista(
+    automaticos = normalizar_lista(
         [
-            *manuais,
             *tce_sp,
             *tcu_noticias,
-            *stj_noticias,
+            *stj_jurisprudencia,
             *pncp_contratacoes,
         ]
     )
 
-    print(f"Consolidados após normalização: {len(consolidados)}")
+    print(f"Automáticos após normalização: {len(automaticos)}")
+
+    consolidados = [*manuais, *automaticos]
+
+    print(f"Consolidados finais: {len(consolidados)}")
 
     salvar_links(consolidados)
 
     print(f"Atualização concluída com {len(consolidados)} links em {ARQUIVO_SAIDA}")
+
 
 if __name__ == "__main__":
     main()
