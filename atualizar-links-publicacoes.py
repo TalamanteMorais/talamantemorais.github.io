@@ -429,8 +429,10 @@ def coletar_tcu_noticias() -> list[LinkItem]:
             )
 
     return resultados
+
 def coletar_stj_noticias() -> list[LinkItem]:
     resultados: list[LinkItem] = []
+    ns = {"content": "https://purl.org/rss/1.0/modules/content/"}
 
     try:
         xml_text = fetch_text(STJ_RSS_NOTICIAS)
@@ -443,9 +445,10 @@ def coletar_stj_noticias() -> list[LinkItem]:
         url = limpar_texto(item.findtext("link", default=""))
         descricao = limpar_texto(item.findtext("description", default=""))
         pub_date_raw = limpar_texto(item.findtext("pubDate", default=""))
+        conteudo_expandido = limpar_texto(item.findtext("content:encoded", default="", namespaces=ns))
 
         data_publicacao = parse_data_stj_rss(pub_date_raw)
-        texto_analise = f"{titulo} {descricao}"
+        texto_analise = f"{titulo} {descricao} {conteudo_expandido}"
 
         if not titulo or not url:
             continue
@@ -482,7 +485,7 @@ def coletar_pncp_contratacoes() -> list[LinkItem]:
         pagina = 1
         paginas_processadas = 0
 
-        while paginas_processadas < 3:
+        while paginas_processadas < 5:
             url = (
                 f"{PNCP_BASE_URL}/v1/contratacoes/publicacao"
                 f"?dataInicial={data_inicial}"
@@ -509,9 +512,19 @@ def coletar_pncp_contratacoes() -> list[LinkItem]:
                     continue
 
                 titulo_base = str(registro.get("objetoCompra", "")).strip()
-                url_origem = str(registro.get("linkSistemaOrigem", "")).strip()
+                numero_controle = str(registro.get("numeroControlePNCP", "")).strip()
+                link_sistema_origem = str(registro.get("linkSistemaOrigem", "")).strip()
                 data_publicacao = str(registro.get("dataPublicacaoPncp", "")).strip()
                 modalidade_nome = str(registro.get("modalidadeNome", "")).strip()
+                info_complementar = str(registro.get("informacaoComplementar", "")).strip()
+
+                amparo = registro.get("amparoLegal") or {}
+                amparo_nome = str(amparo.get("nome", "")).strip() if isinstance(amparo, dict) else ""
+                amparo_descricao = str(amparo.get("descricao", "")).strip() if isinstance(amparo, dict) else ""
+
+                url_origem = link_sistema_origem
+                if not url_origem and numero_controle:
+                    url_origem = f"https://pncp.gov.br/app/editais/{numero_controle}"
 
                 if not titulo_base or not url_origem or not data_publicacao:
                     continue
@@ -522,7 +535,7 @@ def coletar_pncp_contratacoes() -> list[LinkItem]:
                 if not dentro_da_janela(parse_data(data_publicacao)):
                     continue
 
-                texto_analise = f"{titulo_base} {modalidade_nome}"
+                texto_analise = f"{titulo_base} {modalidade_nome} {info_complementar} {amparo_nome} {amparo_descricao}"
                 if not relevante(texto_analise):
                     continue
 
