@@ -376,13 +376,57 @@ def carregar_manuais() -> list[LinkItem]:
 
     return itens
 
-
 def salvar_links(itens: list[LinkItem]) -> None:
     payload = [item_para_dict(item) for item in itens]
     ARQUIVO_SAIDA.write_text(
         json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )
+
+
+def carregar_saida_atual() -> list[LinkItem]:
+    if not ARQUIVO_SAIDA.exists():
+        return []
+
+    try:
+        data = json.loads(ARQUIVO_SAIDA.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return []
+
+    if not isinstance(data, list):
+        return []
+
+    itens: list[LinkItem] = []
+
+    for raw in data:
+        if not isinstance(raw, dict):
+            continue
+
+        source = str(raw.get("source", "")).strip().upper()
+        title = str(raw.get("title", "")).strip()
+        url = str(raw.get("url", "")).strip()
+        published_at = str(raw.get("published_at", "")).strip()
+
+        if not source or not title or not url or not published_at:
+            continue
+
+        if not re.match(r"^https?://", url, flags=re.IGNORECASE):
+            continue
+
+        if parse_data(published_at) is None:
+            continue
+
+        itens.append(
+            LinkItem(
+                source=source,
+                title=title,
+                url=url,
+                published_at=published_at,
+            )
+        )
+
+    return itens
+
 
 def normalizar_lista(itens: Iterable[LinkItem]) -> list[LinkItem]:
     unicos: dict[str, LinkItem] = {}
@@ -718,6 +762,23 @@ def main() -> None:
     )
 
     print(f"Automáticos após normalização: {len(automaticos)}")
+
+    saida_atual = carregar_saida_atual()
+    automaticos_atuais = [
+        item for item in saida_atual
+        if item.source in LIMITE_AUTOMATICO_POR_ORGAO
+    ]
+
+    if not automaticos:
+        print("Nenhum link automático válido encontrado. Mantido o links-publicacoes.json já existente.")
+        return
+
+    if len(automaticos) < len(automaticos_atuais):
+        print(
+            "Quantidade automática menor que a versão já publicada. "
+            "Mantido o links-publicacoes.json já existente."
+        )
+        return
 
     consolidados = [*manuais, *automaticos]
 
