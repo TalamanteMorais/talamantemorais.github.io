@@ -14,20 +14,15 @@ ARQUIVO_MANUAIS = Path("links-publicacoes-manuais.json")
 USER_AGENT = "Mozilla/5.0 (compatible; Projeto-Site-60/1.0; +https://talamante-adv.com.br)"
 TIMEOUT = 25
 DIAS_PERMANENCIA = 7
+
 LIMITE_AUTOMATICO_POR_ORGAO = {
-    "TCU": 10,
     "STJ": 10,
-    "TCE-SP": 10,
     "PNCP": 30,
 }
 
-TCE_SP_LISTAGENS = [
-    "https://www.tce.sp.gov.br/publicacoes",
-]
+TCE_SP_LISTAGENS = []
 
-TCU_LISTAGENS_NOTICIAS = [
-    "https://portal.tcu.gov.br/imprensa/noticias",
-]
+TCU_LISTAGENS_NOTICIAS = []
 
 TCU_LISTAGENS_JURISPRUDENCIA = []
 
@@ -415,9 +410,7 @@ def normalizar_lista(itens: Iterable[LinkItem]) -> list[LinkItem]:
     ]
 
     por_orgao: dict[str, list[LinkItem]] = {
-        "TCU": [],
         "STJ": [],
-        "TCE-SP": [],
         "PNCP": [],
     }
 
@@ -427,7 +420,7 @@ def normalizar_lista(itens: Iterable[LinkItem]) -> list[LinkItem]:
 
     resultado: list[LinkItem] = []
 
-    for orgao in ("TCU", "STJ", "TCE-SP", "PNCP"):
+    for orgao in ("STJ", "PNCP"):
         itens_orgao = por_orgao[orgao]
         itens_orgao.sort(
             key=lambda item: parse_data(item.published_at) or datetime.min.replace(tzinfo=timezone.utc),
@@ -708,24 +701,17 @@ def coletar_pncp_contratacoes() -> list[LinkItem]:
 
     return resultados
 
-
 def main() -> None:
     manuais = carregar_manuais()
-    tce_sp = coletar_tce_sp()
-    tcu_noticias = coletar_tcu_noticias()
     stj_jurisprudencia = coletar_stj_jurisprudencia()
     pncp_contratacoes = coletar_pncp_contratacoes()
 
     print(f"Manuais: {len(manuais)}")
-    print(f"TCE-SP: {len(tce_sp)}")
-    print(f"TCU: {len(tcu_noticias)}")
     print(f"STJ: {len(stj_jurisprudencia)}")
     print(f"PNCP: {len(pncp_contratacoes)}")
 
     automaticos = normalizar_lista(
         [
-            *tce_sp,
-            *tcu_noticias,
             *stj_jurisprudencia,
             *pncp_contratacoes,
         ]
