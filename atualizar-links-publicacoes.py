@@ -154,9 +154,42 @@ def parse_data(texto: str) -> datetime | None:
 
     return None
 
-
 def parse_data_stj_rss(texto: str) -> datetime | None:
     texto = str(texto).strip()
+
+    mapa_semana = {
+        "seg": "Mon",
+        "ter": "Tue",
+        "qua": "Wed",
+        "qui": "Thu",
+        "sex": "Fri",
+        "sáb": "Sat",
+        "sab": "Sat",
+        "dom": "Sun",
+    }
+
+    mapa_mes = {
+        "jan": "Jan",
+        "fev": "Feb",
+        "mar": "Mar",
+        "abr": "Apr",
+        "mai": "May",
+        "jun": "Jun",
+        "jul": "Jul",
+        "ago": "Aug",
+        "set": "Sep",
+        "out": "Oct",
+        "nov": "Nov",
+        "dez": "Dec",
+    }
+
+    texto_normalizado = texto
+
+    for pt, en in mapa_semana.items():
+        texto_normalizado = re.sub(rf"\b{pt}\b", en, texto_normalizado, flags=re.IGNORECASE)
+
+    for pt, en in mapa_mes.items():
+        texto_normalizado = re.sub(rf"\b{pt}\b", en, texto_normalizado, flags=re.IGNORECASE)
 
     formatos = (
         "%a, %b %d %Y %H:%M:%S",
@@ -165,7 +198,7 @@ def parse_data_stj_rss(texto: str) -> datetime | None:
 
     for fmt in formatos:
         try:
-            return datetime.strptime(texto, fmt).replace(tzinfo=timezone.utc)
+            return datetime.strptime(texto_normalizado, fmt).replace(tzinfo=timezone.utc)
         except ValueError:
             continue
 
