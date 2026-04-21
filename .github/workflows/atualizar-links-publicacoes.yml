@@ -8,16 +8,19 @@ on:
 permissions:
   contents: write
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   atualizar:
     runs-on: ubuntu-latest
 
     steps:
       - name: Baixar repositório
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
 
       - name: Instalar Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.12"
 
