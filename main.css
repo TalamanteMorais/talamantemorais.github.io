@@ -1209,14 +1209,15 @@ button[type="submit"]:focus-visible{
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
-
 .profile-hero-name{
   margin: 0 0 0.7rem 0;
   color: #0f2743;
-  font-size: clamp(2.05rem, 3.6vw, 2.8rem);
+  font-size: clamp(1.82rem, 3vw, 2.45rem);
   line-height: 1.04;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+  max-width: 100%;
 }
-
 .profile-hero-role{
   margin: 0 0 1.1rem 0;
   display: flex;
@@ -1302,11 +1303,12 @@ button[type="submit"]:focus-visible{
     padding: 1.3rem;
     margin: 2.2rem auto 1.8rem;
   }
-
   .profile-hero-name{
-    font-size: clamp(1.7rem, 4vw, 2.2rem);
+    font-size: clamp(1.34rem, 2.85vw, 1.82rem);
+    white-space: nowrap;
+    letter-spacing: -0.015em;
+    max-width: 100%;
   }
-
   .profile-hero-role{
     margin-bottom: 1rem;
   }
@@ -1569,10 +1571,16 @@ main.container,
     align-items: center;
   }
 
+  .profile-hero-name{
+    font-size: clamp(1.02rem, 4.15vw, 1.34rem);
+    white-space: nowrap;
+    letter-spacing: -0.02em;
+    max-width: 100%;
+  }  
+
   .profile-hero-role{
     justify-content: center;
   }
-
   .profile-hero-summary{
     text-align: left;
     width: 100%;
