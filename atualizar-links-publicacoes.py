@@ -223,7 +223,6 @@ def parse_data_stj_rss(texto: str) -> datetime | None:
 
     return None
 
-
 def extrair_data_tce(html: str) -> datetime | None:
     texto = limpar_texto(html)
 
@@ -231,6 +230,9 @@ def extrair_data_tce(html: str) -> datetime | None:
         r"Data de Publicação:\s*(\d{2}/\d{2}/\d{4})",
         r"Data de Publicação\s*(\d{2}/\d{2}/\d{4})",
         r"Publicado em\s*(\d{2}/\d{2}/\d{4})",
+        r"Publicação:\s*(\d{2}/\d{2}/\d{4})",
+        r"Disponibilização:\s*(\d{2}/\d{2}/\d{4})",
+        r"(\d{4}-\d{2}-\d{2})",
         r"(\d{2}/\d{2}/\d{4})",
     ]
 
@@ -242,7 +244,6 @@ def extrair_data_tce(html: str) -> datetime | None:
                 return data
 
     return None
-
 
 def extrair_links_html(html: str, base_url: str) -> list[tuple[str, str]]:
     encontrados: list[tuple[str, str]] = []
@@ -457,7 +458,13 @@ def coletar_tce_sp() -> list[LinkItem]:
             descricao = extrair_descricao(detalhe)
             data_publicacao = extrair_data_tce(detalhe)
 
+            if data_publicacao is None:
+                data_publicacao = extrair_data_tce(html)
+
             texto_analise = f"{texto_link} {titulo} {descricao}"
+
+            if not titulo:
+                continue
 
             if not relevante(texto_analise):
                 continue
@@ -465,7 +472,7 @@ def coletar_tce_sp() -> list[LinkItem]:
             if not dentro_da_janela(data_publicacao):
                 continue
 
-            titulo_final = normalizar_titulo("TCE-SP", titulo)
+            titulo_final = normalizar_titulo("TCE-SP", titulo[:180].strip())
             if not titulo_final:
                 continue
 
@@ -496,32 +503,36 @@ def coletar_tcu_noticias() -> list[LinkItem]:
             if "/imprensa/noticias/" not in url:
                 continue
 
+            try:
+                detalhe = fetch_text(url)
+            except Exception:
+                continue
+
+            titulo = extrair_h1(detalhe) or extrair_title_tag(detalhe) or texto_link
+            descricao = extrair_descricao(detalhe)
+
             texto_limpo = re.sub(r"\s+", " ", texto_link).strip()
             match_data = re.match(r"^\s*(\d{2}/\d{2}/\d{4})\s+(.*)$", texto_limpo, flags=re.DOTALL)
 
             if match_data:
                 data_publicacao = parse_data(match_data.group(1))
-                conteudo = re.sub(r"\s+", " ", match_data.group(2)).strip()
             else:
                 data_publicacao = agora_utc()
-                conteudo = texto_limpo
 
-            if not conteudo:
+            texto_analise = f"{texto_link} {titulo} {descricao}"
+
+            if not titulo:
                 continue
 
             if not dentro_da_janela(data_publicacao):
                 continue
 
-            if not relevante(conteudo):
+            if not relevante(texto_analise):
                 continue
 
-            titulo = conteudo.split(". ")[0].strip()
-            titulo = titulo[:180].strip()
-
-            if not titulo:
+            titulo_final = normalizar_titulo("TCU", titulo[:180].strip())
+            if not titulo_final:
                 continue
-
-            titulo_final = normalizar_titulo("TCU", titulo)
 
             resultados.append(
                 LinkItem(
@@ -533,6 +544,7 @@ def coletar_tcu_noticias() -> list[LinkItem]:
             )
 
     return resultados
+
 def coletar_stj_jurisprudencia() -> list[LinkItem]:
     resultados: list[LinkItem] = []
     ns = {"content": "https://purl.org/rss/1.0/modules/content/"}
@@ -579,6 +591,7 @@ def coletar_stj_jurisprudencia() -> list[LinkItem]:
         )
 
     return resultados
+
 
 def coletar_pncp_contratacoes() -> list[LinkItem]:
     resultados: list[LinkItem] = []
