@@ -282,7 +282,8 @@ document.addEventListener("DOMContentLoaded", function () {
         botao.disabled = false;
         return;
       }
-const siteKey = "6Ld0yF8sAAAAAN5JXxfuWIV3K2nhA9p-r4VWKGKo";
+
+      const siteKey = "6Ld0yF8sAAAAAN5JXxfuWIV3K2nhA9p-r4VWKGKo";
 
       const falhaRecaptcha = () => {
         console.error("reCAPTCHA: grecaptcha não definido.");
@@ -314,6 +315,7 @@ const siteKey = "6Ld0yF8sAAAAAN5JXxfuWIV3K2nhA9p-r4VWKGKo";
                 body: formData,
                 mode: "no-cors"
               });
+
             enviarComCors()
               .then(() => {
                 exibirMensagem("Mensagem enviada. Em breve retornaremos.");
@@ -349,6 +351,7 @@ const siteKey = "6Ld0yF8sAAAAAN5JXxfuWIV3K2nhA9p-r4VWKGKo";
           });
         });
       };
+
       const carregarRecaptchaSeNecessario = (onReady) => {
         if (typeof grecaptcha !== "undefined" && grecaptcha && typeof grecaptcha.ready === "function") {
           onReady();
@@ -380,46 +383,124 @@ const siteKey = "6Ld0yF8sAAAAAN5JXxfuWIV3K2nhA9p-r4VWKGKo";
       };
 
       carregarRecaptchaSeNecessario(executarRecaptcha);
-
     });
   }
-  /* ======================== LISTA DE LINKS — PUBLICAÇÕES JURÍDICAS (JSON) ======================== */
-  const linksPublicacoesEl = document.getElementById("links-publicacoes");
 
-  if (linksPublicacoesEl) {
-    const jsonUrl = linksPublicacoesEl.getAttribute("data-json") || "/links-publicacoes.json";
-    const LIMITE_JSON = 30;
-    const ITENS_VISIVEIS = 10;
+  /* ======================== LISTAS DE LINKS — PUBLICAÇÕES JURÍDICAS (JSON) ======================== */
+  const listaPublicacoesLegada = document.getElementById("links-publicacoes");
 
-    const renderizarMensagemPadrao = () => {
-      linksPublicacoesEl.innerHTML = "";
+  const gruposPublicacoes = {
+    TCU: document.getElementById("links-publicacoes-tcu"),
+    STJ: document.getElementById("links-publicacoes-stj"),
+    "TCE-SP": document.getElementById("links-publicacoes-tce-sp"),
+    PNCP: document.getElementById("links-publicacoes-pncp")
+  };
+
+  const listasPublicacoes = Object.entries(gruposPublicacoes).filter(([, el]) => el);
+
+  const existeModoPorOrgao = listasPublicacoes.length > 0;
+  const existeModoLegado = !!listaPublicacoesLegada;
+
+  if (existeModoPorOrgao || existeModoLegado) {
+    const elementoBase = existeModoPorOrgao ? listasPublicacoes[0][1] : listaPublicacoesLegada;
+    const jsonUrl = elementoBase.getAttribute("data-json") || "/links-publicacoes.json";
+
+    const LIMITES_POR_ORGAO = {
+      TCU: 10,
+      STJ: 10,
+      "TCE-SP": 10,
+      PNCP: 30
+    };
+
+    const ITENS_VISIVEIS_POR_ORGAO = {
+      TCU: 10,
+      STJ: 10,
+      "TCE-SP": 10,
+      PNCP: 10
+    };
+
+    const LIMITE_JSON_LEGADO = 30;
+    const ITENS_VISIVEIS_LEGADO = 10;
+
+    const limparLista = (listaEl) => {
+      listaEl.innerHTML = "";
+      listaEl.style.maxHeight = "";
+      listaEl.style.overflowY = "";
+      listaEl.style.paddingRight = "";
+    };
+
+    const renderizarMensagemPadrao = (listaEl) => {
+      limparLista(listaEl);
 
       const li = document.createElement("li");
       li.textContent = "Links em atualização.";
-      linksPublicacoesEl.appendChild(li);
+      listaEl.appendChild(li);
     };
 
-    const aplicarRolagemInterna = () => {
-      const itens = Array.from(linksPublicacoesEl.querySelectorAll("li"));
+    const aplicarRolagemInterna = (listaEl, itensVisiveis) => {
+      const itens = Array.from(listaEl.querySelectorAll("li"));
 
-      if (itens.length <= ITENS_VISIVEIS) {
-        linksPublicacoesEl.style.maxHeight = "";
-        linksPublicacoesEl.style.overflowY = "";
-        linksPublicacoesEl.style.paddingRight = "";
+      if (itens.length <= itensVisiveis) {
+        listaEl.style.maxHeight = "";
+        listaEl.style.overflowY = "";
+        listaEl.style.paddingRight = "";
         return;
       }
 
       let altura = 0;
 
-      itens.slice(0, ITENS_VISIVEIS).forEach((item) => {
+      itens.slice(0, itensVisiveis).forEach((item) => {
         const estilos = window.getComputedStyle(item);
         const margemInferior = parseFloat(estilos.marginBottom) || 0;
         altura += item.offsetHeight + margemInferior;
       });
 
-      linksPublicacoesEl.style.maxHeight = `${Math.ceil(altura)}px`;
-      linksPublicacoesEl.style.overflowY = "auto";
-      linksPublicacoesEl.style.paddingRight = "0.5rem";
+      listaEl.style.maxHeight = `${Math.ceil(altura)}px`;
+      listaEl.style.overflowY = "auto";
+      listaEl.style.paddingRight = "0.5rem";
+    };
+
+    const normalizarFonte = (valor) => {
+      if (typeof valor !== "string") return "";
+
+      const fonte = valor.trim().toUpperCase();
+
+      if (fonte === "TCU") return "TCU";
+      if (fonte === "STJ") return "STJ";
+      if (fonte === "TCE-SP" || fonte === "TCESP" || fonte === "TCE SP") return "TCE-SP";
+      if (fonte === "PNCP") return "PNCP";
+
+      return "";
+    };
+
+    const inferirFonte = (item) => {
+      const fonteDireta = normalizarFonte(item && item.source);
+      if (fonteDireta) return fonteDireta;
+
+      const titulo = typeof item?.title === "string" ? item.title.trim().toUpperCase() : "";
+
+      if (titulo.startsWith("TCU -")) return "TCU";
+      if (titulo.startsWith("STJ -")) return "STJ";
+      if (titulo.startsWith("TCE-SP -") || titulo.startsWith("TCESP -") || titulo.startsWith("TCE SP -")) return "TCE-SP";
+      if (titulo.startsWith("PNCP -")) return "PNCP";
+
+      return "";
+    };
+
+    const criarItemLista = (item) => {
+      const li = document.createElement("li");
+      const a = document.createElement("a");
+      const titulo = item.title.trim();
+      const url = item.url.trim();
+
+      a.href = url;
+      a.target = "_blank";
+      a.rel = "noopener noreferrer";
+      a.textContent = titulo;
+      a.title = titulo;
+
+      li.appendChild(a);
+      return li;
     };
 
     fetch(jsonUrl, {
@@ -445,44 +526,77 @@ const siteKey = "6Ld0yF8sAAAAAN5JXxfuWIV3K2nhA9p-r4VWKGKo";
             typeof item.url === "string" &&
             /^https?:\/\//i.test(item.url.trim())
           )
-          .slice(0, LIMITE_JSON);
+          .map((item) => ({
+            ...item,
+            source: inferirFonte(item)
+          }));
 
-        linksPublicacoesEl.innerHTML = "";
+        if (existeModoPorOrgao) {
+          const agrupados = {
+            TCU: [],
+            STJ: [],
+            "TCE-SP": [],
+            PNCP: []
+          };
 
-        if (validos.length === 0) {
-          renderizarMensagemPadrao();
-          return;
+          validos.forEach((item) => {
+            if (!item.source) return;
+            agrupados[item.source].push(item);
+          });
+
+          listasPublicacoes.forEach(([orgao, listaEl]) => {
+            limparLista(listaEl);
+
+            const limite = LIMITES_POR_ORGAO[orgao] || 10;
+            const itensVisiveis = ITENS_VISIVEIS_POR_ORGAO[orgao] || 10;
+            const itens = (agrupados[orgao] || []).slice(0, limite);
+
+            if (itens.length === 0) {
+              renderizarMensagemPadrao(listaEl);
+              return;
+            }
+
+            itens.forEach((item) => {
+              listaEl.appendChild(criarItemLista(item));
+            });
+
+            requestAnimationFrame(() => aplicarRolagemInterna(listaEl, itensVisiveis));
+          });
         }
 
-        validos.forEach((item) => {
-          const li = document.createElement("li");
-          const a = document.createElement("a");
-          const titulo = item.title.trim();
-          const url = item.url.trim();
+        if (existeModoLegado) {
+          limparLista(listaPublicacoesLegada);
 
-          a.href = url;
-          a.target = "_blank";
-          a.rel = "noopener noreferrer";
-          a.textContent = titulo;
-          a.title = titulo;
+          const itensLegados = validos.slice(0, LIMITE_JSON_LEGADO);
 
-          li.appendChild(a);
-          linksPublicacoesEl.appendChild(li);
-        });
+          if (itensLegados.length === 0) {
+            renderizarMensagemPadrao(listaPublicacoesLegada);
+            return;
+          }
 
-        requestAnimationFrame(aplicarRolagemInterna);
+          itensLegados.forEach((item) => {
+            listaPublicacoesLegada.appendChild(criarItemLista(item));
+          });
+
+          requestAnimationFrame(() => aplicarRolagemInterna(listaPublicacoesLegada, ITENS_VISIVEIS_LEGADO));
+        }
       })
       .catch((err) => {
         console.error(err);
-        renderizarMensagemPadrao();
+
+        if (existeModoPorOrgao) {
+          listasPublicacoes.forEach(([, listaEl]) => {
+            renderizarMensagemPadrao(listaEl);
+          });
+        }
+
+        if (existeModoLegado) {
+          renderizarMensagemPadrao(listaPublicacoesLegada);
+        }
       });
   }
-
   /* ======================== RODAPÉ — ANO AUTOMÁTICO ======================== */
   const anoEl = document.getElementById("ano");
   if (anoEl) anoEl.textContent = new Date().getFullYear();
 
 });
-
-
-

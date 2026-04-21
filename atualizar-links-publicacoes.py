@@ -7,7 +7,7 @@ from pathlib import Path
 from typing import Iterable
 from urllib.parse import urljoin, urlparse
 from urllib.request import Request, urlopen
-
+import xml.etree.ElementTree as ET
 
 ARQUIVO_SAIDA = Path("links-publicacoes.json")
 ARQUIVO_MANUAIS = Path("links-publicacoes-manuais.json")
@@ -19,15 +19,18 @@ LIMITE_JSON = 30
 TCE_SP_LISTAGENS = [
     "https://www.tce.sp.gov.br/publicacoes",
 ]
-
 TCU_LISTAGENS_NOTICIAS = [
     "https://portal.tcu.gov.br/imprensa/noticias",
 ]
+STJ_RSS_NOTICIAS = "https://res.stj.jus.br/hrestp-c-portalp/RSS.xml"
+PNCP_BASE_URL = "https://pncp.gov.br/api/consulta"
+PNCP_MODALIDADES = (4, 6, 8, 9, 12)
+
 
 PALAVRAS_CHAVE = (
+
     "14.133",
     "licita",
-    "contrata",
     "contrato",
     "pregão",
     "edital",
@@ -36,12 +39,15 @@ PALAVRAS_CHAVE = (
     "registro de preços",
     "srp",
     "ata",
+    "proposta",
+    "credencia",
+    "concorrencia",
     "compra pública",
 )
 
-
 @dataclass
 class LinkItem:
+    source: str
     title: str
     url: str
     published_at: str
@@ -53,7 +59,6 @@ def agora_utc() -> datetime:
 
 def hoje_iso() -> str:
     return agora_utc().date().isoformat()
-
 
 def fetch_text(url: str) -> str:
     req = Request(
@@ -69,6 +74,22 @@ def fetch_text(url: str) -> str:
     with urlopen(req, timeout=TIMEOUT) as response:
         charset = response.headers.get_content_charset() or "utf-8"
         return response.read().decode(charset, errors="replace")
+
+
+def fetch_json(url: str) -> dict | list:
+    req = Request(
+        url,
+        headers={
+            "User-Agent": USER_AGENT,
+            "Accept": "application/json,text/plain,*/*",
+            "Accept-Language": "pt-BR,pt;q=0.9,en;q=0.8",
+            "Cache-Control": "no-cache",
+            "Pragma": "no-cache",
+        },
+    )
+    with urlopen(req, timeout=TIMEOUT) as response:
+        charset = response.headers.get_content_charset() or "utf-8"
+        return json.loads(response.read().decode(charset, errors="replace"))
 
 
 def limpar_texto(texto: str) -> str:
@@ -114,7 +135,6 @@ def normalizar_titulo(prefixo: str, titulo: str) -> str:
         return titulo
     return f"{prefixo} - {titulo}"
 
-
 def parse_data(texto: str) -> datetime | None:
     texto = str(texto).strip()
 
@@ -124,6 +144,23 @@ def parse_data(texto: str) -> datetime | None:
         "%d-%m-%Y",
         "%d.%m.%Y",
         "%d/%m/%y",
+    )
+
+    for fmt in formatos:
+        try:
+            return datetime.strptime(texto, fmt).replace(tzinfo=timezone.utc)
+        except ValueError:
+            continue
+
+    return None
+
+
+def parse_data_stj_rss(texto: str) -> datetime | None:
+    texto = str(texto).strip()
+
+    formatos = (
+        "%a, %b %d %Y %H:%M:%S",
+        "%a, %d %b %Y %H:%M:%S",
     )
 
     for fmt in formatos:
@@ -191,15 +228,22 @@ def dentro_da_janela(data_publicacao: datetime | None) -> bool:
 
     limite = agora_utc() - timedelta(days=DIAS_PERMANENCIA)
     return data_publicacao >= limite
-
-
 def item_para_dict(item: LinkItem) -> dict[str, str]:
     return {
+        "source": item.source,
         "title": item.title,
         "url": item.url,
         "published_at": item.published_at,
     }
 
+
+def data_pncp_param(days_back: int = 7) -> tuple[str, str]:
+    data_final = agora_utc().date()
+    data_inicial = data_final - timedelta(days=days_back)
+    return (
+        data_inicial.strftime("%Y%m%d"),
+        data_final.strftime("%Y%m%d"),
+    )
 
 def carregar_manuais() -> list[LinkItem]:
     if not ARQUIVO_MANUAIS.exists():
@@ -219,11 +263,12 @@ def carregar_manuais() -> list[LinkItem]:
         if not isinstance(raw, dict):
             continue
 
+        source = str(raw.get("source", "")).strip().upper()
         title = str(raw.get("title", "")).strip()
         url = str(raw.get("url", "")).strip()
         published_at = str(raw.get("published_at", "")).strip() or hoje_iso()
 
-        if not title or not url:
+        if not source or not title or not url:
             continue
 
         if not re.match(r"^https?://", url, flags=re.IGNORECASE):
@@ -234,6 +279,7 @@ def carregar_manuais() -> list[LinkItem]:
 
         itens.append(
             LinkItem(
+                source=source,
                 title=title,
                 url=url,
                 published_at=published_at,
@@ -326,6 +372,7 @@ def coletar_tce_sp() -> list[LinkItem]:
 
             resultados.append(
                 LinkItem(
+                    source="TCE-SP",
                     title=titulo_final,
                     url=url,
                     published_at=data_publicacao.date().isoformat(),
@@ -374,11 +421,130 @@ def coletar_tcu_noticias() -> list[LinkItem]:
 
             resultados.append(
                 LinkItem(
+                    source="TCU",
                     title=titulo_final,
                     url=url,
                     published_at=data_publicacao.date().isoformat(),
                 )
             )
+
+    return resultados
+def coletar_stj_noticias() -> list[LinkItem]:
+    resultados: list[LinkItem] = []
+
+    try:
+        xml_text = fetch_text(STJ_RSS_NOTICIAS)
+        root = ET.fromstring(xml_text)
+    except Exception:
+        return resultados
+
+    for item in root.findall("./channel/item"):
+        titulo = limpar_texto(item.findtext("title", default=""))
+        url = limpar_texto(item.findtext("link", default=""))
+        descricao = limpar_texto(item.findtext("description", default=""))
+        pub_date_raw = limpar_texto(item.findtext("pubDate", default=""))
+
+        data_publicacao = parse_data_stj_rss(pub_date_raw)
+        texto_analise = f"{titulo} {descricao}"
+
+        if not titulo or not url:
+            continue
+
+        if not re.match(r"^https?://", url, flags=re.IGNORECASE):
+            continue
+
+        if not dentro_da_janela(data_publicacao):
+            continue
+
+        if not relevante(texto_analise):
+            continue
+
+        titulo_final = normalizar_titulo("STJ", titulo)
+        if not titulo_final:
+            continue
+
+        resultados.append(
+            LinkItem(
+                source="STJ",
+                title=titulo_final,
+                url=url,
+                published_at=data_publicacao.date().isoformat(),
+            )
+        )
+
+    return resultados
+
+def coletar_pncp_contratacoes() -> list[LinkItem]:
+    resultados: list[LinkItem] = []
+    data_inicial, data_final = data_pncp_param(DIAS_PERMANENCIA)
+
+    for modalidade in PNCP_MODALIDADES:
+        pagina = 1
+        paginas_processadas = 0
+
+        while paginas_processadas < 3:
+            url = (
+                f"{PNCP_BASE_URL}/v1/contratacoes/publicacao"
+                f"?dataInicial={data_inicial}"
+                f"&dataFinal={data_final}"
+                f"&codigoModalidadeContratacao={modalidade}"
+                f"&pagina={pagina}"
+                f"&tamanhoPagina=50"
+            )
+
+            try:
+                payload = fetch_json(url)
+            except Exception:
+                break
+
+            if not isinstance(payload, dict):
+                break
+
+            registros = payload.get("data") or []
+            if not isinstance(registros, list) or not registros:
+                break
+
+            for registro in registros:
+                if not isinstance(registro, dict):
+                    continue
+
+                titulo_base = str(registro.get("objetoCompra", "")).strip()
+                url_origem = str(registro.get("linkSistemaOrigem", "")).strip()
+                data_publicacao = str(registro.get("dataPublicacaoPncp", "")).strip()
+                modalidade_nome = str(registro.get("modalidadeNome", "")).strip()
+
+                if not titulo_base or not url_origem or not data_publicacao:
+                    continue
+
+                if not re.match(r"^https?://", url_origem, flags=re.IGNORECASE):
+                    continue
+
+                if not dentro_da_janela(parse_data(data_publicacao)):
+                    continue
+
+                texto_analise = f"{titulo_base} {modalidade_nome}"
+                if not relevante(texto_analise):
+                    continue
+
+                titulo_final = normalizar_titulo("PNCP", titulo_base[:180].strip())
+                if not titulo_final:
+                    continue
+
+                resultados.append(
+                    LinkItem(
+                        source="PNCP",
+                        title=titulo_final,
+                        url=url_origem,
+                        published_at=data_publicacao[:10],
+                    )
+                )
+
+            total_paginas = int(payload.get("totalPaginas") or 0)
+            pagina += 1
+            paginas_processadas += 1
+
+            if total_paginas and pagina > total_paginas:
+                break
 
     return resultados
 
@@ -387,19 +553,22 @@ def main() -> None:
     manuais = carregar_manuais()
     tce_sp = coletar_tce_sp()
     tcu_noticias = coletar_tcu_noticias()
+    stj_noticias = coletar_stj_noticias()
+    pncp_contratacoes = coletar_pncp_contratacoes()
 
     consolidados = normalizar_lista(
         [
             *manuais,
             *tce_sp,
             *tcu_noticias,
+            *stj_noticias,
+            *pncp_contratacoes,
         ]
     )
 
     salvar_links(consolidados)
 
     print(f"Atualização concluída com {len(consolidados)} links em {ARQUIVO_SAIDA}")
-
 
 if __name__ == "__main__":
     main()
