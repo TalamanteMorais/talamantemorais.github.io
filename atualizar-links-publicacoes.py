@@ -30,7 +30,6 @@ STJ_RSS_JURISPRUDENCIA = "https://res.stj.jus.br/hrestp-c-portalp/RSS.xml"
 PNCP_BASE_URL = "https://pncp.gov.br/api/consulta"
 PNCP_MODALIDADES = (4, 6, 8, 9, 12)
 
-
 PALAVRAS_CHAVE = (
 
     "14.133",
@@ -49,7 +48,13 @@ PALAVRAS_CHAVE = (
     "compra pública",
     "acórdão",
     "acordao",
+    "jurisprud",
+    "decisão",
+    "decisao",
+    "julgado",
 )
+
+
 @dataclass
 class LinkItem:
     source: str
@@ -147,6 +152,8 @@ def parse_data(texto: str) -> datetime | None:
         "%Y-%m-%d",
         "%Y-%m-%dT%H:%M:%S",
         "%Y-%m-%dT%H:%M:%S.%f",
+        "%Y-%m-%dT%H:%M:%SZ",
+        "%Y-%m-%dT%H:%M:%S.%fZ",
         "%Y-%m-%dT%H:%M:%S%z",
         "%Y-%m-%dT%H:%M:%S.%f%z",
         "%d/%m/%Y",
@@ -165,7 +172,6 @@ def parse_data(texto: str) -> datetime | None:
             continue
 
     return None
-
 
 def parse_data_stj_rss(texto: str) -> datetime | None:
     texto = str(texto).strip()
@@ -262,10 +268,40 @@ def mesmo_dominio(url: str, dominio: str) -> bool:
     except Exception:
         return False
 
+def normalizar_busca(texto: str) -> str:
+    texto = str(texto).lower()
+    substituicoes = str.maketrans(
+        {
+            "á": "a",
+            "à": "a",
+            "â": "a",
+            "ã": "a",
+            "ä": "a",
+            "é": "e",
+            "è": "e",
+            "ê": "e",
+            "ë": "e",
+            "í": "i",
+            "ì": "i",
+            "î": "i",
+            "ï": "i",
+            "ó": "o",
+            "ò": "o",
+            "ô": "o",
+            "õ": "o",
+            "ö": "o",
+            "ú": "u",
+            "ù": "u",
+            "û": "u",
+            "ü": "u",
+            "ç": "c",
+        }
+    )
+    return texto.translate(substituicoes)
 
 def relevante(texto: str) -> bool:
-    base = texto.lower()
-    return any(palavra in base for palavra in PALAVRAS_CHAVE)
+    base = normalizar_busca(texto)
+    return any(normalizar_busca(palavra) in base for palavra in PALAVRAS_CHAVE)
 
 
 def dentro_da_janela(data_publicacao: datetime | None) -> bool:
@@ -385,18 +421,14 @@ def normalizar_lista(itens: Iterable[LinkItem]) -> list[LinkItem]:
 
     resultado: list[LinkItem] = []
 
-    for orgao, itens_orgao in por_orgao.items():
+    for orgao in ("TCU", "STJ", "TCE-SP", "PNCP"):
+        itens_orgao = por_orgao[orgao]
         itens_orgao.sort(
             key=lambda item: parse_data(item.published_at) or datetime.min.replace(tzinfo=timezone.utc),
             reverse=True,
         )
         limite = LIMITE_AUTOMATICO_POR_ORGAO.get(orgao, 10)
         resultado.extend(itens_orgao[:limite])
-
-    resultado.sort(
-        key=lambda item: parse_data(item.published_at) or datetime.min.replace(tzinfo=timezone.utc),
-        reverse=True,
-    )
 
     return resultado
 
@@ -555,6 +587,11 @@ def coletar_pncp_contratacoes() -> list[LinkItem]:
     for modalidade in PNCP_MODALIDADES:
         pagina = 1
         paginas_processadas = 0
+        registros_lidos = 0
+        descartados_sem_data = 0
+        descartados_fora_janela = 0
+        descartados_sem_url = 0
+        descartados_sem_relevancia = 0
 
         while paginas_processadas < 5:
             url = (
@@ -582,6 +619,8 @@ def coletar_pncp_contratacoes() -> list[LinkItem]:
                 if not isinstance(registro, dict):
                     continue
 
+                registros_lidos += 1
+
                 titulo_base = str(registro.get("objetoCompra", "")).strip()
                 numero_controle = str(registro.get("numeroControlePNCP", "")).strip()
                 link_sistema_origem = str(registro.get("linkSistemaOrigem", "")).strip()
@@ -598,16 +637,25 @@ def coletar_pncp_contratacoes() -> list[LinkItem]:
                     url_origem = f"https://pncp.gov.br/app/editais/{numero_controle}"
 
                 if not titulo_base or not url_origem or not data_publicacao:
+                    descartados_sem_url += 1
                     continue
 
                 if not re.match(r"^https?://", url_origem, flags=re.IGNORECASE):
+                    descartados_sem_url += 1
                     continue
 
-                if not dentro_da_janela(parse_data(data_publicacao)):
+                data_convertida = parse_data(data_publicacao)
+                if data_convertida is None:
+                    descartados_sem_data += 1
+                    continue
+
+                if not dentro_da_janela(data_convertida):
+                    descartados_fora_janela += 1
                     continue
 
                 texto_analise = f"{titulo_base} {modalidade_nome} {info_complementar} {amparo_nome} {amparo_descricao}"
                 if not relevante(texto_analise):
+                    descartados_sem_relevancia += 1
                     continue
 
                 titulo_final = normalizar_titulo("PNCP", titulo_base[:180].strip())
@@ -619,7 +667,7 @@ def coletar_pncp_contratacoes() -> list[LinkItem]:
                         source="PNCP",
                         title=titulo_final,
                         url=url_origem,
-                        published_at=data_publicacao[:10],
+                        published_at=data_convertida.date().isoformat(),
                     )
                 )
 
@@ -630,7 +678,18 @@ def coletar_pncp_contratacoes() -> list[LinkItem]:
             if total_paginas and pagina > total_paginas:
                 break
 
+        print(
+            f"PNCP modalidade {modalidade}: "
+            f"lidos={registros_lidos}, "
+            f"sem_data={descartados_sem_data}, "
+            f"fora_janela={descartados_fora_janela}, "
+            f"sem_url={descartados_sem_url}, "
+            f"sem_relevancia={descartados_sem_relevancia}, "
+            f"aceitos={len([item for item in resultados if item.source == 'PNCP'])}"
+        )
+
     return resultados
+
 
 def main() -> None:
     manuais = carregar_manuais()
