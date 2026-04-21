@@ -548,13 +548,18 @@ def coletar_pncp_contratacoes() -> list[LinkItem]:
 
     return resultados
 
-
 def main() -> None:
     manuais = carregar_manuais()
     tce_sp = coletar_tce_sp()
     tcu_noticias = coletar_tcu_noticias()
     stj_noticias = coletar_stj_noticias()
     pncp_contratacoes = coletar_pncp_contratacoes()
+
+    print(f"Manuais: {len(manuais)}")
+    print(f"TCE-SP: {len(tce_sp)}")
+    print(f"TCU: {len(tcu_noticias)}")
+    print(f"STJ: {len(stj_noticias)}")
+    print(f"PNCP: {len(pncp_contratacoes)}")
 
     consolidados = normalizar_lista(
         [
@@ -565,6 +570,8 @@ def main() -> None:
             *pncp_contratacoes,
         ]
     )
+
+    print(f"Consolidados após normalização: {len(consolidados)}")
 
     salvar_links(consolidados)
 
