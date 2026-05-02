@@ -1,248 +1,242 @@
 [
   {
-    "source": "TCU",
-    "title": "TCU - Licitações em andamento",
-    "url": "https://portal.tcu.gov.br/transparencia-e-prestacao-de-contas/servico/licitacoes-em-andamento",
-    "published_at": "2026-04-21"
+    "source": "STJ",
+    "title": "STJ - Podcast STJ No Seu Dia trata da distribuição de superávit em previdência privada complementar",
+    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/01052026-Podcast-STJ-No-Seu-Dia-trata-da-distribuicao-de-superavit-em-previdencia-privada-complementar.aspx",
+    "published_at": "2026-05-01"
   },
   {
     "source": "STJ",
-    "title": "STJ - Competência para julgar casos de injúria racial contra adolescente é destaque no STJ Notícias",
-    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/28042026-Competencia-para-julgar-casos-de-injuria-racial-contra-adolescente-e-destaque-no-STJ-Noticias.aspx",
+    "title": "STJ - Sistemas podem ter indisponibilidade temporária entre sexta (1º) e domingo (3)",
+    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/30042026-Sistemas-podem-ter-indisponibilidade-temporaria-entre-sexta--1o--e-domingo--3-.aspx",
+    "published_at": "2026-04-30"
+  },
+  {
+    "source": "STJ",
+    "title": "STJ - Pesquisa Pronta traz incomunicabilidade de qualificadora no homicídio",
+    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/30042026-Pesquisa-Pronta-traz-incomunicabilidade-de-qualificadora-no-homicidio.aspx",
+    "published_at": "2026-04-30"
+  },
+  {
+    "source": "STJ",
+    "title": "STJ - Livro em homenagem aos 15 anos de atuação do ministro Raul Araújo será lançado no dia 19 de maio",
+    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/30042026-Livro-em-homenagem-aos-15-anos-de-atuacao-do-ministro-Raul-Araujo-sera-lancado-no-dia-19-de-maio.aspx",
+    "published_at": "2026-04-30"
+  },
+  {
+    "source": "STJ",
+    "title": "STJ - Terceira Turma considera válida sentença proferida por juíza após ser removida da vara",
+    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/30042026-Terceira-Turma-considera-valida-sentenca-proferida-por-juiza-apos-ser-removida-da-vara.aspx",
+    "published_at": "2026-04-30"
+  },
+  {
+    "source": "STJ",
+    "title": "STJ - Decisões do STJ mostram que a vida animal importa",
+    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/29042026-Decisoes-do-STJ-mostram-que-a-vida-animal-importa.aspx",
+    "published_at": "2026-04-29"
+  },
+  {
+    "source": "STJ",
+    "title": "STJ - Jurisprudência em Teses traz novos entendimentos sobre ilicitude de acesso a dados de celular sem ordem judicial",
+    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/29042026-Jurisprudencia-em-Teses-traz-novos-entendimentos-sobre-ilicitude-de-acesso-a-dados-de-celular-sem-ordem-judicial.aspx",
+    "published_at": "2026-04-29"
+  },
+  {
+    "source": "STJ",
+    "title": "STJ - Entenda a Decisão destaca tese sobre custeio de medicamento sem registro na Anvisa",
+    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/29042026-Entenda-a-Decisao-destaca-tese-sobre-custeio-de-medicamento-sem-registro-na-Anvisa.aspx",
+    "published_at": "2026-04-29"
+  },
+  {
+    "source": "STJ",
+    "title": "STJ - Podcast STJ No Seu Dia aborda responsabilidade de hotel por acidente com criança em área de recreação",
+    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/29042026-Podcast-STJ-No-Seu-Dia-aborda-responsabilidade-de-hotel-por-acidente-com-crianca-em-area-de-recreacao.aspx",
+    "published_at": "2026-04-29"
+  },
+  {
+    "source": "STJ",
+    "title": "STJ - Repetitivo discute se falta de intérprete para réu surdo-mudo e sem domínio de Libras gera nulidade processual",
+    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/29042026-Repetitivo-discute-se-falta-de-interprete-para-reu-surdo-mudo-e-sem-dominio-de-Libras-gera-nulidade-processual.aspx",
+    "published_at": "2026-04-29"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CREDENCIAMENTO DE INSTITUIÇÕES FINANCEIRAS (PESSOAS JURÍDICAS E COOPERATIVAS DE CRÉDITO) PARA A OFERTA DE EMPRÉSTIMOS/CRÉDITO CONSIGNADO NA MODALIDADE DE CONSIGNAÇÃO EM FOLHA DE PA",
+    "url": "https://pregaobanrisul.com.br/editais/0001_2026/348650",
     "published_at": "2026-04-28"
   },
   {
-    "source": "STJ",
-    "title": "STJ - Primeira Seção ajusta tese repetitiva e inclui teto para taifeiros da Aeronáutica com benefícios acumulados",
-    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/28042026-Primeira-Secao-ajusta-tese-repetitiva-e-inclui-teto-para-taifeiros-da-Aeronautica-com-beneficios-acumulados.aspx",
+    "source": "PNCP",
+    "title": "PNCP - [Portal de Compras Públicas] - Credenciamento de pessoas física ou jurídicas para prestação de serviços de marceneiro, jardineiro, pintor, serralheiro, pedreiro, operador de máquin",
+    "url": "https://portaldecompraspublicas.com.br/processos/PB/Prefeitura-Municipal-de-Varzea-3560/CRED-00005-2026-2026-475585",
     "published_at": "2026-04-28"
   },
   {
-    "source": "STJ",
-    "title": "STJ - Quarta Turma condena Braskem a indenizar porteiro demitido após desastre ambiental em Maceió",
-    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/28042026-Quarta-Turma-condena-Braskem-a-indenizar-porteiro-demitido-apos-desastre-ambiental-em-Maceio.aspx",
+    "source": "PNCP",
+    "title": "PNCP - [Portal de Compras Públicas] - Contratação de empresa especializada para a prestação de serviços de esterilização cirúrgica de cães e gatos, compreendendo a realização de procedim",
+    "url": "https://portaldecompraspublicas.com.br/processos/PB/Prefeitura-Municipal-de-Guarabira-2646/CRED-00005-2026-2026-475589",
     "published_at": "2026-04-28"
   },
   {
-    "source": "STJ",
-    "title": "STJ - Descriminalização da posse de maconha para uso pessoal não afasta falta grave no âmbito da execução penal",
-    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/28042026-Descriminalizacao-da-posse-de-maconha-para-uso-pessoal-nao-afasta-falta-grave-no-ambito-da-execucao-penal.aspx",
+    "source": "PNCP",
+    "title": "PNCP - CREDENCIAMENTO DE EMPRESA PARA PRESTAÇÃO DE SERVIÇOS MÉDICOS NO ÂMBITO DAS EQUIPES DE ESTRATÉGIA DE SAÚDE DA FAMÍLIA (ESF) DO MUNICÍPIO DE ITAPORÃ/MS.",
+    "url": "http://itaporams.ddns.net:5656/transparencia",
     "published_at": "2026-04-28"
   },
   {
-    "source": "STJ",
-    "title": "STJ - Informativo traz direito à remoção de servidor por motivo de saúde e identificação de conteúdo ilícito na internet",
-    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/27042026-Informativo-traz-direito-a-remocao-de-servidor-por-motivo-de-saude-e-identificacao-de-conteudo-ilicito-na-internet.aspx",
-    "published_at": "2026-04-27"
-  },
-  {
-    "source": "STJ",
-    "title": "STJ - Terceira Seção começa às 9h30 no dia 13 de maio",
-    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/27042026-Terceira-Secao-comeca-as-9h30-no-dia-13-de-maio.aspx",
-    "published_at": "2026-04-27"
-  },
-  {
-    "source": "STJ",
-    "title": "STJ - Preclusão do pedido de reavaliação de bem penhorado é destaque na Pesquisa Pronta",
-    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/27042026-Preclusao-do-pedido-de-reavaliacao-de-bem-penhorado-e-destaque-na-Pesquisa-Pronta.aspx",
-    "published_at": "2026-04-27"
-  },
-  {
-    "source": "STJ",
-    "title": "STJ - Repetitivo discute se inatividade ou queda de faturamento autorizam gratuidade de justiça para pessoa jurídica",
-    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/27042026-Repetitivo-discute-se-inatividade-ou-queda-de-faturamento-autorizam-gratuidade-de-justica-para-pessoa-juridica.aspx",
-    "published_at": "2026-04-27"
-  },
-  {
-    "source": "STJ",
-    "title": "STJ - Telas e extratos eletrônicos da Fazenda Pública são provas válidas para fins de interrupção da prescrição",
-    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/27042026-Telas-e-extratos-eletronicos-da-Fazenda-Publica-sao-provas-validas-para-fins-de-interrupcao-da-prescricao.aspx",
-    "published_at": "2026-04-27"
-  },
-  {
-    "source": "STJ",
-    "title": "STJ - STJ avança na discussão sobre quebra do sigilo bancário em ações cíveis",
-    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/26042026-STJ-avanca-na-discussao-sobre-quebra-do-sigilo-bancario-em-acoes-civeis.aspx",
-    "published_at": "2026-04-26"
+    "source": "PNCP",
+    "title": "PNCP - Credenciamento de empresa especializada em Pediatria para atender à Secretaria Municipal de Saúde e seus demais setores (ESF Sede, ESF Pedra Menina, ESF Mundo Novo e Policlínica Mu",
+    "url": "https://pncp.gov.br/app/editais/27167386000187-1-000095/2026",
+    "published_at": "2026-04-28"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - Contratação de empresa para a execução de obra de pavimentação poliédrica com pedras irregulares no prolongamento da Estrada Vicinal da Linha 11, no sentido da Localidade de Rincão",
-    "url": "https://pregaobanrisul.com.br/editais/0002_2026/350032",
-    "published_at": "2026-04-22"
+    "title": "PNCP - Credenciamento de empresas para eventual prestação de serviços de arbitragem esportiva e gestão técnica para o campeonato Amador de Futebol de Campo do Município de Marília, destin",
+    "url": "https://www.marilia.sp.gov.br/portal/editais/0/1/7774",
+    "published_at": "2026-04-28"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - Contratação De Empresa Para Execução De Serviços De Engenharia Para Pavimentação Em Revsol De Estradas Vicinais, Na Comunidade De Fortaleza, Muniz Freire/Es (Convênio Nº 904523/202",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=98567303900012026",
-    "published_at": "2026-04-22"
+    "title": "PNCP - [LICITANET] - CREDENCIAMENTO DE ARTISTAS E/OU BANDAS MUSICAIS PARA REALIZAÇÃO DE APRESENTAÇÕES MUSICAIS AO VIVO, VISANDO ATENDER À PROGRAMAÇÃO CULTURAL E INSTITUCIONAL DO MUNICÍPIO",
+    "url": "https://licitanet.com.br/sessao/182874",
+    "published_at": "2026-04-28"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - O objeto da licitação é a prestação dos SERVIÇOS DE REQUALIFICAÇÃO DE CANAIS E ADUTORAS A SEREM EXECUTADOS NOS SISTEMAS HÍDRICOS NO ÂMBITO ESTADUAL, nas condições estabelecidas nes",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=94300103970042026",
-    "published_at": "2026-04-22"
+    "title": "PNCP - [LICITANET] - CREDENCIAMENTO DE PESSOAS JURÍDICAS DO RAMO DE SERVIÇOS FÚNEBRES PARA PRESTAÇÃO DE SERVIÇO EVENTUAL DE AUXÍLIO FUNERAL EM ATENDIMENTO A RESOLUÇÃO Nº 03 DE 04 DE FEVER",
+    "url": "https://licitanet.com.br/sessao/182879",
+    "published_at": "2026-04-28"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - Contratação de empresa especializada para elaboração dos projetos básico e executivo, execução das obras civis, fornecimento, montagem e instalação de equipamentos, testes, comissi",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=92898903900012026",
-    "published_at": "2026-04-22"
+    "title": "PNCP - CREDENCIAMENTO DE ATRAÇÕES MUSICAIS LOCAIS PARA APRESENTAÇÕES ARTÍSTICAS PROFISSIONAIS EM EVENTOS INSTITUCIONAIS DO MUNICÍPIO DE POMBAL-PB",
+    "url": "https://pncp.gov.br/app/editais/08948697000139-1-000067/2026",
+    "published_at": "2026-04-28"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - Contratação de empresa especializada para construção do espaço esportivo comunitário do Bairro Sertão do Bracuí – Angra dos Reis, incluindo o fornecimento de todos os equipamentos,",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=98580103900142026",
-    "published_at": "2026-04-22"
+    "title": "PNCP - Credenciamento de pessoa jurídica para prestação de serviços de T. O. - Terapia Ocupacional, consistindo em atendimentos individuais e/ou em grupo, planejamento e execução de ativi",
+    "url": "https://bnccompras.com/Process/ProcessView?param1=[gkz]TCvavWxJ9Y2TaxRpzjqKtewoHyZ/etwxcXWzLfkHRiFClIrshGeg2mbLJG0p0U5zWG08nTV2FIb_/y3NFarVg_nN53HYtjX/AVSvvAcKTKE=",
+    "published_at": "2026-04-28"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - Contratação de empresa especializada para o fornecimento de materiais e mão de obra visando a execução de obra de implantação de uma Creche, Rua das Magnólias, nº 920, Jardim Casa",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=98795303900092026",
-    "published_at": "2026-04-22"
+    "title": "PNCP - [LICITANET] - Chamamento Público para credenciamento de pessoa jurídica para prestação de serviços de assessoria e consultoria na área de Gestão Pública em Educação, para atender a",
+    "url": "https://licitanet.com.br/sessao/182917",
+    "published_at": "2026-04-28"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - Contratação de empresa especializada para o fornecimento de materiais e mão de obra visando a execução de obra de implantação de ciclovia em concreto, com sinalização, acessibilida",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=98795303900102026",
-    "published_at": "2026-04-22"
+    "title": "PNCP - Credenciamento de Pessoa Jurídica para Contratação especializada na prestação de serviços de exames médicos e/ou complementares, destinados à realização de diagnósticos clínicos pa",
+    "url": "http://www.licitapetrolandia.com.br",
+    "published_at": "2026-04-28"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - Supervisão das Obras de Adequação de Capacidade, Duplicação, Restauração, Melhorias de Segurança e Eliminação de pontos críticos na Rodovia BR-080/DF",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=39301103901362026",
-    "published_at": "2026-04-22"
+    "title": "PNCP - CREDENCIAMENTO DE PESSOAS JURIDICAS PARA PRESTACAO DE SERVICOS DE REVISAO DE ATESTADOS E INSPECAO MEDICA DE SERVIDORES NOMEADOS POR CONCURSO PUBLICO TUDO CONFORME TERMO DE REFEREN",
+    "url": "https://pncp.gov.br/app/editais/87738530000110-1-000710/2026",
+    "published_at": "2026-04-28"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - Contratação de empresa especializada para realizar a obra de Reforma do Fórum da Comarca de Wanderlândia/TO.",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=92581403900032026",
-    "published_at": "2026-04-22"
+    "title": "PNCP - CONTRATAÇÃO PESSOA JURÍDICA PARA A PRESTAÇÃO DE SERVIÇOS DE MANUTENÇÃO PREVENTIVA E CORRETIVA, INSTALAÇÃO E DESINSTALAÇÃO DE APARELHOS DE ARCONDICIONADO E CORTINAS DE AR, A SEREM E",
+    "url": "https://pncp.gov.br/app/editais/18017384000110-1-000132/2026",
+    "published_at": "2026-04-28"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - Contratação para construção de 163 (cento e sessenta e três) unidades habitacionais na tipologia de casas em alvenaria com 2 (dois) dormitórios, 3 (três) dormitórios e unidades hab",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=98859903900902026",
-    "published_at": "2026-04-22"
+    "title": "PNCP - [LICITANET] - Credenciamento para contratação de leiloeiros oficiais para a prestação de serviços técnicos especializados na organização, preparação e realização de leilão público",
+    "url": "https://licitanet.com.br/sessao/182945",
+    "published_at": "2026-04-28"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - Contratação de empresa para a execução da Obra de 4.998,00 m² Pavimentação em Paralelepípedo, referente à zona rural do município de Curralinhos - PI.",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=48001003900192026",
-    "published_at": "2026-04-22"
+    "title": "PNCP - [Portal de Compras Públicas] - CREDENCIAMENTO DE CLÍNICAS VETERINÁRIAS ESPECIALIZADAS PARA TRATAMENTO E VACINAÇÃO DE CÃES E GATOS PARA ATENDER O PROGRAMA PERMANENTE DE EDUCAÇÃO EM",
+    "url": "https://portaldecompraspublicas.com.br/processos/SC/Prefeitura-Municipal-de-Sao-Lourenco-do-Oeste-1660/CRED-1-2026-2026-475709",
+    "published_at": "2026-04-28"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - Contratação de empresa especializada em serviços de engenharia para reforma da UBS Maria Ruth Sereno Santos na Avenida Manoel Inácio Peixoto no distrito de Sereno do município de C",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=98430503900092026",
-    "published_at": "2026-04-22"
+    "title": "PNCP - Aquisição de alimentos provenientes da Agricultura Familiar e/ou Empreendedores Familiares Rurais ou suas organizações, destinado ao atendimento ao Programa Nacional de Alimentação",
+    "url": "https://legado.aquidauana.ms.gov.br/DOEM/DOEM-AQUIDAUANA-2862-20260205-cvfy6.pdf",
+    "published_at": "2026-04-28"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - Contratação de empresa especializada para a execução da obra “Praça Pau Brasil”, com infraestrutura recreativa e de lazer nos termos da tabela abaixo, consoantes condições e exigên",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=98998303900052026",
-    "published_at": "2026-04-22"
+    "title": "PNCP - CREDENCIAMENTO DE CONSULTAS, EXAMES E PROCEDIMENTOS MEDICOS ESPECIALIZADOS CONFORME TABELA EM ANEXO, PARA DISPONIBILIZAR À POPULAÇÃO DOS MUNICÍPIOS QUE INTEGRAM O CIS-AMEOSC",
+    "url": "https://pncp.gov.br/app/editais/02311972000122-1-000032/2026",
+    "published_at": "2026-04-28"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - Pavimentação asfáltica de vias urbana em CBUQ, 1.960,00 m2, incluindo serviços preliminares, demolição do pavimento existente, terraplenagem, base e sub-base, revestimento, meio-fi",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=98788503900042026",
-    "published_at": "2026-04-22"
+    "title": "PNCP - [Publicenter] - Inexigibilidade para contratação da empresa PSICOCLINIC MENTE POSITIVA LTDA CNPJ 53.499.909/0001- 00, PARA PRESTAÇÃO DE SERVIÇOS MÉDICOS DE SAÚDE, OFERTADOS AO",
+    "url": "https://pncp.gov.br/app/editais/18602011000107-1-000082/2026",
+    "published_at": "2026-04-28"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - Contratação de empresa especializada para a construção de praça, muro e revitalização de uma quadra da Escola Municipal Duque de Caxias, no povoado Santa Luzia",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=98013603900052026",
-    "published_at": "2026-04-22"
+    "title": "PNCP - Credenciamento de pessoas físicas e jurídicas, por meio de chamamento público para prestação de serviços médicos especializados destinados ao atendimento das demandas da Secretaria",
+    "url": "http://www.licitacoari.com.br",
+    "published_at": "2026-04-28"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - Contratação de Serviços de Reforma da Academia Itaberina de Letras e Artes (AILA).",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=98940303900062026",
-    "published_at": "2026-04-22"
+    "title": "PNCP - CREDENCIAMENTO DE CONSULTAS, EXAMES E PROCEDIMENTOS MEDICOS ESPECIALIZADOS CONFORME TABELA EM ANEXO, PARA DISPONIBILIZAR À POPULAÇÃO DOS MUNICÍPIOS QUE INTEGRAM O CIS-AMEOSC",
+    "url": "https://pncp.gov.br/app/editais/02311972000122-1-000033/2026",
+    "published_at": "2026-04-28"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - Execução das Obras de construção do Polo Automotivo da Mangueira, complemento da fase 1 e fase 2, São Francisco Xavier, XIII RA - AP 3",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=98600103900642026",
-    "published_at": "2026-04-22"
+    "title": "PNCP - AQUISICAO DE GENEROS ALIMENTICIOS ORIUNDOS DA AGRICULTURA FAMILIAR PARA ATENDER AS ESCOLAS DA REDE MUNICIPAL E INSTITUICOES CONVENIADAS DE ITAPERUNA VISANDO ATENDER A NECESSIDADE",
+    "url": "https://pncp.gov.br/app/editais/44534082000120-1-000013/2026",
+    "published_at": "2026-04-28"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - Obra para implantação do Sistema de Proteção Contra Incêndio e Pânico do CAPGV.",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=17908503900362026",
-    "published_at": "2026-04-22"
+    "title": "PNCP - Solicitamos autorizacao para a aquisicao por CHAMADA PUBLICA PARA AQUISICAO DE GENEROS ALIMENTICIOS DA AGRICULTURA FAMILIAR visando atender as unidades escolares da rede municipa",
+    "url": "https://pncp.gov.br/app/editais/50634611000160-1-000023/2025",
+    "published_at": "2026-04-28"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - Contratação de empresa para prestação de serviço de execução da obra de Reforma e Revitalização na Praça São José.",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=98578703900072026",
-    "published_at": "2026-04-22"
+    "title": "PNCP - Credenciamento de operadoras de planos de assistencia medico hospitalar bem como estar registrada na Agencia Nacional de Saude Suplementar ANS abrangendo procedimentos clinicos",
+    "url": "https://pncp.gov.br/app/editais/51863884000149-1-000012/2026",
+    "published_at": "2026-04-28"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - Implantação de sistema para captação e tratamento de águas pluviais e de poços do Centro Administrativo Presidente Getúlio Vargas, do Banco do Nordeste.",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=17908503900372026",
-    "published_at": "2026-04-22"
+    "title": "PNCP - CREDENCIAMENTO DE PESSOAS JURÍDICAS PARA PRESTAÇÃO DE SERVIÇOS DE TRANSPORTE DE BRITA, PÓ DE PEDRA E MATERIAIS CORRELATOS, POR TONELADA, COM CAMINHÃO BASCULANTE, MOTORISTA/OPERADOR",
+    "url": "https://www.gp.srv.br/transparencia_tapurah/servlet/licitacoes_v2?1",
+    "published_at": "2026-04-28"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - Contratação de empresa especializada para execução de reforma do pavimento térreo e execução do Sistema de Proteção contra Descargas Atmosféricas no Tribunal de Contas dos Municípi",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=92546003900012026",
-    "published_at": "2026-04-22"
+    "title": "PNCP - [LICITANET] - CREDENCIAMENTO – Contratação de pessoa Física ou Jurídica para fornecimentos de material de consumo (GÊNEROS ALIMENTÍCIOS – AGRICULTURA FAMILIAR) visando atender as n",
+    "url": "https://licitanet.com.br/sessao/182940",
+    "published_at": "2026-04-28"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - Contratação de empresa especializada para Reforma e Adequação da Praça Santana no município de Nova Friburgo/RJ.",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=98586703900052026",
-    "published_at": "2026-04-22"
+    "title": "PNCP - CREDENCIAMENTO DE PESSOAS JURÍDICAS ESPECIALIZADAS NA PRESTAÇÃO DE SERVIÇOS DE HOTELARIA, CONSISTENTES NA DISPONIBILIZAÇÃO DE HOSPEDAGEM NO MUNICÍPIO DE TAIOBEIRASMG.",
+    "url": "https://pncp.gov.br/app/editais/18017384000110-1-000133/2026",
+    "published_at": "2026-04-28"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - Obra de estabilização na Estrada do Dendê, 523 - Ilha do Governador – AP 3.7 – RA XX",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=98600103900572026",
-    "published_at": "2026-04-22"
+    "title": "PNCP - Serviços médicos complementares para exames e consultas. De responsabilidade do Consórcio Público de Saúde da Microrregião de Iguatu - CE.",
+    "url": "http://compras.m2atecnologia.com.br/processos/publicacao/e6377a59e23c403d8104c06ff7669ee7/servicos-medicos-complementares-para-exames-e-cons",
+    "published_at": "2026-04-28"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - Contratação de empresa para execução de 33.482,40 M² de pavimentação em paralelepípedo no município de Barras - PI.",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=92597303900562026",
-    "published_at": "2026-04-22"
+    "title": "PNCP - [Publicenter] - INEX.CRED.PARA CONTRATAÇÃO DA EMPRESA AXCLINIC ODONTOLOGIA LTDA PARA PRESTAÇÃO DE SERVIÇOS NA ÁREA DE ODONTOLOGIA DO MUNICÍPIO DE PATOS DE MINAS, OFERTADOS AOS SERV",
+    "url": "https://pncp.gov.br/app/editais/18602011000107-1-000083/2026",
+    "published_at": "2026-04-28"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - Pavimentação de vias urbanas em concreto betuminoso usinado a quente (CBUQ), área de 7.967,09 m², compreendendo: serviços preliminares; terraplenagem; drenagem; base e sub-base; re",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=98777703900192026",
-    "published_at": "2026-04-22"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Contratação de serviços de engenharia para a elaboração do Projeto Executivo de Desapropriação necessário às Obras de Adequação de Capacidade, Melhoria de Segurança e Eliminação de",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=39303103901342026",
-    "published_at": "2026-04-22"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA O FORNECIMENTO, INSTALAÇÃO, SUPORTE TÉCNICO E MANUTENÇÃO PREVENTIVA E CORRETIVA DE CENTROS INTEGRADOS DE COMANDO E CONTROLE MUNICIPAIS (CI",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=93063603900032026",
-    "published_at": "2026-04-22"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Contratação de empresa de engenharia especializada para elaboração do Estudo de Rompimento Catastrófico (Dam Break) em 02 (dois) barramentos localizados no Município de Sorocaba/SP",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=92618503900032026",
-    "published_at": "2026-04-22"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Contratação de empresa para Construção e Implantação de Sistema de Abastecimento - SAA da aldeia KAMEREDJAM, município de Cumaru do Norte/PA, Polo Base de Redenção/PA.",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=25704403900072026",
-    "published_at": "2026-04-22"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Contratação de pessoa jurídica para execução de serviço de reforma da praça do santuário santa terezinha no município de Bandeirantes-PR",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=98744503900032026",
-    "published_at": "2026-04-22"
+    "title": "PNCP - captação de patrocínio de pessoas jurídicas de direito público ou privado interessadas em patrocinar os eventos promovidos pela Secretaria Municipal de Turismo, Cultura, Meio Amb",
+    "url": "https://www.januaria.mg.gov.br/portal/editais/0/1/3196/",
+    "published_at": "2026-04-28"
   }
 ]
