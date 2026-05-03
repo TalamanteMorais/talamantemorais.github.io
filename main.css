@@ -450,7 +450,6 @@ ul li{
   height: auto;
   border-radius: 8px;
 }
-
 .qrcode-actions{
   display: flex;
   justify-content: center;
@@ -469,6 +468,26 @@ ul li{
 .qrcode-actions .info-cartao{
   margin-left: 0;
   flex: 0 0 auto;
+}
+
+@media (max-width: 700px){
+  .qrcode-actions{
+    gap: 4px;
+  }
+
+  .qrcode-actions .cta-btn{
+    flex: 0 1 auto;
+    max-width: 185px;
+    padding: 0.5rem 0.85rem;
+    font-size: 0.88rem;
+  }
+
+  .qrcode-actions .info-cartao{
+    margin-left: -2px;
+    width: 16px;
+    height: 16px;
+    font-size: 11px;
+  }
 }
 
 /* ======================== 13. BOTÕES ESPECIAIS – MATÉRIAS JURÍDICAS ======================== */
