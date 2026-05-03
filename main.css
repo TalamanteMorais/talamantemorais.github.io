@@ -427,9 +427,6 @@ ul li{
   line-height: 1.5;
 }
 
-/* ======================== 11. VÍDEOS ======================== */
-/* substituído por .video-embed e .video-grid nas seções 21 e 22 */
-
 /* ======================== 12. QR CODE ======================== */
 .qrcode-container{
   margin: 2.2rem auto 0;
@@ -450,7 +447,6 @@ ul li{
   height: auto;
   border-radius: 8px;
 }
-
 .qrcode-actions{
   display: flex;
   justify-content: center;
@@ -473,38 +469,22 @@ ul li{
 
 @media (max-width: 700px){
   .qrcode-actions{
-    gap: 6px;
-  }
-
-  .qrcode-actions .cta-btn{
-    flex: 0 1 78%;
-    max-width: 78%;
-    padding: 0.5rem 0.9rem;
-    font-size: 0.86rem;
-  }
-
-  .qrcode-actions .info-cartao{
-    margin-left: -1px;
-    width: 16px;
-    height: 16px;
-    font-size: 11px;
-  }
-}
-
-@media (max-width: 700px){
-  .qrcode-actions{
-    gap: 4px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
   }
 
   .qrcode-actions .cta-btn{
     flex: 0 1 auto;
-    max-width: 185px;
+    width: 100%;
+    max-width: 250px;
     padding: 0.5rem 0.85rem;
     font-size: 0.88rem;
   }
 
   .qrcode-actions .info-cartao{
-    margin-left: -2px;
+    margin-left: 0;
     width: 16px;
     height: 16px;
     font-size: 11px;
@@ -697,6 +677,13 @@ footer{
   outline-offset: 2px;
   border-radius: 50%;
 }
+
+@media (min-width: 901px){
+  .whatsapp-button{
+    right: max(12px, calc((100vw - var(--container-max)) / 2 + 12px));
+  }
+}
+
 @media (max-width: 700px){
   .whatsapp-button{
     right: calc(10px + env(safe-area-inset-right));
