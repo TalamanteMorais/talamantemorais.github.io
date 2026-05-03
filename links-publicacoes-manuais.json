@@ -1,8 +1,14 @@
 [
   {
-
-  "title": "Compras públicas do Governo Federal - Consulta detalhada",
-  "url": "https://www.gov.br/compras/pt-br/acesso-a-informacao/consulta-detalhada/consulta-detalhada"
-
+    "title": "Compras públicas do Governo Federal - Consulta detalhada",
+    "url": "https://www.gov.br/compras/pt-br/acesso-a-informacao/consulta-detalhada/consulta-detalhada",
+    "manual": true,
+    "permanent": true
+  },
+  {
+    "title": "Inclusão de exigências de habilitação e quesitos de pontuação técnica que gerem custos desnecessários antes da celebração da contratação.",
+    "url": "https://pesquisa.apps.tcu.gov.br/redireciona/sumula/SUMULA-EJURIS-22107",
+    "manual": true,
+    "permanent": true
   }
 ]
