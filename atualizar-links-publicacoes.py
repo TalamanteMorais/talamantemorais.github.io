@@ -44,7 +44,6 @@ TCM_GO_TERMOS = (
     "licitação",
     "contrato",
 )
-
 PALAVRAS_CHAVE = (
     "14.133",
     "licita",
@@ -80,18 +79,98 @@ PALAVRAS_CHAVE = (
     "multa",
 )
 
+TERMOS_PRIORIDADE_ALTA = (
+    "14.133",
+    "lei 14.133",
+    "nova lei de licitações",
+    "pregão eletrônico",
+    "pregao eletronico",
+    "concorrência",
+    "concorrencia",
+    "dispensa de licitação",
+    "dispensa de licitacao",
+    "inexigibilidade",
+    "credenciamento",
+    "acórdão",
+    "acordao",
+    "jurisprudência",
+    "jurisprudencia",
+    "representação",
+    "representacao",
+    "denúncia",
+    "denuncia",
+    "irregularidade",
+    "ilegalidade",
+    "restrição à competitividade",
+    "restricao a competitividade",
+    "direcionamento",
+    "sobrepreço",
+    "sobrepreco",
+    "superfaturamento",
+    "conluio",
+    "sanção",
+    "sancao",
+    "inidoneidade",
+)
+
+TERMOS_PRIORIDADE_MEDIA = (
+    "licitação",
+    "licitacao",
+    "contrato administrativo",
+    "contrato",
+    "edital",
+    "estudo técnico preliminar",
+    "estudo tecnico preliminar",
+    "etp",
+    "termo de referência",
+    "termo de referencia",
+    "tr",
+    "matriz de riscos",
+    "risco",
+    "ata de registro de preços",
+    "ata de registro de precos",
+    "registro de preços",
+    "registro de precos",
+    "srp",
+    "agente público",
+    "agente publico",
+    "fornecedor",
+    "gestor",
+    "prefeito",
+    "câmara",
+    "camara",
+    "município",
+    "municipio",
+    "multa",
+    "ressarcimento",
+)
+
+TERMOS_BAIXA_RELEVANCIA = (
+    "posse",
+    "homenagem",
+    "reunião",
+    "reuniao",
+    "evento",
+    "curso",
+    "palestra",
+    "seminário",
+    "seminario",
+    "expediente",
+    "feriado",
+    "comunicado",
+    "institucional",
+    "aniversário",
+    "aniversario",
+)
 @dataclass
 class LinkItem:
-
     source: str
     title: str
     url: str
     published_at: str
 
-
 def agora_utc() -> datetime:
     return datetime.now(timezone.utc)
-
 
 def hoje_iso() -> str:
     return agora_utc().date().isoformat()
@@ -329,6 +408,77 @@ def normalizar_busca(texto: str) -> str:
 def relevante(texto: str) -> bool:
     base = normalizar_busca(texto)
     return any(normalizar_busca(palavra) in base for palavra in PALAVRAS_CHAVE)
+
+def pontuar_texto(texto: str) -> int:
+    base = normalizar_busca(texto)
+    pontuacao = 0
+
+    for termo in TERMOS_PRIORIDADE_ALTA:
+        if normalizar_busca(termo) in base:
+            pontuacao += 8
+
+    for termo in TERMOS_PRIORIDADE_MEDIA:
+        if normalizar_busca(termo) in base:
+            pontuacao += 3
+
+    for termo in TERMOS_BAIXA_RELEVANCIA:
+        if normalizar_busca(termo) in base:
+            pontuacao -= 4
+
+    if "14.133" in base and any(
+        normalizar_busca(termo) in base
+        for termo in (
+            "pregão eletrônico",
+            "pregao eletronico",
+            "concorrência",
+            "concorrencia",
+            "dispensa",
+            "inexigibilidade",
+            "credenciamento",
+            "edital",
+            "etp",
+            "termo de referência",
+            "termo de referencia",
+            "contrato",
+        )
+    ):
+        pontuacao += 10
+
+    if any(
+        normalizar_busca(termo) in base
+        for termo in (
+            "acórdão",
+            "acordao",
+            "jurisprudência",
+            "jurisprudencia",
+            "representação",
+            "representacao",
+            "denúncia",
+            "denuncia",
+        )
+    ) and any(
+        normalizar_busca(termo) in base
+        for termo in (
+            "licitação",
+            "licitacao",
+            "contrato",
+            "edital",
+            "dispensa",
+            "inexigibilidade",
+            "credenciamento",
+            "pregão",
+            "pregao",
+            "concorrência",
+            "concorrencia",
+        )
+    ):
+        pontuacao += 10
+
+    return pontuacao
+
+def pontuar_item(item: LinkItem) -> int:
+    return pontuar_texto(f"{item.source} {item.title}")
+
 def dentro_da_janela(data_publicacao: datetime | None) -> bool:
     if data_publicacao is None:
         return False
@@ -529,7 +679,10 @@ def normalizar_lista(itens: Iterable[LinkItem]) -> list[LinkItem]:
 
         itens_orgao = por_orgao[orgao]
         itens_orgao.sort(
-            key=lambda item: parse_data(item.published_at) or datetime.min.replace(tzinfo=timezone.utc),
+            key=lambda item: (
+                pontuar_item(item),
+                parse_data(item.published_at) or datetime.min.replace(tzinfo=timezone.utc),
+            ),
             reverse=True,
         )
         limite = LIMITE_AUTOMATICO_POR_ORGAO.get(orgao, 10)
