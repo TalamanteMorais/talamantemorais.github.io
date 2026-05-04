@@ -18,6 +18,7 @@ DIAS_PERMANENCIA = 7
 LIMITE_AUTOMATICO_POR_ORGAO = {
     "STJ": 10,
     "PNCP": 30,
+    "TCM-BA": 10,
 }
 
 TCE_SP_LISTAGENS = []
@@ -452,10 +453,10 @@ def normalizar_lista(itens: Iterable[LinkItem]) -> list[LinkItem]:
         for item in unicos.values()
         if dentro_da_janela(parse_data(item.published_at))
     ]
-
     por_orgao: dict[str, list[LinkItem]] = {
         "STJ": [],
         "PNCP": [],
+        "TCM-BA": [],
     }
 
     for item in filtrados:
@@ -463,8 +464,8 @@ def normalizar_lista(itens: Iterable[LinkItem]) -> list[LinkItem]:
             por_orgao[item.source].append(item)
 
     resultado: list[LinkItem] = []
+    for orgao in ("STJ", "PNCP", "TCM-BA"):
 
-    for orgao in ("STJ", "PNCP"):
         itens_orgao = por_orgao[orgao]
         itens_orgao.sort(
             key=lambda item: parse_data(item.published_at) or datetime.min.replace(tzinfo=timezone.utc),
@@ -744,6 +745,55 @@ def coletar_pncp_contratacoes() -> list[LinkItem]:
         )
 
     return resultados
+def coletar_tcm_ba() -> list[LinkItem]:
+    resultados: list[LinkItem] = []
+
+    url = "https://www.tcm.ba.gov.br/informacoes/noticias/"
+
+    try:
+        html = fetch_text(url)
+    except Exception:
+        return resultados
+
+    for texto_link, link in extrair_links_html(html, url):
+        if not mesmo_dominio(link, "tcm.ba.gov.br"):
+            continue
+
+        if not relevante(texto_link):
+            continue
+
+        try:
+            detalhe = fetch_text(link)
+        except Exception:
+            continue
+
+        titulo = extrair_h1(detalhe) or extrair_title_tag(detalhe) or texto_link
+        descricao = extrair_descricao(detalhe)
+        data_publicacao = extrair_data_tce(detalhe)
+
+        if not titulo or not data_publicacao:
+            continue
+
+        if not dentro_da_janela(data_publicacao):
+            continue
+
+        texto_analise = f"{titulo} {descricao}"
+
+        if not relevante(texto_analise):
+            continue
+
+        titulo_final = normalizar_titulo("TCM-BA", titulo[:180].strip())
+
+        resultados.append(
+            LinkItem(
+                source="TCM-BA",
+                title=titulo_final,
+                url=link,
+                published_at=data_publicacao.date().isoformat(),
+            )
+        )
+
+    return resultados
 
 def main() -> None:
     manuais = carregar_manuais()
@@ -754,13 +804,15 @@ def main() -> None:
     print(f"STJ: {len(stj_jurisprudencia)}")
     print(f"PNCP: {len(pncp_contratacoes)}")
 
+    tcm_ba = coletar_tcm_ba()
+
     automaticos = normalizar_lista(
         [
             *stj_jurisprudencia,
             *pncp_contratacoes,
+            *tcm_ba,
         ]
     )
-
     print(f"Automáticos após normalização: {len(automaticos)}")
 
     saida_atual = carregar_saida_atual()
