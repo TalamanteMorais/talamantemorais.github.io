@@ -14,6 +14,7 @@ ARQUIVO_MANUAIS = Path("links-publicacoes-manuais.json")
 USER_AGENT = "Mozilla/5.0 (compatible; Projeto-Site-60/1.0; +https://talamante-adv.com.br)"
 TIMEOUT = 25
 DIAS_PERMANENCIA = 7
+DIAS_PERMANENCIA_TCM_BA = 30
 
 LIMITE_AUTOMATICO_POR_ORGAO = {
     "STJ": 10,
@@ -53,8 +54,19 @@ PALAVRAS_CHAVE = (
     "decisão",
     "decisao",
     "julgado",
+    "informativo",
+    "sessão",
+    "contas",
+    "tribunal",
+    "município",
+    "gestor",
+    "prefeito",
+    "câmara",
+    "denúncia",
+    "representação",
+    "ressarcimento",
+    "multa",
 )
-
 
 @dataclass
 class LinkItem:
@@ -304,14 +316,20 @@ def normalizar_busca(texto: str) -> str:
 def relevante(texto: str) -> bool:
     base = normalizar_busca(texto)
     return any(normalizar_busca(palavra) in base for palavra in PALAVRAS_CHAVE)
-
-
 def dentro_da_janela(data_publicacao: datetime | None) -> bool:
     if data_publicacao is None:
         return False
 
     limite = agora_utc() - timedelta(days=DIAS_PERMANENCIA)
     return data_publicacao >= limite
+
+def dentro_da_janela_tcm_ba(data_publicacao: datetime | None) -> bool:
+    if data_publicacao is None:
+        return False
+
+    limite = agora_utc() - timedelta(days=DIAS_PERMANENCIA_TCM_BA)
+    return data_publicacao >= limite
+
 def item_para_dict(item: LinkItem) -> dict[str, str]:
     return {
         "source": item.source,
@@ -496,6 +514,7 @@ def coletar_tce_sp() -> list[LinkItem]:
             except Exception:
                 continue
 
+
             titulo = extrair_h1(detalhe) or extrair_title_tag(detalhe) or texto_link
             descricao = extrair_descricao(detalhe)
             data_publicacao = extrair_data_tce(detalhe)
@@ -510,11 +529,12 @@ def coletar_tce_sp() -> list[LinkItem]:
 
             if not relevante(texto_analise):
                 continue
-
             if not dentro_da_janela(data_publicacao):
                 continue
 
             titulo_final = normalizar_titulo("TCE-SP", titulo[:180].strip())
+
+
             if not titulo_final:
                 continue
 
@@ -758,10 +778,6 @@ def coletar_tcm_ba() -> list[LinkItem]:
     for texto_link, link in extrair_links_html(html, url):
         if not mesmo_dominio(link, "tcm.ba.gov.br"):
             continue
-
-        if not relevante(texto_link):
-            continue
-
         try:
             detalhe = fetch_text(link)
         except Exception:
@@ -774,7 +790,7 @@ def coletar_tcm_ba() -> list[LinkItem]:
         if not titulo or not data_publicacao:
             continue
 
-        if not dentro_da_janela(data_publicacao):
+        if not dentro_da_janela_tcm_ba(data_publicacao):
             continue
 
         texto_analise = f"{titulo} {descricao}"
