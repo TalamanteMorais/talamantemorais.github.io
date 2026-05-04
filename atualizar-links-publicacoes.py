@@ -1136,13 +1136,24 @@ def main() -> None:
         return
 
     consolidados = [*manuais, *automaticos]
-
     print(f"Consolidados finais: {len(consolidados)}")
+
+    fontes_consolidadas: dict[str, int] = {}
+    for item in consolidados:
+        fontes_consolidadas[item.source] = fontes_consolidadas.get(item.source, 0) + 1
+
+    print(f"Fontes consolidadas antes de salvar: {fontes_consolidadas}")
 
     salvar_links(consolidados)
 
-    print(f"Atualização concluída com {len(consolidados)} links em {ARQUIVO_SAIDA}")
+    saida_salva = carregar_saida_atual()
+    fontes_salvas: dict[str, int] = {}
+    for item in saida_salva:
+        fontes_salvas[item.source] = fontes_salvas.get(item.source, 0) + 1
 
+    print(f"Fontes gravadas no JSON: {fontes_salvas}")
+
+    print(f"Atualização concluída com {len(consolidados)} links em {ARQUIVO_SAIDA}")
 
 if __name__ == "__main__":
     main()
