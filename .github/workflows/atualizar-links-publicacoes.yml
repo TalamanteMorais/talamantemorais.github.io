@@ -1,0 +1,54 @@
+name: Atualizar links publicações
+on:
+  schedule:
+    - cron: "0 9 * * *"
+    - cron: "0 18 * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  atualizar:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar repositório
+        uses: actions/checkout@v6
+
+      - name: Instalar Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Executar atualizador
+        run: python atualizar-links-publicacoes.py
+
+      - name: Conferir arquivo gerado
+        run: |
+          test -f links-publicacoes.json
+          python - <<'PY'
+          import json
+          from collections import Counter
+
+          with open("links-publicacoes.json", "r", encoding="utf-8") as arquivo:
+              dados = json.load(arquivo)
+
+          contagem = Counter(item.get("source", "") for item in dados if isinstance(item, dict))
+          print(f"Total no JSON: {len(dados)}")
+          print(f"Fontes no JSON: {dict(contagem)}")
+          print(f"Possui TCU: {'TCU' in contagem}")
+          print(f"Possui TCM-GO: {'TCM-GO' in contagem}")
+          PY
+
+      - name: Commitar alterações
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git status --short
+          git add links-publicacoes.json
+          git diff --cached --quiet || git commit -m "Atualiza links-publicacoes automaticamente"
+
+      - name: Enviar alterações
+        run: git push
