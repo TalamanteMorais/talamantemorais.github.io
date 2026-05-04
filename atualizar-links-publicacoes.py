@@ -15,18 +15,17 @@ USER_AGENT = "Mozilla/5.0 (compatible; Projeto-Site-60/1.0; +https://talamante-a
 TIMEOUT = 25
 DIAS_PERMANENCIA = 7
 DIAS_PERMANENCIA_TCM_BA = 30
-
+DIAS_PERMANENCIA_PNCP = 30
 LIMITE_AUTOMATICO_POR_ORGAO = {
+    "TCU": 10,
     "STJ": 10,
     "PNCP": 30,
     "TCM-BA": 10,
 }
-
 TCE_SP_LISTAGENS = []
 
-TCU_LISTAGENS_NOTICIAS = []
-
-TCU_LISTAGENS_JURISPRUDENCIA = []
+TCU_ACORDAOS_API = "https://dados-abertos.apps.tcu.gov.br/api/acordao/recupera-acordaos"
+TCU_ACORDAOS_QUANTIDADE = 80
 
 STJ_RSS_JURISPRUDENCIA = "https://res.stj.jus.br/hrestp-c-portalp/RSS.xml"
 PNCP_BASE_URL = "https://pncp.gov.br/api/consulta"
@@ -322,12 +321,18 @@ def dentro_da_janela(data_publicacao: datetime | None) -> bool:
 
     limite = agora_utc() - timedelta(days=DIAS_PERMANENCIA)
     return data_publicacao >= limite
-
 def dentro_da_janela_tcm_ba(data_publicacao: datetime | None) -> bool:
     if data_publicacao is None:
         return False
 
     limite = agora_utc() - timedelta(days=DIAS_PERMANENCIA_TCM_BA)
+    return data_publicacao >= limite
+
+def dentro_da_janela_pncp(data_publicacao: datetime | None) -> bool:
+    if data_publicacao is None:
+        return False
+
+    limite = agora_utc() - timedelta(days=DIAS_PERMANENCIA_PNCP)
     return data_publicacao >= limite
 
 def item_para_dict(item: LinkItem) -> dict[str, str]:
@@ -465,24 +470,25 @@ def normalizar_lista(itens: Iterable[LinkItem]) -> list[LinkItem]:
 
         if data_item >= data_atual:
             unicos[chave] = item
-
     filtrados = [
         item
         for item in unicos.values()
         if dentro_da_janela(parse_data(item.published_at))
     ]
+
     por_orgao: dict[str, list[LinkItem]] = {
+        "TCU": [],
         "STJ": [],
         "PNCP": [],
         "TCM-BA": [],
-    }
+    }    
 
     for item in filtrados:
         if item.source in por_orgao:
             por_orgao[item.source].append(item)
 
     resultado: list[LinkItem] = []
-    for orgao in ("STJ", "PNCP", "TCM-BA"):
+    for orgao in ("TCU", "STJ", "PNCP", "TCM-BA"):
 
         itens_orgao = por_orgao[orgao]
         itens_orgao.sort(
@@ -549,62 +555,67 @@ def coletar_tce_sp() -> list[LinkItem]:
 
     return resultados
 
-def coletar_tcu_noticias() -> list[LinkItem]:
+def coletar_tcu_acordaos() -> list[LinkItem]:
     resultados: list[LinkItem] = []
 
-    for url_listagem in TCU_LISTAGENS_NOTICIAS:
-        try:
-            html = fetch_text(url_listagem)
-        except Exception:
+    url = f"{TCU_ACORDAOS_API}?inicio=0&quantidade={TCU_ACORDAOS_QUANTIDADE}"
+
+    try:
+        payload = fetch_json(url)
+    except Exception:
+        return resultados
+
+    if not isinstance(payload, list):
+        return resultados
+
+    for registro in payload:
+        if not isinstance(registro, dict):
             continue
 
-        for texto_link, url in extrair_links_html(html, url_listagem):
-            if not mesmo_dominio(url, "portal.tcu.gov.br"):
-                continue
+        tipo = str(registro.get("tipo", "")).strip()
+        ano_acordao = str(registro.get("anoAcordao", "")).strip()
+        numero_acordao = str(registro.get("numeroAcordao", "")).strip()
+        titulo_base = str(registro.get("titulo", "")).strip()
+        colegiado = str(registro.get("colegiado", "")).strip()
+        data_sessao = str(registro.get("dataSessao", "")).strip()
+        relator = str(registro.get("relator", "")).strip()
+        situacao = str(registro.get("situacao", "")).strip()
+        sumario = str(registro.get("sumario", "")).strip()
+        url_acordao = str(registro.get("urlAcordao", "")).strip()
+        url_pdf = str(registro.get("urlArquivoPDF", "")).strip()
+        url_arquivo = str(registro.get("urlArquivo", "")).strip()
 
-            if "/imprensa/noticias/" not in url:
-                continue
+        if not titulo_base:
+            identificacao = " ".join(
+                parte for parte in (tipo, numero_acordao, ano_acordao, colegiado) if parte
+            ).strip()
+            titulo_base = identificacao or "Acórdão do Tribunal de Contas da União"
 
-            try:
-                detalhe = fetch_text(url)
-            except Exception:
-                continue
+        url_origem = url_acordao or url_pdf or url_arquivo
+        if not re.match(r"^https?://", url_origem, flags=re.IGNORECASE):
+            continue
 
-            titulo = extrair_h1(detalhe) or extrair_title_tag(detalhe) or texto_link
-            descricao = extrair_descricao(detalhe)
+        data_publicacao = parse_data(data_sessao)
+        if not dentro_da_janela(data_publicacao):
+            continue
 
-            texto_limpo = re.sub(r"\s+", " ", texto_link).strip()
-            match_data = re.match(r"^\s*(\d{2}/\d{2}/\d{4})\s+(.*)$", texto_limpo, flags=re.DOTALL)
+        texto_analise = f"{titulo_base} {tipo} {colegiado} {relator} {situacao} {sumario}"
 
-            if match_data:
-                data_publicacao = parse_data(match_data.group(1))
-            else:
-                data_publicacao = agora_utc()
+        if not relevante(texto_analise):
+            continue
 
-            texto_analise = f"{texto_link} {titulo} {descricao}"
+        titulo_final = normalizar_titulo("TCU", titulo_base[:180].strip())
+        if not titulo_final:
+            continue
 
-            if not titulo:
-                continue
-
-            if not dentro_da_janela(data_publicacao):
-                continue
-
-            if not relevante(texto_analise):
-                continue
-
-            titulo_final = normalizar_titulo("TCU", titulo[:180].strip())
-            if not titulo_final:
-                continue
-
-            resultados.append(
-                LinkItem(
-                    source="TCU",
-                    title=titulo_final,
-                    url=url,
-                    published_at=data_publicacao.date().isoformat(),
-                )
+        resultados.append(
+            LinkItem(
+                source="TCU",
+                title=titulo_final,
+                url=url_origem,
+                published_at=data_publicacao.date().isoformat(),
             )
-
+        )
 
     return resultados
 
@@ -724,8 +735,7 @@ def coletar_pncp_contratacoes() -> list[LinkItem]:
                 if data_convertida is None:
                     descartados_sem_data += 1
                     continue
-
-                if not dentro_da_janela(data_convertida):
+                if not dentro_da_janela_pncp(data_convertida):
                     descartados_fora_janela += 1
                     continue
 
@@ -813,10 +823,12 @@ def coletar_tcm_ba() -> list[LinkItem]:
 
 def main() -> None:
     manuais = carregar_manuais()
+    tcu_acordaos = coletar_tcu_acordaos()
     stj_jurisprudencia = coletar_stj_jurisprudencia()
     pncp_contratacoes = coletar_pncp_contratacoes()
 
     print(f"Manuais: {len(manuais)}")
+    print(f"TCU: {len(tcu_acordaos)}")
     print(f"STJ: {len(stj_jurisprudencia)}")
     print(f"PNCP: {len(pncp_contratacoes)}")
 
@@ -824,11 +836,13 @@ def main() -> None:
 
     automaticos = normalizar_lista(
         [
+            *tcu_acordaos,
             *stj_jurisprudencia,
             *pncp_contratacoes,
             *tcm_ba,
         ]
     )
+
     print(f"Automáticos após normalização: {len(automaticos)}")
 
     saida_atual = carregar_saida_atual()
