@@ -393,7 +393,8 @@ document.addEventListener("DOMContentLoaded", function () {
     STJ: document.getElementById("links-publicacoes-stj"),
     "TCE-SP": document.getElementById("links-publicacoes-tce-sp"),
     PNCP: document.getElementById("links-publicacoes-pncp"),
-    "TCM-BA": document.getElementById("links-publicacoes-tcm-ba")
+    "TCM-BA": document.getElementById("links-publicacoes-tcm-ba"),
+    "TCM-GO": document.getElementById("links-publicacoes-tcm-go")
   };
   const listasPublicacoes = Object.entries(gruposPublicacoes).filter(([, el]) => el);
 
@@ -409,15 +410,18 @@ document.addEventListener("DOMContentLoaded", function () {
       STJ: 10,
       "TCE-SP": 10,
       PNCP: 30,
-      "TCM-BA": 10
+      "TCM-BA": 10,
+      "TCM-GO": 10
     };
     const ITENS_VISIVEIS_POR_ORGAO = {
       TCU: 10,
       STJ: 10,
       "TCE-SP": 10,
       PNCP: 10,
-      "TCM-BA": 10
+      "TCM-BA": 10,
+      "TCM-GO": 10
     };
+
     const LIMITE_JSON_LEGADO = 30;
     const ITENS_VISIVEIS_LEGADO = 10;
 
@@ -466,10 +470,13 @@ document.addEventListener("DOMContentLoaded", function () {
       if (fonte === "TCU") return "TCU";
       if (fonte === "STJ") return "STJ";
       if (fonte === "TCE-SP" || fonte === "TCESP" || fonte === "TCE SP") return "TCE-SP";
+
       if (fonte === "PNCP") return "PNCP";
       if (fonte === "TCM-BA" || fonte === "TCMBA" || fonte === "TCM BA") return "TCM-BA";
+      if (fonte === "TCM-GO" || fonte === "TCMGO" || fonte === "TCM GO") return "TCM-GO";
 
       return "";
+
     };
 
     const inferirFonte = (item) => {
@@ -482,8 +489,10 @@ document.addEventListener("DOMContentLoaded", function () {
       if (titulo.startsWith("TCE-SP -") || titulo.startsWith("TCESP -") || titulo.startsWith("TCE SP -")) return "TCE-SP";
       if (titulo.startsWith("PNCP -")) return "PNCP";
       if (titulo.startsWith("TCM-BA -") || titulo.startsWith("TCMBA -") || titulo.startsWith("TCM BA -")) return "TCM-BA";
+      if (titulo.startsWith("TCM-GO -") || titulo.startsWith("TCMGO -") || titulo.startsWith("TCM GO -")) return "TCM-GO";
 
       return "";
+
     };
 
     const criarItemLista = (item) => {
@@ -536,7 +545,8 @@ document.addEventListener("DOMContentLoaded", function () {
             STJ: [],
             "TCE-SP": [],
             PNCP: [],
-            "TCM-BA": []
+            "TCM-BA": [],
+            "TCM-GO": []
           };
 
           validos.forEach((item) => {

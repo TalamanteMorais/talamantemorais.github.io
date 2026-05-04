@@ -15,24 +15,37 @@ USER_AGENT = "Mozilla/5.0 (compatible; Projeto-Site-60/1.0; +https://talamante-a
 TIMEOUT = 25
 DIAS_PERMANENCIA = 7
 DIAS_PERMANENCIA_TCM_BA = 30
+DIAS_PERMANENCIA_TCM_GO = 30
 DIAS_PERMANENCIA_PNCP = 30
+
 LIMITE_AUTOMATICO_POR_ORGAO = {
     "TCU": 10,
     "STJ": 10,
     "PNCP": 30,
     "TCM-BA": 10,
+    "TCM-GO": 10,
 }
+
 TCE_SP_LISTAGENS = []
 
 TCU_ACORDAOS_API = "https://dados-abertos.apps.tcu.gov.br/api/acordao/recupera-acordaos"
 TCU_ACORDAOS_QUANTIDADE = 80
-
 STJ_RSS_JURISPRUDENCIA = "https://res.stj.jus.br/hrestp-c-portalp/RSS.xml"
 PNCP_BASE_URL = "https://pncp.gov.br/api/consulta"
 PNCP_MODALIDADES = (4, 6, 8, 9, 12)
+TCM_GO_POSTS_API = "https://www.tcmgo.tc.br/site/wp-json/wp/v2/posts"
+
+TCM_GO_TERMOS = (
+    "jurisprudência",
+    "acórdão",
+    "acordao",
+    "decisão",
+    "decisao",
+    "licitação",
+    "contrato",
+)
 
 PALAVRAS_CHAVE = (
-
     "14.133",
     "licita",
     "contrato",
@@ -69,6 +82,7 @@ PALAVRAS_CHAVE = (
 
 @dataclass
 class LinkItem:
+
     source: str
     title: str
     url: str
@@ -321,11 +335,19 @@ def dentro_da_janela(data_publicacao: datetime | None) -> bool:
 
     limite = agora_utc() - timedelta(days=DIAS_PERMANENCIA)
     return data_publicacao >= limite
+
 def dentro_da_janela_tcm_ba(data_publicacao: datetime | None) -> bool:
     if data_publicacao is None:
         return False
 
     limite = agora_utc() - timedelta(days=DIAS_PERMANENCIA_TCM_BA)
+    return data_publicacao >= limite
+
+def dentro_da_janela_tcm_go(data_publicacao: datetime | None) -> bool:
+    if data_publicacao is None:
+        return False
+
+    limite = agora_utc() - timedelta(days=DIAS_PERMANENCIA_TCM_GO)
     return data_publicacao >= limite
 
 def dentro_da_janela_pncp(data_publicacao: datetime | None) -> bool:
@@ -334,6 +356,20 @@ def dentro_da_janela_pncp(data_publicacao: datetime | None) -> bool:
 
     limite = agora_utc() - timedelta(days=DIAS_PERMANENCIA_PNCP)
     return data_publicacao >= limite
+
+def dentro_da_janela_por_orgao(item: LinkItem) -> bool:
+    data_publicacao = parse_data(item.published_at)
+
+    if item.source == "PNCP":
+        return dentro_da_janela_pncp(data_publicacao)
+
+    if item.source == "TCM-BA":
+        return dentro_da_janela_tcm_ba(data_publicacao)
+
+    if item.source == "TCM-GO":
+        return dentro_da_janela_tcm_go(data_publicacao)
+
+    return dentro_da_janela(data_publicacao)
 
 def item_para_dict(item: LinkItem) -> dict[str, str]:
     return {
@@ -473,7 +509,7 @@ def normalizar_lista(itens: Iterable[LinkItem]) -> list[LinkItem]:
     filtrados = [
         item
         for item in unicos.values()
-        if dentro_da_janela(parse_data(item.published_at))
+        if dentro_da_janela_por_orgao(item)
     ]
 
     por_orgao: dict[str, list[LinkItem]] = {
@@ -481,14 +517,15 @@ def normalizar_lista(itens: Iterable[LinkItem]) -> list[LinkItem]:
         "STJ": [],
         "PNCP": [],
         "TCM-BA": [],
+        "TCM-GO": [],
     }    
 
     for item in filtrados:
         if item.source in por_orgao:
             por_orgao[item.source].append(item)
-
     resultado: list[LinkItem] = []
-    for orgao in ("TCU", "STJ", "PNCP", "TCM-BA"):
+
+    for orgao in ("TCU", "STJ", "PNCP", "TCM-BA", "TCM-GO"):
 
         itens_orgao = por_orgao[orgao]
         itens_orgao.sort(
@@ -821,6 +858,85 @@ def coletar_tcm_ba() -> list[LinkItem]:
 
     return resultados
 
+def coletar_tcm_go() -> list[LinkItem]:
+    resultados: list[LinkItem] = []
+    urls_processadas: set[str] = set()
+
+    for termo in TCM_GO_TERMOS:
+        url = (
+            f"{TCM_GO_POSTS_API}"
+            f"?search={termo}"
+            f"&per_page=20"
+            f"&_fields=date,link,title,excerpt"
+        )
+
+        try:
+            payload = fetch_json(url)
+        except Exception:
+            continue
+
+        if not isinstance(payload, list):
+            continue
+
+        for registro in payload:
+            if not isinstance(registro, dict):
+                continue
+
+            link = str(registro.get("link", "")).strip()
+            data_raw = str(registro.get("date", "")).strip()
+
+            titulo_raw = registro.get("title") or {}
+            resumo_raw = registro.get("excerpt") or {}
+
+            titulo = ""
+            resumo = ""
+
+            if isinstance(titulo_raw, dict):
+                titulo = limpar_texto(str(titulo_raw.get("rendered", "")))
+            else:
+                titulo = limpar_texto(str(titulo_raw))
+
+            if isinstance(resumo_raw, dict):
+                resumo = limpar_texto(str(resumo_raw.get("rendered", "")))
+            else:
+                resumo = limpar_texto(str(resumo_raw))
+
+            if not titulo or not link:
+                continue
+
+            if not re.match(r"^https?://", link, flags=re.IGNORECASE):
+                continue
+
+            if not mesmo_dominio(link, "tcmgo.tc.br"):
+                continue
+
+            chave = link.lower()
+            if chave in urls_processadas:
+                continue
+
+            data_publicacao = parse_data(data_raw)
+            if not dentro_da_janela_tcm_go(data_publicacao):
+                continue
+
+            texto_analise = f"{titulo} {resumo} {termo}"
+
+            if not relevante(texto_analise):
+                continue
+
+            titulo_final = normalizar_titulo("TCM-GO", titulo[:180].strip())
+
+            resultados.append(
+                LinkItem(
+                    source="TCM-GO",
+                    title=titulo_final,
+                    url=link,
+                    published_at=data_publicacao.date().isoformat(),
+                )
+            )
+            urls_processadas.add(chave)
+
+    return resultados
+
 def main() -> None:
     manuais = carregar_manuais()
     tcu_acordaos = coletar_tcu_acordaos()
@@ -833,6 +949,10 @@ def main() -> None:
     print(f"PNCP: {len(pncp_contratacoes)}")
 
     tcm_ba = coletar_tcm_ba()
+    tcm_go = coletar_tcm_go()
+
+    print(f"TCM-BA: {len(tcm_ba)}")
+    print(f"TCM-GO: {len(tcm_go)}")
 
     automaticos = normalizar_lista(
         [
@@ -840,9 +960,9 @@ def main() -> None:
             *stj_jurisprudencia,
             *pncp_contratacoes,
             *tcm_ba,
+            *tcm_go,
         ]
     )
-
     print(f"Automáticos após normalização: {len(automaticos)}")
 
     saida_atual = carregar_saida_atual()
