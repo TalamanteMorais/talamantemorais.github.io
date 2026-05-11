@@ -36,7 +36,7 @@ STJ_RSS_JURISPRUDENCIA = "https://res.stj.jus.br/hrestp-c-portalp/RSS.xml"
 PNCP_BASE_URL = "https://pncp.gov.br/api/consulta"
 PNCP_MODALIDADES = (4, 6, 8, 9, 12)
 TCM_GO_POSTS_API = "https://www.tcmgo.tc.br/site/wp-json/wp/v2/posts"
-TCM_BA_POSTS_API = "https://www.tcm.ba.gov.br/wp-json/wp/v2/posts"
+TCM_BA_NOTICIAS_URL = "https://www.tcm.ba.gov.br/informacoes/noticias/"
 
 TCM_GO_TERMOS = (
     "jurisprudência",
@@ -990,79 +990,72 @@ def coletar_pncp_contratacoes() -> list[LinkItem]:
         )
 
     return resultados
+
 def coletar_tcm_ba() -> list[LinkItem]:
     resultados: list[LinkItem] = []
     urls_processadas: set[str] = set()
 
-    for termo in TCM_BA_TERMOS:
-        url = (
-            f"{TCM_BA_POSTS_API}"
-            f"?search={termo}"
-            f"&per_page=20"
-            f"&_fields=date,link,title,excerpt"
-        )
+    try:
+        html = fetch_text(TCM_BA_NOTICIAS_URL)
+    except Exception:
+        return resultados
+
+    for texto_link, link in extrair_links_html(html, TCM_BA_NOTICIAS_URL):
+        if not re.match(r"^https?://", link, flags=re.IGNORECASE):
+            continue
+
+        if not mesmo_dominio(link, "tcm.ba.gov.br"):
+            continue
+
+        if any(
+            trecho in link.lower()
+            for trecho in (
+                "/wp-content/",
+                "/wp-admin/",
+                "/tag/",
+                "/category/",
+                "/author/",
+                "/feed/",
+                "#",
+            )
+        ):
+            continue
+
+        chave = link.strip().lower()
+        if chave in urls_processadas:
+            continue
 
         try:
-            payload = fetch_json(url)
+            detalhe = fetch_text(link)
         except Exception:
+            detalhe = ""
+
+        titulo = extrair_h1(detalhe) or extrair_title_tag(detalhe) or texto_link
+        descricao = extrair_descricao(detalhe)
+        data_publicacao = extrair_data_tce(detalhe) or extrair_data_tce(html)
+
+        if not titulo or not data_publicacao:
             continue
 
-        if not isinstance(payload, list):
+        if not dentro_da_janela_tcm_ba(data_publicacao):
             continue
 
-        for registro in payload:
-            if not isinstance(registro, dict):
-                continue
+        texto_analise = f"{texto_link} {titulo} {descricao}"
 
-            link = str(registro.get("link", "")).strip()
-            data_raw = str(registro.get("date", "")).strip()
+        if not relevante(texto_analise):
+            continue
 
-            titulo_raw = registro.get("title") or {}
-            resumo_raw = registro.get("excerpt") or {}
+        titulo_final = normalizar_titulo("TCM-BA", titulo[:180].strip())
 
-            if isinstance(titulo_raw, dict):
-                titulo = limpar_texto(str(titulo_raw.get("rendered", "")))
-            else:
-                titulo = limpar_texto(str(titulo_raw))
-
-            if isinstance(resumo_raw, dict):
-                resumo = limpar_texto(str(resumo_raw.get("rendered", "")))
-            else:
-                resumo = limpar_texto(str(resumo_raw))
-
-            if not titulo or not link:
-                continue
-
-            if not re.match(r"^https?://", link, flags=re.IGNORECASE):
-                continue
-
-            if not mesmo_dominio(link, "tcm.ba.gov.br"):
-                continue
-
-            chave = link.lower()
-            if chave in urls_processadas:
-                continue
-
-            data_publicacao = parse_data(data_raw)
-            if not dentro_da_janela_tcm_ba(data_publicacao):
-                continue
-
-            texto_analise = f"{titulo} {resumo} {termo}"
-
-            if not relevante(texto_analise):
-                continue
-
-            titulo_final = normalizar_titulo("TCM-BA", titulo[:180].strip())
-
-            resultados.append(
-                LinkItem(
-                    source="TCM-BA",
-                    title=titulo_final,
-                    url=link,
-                    published_at=data_publicacao.date().isoformat(),
-                )
+        resultados.append(
+            LinkItem(
+                source="TCM-BA",
+                title=titulo_final,
+                url=link,
+                published_at=data_publicacao.date().isoformat(),
             )
-            urls_processadas.add(chave)
+        )
+        urls_processadas.add(chave)
 
     return resultados
 
