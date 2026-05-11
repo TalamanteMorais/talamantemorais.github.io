@@ -993,19 +993,29 @@ def coletar_pncp_contratacoes() -> list[LinkItem]:
             f"aceitos={len([item for item in resultados if item.source == 'PNCP'])}"
         )
     return resultados
-
 def coletar_rss_tcm_ba() -> list[LinkItem]:
     resultados: list[LinkItem] = []
     urls_processadas: set[str] = set()
+    rss_lidos = 0
+    rss_falhas = 0
+    itens_lidos = 0
+    sem_data = 0
+    fora_janela = 0
+    sem_relevancia = 0
 
     for rss_url in TCM_BA_RSS_URLS:
         try:
             xml_text = fetch_text(rss_url)
             root = ET.fromstring(xml_text)
-        except Exception:
+            rss_lidos += 1
+        except Exception as erro:
+            rss_falhas += 1
+            print(f"TCM-BA RSS falhou: {rss_url} | {type(erro).__name__}: {erro}")
             continue
 
         for item in root.findall("./channel/item"):
+            itens_lidos += 1
+
             titulo = limpar_texto(item.findtext("title", default=""))
             link = limpar_texto(item.findtext("link", default=""))
             descricao = limpar_texto(item.findtext("description", default=""))
@@ -1023,15 +1033,20 @@ def coletar_rss_tcm_ba() -> list[LinkItem]:
             chave = link.strip().lower()
             if chave in urls_processadas:
                 continue
-
             data_publicacao = parse_data_stj_rss(pub_date_raw) or parse_data(pub_date_raw)
 
+            if data_publicacao is None:
+                sem_data += 1
+                continue
+
             if not dentro_da_janela_tcm_ba(data_publicacao):
+                fora_janela += 1
                 continue
 
             texto_analise = f"{titulo} {descricao}"
 
             if not relevante(texto_analise):
+                sem_relevancia += 1
                 continue
 
             titulo_final = normalizar_titulo("TCM-BA", titulo[:180].strip())
@@ -1045,10 +1060,21 @@ def coletar_rss_tcm_ba() -> list[LinkItem]:
                 )
             )
             urls_processadas.add(chave)
+    print(
+        f"TCM-BA RSS diagnóstico: "
+        f"rss_lidos={rss_lidos}, "
+        f"rss_falhas={rss_falhas}, "
+        f"itens_lidos={itens_lidos}, "
+        f"sem_data={sem_data}, "
+        f"fora_janela={fora_janela}, "
+        f"sem_relevancia={sem_relevancia}, "
+        f"aceitos={len(resultados)}"
+    )
 
     return resultados
 
 def coletar_tcm_ba() -> list[LinkItem]:
+
     resultados: list[LinkItem] = []
     urls_processadas: set[str] = set()
 
@@ -1061,14 +1087,25 @@ def coletar_tcm_ba() -> list[LinkItem]:
 
         resultados.append(item)
         urls_processadas.add(chave)
+    html_lido = 0
+    html_falha = 0
+    links_lidos = 0
+    sem_data_html = 0
+    fora_janela_html = 0
+    sem_relevancia_html = 0
 
     try:
         html = fetch_text(TCM_BA_NOTICIAS_URL)
-    except Exception:
+        html_lido = 1
+    except Exception as erro:
         html = ""
+        html_falha = 1
+        print(f"TCM-BA HTML falhou: {TCM_BA_NOTICIAS_URL} | {type(erro).__name__}: {erro}")
 
     if html:
         for texto_link, link in extrair_links_html(html, TCM_BA_NOTICIAS_URL):
+            links_lidos += 1
+
             if not re.match(r"^https?://", link, flags=re.IGNORECASE):
                 continue
 
@@ -1124,10 +1161,21 @@ def coletar_tcm_ba() -> list[LinkItem]:
                 )
             )
             urls_processadas.add(chave)
+    print(
+        f"TCM-BA HTML diagnóstico: "
+        f"html_lido={html_lido}, "
+        f"html_falha={html_falha}, "
+        f"links_lidos={links_lidos}, "
+        f"sem_data={sem_data_html}, "
+        f"fora_janela={fora_janela_html}, "
+        f"sem_relevancia={sem_relevancia_html}, "
+        f"aceitos_total={len(resultados)}"
+    )
 
     return resultados
 
 def coletar_tcm_go() -> list[LinkItem]:
+
     resultados: list[LinkItem] = []
     urls_processadas: set[str] = set()
 
