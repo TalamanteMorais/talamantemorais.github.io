@@ -11,8 +11,9 @@ import xml.etree.ElementTree as ET
 
 ARQUIVO_SAIDA = Path("links-publicacoes.json")
 ARQUIVO_MANUAIS = Path("links-publicacoes-manuais.json")
-USER_AGENT = "Mozilla/5.0 (compatible; Projeto-Site-60/1.0; +https://talamante-adv.com.br)"
-TIMEOUT = 25
+USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"
+TIMEOUT = 60
+
 DIAS_PERMANENCIA = 7
 DIAS_PERMANENCIA_TCM_BA = 30
 DIAS_PERMANENCIA_TCM_GO = 30
