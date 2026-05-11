@@ -40,9 +40,7 @@ TCM_GO_POSTS_API = "https://www.tcmgo.tc.br/site/wp-json/wp/v2/posts"
 TCM_BA_NOTICIAS_URL = "https://www.tcm.ba.gov.br/informacoes/noticias/"
 TCM_BA_RSS_URLS = (
     "https://www.tcm.ba.gov.br/feed/",
-    "https://www.tcm.ba.gov.br/informacoes/noticias/feed/",
 )
-
 TCM_GO_TERMOS = (
     "jurisprudência",
     "acórdão",
@@ -347,8 +345,9 @@ def parse_data_stj_rss(texto: str) -> datetime | None:
     formatos = (
         "%a, %b %d %Y %H:%M:%S",
         "%a, %d %b %Y %H:%M:%S",
+        "%a, %d %b %Y %H:%M:%S %z",
+        "%a, %d %b %Y %H:%M:%S %Z",
     )
-
     for fmt in formatos:
         try:
             return datetime.strptime(texto_normalizado, fmt).replace(tzinfo=timezone.utc)
