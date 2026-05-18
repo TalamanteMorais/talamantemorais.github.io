@@ -14,7 +14,7 @@ ARQUIVO_MANUAIS = Path("links-publicacoes-manuais.json")
 USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"
 TIMEOUT = 60
 
-DIAS_PERMANENCIA = 7
+DIAS_PERMANENCIA = 30
 DIAS_PERMANENCIA_TCM_BA = 30
 DIAS_PERMANENCIA_TCM_GO = 30
 DIAS_PERMANENCIA_PNCP = 30
@@ -27,8 +27,9 @@ LIMITE_AUTOMATICO_POR_ORGAO = {
     "TCM-BA": 10,
     "TCM-GO": 10,
 }
-TCE_SP_LISTAGENS = (
-    "https://www.tce.sp.gov.br/noticias",
+TCE_SP_RSS_URLS = (
+    "https://www.tce.sp.gov.br/feed",
+    "https://www.tce.sp.gov.br/jurisprudencia/feed",
 )
 
 TCU_ACORDAOS_API = "https://dados-abertos.apps.tcu.gov.br/api/acordao/recupera-acordaos"
@@ -589,8 +590,24 @@ def carregar_manuais() -> list[LinkItem]:
         url = str(raw.get("url", "")).strip()
         published_at = str(raw.get("published_at", "")).strip() or hoje_iso()
 
-        if not source or not title or not url:
+        if not title or not url:
             continue
+
+        if not source:
+            if title.upper().startswith("TCU"):
+                source = "TCU"
+            elif title.upper().startswith("STJ"):
+                source = "STJ"
+            elif title.upper().startswith("TCE-SP"):
+                source = "TCE-SP"
+            elif title.upper().startswith("PNCP"):
+                source = "PNCP"
+            elif title.upper().startswith("TCM-BA"):
+                source = "TCM-BA"
+            elif title.upper().startswith("TCM-GO"):
+                source = "TCM-GO"
+            else:
+                source = "Manual"
 
         if not re.match(r"^https?://", url, flags=re.IGNORECASE):
             continue
@@ -719,46 +736,56 @@ def normalizar_lista(itens: Iterable[LinkItem]) -> list[LinkItem]:
 def coletar_tce_sp() -> list[LinkItem]:
     resultados: list[LinkItem] = []
     urls_processadas: set[str] = set()
+    rss_lidos = 0
+    rss_falhas = 0
+    itens_lidos = 0
+    sem_data = 0
+    fora_janela = 0
+    sem_relevancia = 0
 
-    for url_listagem in TCE_SP_LISTAGENS:
+    for rss_url in TCE_SP_RSS_URLS:
         try:
-            html = fetch_text(url_listagem)
-        except Exception:
+            xml_text = fetch_text(rss_url)
+            root = ET.fromstring(xml_text)
+            rss_lidos += 1
+        except Exception as erro:
+            rss_falhas += 1
+            print(f"TCE-SP RSS falhou: {rss_url} | {type(erro).__name__}: {erro}")
             continue
 
-        for texto_link, url in extrair_links_html(html, url_listagem):
-            if not mesmo_dominio(url, "tce.sp.gov.br"):
+        for item in root.findall("./channel/item"):
+            itens_lidos += 1
+            titulo = limpar_texto(item.findtext("title", default=""))
+            link = limpar_texto(item.findtext("link", default=""))
+            descricao = limpar_texto(item.findtext("description", default=""))
+            pub_date_raw = limpar_texto(item.findtext("pubDate", default=""))
+
+            if not titulo or not link:
+                continue
+            if not re.match(r"^https?://", link, flags=re.IGNORECASE):
+                continue
+            if not mesmo_dominio(link, "tce.sp.gov.br"):
                 continue
 
-            if not any(chave in url for chave in ("/noticias", "/sala-imprensa/", "/publicacoes")):
-                continue
-
-            chave = url.strip().lower()
+            chave = link.strip().lower()
             if chave in urls_processadas:
                 continue
 
-            try:
-                detalhe = fetch_text(url)
-            except Exception:
-                detalhe = ""
-
-            titulo = extrair_h1(detalhe) or extrair_title_tag(detalhe) or texto_link
-            descricao = extrair_descricao(detalhe)
-            data_publicacao = extrair_data_tce(detalhe) or extrair_data_tce(html)
-
-            if not titulo or not data_publicacao:
+            data_publicacao = parse_data_stj_rss(pub_date_raw) or parse_data(pub_date_raw)
+            if data_publicacao is None:
+                sem_data += 1
                 continue
 
-            if not dentro_da_janela_tcm_ba(data_publicacao):
+            if not dentro_da_janela(data_publicacao):
+                fora_janela += 1
                 continue
 
-            texto_analise = f"{texto_link} {titulo} {descricao}"
-
+            texto_analise = f"{titulo} {descricao}"
             if not relevante(texto_analise):
+                sem_relevancia += 1
                 continue
 
             titulo_final = normalizar_titulo("TCE-SP", titulo[:180].strip())
-
             if not titulo_final:
                 continue
 
@@ -766,12 +793,22 @@ def coletar_tce_sp() -> list[LinkItem]:
                 LinkItem(
                     source="TCE-SP",
                     title=titulo_final,
-                    url=url,
+                    url=link,
                     published_at=data_publicacao.date().isoformat(),
                 )
             )
             urls_processadas.add(chave)
 
+    print(
+        f"TCE-SP RSS diagnóstico: "
+        f"rss_lidos={rss_lidos}, "
+        f"rss_falhas={rss_falhas}, "
+        f"itens_lidos={itens_lidos}, "
+        f"sem_data={sem_data}, "
+        f"fora_janela={fora_janela}, "
+        f"sem_relevancia={sem_relevancia}, "
+        f"aceitos={len(resultados)}"
+    )
     return resultados
 
 def coletar_tcu_acordaos() -> list[LinkItem]:
