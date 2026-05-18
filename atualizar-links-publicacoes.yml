@@ -13,11 +13,13 @@ jobs:
 
     steps:
       - name: Baixar repositório
-    uses: actions/checkout@v4
+        uses: actions/checkout@v4
+
       - name: Instalar Python
-    uses: actions/setup-python@v5
+        uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+
       - name: Executar atualizador
         run: python atualizar-links-publicacoes.py
 
@@ -40,8 +42,6 @@ jobs:
           print(f"Possui PNCP: {'PNCP' in contagem}")
           print(f"Possui TCM-BA: {'TCM-BA' in contagem}")
           print(f"Possui TCM-GO: {'TCM-GO' in contagem}")
-
-
           PY
 
       - name: Commitar alterações
