@@ -1625,14 +1625,16 @@ main.container,
 
   .profile-hero-name{
     font-size: clamp(1.02rem, 4.15vw, 1.34rem);
-    white-space: nowrap;
+    white-space: normal;
     letter-spacing: -0.02em;
     max-width: 100%;
-  }  
+    text-align: center;
+  }
 
   .profile-hero-role{
     justify-content: center;
   }
+
   .profile-hero-summary{
     text-align: left;
     width: 100%;
@@ -1642,4 +1644,3 @@ main.container,
     justify-content: center;
   }
 }
-
