@@ -67,10 +67,8 @@ jobs:
 
               if parsed.scheme not in ("http", "https") or not parsed.netloc:
                   raise SystemExit(f"Item {indice} possui URL inválida: {url}")
-
               source = str(item.get("source", "")).strip().upper()
               caminho = parsed.path.lower()
-
               if source in ("TCE-SP", "TCM-BA"):
                   if any(trecho in caminho for trecho in urls_bloqueadas_tce_tcm):
                       raise SystemExit(
@@ -83,10 +81,14 @@ jobs:
           print(f"Possui TCU: {'TCU' in contagem}")
           print(f"Possui STJ: {'STJ' in contagem}")
           print(f"Possui TCE-SP: {'TCE-SP' in contagem}")
+          print(f"Possui TCE-MG: {'TCE-MG' in contagem}")
+          print(f"Possui TCE-SC: {'TCE-SC' in contagem}")
+          print(f"Possui TCE-PE: {'TCE-PE' in contagem}")
           print(f"Possui PNCP: {'PNCP' in contagem}")
           print(f"Possui TCM-BA: {'TCM-BA' in contagem}")
           print(f"Possui TCM-GO: {'TCM-GO' in contagem}")
           print("Validação do links-publicacoes.json concluída.")
+
           PY
 
       - name: Commitar alterações
