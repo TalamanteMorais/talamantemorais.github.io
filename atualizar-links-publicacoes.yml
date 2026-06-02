@@ -1,0 +1,103 @@
+name: Atualizar links de publicações
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 9 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  atualizar-links-publicacoes:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Executar atualização dos links
+        run: python atualizar-links-publicacoes.py
+
+      - name: Conferir arquivo gerado
+        run: |
+          test -f links-publicacoes.json
+          python - <<'PY'
+          import json
+          from collections import Counter
+          from urllib.parse import urlparse
+
+          with open("links-publicacoes.json", "r", encoding="utf-8") as arquivo:
+              dados = json.load(arquivo)
+
+          if not isinstance(dados, list):
+              raise SystemExit("links-publicacoes.json deve conter uma lista de itens.")
+
+          campos_obrigatorios = ("source", "title", "url", "published_at")
+          urls_bloqueadas_tce_tcm = (
+              "/busca",
+              "/pesquisa",
+              "/consulta",
+              "/processo",
+              "/processos",
+              "/jurisprudencia/pesquisa",
+              "/noticias/busca",
+              "/page/",
+              "/tag/",
+              "/category/",
+              "/author/",
+              "/feed/",
+          )
+
+          for indice, item in enumerate(dados, start=1):
+              if not isinstance(item, dict):
+                  raise SystemExit(f"Item {indice} não é um objeto JSON válido.")
+
+              for campo in campos_obrigatorios:
+                  if not str(item.get(campo, "")).strip():
+                      raise SystemExit(f"Item {indice} sem campo obrigatório: {campo}")
+
+              url = str(item.get("url", "")).strip()
+              parsed = urlparse(url)
+
+              if parsed.scheme not in ("http", "https") or not parsed.netloc:
+                  raise SystemExit(f"Item {indice} possui URL inválida: {url}")
+              source = str(item.get("source", "")).strip().upper()
+              caminho = parsed.path.lower()
+              if source in ("TCE-SP", "TCM-BA"):
+                  if any(trecho in caminho for trecho in urls_bloqueadas_tce_tcm):
+                      raise SystemExit(
+                          f"Item {indice} de {source} aponta para página de pesquisa, consulta ou listagem: {url}"
+                      )
+
+          contagem = Counter(item.get("source", "") for item in dados if isinstance(item, dict))
+          print(f"Total no JSON: {len(dados)}")
+          print(f"Fontes no JSON: {dict(contagem)}")
+          print(f"Possui TCU: {'TCU' in contagem}")
+          print(f"Possui STJ: {'STJ' in contagem}")
+          print(f"Possui TCE-SP: {'TCE-SP' in contagem}")
+          print(f"Possui TCE-MG: {'TCE-MG' in contagem}")
+          print(f"Possui TCE-SC: {'TCE-SC' in contagem}")
+          print(f"Possui TCE-PE: {'TCE-PE' in contagem}")
+          print(f"Possui PNCP: {'PNCP' in contagem}")
+          print(f"Possui TCM-BA: {'TCM-BA' in contagem}")
+          print(f"Possui TCM-GO: {'TCM-GO' in contagem}")
+          print("Validação do links-publicacoes.json concluída.")
+
+          PY
+
+      - name: Commitar alterações
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git status --short
+          git add links-publicacoes.json
+          git diff --cached --quiet || git commit -m "Atualiza links-publicacoes automaticamente"
+
+      - name: Enviar alterações
+        run: git push

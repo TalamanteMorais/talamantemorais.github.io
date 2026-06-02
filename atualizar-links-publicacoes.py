@@ -18,27 +18,71 @@ DIAS_PERMANENCIA = 30
 DIAS_PERMANENCIA_TCM_BA = 30
 DIAS_PERMANENCIA_TCM_GO = 30
 DIAS_PERMANENCIA_PNCP = 30
-
 LIMITE_AUTOMATICO_POR_ORGAO = {
     "TCU": 10,
     "STJ": 10,
     "TCE-SP": 10,
+    "TCE-MG": 10,
+    "TCE-SC": 10,
+    "TCE-PE": 10,
     "PNCP": 30,
     "TCM-BA": 10,
     "TCM-GO": 10,
 }
+
 TCE_SP_RSS_URLS = (
     "https://www.tce.sp.gov.br/feed",
     "https://www.tce.sp.gov.br/jurisprudencia/feed",
 )
-
 TCE_SP_NOTICIAS_URLS = (
     "https://www.tce.sp.gov.br/noticias",
     "https://www.tce.sp.gov.br/noticias?page=1",
     "https://www.tce.sp.gov.br/noticias?page=2",
 )
 
+TCE_MG_NOTICIAS_URLS = (
+    "https://www.tce.mg.gov.br/Noticia/?cod_secao=1ISP&cod_secao_menu=5L&tipo=1&url=",
+    "https://www.tce.mg.gov.br/index.asp?cod_secao=1ISP&cod_secao_menu=5L&tipo=1&url=",
+)
+
+TCE_MG_LINKS_INSTITUCIONAIS = (
+    ("Informativo de Jurisprudência", "https://www.tce.mg.gov.br/Noticia/?cod_secao=1ISP&cod_secao_menu=5L&tipo=1&url="),
+    ("Pesquisa de Jurisprudência TCJuris", "https://tcjuris.tce.mg.gov.br/"),
+)
+
+TCE_SC_PORTAL_URLS = (
+    "https://www.tcesc.tc.br/content/jurisprudencia",
+    "https://www.tcesc.tc.br/informativo-de-jurisprud%C3%AAncia",
+)
+
+TCE_SC_SERVICOS_URLS = (
+    "https://servicos.tcesc.tc.br/jurisprudencia/",
+    "https://epapyrus.tce.sc.gov.br/",
+)
+
+TCE_SC_LINKS_INSTITUCIONAIS = (
+    ("Jurisprudência", "https://www.tcesc.tc.br/content/jurisprudencia"),
+    ("Informativos de Jurisprudência", "https://www.tcesc.tc.br/informativo-de-jurisprud%C3%AAncia"),
+    ("Jurisprudência selecionada - e-Papyrus", "https://epapyrus.tce.sc.gov.br/"),
+)
+
+TCE_PE_PORTAL_URLS = (
+    "https://www.tcepe.tc.br/internet/index.php/inicio-jurisprudencia",
+    "https://portal.tcepe.tc.br/jurisprudencia/consulta/deliberacoes",
+)
+
+TCE_PE_SISTEMAS_URLS = (
+    "https://sistemas.tce.pe.gov.br/jurisprudencia/PesquisaJurisprudencia!home.action",
+)
+
+TCE_PE_LINKS_INSTITUCIONAIS = (
+    ("Jurisprudência", "https://www.tcepe.tc.br/internet/index.php/inicio-jurisprudencia"),
+    ("Deliberações", "https://portal.tcepe.tc.br/jurisprudencia/consulta/deliberacoes"),
+    ("Pesquisa de Jurisprudência", "https://sistemas.tce.pe.gov.br/jurisprudencia/PesquisaJurisprudencia!home.action"),
+)
+
 TCU_ACORDAOS_API = "https://dados-abertos.apps.tcu.gov.br/api/acordao/recupera-acordaos"
+
 TCU_ACORDAOS_QUANTIDADE = 80
 STJ_RSS_JURISPRUDENCIA = "https://res.stj.jus.br/hrestp-c-portalp/RSS.xml"
 PNCP_BASE_URL = "https://pncp.gov.br/api/consulta"
@@ -764,7 +808,6 @@ def carregar_manuais() -> list[LinkItem]:
 
         if not title or not url:
             continue
-
         if not source:
             if title.upper().startswith("TCU"):
                 source = "TCU"
@@ -772,6 +815,12 @@ def carregar_manuais() -> list[LinkItem]:
                 source = "STJ"
             elif title.upper().startswith("TCE-SP"):
                 source = "TCE-SP"
+            elif title.upper().startswith("TCE-MG"):
+                source = "TCE-MG"
+            elif title.upper().startswith("TCE-SC"):
+                source = "TCE-SC"
+            elif title.upper().startswith("TCE-PE"):
+                source = "TCE-PE"
             elif title.upper().startswith("PNCP"):
                 source = "PNCP"
             elif title.upper().startswith("TCM-BA"):
@@ -882,6 +931,9 @@ def normalizar_lista(itens: Iterable[LinkItem]) -> list[LinkItem]:
         "TCU": [],
         "STJ": [],
         "TCE-SP": [],
+        "TCE-MG": [],
+        "TCE-SC": [],
+        "TCE-PE": [],
         "PNCP": [],
         "TCM-BA": [],
         "TCM-GO": [],
@@ -892,7 +944,8 @@ def normalizar_lista(itens: Iterable[LinkItem]) -> list[LinkItem]:
             por_orgao[item.source].append(item)
     resultado: list[LinkItem] = []
 
-    for orgao in ("TCU", "STJ", "TCE-SP", "PNCP", "TCM-BA", "TCM-GO"):
+    for orgao in ("TCU", "STJ", "TCE-SP", "TCE-MG", "TCE-SC", "TCE-PE", "PNCP", "TCM-BA", "TCM-GO"):
+
         itens_orgao = por_orgao[orgao]
         itens_orgao.sort(
             key=lambda item: (
@@ -905,6 +958,7 @@ def normalizar_lista(itens: Iterable[LinkItem]) -> list[LinkItem]:
         resultado.extend(itens_orgao[:limite])
 
     return resultado
+
 def coletar_tce_sp() -> list[LinkItem]:
     resultados: list[LinkItem] = []
     urls_processadas: set[str] = set()
@@ -1002,8 +1056,136 @@ def coletar_tce_sp() -> list[LinkItem]:
 
     print(f"TCE-SP total após RSS + HTML direto: {len(resultados)}")
     return resultados
+def links_institucionais_publicacoes(
+    source: str,
+    entradas: Iterable[tuple[str, str]],
+) -> list[LinkItem]:
+    resultados: list[LinkItem] = []
+    data_publicacao = hoje_iso()
+
+    for titulo, url in entradas:
+        titulo = str(titulo).strip()
+        url = str(url).strip()
+
+        if not titulo or not re.match(r"^https?://", url, flags=re.IGNORECASE):
+            continue
+
+        resultados.append(
+            LinkItem(
+                source=source,
+                title=normalizar_titulo(source, titulo),
+                url=url,
+                published_at=data_publicacao,
+            )
+        )
+
+    return resultados
+
+
+def coletar_tce_mg() -> list[LinkItem]:
+    resultados = coletar_html_oficial(
+        source="TCE-MG",
+        urls_base=TCE_MG_NOTICIAS_URLS,
+        dominio="tce.mg.gov.br",
+        janela_func=dentro_da_janela,
+        prefixo="TCE-MG",
+    )
+
+    if resultados:
+        return resultados
+
+    print("TCE-MG sem itens dinâmicos aceitos. Mantidos links institucionais de referência.")
+    return links_institucionais_publicacoes("TCE-MG", TCE_MG_LINKS_INSTITUCIONAIS)
+
+
+def coletar_tce_sc() -> list[LinkItem]:
+    resultados: list[LinkItem] = []
+    urls_processadas: set[str] = set()
+
+    for item in coletar_html_oficial(
+        source="TCE-SC",
+        urls_base=TCE_SC_PORTAL_URLS,
+        dominio="tcesc.tc.br",
+        janela_func=dentro_da_janela,
+        prefixo="TCE-SC",
+    ):
+        chave = item.url.strip().lower()
+        if chave in urls_processadas:
+            continue
+        resultados.append(item)
+        urls_processadas.add(chave)
+
+    for item in coletar_html_oficial(
+        source="TCE-SC",
+        urls_base=("https://servicos.tcesc.tc.br/jurisprudencia/",),
+        dominio="tcesc.tc.br",
+        janela_func=dentro_da_janela,
+        prefixo="TCE-SC",
+    ):
+        chave = item.url.strip().lower()
+        if chave in urls_processadas:
+            continue
+        resultados.append(item)
+        urls_processadas.add(chave)
+
+    for item in coletar_html_oficial(
+        source="TCE-SC",
+        urls_base=("https://epapyrus.tce.sc.gov.br/",),
+        dominio="tce.sc.gov.br",
+        janela_func=dentro_da_janela,
+        prefixo="TCE-SC",
+    ):
+        chave = item.url.strip().lower()
+        if chave in urls_processadas:
+            continue
+        resultados.append(item)
+        urls_processadas.add(chave)
+
+    if resultados:
+        return resultados
+
+    print("TCE-SC sem itens dinâmicos aceitos. Mantidos links institucionais de referência.")
+    return links_institucionais_publicacoes("TCE-SC", TCE_SC_LINKS_INSTITUCIONAIS)
+
+
+def coletar_tce_pe() -> list[LinkItem]:
+    resultados: list[LinkItem] = []
+    urls_processadas: set[str] = set()
+
+    for item in coletar_html_oficial(
+        source="TCE-PE",
+        urls_base=TCE_PE_PORTAL_URLS,
+        dominio="tcepe.tc.br",
+        janela_func=dentro_da_janela,
+        prefixo="TCE-PE",
+    ):
+        chave = item.url.strip().lower()
+        if chave in urls_processadas:
+            continue
+        resultados.append(item)
+        urls_processadas.add(chave)
+
+    for item in coletar_html_oficial(
+        source="TCE-PE",
+        urls_base=TCE_PE_SISTEMAS_URLS,
+        dominio="tce.pe.gov.br",
+        janela_func=dentro_da_janela,
+        prefixo="TCE-PE",
+    ):
+        chave = item.url.strip().lower()
+        if chave in urls_processadas:
+            continue
+        resultados.append(item)
+        urls_processadas.add(chave)
+
+    if resultados:
+        return resultados
+
+    print("TCE-PE sem itens dinâmicos aceitos. Mantidos links institucionais de referência.")
+    return links_institucionais_publicacoes("TCE-PE", TCE_PE_LINKS_INSTITUCIONAIS)
 
 def coletar_tcu_acordaos() -> list[LinkItem]:
+
     resultados: list[LinkItem] = []
 
     url = f"{TCU_ACORDAOS_API}?inicio=0&quantidade={TCU_ACORDAOS_QUANTIDADE}"
@@ -1423,12 +1605,18 @@ def main() -> None:
     tcu_acordaos = coletar_tcu_acordaos()
     stj_jurisprudencia = coletar_stj_jurisprudencia()
     tce_sp = coletar_tce_sp()
+    tce_mg = coletar_tce_mg()
+    tce_sc = coletar_tce_sc()
+    tce_pe = coletar_tce_pe()
     pncp_contratacoes = coletar_pncp_contratacoes()
 
     print(f"Manuais: {len(manuais)}")
     print(f"TCU: {len(tcu_acordaos)}")
     print(f"STJ: {len(stj_jurisprudencia)}")
     print(f"TCE-SP: {len(tce_sp)}")
+    print(f"TCE-MG: {len(tce_mg)}")
+    print(f"TCE-SC: {len(tce_sc)}")
+    print(f"TCE-PE: {len(tce_pe)}")
     print(f"PNCP: {len(pncp_contratacoes)}")
 
     tcm_ba = coletar_tcm_ba()
@@ -1441,6 +1629,9 @@ def main() -> None:
             *tcu_acordaos,
             *stj_jurisprudencia,
             *tce_sp,
+            *tce_mg,
+            *tce_sc,
+            *tce_pe,
             *pncp_contratacoes,
             *tcm_ba,
             *tcm_go,

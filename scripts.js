@@ -392,6 +392,9 @@ document.addEventListener("DOMContentLoaded", function () {
     TCU: document.getElementById("links-publicacoes-tcu"),
     STJ: document.getElementById("links-publicacoes-stj"),
     "TCE-SP": document.getElementById("links-publicacoes-tce-sp"),
+    "TCE-MG": document.getElementById("links-publicacoes-tce-mg"),
+    "TCE-SC": document.getElementById("links-publicacoes-tce-sc"),
+    "TCE-PE": document.getElementById("links-publicacoes-tce-pe"),
     PNCP: document.getElementById("links-publicacoes-pncp"),
     "TCM-BA": document.getElementById("links-publicacoes-tcm-ba"),
     "TCM-GO": document.getElementById("links-publicacoes-tcm-go"),
@@ -410,6 +413,9 @@ document.addEventListener("DOMContentLoaded", function () {
       TCU: 10,
       STJ: 10,
       "TCE-SP": 10,
+      "TCE-MG": 10,
+      "TCE-SC": 10,
+      "TCE-PE": 10,
       PNCP: 30,
       "TCM-BA": 10,
       "TCM-GO": 10,
@@ -419,11 +425,15 @@ document.addEventListener("DOMContentLoaded", function () {
       TCU: 10,
       STJ: 10,
       "TCE-SP": 10,
+      "TCE-MG": 10,
+      "TCE-SC": 10,
+      "TCE-PE": 10,
       PNCP: 10,
       "TCM-BA": 10,
       "TCM-GO": 10,
       Manual: 10
     };    
+
     const LIMITE_JSON_LEGADO = 30;
     const ITENS_VISIVEIS_LEGADO = 10;
 
@@ -464,7 +474,6 @@ document.addEventListener("DOMContentLoaded", function () {
       listaEl.style.overflowY = "auto";
       listaEl.style.paddingRight = "0.5rem";
     };
-
     const normalizarFonte = (valor) => {
       if (typeof valor !== "string") return "";
 
@@ -472,6 +481,9 @@ document.addEventListener("DOMContentLoaded", function () {
       if (fonte === "TCU") return "TCU";
       if (fonte === "STJ") return "STJ";
       if (fonte === "TCE-SP" || fonte === "TCESP" || fonte === "TCE SP") return "TCE-SP";
+      if (fonte === "TCE-MG" || fonte === "TCEMG" || fonte === "TCE MG") return "TCE-MG";
+      if (fonte === "TCE-SC" || fonte === "TCESC" || fonte === "TCE SC") return "TCE-SC";
+      if (fonte === "TCE-PE" || fonte === "TCEPE" || fonte === "TCE PE") return "TCE-PE";
       if (fonte === "PNCP") return "PNCP";
       if (fonte === "TCM-BA" || fonte === "TCMBA" || fonte === "TCM BA") return "TCM-BA";
       if (fonte === "TCM-GO" || fonte === "TCMGO" || fonte === "TCM GO") return "TCM-GO";
@@ -489,6 +501,9 @@ document.addEventListener("DOMContentLoaded", function () {
       if (titulo.startsWith("TCU -")) return "TCU";
       if (titulo.startsWith("STJ -")) return "STJ";
       if (titulo.startsWith("TCE-SP -") || titulo.startsWith("TCESP -") || titulo.startsWith("TCE SP -")) return "TCE-SP";
+      if (titulo.startsWith("TCE-MG -") || titulo.startsWith("TCEMG -") || titulo.startsWith("TCE MG -")) return "TCE-MG";
+      if (titulo.startsWith("TCE-SC -") || titulo.startsWith("TCESC -") || titulo.startsWith("TCE SC -")) return "TCE-SC";
+      if (titulo.startsWith("TCE-PE -") || titulo.startsWith("TCEPE -") || titulo.startsWith("TCE PE -")) return "TCE-PE";
       if (titulo.startsWith("PNCP -")) return "PNCP";
       if (titulo.startsWith("TCM-BA -") || titulo.startsWith("TCMBA -") || titulo.startsWith("TCM BA -")) return "TCM-BA";
       if (titulo.startsWith("TCM-GO -") || titulo.startsWith("TCMGO -") || titulo.startsWith("TCM GO -")) return "TCM-GO";
@@ -547,6 +562,9 @@ document.addEventListener("DOMContentLoaded", function () {
             TCU: [],
             STJ: [],
             "TCE-SP": [],
+            "TCE-MG": [],
+            "TCE-SC": [],
+            "TCE-PE": [],
             PNCP: [],
             "TCM-BA": [],
             "TCM-GO": [],
