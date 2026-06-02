@@ -1716,3 +1716,16 @@ footer .footer-link{
     margin: 0 0 0.35rem;
   }
 }
+/* ======================== 27. AJUSTE FINAL DE LEITURA NO MOBILE ======================== */
+
+@media (max-width: 700px){
+  .service-desc,
+  .service-card .service-desc,
+  #sobre .service-desc,
+  .profile-hero-summary{
+    text-align: left;
+    text-align-last: auto;
+    word-spacing: normal;
+    hyphens: auto;
+  }
+}
