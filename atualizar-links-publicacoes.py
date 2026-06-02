@@ -13,12 +13,14 @@ ARQUIVO_SAIDA = Path("links-publicacoes.json")
 ARQUIVO_MANUAIS = Path("links-publicacoes-manuais.json")
 USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"
 TIMEOUT = 60
-
 DIAS_PERMANENCIA = 30
 DIAS_PERMANENCIA_TCM_BA = 30
 DIAS_PERMANENCIA_TCM_GO = 30
 DIAS_PERMANENCIA_PNCP = 30
+MINIMO_AUTOMATICOS_PARA_SALVAR = 20
+
 LIMITE_AUTOMATICO_POR_ORGAO = {
+
     "TCU": 10,
     "STJ": 10,
     "TCE-SP": 10,
@@ -226,7 +228,6 @@ TERMOS_PRIORIDADE_MEDIA = (
     "multa",
     "ressarcimento",
 )
-
 TERMOS_BAIXA_RELEVANCIA = (
     "posse",
     "homenagem",
@@ -243,7 +244,24 @@ TERMOS_BAIXA_RELEVANCIA = (
     "institucional",
     "aniversário",
     "aniversario",
+    "sessão ao vivo",
+    "sessao ao vivo",
+    "sessões",
+    "sessoes",
+    "pauta",
+    "agenda",
+    "acessibilidade",
+    "alto contraste",
+    "altocontraste",
+    "login",
+    "sistema eletrônico",
+    "sistema eletronico",
+    "sistema de informações",
+    "sistema de informacoes",
+    "mapa das câmaras",
+    "mapa das camaras",
 )
+
 @dataclass
 class LinkItem:
     source: str
@@ -456,7 +474,6 @@ def mesmo_dominio(url: str, dominio: str) -> bool:
         return urlparse(url).netloc.endswith(dominio)
     except Exception:
         return False
-
 def eh_url_publicacao_direta(url: str, dominio: str) -> bool:
     if not re.match(r"^https?://", url, flags=re.IGNORECASE):
         return False
@@ -471,7 +488,11 @@ def eh_url_publicacao_direta(url: str, dominio: str) -> bool:
 
     caminho = (parsed.path or "/").lower().rstrip("/")
     consulta = (parsed.query or "").lower()
+    fragmento = (parsed.fragment or "").lower()
     url_normalizada = url.lower()
+
+    if fragmento:
+        return False
 
     caminhos_listagem = {
         "",
@@ -486,6 +507,25 @@ def eh_url_publicacao_direta(url: str, dominio: str) -> bool:
     }
 
     if caminho in caminhos_listagem:
+        return False
+
+    extensoes_bloqueadas = (
+        ".xls",
+        ".xlsx",
+        ".doc",
+        ".docx",
+        ".ppt",
+        ".pptx",
+        ".zip",
+        ".rar",
+        ".jpg",
+        ".jpeg",
+        ".png",
+        ".gif",
+        ".webp",
+    )
+
+    if caminho.endswith(extensoes_bloqueadas):
         return False
 
     trechos_proibidos = (
@@ -504,6 +544,15 @@ def eh_url_publicacao_direta(url: str, dominio: str) -> bool:
         "/processos",
         "/jurisprudencia/pesquisa",
         "/jurisprudencia/busca",
+        "/push/",
+        "/sei/",
+        "/sigmat/",
+        "/agenda_gestor",
+        "/municipioemergencia",
+        "fornecedores_impedidos",
+        "controlador_externo",
+        "acessibilidade",
+        "altocontraste",
         "javascript:",
         "mailto:",
     )
@@ -527,7 +576,6 @@ def eh_url_publicacao_direta(url: str, dominio: str) -> bool:
         return False
 
     return True
-
 
 def coletar_html_oficial(
     source: str,
@@ -649,10 +697,8 @@ def normalizar_busca(texto: str) -> str:
         }
     )
     return texto.translate(substituicoes)
-
 def relevante(texto: str) -> bool:
-    base = normalizar_busca(texto)
-    return any(normalizar_busca(palavra) in base for palavra in PALAVRAS_CHAVE)
+    return pontuar_texto(texto) >= 3
 
 def pontuar_texto(texto: str) -> int:
     base = normalizar_busca(texto)
@@ -723,34 +769,33 @@ def pontuar_texto(texto: str) -> int:
 
 def pontuar_item(item: LinkItem) -> int:
     return pontuar_texto(f"{item.source} {item.title}")
+def data_dentro_da_janela(data_publicacao: datetime | None, dias: int) -> bool:
+
+    if data_publicacao is None:
+        return False
+
+    agora = agora_utc()
+    limite_inferior = agora - timedelta(days=dias)
+    limite_superior = agora + timedelta(days=1)
+
+    return limite_inferior <= data_publicacao <= limite_superior
+
 
 def dentro_da_janela(data_publicacao: datetime | None) -> bool:
-    if data_publicacao is None:
-        return False
+    return data_dentro_da_janela(data_publicacao, DIAS_PERMANENCIA)
 
-    limite = agora_utc() - timedelta(days=DIAS_PERMANENCIA)
-    return data_publicacao >= limite
 
 def dentro_da_janela_tcm_ba(data_publicacao: datetime | None) -> bool:
-    if data_publicacao is None:
-        return False
+    return data_dentro_da_janela(data_publicacao, DIAS_PERMANENCIA_TCM_BA)
 
-    limite = agora_utc() - timedelta(days=DIAS_PERMANENCIA_TCM_BA)
-    return data_publicacao >= limite
 
 def dentro_da_janela_tcm_go(data_publicacao: datetime | None) -> bool:
-    if data_publicacao is None:
-        return False
+    return data_dentro_da_janela(data_publicacao, DIAS_PERMANENCIA_TCM_GO)
 
-    limite = agora_utc() - timedelta(days=DIAS_PERMANENCIA_TCM_GO)
-    return data_publicacao >= limite
 
 def dentro_da_janela_pncp(data_publicacao: datetime | None) -> bool:
-    if data_publicacao is None:
-        return False
+    return data_dentro_da_janela(data_publicacao, DIAS_PERMANENCIA_PNCP)
 
-    limite = agora_utc() - timedelta(days=DIAS_PERMANENCIA_PNCP)
-    return data_publicacao >= limite
 
 def dentro_da_janela_por_orgao(item: LinkItem) -> bool:
     data_publicacao = parse_data(item.published_at)
@@ -1649,10 +1694,9 @@ def main() -> None:
     if not automaticos:
         print("Nenhum link automático válido encontrado. Mantido o links-publicacoes.json já existente.")
         return
-
-    if len(automaticos) < len(automaticos_atuais):
+    if len(automaticos) < MINIMO_AUTOMATICOS_PARA_SALVAR and automaticos_atuais:
         print(
-            "Quantidade automática menor que a versão já publicada. "
+            "Quantidade automática abaixo do mínimo de segurança. "
             "Mantido o links-publicacoes.json já existente."
         )
         return
