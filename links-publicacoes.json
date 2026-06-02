@@ -4,12 +4,6 @@
     "title": "Compras públicas do Governo Federal - Consulta detalhada",
     "url": "https://www.gov.br/compras/pt-br/acesso-a-informacao/consulta-detalhada/consulta-detalhada",
     "published_at": "2026-06-02"
-[
-  {
-    "source": "Manual",
-    "title": "Compras públicas do Governo Federal - Consulta detalhada",
-    "url": "https://www.gov.br/compras/pt-br/acesso-a-informacao/consulta-detalhada/consulta-detalhada",
-    "published_at": "2026-06-02"
   },
   {
     "source": "Manual",
@@ -19,14 +13,8 @@
   },
   {
     "source": "TCU",
-    "title": "TCU - ACÓRDÃO DE RELAÇÃO 2343/2026 ATA 15/2026 - SEGUNDA CÂMARA",
+    "title": "TCU - ACÓRDÃO DE RELAÇÃO 2343/2026 ATA 15/2026 - SEGUNDA CÂMARA",    
 
-    "url": "https://contas.tcu.gov.br/pesquisaJurisprudencia/#/detalhamento/11/*/KEY:%22ACORDAO-COMPLETO-2765696%22/DTRELEVANCIA%2520desc%252C%2520NUMACORDAOINT%2520desc/false/1/false",
-    "published_at": "2026-05-19"
-  },
-  {
-    "source": "TCU",
-    "title": "TCU - ACÓRDÃO DE RELAÇÃO 2342/2026 ATA 15/2026 - SEGUNDA CÂMARA",
     "url": "https://contas.tcu.gov.br/pesquisaJurisprudencia/#/detalhamento/11/*/KEY:%22ACORDAO-COMPLETO-2739137%22/DTRELEVANCIA%2520desc%252C%2520NUMACORDAOINT%2520desc/false/1/false",
     "published_at": "2026-05-19"
   },
