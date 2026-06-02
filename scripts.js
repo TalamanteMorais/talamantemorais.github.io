@@ -394,8 +394,10 @@ document.addEventListener("DOMContentLoaded", function () {
     "TCE-SP": document.getElementById("links-publicacoes-tce-sp"),
     PNCP: document.getElementById("links-publicacoes-pncp"),
     "TCM-BA": document.getElementById("links-publicacoes-tcm-ba"),
-    "TCM-GO": document.getElementById("links-publicacoes-tcm-go")
+    "TCM-GO": document.getElementById("links-publicacoes-tcm-go"),
+    Manual: document.getElementById("links-publicacoes-manual")
   };
+
   const listasPublicacoes = Object.entries(gruposPublicacoes).filter(([, el]) => el);
 
   const existeModoPorOrgao = listasPublicacoes.length > 0;
@@ -404,14 +406,14 @@ document.addEventListener("DOMContentLoaded", function () {
   if (existeModoPorOrgao || existeModoLegado) {
     const elementoBase = existeModoPorOrgao ? listasPublicacoes[0][1] : listaPublicacoesLegada;
     const jsonUrl = elementoBase.getAttribute("data-json") || "/links-publicacoes.json";
-
     const LIMITES_POR_ORGAO = {
       TCU: 10,
       STJ: 10,
       "TCE-SP": 10,
       PNCP: 30,
       "TCM-BA": 10,
-      "TCM-GO": 10
+      "TCM-GO": 10,
+      Manual: 10
     };
     const ITENS_VISIVEIS_POR_ORGAO = {
       TCU: 10,
@@ -419,9 +421,9 @@ document.addEventListener("DOMContentLoaded", function () {
       "TCE-SP": 10,
       PNCP: 10,
       "TCM-BA": 10,
-      "TCM-GO": 10
-    };
-
+      "TCM-GO": 10,
+      Manual: 10
+    };    
     const LIMITE_JSON_LEGADO = 30;
     const ITENS_VISIVEIS_LEGADO = 10;
 
@@ -470,10 +472,10 @@ document.addEventListener("DOMContentLoaded", function () {
       if (fonte === "TCU") return "TCU";
       if (fonte === "STJ") return "STJ";
       if (fonte === "TCE-SP" || fonte === "TCESP" || fonte === "TCE SP") return "TCE-SP";
-
       if (fonte === "PNCP") return "PNCP";
       if (fonte === "TCM-BA" || fonte === "TCMBA" || fonte === "TCM BA") return "TCM-BA";
       if (fonte === "TCM-GO" || fonte === "TCMGO" || fonte === "TCM GO") return "TCM-GO";
+      if (fonte === "MANUAL" || fonte === "LINKS PERMANENTES" || fonte === "PERMANENTE") return "Manual";
 
       return "";
 
@@ -490,6 +492,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (titulo.startsWith("PNCP -")) return "PNCP";
       if (titulo.startsWith("TCM-BA -") || titulo.startsWith("TCMBA -") || titulo.startsWith("TCM BA -")) return "TCM-BA";
       if (titulo.startsWith("TCM-GO -") || titulo.startsWith("TCMGO -") || titulo.startsWith("TCM GO -")) return "TCM-GO";
+      if (titulo.startsWith("MANUAL -") || titulo.startsWith("LINKS PERMANENTES -")) return "Manual";
 
       return "";
 
@@ -546,7 +549,8 @@ document.addEventListener("DOMContentLoaded", function () {
             "TCE-SP": [],
             PNCP: [],
             "TCM-BA": [],
-            "TCM-GO": []
+            "TCM-GO": [],
+            Manual: []
           };
 
           validos.forEach((item) => {
