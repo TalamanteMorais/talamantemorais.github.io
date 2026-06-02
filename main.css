@@ -1609,7 +1609,6 @@ main.container,
     border-radius: 16px;
   }
 }
-
 @media (max-width: 700px){
   .profile-hero{
     grid-template-columns: 1fr;
@@ -1642,5 +1641,78 @@ main.container,
 
   .profile-hero-actions{
     justify-content: center;
+  }
+}
+
+/* ======================== 26. AJUSTES RESPONSIVOS COMPLEMENTARES ======================== */
+
+.page-actions{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.page-actions .cta-btn{
+  margin: 0;
+}
+
+.publicacoes-orgaos-grid{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.2rem;
+}
+
+.publicacoes-orgao{
+  min-width: 0;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(15, 39, 67, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(15, 39, 67, 0.04);
+}
+
+.publicacoes-orgao h3{
+  margin: 0 0 0.8rem;
+  color: #0f2743;
+  line-height: 1.2;
+}
+
+.publicacoes-orgao .link-list{
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+footer .footer-link{
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+@media (max-width: 700px){
+  .page-actions{
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .page-actions .cta-btn{
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .publicacoes-orgaos-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .publicacoes-orgao{
+    padding: 0.95rem;
+    border-radius: 14px;
+  }
+
+  footer .footer-link{
+    display: block;
+    margin: 0 0 0.35rem;
   }
 }
