@@ -73,6 +73,12 @@
   },
   {
     "source": "STJ",
+    "title": "STJ - Nova edição de Jurisprudência em Teses traz entendimentos sobre prova digital e dados estáticos de conexão",
+    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/03062026-Nova-edicao-de-Jurisprudencia-em-Teses-traz-entendimentos-sobre-prova-digital-e-dados-estaticos-de-conexao.aspx",
+    "published_at": "2026-06-03"
+  },
+  {
+    "source": "STJ",
     "title": "STJ - Jurisprudência em Teses traz novos entendimentos sobre competência da Justiça Federal em crimes digitais transnacionais",
     "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/21052026-Jurisprudencia-em-Teses-traz-novos-entendimentos-sobre-competencia-da-Justica-Federal-em-crimes.aspx",
     "published_at": "2026-05-21"
@@ -115,21 +121,15 @@
   },
   {
     "source": "STJ",
+    "title": "STJ - Podcast STJ No Seu Dia discute jurisprudência sobre provas digitais no processo penal",
+    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/03062026-Podcast-STJ-No-Seu-Dia-discute-jurisprudencia-sobre-provas-digitais-no-processo-penal.aspx",
+    "published_at": "2026-06-03"
+  },
+  {
+    "source": "STJ",
     "title": "STJ - Podcast STJ No Seu Dia aborda jurisprudência sobre responsabilidade civil por dano ambiental",
     "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/29052026-Podcast-STJ-No-Seu-Dia-aborda-jurisprudencia-sobre-responsabilidade-civil-por-dano-ambiental.aspx",
     "published_at": "2026-05-29"
-  },
-  {
-    "source": "STJ",
-    "title": "STJ - Tá no rótulo? A jurisprudência do STJ sobre informações nas embalagens",
-    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/24052026-Ta-no-rotulo-A-jurisprudencia-do-STJ-sobre-informacoes-nas-embalagens.aspx",
-    "published_at": "2026-05-24"
-  },
-  {
-    "source": "STJ",
-    "title": "STJ - Podcast discute jurisprudência sobre filiação socioafetiva e reconhecimento póstumo de paternidade",
-    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/15052026-Podcast-discute-jurisprudencia-sobre-filiacao-socioafetiva-e-reconhecimento-postumo-de-paternidade.aspx",
-    "published_at": "2026-05-15"
   },
   {
     "source": "TCE-SP",
@@ -163,128 +163,56 @@
   },
   {
     "source": "TCE-SP",
-    "title": "TCE-SP - Mapa das Câmaras",
-    "url": "https://painel.tce.sp.gov.br/pentaho/api/repos/%3Apublic%3ACamara%3Acamara.wcdf/generatedContent?userid=anony&password=zero",
-    "published_at": "2026-06-02"
-  },
-  {
-    "source": "TCE-SP",
     "title": "TCE-SP - Boletim de Atualização de Licitações e Contratos – Maio 2026",
     "url": "https://www.tce.sp.gov.br/6524-boletim-atualizacao-licitacoes-e-contratos-maio-2026",
     "published_at": "2026-06-02"
   },
   {
     "source": "TCE-SP",
-    "title": "TCE-SP - Sessões das Câmaras e do Pleno: acompanhe ao vivo",
-    "url": "https://www.tce.sp.gov.br/6524-sessoes-camaras-e-pleno-acompanhe-ao-vivo-134",
+    "title": "TCE-SP - Portal dos Conselhos Municipais | Tribunal de Contas do Estado de São Paulo",
+    "url": "https://www.tce.sp.gov.br/portal-conselhos-municipais",
     "published_at": "2026-06-02"
   },
   {
     "source": "TCE-SP",
-    "title": "TCE-SP - Sessões de Julgamento: confira o resumo das Câmaras e do Pleno dos dias 26 e 27/05",
-    "url": "https://www.tce.sp.gov.br/6524-sessoes-julgamento-confira-resumo-camaras-e-pleno-dias-26-e-2705",
-    "published_at": "2026-05-26"
+    "title": "TCE-SP - Teletrabalho",
+    "url": "https://www.tce.sp.gov.br/informacoes-teletrabalho",
+    "published_at": "2026-06-02"
   },
   {
     "source": "TCE-SP",
-    "title": "TCE-SP - Sessões das Câmaras e do Pleno: acompanhe ao vivo",
-    "url": "https://www.tce.sp.gov.br/6524-sessoes-camaras-e-pleno-acompanhe-ao-vivo-133",
-    "published_at": "2026-05-26"
+    "title": "TCE-SP - AUDESP | Tribunal de Contas do Estado de São Paulo",
+    "url": "https://www.tce.sp.gov.br/audesp",
+    "published_at": "2026-06-02"
   },
   {
-    "source": "TCE-MG",
-    "title": "TCE-MG - SIGMAT Sistema de cadastro de fornecedores e de coleta de preço para compras e serviços dispensados de licitação.",
-    "url": "https://libano.tce.mg.gov.br/sigmat/index.php/site/itensColeta",
-    "published_at": "2050-06-09"
-  },
-  {
-    "source": "TCE-MG",
-    "title": "TCE-MG - SIACE/PCA x SIACE/LRF Mostra o paralelo entre os dados enviados pelos municípios, nas prestações de contas e nos relatórios da LRF, por meio dos sistemas SIACE/PCA e SIACE/LRF",
-    "url": "https://www.tce.mg.gov.br/Noticia/?cod_secao=1INU&tipo=1&url=&cod_secao_menu=5K",
-    "published_at": "2050-06-09"
-  },
-  {
-    "source": "TCE-MG",
-    "title": "TCE-MG - Fornecedores Impedidos pelo TCEMG Consulte os fornecedores impedidos pelo TCEMG, de licitar e contratar com a administração pública estadual.",
-    "url": "https://www.tce.mg.gov.br/img/Fornecedores_Impedidos_Tcemg/FORNECEDORES_IMPEDIDOS_TCE_MG.xlsx",
-    "published_at": "2050-06-09"
-  },
-  {
-    "source": "TCE-MG",
-    "title": "TCE-MG - Tribunal de Contas do Estado de Minas Gerais",
-    "url": "https://www.tce.mg.gov.br/push/login.asp",
-    "published_at": "2050-06-09"
-  },
-  {
-    "source": "TCE-MG",
-    "title": "TCE-MG - SEI! O Sistema Eletrônico de Informações, desenvolvido pelo Tribunal Regional Federal da 4ª Região (TRF4), é uma ferramenta de gestão de documentos e processos eletrônicos.",
-    "url": "https://sei.tce.mg.gov.br/sei/controlador_externo.php?acao=usuario_externo_logar&id_orgao_acesso_externo=0",
-    "published_at": "2050-06-09"
+    "source": "TCE-SP",
+    "title": "TCE-SP - e-TCESP | Tribunal de Contas do Estado de São Paulo",
+    "url": "https://www.tce.sp.gov.br/etcesp",
+    "published_at": "2026-06-02"
   },
   {
     "source": "TCE-MG",
     "title": "TCE-MG - Acessibilidade",
-    "url": "https://www.tce.mg.gov.br/Noticia/?cod_secao=1ISP&cod_secao_menu=5L&tipo=1&url=#modal",
-    "published_at": "2050-06-09"
+    "url": "https://www.tce.mg.gov.br/DescomplicaJuris/",
+    "published_at": "2026-06-02"
   },
   {
     "source": "TCE-MG",
     "title": "TCE-MG - Acessibilidade",
-    "url": "https://www.tce.mg.gov.br/Noticia/?cod_secao=1ISP&cod_secao_menu=5L&tipo=1&url=",
-    "published_at": "2050-06-09"
-  },
-  {
-    "source": "TCE-MG",
-    "title": "TCE-MG - Sistema de Informações",
-    "url": "https://www.tce.mg.gov.br/agenda_gestor/",
-    "published_at": "2050-06-09"
-  },
-  {
-    "source": "TCE-MG",
-    "title": "TCE-MG - Munic�pios em situa��o de emerg�ncia",
-    "url": "https://www.tce.mg.gov.br/MunicipioEmergencia/",
-    "published_at": "2050-06-09"
+    "url": "https://www.tce.mg.gov.br/Informativo-de-Jurisprudencia-n-330.html/Noticia/1111628863",
+    "published_at": "2026-05-25"
   },
   {
     "source": "TCE-MG",
     "title": "TCE-MG - Acessibilidade",
-    "url": "https://www.tce.mg.gov.br/Noticia/?cod_secao=1ISP&tipo=1&url=&cod_secao_menu=5L",
-    "published_at": "2050-06-09"
+    "url": "https://www.tce.mg.gov.br/Informativo-de-Jurisprudencia-n-329.html/Noticia/1111628823",
+    "published_at": "2026-05-11"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Jurisprudência | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/content/jurisprudencia",
-    "published_at": "2026-06-02"
-  },
-  {
-    "source": "TCE-SC",
-    "title": "TCE-SC - Jurisprudência | O Tribunal da Governança Pública Catarinense",
-    "url": "https://www.tcesc.tc.br/content/jurisprudencia#altocontraste",
-    "published_at": "2026-06-02"
-  },
-  {
-    "source": "TCE-SC",
-    "title": "TCE-SC - Jurisprudência | O Tribunal da Governança Pública Catarinense",
-    "url": "https://www.tcesc.tc.br/content/jurisprudencia#block-conteudodapaginaprincipal",
-    "published_at": "2026-06-02"
-  },
-  {
-    "source": "TCE-SC",
-    "title": "TCE-SC - Jurisprudência | O Tribunal da Governança Pública Catarinense",
-    "url": "https://www.tcesc.tc.br/content/jurisprudencia#mainMenu",
-    "published_at": "2026-06-02"
-  },
-  {
-    "source": "TCE-SC",
-    "title": "TCE-SC - Jurisprudência | O Tribunal da Governança Pública Catarinense",
-    "url": "https://www.tcesc.tc.br/content/jurisprudencia#searchBox",
-    "published_at": "2026-06-02"
-  },
-  {
-    "source": "TCE-SC",
-    "title": "TCE-SC - Jurisprudência | O Tribunal da Governança Pública Catarinense",
-    "url": "https://www.tcesc.tc.br/content/jurisprudencia#footer",
     "published_at": "2026-06-02"
   },
   {
@@ -301,117 +229,63 @@
   },
   {
     "source": "TCE-SC",
-    "title": "TCE-SC - Jurisprudência | O Tribunal da Governança Pública Catarinense",
-    "url": "https://www.tcesc.tc.br/content/jurisprudencia#Processo",
+    "title": "TCE-SC - Súmulas de Jurisprudência | O Tribunal da Governança Pública Catarinense",
+    "url": "https://www.tcesc.tc.br/content/s%C3%BAmulas-de-jurisprud%C3%AAncia",
     "published_at": "2026-06-02"
   },
   {
     "source": "TCE-SC",
-    "title": "TCE-SC - Jurisprudência | O Tribunal da Governança Pública Catarinense",
-    "url": "https://www.tcesc.tc.br/content/jurisprudencia#Jurisprudencia",
+    "title": "TCE-SC - Informativos de Jurisprudência - Edições anteriores | O Tribunal da Governança Pública Catarinense",
+    "url": "https://www.tcesc.tc.br/informativo-de-jurisprud%C3%AAncia-edicoes-anteriores",
+    "published_at": "2026-06-02"
+  },
+  {
+    "source": "TCE-SC",
+    "title": "TCE-SC - Informativos de Jurisprudência",
+    "url": "https://www.tcesc.tc.br/informativo-de-jurisprudência",
+    "published_at": "2026-06-02"
+  },
+  {
+    "source": "TCE-SC",
+    "title": "TCE-SC - Recolhimento de débitos e de multas | O Tribunal da Governança Pública Catarinense",
+    "url": "https://www.tcesc.tc.br/recolhimentos",
+    "published_at": "2026-06-02"
+  },
+  {
+    "source": "TCE-SC",
+    "title": "TCE-SC - Fornecedores e Inovação | O Tribunal da Governança Pública Catarinense",
+    "url": "https://www.tcesc.tc.br/fornecedores-e-inovacao",
+    "published_at": "2026-06-02"
+  },
+  {
+    "source": "TCE-SC",
+    "title": "TCE-SC - Licitações e Contratos | O Tribunal da Governança Pública Catarinense",
+    "url": "https://www.tcesc.tc.br/content/licitacoes_contratos",
+    "published_at": "2026-06-02"
+  },
+  {
+    "source": "TCE-SC",
+    "title": "TCE-SC - Atendimento Virtual | O Tribunal da Governança Pública Catarinense",
+    "url": "https://www.tcesc.tc.br/atendimento-virtual",
     "published_at": "2026-06-02"
   },
   {
     "source": "TCE-PE",
     "title": "TCE-PE - Jurisprudência",
     "url": "https://www.tcepe.tc.br/internet/index.php/inicio-jurisprudencia",
-    "published_at": "2026-06-02"
+    "published_at": "2026-06-03"
   },
   {
     "source": "TCE-PE",
     "title": "TCE-PE - Pesquisa de Jurisprudência",
     "url": "https://sistemas.tce.pe.gov.br/jurisprudencia/PesquisaJurisprudencia!home.action",
-    "published_at": "2026-06-02"
+    "published_at": "2026-06-03"
   },
   {
     "source": "TCE-PE",
     "title": "TCE-PE - Deliberações",
     "url": "https://portal.tcepe.tc.br/jurisprudencia/consulta/deliberacoes",
-    "published_at": "2026-06-02"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Adesão a Ata de Registro de Preços nº 67/2024 da CODANORTE, oriundo do Pregão Eletrônico nº 07/2024, para aquisição de materiais e equipamentos de informática, para atender as dema",
-    "url": "https://pncp.gov.br/app/editais/09067562000127-1-000029/2026",
-    "published_at": "2026-05-04"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Aquisição de Equipamentos de Tecnologia da Informação, por meio de Pregão Eletrônico, para atender as necessidades da Central Permanente de Licitação – CPL.",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=98092105900242026",
-    "published_at": "2026-05-04"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - CONSTITUI OBJETO DO PRESENTE INSTRUMENTO A ABERTURA DE PROCESSO DE DESPESA POR MEIO DE DISPENSA DE LICITAÇÃO, VISANDO À AQUISIÇÃO DE VENTILADOR DE COLUNA, EM ATENDIMENTO ÀS NECESSI",
-    "url": "https://pncp.gov.br/app/editais/36975571000199-1-000201/2026",
-    "published_at": "2026-05-04"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - CONTRATAÇÃO DE PESSOA JURÍDICA, MEDIANTE DISPENSA DE LICITAÇÃO, PARA O CONTRATAÇÃO DE PESSOA FÍSICA OU JURÍDICA PARA A FORNECIMENTO DE ÓCULOS PARA ATENDIMENTO DE PACIENTE C.B., DES",
-    "url": "https://pncp.gov.br/app/editais/46410775000136-1-000415/2026",
-    "published_at": "2026-05-04"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - [Portal de Compras Públicas] - Contratação direta, por inexigibilidade de licitação, a nova lei de licitações e o impacto no âmbito municipal a ser ministrado pelo professor Saulo",
-    "url": "https://portaldecompraspublicas.com.br/processos/PE/Camara-Municipal-de-Petrolina-3602/INEX-002-2026-2026-476878",
-    "published_at": "2026-05-04"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Aquisição de materiais permanentes destinados à Subdivisão de Tratamento Intensivo (UTI), referente à republicação dos itens fracassados do Pregão Eletrônico nº 90016/2026 (itens",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=11240805900342026",
-    "published_at": "2026-05-04"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - CONTRATAÇÃO DE SERVIÇOS TÉCNICOS PROFISSIONAIS ESPECIALIZADOS DE NATUREZA PREDOMINANTEMENTE INTELECTUAL, CONSISTENTES EM APOIO TÉCNICO À ESTRUTURAÇÃO ADMINISTRATIVA E AO FORTALEC",
-    "url": "https://bnccompras.com/DirectBuy/DirectBuyView?param1=[gkz]jALYbE5p8b7nJnu/6JlzH2pi6yAjhitjlObuPkgNMBfrGXWA6Mewcm7xewP0fb1P8V7kBg7KKWXCyh8CplmIpQh8sqOzkg1Zbo2XiNvSS5U=",
-    "published_at": "2026-05-04"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - REGISTRO DE PREÇOS PARA A CONTRATAÇÃO DE EMPRESA ESPECIALIZADA EM ENGENHARIA NA EXECUÇÃO DE SERVIÇOS (art. 6º, XI da Lei nº 14.133, de 01 de abril de 2021 ) E OBRAS DE INFRAESTRUTU",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=98467303900052026",
-    "published_at": "2026-05-04"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Registro de Preços para a compra (art. 6º, X da Lei nº 14.133, de 01 de abril de 2021 ) de materiais de limpeza e higiene I , para fornecimento parcelado, para atender as demandas",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=98467305900622026",
-    "published_at": "2026-05-04"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - CREDENCIAMENTO DE PESSOA JURÍDICA PARA PRESTAÇÃO DE SERVIÇOS DE ARBITRAGEM, em atendimento à Secretaria Municipal de Esporte e Lazer do município de Sapezal-MT.",
-    "url": "https://pncp.gov.br/app/editais/01614225000109-1-000108/2026",
-    "published_at": "2026-05-04"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - [LICITANET] - credenciamento de pessoas jurídicas especializadas na prestação integrada de serviços de hospedagem, alimentação e transporte urbano local no Município de Salvador",
-    "url": "https://licitanet.com.br/sessao/183703",
-    "published_at": "2026-05-04"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - CONSTRUÇÃO DE RETOMADA DA UNIDADE BÁSICA DE SAÚDE NO MUNICIPIO DE PASSO DE CAMARAGIBE - ALAGOAS.",
-    "url": "https://bnccompras.com/Process/ProcessView?param1=[gkz]/GiVM5lQvN/kxF_XZIXKd0hj8NSehzMMuVf_lrsdidrH0wYMq4cVe_HTXZnoijU4DT7gF_ngl8hmDSGeadN5ucFnjOAaoZQ6d0LQUU39TI4=",
-    "published_at": "2026-05-04"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Aquisição, por meio de ata de registro de preços, de café e açúcar para as Superintendências da ABIN.",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=11012005900082026",
-    "published_at": "2026-05-04"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Formação de Ata de Registro de Preços para o fornecimento eventual de materiais descartáveis para porcionamento das refeições, visando atender às necessidades do Hospital Regional",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=92615005901542026",
-    "published_at": "2026-05-04"
+    "published_at": "2026-06-03"
   },
   {
     "source": "PNCP",
@@ -451,63 +325,147 @@
   },
   {
     "source": "PNCP",
-    "title": "PNCP - AQUISICAO DE CONSERTO PARA A CAMINHONETE S10 DE PLACAS IKZ8513. REF. CREDENCIAMENTO N 23 2024 CONTRATO N 46 2024",
-    "url": "https://pncp.gov.br/app/editais/87738530000110-1-000735/2026",
-    "published_at": "2026-05-04"
+    "title": "PNCP - Credenciamento para prestação serviços de consultas especializadas nas áreas de Fonoaudiologia e Pediatria, com o objetivo de atender à demanda reprimida da Atenção Básica, promove",
+    "url": "https://app2.ammlicita.org.br/pesquisa/99539",
+    "published_at": "2026-05-06"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - Chamamento Publico para Credenciamento de pessoas juridicas e fisicas da area da saude para prestacao de servicos de saude aos usuarios do SUS no Municipio de Encruzilhada do Sul",
-    "url": "https://pncp.gov.br/app/editais/89363642000169-1-000720/2026",
-    "published_at": "2026-05-04"
+    "title": "PNCP - Credenciamento de pessoas jurídicas especializadas na prestação de serviços de locação de tratores agrícolas, com implemento tipo grade aradora e disponibilização de operador, para",
+    "url": "https://bnccompras.com/Process/ProcessView?param1=[gkz]VtD4nFuIr4Sd9fxLifH0bH/7FANXZk4sabFg5qoYgoNznrSV6lBeH5jw_xwVfCbnOQ7s4gXF0q73AHFqZllPdElNpIq5sLFXeCepMUfMlE0=",
+    "published_at": "2026-05-06"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - [LICITANET] - CREDENCIAMENTO DE EMPRESAS FUNERÁRIAS LEGALMENTE CONSTITUÍDAS PARA A PRESTAÇÃO DE SERVIÇOS FUNERÁRIOS NO MUNICÍPIO DE ROLIM DE MOURA/RO, COM FORNECIMENTO DE URNAS MOR",
-    "url": "https://licitanet.com.br/sessao/183643",
-    "published_at": "2026-05-04"
+    "title": "PNCP - EDITAL DE REPUBLICAÇÃO DO CREDENCIAMENTO DE ANGIOLOGIA",
+    "url": "https://pncp.gov.br/app/editais/14105209000124/2026/70",
+    "published_at": "2026-05-06"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - REFERENTE AO PROCESSO DE INEXIGIBILIDADE DE LICITAÇÃO PARA CONTRAÇÃO DE APRESENTAÇÃO ARTÍSTICA DA DUPLA SERTANEJA LEO REIS E BRUNO, DESTINADO AO EVENTO CULTURAL DA FESTA DO PADROE",
-    "url": "http://gestaopublica.saopatricio.bsit-br.com.br/portal/purchase-notice-transparency.jsf",
-    "published_at": "2026-05-04"
+    "title": "PNCP - CREDENCIAMENTO PÚBLICO PARA CONTRATAÇÃO DE LEILOEIRO OFICIAL",
+    "url": "https://pncp.gov.br/app/editais/08087561000181-1-000112/2026",
+    "published_at": "2026-05-06"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - CONTRATAÇÃO DE OBRA DE ENGENHARIA, PARA EXECUÇÃO DA MODERNIZAÇÃO E AMPLIAÇÃO DA CENTRAL DE TRIAGEM E TRANSBORDO – CTT NO MUNICÍPIO DE ATIBAIA, CONFORME CONTRATO DE REPASSE Nº 95183",
-    "url": "https://pncp.gov.br/app/editais/45279635000108-1-000314/2026",
-    "published_at": "2026-05-04"
+    "title": "PNCP - Credenciamento de leiloeiros públicos oficiais, pessoa física, regularmente matriculadas na Junta Comercial do Estado de Mato Grosso, para a prestação de serviços técnicos especial",
+    "url": "https://transparencia.agilicloud.com.br/prefnovohorizontenorte-mt/licitacoes/licitacao?id=757",
+    "published_at": "2026-05-06"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - [LICITANET] - CONTRATAÇÃO DE EMPRESA PARA EXECUÇÃO DOS SERVIÇOS DE PAVIMENTAÇÃO EM PARALELEPÍPEDO E DRENAGEM DE RUAS NA ZONA URBANA DO MUNICÍPIO DE CARAÚBAS - PB, CONTRATO DE REPAS",
-    "url": "https://licitanet.com.br/sessao/182834",
-    "published_at": "2026-05-04"
+    "title": "PNCP - CREDENCIAMENTO PARA CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA A REALIZAÇÃO DE EXAMES DE ANÁLISES CLÍNICAS (EXAMES LABORATORIAIS) CONFORME TABELA SUS E PORTARIA SMS Nº 16/2025, PARA",
+    "url": "https://pncp.gov.br/app/editais/45351749000111-1-000037/2026",
+    "published_at": "2026-05-05"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - [LICITANET] - CONTRATAÇÃO DE EMPRESA DE ENGENHARIA PARA CONSTRUÇÃO DE ESCADARIAS PÚBLICA NAS COMUNIDADES RURAIS DO MUNICÍPIO DE BORBA/AM. SRP - 006/2026",
-    "url": "https://licitanet.com.br/sessao/183633",
-    "published_at": "2026-05-04"
+    "title": "PNCP - Credenciamento de pessoas jurídicas especializadas para realização de consultas médicas com Oftalmologista, Neurologista, Neuropediatra e exames de Eletroencefalograma com Mapeamen",
+    "url": "https://pncp.gov.br/app/editais/03184066000177/2025/65",
+    "published_at": "2026-05-05"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA PRESTAÇÃO DOS SERVIÇOS DE PAVIMENTAÇÃO EM PEDRA TOSCA EM DIVERSAS RUAS NA SEDE NO MUNICÍPIO DE CRATEÚS-CE, CONFORME CONTRATO DE REPASSE Nº",
-    "url": "https://bllcompras.com/Process/ProcessView?param1=[gkz]7mgrAf5oM5219IjFty8Xl0kulhM29GW8aeJrY0R05VhPk7P2CYao/G3A5TMFGFI7AU0eX2RmfENoJYDE8WQ/N_hItKGCcnQ6OvhA18JvNt4=",
-    "published_at": "2026-05-04"
+    "title": "PNCP - CREDENCIAMENTO PARA A CONTRATAÇÃO DE PESSOA JURÍDICA ESPECIALIZADA EM PRESTAÇÃO DE SERVIÇOS MÉDICOS EM CARDIOLOGIA.",
+    "url": "https://www.gp.srv.br/transparencia_barramansa/servlet/licitacoes_v2?9",
+    "published_at": "2026-05-05"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - [Portal de Compras Públicas] - CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA REVITALIZAÇÃO DE QUADRA DE ESPORTES NO MUNICÍPIO DE MONTE AZUL/MG EM ATENDIMENTO AO CONTRATO DE REPASSE OGU",
-    "url": "https://www.portaldecompraspublicas.com.br/processos/MG/Prefeitura-Municipal-de-Monte-Azul-3196/CPMP-006-2026-2026-477086",
-    "published_at": "2026-05-04"
+    "title": "PNCP - CREDENCIAMENTO DE EMPRESAS PARA PRESTACAO DE SERVICOS TECNICOS DE INSTRUTORIA E MONITORIA EM OFICINAS SOCIOEDUCATIVAS E ESPORTIVAS ABRANGENDO AS AREAS DE ARTES MARCIAIS LINGUAS E",
+    "url": "https://pncp.gov.br/app/editais/76208842000103-1-000035/2026",
+    "published_at": "2026-05-05"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - O objeto da licitação é o Registro de Preço para futuras e eventuais aquisições de medicamentos, nas condições estabelecidas neste edital e seus anexos.",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=94300105900362026",
-    "published_at": "2026-05-04"
+    "title": "PNCP - CREDENCIAMENTO PARA CONTRATAÇÃO DE SERVIÇOS DE MÃO DE OBRA DE MESTRE DE OBRAS, PEDREIROS, AJUDANTES DE PEDREIRO, PINTOR, AJUDANTES DE SERVIÇOS GERAIS, CALCETEIRO E ELETRICISTA PARA",
+    "url": "https://pncp.gov.br/app/editais/01612512000171-1-000015/2026",
+    "published_at": "2026-05-05"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CREDENCIAMENTO MATERIAL DE CONSTRUÇÃO",
+    "url": "https://pncp.gov.br/app/editais/37465309000167-1-000022/2026",
+    "published_at": "2026-05-05"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CREDENCIAMENTO DE COMPANHIAS AÉREAS OU AGÊNCIAS DE VIAGENS OBJETIVANDO O TRANSPORTE AÉREO DOMÉSTICO REGULAR E INTERNACIONAL, PARA O FORNECIMENTO DE PASSAGENS AÉREAS EM LI",
+    "url": "https://pncp.gov.br/app/editais/83102673000180-1-000069/2026",
+    "published_at": "2026-05-05"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CREDENCIAMENTO DE INSTITUIÇÕES FINANCEIRAS PARA PRESTAÇÃO DE SERVIÇOS BANCÁRIOS DE ARRECADAÇÃO DE TRIBUTOS, TAXAS, DÍVIDA ATIVA, CONTRIBUIÇÃO DE MELHORIAS E DEMAIS RECEITAS MUNICIP",
+    "url": "https://bordadamata.mg.gov.br/categoria-de-arquivo/licitacoes/licitacoes-2026-licitacoes/credenciamento-2026-licitacoes-2026-licitacoes/",
+    "published_at": "2026-05-05"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Credenciamento de empresas especializadas na administração, gerenciamento e fornecimento de auxílio-alimentação, por meio de cartão eletrônico com chip e tarja magnética, em arranj",
+    "url": "https://pncp.gov.br/app/editais/01612395000146-1-000033/2026",
+    "published_at": "2026-05-05"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CREDENCIAMENTO DE ÁRBITROS, PESSOAS FÍSICAS E JURÍDICAS, PARA PRESTAÇÃO DE SERVIÇOS DE ARBITRAGEM E DE APOIO EM PRÁTICAS ESPORTIVAS, DOS MAIS VARIADOS SEGMENTOS - FUTEBOL DE CAMPO",
+    "url": "https://app2.licitardigital.com.br/pesquisa/99490",
+    "published_at": "2026-05-05"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - SELEÇÃO E CREDENCIAMENTO DE PESSOAS JURÍDICAS DE DIREITO PRIVADO PARA FUTURA CONTRATAÇÃO DE SERVIÇOS ESPECIALIZADOS DE LABORATÓRIOS REGIONAIS DE PRÓTESE DENTÁRIA – LRPD, A SEREM PR",
+    "url": "http://www.portaldecomprasnilopolis.com.br",
+    "published_at": "2026-05-05"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Credenciamento de artistas locais, compreendendo artistas individuais, grupos musicais e bandas, para fins de futura e eventual contratação, visando à realização de apresentações a",
+    "url": "https://pncp.gov.br/app/editais/08365900000144-1-000036/2026",
+    "published_at": "2026-05-05"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Credenciamento público para contratação de pessoas jurídicas interessadas para prestação de serviços médicos especializados em UROLOGIA, para atendimento a populaçao assistida pelo",
+    "url": "https://app2.licitardigital.com.br/pesquisa/99456",
+    "published_at": "2026-05-05"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CREDENCIAMENTO DE PESSOAS JURIDICAS ESPECIALIZADAS, PARA PRESTAÇÃO DE SERVIÇOS DE INTERNAÇÃO INVOLUNTARIA E/OU COMPULSORIA DE PACIENTES ADOLESCENTES COM DEPENDECIA QUIMICA (ALCOOL",
+    "url": "https://pncp.gov.br/app/editais/76970367000108-1-000040/2026",
+    "published_at": "2026-05-06"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Abertura de CHAMAMENTO PÚBLICO, mediante procedimento auxiliar de CREDENCIAMENTO, visando ao credenciamento de LEILOEIROS OFICIAIS",
+    "url": "https://www.primaveradoleste.mt.gov.br/Licitacoes/Dispensa/",
+    "published_at": "2026-05-06"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Chamada Publica para Fins de Credenciamento de Pessoas Juridicas para Prestacao de Servicos de ate 70 setenta vagas por mes em Instituicoes de Longa Permanencia para Idosos com g",
+    "url": "https://pncp.gov.br/app/editais/88363189000128-1-000187/2026",
+    "published_at": "2026-05-06"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CREDENCIAMENTO DE INSTITUICOES FINANCEIRAS PARA A PRESTACAO DE SERVICOS BANCARIOS DESTINADOS AO PAGAMENTO DA FOLHA DE REMUNERACAO DOS SERVIDORES PUBLICOS E AGENTES POLITICOS DO MUN",
+    "url": "https://pncp.gov.br/app/editais/67662437000161-1-000020/2026",
+    "published_at": "2026-05-06"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Credenciamento de pessoas jurídicas, via chamamento público, para fornecimento contínuo de combustível tipo Óleo Diesel Marítimo ODM (DMA), visando atender as necessidades da Secre",
+    "url": "http://www.licitacoari.com.br",
+    "published_at": "2026-05-06"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - [Portal de Compras Públicas] - CREDENCIAMENTO DE PESSOAS JURÍDICAS E FÍSICAS DA ÁREA DA SAÚDE PARA PRESTAÇÃO DE SERVIÇOS DE SAÚDE",
+    "url": "https://portaldecompraspublicas.com.br/processos/RS/Prefeitura-Municipal-de-Encruzilhada-do-Sul-1306/CRED-02-2026-2026-477656",
+    "published_at": "2026-05-06"
   },
   {
     "source": "TCM-GO",
@@ -526,17 +484,5 @@
     "title": "TCM-GO - TCMGO aponta déficit em creches e problemas na distribuição de vagas da educação infantil em Goiânia",
     "url": "https://www.tcmgo.tc.br/site/2026/05/deficit-em-creches-educacao-infantil-em-goiania/",
     "published_at": "2026-05-14"
-  },
-  {
-    "source": "TCM-GO",
-    "title": "TCM-GO - TCMGO determina suspensão do concurso da Câmara de Goiânia por suspeitas de favorecimento e falhas na segurança",
-    "url": "https://www.tcmgo.tc.br/site/2026/05/tcmgo-determina-suspensao-do-concurso-da-camara-de-goiania-por-suspeitas-de-favorecimento-e-falhas-na-seguranca/",
-    "published_at": "2026-05-16"
-  },
-  {
-    "source": "TCM-GO",
-    "title": "TCM-GO - TCMGO promove diálogo com comunicadores e detalha atuação do controle externo",
-    "url": "https://www.tcmgo.tc.br/site/2026/05/tcmgo-promove-dialogo-com-comunicadores-e-detalha-atuacao-do-controle-externo/",
-    "published_at": "2026-05-27"
   }
 ]
