@@ -25,12 +25,6 @@
   },
   {
     "source": "TCU",
-    "title": "TCU - ACÓRDÃO DE RELAÇÃO 2976/2026 ATA 18/2026 - PRIMEIRA CÂMARA",
-    "url": "https://contas.tcu.gov.br/pesquisaJurisprudencia/#/detalhamento/11/*/KEY:%22ACORDAO-COMPLETO-2769159%22/DTRELEVANCIA%2520desc%252C%2520NUMACORDAOINT%2520desc/false/1/false",
-    "published_at": "2026-06-09"
-  },
-  {
-    "source": "TCU",
     "title": "TCU - ACÓRDÃO 1519/2026 ATA 22/2026 - PLENÁRIO",
     "url": "https://contas.tcu.gov.br/pesquisaJurisprudencia/#/detalhamento/11/*/KEY:%22ACORDAO-COMPLETO-2768308%22/DTRELEVANCIA%2520desc%252C%2520NUMACORDAOINT%2520desc/false/1/false",
     "published_at": "2026-06-10"
@@ -69,6 +63,12 @@
     "source": "TCU",
     "title": "TCU - ACÓRDÃO 1513/2026 ATA 22/2026 - PLENÁRIO",
     "url": "https://contas.tcu.gov.br/pesquisaJurisprudencia/#/detalhamento/11/*/KEY:%22ACORDAO-COMPLETO-2761967%22/DTRELEVANCIA%2520desc%252C%2520NUMACORDAOINT%2520desc/false/1/false",
+    "published_at": "2026-06-10"
+  },
+  {
+    "source": "TCU",
+    "title": "TCU - ACÓRDÃO 1512/2026 ATA 22/2026 - PLENÁRIO",
+    "url": "https://contas.tcu.gov.br/pesquisaJurisprudencia/#/detalhamento/11/*/KEY:%22ACORDAO-COMPLETO-2754470%22/DTRELEVANCIA%2520desc%252C%2520NUMACORDAOINT%2520desc/false/1/false",
     "published_at": "2026-06-10"
   },
   {
@@ -135,19 +135,19 @@
     "source": "TCE-SP",
     "title": "TCE-SP - Boletim de Jurisprudência | Tribunal de Contas do Estado de São Paulo",
     "url": "https://www.tce.sp.gov.br/boletim-de-jurisprudencia",
-    "published_at": "2026-06-12"
+    "published_at": "2026-06-16"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - Pesquisa de Jurisprudência",
     "url": "https://www.tce.sp.gov.br/jurisprudencia",
-    "published_at": "2026-06-12"
+    "published_at": "2026-06-16"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - Comissão Permanente de Análise de Jurisprudência",
     "url": "https://www.tce.sp.gov.br/boletim-de-jurisprudencia/CPAJ",
-    "published_at": "2026-06-12"
+    "published_at": "2026-06-16"
   },
   {
     "source": "TCE-SP",
@@ -159,13 +159,13 @@
     "source": "TCE-SP",
     "title": "TCE-SP - LEI Nº 14.133, DE 1º DE ABRIL DE 2021",
     "url": "https://www.tce.sp.gov.br/legislacao-comentada/lei-14133-1o-abril-2021",
-    "published_at": "2026-06-12"
+    "published_at": "2026-06-16"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - ARTIGO: Delegação, culpa e responsabilidade - Os limites da imputação em atos administrativos delegados dos prefeitos",
     "url": "https://www.tce.sp.gov.br/6524-artigo-delegacao-culpa-e-responsabilidade-limites-imputacao-atos-administrativos-delegados",
-    "published_at": "2026-06-12"
+    "published_at": "2026-06-16"
   },
   {
     "source": "TCE-SP",
@@ -189,19 +189,19 @@
     "source": "TCE-SP",
     "title": "TCE-SP - Portal dos Conselhos Municipais | Tribunal de Contas do Estado de São Paulo",
     "url": "https://www.tce.sp.gov.br/portal-conselhos-municipais",
-    "published_at": "2026-06-12"
+    "published_at": "2026-06-16"
+  },
+  {
+    "source": "TCE-MG",
+    "title": "TCE-MG - Acessibilidade",
+    "url": "https://www.tce.mg.gov.br/DescomplicaJuris/",
+    "published_at": "2026-06-15"
   },
   {
     "source": "TCE-MG",
     "title": "TCE-MG - Acessibilidade",
     "url": "https://www.tce.mg.gov.br/Informativo-de-Jurisprudencia-n-331.html/Noticia/1111628905",
     "published_at": "2026-06-09"
-  },
-  {
-    "source": "TCE-MG",
-    "title": "TCE-MG - Acessibilidade",
-    "url": "https://www.tce.mg.gov.br/DescomplicaJuris/",
-    "published_at": "2026-06-02"
   },
   {
     "source": "TCE-MG",
@@ -213,61 +213,61 @@
     "source": "TCE-SC",
     "title": "TCE-SC - Jurisprudência | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/content/jurisprudencia",
-    "published_at": "2026-06-12"
+    "published_at": "2026-06-15"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Denúncias e representações | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/denuncias-representacoes",
-    "published_at": "2026-06-12"
+    "published_at": "2026-06-15"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Informativos de Jurisprudência | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/informativo-de-jurisprud%C3%AAncia",
-    "published_at": "2026-06-12"
+    "published_at": "2026-06-15"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Súmulas de Jurisprudência | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/content/s%C3%BAmulas-de-jurisprud%C3%AAncia",
-    "published_at": "2026-06-12"
+    "published_at": "2026-06-15"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Informativos de Jurisprudência - Edições anteriores | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/informativo-de-jurisprud%C3%AAncia-edicoes-anteriores",
-    "published_at": "2026-06-12"
+    "published_at": "2026-06-15"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Informativos de Jurisprudência",
     "url": "https://www.tcesc.tc.br/informativo-de-jurisprudência",
-    "published_at": "2026-06-12"
+    "published_at": "2026-06-15"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Recolhimento de débitos e de multas | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/recolhimentos",
-    "published_at": "2026-06-12"
+    "published_at": "2026-06-15"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Fornecedores e Inovação | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/fornecedores-e-inovacao",
-    "published_at": "2026-06-12"
+    "published_at": "2026-06-15"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Licitações e Contratos | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/content/licitacoes_contratos",
-    "published_at": "2026-06-12"
+    "published_at": "2026-06-15"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Atendimento Virtual | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/atendimento-virtual",
-    "published_at": "2026-06-12"
+    "published_at": "2026-06-15"
   },
   {
     "source": "TCE-PE",
@@ -313,12 +313,6 @@
   },
   {
     "source": "PNCP",
-    "title": "PNCP - PROCESSO LICITATÓRIO na modalidade PREGÃO ELETRÔNICO para contratação de empresa especializada para prestação de serviços gráficos diversos, pelo prazo de 12 (doze) meses, para ate",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=98476705900272026",
-    "published_at": "2026-05-18"
-  },
-  {
-    "source": "PNCP",
     "title": "PNCP - Contratação dos serviços técnicos especializados em engenharia civil para a construção da praça em torno da sede da Câmara Municipal do Município de São Benedito-CE",
     "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=98154703900132026",
     "published_at": "2026-05-18"
@@ -352,30 +346,6 @@
     "title": "PNCP - A presente licitação tem como objeto o Registro de Preços para contratação de empresa especializada para eventual aquisição de músculo bovino moído, patinho em iscas e acém em cubo",
     "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=98766305900322026",
     "published_at": "2026-05-18"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Formação de Ata de Registro de Preços para o fornecimento eventual dos Dispositivos Médicos Hospitalares, visando atender às demandas da Secretaria Estadual de Saúde de Pernambuco",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=92615005907482026",
-    "published_at": "2026-05-18"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Constitui objeto da presente licitação o registro de preços para eventual e futura Aquisição de materiais odontológicos de consumo como Glaze e Maquiagem Laboratorial, para suprir",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=16024105900062026",
-    "published_at": "2026-05-18"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - REGISTRO DE PREÇOS PARA A CONTRATAÇÃO DE EMPRESA PARA O FORNECIMENTO DE UTENSÍLIOS DE COZINHA, PARA ATENDER AS NECESSIDADES DESTE MUNICIPIO.",
-    "url": "https://pncp.gov.br/app/editais/20905865000104-1-000063/2026",
-    "published_at": "2026-05-17"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Registro de preços para aquisição de pneus, câmaras de ar e diversos, com exclusividade de lotes para ME e EPP.",
-    "url": "https://bnccompras.com/Process/ProcessView?param1=[gkz]Gv4b0CCJ5LdehJLLM0_UfwORkz2r0pCfiUlg0c5SQO28xfZIQxVn5jzaN5tweLnW7adV6iAqILn9eYM6UJAvKahngp8JTrf8nZwPaD41uBM=",
-    "published_at": "2026-05-17"
   },
   {
     "source": "PNCP",
@@ -433,18 +403,6 @@
   },
   {
     "source": "PNCP",
-    "title": "PNCP - Contratação de empresa para produção e instalação de identificação visual da sede do 8º BPM/I e da sede da 2ªCia PM - Vide termo de Referência Anexo I do Edital",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=18015705900092026",
-    "published_at": "2026-05-18"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - CONTRATAÇÃO DE PRESTAÇÃO DE SERVIÇO DE EMPRESA ESPECIALIZADA PARA CONSTRUÇÃO DO TERMINAL RODOVIARIO DO MUNICIPIO DE ARAGAUTINS-TO. CONFORME CONTRATO DE REPASSE Nº 984410/2025 - OPE",
-    "url": "https://bnccompras.com/Process/ProcessView?param1=[gkz]P2qGSijpwM_Ox5yPaMCD4/8mOsFadmqDNxtDuw2yMJFx6U2ncqapMpEcF_fl9SyRPRajFCHyP/yic7/9GPvQJikFTgigp86dKZOIjxYOsUU=",
-    "published_at": "2026-05-17"
-  },
-  {
-    "source": "PNCP",
     "title": "PNCP - Formação de Ata de Registro de Preços (ARP) para prestação de serviço de locação de cobertas, toldos , mesas, cadeiras, toalhas e barracas para apoio aos eventos institucionais do",
     "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=09003105900092026",
     "published_at": "2026-05-18"
@@ -453,6 +411,48 @@
     "source": "PNCP",
     "title": "PNCP - [Portal de Compras Públicas] - Contratação de empresa especializada em engenharia para execução da obra de implantação de sistema de esgotamento sanitário no Município de Uiraúna/P",
     "url": "https://www.portaldecompraspublicas.com.br/processos/PB/Prefeitura-Municipal-de-Uirauna-1597/CPMP-10-2026-2026-480594",
+    "published_at": "2026-05-18"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - [LICITANET] - CONSTRUÇÃO DO ESPAÇO ESPORTIVO COMUNITÁRIO TIPO A, NO MUNICÍPIO DE OURÉM/PA.",
+    "url": "https://licitanet.com.br/sessao/184629",
+    "published_at": "2026-05-18"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de pessoa jurídica para execução da obra de engenharia destinada à construção da Unidade Básica de Saúde do Jardim Santo André, neste Município.",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=98747103900052026",
+    "published_at": "2026-05-18"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de empresa especializada em engenharia e construção civil para execução da obra de requalificação de uma praça e uma quadra no bairro Pedro Brito Netto, no município de",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=98476703900032026",
+    "published_at": "2026-05-18"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de empresa especializada para executar serviços de construção de campo de futebol no município de Viçosa/Al",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=98288703900032026",
+    "published_at": "2026-05-18"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de empresa especializada para execução de obra de ampliação da infraestrutura do Monumento Religioso Nossa Senhora Aparecida, localizado no Município de Boa Vista da Ap",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=45657803900102026",
+    "published_at": "2026-05-18"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Obra de construção de quadra no CETI Helvídio Nunes, localizado no município de Paes Landim/PI",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=92547803900042026",
+    "published_at": "2026-05-18"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de empresa para a execução da Obra de 6.307,80 m² Pavimentação em Paralelepípedo, referente à zona rural do município de SÃO RAIMUNDO NONATO E GUADALUPE - PI.",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=48001003900292026",
     "published_at": "2026-05-18"
   },
   {
