@@ -109,6 +109,12 @@
   },
   {
     "source": "STJ",
+    "title": "STJ - Página de Repetitivos traz honorários em execução fiscal extinta por quitação extrajudicial e comutação de pena",
+    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/25062026-Pagina-de-Repetitivos-traz-honorarios-em-execucao-fiscal-extinta-por-quitacao-extrajudicial-e-comutacao-de-pena-.aspx",
+    "published_at": "2026-06-25"
+  },
+  {
+    "source": "STJ",
     "title": "STJ - STJ encerra semestre forense com sessão administrativa na próxima quarta (1º)",
     "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/24062026-STJ-encerra-semestre-forense-com-sessao-administrativa-na-proxima-quarta--1o-.aspx",
     "published_at": "2026-06-24"
@@ -126,28 +132,28 @@
     "published_at": "2026-06-23"
   },
   {
-    "source": "STJ",
-    "title": "STJ - Conferência do vice-presidente do STJ encerra encontro nacional sobre sistema de precedentes",
-    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/22062026-Conferencia-do-vice-presidente-do-STJ-encerra-encontro-nacional-sobre-sistema-de-precedentes.aspx",
-    "published_at": "2026-06-22"
-  },
-  {
     "source": "TCE-SP",
     "title": "TCE-SP - Boletim de Jurisprudência | Tribunal de Contas do Estado de São Paulo",
     "url": "https://www.tce.sp.gov.br/boletim-de-jurisprudencia",
-    "published_at": "2026-06-22"
+    "published_at": "2026-06-24"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - Pesquisa de Jurisprudência",
     "url": "https://www.tce.sp.gov.br/jurisprudencia",
-    "published_at": "2026-06-22"
+    "published_at": "2026-06-24"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - Comissão Permanente de Análise de Jurisprudência",
     "url": "https://www.tce.sp.gov.br/boletim-de-jurisprudencia/CPAJ",
-    "published_at": "2026-06-22"
+    "published_at": "2026-06-24"
+  },
+  {
+    "source": "TCE-SP",
+    "title": "TCE-SP - TCESP alerta municípios sobre programas estratégicos de equidade na Educação Básica",
+    "url": "https://www.tce.sp.gov.br/6524-tcesp-alerta-municipios-sobre-programas-estrategicos-equidade-educacao-basica",
+    "published_at": "2026-06-24"
   },
   {
     "source": "TCE-SP",
@@ -159,7 +165,7 @@
     "source": "TCE-SP",
     "title": "TCE-SP - LEI Nº 14.133, DE 1º DE ABRIL DE 2021",
     "url": "https://www.tce.sp.gov.br/legislacao-comentada/lei-14133-1o-abril-2021",
-    "published_at": "2026-06-22"
+    "published_at": "2026-06-24"
   },
   {
     "source": "TCE-SP",
@@ -171,7 +177,7 @@
     "source": "TCE-SP",
     "title": "TCE-SP - ARTIGO: Delegação, culpa e responsabilidade - Os limites da imputação em atos administrativos delegados dos prefeitos",
     "url": "https://www.tce.sp.gov.br/6524-artigo-delegacao-culpa-e-responsabilidade-limites-imputacao-atos-administrativos-delegados",
-    "published_at": "2026-06-12"
+    "published_at": "2026-06-16"
   },
   {
     "source": "TCE-SP",
@@ -184,12 +190,6 @@
     "title": "TCE-SP - TCESP conclama Prefeituras e Câmaras a participarem do ‘Selo Ouvidoria Cidadã’",
     "url": "https://www.tce.sp.gov.br/6524-tcesp-conclama-prefeituras-e-camaras-participarem-selo-ouvidoria-cidada",
     "published_at": "2026-06-12"
-  },
-  {
-    "source": "TCE-SP",
-    "title": "TCE-SP - Portal dos Conselhos Municipais | Tribunal de Contas do Estado de São Paulo",
-    "url": "https://www.tce.sp.gov.br/portal-conselhos-municipais",
-    "published_at": "2026-06-22"
   },
   {
     "source": "TCE-MG",
@@ -276,9 +276,189 @@
     "published_at": "2026-06-07"
   },
   {
+    "source": "PNCP",
+    "title": "PNCP - O presente Edital, regido pela Lei Federal n.º 14.133/2021 e suas posteriores modificações, tem por objetivo realizar o procedimento administrativo de chamamento público visando, a",
+    "url": "https://app2.licitardigital.com.br/pesquisa/101902",
+    "published_at": "2026-05-27"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Concorrência para contratação de empresa especializada para execução de obra de engenharia, em regime de empreitada por preço global, para reforma da cobertura da nova sede da Secr",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=98957103900082026",
+    "published_at": "2026-05-27"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - A presente solicitação tem por objeto a Contratação de empresa especializada no credenciamento de pessoas físicas ou jurídicas para prestação de serviços médicos generalistas e esp",
+    "url": "https://bnccompras.com/Process/ProcessView?param1=[gkz]jhTGkGB4m2hwSEtmfStNGm5yi6K4Ar3MCY8JjERSIvONz0exReYJ2lLgZbmQReYx8jEOJHtRLpAPCUT3PMOeDXZO0WCSMAiEI3irVmJjvlg=",
+    "published_at": "2026-05-27"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CREDENCIAMENTO DE CONSULTAS, EXAMES E PROCEDIMENTOS MEDICOS ESPECIALIZADOS CONFORME TABELA EM ANEXO, PARA DISPONIBILIZAR À POPULAÇÃO DOS MUNICÍPIOS QUE INTEGRAM O CIS-AMEOSC.",
+    "url": "https://pncp.gov.br/app/editais/02311972000122-1-000041/2026",
+    "published_at": "2026-05-27"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - EDITAL DE CREDENCIAMENTO 016/2026 - MÉDICOS PARA TRATAMENTO DE VARIZES",
+    "url": "https://pncp.gov.br/app/editais/13913140000100-1-000047/2026",
+    "published_at": "2026-05-27"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Credenciamento de pessoas jurídicas especializadas na prestação de serviços de Fonoaudiologia, objetivando o atendimento das demandas da Secretaria Municipal de Saúde do Município",
+    "url": "https://app2.ammlicita.org.br/pesquisa/102130",
+    "published_at": "2026-05-27"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CREDENCIAMENTO DE EMPRESAS PARA EXECUÇÃO DE SERVIÇOS DE BORRACHARIA E LAVAÇÃO, PARA MANUTENÇÃO DA FROTA DE VEÍCULOS DO MUNICIPIO DE MAJOR VIEIRA/SC",
+    "url": "https://pncp.gov.br/app/editais/83102392000127-1-000129/2026",
+    "published_at": "2026-05-27"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Credenciamento com a finalidade de contratar empresas ou profissionais especializadas na prestação de serviços de saúde, incluindo prestadores na área de exames, consultas especial",
+    "url": "https://pncp.gov.br/app/editais/08355489000126-1-000009/2026",
+    "published_at": "2026-05-28"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CREDENCIAMENTO PARA CONTRATAÇÃO DE PESSOAS JURÍDICAS PARA PRESTAÇÃO DE SERVIÇOS DE SHOWS ARTÍSTICOS EM DIVERSOS ESTILOS MUSICAIS E APRESENTAÇÃO CULTURAL, PARA ATENDIMENTO AO CALEND",
+    "url": "https://pncp.gov.br/app/editais/22679153000140-1-000051/2026",
+    "published_at": "2026-05-28"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Credenciamento de profissional habilitado para prestação de serviços médicos destinados ao acompanhamento/atendimento de pacientes durante a transferência Inter hospitalar de doent",
+    "url": "https://app2.licitardigital.com.br/pesquisa/102175",
+    "published_at": "2026-05-28"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Credenciamento de empresa do ramo da construção civil para a elaboração de projetos e execução de obra para a construção de 200 (duzentas) unidades de interesse social (apartamento",
+    "url": "https://pncp.gov.br/app/editais/45685872000179-1-000180/2026",
+    "published_at": "2026-05-27"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - [LICITANET] - CREDENCIAMENTO DE PESSOAS FÍSICAS PARA PRESTAÇÃO DE SERVIÇOS NOTARIAIS, PARA O ATENDIMENTO ÀS DEMANDAS ADMINISTRATIVAS DAS SECRETARIAS DEMANDANTES, COMPREENDENDO AUTE",
+    "url": "https://licitanet.com.br/sessao/187282",
+    "published_at": "2026-05-27"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CREDENCIAMENTO DE PESSOA JURÍDICA PARA A PRESTAÇÃO DE SERVIÇOS NA ÁREA DE SAÚDE COMO NEUROLOGISTA PEDIATRICA - MARIA LUIZA.",
+    "url": "https://www.gp.srv.br/transparencia_barramansa/servlet/licitacoes_v2?9",
+    "published_at": "2026-05-27"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CREDENCIAMENTO PARA CONTRATAÇÃO DE EMPRESA PARA REALIZAÇÃO DE PERÍCIAS MÉDICAS, EMISSÃO DE PARECERES TÉCNICOS ESPECIALIZADOS, LAUDOS, AVALIAÇÃO NA ÁREA DE SAÚDE E REALIZAÇÃO DE EXA",
+    "url": "https://www.gp.srv.br/transparencia_matupa/servlet/licitacoes_v2?1",
+    "published_at": "2026-05-27"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Credenciamento de leiloeiros oficiais, regularmente matriculados na Junta Comercial competente, para prestação, sob demanda, de serviços especializados de avaliação mercadológica p",
+    "url": "https://app2.ammlicita.org.br/pesquisa/100672",
+    "published_at": "2026-05-27"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - SELEÇÃO E CREDENCIAMENTO DE EMPRESAS DO SETOR DA CONSTRUÇÃO CIVIL INTERESSADAS NA APRESENTAÇÃO DE PROPOSTAS PARA FUTURA CONTRATAÇÃO PELO AGENTE OPERADOR DO PROGRAMA MINHA CASA, MIN",
+    "url": "https://pncp.gov.br/app/editais/45787652000156-1-000124/2026",
+    "published_at": "2026-05-27"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Credenciamento de leiloeiros oficiais para a realização de leilões nas modalidades online/virtual ou presencial e online/virtual simultaneamente, mediante demanda, destinados ao de",
+    "url": "https://app2.licitardigital.com.br/pesquisa/102083",
+    "published_at": "2026-05-27"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - credenciamento de instituições financeiras, incluindo cooperativas de crédito, autorizadas pelo Banco Central do Brasil (BCB), para concessão de empréstimos consignados, renegociaç",
+    "url": "https://bllcompras.com/Process/ProcessView?param1=[gkz]UyDDWw9JHIMFz5grAcH1FNz4fS_l9lcQjJfLF3ssUWDtllkp819Th8Xl41xeGDWgglSBn8InxGd4fILjGcTzDEPcvzdMeJ7D/1rS/26rfHU=",
+    "published_at": "2026-05-27"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Credenciamento de pessoas juridicas especializadas para prestacao de servicos medicos especializados em cirurgia geral anestesiologia radiologia ginecologia e obstetricia bem c",
+    "url": "https://pncp.gov.br/app/editais/75738484000170-1-000100/2026",
+    "published_at": "2026-05-27"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - [LICITANET] - CONTRATAÇÃO EXCLUSIVA DE MICRO EMPREENDEDORES INDIVIDUAIS - MEI E PARA O CREDENCIAMENTO DE SERVIÇOS DE TRANSPORTE ESCOLAR FLUVIAL E TERRESTRE DO TIPO KOMBI PARA O ANO",
+    "url": "https://licitanet.com.br/sessao/183725",
+    "published_at": "2026-05-27"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - [Portal de Compras Públicas] - Credenciamento de empresas especializadas para prestação de serviços de manutenção elétrica, hidráulica e serviços gerais de conservação, a serem exe",
+    "url": "https://portaldecompraspublicas.com.br/processos/MG/Camara-Municipal-de-Abaete-3544/CRED-38-2026-2026-483730",
+    "published_at": "2026-05-27"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - [LICITANET] - Chamamento Público para o Credenciamento, visando à contratação complementar de empresas para a realização de cirurgias e procedimentos urológicos de média complexida",
+    "url": "https://licitanet.com.br/sessao/187454",
+    "published_at": "2026-05-27"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Constitui objeto do presente a fixação de normas e regras para cadastramento e posterior credenciamento/contratação de pessoas físicas e/ou jurídicas, para atuarem como captadores",
+    "url": "https://pncp.gov.br/app/editais/13715891000104-1-000117/2026",
+    "published_at": "2026-05-27"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - [Portal de Compras Públicas] - CHAMAMENTO PÚBLICO PARA O CREDENCIAMENTO DE EMPRESAS ESPECIALIZADAS NA ADMINISTRAÇÃO E FORNECIMENTO DE INSTRUMENTOS DE PAGAMENTO (CARTÕES ELETRÔNICOS",
+    "url": "https://portaldecompraspublicas.com.br/processos/SP/Prefeitura-Municipal-de-Braganca-Paulista-3822/CRED-007-2026-2026-483538",
+    "published_at": "2026-05-27"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CONTRATAÇÃO DE PESSOA JURÍDICA PARA PRESTAÇÃO DE SERVIÇOS MÉDICOS NA UNIDADE MISTA DE SAÚDE DR. MARCELO GERALDO ALVES, DO MUNICÍPIO DE UBAÍ/MG OU CONFORME DEMANDA DA SECRETARIA MUN",
+    "url": "https://pncp.gov.br/app/editais/18017459000163-1-000035/2026",
+    "published_at": "2026-05-28"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Construção de unidades habitacionais, na zona urbana do município de São Miguel da Baixa Grande- PI.",
+    "url": "http://www.comprasmunicipaispmsmbg.com.br",
+    "published_at": "2026-05-27"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - PAVIMENTAÇÃO DO ACESSO AO CAMPUS UECE DE CANINDÉ NO TRECHO ENTR. CE- 257 AO CAMPUS DA UECE, MUNICÍPIO DE CANINDÉ – CE, COM EXTENSÃO DE 0,50 Km",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=94300103950742026",
+    "published_at": "2026-05-27"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CONTRATAÇÃO DE EMPRESA DE ENGENHARIA PARA EXECUÇÃO DOS SERVIÇOS DE IMPLANTAÇÃO DE SISTEMA DE ABASTECIMENTO DE ÁGUA NA LOCALIDADE: LAGOA DO BEZERRO, NA ZONA RURAL MUNICÍPIO DE FARTU",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=93048003901062026",
+    "published_at": "2026-05-27"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CONTRATAÇÃO DE EMPRESA ESPECIALIZADA NO FORNECIMENTO DE COMBUSTÍVEL DIESEL S10, PARA ATENDER DEMANDAS DESTA CÂMARA MUNICIPAL.",
+    "url": "https://www.gp.srv.br/transparencia_matupa/servlet/licitacoes_v2?2",
+    "published_at": "2026-05-27"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - [LICITANET] - AQUISIÇÃO DE PEIXE IN NATURA, DA ESPÉCIE TAMBAQUI (Colossoma macropumu), PARA SEREM DISTRIBUÍDAS AS FAMÍLIAS EM VULNERABILIDADE DO MUNICÍPIO NA SEMANA SANTA.",
+    "url": "https://licitanet.com.br/sessao/185232",
+    "published_at": "2026-05-27"
+  },
+  {
     "source": "TCM-GO",
-    "title": "TCM-GO - Prazo para autoavaliação do Programa Nacional de Transparência Pública (PNTP) termina nesta sexta-feira (29.5)",
-    "url": "https://www.tcmgo.tc.br/site/2026/05/prazo-para-pntp-termina-nesta-sexta-feira-29-5/",
-    "published_at": "2026-05-26"
+    "title": "TCM-GO - TCMGO lança MBA em Controle Interno Municipal e abre processo seletivo para turma 2026",
+    "url": "https://www.tcmgo.tc.br/site/2026/06/escola-de-contas-do-tcmgo-lanca-mba-em-controle-interno-municipal-e-abre-processo-seletivo-para-turma-2026/",
+    "published_at": "2026-06-24"
   }
 ]
