@@ -703,7 +703,7 @@ footer{
 
 @media (min-width: 901px){
   .whatsapp-button{
-    right: max(12px, calc((100vw - var(--container-max)) / 2 + 12px));
+    right: max(12px, calc((100vw - (var(--container-max) + 20px)) / 2 - 56px - 16px));
   }
 }
 
@@ -1302,8 +1302,7 @@ button[type="submit"]:focus-visible{
   width: 100%;
   max-width: 100%;
   margin: 0 0 1rem 0;
-  text-align: justify;
-  text-justify: inter-word;
+  text-align: left;
   line-height: 1.78;
   color: #2d3f52;
 }
@@ -1393,8 +1392,7 @@ button[type="submit"]:focus-visible{
 
 #sobre .service-desc,
 .service-card .service-desc{
-  text-align: justify;
-  text-justify: inter-word;
+  text-align: left;
   line-height: 1.68;
   color: #2d3f52;
 }
@@ -1505,8 +1503,7 @@ main.container,
 .page-section .service-desc,
 #conteudo .service-desc,
 #conteudo li{
-  text-align: justify;
-  text-justify: inter-word;
+  text-align: left;
   line-height: 1.72;
   color: #2d3f52;
 }
@@ -1728,4 +1725,17 @@ footer .footer-link{
     word-spacing: normal;
     hyphens: auto;
   }
+}
+
+/* Aviso de privacidade no formulário de contato */
+.form-privacidade{
+  margin: 0.75rem 0 0 0;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #5a6b7b;
+  text-align: left;
+}
+.form-privacidade a{
+  color: #1864ab;
+  text-decoration: underline;
 }
