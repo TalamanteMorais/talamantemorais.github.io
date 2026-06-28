@@ -631,4 +631,48 @@ document.addEventListener("DOMContentLoaded", function () {
   const anoEl = document.getElementById("ano");
   if (anoEl) anoEl.textContent = new Date().getFullYear();
 
+  /* ======================== AVISO DE COOKIES (INFORMATIVO) ======================== */
+  (function avisoCookies(){
+    const CHAVE = "aviso-cookies-ok";
+
+    let jaAceito = false;
+    try { jaAceito = localStorage.getItem(CHAVE) === "1"; } catch (_) {}
+    if (jaAceito) return;
+    if (document.getElementById("cookie-aviso")) return;
+
+    const box = document.createElement("div");
+    box.id = "cookie-aviso";
+    box.setAttribute("role", "region");
+    box.setAttribute("aria-label", "Aviso de cookies");
+
+    const texto = document.createElement("p");
+    texto.className = "cookie-aviso-texto";
+
+    const link = document.createElement("a");
+    link.href = "privacidade.html";
+    link.textContent = "Política de Privacidade";
+
+    texto.appendChild(document.createTextNode(
+      "Utilizamos cookies de análise para compreender o desempenho do site e melhorar a navegação. Saiba mais na "
+    ));
+    texto.appendChild(link);
+    texto.appendChild(document.createTextNode("."));
+
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "cookie-aviso-btn";
+    btn.textContent = "Entendi";
+
+    box.appendChild(texto);
+    box.appendChild(btn);
+    document.body.appendChild(box);
+    document.body.classList.add("cookie-ativo");
+
+    btn.addEventListener("click", function () {
+      try { localStorage.setItem(CHAVE, "1"); } catch (_) {}
+      box.remove();
+      document.body.classList.remove("cookie-ativo");
+    });
+  })();
+
 });

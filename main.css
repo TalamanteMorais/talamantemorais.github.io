@@ -1744,3 +1744,73 @@ footer .footer-link{
   color: #1864ab;
   text-decoration: underline;
 }
+
+/* ======================== AVISO DE COOKIES (INFORMATIVO) ======================== */
+#cookie-aviso{
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 95;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem 1rem;
+  padding: 0.85rem clamp(1rem, 4vw, 2rem);
+  padding-bottom: calc(0.85rem + env(safe-area-inset-bottom));
+  background: #ffffff;
+  border-top: 3px solid var(--brand);
+  box-shadow: 0 -6px 20px rgba(15, 39, 67, 0.10);
+}
+
+.cookie-aviso-texto{
+  margin: 0;
+  max-width: 70ch;
+  color: #2d3f52;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.cookie-aviso-texto a{
+  color: var(--brand);
+  text-decoration: underline;
+}
+
+.cookie-aviso-btn{
+  flex: 0 0 auto;
+  min-height: 40px;
+  padding: 0.5rem 1.3rem;
+  background: var(--brand);
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 0.92rem;
+  border: none;
+  border-radius: 32px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(24, 100, 171, 0.15);
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.cookie-aviso-btn:hover{
+  background: var(--brand-dark);
+  transform: translateY(-1px);
+}
+
+.cookie-aviso-btn:focus-visible{
+  outline: 3px solid #a3d3ff;
+  outline-offset: 2px;
+}
+
+/* Eleva o botão do WhatsApp enquanto o aviso de cookies está visível */
+body.cookie-ativo .whatsapp-button{
+  bottom: clamp(150px, 22vw, 170px);
+}
+
+@media (max-width: 700px){
+  body.cookie-ativo .whatsapp-button{
+    bottom: 168px;
+  }
+}
