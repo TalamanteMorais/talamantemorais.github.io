@@ -109,6 +109,12 @@
   },
   {
     "source": "STJ",
+    "title": "STJ - Primeira Seção cancela dois temas repetitivos sobre contribuição previdenciária patronal",
+    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/30062026-Primeira-Secao-cancela-dois-temas-repetitivos-sobre-contribuicao-previdenciaria-patronal.aspx",
+    "published_at": "2026-06-30"
+  },
+  {
+    "source": "STJ",
     "title": "STJ - Tribunal prorroga validade de processos seletivos de estágio abertos em 2024 e 2025",
     "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/25062026-Tribunal-prorroga-validade-de-processos-seletivos-de-estagio-abertos-em-2024-e-2025.aspx",
     "published_at": "2026-06-26"
@@ -126,28 +132,22 @@
     "published_at": "2026-06-24"
   },
   {
-    "source": "STJ",
-    "title": "STJ - Pensão por morte e auxílio-reclusão a menores de 16 anos não retroagem se pedido é posterior ao prazo legal",
-    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/24062026-Pensao-por-morte-e-auxilio-reclusao-a-menores-de-16-anos-nao-retroagem-se-pedido-e-posterior-ao-prazo-legal.aspx",
-    "published_at": "2026-06-24"
-  },
-  {
     "source": "TCE-SP",
     "title": "TCE-SP - Boletim de Jurisprudência | Tribunal de Contas do Estado de São Paulo",
     "url": "https://www.tce.sp.gov.br/boletim-de-jurisprudencia",
-    "published_at": "2026-06-26"
+    "published_at": "2026-06-29"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - Pesquisa de Jurisprudência",
     "url": "https://www.tce.sp.gov.br/jurisprudencia",
-    "published_at": "2026-06-26"
+    "published_at": "2026-06-29"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - Comissão Permanente de Análise de Jurisprudência",
     "url": "https://www.tce.sp.gov.br/boletim-de-jurisprudencia/CPAJ",
-    "published_at": "2026-06-26"
+    "published_at": "2026-06-29"
   },
   {
     "source": "TCE-SP",
@@ -165,7 +165,7 @@
     "source": "TCE-SP",
     "title": "TCE-SP - LEI Nº 14.133, DE 1º DE ABRIL DE 2021",
     "url": "https://www.tce.sp.gov.br/legislacao-comentada/lei-14133-1o-abril-2021",
-    "published_at": "2026-06-26"
+    "published_at": "2026-06-29"
   },
   {
     "source": "TCE-SP",
@@ -177,19 +177,19 @@
     "source": "TCE-SP",
     "title": "TCE-SP - ARTIGO: Delegação, culpa e responsabilidade - Os limites da imputação em atos administrativos delegados dos prefeitos",
     "url": "https://www.tce.sp.gov.br/6524-artigo-delegacao-culpa-e-responsabilidade-limites-imputacao-atos-administrativos-delegados",
-    "published_at": "2026-06-17"
-  },
-  {
-    "source": "TCE-SP",
-    "title": "TCE-SP - Observatório do Futuro | Tribunal de Contas do Estado de São Paulo",
-    "url": "https://www.tce.sp.gov.br/observatorio/",
-    "published_at": "2026-06-26"
+    "published_at": "2026-06-18"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - Portal dos Conselhos Municipais | Tribunal de Contas do Estado de São Paulo",
     "url": "https://www.tce.sp.gov.br/portal-conselhos-municipais",
-    "published_at": "2026-06-26"
+    "published_at": "2026-06-29"
+  },
+  {
+    "source": "TCE-SP",
+    "title": "TCE-SP - Teletrabalho",
+    "url": "https://www.tce.sp.gov.br/informacoes-teletrabalho",
+    "published_at": "2026-06-29"
   },
   {
     "source": "TCE-MG",
@@ -274,6 +274,186 @@
     "title": "TCE-PE - Navegação",
     "url": "https://www.tcepe.tc.br/internet/index.php/colunas-nos-jornais",
     "published_at": "2026-06-21"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação dos serviços de engenharia para Construção do Espaço Esportivo Comunitário no município de Crato/Ce, firmando entre o Município de Crato e o Governo Federal através do",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=98138503952112026",
+    "published_at": "2026-06-01"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de empresa especializada para execução dos serviços remanescentes da obra de construção da Praça do Agropecuarista, localizada no Parque da cidade, no Município de Mara",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=98371303900032026",
+    "published_at": "2026-06-01"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Construção da casa da mulher brasileira de Belém, no município de Belém/PA",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=92544603900212026",
+    "published_at": "2026-06-01"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de empresa especializada para elaboração de estudos e projetos técnicos destinados ao licenciamento ambiental para desassoreamento do Rio Saí-Mirim, no Município de Ita",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=98998503900142026",
+    "published_at": "2026-06-01"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CONSTRUÇÃO E REFORMA DE PRAÇAS NAS LOCALIDADES CROATÁ, PORTELINHA, PRESÍDIO E ZÉ MARIA NO MUNICÍPIO DE AQUIRAZ-CE, CONFORME MAPP Nº 6173, POR INTERMÉDIO DA SECRETARIA DAS CIDAdes.",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=98131903917042026",
+    "published_at": "2026-06-01"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de empresa especializada para Reforma do Parquinho, situado entre a Rodovia das Trovas e Estrada Elza de Freitas Tinoco, no distrito de Ipiabas, município de Barra do P",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=98580503900082026",
+    "published_at": "2026-06-01"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - O objeto da presente licitação é Contratação de empresa especializada para execução da reforma da sede do Conselho Regional de Medicina do Estado de Rondônia – CREMERO, compreenden",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=38917903900012026",
+    "published_at": "2026-06-01"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de empresa de engenharia para Construção do Espaço Esportivo Comunitário localizado no município de Rio Branco - Acre",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=92799603900532026",
+    "published_at": "2026-06-01"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de empresa para execução das obras de construção da praça na rua Roseni Borge Avarado, município de Vitória/ES.",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=92899703900122026",
+    "published_at": "2026-06-01"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de empresa especializada em engenharia para a construção do Núcleo Básico CEU da Cultura, no município de Porto Velho/RO",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=92537303900462026",
+    "published_at": "2026-06-01"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Obras de engenharia prestação de serviços de drenagem no bairro alto bonito município de pacajá/pa",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=98059303900042026",
+    "published_at": "2026-06-01"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação da obra de construção do refeitório estudantil do IFPA Campus Marabá Industrial, conforme condições, quantidades e exigências estabelecidas neste Edital e seus anexos.",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=15813503900012026",
+    "published_at": "2026-06-01"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Elaboração de Projeto Executivo implantação de Sistema de Abastecimento de Agua em comunidades rurais no município de Acauã/PI, referente ao Termo de Compromisso de proposta novo P",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=93127303900592026",
+    "published_at": "2026-06-01"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Elaboração de Projeto Executivo implantação de Sistema de Abastecimento de Agua em comunidades rurais no município de Dirceu Arcoverde/PI, referente ao Termo de Compromisso de prop",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=93127303900602026",
+    "published_at": "2026-06-01"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Elaboração de Projeto Executivo implantação de Sistema de Abastecimento de Agua em comunidades rurais no município de Betânia do Piauí/PI, referente ao termo de compromisso de prop",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=93127303900612026",
+    "published_at": "2026-06-01"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Concessão da Prestação dos Serviços Públicos de Abastecimento de Água e de Esgotamento Sanitário no Município de Coribe - Bahia.",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=92660603900062026",
+    "published_at": "2026-06-01"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CONTRATAÇÃO DE EMPRESA ESPECIALIZADA EM EXECUÇÃO DA OBRA DO ENTORNO DA ESCOLA QUE ESTA EM CONSTRUÇÃO, NO MUNICÍPIO DE ANDRÉ DA ROCHA/RS, COM RECURSOS PRÓPRIOS.",
+    "url": "https://pregaobanrisul.com.br/editais/0005_2026/351888",
+    "published_at": "2026-06-01"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - [LICITANET] - CONTRATAÇÃO DE EMPRESA PARA REFORMA DO MATADOURO PÚBLICO MUNICIPAL DA PREFEITURA MUNICIPAL ZÉ DOA -MA",
+    "url": "https://licitanet.com.br/sessao/187939",
+    "published_at": "2026-06-01"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de empresa especializada para execução de obras de drenagem, redes de água, redes de esgotamento sanitário, pavimentação e urbanismo em ruas e travessas dos bairros Jar",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=98696903900052026",
+    "published_at": "2026-06-01"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de empresa especializada para a elaboração de projetos de arquitetura e complementares de engenharia, em metodologia BIM, destinados à construção da nova sede da Promot",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=92662903900012026",
+    "published_at": "2026-06-01"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Execução de obra de engenharia para ampliação da emef júlia gonçalves passarinho, contemplando a construção de salas de aula, galpão e refeitório, conforme projetos e especificaçõe",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=98059303900062026",
+    "published_at": "2026-06-01"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de empresa especializada por empreitada global, com fornecimento de materiais e mão de obra, visando: reforma do ginásio de esportes tancredo de almeida neves, localiza",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=98795303900162026",
+    "published_at": "2026-06-01"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de empresa de engenharia para Reforma do Hangar da Coordenadoria de Asa Fixa do Centro Integrado de Operações Aéreas COORDAF/CIOPAER/SEJUSP, no Aeroporto Internacional",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=92799603900522026",
+    "published_at": "2026-06-01"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de empresa para realizar a reparação da rede de esgoto da vila habitacional do DESTACAMENTO DE CONTROLE DO ESPAÇO AÉREO DE PORTO SEGURO/BA (DTCEA-PS).",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=12063203900062026",
+    "published_at": "2026-06-01"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de empresa para execução de obra de pavimentação asfáltica de vias urbanas em CBUQ, incluindo os serviços preliminares, terraplenagem, base e sub-base, revestimento, me",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=98788503900072026",
+    "published_at": "2026-06-01"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de pessoa jurídica para prestação de serviços de expansão e blindagem da sala de UPS (Uninterruptible Power Supply) do ambiente seguro de alta disponibilidade (sala-cof",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=92515303900032026",
+    "published_at": "2026-06-01"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de empresa especializada para execução de obras de infraestrutura urbana, compreendendo pavimentação asfáltica e recapeamento, drenagem pluvial, implantação de guias e",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=98647703950232026",
+    "published_at": "2026-06-01"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de empresa especializada para obra de modernização da infraestrutura elétrica com substituição do barramento “busway” do Centro de Operações Espaciais Secundário (COPE",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=12019503900052026",
+    "published_at": "2026-06-01"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de empresa especializada para prestação dos serviços de Supervisão das obras de implantação e pavimentação, inclusive obras de arte especiais, do Programa de Investimen",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=93036103900012026",
+    "published_at": "2026-06-01"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de empresa especializada em engenharia ou arquitetura para execução de obras revitalização da Praça Geraldo Porfírio dos santos – Cidade Patriarca – São Paulo – SP",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=92639203900052026",
+    "published_at": "2026-06-01"
   },
   {
     "source": "TCM-GO",
