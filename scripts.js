@@ -228,8 +228,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("contato-form");
 
   if (form) {
+    let envioEmAndamento = false;
+
     form.addEventListener("submit", function (e) {
       e.preventDefault();
+
+      if (envioEmAndamento) return;
 
       const nomeEl = document.getElementById("nome");
       const emailEl = document.getElementById("email");
@@ -271,6 +275,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
       }
 
+      envioEmAndamento = true;
       botao.disabled = true;
       botao.innerText = "Enviando...";
 
@@ -280,6 +285,7 @@ document.addEventListener("DOMContentLoaded", function () {
         exibirMensagem("Erro ao carregar o reCAPTCHA. Atualize a página e tente novamente.");
         botao.innerText = "Enviar";
         botao.disabled = false;
+        envioEmAndamento = false;
         return;
       }
 
@@ -290,6 +296,7 @@ document.addEventListener("DOMContentLoaded", function () {
         exibirMensagem("Erro ao validar o reCAPTCHA. Atualize a página e tente novamente.");
         botao.innerText = "Enviar";
         botao.disabled = false;
+        envioEmAndamento = false;
       };
 
       const executarRecaptcha = () => {
@@ -299,56 +306,29 @@ document.addEventListener("DOMContentLoaded", function () {
             const formData = new FormData(form);
             formData.set("g-recaptcha-response", token);
 
-            const enviarComCors = () =>
-              fetch(form.action, {
-                method: "POST",
-                body: formData,
-                redirect: "follow"
-              }).then((res) => {
-                if (!res.ok) throw new Error("HTTP " + res.status);
-                return res;
-              });
+            return fetch(form.action, {
+              method: "POST",
+              body: formData,
+              redirect: "follow"
+            });
+          })
+            .then((res) => {
+              if (!res.ok) throw new Error("HTTP " + res.status);
 
-            const enviarSemCors = () =>
-              fetch(form.action, {
-                method: "POST",
-                body: formData,
-                mode: "no-cors"
-              });
-
-            enviarComCors()
-              .then(() => {
-                exibirMensagem("Mensagem enviada. Em breve retornaremos.");
-                form.reset();
-              })
-              .catch((error) => {
-                console.error("Envio do formulário: erro:", error);
-
-                try {
-                  if (navigator && typeof navigator.sendBeacon === "function") {
-                    const ok = navigator.sendBeacon(form.action, formData);
-                    if (ok) {
-                      exibirMensagem("Mensagem enviada. Em breve retornaremos.");
-                      form.reset();
-                      return Promise.resolve();
-                    }
-                  }
-                } catch (_) {}
-
-                return enviarSemCors()
-                  .then(() => {
-                    exibirMensagem("Solicitação enviada. Se não receber retorno, tente novamente.");
-                    form.reset();
-                  })
-                  .catch(() => {
-                    exibirMensagem("Ocorreu um erro ao enviar sua mensagem. Tente novamente.");
-                  });
-              })
-              .finally(() => {
-                botao.innerText = "Enviar";
-                botao.disabled = false;
-              });
-          });
+              exibirMensagem("Mensagem enviada. Em breve retornaremos.");
+              form.reset();
+            })
+            .catch((error) => {
+              console.error("Envio do formulário: não foi possível confirmar o resultado:", error);
+              exibirMensagem(
+                "Não foi possível confirmar o envio. Verifique sua conexão e tente novamente apenas se necessário."
+              );
+            })
+            .finally(() => {
+              botao.innerText = "Enviar";
+              botao.disabled = false;
+              envioEmAndamento = false;
+            });
         });
       };
 
