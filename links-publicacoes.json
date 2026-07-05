@@ -97,6 +97,12 @@
   },
   {
     "source": "STJ",
+    "title": "STJ - Informativo aborda atuação da PM paulista e competência em casos de insumo estrangeiro para anabolizantes",
+    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/03072026-Informativo-aborda-atuacao-da-PM-paulista-e-competencia-em-casos-de-insumo-estrangeiro-para-anabolizantes.aspx",
+    "published_at": "2026-07-03"
+  },
+  {
+    "source": "STJ",
     "title": "STJ - Corte Especial vai fixar tese em repetitivo sobre retroação da gratuidade de justiça",
     "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/01072026-Corte-Especial-vai-fixar-tese-em-repetitivo-sobre-retroacao-da-gratuidade-de-justica.aspx",
     "published_at": "2026-07-01"
@@ -126,28 +132,22 @@
     "published_at": "2026-06-25"
   },
   {
-    "source": "STJ",
-    "title": "STJ - STJ encerra semestre forense com sessão administrativa na próxima quarta (1º)",
-    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/24062026-STJ-encerra-semestre-forense-com-sessao-administrativa-na-proxima-quarta--1o-.aspx",
-    "published_at": "2026-06-24"
-  },
-  {
     "source": "TCE-SP",
     "title": "TCE-SP - Boletim de Jurisprudência | Tribunal de Contas do Estado de São Paulo",
     "url": "https://www.tce.sp.gov.br/boletim-de-jurisprudencia",
-    "published_at": "2026-07-02"
+    "published_at": "2026-06-30"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - Pesquisa de Jurisprudência",
     "url": "https://www.tce.sp.gov.br/jurisprudencia",
-    "published_at": "2026-07-02"
+    "published_at": "2026-06-30"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - Comissão Permanente de Análise de Jurisprudência",
     "url": "https://www.tce.sp.gov.br/boletim-de-jurisprudencia/CPAJ",
-    "published_at": "2026-07-02"
+    "published_at": "2026-06-30"
   },
   {
     "source": "TCE-SP",
@@ -157,15 +157,9 @@
   },
   {
     "source": "TCE-SP",
-    "title": "TCE-SP - Tribunal de Contas realiza fiscalização surpresa sobre gestão de resíduos sólidos em mais de 200 municípios paulistas",
-    "url": "https://www.tce.sp.gov.br/6524-tribunal-contas-realiza-fiscalizacao-surpresa-sobre-gestao-residuos-solidos-mais-200",
-    "published_at": "2026-06-18"
-  },
-  {
-    "source": "TCE-SP",
     "title": "TCE-SP - LEI Nº 14.133, DE 1º DE ABRIL DE 2021",
     "url": "https://www.tce.sp.gov.br/legislacao-comentada/lei-14133-1o-abril-2021",
-    "published_at": "2026-07-02"
+    "published_at": "2026-06-30"
   },
   {
     "source": "TCE-SP",
@@ -181,15 +175,21 @@
   },
   {
     "source": "TCE-SP",
+    "title": "TCE-SP - Observatório do Futuro | Tribunal de Contas do Estado de São Paulo",
+    "url": "https://www.tce.sp.gov.br/observatorio/",
+    "published_at": "2026-06-30"
+  },
+  {
+    "source": "TCE-SP",
     "title": "TCE-SP - Portal dos Conselhos Municipais | Tribunal de Contas do Estado de São Paulo",
     "url": "https://www.tce.sp.gov.br/portal-conselhos-municipais",
-    "published_at": "2026-07-02"
+    "published_at": "2026-06-30"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - Teletrabalho",
     "url": "https://www.tce.sp.gov.br/informacoes-teletrabalho",
-    "published_at": "2026-07-02"
+    "published_at": "2026-06-30"
   },
   {
     "source": "TCE-MG",
@@ -274,6 +274,186 @@
     "title": "TCE-PE - Navegação",
     "url": "https://www.tcepe.tc.br/internet/index.php/colunas-nos-jornais",
     "published_at": "2026-06-21"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA A EXECUÇÃO DE OBRAS DA PAVIMENTAÇÃO EM PERÍMETRO URBANO DO MUNICÍPIO, CONFORME CONTRATO DE REPASSE Nº 990993/2025 FIRMADO ENTRE O MUNICÍPI",
+    "url": "https://app2.ammlicita.org.br/pesquisa/97566",
+    "published_at": "2026-06-08"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Obedecido o disposto na lei Federal nº 14.133/21, suas atualizações e legislação correlata, fica instaurando Processo Administrativo para contratação de empresa para contrução de 1",
+    "url": "https://pncp.gov.br/app/editais/95543427000142-1-000040/2026",
+    "published_at": "2026-06-08"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Obedecido o disposto na lei Federal nº 14.133/21, suas atualizações e legislação correlata, fica instaurando Processo Administrativo para contratação de empresa para viabilização d",
+    "url": "https://pncp.gov.br/app/editais/95543427000142-1-000041/2026",
+    "published_at": "2026-06-08"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - RECUPERAÇÃO E MELHORAMENTO DA PONTE SOBRE O RIO COREAÚ NA CE-085 NO TRECHO ENTR. CE-216(B)/311/364 (GRANJA) - ENTR. CE-362(B) P/ CAMOCIM, NO MUNICÍPIO DE GRANJA - CE, COM EXTENSÃO",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=94300103950842026",
+    "published_at": "2026-06-08"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação Integrada de para elaboração dos projetos básico, executivo e execução das obras de pavimentação da Rodovia PRC-487, entre o KM 449,55 e o km 471,22, nos municípios de",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=46339003900802026",
+    "published_at": "2026-06-08"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação Dos Serviços De Engenharia Para Recuperação E Manutenção De Estradas Vicinais No Município De Crato/Ce.",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=98138503932012026",
+    "published_at": "2026-06-08"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - O objeto da presente licitação é a escolha da proposta mais vantajosa para a contratação de empresa de engenharia civil para a execução de obras e serviços de pavimentação em paral",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=46317903901112026",
+    "published_at": "2026-06-08"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Execução de obra de infraestrutura viária da estrada vicinal localizada no trecho que liga a comunidade de Arraial dos Montes ao distrito de Abaíba – Trecho A, no município de Leop",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=98476703900042026",
+    "published_at": "2026-06-08"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de empresa especializada para revisão e atualização do Plano Municipal de Gestão Integrada de resíduos sólidos (PMGIRS) do município de Cianorte-PR.",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=98750503900142026",
+    "published_at": "2026-06-08"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de obras de engenharia para implantação de sistema de iluminação pública no trecho urbano da RO‑420, localizado no Distrito de Rio Branco, município de Campo Novo de Ro",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=92537303906222025",
+    "published_at": "2026-06-08"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de empresa de engenharia para a Construção de 1000 metros de muro em diversos pontos do município de Marabá/PA",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=92861503900332026",
+    "published_at": "2026-06-08"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Perfuração de Poços e Implementação de infraestrutura de abastecimento de água na localidade Baixa Fundo do Municipio de Guaribas/PI",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=93127303900632026",
+    "published_at": "2026-06-08"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de empresa especializada para a execução de construção de cabeceiras em concreto armado para pontes, em diversas localidades no município de Lages/SC, com fornecimento",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=98818303900232026",
+    "published_at": "2026-06-08"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação referente à revitalização da Praça Estado de Israel, localizada na Av. Oliveira Mesquita, Bairro Salgado Filho, município de Santa Maria-RS, conforme condições, quant",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=98884103900192026",
+    "published_at": "2026-06-08"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação De Empresa Especializada Para Execução De Construção Da Nova Sede Da Etec/Fatec No Município De Registro/Sp",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=10240103900012026",
+    "published_at": "2026-06-08"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Registro de preços para eventual contratação de serviços de reforma predial para diversas Unidades do Banco do Nordeste, conforme especificações técnicas constantes dos anexos do E",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=17908503900622026",
+    "published_at": "2026-06-08"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - [Portal de Compras Públicas] - CONTRATAÇÃO DE EMPRESA PARA PRESTAÇÃO DE SERVIÇOS DE ENGENHARIA PARA AMPLIAÇÃO DA USF - UNIDADE DE SAÚDE DA FAMÍLIA DO NOVO MARCOS MUNICIPIO DE REMAN",
+    "url": "https://www.portaldecompraspublicas.com.br/processos/BA/Prefeitura-Municipal-de-Remanso-2312/CPMP-014-2026-2026-483941",
+    "published_at": "2026-06-08"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA EXECUÇÃO DE PAVIMENTAÇÃO EM PISO INTERTRAVADO COM LAJOTA SEXTAVADA DE CONCRETO, NA RUA ALUDES MIRANDA – BAIRRO MINAS, MUNICÍPIO DE ILHOTA/",
+    "url": "https://app2.licitardigital.com.br/pesquisa/102904",
+    "published_at": "2026-06-08"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Obra Execução de pavimentação em concreto pré-moldado e drenagem no distrito de Baixa Verde, município de Dionísio-MG.",
+    "url": "https://app2.ammlicita.org.br/pesquisa/102972",
+    "published_at": "2026-06-08"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - [LICITANET] - CONTRATAÇÃO DE EMPRESA PARA EXECUÇÃO DE SERVIÇOS/OBRAS DE REFORMA E AMPLIAÇÃO DO CAMPO DE FUTEBOL MUNICIPAL ZÉ BRANCO, NO MUNICÍPIO DE POÇO REDONDO/SE.",
+    "url": "https://licitanet.com.br/sessao/188357",
+    "published_at": "2026-06-08"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - [LICITANET] - Contratação de empresa especializada para execução de pavimentação asfáltica na Estrada Rural - PIU 150, Zona Rural - neste Município de Piumhi/MG (acesso pela MG-341",
+    "url": "https://licitanet.com.br/sessao/188626",
+    "published_at": "2026-06-08"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de empresa especializada para a construção de 20 (vinte) unidades habitacionais no Município de Iaçu-BA, no âmbito do Programa Minha Casa, Minha Vida, conforme condiçõe",
+    "url": "https://bnccompras.com/Process/ProcessView?param1=[gkz]KPfsqBYXjwFBBvlhHmEjO9DCHnTVyhxTFUmqiDRx0P8p/ZjErkYYY8N_bZB6DoUP/N_dYNjJbWxmhhLZFPm6_Sd5Ea7DZNShdcMv8C5KRGQ=",
+    "published_at": "2026-06-08"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - [LICITANET] - Contratação de empresa especializada de engenharia para execução da obra pavimentação em piso intertravado no Povoado De Vila Do Café no Município De Encruzilhada-BA,",
+    "url": "https://licitanet.com.br/sessao/188627",
+    "published_at": "2026-06-08"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA EXECUÇÃO DA 2ª ETAPA DA PAVIMENTAÇÃO DE ACESSO AO BALNEÁRIO AÇUDE PAREDINHA NO MUNICÍPIO DE SOLONÓPOLE/CE.",
+    "url": "http://compras.m2atecnologia.com.br/processos/publicacao/743c76ae6cb6422a89fe077515e2a841/contratacao-de-empresa-especializada-para-execucao",
+    "published_at": "2026-06-08"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de empresa especializada para a reforma, adequação e manutenção do prédio da Câmara Municipal da Estância Turística de Paraibuna.",
+    "url": "https://bllcompras.com/Process/ProcessView?param1=[gkz]gYlBA8YSPztMaJuQye3SBZNEMppPHyac7DEE1BTpZJqcRizKhASB7aQcvFrtJGXNpnpLWtZGEyhASasSF7PpXANs2Xr334LREuPcB8qOsdY=",
+    "published_at": "2026-06-08"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de empresa especializada, para a manutenção preventiva e corretiva em vias rurais do município de Sitio Novo do Tocantins – TO.",
+    "url": "https://app2-compras.licitasitionovoto.com.br/pesquisa/8016",
+    "published_at": "2026-06-08"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CONSTRUÇÃO DO CENTRO DE REFERÊNCIA DA ASSISTÊNCIA SOCIAL – CRAS NO MUNICÍPIO DE WALL FERRAZ - PI",
+    "url": "https://bllcompras.com/Process/ProcessView?param1=[gkz]Uydw5tIn8zhNVCVC_1duGgPCvT3svwhOQr7ggpDsLT0mjXL/5lEOAkrdEr7xXzOQ8_X6iEH72Xrvzs0s4UbkhWrxX_fxxjsBAtIX4Ys6PHc=",
+    "published_at": "2026-06-08"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - [LICITANET] - CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA EXECUÇÃO DE OBRA DE CONSTRUÇÃO DA PRAÇA DO CAJUEIRO, LOCALIZADA NA COMUNIDADE DE CAMPO VERDE, ZONA RURAL DO MUNICÍPIO DE QUI",
+    "url": "https://licitanet.com.br/sessao/188638",
+    "published_at": "2026-06-08"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de empresa especializada em construção civil para execução dos serviços de reforma e ampliação do Campo Joaquim de Paulo, localizado no município de José Gonçalves de M",
+    "url": "https://app2.licitardigital.com.br/pesquisa/102638",
+    "published_at": "2026-06-08"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - ELABORAÇÃO DOS PROJETOS BÁSICO E EXECUTIVO DE 38 (TRINTA E OITO) RUAS DO MUNICIPIO DE GASPAR.",
+    "url": "https://comprasbr.com.br/pregao-eletronico-detalhe/?idlicitacao=45846",
+    "published_at": "2026-06-08"
   },
   {
     "source": "TCM-GO",
