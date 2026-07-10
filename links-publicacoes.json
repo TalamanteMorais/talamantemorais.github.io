@@ -91,9 +91,21 @@
   },
   {
     "source": "STJ",
-    "title": "STJ - Podcast STJ No Seu Dia discute entendimentos da corte sobre nova Lei de Licitações após cinco anos de vigência",
-    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/10062026-Podcast-STJ-No-Seu-Dia-discute-entendimentos-da-corte-sobre-nova-Lei-de-Licitacoes-apos-cinco-anos-de-vigencia.aspx",
-    "published_at": "2026-06-10"
+    "title": "STJ - Após a Lei 14.752/2023, Justiça não pode multar advogados por abandono de causa",
+    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/10072026-Apos-a-Lei-14-7522023--Justica-nao-pode-multar-advogados-por-abandono-de-causa.aspx",
+    "published_at": "2026-07-10"
+  },
+  {
+    "source": "STJ",
+    "title": "STJ - Regime monofásico de tributação impede créditos de PIS/Pasep e Cofins para postos de combustíveis",
+    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/10072026-Regime-monofasico-de-tributacao-impede-creditos-de-PISPasep-e-Cofins-para-postos-de-combustiveis.aspx",
+    "published_at": "2026-07-10"
+  },
+  {
+    "source": "STJ",
+    "title": "STJ - Cirurgia de feminização facial no processo transexualizador é de cobertura obrigatória pelos planos de saúde",
+    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/09072026-Cirurgia-de-feminizacao-facial-no-processo-transexualizador-e-de-cobertura-obrigatoria-pelos-planos-de-saude.aspx",
+    "published_at": "2026-07-09"
   },
   {
     "source": "STJ",
@@ -118,18 +130,6 @@
     "title": "STJ - Informativo aborda atuação da PM paulista e competência em casos de insumo estrangeiro para anabolizantes",
     "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/03072026-Informativo-aborda-atuacao-da-PM-paulista-e-competencia-em-casos-de-insumo-estrangeiro-para-anabolizantes.aspx",
     "published_at": "2026-07-03"
-  },
-  {
-    "source": "STJ",
-    "title": "STJ - Corte Especial vai fixar tese em repetitivo sobre retroação da gratuidade de justiça",
-    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/01072026-Corte-Especial-vai-fixar-tese-em-repetitivo-sobre-retroacao-da-gratuidade-de-justica.aspx",
-    "published_at": "2026-07-01"
-  },
-  {
-    "source": "STJ",
-    "title": "STJ - STJN traz decisão que invalidou testamento por email sem assinatura e sem testemunha",
-    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/30062026-STJN-traz-decisao-que-invalidou-testamento-por-email-sem-assinatura-e-sem-testemunha.aspx",
-    "published_at": "2026-06-30"
   },
   {
     "source": "TCE-SP",
@@ -213,61 +213,61 @@
     "source": "TCE-SC",
     "title": "TCE-SC - Jurisprudência | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/content/jurisprudencia",
-    "published_at": "2026-07-08"
+    "published_at": "2026-07-09"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Denúncias e representações | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/denuncias-representacoes",
-    "published_at": "2026-07-08"
+    "published_at": "2026-07-09"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Informativos de Jurisprudência | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/informativo-de-jurisprud%C3%AAncia",
-    "published_at": "2026-07-08"
+    "published_at": "2026-07-09"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Súmulas de Jurisprudência | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/content/s%C3%BAmulas-de-jurisprud%C3%AAncia",
-    "published_at": "2026-07-08"
+    "published_at": "2026-07-09"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Informativos de Jurisprudência - Edições anteriores | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/informativo-de-jurisprud%C3%AAncia-edicoes-anteriores",
-    "published_at": "2026-07-08"
+    "published_at": "2026-07-09"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Informativos de Jurisprudência",
     "url": "https://www.tcesc.tc.br/informativo-de-jurisprudência",
-    "published_at": "2026-07-08"
+    "published_at": "2026-07-09"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Recolhimento de débitos e de multas | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/recolhimentos",
-    "published_at": "2026-07-08"
+    "published_at": "2026-07-09"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Fornecedores e Inovação | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/fornecedores-e-inovacao",
-    "published_at": "2026-07-08"
+    "published_at": "2026-07-09"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Licitações e Contratos | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/content/licitacoes_contratos",
-    "published_at": "2026-07-08"
+    "published_at": "2026-07-09"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Atendimento Virtual | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/atendimento-virtual",
-    "published_at": "2026-07-08"
+    "published_at": "2026-07-09"
   },
   {
     "source": "TCE-PE",
