@@ -1219,7 +1219,7 @@ button[type="submit"]:focus-visible{
   margin: 3rem auto 2.35rem;
   padding: clamp(1.45rem, 2.6vw, 1.95rem);
   display: grid;
-  grid-template-columns: minmax(120px, 148px) minmax(0, 1fr);
+  grid-template-columns: minmax(132px, 156px) minmax(0, 1fr);
   align-items: start;
   gap: clamp(1.45rem, 2.8vw, 2.15rem);
   background: linear-gradient(180deg, rgba(255,255,255,0.97), rgba(252,253,255,0.94));
@@ -1238,14 +1238,24 @@ button[type="submit"]:focus-visible{
   padding-top: 0.15rem;
 }
 
-.profile-hero-media img{
-  width: clamp(114px, 12vw, 126px);
-  height: clamp(114px, 12vw, 126px);
-  object-fit: cover;
+.profile-hero-photo{
+  width: clamp(126px, 13vw, 142px);
+  height: clamp(156px, 16vw, 176px);
+  display: block;
+  position: relative;
+  overflow: hidden;
   border-radius: 50%;
   border: 3px solid rgba(24, 100, 171, 0.14);
   box-shadow: 0 8px 18px rgba(15, 39, 67, 0.12);
   background: #ffffff;
+}
+
+.profile-hero-photo img{
+  width: 100%;
+  height: auto;
+  display: block;
+  transform: scale(1.42);
+  transform-origin: 50% 20%;
 }
 
 .profile-hero-content{
@@ -1353,7 +1363,7 @@ button[type="submit"]:focus-visible{
 
 @media (max-width: 900px){
   .profile-hero{
-    grid-template-columns: 120px minmax(0, 1fr);
+    grid-template-columns: 132px minmax(0, 1fr);
     gap: 1.2rem;
     padding: 1.3rem;
     margin: 2.2rem auto 1.8rem;
@@ -1809,8 +1819,96 @@ body.cookie-ativo .whatsapp-button{
   bottom: clamp(150px, 22vw, 170px);
 }
 
+/* ======================== ÁREA DO USUÁRIO ======================== */
+.nav-access-btn{
+  min-height: 38px;
+  padding: 0.45rem 1rem;
+  border: 1px solid rgba(255,255,255,.5);
+  border-radius: 999px;
+  background: rgba(255,255,255,.1);
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+.nav-access-btn:hover,
+.nav-access-btn:focus-visible{ background:#fff; color:var(--brand-dark); }
+.access-backdrop{
+  position:fixed;
+  inset:0;
+  z-index:120;
+  display:grid;
+  place-items:center;
+  padding:1rem;
+  background:rgba(7,27,47,.68);
+  backdrop-filter:blur(4px);
+}
+.access-backdrop[hidden]{ display:none; }
+.access-modal{
+  position:relative;
+  width:min(100%, 440px);
+  max-height:calc(100vh - 2rem);
+  overflow:auto;
+  padding:1.7rem;
+  border-radius:20px;
+  background:#fff;
+  box-shadow:0 24px 70px rgba(0,0,0,.28);
+  text-align:left;
+}
+.access-close{
+  position:absolute;
+  top:.75rem;
+  right:.85rem;
+  width:38px;
+  height:38px;
+  border:0;
+  border-radius:50%;
+  background:#eef4fa;
+  color:#17334d;
+  font-size:1.65rem;
+  line-height:1;
+  cursor:pointer;
+}
+.access-brand{ display:flex; align-items:center; gap:.75rem; margin-bottom:1rem; }
+.access-brand > span{
+  display:grid;
+  place-items:center;
+  width:48px;
+  height:48px;
+  border-radius:50%;
+  background:var(--brand-dark);
+  color:#fff;
+  font-family:Georgia,serif;
+  font-size:1.25rem;
+}
+.access-brand strong,
+.access-brand small{ display:block; }
+.access-brand small{ margin-top:.1rem; color:#647587; }
+.access-modal h2{ margin:.3rem 0 .45rem; color:#102f4b; }
+.access-intro{ margin:0 0 1.15rem; color:#526578; line-height:1.55; }
+.access-form{ display:grid; gap:.9rem; }
+.access-form label{ display:grid; gap:.35rem; color:#233b52; font-weight:600; }
+.access-form input:not([type="checkbox"]){
+  width:100%;
+  min-height:46px;
+  padding:.65rem .75rem;
+  border:1px solid #c9d5e1;
+  border-radius:10px;
+  font:inherit;
+}
+.access-form small{ color:#6c7b89; font-weight:400; }
+.access-consent{ grid-template-columns:auto 1fr; align-items:start; font-size:.88rem; font-weight:400 !important; }
+.access-submit{ width:100%; border:0; }
+.access-links{ display:flex; flex-wrap:wrap; justify-content:space-between; gap:.6rem; margin-top:1rem; }
+.access-links button{ border:0; background:none; color:var(--brand); font:inherit; font-weight:600; cursor:pointer; }
+.access-notice{ margin:1rem 0 0; padding:.75rem; border-radius:10px; background:#eef6ff; color:#164e7d; line-height:1.45; }
+body.access-open{ overflow:hidden; }
+
 @media (max-width: 700px){
   body.cookie-ativo .whatsapp-button{
     bottom: 168px;
   }
+  .main-nav{ gap:.35rem; }
+  .nav-access-btn{ width:100%; max-width:230px; }
+  .access-modal{ padding:1.35rem; }
 }
