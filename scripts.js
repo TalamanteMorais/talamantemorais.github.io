@@ -6,6 +6,82 @@
 
 document.addEventListener("DOMContentLoaded", function () {
 
+  /* ======================== ÁREA DO USUÁRIO ======================== */
+  const accessBackdrop = document.getElementById("access-backdrop");
+  const accessModal = accessBackdrop?.querySelector(".access-modal");
+  const accessTitle = document.getElementById("access-title");
+  const accessIntro = accessBackdrop?.querySelector(".access-intro");
+  const accessForm = document.getElementById("access-form");
+  const accessName = accessBackdrop?.querySelector(".access-name");
+  const accessEmail = accessBackdrop?.querySelector(".access-email");
+  const accessPassword = accessBackdrop?.querySelector(".access-password");
+  const accessConsent = accessBackdrop?.querySelector(".access-consent");
+  const accessSubmit = accessBackdrop?.querySelector(".access-submit");
+  const accessNotice = accessBackdrop?.querySelector(".access-notice");
+  let accessView = "login";
+
+  const accessViews = {
+    login: { title: "Acessar sua conta", intro: "Consulte materiais e comunicações disponibilizados pelo escritório.", submit: "Entrar" },
+    signup: { title: "Solicitar cadastro", intro: "Preencha seus dados para solicitar acesso ao conteúdo reservado.", submit: "Criar cadastro" },
+    recover: { title: "Recuperar acesso", intro: "Informe o e-mail cadastrado para receber as instruções.", submit: "Enviar instruções" }
+  };
+
+  function setAccessView(view) {
+    accessView = accessViews[view] ? view : "login";
+    const config = accessViews[accessView];
+    if (accessTitle) accessTitle.textContent = config.title;
+    if (accessIntro) accessIntro.textContent = config.intro;
+    if (accessSubmit) accessSubmit.textContent = config.submit;
+    if (accessName) accessName.hidden = accessView !== "signup";
+    if (accessPassword) accessPassword.hidden = accessView === "recover";
+    if (accessConsent) accessConsent.hidden = accessView !== "signup";
+    accessBackdrop?.querySelectorAll("[data-access-view]").forEach((button) => {
+      button.hidden = accessView === "login" ? button.dataset.accessView === "login" : button.dataset.accessView !== "login";
+    });
+    const nameInput = accessName?.querySelector("input");
+    const passwordInput = accessPassword?.querySelector("input");
+    const consentInput = accessConsent?.querySelector("input");
+    if (nameInput) nameInput.required = accessView === "signup";
+    if (passwordInput) {
+      passwordInput.required = accessView !== "recover";
+      passwordInput.autocomplete = accessView === "signup" ? "new-password" : "current-password";
+    }
+    if (consentInput) consentInput.required = accessView === "signup";
+    if (accessNotice) accessNotice.hidden = true;
+  }
+
+  function openAccess(view = "login") {
+    if (!accessBackdrop) return;
+    setAccessView(view);
+    accessBackdrop.hidden = false;
+    document.body.classList.add("access-open");
+    requestAnimationFrame(() => accessModal?.querySelector("input")?.focus());
+  }
+
+  function closeAccess() {
+    if (!accessBackdrop) return;
+    accessBackdrop.hidden = true;
+    document.body.classList.remove("access-open");
+  }
+
+  document.querySelectorAll("[data-access-open]").forEach((button) => button.addEventListener("click", () => openAccess(button.dataset.accessOpen)));
+  accessBackdrop?.querySelector(".access-close")?.addEventListener("click", closeAccess);
+  accessBackdrop?.addEventListener("click", (event) => { if (event.target === accessBackdrop) closeAccess(); });
+  accessBackdrop?.querySelectorAll("[data-access-view]").forEach((button) => button.addEventListener("click", () => setAccessView(button.dataset.accessView)));
+  document.addEventListener("keydown", (event) => { if (event.key === "Escape" && accessBackdrop && !accessBackdrop.hidden) closeAccess(); });
+
+  accessForm?.addEventListener("submit", (event) => {
+    event.preventDefault();
+    if (!accessNotice) return;
+    const messages = {
+      login: "A tela está pronta. O acesso será ativado após a conexão segura com o serviço de autenticação.",
+      signup: "Cadastro validado. A confirmação por e-mail será ativada após a conexão com o serviço de autenticação.",
+      recover: "Solicitação validada. O e-mail de recuperação será ativado com o serviço de autenticação."
+    };
+    accessNotice.textContent = messages[accessView];
+    accessNotice.hidden = false;
+  });
+
   /* ======================== VÍDEO INSTITUCIONAL (ARQUIVO LOCAL) ======================== */
   /* Exibição por play do usuário via <video>, sem autoplay e sem integração automática com YouTube */
 

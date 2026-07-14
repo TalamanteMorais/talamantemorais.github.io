@@ -82,6 +82,7 @@
   <a href="#servicos">Serviços</a>
   <a href="#publicacoes">Conteúdos</a>
   <a href="#contato">Contato</a>
+  <button class="nav-access-btn" type="button" data-access-open="login">Área do usuário</button>
 </nav>
 
 <!-- CONTEÚDO PRINCIPAL DO SITE -->
@@ -90,7 +91,9 @@
 <section id="inicio">
 <div class="profile-hero" aria-label="Apresentação institucional do profissional">
 <div class="profile-hero-media">
-<img src="img/foto-talamante.webp" alt="Talamante Rodrigues de Morais Neto" width="124" height="124" loading="eager" decoding="async">
+<span class="profile-hero-photo">
+  <img src="img/foto-talamante-oval.jpeg" alt="Talamante Rodrigues de Morais Neto" width="142" height="189" loading="eager" decoding="async">
+</span>
 <a class="profile-hero-lattes"
    href="https://lattes.cnpq.br/1142865105467699"
    target="_blank"
@@ -296,6 +299,34 @@ Mensagem enviada com sucesso. O recebimento da mensagem não caracteriza contrat
 </section>
 </main>
 
+<!-- ÁREA RESERVADA: ACESSO, CADASTRO E RECUPERAÇÃO -->
+<div class="access-backdrop" id="access-backdrop" hidden>
+  <section class="access-modal" role="dialog" aria-modal="true" aria-labelledby="access-title">
+    <button class="access-close" type="button" aria-label="Fechar área do usuário">×</button>
+    <div class="access-brand">
+      <span>TM</span>
+      <div><strong>Área reservada</strong><small>Talamante Morais</small></div>
+    </div>
+    <h2 id="access-title">Acessar sua conta</h2>
+    <p class="access-intro">Consulte materiais e comunicações disponibilizados pelo escritório.</p>
+
+    <form class="access-form" id="access-form">
+      <label class="access-name" hidden>Nome completo<input name="nome" autocomplete="name"></label>
+      <label class="access-email">E-mail<input name="email" type="email" autocomplete="email" required></label>
+      <label class="access-password">Senha<input name="senha" type="password" minlength="8" autocomplete="current-password" required><small>Mínimo de 8 caracteres.</small></label>
+      <label class="access-consent" hidden><input name="consentimento" type="checkbox"> Li e concordo com a <a href="privacidade.html">Política de Privacidade</a>.</label>
+      <button class="cta-btn access-submit" type="submit">Entrar</button>
+    </form>
+
+    <p class="access-notice" role="status" hidden></p>
+    <div class="access-links">
+      <button type="button" data-access-view="recover">Esqueci minha senha</button>
+      <button type="button" data-access-view="signup">Criar cadastro</button>
+      <button type="button" data-access-view="login" hidden>← Voltar para o acesso</button>
+    </div>
+  </section>
+</div>
+
 <!-- RODAPÉ INSTITUCIONAL -->
 
 <footer role="contentinfo">
@@ -319,7 +350,7 @@ Mensagem enviada com sucesso. O recebimento da mensagem não caracteriza contrat
   WhatsApp
 </a>
 
-<!-- reCAPTCHA v3 -->
+<!-- reCAPTCHA v3: ativo somente no domínio oficial -->
 <script src="https://www.google.com/recaptcha/api.js?render=6Ld0yF8sAAAAAN5JXxfuWIV3K2nhA9p-r4VWKGKo" defer data-recaptcha-v3="1"></script>
 
 <!-- SCRIPTS FINAIS E FUNCIONALIDADES COMPLEMENTARES -->
