@@ -1252,10 +1252,11 @@ button[type="submit"]:focus-visible{
 
 .profile-hero-photo img{
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
-  transform: scale(1.42);
-  transform-origin: 50% 20%;
+  object-fit: cover;
+  object-position: center 22%;
+  transform: none;
 }
 
 .profile-hero-content{
@@ -1912,3 +1913,4 @@ body.access-open{ overflow:hidden; }
   .nav-access-btn{ width:100%; max-width:230px; }
   .access-modal{ padding:1.35rem; }
 }
+
