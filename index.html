@@ -48,6 +48,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
   <!-- FONTES, ESTILOS E RECURSOS VISUAIS -->
   <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="visual-law.css">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZKCPTG7K1T"></script>
   <script src="gtag-init.js" defer></script>
@@ -282,9 +283,10 @@ Mensagem enviada com sucesso. O recebimento da mensagem não caracteriza contrat
   <li><a href="https://www.youtube.com/@talamantemorais6006" target="_blank" rel="noopener noreferrer">YouTube</a></li>
 </ul>
   <div class="qrcode-container">
-    <h3>Acesso Rápido</h3>
+    <h3>Cartão Digital</h3>
+    <p class="qrcode-copy">Contatos, currículo e redes profissionais em um único acesso.</p>
     <a href="cartao.html" rel="noopener">
-      <img src="img/qrcode-cartao.png" alt="QR Code atualizado para abrir o cartão digital" width="600" height="600" loading="lazy" decoding="async">
+      <img src="img/qrcode-cartao.png" alt="QR Code do cartão digital profissional" width="600" height="600" loading="lazy" decoding="async">
     </a>
 <div class="qrcode-actions">
   <a class="cta-btn" href="cartao.html" rel="noopener">Abrir cartão digital</a>
@@ -327,6 +329,20 @@ Mensagem enviada com sucesso. O recebimento da mensagem não caracteriza contrat
   </section>
 </div>
 
+<!-- ACESSO ADMINISTRATIVO: DIRECIONAMENTO FUTURO PARA AMBIENTE SEGURO -->
+<div class="access-backdrop restricted-backdrop" id="restricted-backdrop" hidden>
+  <section class="access-modal restricted-modal" role="dialog" aria-modal="true" aria-labelledby="restricted-title">
+    <button class="access-close restricted-close" type="button" aria-label="Fechar acesso restrito">×</button>
+    <div class="access-brand restricted-brand">
+      <span>AR</span>
+      <div><strong>Ambiente administrativo</strong><small>Uso interno do escritório</small></div>
+    </div>
+    <h2 id="restricted-title">Acesso restrito</h2>
+    <p class="access-intro">Este acesso será conectado a uma plataforma administrativa protegida, com autenticação própria e registro de acesso.</p>
+    <p class="restricted-status" role="status"><strong>Ambiente seguro em configuração.</strong><br>Nenhuma senha é armazenada nesta página.</p>
+  </section>
+</div>
+
 <!-- RODAPÉ INSTITUCIONAL -->
 
 <footer role="contentinfo">
@@ -339,6 +355,9 @@ Mensagem enviada com sucesso. O recebimento da mensagem não caracteriza contrat
     &copy; <span id="ano"></span> Talamante Morais – Todos os direitos reservados.
     <a href="privacidade.html" class="footer-link">Privacidade</a>
   </p>
+  <button class="restricted-access-btn" type="button" data-restricted-open aria-haspopup="dialog" aria-controls="restricted-backdrop">
+    Acesso restrito
+  </button>
 </footer>
 
 <!-- BOTÃO FLUTUANTE DE CONTATO VIA WHATSAPP -->
@@ -350,8 +369,22 @@ Mensagem enviada com sucesso. O recebimento da mensagem não caracteriza contrat
   WhatsApp
 </a>
 
-<!-- reCAPTCHA v3: ativo somente no domínio oficial -->
-<script src="https://www.google.com/recaptcha/api.js?render=6Ld0yF8sAAAAAN5JXxfuWIV3K2nhA9p-r4VWKGKo" defer data-recaptcha-v3="1"></script>
+<!-- reCAPTCHA v3: carregado exclusivamente nos domínios oficiais cadastrados -->
+<script>
+  (() => {
+    const dominiosOficiais = new Set(["talamante-adv.com.br", "www.talamante-adv.com.br"]);
+    const dominioOficial = dominiosOficiais.has(window.location.hostname);
+
+    document.documentElement.dataset.recaptchaMode = dominioOficial ? "official" : "preview";
+    if (!dominioOficial) return;
+
+    const recaptchaScript = document.createElement("script");
+    recaptchaScript.src = "https://www.google.com/recaptcha/api.js?render=6Ld0yF8sAAAAAN5JXxfuWIV3K2nhA9p-r4VWKGKo";
+    recaptchaScript.defer = true;
+    recaptchaScript.dataset.recaptchaV3 = "1";
+    document.head.appendChild(recaptchaScript);
+  })();
+</script>
 
 <!-- SCRIPTS FINAIS E FUNCIONALIDADES COMPLEMENTARES -->
 
@@ -359,4 +392,3 @@ Mensagem enviada com sucesso. O recebimento da mensagem não caracteriza contrat
 
 </body>
 </html>
-
