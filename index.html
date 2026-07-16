@@ -323,7 +323,7 @@ Mensagem enviada com sucesso. O recebimento da mensagem não caracteriza contrat
     <p class="access-notice" role="status" hidden></p>
     <div class="access-links">
       <button type="button" data-access-view="recover">Esqueci minha senha</button>
-      <button type="button" data-access-view="signup">Criar cadastro</button>
+      <button type="button" data-access-view="signup">Criar cadastro (em breve)</button>
       <button type="button" data-access-view="login" hidden>← Voltar para o acesso</button>
     </div>
   </section>
@@ -369,22 +369,8 @@ Mensagem enviada com sucesso. O recebimento da mensagem não caracteriza contrat
   WhatsApp
 </a>
 
-<!-- reCAPTCHA v3: carregado exclusivamente nos domínios oficiais cadastrados -->
-<script>
-  (() => {
-    const dominiosOficiais = new Set(["talamante-adv.com.br", "www.talamante-adv.com.br"]);
-    const dominioOficial = dominiosOficiais.has(window.location.hostname);
-
-    document.documentElement.dataset.recaptchaMode = dominioOficial ? "official" : "preview";
-    if (!dominioOficial) return;
-
-    const recaptchaScript = document.createElement("script");
-    recaptchaScript.src = "https://www.google.com/recaptcha/api.js?render=6Ld0yF8sAAAAAN5JXxfuWIV3K2nhA9p-r4VWKGKo";
-    recaptchaScript.defer = true;
-    recaptchaScript.dataset.recaptchaV3 = "1";
-    document.head.appendChild(recaptchaScript);
-  })();
-</script>
+<!-- reCAPTCHA v3: carregado por arquivo externo (compatível com a CSP) -->
+<script src="recaptcha-loader.js" defer></script>
 
 <!-- SCRIPTS FINAIS E FUNCIONALIDADES COMPLEMENTARES -->
 
