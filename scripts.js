@@ -166,7 +166,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function iniciarCarrossel() {
     if (!track || totalItems <= 1 || isHovered) return;
-
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     const now = Date.now();
     if (now - lastStart < RESTART_GAP_MS) return;
     lastStart = now;
