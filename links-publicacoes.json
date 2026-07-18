@@ -91,6 +91,12 @@
   },
   {
     "source": "STJ",
+    "title": "STJ - Competência para conversão de multa ambiental é tema de repetitivo",
+    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/17072026-Competencia-para-conversao-de-multa-ambiental-e-tema-de-repetitivo.aspx",
+    "published_at": "2026-07-17"
+  },
+  {
+    "source": "STJ",
     "title": "STJ - Podcast STJ No Seu Dia discute partilha de bens no divórcio e exigência de formalização em acordos patrimoniais",
     "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/15072026-Podcast-STJ-No-Seu-Dia-discute-partilha-de-bens-no-divorcio-e-exigencia-de-formalizacao-em-acordos-patrimoniais.aspx",
     "published_at": "2026-07-15"
@@ -126,28 +132,28 @@
     "published_at": "2026-07-14"
   },
   {
-    "source": "STJ",
-    "title": "STJ - Repetitivo admite retroatividade do Pacote Anticrime em execução penal unificada",
-    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/14072026-Repetitivo-admite-retroatividade-do-Pacote-Anticrime-em-execucao-penal-unificada.aspx",
-    "published_at": "2026-07-14"
-  },
-  {
     "source": "TCE-SP",
     "title": "TCE-SP - Boletim de Jurisprudência | Tribunal de Contas do Estado de São Paulo",
     "url": "https://www.tce.sp.gov.br/boletim-de-jurisprudencia",
-    "published_at": "2026-07-16"
+    "published_at": "2026-07-17"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - Pesquisa de Jurisprudência",
     "url": "https://www.tce.sp.gov.br/jurisprudencia",
-    "published_at": "2026-07-16"
+    "published_at": "2026-07-17"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - Comissão Permanente de Análise de Jurisprudência",
     "url": "https://www.tce.sp.gov.br/boletim-de-jurisprudencia/CPAJ",
-    "published_at": "2026-07-16"
+    "published_at": "2026-07-17"
+  },
+  {
+    "source": "TCE-SP",
+    "title": "TCE-SP - TCESP publica novas regras para coibir adesões irregulares a atas de registro de preços",
+    "url": "https://www.tce.sp.gov.br/6524-tcesp-publica-novas-regras-para-coibir-adesoes-irregulares-atas-registro-precos",
+    "published_at": "2026-07-17"
   },
   {
     "source": "TCE-SP",
@@ -159,7 +165,7 @@
     "source": "TCE-SP",
     "title": "TCE-SP - LEI Nº 14.133, DE 1º DE ABRIL DE 2021",
     "url": "https://www.tce.sp.gov.br/legislacao-comentada/lei-14133-1o-abril-2021",
-    "published_at": "2026-07-16"
+    "published_at": "2026-07-17"
   },
   {
     "source": "TCE-SP",
@@ -171,25 +177,19 @@
     "source": "TCE-SP",
     "title": "TCE-SP - Portal dos Conselhos Municipais | Tribunal de Contas do Estado de São Paulo",
     "url": "https://www.tce.sp.gov.br/portal-conselhos-municipais",
-    "published_at": "2026-07-16"
+    "published_at": "2026-07-17"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - Teletrabalho",
     "url": "https://www.tce.sp.gov.br/informacoes-teletrabalho",
-    "published_at": "2026-07-16"
+    "published_at": "2026-07-17"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - AUDESP | Tribunal de Contas do Estado de São Paulo",
     "url": "https://www.tce.sp.gov.br/audesp",
-    "published_at": "2026-07-16"
-  },
-  {
-    "source": "TCE-SP",
-    "title": "TCE-SP - e-TCESP | Tribunal de Contas do Estado de São Paulo",
-    "url": "https://www.tce.sp.gov.br/etcesp",
-    "published_at": "2026-07-16"
+    "published_at": "2026-07-17"
   },
   {
     "source": "TCE-MG",
@@ -213,247 +213,67 @@
     "source": "TCE-SC",
     "title": "TCE-SC - Jurisprudência | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/content/jurisprudencia",
-    "published_at": "2026-07-13"
+    "published_at": "2026-07-17"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Denúncias e representações | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/denuncias-representacoes",
-    "published_at": "2026-07-13"
+    "published_at": "2026-07-17"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Informativos de Jurisprudência | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/informativo-de-jurisprud%C3%AAncia",
-    "published_at": "2026-07-13"
+    "published_at": "2026-07-17"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Informativos de Jurisprudência - Edições anteriores | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/informativo-de-jurisprud%C3%AAncia-edicoes-anteriores",
-    "published_at": "2026-07-13"
+    "published_at": "2026-07-17"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Informativos de Jurisprudência",
     "url": "https://www.tcesc.tc.br/informativo-de-jurisprudência",
-    "published_at": "2026-07-13"
+    "published_at": "2026-07-17"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Recolhimento de débitos e de multas | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/recolhimentos",
-    "published_at": "2026-07-13"
+    "published_at": "2026-07-17"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Fornecedores e Inovação | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/fornecedores-e-inovacao",
-    "published_at": "2026-07-13"
+    "published_at": "2026-07-17"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Licitações e Contratos | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/content/licitacoes_contratos",
-    "published_at": "2026-07-13"
+    "published_at": "2026-07-17"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Atendimento Virtual | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/atendimento-virtual",
-    "published_at": "2026-07-13"
+    "published_at": "2026-07-17"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Diário Oficial Eletrônico (DOTC-e) | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/content/dotc-e",
-    "published_at": "2026-07-13"
+    "published_at": "2026-07-17"
   },
   {
     "source": "TCE-PE",
     "title": "TCE-PE - Navegação",
     "url": "https://www.tcepe.tc.br/internet/index.php/colunas-nos-jornais",
     "published_at": "2026-06-21"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Constitui objeto deste credenciamento a CESSÃO SEM OUTORGA ONEROSA PARA COMERCIALIZAÇÃO DE PRODUTOS ARTESANAIS de Almirante Tamandaré, com base na Lei 14.133/2021, para a utilizaçã",
-    "url": "https://pncp.gov.br/app/editais/76105659000174-1-000153/2026",
-    "published_at": "2026-06-18"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - CREDENCIAMENTO DE PESSOA JURÍDICA INTERESSADA EM FIRMAR CONTRATO COM O MUNICÍPIO DE NOVA TRENTO, VISANDO À PRESTAÇÃO DE SERVIÇOS DE SAÚDE NAS SEGUINTES ÁREAS: PLANTÃO DE OBSTETRÍCI",
-    "url": "https://pncp.gov.br/app/editais/08858200000191-1-000013/2026",
-    "published_at": "2026-06-18"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - INEXIGIBILIDADE PARA CREDENCIAMENTO DE PESSOAS JURÍDICAS ESPECIALIZADAS NA PRESTAÇÃO DE SERVIÇOS DE EXAMES DE DIAGNÓSTICO POR IMAGEM E EXAMES COMPLEMENTARES, COMPREENDENDO ULTRASSO",
-    "url": "https://pncp.gov.br/app/editais/02307876000100-1-000084/2026",
-    "published_at": "2026-06-18"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - INEXIGIBILIDADE PARA CREDENCIAMENTO DE PESSOAS JURÍDICAS ESPECIALIZADAS NA PRESTAÇÃO DE SERVIÇOS DE EXAMES DE DIAGNÓSTICO POR IMAGEM E EXAMES COMPLEMENTARES, COMPREENDENDO ULTRASSO",
-    "url": "https://pncp.gov.br/app/editais/02307876000100-1-000085/2026",
-    "published_at": "2026-06-18"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Credenciamento para contratação de pessoas jurídicas especializadas na realização de exames laboratoriais), visando atender as demandas dos municípios consorciados ao Consórcio Int",
-    "url": "https://app2.ammlicita.org.br/pesquisa/101737",
-    "published_at": "2026-06-18"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - [LICITANET] - CREDENCIAMENTO PARA FUTURA CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA PRESTAÇÃO DE SERVIÇOS MEDICOS PARA ATENDER A SECRETARIA DE SAUDE DO MUNICIPIO DE CAMPINAPOLIS-MT",
-    "url": "https://licitanet.com.br/sessao/190476",
-    "published_at": "2026-06-18"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - CREDENCIAMENTO PARA PRESTAÇÃO DE SERVIÇOS FUNERÁRIOS A SECRETARIA DE ASSISTÊNCIA SOCIAL DO MUNICÍPIO DE TUMIRITINGA-MG",
-    "url": "https://tumiritinga.mg.gov.br/",
-    "published_at": "2026-06-18"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - [LICITANET] - CREDENCIAMENTO DE FAMÍLIAS ACOLHEDORAS - ACOLHIMENTO PROVISÓRIO A CRIANÇAS E ADOLESCENTES NO MUNICÍPIO DE ITACOATIARA/AM",
-    "url": "https://licitanet.com.br/sessao/190387",
-    "published_at": "2026-06-18"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - CREDENCIAMENTO DE LEILOEIROS OFICIAIS PARA A PRESTACAO DOS SERVICOS DE AVALIACAO E ALIENACAO DE BENS MOVEIS E IMOVEIS INSERVIVEIS DE PROPRIEDADE DO MUNICIPIO.",
-    "url": "https://pncp.gov.br/app/editais/46435921000188-1-000085/2026",
-    "published_at": "2026-06-18"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - CREDENCIAMENTO DE LEILOEIROS OFICIAIS, PESSOAS FÍSICAS OU JURÍDICAS, REGULARMENTE MATRICULADOS NA JUCEPE, PARA A PRESTAÇÃO DE SERVIÇOS DE PREPARAÇÃO, ORGANIZAÇÃO, DIVULGAÇÃO, CONDU",
-    "url": "http://www.licitacaoaguasbelas-pe.com.br",
-    "published_at": "2026-06-19"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - CREDENCIAMENTO DE INSTITUIÇÕES BANCÁRIAS PARA PRESTAÇÃO DE SERVIÇOS DE ARRECADAÇÃO DE TRIBUTOS E DEMAIS RECEITAS DEVIDAS À MUNICIPALIDADE, COM CÓDIGO DE BARRAS PADRÃO FEBRABAN, ATR",
-    "url": "https://app2.licitardigital.com.br/pesquisa/104377",
-    "published_at": "2026-06-19"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - [Portal de Compras Públicas] - CREDENCIAMENTO DE PESSOAS JURÍDICAS PARA A PRESTAÇÃO DE SERVIÇOS ESPECIALIZADOS DE SAÚDE, COMPREENDENDO A REALIZAÇÃO DE TESTE ERGOMETRICO, PARA ATEND",
-    "url": "https://portaldecompraspublicas.com.br/processos/PB/Consorcio-Publico-Intermunicipal-de-Saude-do-Cariri-Ocidental-CISCO-3013/CRED-00002-2026-2026-489426",
-    "published_at": "2026-06-19"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - CREDENCIAMENTO PARA PESSOAS FÍSICAS E/OU JURÍDICAS NA PRESTAÇÃO DE SERVIÇOS DE PERÍCIA MÉDICA ESPECIALISTA EM MEDICINA DO TRABALHO, PERÍCIA AMBULATORIAL E DOMICILIAR PARA OS SERVID",
-    "url": "https://pncp.gov.br/app/editais/03681582000107-1-000042/2026",
-    "published_at": "2026-06-19"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - [LICITANET] - CREDENCIAMENTO DE PESSOA JURÍDICA PARA PRESTAÇÃO DE SERVIÇOS CONTINUADOS DE MANUTENÇÃO PREVENTIVA E CORRETIVA, INCLUINDO MECÂNICA EM GERAL, ELÉTRICA, ELETRÔNICA, SUSP",
-    "url": "https://licitanet.com.br/sessao/190541",
-    "published_at": "2026-06-19"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - CREDENCIAMENTO DE LEILOEIROS OFICIAIS PARA A REALIZAÇÃO DE LEILÕES NAS MODALIDADES PRESENCIAL, E PRESENCIAL E ONLINE/VIRTUAL SIMULTANEAMENTE, MEDIANTE DEMANDA, DESTINADOS AO DESFAZ",
-    "url": "https://app2.licitardigital.com.br/pesquisa/104344",
-    "published_at": "2026-06-18"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - CREDENCIAMENTO DE PESSOAS JURÍDICAS INTERESSADAS NA PRESTAÇÃO DE SERVIÇOS DE PEDREIRO, PINTOR, SERRALHEIRO, CARPINTEIRO, BOMBEIRO HIDRÁULICO, ELETRICISTA, GESSEIRO E CALCETEIRO, DE",
-    "url": "https://app2.licitardigital.com.br/pesquisa/104281",
-    "published_at": "2026-06-18"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - CREDENCIAMENTO DE EMPRESAS PRESTADORAS DE SERVIÇOS DE MANUTENÇÃO DE VEÍCULOS PESADOS, MÁQUINAS E COM FORNECIMENTO DE PEÇAS, COM BASE EM DESCONTO FIXO UTILIZANDO O SISTEMA TRAZ VALO",
-    "url": "https://pncp.gov.br/app/editais/18675934000199-1-000067/2026",
-    "published_at": "2026-06-18"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - [Portal de Compras Públicas] - CREDENCIAMENTO DE CLÍNICAS ESPECIALIZADAS NA REALIZAÇÃO DE EXAMES DE IMAGENS COMPREENDENDO ULTRASSONOGRAFIA E RAIO–X PARA ATENDER A DEMANDA DA SECRET",
-    "url": "https://portaldecompraspublicas.com.br/processos/PB/Prefeitura-Municipal-de-Sao-Bentinho-1571/CRED-00007-2026-2026-489233",
-    "published_at": "2026-06-18"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - [Portal de Compras Públicas] - CREDENCIAMENTO DE PESSOAS JURÍDICAS ESPECIALIZADAS NA PRESTAÇÃO DE SERVIÇOS DE EXAMES DE ULTRASSONOGRAFIA GERAL E ULTRASSONOGRAFIA ESPECIALIZADA, DES",
-    "url": "https://portaldecompraspublicas.com.br/processos/PB/Prefeitura-Municipal-de-Conceicao-1321/CRED-0007-2026-2026-489239",
-    "published_at": "2026-06-18"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Chamamento Público para Credenciamento de autoescola/Centros de Formação de Condutores (CFCs), devidamente regularizados junto ao DETRAN/PE, que tenham interesse em prestar os serv",
-    "url": "https://bnccompras.com/Process/ProcessView?param1=[gkz]ovibP8FnBT/uWKG5DYNb2fWPX1sNal9ZgV0zid5Bk7GYkCxiew9JlyVD16Vx6_AynaANTz11TkX/wTtRZiRxfIaKaTh6WSAylq4y7HTzfb8=",
-    "published_at": "2026-06-18"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - CREDENCIAMENTO PARA CONTRATAÇÃO DE INSTITUIÇÕES DE ACOLHIMENTO PARA EXECUTAR OS SERVIÇOS DE ACOLHIMENTO PARA IDOSOS E RESIDÊNCIA INCLUSIVA PARA JOVENS E ADULTOS COM DEFICIÊNCIA",
-    "url": "https://app2.licitardigital.com.br/pesquisa/104206",
-    "published_at": "2026-06-18"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Chamamento Público para Credenciamento de profissionais do ramo musical, artístico e cultural, incluindo bandas, trios de forró pé-de-serra, grupos musicais, quadrilhas juninas, ar",
-    "url": "https://pncp.gov.br/app/editais/13099395000173-1-000089/2026",
-    "published_at": "2026-06-18"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - CREDENCIAMENTO DE PESSOAS JURIDICAS ESPECIALIZADASPARAA PRESTACAO DE SERVICOS DE LOCACAO DE BRINQUEDOS RECREATIVOS FORNECIMENTO DE BARRACAS DE GENEROS ALIMENTICIOS EEXECUCAODE TRAN",
-    "url": "https://pncp.gov.br/app/editais/46435921000188-1-000086/2026",
-    "published_at": "2026-06-18"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Chamamento Público destinada ao Credenciamento para futura contratação de empresas especializadas em serviços médicos sendo cardiologista, (consultas especializadas) para atender a",
-    "url": "https://app2.licitardigital.com.br/pesquisa/103289",
-    "published_at": "2026-06-18"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - CREDENCIAMENTO DE CLÍNICAS ESPECIALIZADAS PARA PRESTAÇÃO DE SERVIÇOS MULTIPROFISSIONAIS DESTINADOS AO ATENDIMENTO DE CRIANÇAS COM DIAGNÓSTICO DE TRANSTORNO DO ESPECTRO AUTISTA (TEA",
-    "url": "https://pncp.gov.br/app/editais/13844779000173-1-000013/2026",
-    "published_at": "2026-06-18"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Credenciamento de empresas especializadas para execução de serviços de poda, roçada, varrição, coleta, trituração, transporte e destinação final ambientalmente adequada de resídu",
-    "url": "https://portal.tce.rs.gov.br/aplicprod/f?p=50500:10:::NO:10:P10_ID_LICITACAO,P10_PAG_RETORNO,F50500_CD_ORGAO:1546139,14,88375&cs=1WBlj_AgsGp5y6dk_KLKNus5FvhM",
-    "published_at": "2026-06-18"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - [Portal de Compras Públicas] - CONTRATAÇÃO DE EMPRESA PRESTADORA DE SERVIÇOS MÉDICOS PARA ATENDER AS DEMANDAS DA SECRETARIA DE SAÚDE DO MUNICÍPIO DE BELÉM-PB PARA O EXERCÍCIO 2026",
-    "url": "https://portaldecompraspublicas.com.br/processos/PB/Prefeitura-Municipal-de-Belem-1641/CRED-0008-2026-2026-489326",
-    "published_at": "2026-06-19"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - CONTRATAÇÃO DE EMPRESA PARA FORNECIMENTO DE ÓLEO DIESEL SUBSIDIADO EM 30% PARA EMBARCAÇÕES DO MUNICÍPIO DE ITAPEMIRIM, CONFORME LEI MUNICIPAL Nº 3123, DE 29 DE NOVEMBRO DE 2018 E S",
-    "url": "https://pncp.gov.br/app/editais/27174168000170-1-000113/2026",
-    "published_at": "2026-06-18"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Contratação de empresa especializada para fornecimento de combustível visando atender o Serviço Autônomo de Água e Esgoto (SAAE) do Município de Rosário/MA",
-    "url": "https://licitarosarioma.com.br/",
-    "published_at": "2026-06-18"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - [Portal de Compras Públicas] - credenciamento de empresas especializadas em atividades de Psicologia e Psicanálise para execução da Oficina de Acolhimento de Pessoas em Possível Vu",
-    "url": "https://portaldecompraspublicas.com.br/processos/SC/Prefeitura-Municipal-de-Porto-Belo-1303/CRED-73-2026-2026-489533",
-    "published_at": "2026-06-19"
   },
   {
     "source": "TCM-GO",
