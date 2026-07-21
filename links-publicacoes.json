@@ -85,6 +85,12 @@
   },
   {
     "source": "STJ",
+    "title": "STJ - STJ suspende liminar e autoriza retomada da construção de ponte em Tefé (AM)",
+    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/21072026-STJ-suspende-liminar-e-autoriza-retomada-da-construcao-de-ponte-em-Tefe--AM-.aspx",
+    "published_at": "2026-07-21"
+  },
+  {
+    "source": "STJ",
     "title": "STJ - Adicional da Cofins-Importação deve ser recolhido mesmo quando a alíquota da contribuição é zero",
     "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/20072026-Adicional-da-Cofins-Importacao-deve-ser-recolhido-mesmo-quando-a-aliquota-da-contribuicao-e-zero.aspx",
     "published_at": "2026-07-20"
@@ -126,28 +132,28 @@
     "published_at": "2026-07-14"
   },
   {
-    "source": "STJ",
-    "title": "STJ - STJN traz decisão que reafirma dever de cobertura de cirurgia de feminização facial",
-    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/14072026-STJN-traz-decisao-que-reafirma-dever-de-cobertura-de-cirurgia-de-feminizacao-facial.aspx",
-    "published_at": "2026-07-14"
-  },
-  {
     "source": "TCE-SP",
     "title": "TCE-SP - Boletim de Jurisprudência | Tribunal de Contas do Estado de São Paulo",
     "url": "https://www.tce.sp.gov.br/boletim-de-jurisprudencia",
-    "published_at": "2026-07-17"
+    "published_at": "2026-07-20"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - Pesquisa de Jurisprudência",
     "url": "https://www.tce.sp.gov.br/jurisprudencia",
-    "published_at": "2026-07-17"
+    "published_at": "2026-07-20"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - Comissão Permanente de Análise de Jurisprudência",
     "url": "https://www.tce.sp.gov.br/boletim-de-jurisprudencia/CPAJ",
-    "published_at": "2026-07-17"
+    "published_at": "2026-07-20"
+  },
+  {
+    "source": "TCE-SP",
+    "title": "TCE-SP - ARTIGO: Consórcios intermunicipais e registro de preços: o risco do portfólio de atas",
+    "url": "https://www.tce.sp.gov.br/6524-artigo-consorcios-intermunicipais-e-registro-precos-risco-portfolio-atas",
+    "published_at": "2026-07-20"
   },
   {
     "source": "TCE-SP",
@@ -165,7 +171,7 @@
     "source": "TCE-SP",
     "title": "TCE-SP - LEI Nº 14.133, DE 1º DE ABRIL DE 2021",
     "url": "https://www.tce.sp.gov.br/legislacao-comentada/lei-14133-1o-abril-2021",
-    "published_at": "2026-07-17"
+    "published_at": "2026-07-20"
   },
   {
     "source": "TCE-SP",
@@ -177,19 +183,13 @@
     "source": "TCE-SP",
     "title": "TCE-SP - Portal dos Conselhos Municipais | Tribunal de Contas do Estado de São Paulo",
     "url": "https://www.tce.sp.gov.br/portal-conselhos-municipais",
-    "published_at": "2026-07-17"
+    "published_at": "2026-07-20"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - Teletrabalho",
     "url": "https://www.tce.sp.gov.br/informacoes-teletrabalho",
-    "published_at": "2026-07-17"
-  },
-  {
-    "source": "TCE-SP",
-    "title": "TCE-SP - AUDESP | Tribunal de Contas do Estado de São Paulo",
-    "url": "https://www.tce.sp.gov.br/audesp",
-    "published_at": "2026-07-17"
+    "published_at": "2026-07-20"
   },
   {
     "source": "TCE-MG",
@@ -213,67 +213,247 @@
     "source": "TCE-SC",
     "title": "TCE-SC - Jurisprudência | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/content/jurisprudencia",
-    "published_at": "2026-07-17"
+    "published_at": "2026-07-20"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Denúncias e representações | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/denuncias-representacoes",
-    "published_at": "2026-07-17"
+    "published_at": "2026-07-20"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Informativos de Jurisprudência | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/informativo-de-jurisprud%C3%AAncia",
-    "published_at": "2026-07-17"
+    "published_at": "2026-07-20"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Informativos de Jurisprudência - Edições anteriores | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/informativo-de-jurisprud%C3%AAncia-edicoes-anteriores",
-    "published_at": "2026-07-17"
+    "published_at": "2026-07-20"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Informativos de Jurisprudência",
     "url": "https://www.tcesc.tc.br/informativo-de-jurisprudência",
-    "published_at": "2026-07-17"
+    "published_at": "2026-07-20"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Recolhimento de débitos e de multas | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/recolhimentos",
-    "published_at": "2026-07-17"
+    "published_at": "2026-07-20"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Fornecedores e Inovação | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/fornecedores-e-inovacao",
-    "published_at": "2026-07-17"
+    "published_at": "2026-07-20"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Licitações e Contratos | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/content/licitacoes_contratos",
-    "published_at": "2026-07-17"
+    "published_at": "2026-07-20"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Atendimento Virtual | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/atendimento-virtual",
-    "published_at": "2026-07-17"
+    "published_at": "2026-07-20"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Diário Oficial Eletrônico (DOTC-e) | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/content/dotc-e",
-    "published_at": "2026-07-17"
+    "published_at": "2026-07-20"
   },
   {
     "source": "TCE-PE",
     "title": "TCE-PE - Navegação",
     "url": "https://www.tcepe.tc.br/internet/index.php/colunas-nos-jornais",
-    "published_at": "2026-06-21"
+    "published_at": "2026-07-19"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - [Portal de Compras Públicas] - CREDENCIAMENTO DE PESSOAS FÍSICAS E/OU JURÍDICAS ESPECIALIZADAS NA PRESTAÇÃO DE SERVIÇOS DE NATUREZA PREDOMINANTEMENTE INTELECTUAL, VOLTADOS À REALIZ",
+    "url": "https://www.portaldecompraspublicas.com.br/processos/RN/Prefeitura-Municipal-de-Ceara-Mirim-1205/CRED-002-2026-2026-490511",
+    "published_at": "2026-06-23"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação por concorrência eletrônica, menor preço global, ampla concorrência de empresa especializada em fornecimento de materiais e mão de obra visando: Reforma de Centro de Co",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=98799303900012026",
+    "published_at": "2026-06-22"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Concorrência Eletrônica destinada à contratação de empresa especializada para fornecimento e instalação de reservatório metálico para água potável, com capacidade de 50 m³, incluin",
+    "url": "https://bllcompras.com/Process/ProcessView?param1=[gkz]Eg/h1pXpiMA5CrOLO8YquT4QXJtuxATd28v_43aMDC32GxrxbGAhFpyY8lg5MTJ9PM2ej5owF9x_7BdddJFVr_KyphMSG223kOf/_KAf2jg=",
+    "published_at": "2026-06-22"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - [Portal de Compras Públicas] - OBRAS E INSTALAÇÕES - A presente Concorrência Eletrônica tem por objeto a contratação empresa especializada em obras para a construção de Sistema de",
+    "url": "https://www.portaldecompraspublicas.com.br/processos/MG/Prefeitura-Municipal-de-Santo-Antonio-do-Monte-3732/CPMP-51-2026-2026-483475",
+    "published_at": "2026-06-22"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Aquisição de COPOS DESCARTÁVEIS, por meio da modalidade PREGÃO ELETRÔNICO com ENTREGA PARCELADA, a fim de suprir as Unidades de Saúde da Secretaria Municipal de Saúde de Goiânia (S",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=92699505900222026",
+    "published_at": "2026-06-22"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Pregão eletrônico para aquisição de materiais hospitalares destinados ao serviço de atendimento pré-hospitalar (aph) do 4º batalhão bombeiro militar. A contratação visa atender às",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=92848905900012026",
+    "published_at": "2026-06-22"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Execução de serviços de construção de Campo Society no Município de Cajazeiras do Piauí – PI, conforme especificações constantes no Edital e seus anexos (Termo de Referência, Proj",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=98028603900022026",
+    "published_at": "2026-06-22"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Aquisição, por meio de registro de preços, de vidros comuns incolores, conforme condições, quantidades e exigências estabelecidas no Anexo I do Edital da Licitação.",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=92515305900392026",
+    "published_at": "2026-06-22"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - REGISTRO DE PREÇOS DE CREDENCIAMENTO DE EMPRESAS PRESTADORAS DE SERVIÇOS DE MANUTENÇÃO DE VEÍCULOS PESADOS, MÁQUINAS E COM FORNECIMENTO DE PEÇAS, COM BASE EM DESCONTO FIXO UTILIZAN",
+    "url": "https://pncp.gov.br/app/editais/18675934000199-1-000068/2026",
+    "published_at": "2026-06-22"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - REGISTRO DE PREÇOS PARA FUTURA E EVENTUAL CONTRATAÇÃO DE EMPRESA ESPECIALIZADA EM SERVIÇOS DE ENGENHARIA PARA RECUPERAÇÃO DE ESTRADAS VICINAIS NO MUNICÍPIO DE CENTRO NOVO DO MARANH",
+    "url": "https://bnccompras.com/Process/ProcessView?param1=[gkz]dfgeMH8YtpdQt1oo4NTXc1rSjollWd7LRypLhdBVxqwEl89WdMqElyfdyry17WoD3XpnmFwQYvIZwdUXyxKtaWqxDVZpQ_3s_xvi9HS9NlU=",
+    "published_at": "2026-06-22"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Formação de Ata de Registro de Preços para o fornecimento eventual dos Dispositivos Médicos do tipo frascos para hemocultura, com cessão gratuita de 01 (um) equipamento automatizad",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=92615005902592026",
+    "published_at": "2026-06-22"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Elaboração de ata de registro de preços para aquisição de materiais permanentes hospitalares que serão utilizados pelos diversos setores da secretaria municipal de saúde desta muni",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=98641105900462026",
+    "published_at": "2026-06-22"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - REGISTRO DE PREÇOS VISANDO FUTURAS E EVENTUAIS AQUISIÇÕES DE FARDAMENTO ESCOLAR DESTINADO AOS ALUNOS DA REDE DE ENSINO DO MUNICÍPIO DE Horizonte – CE.",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=98125305900382026",
+    "published_at": "2026-06-22"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Formação de Ata de Registro de Preços para o fornecimento eventual de máquinas e equipamentos agrícolas visando atender as necessidades do Programa Estadual de Apoio ao Pequeno Pro",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=92615005903052026",
+    "published_at": "2026-06-22"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Registro de preços para a aquisição e fornecimento de cadeiras devidamente projetadas para atender critérios ergonômicos, funcionais e estéticos,conforme Termo de Referência.",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=93500205900162026",
+    "published_at": "2026-06-22"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Credenciamento de interessados para a prestação de serviços de oficinas culturais para as Secretarias Municipais de Cultura e Economia Criativa e de Educação do Município de Pedrei",
+    "url": "https://pncp.gov.br/app/editais/46410775000136-1-000604/2026",
+    "published_at": "2026-06-23"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - EDITAL DE CHAMAMENTO PÚBLICO PARA CREDENCIAMENTO DE PESSOAS JURÍDICAS, PARA A PRESTAÇÃO DE SERVIÇOS DE CIRURGIAS ELETIVAS DE CATARATA, COM FORNECIMENTO INTEGRAL DE INFRAESTRUTURA,",
+    "url": "https://app2.licitardigital.com.br/pesquisa/104606",
+    "published_at": "2026-06-22"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - [Portal de Compras Públicas] - CONTRATAÇÃO CONTÍNUA DE FORNECEDORES DE GÊNEROS ALIMENTÍCIOS PERECÍVEIS: HORTIFRUTIGRANJEIROS, POR MEIO DE PROCEDIMENTO DE CREDENCIAMENTO, COM VISTAS",
+    "url": "https://portaldecompraspublicas.com.br/processos/PE/Prefeitura-Municipal-de-Terezinha-4939/CRED-CREDENCIAMENTO-003-2026-2026-490128",
+    "published_at": "2026-06-22"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CREDENCIAMENTO DE EMPRESA ESPECIALIZADA PARA PRESTAÇÃO DE SERVIÇO DE EXAMES DE LABORATORIAIS PARA ATENDER A DEMANDA DO MUNICÍPIO DE SÃO JOSÉ DO CERRITO - SC.",
+    "url": "https://pncp.gov.br/app/editais/14747668000101-1-000007/2026",
+    "published_at": "2026-06-22"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - O objeto deste edital é o credenciamento para a eventual contratação de instituição financeira para a prestação de serviços bancários de recolhimento de tributos municipais, sem ex",
+    "url": "https://app2.ammlicita.org.br/pesquisa/104805",
+    "published_at": "2026-06-22"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - EDITAL DE CHAMAMENTO PÚBLICO n.º 004/2026 – CREDENCIAMENTO DE PROFISSIONAIS PARA COMPOSIÇÃO DA COMISSÃO JULGADORA DAS PEÇAS INSCRITAS NO 32º FESTIVAL DE TEATRO DE VINHEDO – FESTEV",
+    "url": "http://licitavinhedo.balkertecnologia.com.br",
+    "published_at": "2026-06-22"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CONTRATAÇÃO DE EMPRESA POR INEXIGIBILIDADE DE LICITAÇÃO PARA PRESTAÇÃO DE SERVIÇOS TÉCNICOS DE REALIZAÇÃO DE CURSO DE CAPACITAÇÃO DE “ASSESSORIA JURIDICA E CONTROLADORIA NAS LICITA",
+    "url": "https://transparencia.juina.mt.gov.br/daejuina-mt/licitacoes/licitacao?id=776",
+    "published_at": "2026-06-22"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratacao por inexigibilidade de licitacao de 01 uma inscricao adicional destinada ao servidor Jose Renato dos Santos Medici para participacao no curso 1026 1606 Redes S",
+    "url": "https://pncp.gov.br/app/editais/19013550000173-1-000091/2026",
+    "published_at": "2026-06-22"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - O objeto da licitação é o Registro de Preço para futuras e eventuais aquisições de medicamentos, nas condições estabelecidas neste edital e seus anexos.",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=94300105906932026",
+    "published_at": "2026-06-22"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - O objeto da licitação é o Registro de Preço para futuras e eventuais aquisições de medicamentos, nas condições estabelecidas neste edital e seus anexos.",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=94300105907372026",
+    "published_at": "2026-06-22"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - O objeto da licitação é o Registro de Preço para futuras e eventuais aquisições de MATERIAL MÉDICO HOSPITALAR, nas condições estabelecidas neste Edital e seus anexos.",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=94300105905732026",
+    "published_at": "2026-06-22"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - O objeto da licitação é o Registro de Preço para futuras e eventuais aquisições de material médico hospitalar, nas condições estabelecidas neste Edital e seus anexos.",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=94300105906172026",
+    "published_at": "2026-06-22"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - O objeto da licitação é o Registro de Preço para futuras e eventuais aquisições de medicamentos, nas condições estabelecidas neste edital e seus anexos.",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=94300105906942026",
+    "published_at": "2026-06-22"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - O objeto da licitação é a prestação dos serviços de entregas rápidas, motorizada, nas condições estabelecidas neste edital e seus Anexos.",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=94300105907022026",
+    "published_at": "2026-06-22"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Registro de preços para aquisição de gêneros alimentícios, conforme especificações, quantidade estimada e condições estabelecidas no Edital e seus anexos, visando contratações futu",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=93113905900012026",
+    "published_at": "2026-06-22"
   },
   {
     "source": "TCM-GO",
