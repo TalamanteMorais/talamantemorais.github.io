@@ -11,7 +11,7 @@
   if (!dominioOficial) return;
 
   const recaptchaScript = document.createElement("script");
-  recaptchaScript.src = "https://www.google.com/recaptcha/api.js?render=6Ld0yF8sAAAAAN5JXxfuWIV3K2nhA9p-r4VWKGKo";
+  recaptchaScript.src = "https://www.google.com/recaptcha/api.js?render=6Le9GV4tAAAAALT45f4nGs-Tege1DmQbvlK3xiiS";
   recaptchaScript.defer = true;
   recaptchaScript.dataset.recaptchaV3 = "1";
   document.head.appendChild(recaptchaScript);

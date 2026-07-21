@@ -436,7 +436,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
       }
 
-      const siteKey = "6Ld0yF8sAAAAAN5JXxfuWIV3K2nhA9p-r4VWKGKo";
+      const siteKey = "6Le9GV4tAAAAALT45f4nGs-Tege1DmQbvlK3xiiS";
 
       const falhaRecaptcha = () => {
         console.error("reCAPTCHA: grecaptcha não definido.");
@@ -459,9 +459,12 @@ document.addEventListener("DOMContentLoaded", function () {
             })
               .then((res) => {
                 if (!res.ok) throw new Error("HTTP " + res.status);
-                return res;
+                return res.json();
               })
-              .then(() => {
+              .then((data) => {
+                if (!data || data.status !== "ok") {
+                  throw new Error("Resposta negativa do servidor");
+                }
                 exibirMensagem("Mensagem enviada. Em breve retornaremos.");
                 form.reset();
               })
