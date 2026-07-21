@@ -6,6 +6,48 @@
 
 document.addEventListener("DOMContentLoaded", function () {
 
+  /* ======================== MENU RESPONSIVO ======================== */
+  const mobileNavToggle = document.querySelector(".mobile-nav-toggle");
+  const mainNavigation = document.getElementById("main-navigation");
+  const mobileQuery = window.matchMedia("(max-width: 700px)");
+
+  function closeMobileNavigation() {
+    if (!mobileNavToggle || !mainNavigation) return;
+    mobileNavToggle.setAttribute("aria-expanded", "false");
+    mainNavigation.classList.remove("is-open");
+  }
+
+  mobileNavToggle?.addEventListener("click", () => {
+    if (!mainNavigation) return;
+    const willOpen = mobileNavToggle.getAttribute("aria-expanded") !== "true";
+    mobileNavToggle.setAttribute("aria-expanded", String(willOpen));
+    mainNavigation.classList.toggle("is-open", willOpen);
+  });
+
+  mainNavigation?.querySelectorAll("a, button").forEach((item) => {
+    item.addEventListener("click", closeMobileNavigation);
+  });
+
+  mobileQuery.addEventListener?.("change", (event) => {
+    if (!event.matches) closeMobileNavigation();
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && mainNavigation?.classList.contains("is-open")) {
+      closeMobileNavigation();
+      mobileNavToggle?.focus();
+    }
+  });
+
+  const pageFooter = document.querySelector("footer");
+  if (pageFooter && "IntersectionObserver" in window) {
+    const footerObserver = new IntersectionObserver((entries) => {
+      document.body.classList.toggle("mobile-footer-visible", entries.some((entry) => entry.isIntersecting));
+    }, { threshold: 0.05 });
+    footerObserver.observe(pageFooter);
+  }
+
+
   /* ======================== ÁREA DO USUÁRIO ======================== */
   const accessBackdrop = document.getElementById("access-backdrop");
   const accessModal = accessBackdrop?.querySelector(".access-modal");
@@ -743,3 +785,4 @@ document.addEventListener("DOMContentLoaded", function () {
   if (anoEl) anoEl.textContent = new Date().getFullYear();
 
 });
+

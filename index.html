@@ -49,6 +49,7 @@
   <!-- FONTES, ESTILOS E RECURSOS VISUAIS -->
   <link rel="stylesheet" href="main.css">
   <link rel="stylesheet" href="visual-law.css">
+  <link rel="stylesheet" href="responsive-mobile.css">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZKCPTG7K1T"></script>
   <script src="gtag-init.js" defer></script>
@@ -77,7 +78,11 @@
 </header>
 
 <!-- MENU DE NAVEGAÇÃO PRINCIPAL -->
-<nav class="main-nav" aria-label="Menu principal">
+<button class="mobile-nav-toggle" type="button" aria-expanded="false" aria-controls="main-navigation">
+  <span>Menu</span>
+  <span class="mobile-nav-toggle-icon" aria-hidden="true"><i></i><i></i><i></i></span>
+</button>
+<nav class="main-nav" id="main-navigation" aria-label="Menu principal">
   <a href="#inicio">Início</a>
   <a href="#sobre">Sobre o Escritório</a>
   <a href="#servicos">Serviços</a>
@@ -378,3 +383,4 @@ Mensagem enviada com sucesso. O recebimento da mensagem não caracteriza contrat
 
 </body>
 </html>
+
