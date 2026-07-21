@@ -15,6 +15,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Momentos Públicos — Vídeos | Talamante Morais</title>
   <meta name="description" content="Momentos públicos em vídeo: vídeo institucional fixo e registros audiovisuais." />
+  <meta name="robots" content="noindex, follow" />
+  <link rel="canonical" href="https://talamante-adv.com.br/momentos.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="Talamante Morais" />
+  <meta property="og:title" content="Momentos Públicos — Vídeos | Talamante Morais" />
+  <meta property="og:description" content="Momentos públicos em vídeo: vídeo institucional fixo e registros audiovisuais." />
+  <meta property="og:url" content="https://talamante-adv.com.br/momentos.html" />
+  <meta property="og:image" content="https://talamante-adv.com.br/img/og-card.png" />
 
   <link rel="stylesheet" href="main.css" />
 
@@ -24,35 +33,29 @@
 <!-- INTEGRAÇÃO COM GOOGLE ANALYTICS -->
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZKCPTG7K1T"></script>
-<script src="gtag-init.js"></script>
+<script src="gtag-init.js" defer></script>
 </head>
 
 <!-- INÍCIO DO CORPO DO DOCUMENTO -->
 
-<body>
+<body class="momentos-page">
 
 <!-- CABEÇALHO DA PÁGINA: TÍTULO E NAVEGAÇÃO BREADCRUMB -->
 
   <header class="section-header" role="banner">
-    <nav aria-label="breadcrumb" style="max-width: var(--container-max); margin: 0 auto; padding: 0 1rem;">
-      <ol style="list-style: none; display: flex; gap: .5rem; padding: 0; margin: 0;">
-        <li><a href="index.html" class="main-btn" style="text-decoration:none;">Home</a></li>
-        <li aria-hidden="true" style="align-self:center;">→</li>
-        <li aria-current="page" style="align-self:center; font-weight:700;">Momentos Públicos</li>
+    <nav class="momentos-breadcrumb" aria-label="breadcrumb">
+      <ol class="momentos-breadcrumb-list">
+        <li><a href="index.html" class="main-btn momentos-home-link">Home</a></li>
+        <li aria-hidden="true">→</li>
+        <li class="momentos-current" aria-current="page">Momentos Públicos</li>
       </ol>
     </nav>
-    <h1 id="titulo-momentos" style="max-width: var(--container-max); margin: .8rem auto 0; padding: 0 1rem;">Momentos Públicos</h1>
+    <h1 id="titulo-momentos" class="momentos-title">Momentos Públicos</h1>
   </header>
 
 <!-- CONTEÚDO PRINCIPAL DA PÁGINA -->
 
 <main id="conteudo" role="main" aria-labelledby="titulo-momentos">
-
-<!-- SEÇÃO: TRANSMISSÃO AO VIVO -->
-
-  <section aria-labelledby="titulo-ao-vivo">
-    <h2 id="titulo-ao-vivo" class="service-title">Ao vivo agora</h2>
-  </section>
 
 <!-- SEÇÃO: VÍDEO INSTITUCIONAL -->
 
@@ -71,7 +74,7 @@
     <source src="video-institucional-home-provisorio.mp4" type="video/mp4">
     Seu navegador não suporta o elemento de vídeo.
   </video>
-  <figcaption style="text-align:center; margin-top:.4rem;">
+  <figcaption class="momentos-caption">
     Vídeo institucional fixo: apresentação profissional.
   </figcaption>
 </figure>

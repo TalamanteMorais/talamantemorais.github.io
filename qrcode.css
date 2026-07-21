@@ -1,0 +1,59 @@
+html,
+body.qrcode-page {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background: #f5f7fa;
+  color: #1f2f46;
+}
+
+body.qrcode-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.qrcode-page main {
+  width: 90%;
+  max-width: 340px;
+  margin: 0 auto;
+  padding: 24px 20px;
+  box-sizing: border-box;
+  border-radius: 16px;
+  background: #eef2f7;
+}
+
+.qrcode-page h1 {
+  margin: 0 0 16px;
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+.qrcode-page .qrcode-img {
+  display: block;
+  width: 110px;
+  max-width: 110px;
+  height: auto;
+  margin: 0 auto;
+  padding: 8px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.qrcode-page a {
+  display: block;
+  width: 100%;
+  margin: 20px auto 0;
+  padding: 14px 18px;
+  box-sizing: border-box;
+  border-radius: 999px;
+  background: #1f6fb2;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+}

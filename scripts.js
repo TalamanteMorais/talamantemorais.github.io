@@ -452,50 +452,22 @@ document.addEventListener("DOMContentLoaded", function () {
             const formData = new FormData(form);
             formData.set("g-recaptcha-response", token);
 
-            const enviarComCors = () =>
-              fetch(form.action, {
-                method: "POST",
-                body: formData,
-                redirect: "follow"
-              }).then((res) => {
+            fetch(form.action, {
+              method: "POST",
+              body: formData,
+              redirect: "follow"
+            })
+              .then((res) => {
                 if (!res.ok) throw new Error("HTTP " + res.status);
                 return res;
-              });
-
-            const enviarSemCors = () =>
-              fetch(form.action, {
-                method: "POST",
-                body: formData,
-                mode: "no-cors"
-              });
-
-            enviarComCors()
+              })
               .then(() => {
                 exibirMensagem("Mensagem enviada. Em breve retornaremos.");
                 form.reset();
               })
               .catch((error) => {
                 console.error("Envio do formulário: erro:", error);
-
-                try {
-                  if (navigator && typeof navigator.sendBeacon === "function") {
-                    const ok = navigator.sendBeacon(form.action, formData);
-                    if (ok) {
-                      exibirMensagem("Mensagem enviada. Em breve retornaremos.");
-                      form.reset();
-                      return Promise.resolve();
-                    }
-                  }
-                } catch (_) {}
-
-                return enviarSemCors()
-                  .then(() => {
-                    exibirMensagem("Solicitação enviada. Se não receber retorno, tente novamente.");
-                    form.reset();
-                  })
-                  .catch(() => {
-                    exibirMensagem("Ocorreu um erro ao enviar sua mensagem. Tente novamente.");
-                  });
+                exibirMensagem("Não foi possível confirmar o recebimento. Seus dados foram preservados; tente novamente ou utilize o WhatsApp.");
               })
               .finally(() => {
                 botao.innerText = "Enviar";
@@ -785,4 +757,3 @@ document.addEventListener("DOMContentLoaded", function () {
   if (anoEl) anoEl.textContent = new Date().getFullYear();
 
 });
-
