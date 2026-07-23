@@ -124,36 +124,6 @@ document.addEventListener("DOMContentLoaded", function () {
     accessNotice.hidden = false;
   });
 
-  /* ======================== ACESSO RESTRITO ADMINISTRATIVO ======================== */
-  const restrictedBackdrop = document.getElementById("restricted-backdrop");
-  const restrictedOpen = document.querySelector("[data-restricted-open]");
-  const restrictedClose = restrictedBackdrop?.querySelector(".restricted-close");
-  let restrictedReturnFocus = null;
-
-  function openRestrictedAccess() {
-    if (!restrictedBackdrop) return;
-    restrictedReturnFocus = document.activeElement;
-    restrictedBackdrop.hidden = false;
-    document.body.classList.add("access-open");
-    requestAnimationFrame(() => restrictedClose?.focus());
-  }
-
-  function closeRestrictedAccess() {
-    if (!restrictedBackdrop) return;
-    restrictedBackdrop.hidden = true;
-    document.body.classList.remove("access-open");
-    restrictedReturnFocus?.focus?.();
-  }
-
-  restrictedOpen?.addEventListener("click", openRestrictedAccess);
-  restrictedClose?.addEventListener("click", closeRestrictedAccess);
-  restrictedBackdrop?.addEventListener("click", (event) => {
-    if (event.target === restrictedBackdrop) closeRestrictedAccess();
-  });
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && restrictedBackdrop && !restrictedBackdrop.hidden) closeRestrictedAccess();
-  });
-
   /* ======================== VÍDEO INSTITUCIONAL (ARQUIVO LOCAL) ======================== */
   /* Exibição por play do usuário via <video>, sem autoplay e sem integração automática com YouTube */
 

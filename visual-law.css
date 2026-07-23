@@ -1150,46 +1150,6 @@ footer{
   border-top-width: 7px;
 }
 
-/* Acesso interno: presença discreta no rodapé, sem simular autenticação local. */
-.restricted-access-btn{
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 32px;
-  margin-top: .7rem;
-  padding: .35rem .8rem;
-  border: 1px solid rgba(255,255,255,.28);
-  border-radius: 999px;
-  background: transparent;
-  color: #d7e3ed;
-  font: inherit;
-  font-size: .78rem;
-  font-weight: 650;
-  letter-spacing: .02em;
-  cursor: pointer;
-}
-
-.restricted-access-btn:hover,
-.restricted-access-btn:focus-visible{
-  border-color: rgba(255,255,255,.72);
-  background: rgba(255,255,255,.1);
-  color: #fff;
-}
-
-.restricted-modal{
-  width: min(100%, 470px);
-}
-
-.restricted-status{
-  margin: 1rem 0 0;
-  padding: .85rem 1rem;
-  border: 1px solid #d8e4ee;
-  border-radius: 12px;
-  background: #f3f7fa;
-  color: #40576b;
-  line-height: 1.55;
-}
-
 @media (max-width: 900px){
   .profile-hero{
     min-height: 0;

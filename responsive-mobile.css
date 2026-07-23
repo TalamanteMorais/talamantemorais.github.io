@@ -534,8 +534,7 @@
     padding: .65rem;
   }
 
-  .access-modal,
-  .restricted-modal{
+  .access-modal{
     width: calc(100vw - 1.3rem);
     max-height: calc(100dvh - 1.3rem);
     padding: 1.2rem;
@@ -562,15 +561,6 @@
   footer .footer-link{
     display: inline-block;
     margin: 0 0 0 .35rem;
-  }
-
-  .restricted-access-btn{
-    display: flex;
-    width: max-content;
-    min-height: 34px;
-    margin: .8rem 0 0 auto;
-    padding: .35rem .75rem;
-    font-size: .75rem;
   }
 
   .whatsapp-button{
