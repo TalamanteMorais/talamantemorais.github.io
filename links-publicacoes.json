@@ -19,6 +19,18 @@
   },
   {
     "source": "TCU",
+    "title": "TCU - ACÓRDÃO 2022/2026 ATA 29/2026 - PLENÁRIO",
+    "url": "https://contas.tcu.gov.br/pesquisaJurisprudencia/#/detalhamento/11/*/KEY:%22ACORDAO-COMPLETO-2743287%22/DTRELEVANCIA%2520desc%252C%2520NUMACORDAOINT%2520desc/false/1/false",
+    "published_at": "2026-07-29"
+  },
+  {
+    "source": "TCU",
+    "title": "TCU - ACÓRDÃO 2021/2026 ATA 29/2026 - PLENÁRIO",
+    "url": "https://contas.tcu.gov.br/pesquisaJurisprudencia/#/detalhamento/11/*/KEY:%22ACORDAO-COMPLETO-2773235%22/DTRELEVANCIA%2520desc%252C%2520NUMACORDAOINT%2520desc/false/1/false",
+    "published_at": "2026-07-29"
+  },
+  {
+    "source": "TCU",
     "title": "TCU - ACÓRDÃO 2020/2026 ATA 29/2026 - PLENÁRIO",
     "url": "https://contas.tcu.gov.br/pesquisaJurisprudencia/#/detalhamento/11/*/KEY:%22ACORDAO-COMPLETO-2769671%22/DTRELEVANCIA%2520desc%252C%2520NUMACORDAOINT%2520desc/false/1/false",
     "published_at": "2026-07-29"
@@ -60,18 +72,6 @@
     "published_at": "2026-07-29"
   },
   {
-    "source": "TCU",
-    "title": "TCU - ACÓRDÃO 2013/2026 ATA 29/2026 - PLENÁRIO",
-    "url": "https://contas.tcu.gov.br/pesquisaJurisprudencia/#/detalhamento/11/*/KEY:%22ACORDAO-COMPLETO-2766802%22/DTRELEVANCIA%2520desc%252C%2520NUMACORDAOINT%2520desc/false/1/false",
-    "published_at": "2026-07-29"
-  },
-  {
-    "source": "TCU",
-    "title": "TCU - ACÓRDÃO 2012/2026 ATA 29/2026 - PLENÁRIO",
-    "url": "https://contas.tcu.gov.br/pesquisaJurisprudencia/#/detalhamento/11/*/KEY:%22ACORDAO-COMPLETO-2768895%22/DTRELEVANCIA%2520desc%252C%2520NUMACORDAOINT%2520desc/false/1/false",
-    "published_at": "2026-07-29"
-  },
-  {
     "source": "STJ",
     "title": "STJ - Jurisprudência em Teses traz novos entendimentos sobre direito à educação",
     "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/24072026-Jurisprudencia-em-Teses-traz-novos-entendimentos-sobre-direito-a-educacao.aspx",
@@ -103,6 +103,12 @@
   },
   {
     "source": "STJ",
+    "title": "STJ - Para Quinta Turma, “olheiro” que atua durante venda de drogas responde por tráfico, não por colaboração",
+    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/04082026-Para-Quinta-Turma--“olheiro”-que-atua-durante-venda-de-drogas-responde-por-trafico--nao-por-colaboracao.aspx",
+    "published_at": "2026-08-04"
+  },
+  {
+    "source": "STJ",
     "title": "STJ - Proteção contra penhora de até 40 salários mínimos não se aplica a entidades sem fins lucrativos",
     "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/03082026-Protecao-contra-penhora-de-ate-40-salarios-minimos-nao-se-aplica-a-entidades-sem-fins-lucrativos.aspx",
     "published_at": "2026-08-03"
@@ -126,40 +132,34 @@
     "published_at": "2026-07-29"
   },
   {
-    "source": "STJ",
-    "title": "STJ - STJ julgou 39 temas repetitivos no primeiro semestre de 2026; confira todas as teses fixadas",
-    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/29072026-STJ-julgou-39-temas-repetitivos-no-primeiro-semestre-de-2026--confira-todas-as-teses-fixadas.aspx",
-    "published_at": "2026-07-29"
-  },
-  {
     "source": "TCE-SP",
     "title": "TCE-SP - Boletim de Jurisprudência | Tribunal de Contas do Estado de São Paulo",
     "url": "https://www.tce.sp.gov.br/boletim-de-jurisprudencia",
-    "published_at": "2026-07-31"
+    "published_at": "2026-08-03"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - Pesquisa de Jurisprudência",
     "url": "https://www.tce.sp.gov.br/jurisprudencia",
-    "published_at": "2026-07-31"
+    "published_at": "2026-08-03"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - Comissão Permanente de Análise de Jurisprudência",
     "url": "https://www.tce.sp.gov.br/boletim-de-jurisprudencia/CPAJ",
-    "published_at": "2026-07-31"
+    "published_at": "2026-08-03"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - ARTIGO: Consórcios intermunicipais e registro de preços: o risco do portfólio de atas",
     "url": "https://www.tce.sp.gov.br/6524-artigo-consorcios-intermunicipais-e-registro-precos-risco-portfolio-atas",
-    "published_at": "2026-07-17"
+    "published_at": "2026-07-21"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - O Sistema de Registro de Preços",
     "url": "https://www.tce.sp.gov.br/6524-sistema-registro-precos",
-    "published_at": "2026-07-31"
+    "published_at": "2026-08-03"
   },
   {
     "source": "TCE-SP",
@@ -177,7 +177,7 @@
     "source": "TCE-SP",
     "title": "TCE-SP - Lei nº 14.133",
     "url": "https://www.tce.sp.gov.br/legislacao-comentada/lei-14133-1o-abril-2021",
-    "published_at": "2026-07-31"
+    "published_at": "2026-08-03"
   },
   {
     "source": "TCE-SP",
@@ -213,259 +213,79 @@
     "source": "TCE-SC",
     "title": "TCE-SC - Jurisprudência | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/content/jurisprudencia",
-    "published_at": "2026-07-28"
+    "published_at": "2026-08-03"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Denúncias e representações | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/denuncias-representacoes",
-    "published_at": "2026-07-28"
+    "published_at": "2026-08-03"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Informativos de Jurisprudência | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/informativo-de-jurisprud%C3%AAncia",
-    "published_at": "2026-07-28"
+    "published_at": "2026-08-03"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Informativos de Jurisprudência - Edições anteriores | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/informativo-de-jurisprud%C3%AAncia-edicoes-anteriores",
-    "published_at": "2026-07-28"
+    "published_at": "2026-08-03"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Informativos de Jurisprudência",
     "url": "https://www.tcesc.tc.br/informativo-de-jurisprudência",
-    "published_at": "2026-07-28"
+    "published_at": "2026-08-03"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Recolhimento de débitos e de multas | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/recolhimentos",
-    "published_at": "2026-07-28"
+    "published_at": "2026-08-03"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Fornecedores e Inovação | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/fornecedores-e-inovacao",
-    "published_at": "2026-07-28"
+    "published_at": "2026-08-03"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Licitações e Contratos | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/content/licitacoes_contratos",
-    "published_at": "2026-07-28"
+    "published_at": "2026-08-03"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Atendimento Virtual | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/atendimento-virtual",
-    "published_at": "2026-07-28"
+    "published_at": "2026-08-03"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Diário Oficial Eletrônico (DOTC-e) | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/content/dotc-e",
-    "published_at": "2026-07-28"
+    "published_at": "2026-08-03"
   },
   {
     "source": "TCE-PE",
     "title": "TCE-PE - Jurisprudência",
     "url": "https://www.tcepe.tc.br/internet/index.php/inicio-jurisprudencia",
-    "published_at": "2026-08-03"
+    "published_at": "2026-08-04"
   },
   {
     "source": "TCE-PE",
     "title": "TCE-PE - Pesquisa de Jurisprudência",
     "url": "https://sistemas.tce.pe.gov.br/jurisprudencia/PesquisaJurisprudencia!home.action",
-    "published_at": "2026-08-03"
+    "published_at": "2026-08-04"
   },
   {
     "source": "TCE-PE",
     "title": "TCE-PE - Deliberações",
     "url": "https://portal.tcepe.tc.br/jurisprudencia/consulta/deliberacoes",
-    "published_at": "2026-08-03"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - [LICITANET] - Contratação de apresentação artística de Panda Cantor, por meio de inexigibilidade de licitação, nos termos do art. 74, inciso II, da Lei Federal nº 14.133/2021, para",
-    "url": "https://licitanet.com.br/sessao/192432",
-    "published_at": "2026-07-06"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - [LICITANET] - Contratação de apresentação artística da Banda Karisma, por meio de inexigibilidade de licitação, nos termos do art. 74, inciso II, da Lei Federal nº 14.133/2021, par",
-    "url": "https://licitanet.com.br/sessao/192449",
-    "published_at": "2026-07-06"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - PROCESSO DE CARONA NO PREGÃO ELETRÔNICO Nº. 031/2024 – ATA DE REGISTRO DE PREÇOS Nº. 031/2024 - CIRAU, OBJETIVANDO A AQUISIÇÃO DE “VEÍCULO TIPO MINIBUS TETO ALTO, 20+1 LUGARES”, P",
-    "url": "https://transparencia.agilicloud.com.br/prefmiradorpr/licitacoes/licitacao?id=3478",
-    "published_at": "2026-07-06"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - [Portal de Compras Públicas] - Adesão à Ata de Registro de Preços nº 08/2026 – PROAMUSEP, oriunda da Concorrência Eletrônica nº 01/2025 (Processo Administrativo nº 44/2025), gerenc",
-    "url": "https://portaldecompraspublicas.com.br/processos/PA/Prefeitura-Municipal-de-Canaa-dos-Carajas-1313/INEX-111-2026-PMCC-2026-2026-493323",
-    "published_at": "2026-07-06"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - PREGÃO ELETRONICO PARA AQUISIÇÃO DE LANCHES TIPO SALGADOS E REFRIGERANTES, DESTINADOS AOS PACIENTES E ACOMPANHANTES QUE REALIZAM DESLOCAMENTO ATÉ O MUNICÍPIO DE GOIÂNIA-GO PARA TRA",
-    "url": "https://pncp.gov.br/app/editais/05858247000167-1-000043/2026",
-    "published_at": "2026-07-06"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - [Portal de Compras Públicas] - DISPENSA DE LICITAÇÃO PARA CONTRATAÇÃO DE SERVIÇO PARA ELABORAÇÃO DE PROJETO DE FUNDAÇÃO, DESTINADA AO ABRIGO DE RESÍDUOS DO HOSPITAL ANTÔNIO BEZERRA",
-    "url": "https://www.portaldecompraspublicas.com.br/processos/ES/Fundacao-Inova-Capixaba-2904/DE-25039-2026-2026-493278",
-    "published_at": "2026-07-06"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - MENOR PREÇO GLOBAL - SOLICITAÇÃO DE CONTRATAÇÃO DE EMPRESA ESPECIALIZADA, POR MEIO DE DISPENSA DE LICITAÇÃO, COM CRITÉRIO DE JULGAMENTO PELO MENOR PREÇO GLOBAL, PARA O FORNECIMENTO",
-    "url": "https://pncp.gov.br/app/editais/10496025000181-1-000041/2026",
-    "published_at": "2026-07-06"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - A presente licitação tem como objeto a formação de Ata de Registro de Preços para o fornecimento eventual de Medicamentos Manipulados - Grupo 04, conforme especificações e quantita",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=92615005903092026",
-    "published_at": "2026-07-06"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Constitui objeto da presente licitação o Registro de Preços para futura e eventual aquisição de brindes, conforme especificações constantes no Termo de Referência, em atendimento a",
-    "url": "https://app2.ammlicita.org.br/pesquisa/105193",
-    "published_at": "2026-07-06"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Constitui objeto da presente licitação o Registro de Preços para futura e eventual aquisição de ração animal, conforme especificações constantes no Termo de Referência, em atendime",
-    "url": "https://app2.ammlicita.org.br/pesquisa/106002",
-    "published_at": "2026-07-06"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - CONCORRENCIA N° 017/2026 CONTRATAÇÃO DE EMPRESA ESPECIALIZADA NA EXECUÇÃO DE OBRA DE REFORMA DO CENTRO INTEGRADO DE OPERAÇÕES DE SEGURANÇA (CIOPS) NA RUA 60 AREA ESPECIAL 01 PRAIA",
-    "url": "https://pncp.gov.br/app/editais/01616319000109-1-000126/2026",
-    "published_at": "2026-07-06"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - CONCORRENCIA N° 018/2026 CONTRATAÇÃO DE EMPRESA ESPECIALIZADA NA EXECUÇÃO DE OBRA DE RECONSTRUÇÃO DO PAVIMENTO ASFÁLTICO EM DIVERSAS RUAS DO BAIRRO PARQUE ESPLANADA V, CONFORME CON",
-    "url": "https://pncp.gov.br/app/editais/01616319000109-1-000127/2026",
-    "published_at": "2026-07-06"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - [Portal de Compras Públicas] - PREGÃO ELETRONICO PARA AQUISIÇÃO DE LANCHES TIPO SALGADOS E REFRIGERANTES, DESTINADOS AOS PACIENTES E ACOMPANHANTES QUE REALIZAM DESLOCAMENTO ATÉ O M",
-    "url": "https://www.portaldecompraspublicas.com.br/processos/GO/Prefeitura-Municipal-de-Bom-Jesus-1299/PE-39-2026-2026-492971",
-    "published_at": "2026-07-06"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - CREDENCIAMENTO PARA CONTRATAÇÃO DE CONSULTAS MEDICAS ESPECIALIZADAS, CONFORME TERMO DE REFERÊNCIA",
-    "url": "https://pncp.gov.br/app/editais/08739930000173-1-000066/2026",
-    "published_at": "2026-07-07"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - CREDENCIAMENTO DE INSTITUIÇÕES BANCÁRIAS E COOPERATIVAS DE CRÉDITO PARA CONTRATAÇÃO DE FINANCIAMENTOS COM JUROS SUBSIDIADOS PELO MUNICÍPIO, PARA INSTITUIR O PROGRAMA DE INCENTIVOS",
-    "url": "https://pncp.gov.br/app/editais/87612867000186-1-000073/2026",
-    "published_at": "2026-07-07"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Credenciamento de pessoas jurídicas para futura contratação destinada ao fornecimento de combustíveis, tipo Óleo Diesel S10, para abastecimento do veículo oficial da Câmara Municip",
-    "url": "https://licitanet.com.br/",
-    "published_at": "2026-07-06"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Inexigibilidade de licitação, para Locação do Imóvel situado na Rua Dr. Joaquim Coelho Filho, 122, Bairro: Centro, na cidade de Guapé/MG, para funcionamento do almoxarifado da Secr",
-    "url": "https://pncp.gov.br/app/editais/18239616000185-1-000071/2026",
-    "published_at": "2026-07-06"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Obedecido o disposto na lei Federal nº 14.133/21, suas atualizações e legislação correlata, fica instaurando Processo Administrativo para adesão das Atas de Registro de Preços Nº 0",
-    "url": "https://pncp.gov.br/app/editais/95543427000142-1-000049/2026",
-    "published_at": "2026-07-06"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Inexigibilidade de Licitacao visando a ampliacao do programa Robotica Educacional em quatro escolas da Rede Municipal de Ensino",
-    "url": "https://pncp.gov.br/app/editais/88131164000107-1-000074/2026",
-    "published_at": "2026-07-06"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Credenciamento de empresas classificadas como restaurante, localizados no Município de Diamantina/MG, para fornecimento de alimentação, conforme demanda da Administração Municipal",
-    "url": "https://app2.licitardigital.com.br/pesquisa/106202",
-    "published_at": "2026-07-06"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - PRE-QUALIFICAÇÃO PARA MANUTENCÃO VEICULAR NA FORMA DO § 3º DO ART. 75 DA LEI 14.133/21",
-    "url": "https://pncp.gov.br/app/editais/66229717000118-1-000050/2026",
-    "published_at": "2026-07-08"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - [LICITANET] - Registro de Preços para futura e eventual Contratação de empresa especializada em PRESTAÇÃO DE SERVIÇOS DE MANUTENÇÃO DA REDE DE ILUMINAÇÃO PÚBLICA no Município de Pe",
-    "url": "https://licitanet.com.br/sessao/192507",
-    "published_at": "2026-07-06"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Formação de Ata de Registro de Preços para o fornecimento eventual de OPME(s) do tipo Amplificação Sonora Individual (AASI), conforme especificações e quantitativos previstos no Te",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=92615005902932026",
-    "published_at": "2026-07-06"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Formação de Ata de Registro de Preços para o fornecimento eventual de Dispositivos Médicos do tipo Equipamentos Odontológicos, com instalação, visando atender às necessidades dos h",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=92615005901402026",
-    "published_at": "2026-07-06"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Registro de Preços para aquisição parcelada de materiais de construção, elétricos, hidráulicos e correlatos, visando atender às necessidades das diversas Secretarias do Município d",
-    "url": "https://bnccompras.com/Process/ProcessView?param1=[gkz]6cgFmKVZzvaoerZ/P8UlCRIyp1Z4yE1_lRR2V1cJhXNPZ8ic4luwGbmSLrw1ZJ5j6y7ejDvCmkt7rhhfiyxjl39evg8uEjPK7ZPsqAA7X_w=",
-    "published_at": "2026-07-06"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - ABERTURA DE ATA DE REGISTRO DE PREÇOS PARA AQUISIÇÕES DE PEÇAS PARA OS VEÍCULOS DA LINHA RENAULT/CITROEN/PEUGEOT DA FROTA MUNICIPAL- COM APLICAÇÃO DAS COTAS ABERTAS E RESERVADAS, N",
-    "url": "https://pncp.gov.br/app/editais/46634291000170-1-000671/2026",
-    "published_at": "2026-07-06"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - ABERTURA DE ATA DE REGISTRO DE PREÇOS PARA AQUISIÇÕES DE PEÇAS PARA OS VEÍCULOS DA LINHA RENAULT/CITROEN/PEUGEOT DA FROTA MUNICIPAL- COM APLICAÇÃO DAS COTAS ABERTAS E RESERVADAS, N",
-    "url": "https://pncp.gov.br/app/editais/46634291000170-1-000673/2026",
-    "published_at": "2026-07-06"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Registro de Preços para futura e eventual aquisição parcelada de pneus novos, câmaras de ar e protetores destinados à manutenção preventiva e corretiva da frota oficial da Prefeitu",
-    "url": "https://bllcompras.com/Process/ProcessView?param1=[gkz]PJ8YP01t0it_TVm3ZqyK3nZHOfs3l5_gkZFqRuCl8wIf6nZv3jbg59JX1DKcTKHs9aMp2K2/ODTfoYU5XFL6D8R/q0Tcor4hicHyKI98oV0=",
-    "published_at": "2026-07-06"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - CONTRATAÇÃO DE EMPRESA PARA PRESTAÇÃO DE SERVIÇOS MEDICOS PLASTONISTAS EM PEDIATRIA NA UNIDADE DE PRONTO ATENDIMENTO MEDICO UPA - 24HORAS. CONFORME EDITAL DE CREDENCIAMENTO 007/202",
-    "url": "https://pncp.gov.br/app/editais/18318618000160-1-000219/2026",
-    "published_at": "2026-07-08"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - CONTRATAÇÃO DE EMPRESA PARA PRESTAÇÃO DE SERVIÇOS MÉDICOS PLANTONISTAS PEDIATRIA NA UNIDADE DE PRONTO ATENDIMENTO MÉDICO UPA - 24 HORAS, CONFORME EDITAL DE CREDENCIAMENTO 007/2024.",
-    "url": "https://pncp.gov.br/app/editais/18318618000160-1-000220/2026",
-    "published_at": "2026-07-08"
+    "published_at": "2026-08-04"
   },
   {
     "source": "TCM-GO",
