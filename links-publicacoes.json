@@ -109,6 +109,18 @@
   },
   {
     "source": "STJ",
+    "title": "STJ - Lei Maria da Penha, 20 anos: reportagem mostra como o STJ tem fortalecido o combate à violência doméstica",
+    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/07082026-Lei-Maria-da-Penha--20-anos-reportagem-mostra-como-o-STJ-tem-fortalecido-o-combate-a-violencia-domestica.aspx",
+    "published_at": "2026-08-07"
+  },
+  {
+    "source": "STJ",
+    "title": "STJ - Tribunal vai definir data-base para benefícios da execução penal em caso de prisão descontínua",
+    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/07082026-Tribunal-vai-definir-data-base-para-beneficios-da-execucao-penal-em-caso-de-prisao-descontinua.aspx",
+    "published_at": "2026-08-07"
+  },
+  {
+    "source": "STJ",
     "title": "STJ - Entenda a Decisão traz tese sobre cancelamento pelo INSS do benefício por incapacidade obtido judicialmente",
     "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/06082026-Entenda-a-Decisao-traz-tese-sobre-cancelamento-pelo-INSS-do-beneficio-por-incapacidade-obtido-judicialmente.aspx",
     "published_at": "2026-08-06"
@@ -120,58 +132,40 @@
     "published_at": "2026-08-06"
   },
   {
-    "source": "STJ",
-    "title": "STJ - Falência do devedor não devolve a seu patrimônio bem anteriormente alienado em fraude à execução",
-    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/05082026-Falencia-do-devedor-nao-devolve-a-seu-patrimonio-bem-anteriormente-alienado-em-fraude-a-execucao.aspx",
-    "published_at": "2026-08-05"
-  },
-  {
-    "source": "STJ",
-    "title": "STJ - Informativo traz decisões sobre importunação sexual e remição da pena por aprovação no Enem",
-    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/04082026-Informativo-traz-decisoes-sobre-importunacao-sexual-e-remicao-da-pena-por-aprovacao-no-Enem.aspx",
-    "published_at": "2026-08-04"
-  },
-  {
     "source": "TCE-SP",
     "title": "TCE-SP - Boletim de Jurisprudência | Tribunal de Contas do Estado de São Paulo",
     "url": "https://www.tce.sp.gov.br/boletim-de-jurisprudencia",
-    "published_at": "2026-08-06"
+    "published_at": "2026-08-07"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - Pesquisa de Jurisprudência",
     "url": "https://www.tce.sp.gov.br/jurisprudencia",
-    "published_at": "2026-08-06"
+    "published_at": "2026-08-07"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - Comissão Permanente de Análise de Jurisprudência",
     "url": "https://www.tce.sp.gov.br/boletim-de-jurisprudencia/CPAJ",
-    "published_at": "2026-08-06"
-  },
-  {
-    "source": "TCE-SP",
-    "title": "TCE-SP - ARTIGO: Consórcios intermunicipais e registro de preços: o risco do portfólio de atas",
-    "url": "https://www.tce.sp.gov.br/6524-artigo-consorcios-intermunicipais-e-registro-precos-risco-portfolio-atas",
-    "published_at": "2026-07-24"
+    "published_at": "2026-08-07"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - ARTIGO: Credenciamento - utilidade, limites e riscos",
     "url": "https://www.tce.sp.gov.br/6524-artigo-credenciamento-utilidade-limites-e-riscos",
-    "published_at": "2026-08-06"
+    "published_at": "2026-08-07"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - O Sistema de Registro de Preços",
     "url": "https://www.tce.sp.gov.br/6524-sistema-registro-precos",
-    "published_at": "2026-07-30"
+    "published_at": "2026-08-03"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - Lei nº 14.133",
     "url": "https://www.tce.sp.gov.br/legislacao-comentada/lei-14133-1o-abril-2021",
-    "published_at": "2026-08-06"
+    "published_at": "2026-08-07"
   },
   {
     "source": "TCE-SP",
@@ -192,16 +186,22 @@
     "published_at": "2026-07-24"
   },
   {
-    "source": "TCE-MG",
-    "title": "TCE-MG - Acessibilidade",
-    "url": "https://www.tce.mg.gov.br/DescomplicaJuris/",
-    "published_at": "2026-07-28"
+    "source": "TCE-SP",
+    "title": "TCE-SP - Portal dos Conselhos Municipais | Tribunal de Contas do Estado de São Paulo",
+    "url": "https://www.tce.sp.gov.br/portal-conselhos-municipais",
+    "published_at": "2026-08-07"
   },
   {
     "source": "TCE-MG",
-    "title": "TCE-MG - Acessibilidade",
-    "url": "https://www.tce.mg.gov.br/Informativo-de-Jurisprudencia-n-334.html/Noticia/1111629019",
-    "published_at": "2026-07-21"
+    "title": "TCE-MG - Informativo de Jurisprudência",
+    "url": "https://www.tce.mg.gov.br/Noticia/?cod_secao=1ISP&cod_secao_menu=5L&tipo=1&url=",
+    "published_at": "2026-08-08"
+  },
+  {
+    "source": "TCE-MG",
+    "title": "TCE-MG - Pesquisa de Jurisprudência TCJuris",
+    "url": "https://tcjuris.tce.mg.gov.br/",
+    "published_at": "2026-08-08"
   },
   {
     "source": "TCE-SC",
@@ -267,25 +267,31 @@
     "source": "TCE-PE",
     "title": "TCE-PE - Jurisprudência",
     "url": "https://www.tcepe.tc.br/internet/index.php/inicio-jurisprudencia",
-    "published_at": "2026-08-07"
+    "published_at": "2026-08-08"
   },
   {
     "source": "TCE-PE",
     "title": "TCE-PE - Pesquisa de Jurisprudência",
     "url": "https://sistemas.tce.pe.gov.br/jurisprudencia/PesquisaJurisprudencia!home.action",
-    "published_at": "2026-08-07"
+    "published_at": "2026-08-08"
   },
   {
     "source": "TCE-PE",
     "title": "TCE-PE - Deliberações",
     "url": "https://portal.tcepe.tc.br/jurisprudencia/consulta/deliberacoes",
-    "published_at": "2026-08-07"
+    "published_at": "2026-08-08"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - Credenciamento de empresas para integrar o cadastro de fornecedores para fornecimento de agregados para pavimentação asfáltica conforme demanda dos Municípios Consorciados ao CONSÓ",
-    "url": "https://app2.licitardigital.com.br/pesquisa/106630",
-    "published_at": "2026-07-09"
+    "title": "PNCP - CREDENCIAMENTO DE PESSOA JURÍDICA INTERESSADA EM FIRMAR CONTRATO COM O MUNICÍPIO DE NOVA TRENTO, VISANDO À PRESTAÇÃO DE SERVIÇOS DE SAÚDE NAS SEGUINTES ÁREAS: PLANTÃO DE OBSTETRÍCI",
+    "url": "https://pncp.gov.br/app/editais/08858200000191-1-000017/2026",
+    "published_at": "2026-07-10"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - [Portal de Compras Públicas] - Credenciamento de profissionais médicos para prestação de serviços junto à Estratégia Saúde da Família – ESF, no Município de Paula Cândido/MG, confo",
+    "url": "https://www.portaldecompraspublicas.com.br/processos/MG/Prefeitura-Municipal-de-Paula-Candido-3216/CRED-001-2026-2026-495382",
+    "published_at": "2026-07-13"
   },
   {
     "source": "PNCP",
@@ -295,27 +301,45 @@
   },
   {
     "source": "PNCP",
-    "title": "PNCP - CREDENCIAMENTO ELETRÔNICO DE CLÍNICAS PARA PRESTAÇÃO DE SERVIÇOS DE CONSULTAS MÉDICAS ESPECIALIZADAS NÃO DISPONÍVEIS NA REDE PÚBLICA DE SAÚDE DO MUNICÍPIO",
-    "url": "https://app2.licitardigital.com.br/pesquisa/106485",
-    "published_at": "2026-07-09"
+    "title": "PNCP - CREDENCIAMENTO DE EMPRESAS ESPECIALIZADAS EM SERVIÇOS OFTALMOLÓGICOS PARA REALIZAÇÃO DE CIRURGIAS ELETIVAS DE CATARATA E PTERÍGIO NO MUNICÍPIO DE TONANTINS/AM ATRAVÉS DA SECRETARIA",
+    "url": "https://bllcompras.com/Process/ProcessView?param1=[gkz]2t55pwplxstvK4oaVGC6gD9ooP1nR5WBICrOn4ro_CMX34sP4boTv/X7ERpqOI3Yc/gswTJRujZmReRA_IausczlAxVE4IO74BHZqymQOns=",
+    "published_at": "2026-07-10"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - Credenciamento de Pessoas Físicas ou Jurídicas para prestação de serviços médicos, terapêuticos e nutricionais, conforme especificações constantes no Termo de Referência, em atendi",
-    "url": "https://app2.ammlicita.org.br/pesquisa/105233",
-    "published_at": "2026-07-09"
+    "title": "PNCP - CREDENCIAMENTO DE CONSULTAS, EXAMES E PROCEDIMENTOS MEDICOS ESPECIALIZADOS CONFORME TABELA EM ANEXO, PARA DISPONIBILIZAR À POPULAÇÃO DOS MUNICÍPIOS QUE INTEGRAM O CIS-AMEOSC",
+    "url": "https://pncp.gov.br/app/editais/02311972000122-1-000082/2026",
+    "published_at": "2026-07-13"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - CREDENCIAMENTO PARA PRESTAÇÃO DE SERVIÇOS DE RADIODIFUSÃO DENTRO DO MUNICÍPIO DE MAUÉS/AM",
-    "url": "https://pncp.gov.br/app/editais/04282869000127-1-000052/2026",
-    "published_at": "2026-07-09"
+    "title": "PNCP - CREDENCIAMENTO DE CONSULTAS, EXAMES E PROCEDIMENTOS MEDICOS ESPECIALIZADOS CONFORME TABELA EM ANEXO, PARA DISPONIBILIZAR À POPULAÇÃO DOS MUNICÍPIOS QUE INTEGRAM O CIS-AMEOSC",
+    "url": "https://pncp.gov.br/app/editais/02311972000122-1-000083/2026",
+    "published_at": "2026-07-13"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - Credenciamento para contratação de serviços para realização de exames laboratoriais, para atender as necessidades da Secretaria de Saúde deste Município",
-    "url": "http://www.licitanet.com.br/",
-    "published_at": "2026-07-09"
+    "title": "PNCP - CREDENCIAMENTO DE PESSOAS FÍSICAS E JURÍDICAS PARA A PRESTAÇÃO DE SERVIÇOS DE PLANTÕES MÉDICOS PARA ATENDER AS NECESSIDADES DA SECRETARIA DE SAÚDE DESTE MUNICÍPIO",
+    "url": "https://pncp.gov.br/app/editais/08700684000146-1-000087/2026",
+    "published_at": "2026-07-13"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CREDENCIAMENTO DE PROFISSIONAIS (PESSOA FÍSICA OU JURÍDICA) QUALIFICADOS PARA REALIZAÇÃO DE ATIVIDADES ESPORTIVAS, CULTURAIS E SOCIAIS EM ATENDIMENTO AS DEMANDAS DO MUNICÍPIO DE IT",
+    "url": "https://pncp.gov.br/app/editais/14147938000143-1-000040/2026",
+    "published_at": "2026-07-13"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CREDENCIAMENTO DE CONSULTAS, EXAMES E PROCEDIMENTOS MÉDICOS ESPECIALIZADOS CONFORME TABELA EM ANEXO, PARA DISPONIBILIZAR À POPULAÇÃO DOS MUNICÍPIOS QUE INTEGRAM O CIS-AMEOSC",
+    "url": "https://pncp.gov.br/app/editais/02311972000122-1-000084/2026",
+    "published_at": "2026-07-13"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CREDENCIAMENTO DE CONSULTAS, EXAMES E PROCEDIMENTOS MÉDICOS ESPECIALIZADOS CONFORME TABELA EM ANEXO, PARA DISPONIBILIZAR À POPULAÇÃO DOS MUNICÍPIOS QUE INTEGRAM O CIS-AMEOSC",
+    "url": "https://pncp.gov.br/app/editais/02311972000122-1-000085/2026",
+    "published_at": "2026-07-13"
   },
   {
     "source": "PNCP",
@@ -331,51 +355,51 @@
   },
   {
     "source": "PNCP",
-    "title": "PNCP - CREDENCIAMENTO DE CONSULTAS, EXAMES E PROCEDIMENTOS MEDICOS ESPECIALIZADOS CONFORME TABELA EM ANEXO, PARA DISPONIBILIZAR À POPULAÇÃO DOS MUNICÍPIOS QUE INTEGRAM O CIS-AMEOSC",
-    "url": "https://pncp.gov.br/app/editais/02311972000122-1-000074/2026",
-    "published_at": "2026-07-09"
+    "title": "PNCP - [LICITANET] - OBJETO: Credenciamento de Associações de Artesanato ‘’Local’’ para fornecimento de Ornamentos para Projetos de Ornamentação Junina 2026 do Município de Araripina/PE.",
+    "url": "https://licitanet.com.br/sessao/193297",
+    "published_at": "2026-07-10"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Credenciamento de LEILOEIROS OFICIAIS PARA EVENTUAL REALIZAÇÕES DE LEILÕES DE BENS MÓVEIS INSERVÍVEIS DO PODER EXECUTIVO DO MUNICÍPIO DE CRUZALTENSE/RS.",
+    "url": "https://pncp.gov.br/app/editais/04213529000144-1-000096/2026",
+    "published_at": "2026-07-10"
   },
   {
     "source": "PNCP",
     "title": "PNCP - CREDENCIAMENTO DE CONSULTAS, EXAMES E PROCEDIMENTOS MEDICOS ESPECIALIZADOS CONFORME TABELA EM ANEXO, PARA DISPONIBILIZAR À POPULAÇÃO DOS MUNICÍPIOS QUE INTEGRAM O CIS-AMEOSC",
-    "url": "https://pncp.gov.br/app/editais/02311972000122-1-000075/2026",
-    "published_at": "2026-07-09"
+    "url": "https://pncp.gov.br/app/editais/02311972000122-1-000080/2026",
+    "published_at": "2026-07-10"
   },
   {
     "source": "PNCP",
     "title": "PNCP - CREDENCIAMENTO DE CONSULTAS, EXAMES E PROCEDIMENTOS MEDICOS ESPECIALIZADOS CONFORME TABELA EM ANEXO, PARA DISPONIBILIZAR À POPULAÇÃO DOS MUNICÍPIOS QUE INTEGRAM O CIS-AMEOSC",
-    "url": "https://pncp.gov.br/app/editais/02311972000122-1-000077/2026",
-    "published_at": "2026-07-09"
+    "url": "https://pncp.gov.br/app/editais/02311972000122-1-000081/2026",
+    "published_at": "2026-07-10"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - CREDENCIAMENTO DE CONSULTAS, EXAMES E PROCEDIMENTOS MEDICOS ESPECIALIZADOS CONFORME TABELA EM ANEXO, PARA DISPONIBILIZAR À POPULAÇÃO DOS MUNICÍPIOS QUE INTEGRAM O CIS-AMEOSC",
-    "url": "https://pncp.gov.br/app/editais/02311972000122-1-000078/2026",
-    "published_at": "2026-07-09"
+    "title": "PNCP - CREDENCIAMENTO de empresas juridicamente constituídas, especializadas na disponibilização de créditos de energia elétrica oriundos de geração distribuída fotovoltaica, no âmbito do",
+    "url": "https://pncp.gov.br/app/editais/19856351000127-1-000003/2026",
+    "published_at": "2026-07-13"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - CREDENCIAMENTO DE PESSOAS JURÍDICAS PARA A PRESTAÇÃO DE SERVIÇOS MÉDICOS NAS ESPECIALIDADES MÉDICAS NO MUNICÍPIO DE ALFENAS-MG.",
-    "url": "https://pncp.gov.br/app/editais/11436319000180-1-000024/2026",
-    "published_at": "2026-07-09"
+    "title": "PNCP - Credenciamento de empresas para atuar como Administradora de Beneficios com a finalidade de disponibilizar planos de assistencia odontologica de no minimo 1 uma operadora de Pl",
+    "url": "https://pncp.gov.br/app/editais/45331188000199-1-000206/2026",
+    "published_at": "2026-07-13"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - CREDENCIAMENTO DE PESSOAS JURÍDICAS PARA PRESTAÇÃO DE SERVIÇOS DE HOSPEDAGEM NA ÁREA DA HOTELARIA/POUSADA, INCLUSO CAFÉ DA MANHÃ, NOS MUNICÍPIOS DE BARRETOS/ SP E JAÚ/SP, PARA ATEN",
-    "url": "https://pncp.gov.br/app/editais/44573087000161-1-000236/2026",
-    "published_at": "2026-07-09"
+    "title": "PNCP - CREDENCIAMENTO DE EMPRESA ESPECIALIZADA PARA PRESTAÇÃO DE SERVIÇOS DE PEQUENOS REPAROS, MANUTENÇÃO PREDIAL, MANUTENÇÃO DE VIAS PÚBLICAS, INSTALAÇÕES, CONSTRUÇÕES E SERVIÇOS DE INFR",
+    "url": "https://transparencia.agilicloud.com.br/prefmarcelandia/licitacoes/licitacao?id=29663",
+    "published_at": "2026-07-13"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - CREDENCIAMENTO DE CONSULTAS, EXAMES E PROCEDIMENTOS MÉDICOS ESPECIALIZADOS CONFORME TABELA EM ANEXO, PARA DISPONIBILIZAR À POPULAÇÃO DOS MUNICÍPIOS QUE INTEGRAM O CIS-AMEOSC",
-    "url": "https://pncp.gov.br/app/editais/02311972000122-1-000079/2026",
-    "published_at": "2026-07-09"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Contratação de Leiloeiro Oficial (Junta Comercial do Paraná) para leilões presenciais e virtuais simultâneos, visando o desfazimento de bens inservíveis do Município de Paiçandu.",
-    "url": "https://bnccompras.com/Process/ProcessView?param1=[gkz]LtSpiRUkpXe_42kjVZz6gC3qEOIyYyAHg/KjcUUw4WPPVnyJZJUyOYgOGJ5vCJWZEgfXPpyiElicgKqsE99K3mOYuWrbcB1DyzfT3kGV9xU=",
-    "published_at": "2026-07-09"
+    "title": "PNCP - CREDENCIAMENTO PARA CONTRATAÇÃO DE EMPRESA ESPECIALIZADA NO FORNECIMENTO DE SERVIÇOS DE CAÇAMBA",
+    "url": "https://pncp.gov.br/app/editais/44547313000130-1-000063/2026",
+    "published_at": "2026-07-13"
   },
   {
     "source": "PNCP",
@@ -403,63 +427,39 @@
   },
   {
     "source": "PNCP",
-    "title": "PNCP - Credenciamento de pessoas jurídicas especializadas para realização de Exames de Endoscopia Digestiva Alta, em caráter extraordinário, mediante execução de mutirão assistencial dest",
-    "url": "http://compras.m2atecnologia.com.br/processos/publicacao/3f55103b9ed8461f8542e245b9a69ea5/credenciamento-de-pessoas-juridicas-especializadas",
-    "published_at": "2026-07-09"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - CREDENCIAMENTO, das empresas especializadas que tenham interesse na prestação de serviços de fornecimento de passagens para viagens terrestres intermunicipais e interestaduais, com",
-    "url": "https://pncp.gov.br/app/editais/03343118000100-1-000059/2026",
-    "published_at": "2026-07-09"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - credenciamento de estabelecimentos comerciais interessados, mediante credenciamento, na preparação e distribuição de alimentos no sistema refeições tipo Marmitex comercial e Self-S",
-    "url": "https://app2.ammlicita.org.br/pesquisa/106677",
-    "published_at": "2026-07-09"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - CREDENCIAMENTO DE PESSOAS JURÍDICAS ESPECIALIZADAS PARA PRESTAÇÃO DE SERVIÇOS DE DIAGNÓSTICO POR IMAGEM, INCLUINDO EXAMES DE ULTRASSONOGRAFIA, RADIOLOGIA DIGITAL, MAMOGRAFIA, TOMOG",
-    "url": "https://app2.licitardigital.com.br/pesquisa/104173",
-    "published_at": "2026-07-09"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - CHAMAMENTO PÚBLICO PARA CREDENCIAMENTO DE PESSOAS JURÍDICAS ESPECIALIZADAS PARA A PRESTAÇÃO DE SERVIÇOS INTEGRADOS DE MEDICINA DO TRABALHO E ENGENHARIA DE SEGURANÇA DO TRABALHO - S",
-    "url": "https://app2.licitardigital.com.br/pesquisa/106707",
-    "published_at": "2026-07-09"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Credenciamento para seleção de pessoa física ou jurídica para os serviços em virtude da elaboração e Execução de Projeto de Trabalho Social – PTS no contexto do FNHIS-Sub 50 - Port",
-    "url": "https://bnccompras.com/Process/ProcessView?param1=[gkz]6B4FjSqoHXty37dqpwcziV4QSpHyd0RhFx70h2QteqQiGtwBTkHvxCZOejCrcDlDe3gdnVAHNGvfggFOFnhIR1jEXR_kt1NC1L223pIaiSs=",
-    "published_at": "2026-07-09"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - [Portal de Compras Públicas] - CREDENCIAMENTO PARA TRANSPORTADORES AUTÔNOMOS (PESSOAS FÍSICAS), PARA PRESTAÇÃO DE SERVIÇOS DE TRANSPORTE DE PASSAGEIROS, MEDIANTE FRETAMENTO DE VEÍC",
-    "url": "https://www.portaldecompraspublicas.com.br/processos/PB/Prefeitura-Municipal-de-Lagoa-Seca-2069/CRED-CD009-2026-2026-494879",
-    "published_at": "2026-07-09"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - FORNECIMENTO DE REFEIÇÕES TIPO MARMITEX PARA PACIENTES E ACOMPANHANTES EM TRATAMENTO DE SAÚDE NO MUNICÍPIO DE MONTES CLAROS - MG",
-    "url": "https://app2.licitardigital.com.br/pesquisa/106788",
+    "title": "PNCP - CREDENCIAMENTO DE EMPRESAS ESPECIALIZADAS NA EXECUÇÃO DE OBRAS PADRONIZADAS DE ENGENHARIA COMPREENDENDO CONSTRUÇÃO, REFORMA, AMPLIAÇÃO, ADAPTAÇÃO, REQUALIFICAÇÃO E MELHORIA DE UNID",
+    "url": "https://www.ciminas.mg.gov.br/licitacoes",
     "published_at": "2026-07-10"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - Credenciamento de pessoas jurídicas especializadas no fornecimento eventual e futuro de refeições no sistema marmitex, destinadas ao atendimento das demandas das diversas Secretari",
-    "url": "https://transparencia-ocmblue.com.br/anaurilandia/licitacoes/licitacao?id=296",
+    "title": "PNCP - Credenciamento para contratação de profissionais (pessoa física/jurídica) para prestação de serviços como oficineiros, com a finalidade de atender à demanda da Secretaria Municipa",
+    "url": "https://pncp.gov.br/app/editais/82925025000160-1-000080/2026",
     "published_at": "2026-07-10"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - CREDENCIAMENTO DE PESSOAS FÍSICAS OU JURÍDICA PARA PRESTAÇÃO DE SERVIÇOS MÉDICOS , DE ENFERMAGEM E TECNICO DE ENFERMAGEM, DESTINADOS AO ATENDIMENTO DAS DEMANDAS DA REDE MUNICIPAL",
-    "url": "https://pmalvoradademinas.cidadesmg.com.br/portaltransparencia/publica/licitacoesContratacoesECompras/licitacoes/licitacoes.xhtml",
+    "title": "PNCP - Credenciamento de interessados para a captação e seleção de cotas de patrocínio, por pessoas físicas e/ou jurídicas de direito privado, com ou sem fins lucrativos, visando o custei",
+    "url": "http://www.licitacoari.com.br",
     "published_at": "2026-07-10"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CHAMAMENTO PÚBLICO PARA CREDENCIAMENTO PARA CONTRATAÇÃO DE SERVIÇOS DE PROCEDIMENTOS MÉDICOS AMBULATORIAIS DESTINADOS AOS PACIENTES ATENDIDOS PELA POLICLÍNICA REGIONAL FREI LUCAS D",
+    "url": "https://bnccompras.com/Process/ProcessView?param1=[gkz]ZIHk0M/51IHlOVw36x/scri1N8o1XNTRhNVZQWO5GbPhZYGNoXzkZSWO1vuxJlevdr5M0VUDTDC63XOoHdiMJ6mwpTQ4k1NIgNkWjTS8vGA=",
+    "published_at": "2026-07-10"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Credenciamento de artistas regionais pessoa jurídica para apresentação de shows musicais em eventos festivos e culturais de pequeno porte realizados pelo Município de Porteirinha.",
+    "url": "https://app2.licitardigital.com.br/pesquisa/106903",
+    "published_at": "2026-07-13"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de artistas por meio do Edital nº 01/2026 de Chamamento Público, através do credenciamento de músicos na categoria regional, para apresentações no evento Adora Macaíba",
+    "url": "https://pncp.gov.br/app/editais/08234148000100-1-000084/2026",
+    "published_at": "2026-07-13"
   },
   {
     "source": "TCM-GO",
