@@ -79,6 +79,12 @@
   },
   {
     "source": "STJ",
+    "title": "STJ - Ação de exigir contas contra administrador de empresa não depende da inclusão do autor no contrato social",
+    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/13082026-Acao-de-exigir-contas-contra-administrador-de-empresa-nao-depende-da-inclusao-do-autor-no-contrato-social.aspx",
+    "published_at": "2026-08-13"
+  },
+  {
+    "source": "STJ",
     "title": "STJ - Quarta Turma reconhece validade de tarifa de adiantamento a depositante prevista em contrato",
     "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/05082026-Quarta-Turma-reconhece-validade-de-tarifa-de-adiantamento-a-depositante-prevista-em-contrato.aspx",
     "published_at": "2026-08-05"
@@ -103,6 +109,12 @@
   },
   {
     "source": "STJ",
+    "title": "STJ - Primeira Turma mantém multa do Ibama a importadora que comprou 158 borboletas mortas da China",
+    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/14082026-Primeira-Turma-mantem-multa-do-Ibama-a-importador-que-comprou-158-borboletas-mortas-da-China.aspx",
+    "published_at": "2026-08-14"
+  },
+  {
+    "source": "STJ",
     "title": "STJ - Poderes para atuação extrajudicial não limitam procuração geral para o foro",
     "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/12082026-Poderes-para-atuacao-extrajudicial-nao-limitam-procuracao-geral-para-o-foro.aspx",
     "published_at": "2026-08-12"
@@ -120,52 +132,40 @@
     "published_at": "2026-08-11"
   },
   {
-    "source": "STJ",
-    "title": "STJ - Lei Maria da Penha, 20 anos: reportagem mostra como o STJ tem fortalecido o combate à violência doméstica",
-    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/07082026-Lei-Maria-da-Penha--20-anos-reportagem-mostra-como-o-STJ-tem-fortalecido-o-combate-a-violencia-domestica.aspx",
-    "published_at": "2026-08-07"
-  },
-  {
-    "source": "STJ",
-    "title": "STJ - Tribunal vai definir data-base para benefícios da execução penal em caso de prisão descontínua",
-    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/07082026-Tribunal-vai-definir-data-base-para-beneficios-da-execucao-penal-em-caso-de-prisao-descontinua.aspx",
-    "published_at": "2026-08-07"
-  },
-  {
     "source": "TCE-SP",
     "title": "TCE-SP - Boletim de Jurisprudência | Tribunal de Contas do Estado de São Paulo",
     "url": "https://www.tce.sp.gov.br/boletim-de-jurisprudencia",
-    "published_at": "2026-08-12"
+    "published_at": "2026-08-13"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - Pesquisa de Jurisprudência",
     "url": "https://www.tce.sp.gov.br/jurisprudencia",
-    "published_at": "2026-08-12"
+    "published_at": "2026-08-13"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - Comissão Permanente de Análise de Jurisprudência",
     "url": "https://www.tce.sp.gov.br/boletim-de-jurisprudencia/CPAJ",
-    "published_at": "2026-08-12"
+    "published_at": "2026-08-13"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - ARTIGO: Credenciamento - utilidade, limites e riscos",
     "url": "https://www.tce.sp.gov.br/6524-artigo-credenciamento-utilidade-limites-e-riscos",
-    "published_at": "2026-08-04"
+    "published_at": "2026-08-06"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - O Sistema de Registro de Preços",
     "url": "https://www.tce.sp.gov.br/6524-sistema-registro-precos",
-    "published_at": "2026-08-04"
+    "published_at": "2026-07-29"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - Lei nº 14.133",
     "url": "https://www.tce.sp.gov.br/legislacao-comentada/lei-14133-1o-abril-2021",
-    "published_at": "2026-08-12"
+    "published_at": "2026-08-13"
   },
   {
     "source": "TCE-SP",
@@ -183,13 +183,13 @@
     "source": "TCE-SP",
     "title": "TCE-SP - Portal dos Conselhos Municipais | Tribunal de Contas do Estado de São Paulo",
     "url": "https://www.tce.sp.gov.br/portal-conselhos-municipais",
-    "published_at": "2026-08-12"
+    "published_at": "2026-08-13"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - Teletrabalho",
     "url": "https://www.tce.sp.gov.br/informacoes-teletrabalho",
-    "published_at": "2026-08-12"
+    "published_at": "2026-08-13"
   },
   {
     "source": "TCE-MG",
@@ -267,19 +267,19 @@
     "source": "TCE-PE",
     "title": "TCE-PE - Jurisprudência",
     "url": "https://www.tcepe.tc.br/internet/index.php/inicio-jurisprudencia",
-    "published_at": "2026-08-13"
+    "published_at": "2026-08-14"
   },
   {
     "source": "TCE-PE",
     "title": "TCE-PE - Pesquisa de Jurisprudência",
     "url": "https://sistemas.tce.pe.gov.br/jurisprudencia/PesquisaJurisprudencia!home.action",
-    "published_at": "2026-08-13"
+    "published_at": "2026-08-14"
   },
   {
     "source": "TCE-PE",
     "title": "TCE-PE - Deliberações",
     "url": "https://portal.tcepe.tc.br/jurisprudencia/consulta/deliberacoes",
-    "published_at": "2026-08-13"
+    "published_at": "2026-08-14"
   },
   {
     "source": "TCM-GO",
