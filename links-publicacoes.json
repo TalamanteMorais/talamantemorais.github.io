@@ -97,6 +97,12 @@
   },
   {
     "source": "STJ",
+    "title": "STJ - Terceira Seção define interpretação restritiva do conceito de organização criminosa na execução penal",
+    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/31082026-Terceira-Secao-define-interpretacao-restritiva-do-conceito-de-organizacao-criminosa-na-execucao-penal.aspx",
+    "published_at": "2026-08-31"
+  },
+  {
+    "source": "STJ",
     "title": "STJ - Ministra Isabel Gallotti assume presidência da Quarta Turma para o próximo biênio",
     "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/28082026-Ministra-Isabel-Gallotti-assume-presidencia-da-Quarta-Turma-para-o-proximo-bienio.aspx",
     "published_at": "2026-08-28"
@@ -126,28 +132,22 @@
     "published_at": "2026-08-24"
   },
   {
-    "source": "STJ",
-    "title": "STJ - Para Terceira Turma, aditamento ao plano de recuperação judicial não produz efeitos retroativos",
-    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/24082026-Para-Terceira-Turma--aditamento-ao-plano-de-recuperacao-judicial-nao-produz-efeitos-retroativos-.aspx",
-    "published_at": "2026-08-24"
-  },
-  {
     "source": "TCE-SP",
     "title": "TCE-SP - Boletim de Jurisprudência | Tribunal de Contas do Estado de São Paulo",
     "url": "https://www.tce.sp.gov.br/boletim-de-jurisprudencia",
-    "published_at": "2026-08-28"
+    "published_at": "2026-08-31"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - Pesquisa de Jurisprudência",
     "url": "https://www.tce.sp.gov.br/jurisprudencia",
-    "published_at": "2026-08-28"
+    "published_at": "2026-08-31"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - Comissão Permanente de Análise de Jurisprudência",
     "url": "https://www.tce.sp.gov.br/boletim-de-jurisprudencia/CPAJ",
-    "published_at": "2026-08-28"
+    "published_at": "2026-08-31"
   },
   {
     "source": "TCE-SP",
@@ -171,25 +171,25 @@
     "source": "TCE-SP",
     "title": "TCE-SP - Lei nº 14.133",
     "url": "https://www.tce.sp.gov.br/legislacao-comentada/lei-14133-1o-abril-2021",
-    "published_at": "2026-08-28"
+    "published_at": "2026-08-31"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - ARTIGO: Impactos do Novo Regime de Precatórios (EC Nº 136/2025) sobre a gestão fiscal e financeira dos municípios",
     "url": "https://www.tce.sp.gov.br/6524-artigo-impactos-novo-regime-precatorios-ec-1362025-sobre-gestao-fiscal-e-financeira-municipios",
-    "published_at": "2026-08-28"
+    "published_at": "2026-08-31"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - Portal dos Conselhos Municipais | Tribunal de Contas do Estado de São Paulo",
     "url": "https://www.tce.sp.gov.br/portal-conselhos-municipais",
-    "published_at": "2026-08-28"
+    "published_at": "2026-08-31"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - Teletrabalho",
     "url": "https://www.tce.sp.gov.br/informacoes-teletrabalho",
-    "published_at": "2026-08-28"
+    "published_at": "2026-08-31"
   },
   {
     "source": "TCE-MG",
@@ -267,25 +267,61 @@
     "source": "TCE-PE",
     "title": "TCE-PE - Jurisprudência",
     "url": "https://www.tcepe.tc.br/internet/index.php/inicio-jurisprudencia",
-    "published_at": "2026-08-30"
+    "published_at": "2026-08-31"
   },
   {
     "source": "TCE-PE",
     "title": "TCE-PE - Pesquisa de Jurisprudência",
     "url": "https://sistemas.tce.pe.gov.br/jurisprudencia/PesquisaJurisprudencia!home.action",
-    "published_at": "2026-08-30"
+    "published_at": "2026-08-31"
   },
   {
     "source": "TCE-PE",
     "title": "TCE-PE - Deliberações",
     "url": "https://portal.tcepe.tc.br/jurisprudencia/consulta/deliberacoes",
-    "published_at": "2026-08-30"
+    "published_at": "2026-08-31"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Pregão Eletrônico SRP nº 90090/2026 para registro de preços visando à futura e eventual aquisição por solicitação da Coordenação de Planejamento e Articulação de Demandas Judiciais",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=25000505006572026",
+    "published_at": "2026-08-03"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - ADESÃO A ATA DE REGISTRO DE PREÇOS 03/2025 ADERINDO - ATA DE REGISTRO DE PREÇOS Nº 24/24 - PREGÃO ELETRÔNICO Nº. 20/24 DO CONSÓRCIO PÚBLICO INTERMUNICIPAL MULTIFINALITÁRIO DO ALT",
+    "url": "http://www.portaldecomprasnilopolis.com.br",
+    "published_at": "2026-08-02"
   },
   {
     "source": "PNCP",
     "title": "PNCP - CREDENCIAMENTO de pessoas jurídicas especializadas, por meio do procedimento auxiliar previsto no art. 78, inciso I, e no art. 79, inciso I, da Lei nº 14.133/2021, para formação de",
     "url": "https://www.fernandopolis.sp.gov.br/licitacao/chamamento-publico/chamamento-publico-0032026-credenciamento-de-pessoas-juridicas-especializadas-para-formacao-de-banco-de-pareceristas",
     "published_at": "2026-08-04"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Registro de Preços para futura e eventual aquisição parcelada dos itens remanescentes declarados desertos e fracassados no Pregão Eletrônico nº 029/2026, compreendendo pneus novos,",
+    "url": "https://bllcompras.com/Process/ProcessView?param1=[gkz]6ikoaU6QYXHaqEj4pDP3rPO_XhQWVsrZRpfBqdypsQPnBcaMPvYxKeVa0BLdIZ/5krk_lchttzdid53DTgF_Kv7bqTEP9oo1__eTXJmHKuo=",
+    "published_at": "2026-08-03"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Escolha da proposta mais vantajosa para a contratação, por dispensa de licitação para aquisição de uma caixa amplificadora (tipo cubo) para contrabaixo elétrico destinado à Banda d",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=78320006000932026",
+    "published_at": "2026-08-02"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - [Portal de Compras Públicas] - CONCORRÊNCIA ELETRÔNICA PARA CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA EXECUÇÃO DAS OBRAS DE REVITALIZAÇÃO INTEGRADA DA AVENIDA MONTEVIDÉU, NO MUNICÍ",
+    "url": "https://www.portaldecompraspublicas.com.br/processos/RS/Prefeitura-Municipal-de-Novo-Hamburgo-43/CPMP-16-2026-2026-500787",
+    "published_at": "2026-08-03"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - [Portal de Compras Públicas] - OBRAS E INSTALAÇÕES - A presente Concorrência Eletrônica tem por objeto a contratação de empresa especializada para executar a manutenção preventiva/",
+    "url": "https://www.portaldecompraspublicas.com.br/processos/MG/Prefeitura-Municipal-de-Santo-Antonio-do-Monte-3732/CPMP-80-2026-2026-500775",
+    "published_at": "2026-08-03"
   },
   {
     "source": "PNCP",
@@ -301,6 +337,42 @@
   },
   {
     "source": "PNCP",
+    "title": "PNCP - Constitui objeto da presente licitação a contratação de empresa especializada para execução da obra de construção de Unidade Básica de Saúde – UBS Tipo I, no Município de Capitão E",
+    "url": "https://app2.ammlicita.org.br/pesquisa/109100",
+    "published_at": "2026-08-03"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - REGISTRO DE PRECOS PARA CONTRATACAO DE EMPRESA PARA IMPLANTACAO E CONSERVACAO DE SINALIZACAO VERTICAL E HORIZONTAL EM VIAS DO MUNICIPIO CONFORME PROJETOS E ORCAMENTOS A SEREM ELAB",
+    "url": "https://pncp.gov.br/app/editais/87838330000139-1-000495/2026",
+    "published_at": "2026-08-03"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Este Termo de Referência tem como objeto o Registro de Preços para a aquisição equipamentos de proteção individual (EPI), a fim de atender às necessidades do Hospital de Ensino Dou",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=15518005000422026",
+    "published_at": "2026-08-03"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - [Portal de Compras Públicas] - Registro de Preços para possível fornecimento de livros de literatura para as Unidades Escolares do Município",
+    "url": "https://www.portaldecompraspublicas.com.br/processos/SC/Prefeitura-Municipal-de-Piratuba-1072/RPE-Processo-Licitatorio-nO-132-2026-2026-500614",
+    "published_at": "2026-08-03"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - IMPLANTAÇÃO DE REGISTRO DE PREÇOS PARA A AQUISIÇÃO DE PNEUS NOVOS, CÂMARAS DE AR E PROTETORES PARA A MANUTENÇÃO DOS VEÍCULOS DA FROTA DA PREFEITURA MUNICIPAL DE BOM JESUS DA PENHA",
+    "url": "https://app2.ammlicita.org.br/pesquisa/109131",
+    "published_at": "2026-08-03"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Credenciamento de pessoas jurídicas para a prestação de serviços especializados em fonoaudiologia, destinado ao atendimento da população do Município de Riozinho, mediante remunera",
+    "url": "https://portal.tce.rs.gov.br/aplicprod/f?p=50500:10:::NO:10:P10_ID_LICITACAO,P10_PAG_RETORNO,F50500_CD_ORGAO:1568936,14,70700&cs=13KDPpOLKk25Yg1uv7m6vSoCgk8Y",
+    "published_at": "2026-08-05"
+  },
+  {
+    "source": "PNCP",
     "title": "PNCP - CREDENCIAMENTO DE CONSULTAS, EXAMES E PROCEDIMENTOS MEDICOS ESPECIALIZADOS CONFORME TABELA EM ANEXO, PARA DISPONIBILIZAR À POPULAÇÃO DOS MUNICÍPIOS QUE INTEGRAM O CIS-AMEOSC",
     "url": "https://pncp.gov.br/app/editais/02311972000122-1-000146/2026",
     "published_at": "2026-08-04"
@@ -309,6 +381,36 @@
     "source": "PNCP",
     "title": "PNCP - CREDENCIAMENTO DE PESSOA FÍSICA E/OU PESSOA JURÍDICA QUALIFICADA PARA A PRESTAÇÃO DE SERVIÇOS DE RADIOLOGIA E DIAGNÓSTICO, COM A UTILIZAÇÃO DOS EQUIPAMENTOS DO MUNICIPIO PARA ATEND",
     "url": "https://app2.licitardigital.com.br/pesquisa/109299",
+    "published_at": "2026-08-04"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CREDENCIAMENTO DE CONSULTAS, EXAMES E PROCEDIMENTOS MEDICOS ESPECIALIZADOS CONFORME TABELA EM ANEXO, PARA DISPONIBILIZAR À POPULAÇÃO DOS MUNICÍPIOS QUE INTEGRAM O CIS-AMEOSC",
+    "url": "https://pncp.gov.br/app/editais/02311972000122-1-000147/2026",
+    "published_at": "2026-08-04"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CREDENCIAMENTO DE CONSULTAS, EXAMES E PROCEDIMENTOS MEDICOS ESPECIALIZADOS CONFORME TABELA EM ANEXO, PARA DISPONIBILIZAR À POPULAÇÃO DOS MUNICÍPIOS QUE INTEGRAM O CIS-AMEOSC.",
+    "url": "https://pncp.gov.br/app/editais/02311972000122-1-000148/2026",
+    "published_at": "2026-08-04"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CREDENCIAMENTO DE EMPRESA PARA FORNECIMENTO DE ALIMENTAÇÃO PREPARADA, TIPO “A LA CARTE” OU SELF-SERVICE, PARA ATENDIMENTO À CÂMARA MUNICIPAL DE MONTEZUMA-MG",
+    "url": "https://app2.licitardigital.com.br/pesquisa/109422",
+    "published_at": "2026-08-04"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CHAMAMENTO PÚBLICO PARA CREDENCIAMENTO DE PESSOAS JURÍDICAS CLASSIFICADAS COMO HOTEL OU POUSADA LOCALIZADAS NA SEDE DO MUNICÍPIO DE SÃO RAIMUNDO NONATO – PI, PARA PRESTAÇÃO DE SERV",
+    "url": "https://licitamaisbrasil.com.br/detalhes-do-edital/9bsaRoabskFMLLKd",
+    "published_at": "2026-08-04"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CREDENCIAMENTO DE CONSULTAS, EXAMES E PROCEDIMENTOS MÉDICOS ESPECIALIZADOS CONFORME TABELA EM ANEXO, PARA DISPONIBILIZAR À POPULAÇÃO DOS MUNICÍPIOS QUE INTEGRAM O CIS-AMEOSC",
+    "url": "https://pncp.gov.br/app/editais/02311972000122-1-000149/2026",
     "published_at": "2026-08-04"
   },
   {
@@ -357,108 +459,6 @@
     "source": "PNCP",
     "title": "PNCP - [Portal de Compras Públicas] - CREDENCIAMENTO DE MÉDICOS ESPECIALISTAS EM SAÚDE MENTAL, para atendimento na Unidade Básica de Saúde do Município de Ibicaré.",
     "url": "https://www.portaldecompraspublicas.com.br/processos/SC/Prefeitura-Municipal-de-Ibicare-1783/CRED-0037-2025-2025-412471",
-    "published_at": "2026-08-03"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - CREDENCIAMENTO DE CONSULTAS, EXAMES E PROCEDIMENTOS MEDICOS ESPECIALIZADOS CONFORME TABELA EM ANEXO, PARA DISPONIBILIZAR À POPULAÇÃO DOS MUNICÍPIOS QUE INTEGRAM O CIS-AMEOSC",
-    "url": "https://pncp.gov.br/app/editais/02311972000122-1-000145/2026",
-    "published_at": "2026-08-03"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - CONTRATAÇÃO DE EMPRESA PARA PRESTAÇÃO DE SERVIÇOS DE CONSTRUÇÃO DE QUADRA DE FUTEBOL SOCIETY E QUADRA DE AREIA NO MUNICIPIO DE CAMPO FLORIDO ATRAVES DO CONTRATO DE REPASSE Nº 98198",
-    "url": "https://app2.ammlicita.org.br/pesquisa/109054",
-    "published_at": "2026-08-03"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Credenciamento de pessoa jurídica para integrar cadastro de prestadores de serviços ao Sistema Único de Saúde (SUS), com a finalidade de contratação de empresa devidamente especial",
-    "url": "https://pncp.gov.br/app/editais/06158455000116-1-000086/2026",
-    "published_at": "2026-08-04"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Credenciamento de médicos, para prestar Serviços Médicos na Estratégia Saúde da Família, cumprindo carga horária de 40 (quarenta) horas semanais, conforme escala determinada SMS de",
-    "url": "https://app2.licitardigital.com.br/pesquisa/107424",
-    "published_at": "2026-08-04"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Credenciamento de pessoa jurídica para prestação de serviços médicos especializados em Ultrassonografia, visando suprir as demandas da Secretaria Municipal de Saúde, conforme espec",
-    "url": "https://pncp.gov.br/app/editais/19243500000182-1-000089/2026",
-    "published_at": "2026-08-04"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Constitui objeto do presente edital do Credenciamento de profissionais para prestação de serviços de apoio operacional, de natureza complementar, destinados ao atendimento de deman",
-    "url": "https://app2.licitardigital.com.br/pesquisa/109303",
-    "published_at": "2026-08-04"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Credenciamento para Contratação de empresa especializada para PRESTAÇÃO DE SERVIÇOS DE TRANSPORTE EM UTI MÓVEL E AMBULÂNCIA BÁSICA para atender as necessidades da Secretaria Munici",
-    "url": "https://pncp.gov.br/app/editais/44927267000102-1-000068/2026",
-    "published_at": "2026-08-04"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - CREDENCIAMENTO DE MÉDICOS GENERALISTAS, PESSOAS FÍSICAS OU JURÍDICAS, COM REGISTRO ATIVO NO CRM, PARA EVENTUAL PRESTAÇÃO DE SERVIÇOS NAS EQUIPES DA ESF DE CANTAGALO/MG, INCLUSIVE N",
-    "url": "https://app2.licitardigital.com.br/pesquisa/108730",
-    "published_at": "2026-08-03"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Credenciamento de Leiloeiros Públicos Oficiais (pessoas físicas) regularmente matriculados perante a Junta Comercial do Estado de Santa Catarina - JUCESC, para a prestação de servi",
-    "url": "https://pncp.gov.br/app/editais/16780795000138-1-000041/2026",
-    "published_at": "2026-08-03"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Constitui objeto do presente o credenciamento de leiloeiros público oficiais devidamente registrados na Junta Comercial do Estado de Pernambuco - JUCEPE, para eventual execução de",
-    "url": "https://bnccompras.com/Process/ProcessView?param1=[gkz]U6guU4biNG5dp7xd/kUwPuePcHGCKQWSzIIrpPSS16LVYYCpVoBFkWmL9MiBkbSheIaQpR3T8OB4bsdntLhoeU3x8MzsDpwLvJEswGtgx94=",
-    "published_at": "2026-08-03"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - [Portal de Compras Públicas] - CREDENCIAMENTO DE PROFISSIONAIS PARA AS ESPECIALIDADES ODONTOLÓGICAS DO CENTRO DE ESPECIALIDADES ODONTOLÓGICAS (CEO): ODONTOPEDIATRIA, TRAUMATOLOGIA",
-    "url": "https://www.portaldecompraspublicas.com.br/processos/PI/PREFEITURA-MUNICIPAL-DE-UNIAO-2372/CRED-018-2026-2026-496798",
-    "published_at": "2026-08-03"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Credenciamento de pessoas jurídicas interessadas na prestação, sob demanda, de serviços de Serralheiro, Gesseiro, Eletricista, Pedreiro e Pintor, para atendimento às necessidades d",
-    "url": "https://app2.licitardigital.com.br/pesquisa/109157",
-    "published_at": "2026-08-03"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - [Portal de Compras Públicas] - CREDENCIAMENTO DE ARTISTAS DA ÁREA DE ENTRETENIMENTO INFANTIL, ESPECIALMENTE PALHAÇOS E ARTISTAS CIRCENSES, PARA REALIZAÇÃO DE APRESENTAÇÕES EM EVENT",
-    "url": "https://www.portaldecompraspublicas.com.br/processos/PI/PREFEITURA-MUNICIPAL-DE-UNIAO-2372/CRED-022-2026-2026-500803",
-    "published_at": "2026-08-03"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - CREDENCIAMENTO DE PESSOAS JURÍDICAS ESPECIALIZADAS NA PRESTAÇÃO DE SERVIÇOS DE TRANSPORTE DE PESSOAS, MEDIANTE DEMANDA, PARA ATENDIMENTO DAS NECESSIDADES DAS SECRETARIAS MUNICIPAIS",
-    "url": "https://pncp.gov.br/app/editais/08365850000103-1-000120/2026",
-    "published_at": "2026-08-03"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - CREDENCIAMENTO DE PESSOAS FÍSICAS E/OU JURÍDICAS PARA A PRESTAÇÃO DE SERVIÇOS ESPECIALIZADOS DE INSTRUÇÃO E CAPACITAÇÃO EM FANFARRA, COMPREENDENDO AULAS DE COREOGRAFIA, CORPO COREO",
-    "url": "https://transparencia.agilirn.com.br/prefcarnaubadantas-rn/licitacoes/licitacao?id=1563",
-    "published_at": "2026-08-03"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - EDITAL DE CREDENCIAMENTO Nº 003/2026 - Credenciamento de empresas especializadas para o fornecimento de agregado graúdo (brita), destinado ao atendimento das demandas de pavimentaç",
-    "url": "https://pncp.gov.br/app/editais/18635734000102-1-000065/2026",
-    "published_at": "2026-08-03"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - [Portal de Compras Públicas] - Credenciamento para a contratação de empresas especializadas na prestação de serviços mecânicos corretivos e preventivos, com fornecimento de peças e",
-    "url": "https://www.portaldecompraspublicas.com.br/processos/BA/Prefeitura-Municipal-de-Remanso-2312/CRED-004-2026-2026-500610",
     "published_at": "2026-08-03"
   },
   {
