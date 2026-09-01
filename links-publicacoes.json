@@ -175,6 +175,12 @@
   },
   {
     "source": "TCE-SP",
+    "title": "TCE-SP - PodContas debate o Boletim de Atualização de Licitações e Contratos do TCESP em seu novo episódio",
+    "url": "https://www.tce.sp.gov.br/6524-podcontas-debate-boletim-atualizacao-licitacoes-e-contratos-tcesp-seu-novo-episodio",
+    "published_at": "2026-08-31"
+  },
+  {
+    "source": "TCE-SP",
     "title": "TCE-SP - ARTIGO: Impactos do Novo Regime de Precatórios (EC Nº 136/2025) sobre a gestão fiscal e financeira dos municípios",
     "url": "https://www.tce.sp.gov.br/6524-artigo-impactos-novo-regime-precatorios-ec-1362025-sobre-gestao-fiscal-e-financeira-municipios",
     "published_at": "2026-08-31"
@@ -183,12 +189,6 @@
     "source": "TCE-SP",
     "title": "TCE-SP - Portal dos Conselhos Municipais | Tribunal de Contas do Estado de São Paulo",
     "url": "https://www.tce.sp.gov.br/portal-conselhos-municipais",
-    "published_at": "2026-08-31"
-  },
-  {
-    "source": "TCE-SP",
-    "title": "TCE-SP - Teletrabalho",
-    "url": "https://www.tce.sp.gov.br/informacoes-teletrabalho",
     "published_at": "2026-08-31"
   },
   {
@@ -267,31 +267,25 @@
     "source": "TCE-PE",
     "title": "TCE-PE - Jurisprudência",
     "url": "https://www.tcepe.tc.br/internet/index.php/inicio-jurisprudencia",
-    "published_at": "2026-08-31"
+    "published_at": "2026-09-01"
   },
   {
     "source": "TCE-PE",
     "title": "TCE-PE - Pesquisa de Jurisprudência",
     "url": "https://sistemas.tce.pe.gov.br/jurisprudencia/PesquisaJurisprudencia!home.action",
-    "published_at": "2026-08-31"
+    "published_at": "2026-09-01"
   },
   {
     "source": "TCE-PE",
     "title": "TCE-PE - Deliberações",
     "url": "https://portal.tcepe.tc.br/jurisprudencia/consulta/deliberacoes",
-    "published_at": "2026-08-31"
+    "published_at": "2026-09-01"
   },
   {
     "source": "PNCP",
     "title": "PNCP - Pregão Eletrônico SRP nº 90090/2026 para registro de preços visando à futura e eventual aquisição por solicitação da Coordenação de Planejamento e Articulação de Demandas Judiciais",
     "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=25000505006572026",
     "published_at": "2026-08-03"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - ADESÃO A ATA DE REGISTRO DE PREÇOS 03/2025 ADERINDO - ATA DE REGISTRO DE PREÇOS Nº 24/24 - PREGÃO ELETRÔNICO Nº. 20/24 DO CONSÓRCIO PÚBLICO INTERMUNICIPAL MULTIFINALITÁRIO DO ALT",
-    "url": "http://www.portaldecomprasnilopolis.com.br",
-    "published_at": "2026-08-02"
   },
   {
     "source": "PNCP",
@@ -307,12 +301,6 @@
   },
   {
     "source": "PNCP",
-    "title": "PNCP - Escolha da proposta mais vantajosa para a contratação, por dispensa de licitação para aquisição de uma caixa amplificadora (tipo cubo) para contrabaixo elétrico destinado à Banda d",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=78320006000932026",
-    "published_at": "2026-08-02"
-  },
-  {
-    "source": "PNCP",
     "title": "PNCP - [Portal de Compras Públicas] - CONCORRÊNCIA ELETRÔNICA PARA CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA EXECUÇÃO DAS OBRAS DE REVITALIZAÇÃO INTEGRADA DA AVENIDA MONTEVIDÉU, NO MUNICÍ",
     "url": "https://www.portaldecompraspublicas.com.br/processos/RS/Prefeitura-Municipal-de-Novo-Hamburgo-43/CPMP-16-2026-2026-500787",
     "published_at": "2026-08-03"
@@ -322,12 +310,6 @@
     "title": "PNCP - [Portal de Compras Públicas] - OBRAS E INSTALAÇÕES - A presente Concorrência Eletrônica tem por objeto a contratação de empresa especializada para executar a manutenção preventiva/",
     "url": "https://www.portaldecompraspublicas.com.br/processos/MG/Prefeitura-Municipal-de-Santo-Antonio-do-Monte-3732/CPMP-80-2026-2026-500775",
     "published_at": "2026-08-03"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - O credenciamento por Inexigibilidade, para futura contratação, de pessoas físicas e/ou jurídicas especializadas para a prestação de serviços de manutenção preventiva e corretiva,",
-    "url": "https://www.morpara.ba.gov.br/site/diariooficial",
-    "published_at": "2026-08-02"
   },
   {
     "source": "PNCP",
@@ -367,8 +349,38 @@
   },
   {
     "source": "PNCP",
+    "title": "PNCP - [Portal de Compras Públicas] - Registro de Preços para possível aquisição de medicamentos para compor a farmácia básica do município, conforme relação municipal de medicamento – RE",
+    "url": "https://www.portaldecompraspublicas.com.br/processos/SC/Prefeitura-Municipal-de-Piratuba-1072/RPE-Processo-Licitatorio-nO-16-2026-2026-495764",
+    "published_at": "2026-08-03"
+  },
+  {
+    "source": "PNCP",
     "title": "PNCP - Credenciamento de pessoas jurídicas para a prestação de serviços especializados em fonoaudiologia, destinado ao atendimento da população do Município de Riozinho, mediante remunera",
     "url": "https://portal.tce.rs.gov.br/aplicprod/f?p=50500:10:::NO:10:P10_ID_LICITACAO,P10_PAG_RETORNO,F50500_CD_ORGAO:1568936,14,70700&cs=13KDPpOLKk25Yg1uv7m6vSoCgk8Y",
+    "published_at": "2026-08-05"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CREDENCIAMENTO DE CONSULTAS, EXAMES E PROCEDIMENTOS MEDICOS ESPECIALIZADOS CONFORME TABELA EM ANEXO, PARA DISPONIBILIZAR À POPULAÇÃO DOS MUNICÍPIOS QUE INTEGRAM O CIS-AMEOSC",
+    "url": "https://pncp.gov.br/app/editais/02311972000122-1-000151/2026",
+    "published_at": "2026-08-05"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CREDENCIAMENTO DE CONSULTAS, EXAMES E PROCEDIMENTOS MEDICOS ESPECIALIZADOS CONFORME TABELA EM ANEXO, PARA DISPONIBILIZAR À POPULAÇÃO DOS MUNICÍPIOS QUE INTEGRAM O CIS-AMEOSC",
+    "url": "https://pncp.gov.br/app/editais/02311972000122-1-000152/2026",
+    "published_at": "2026-08-05"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CREDENCIAMENTO DE CONSULTAS, EXAMES E PROCEDIMENTOS MEDICOS ESPECIALIZADOS CONFORME TABELA EM ANEXO, PARA DISPONIBILIZAR À POPULAÇÃO DOS MUNICÍPIOS QUE INTEGRAM O CIS-AMEOSC",
+    "url": "https://pncp.gov.br/app/editais/02311972000122-1-000153/2026",
+    "published_at": "2026-08-05"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - O presente edital tem por objeto o credenciamento de pessoas físicas e/ou jurídicas especializadas para futura e eventual contratação de serviços profissionais de saúde destinados",
+    "url": "https://bllcompras.com/Process/ProcessView?param1=[gkz]K_pKN_fGnclomFNvjtfudOFb0zXhdjgq_daCNDZg5dYYKjq2mebQ9cVyfS7P_gl0ligv1TZTlyBhdP5ebF6ayBiM5DhcwXQcA3WNgD6DoZo=",
     "published_at": "2026-08-05"
   },
   {
@@ -450,18 +462,6 @@
     "published_at": "2026-08-03"
   },
   {
-    "source": "PNCP",
-    "title": "PNCP - CREDENCIAMENTO DE PESSOAS JURÍDICAS ESPECIALIZADAS NO FORNECIMENTO DE PNEUS NOVOS, CÂMARAS DE AR, PROTETORES E INSUMOS CORRELATOS, BEM COMO NA PRESTAÇÃO DE SERVIÇOS DE MONTAGEM, AL",
-    "url": "https://pncp.gov.br/app/editais/08349102000129-1-000116/2026",
-    "published_at": "2026-08-03"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - [Portal de Compras Públicas] - CREDENCIAMENTO DE MÉDICOS ESPECIALISTAS EM SAÚDE MENTAL, para atendimento na Unidade Básica de Saúde do Município de Ibicaré.",
-    "url": "https://www.portaldecompraspublicas.com.br/processos/SC/Prefeitura-Municipal-de-Ibicare-1783/CRED-0037-2025-2025-412471",
-    "published_at": "2026-08-03"
-  },
-  {
     "source": "TCM-GO",
     "title": "TCM-GO - TCMGO conclui visitas técnicas em 26 municípios para acompanhar avanços na gestão de resíduos sólidos",
     "url": "https://www.tcmgo.tc.br/site/2026/08/tcmgo-conclui-visitas-tecnicas-em-26-municipios-para-acompanhar-avancos-na-gestao-de-residuos-solidos/",
@@ -472,6 +472,12 @@
     "title": "TCM-GO - TCMGO fiscaliza estrutura e funcionamento de Conselhos Tutelares",
     "url": "https://www.tcmgo.tc.br/site/2026/08/tcmgo-fiscaliza-estrutura-e-funcionamento-de-conselhos-tutelares/",
     "published_at": "2026-08-28"
+  },
+  {
+    "source": "TCM-GO",
+    "title": "TCM-GO - MPC propõe reserva de vagas terceirizadas para mulheres vítimas de violência",
+    "url": "https://www.tcmgo.tc.br/site/2026/08/mpc-propoe-reserva-de-vagas-terceirizadas-para-mulheres-vitimas-de-violencia/",
+    "published_at": "2026-08-31"
   },
   {
     "source": "TCM-GO",
