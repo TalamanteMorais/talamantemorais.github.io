@@ -97,6 +97,12 @@
   },
   {
     "source": "STJ",
+    "title": "STJ - Falta de comprovação de dolo leva Segunda Turma a reverter condenação de ex-prefeito de Itabaiana (SE) por improbidade",
+    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/03092026-Falta-de-comprovacao-de-dolo-leva-Segunda-Turma-a-reverter-condenacao-de-ex-prefeito-de-Itabaiana--SE--por.aspx",
+    "published_at": "2026-09-03"
+  },
+  {
+    "source": "STJ",
     "title": "STJ - Terceira Seção define interpretação restritiva do conceito de organização criminosa na execução penal",
     "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/31082026-Terceira-Secao-define-interpretacao-restritiva-do-conceito-de-organizacao-criminosa-na-execucao-penal.aspx",
     "published_at": "2026-08-31"
@@ -124,12 +130,6 @@
     "title": "STJ - Bem de família não perde proteção contra penhora só porque tem alto valor no mercado imobiliário",
     "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/28082026-Bem-de-familia-nao-perde-protecao-contra-penhora-so-porque-tem-alto-valor-no-mercado-imobiliario-.aspx",
     "published_at": "2026-08-28"
-  },
-  {
-    "source": "STJ",
-    "title": "STJ - Tribunal publica regras para exame da relevância; novo regime começa a valer no próximo dia 3",
-    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/24082026-Tribunal-publica-regras-para-exame-da-relevancia--novo-regime-comeca-a-valer-no-proximo-dia-3.aspx",
-    "published_at": "2026-08-24"
   },
   {
     "source": "TCE-SP",
@@ -175,12 +175,6 @@
   },
   {
     "source": "TCE-SP",
-    "title": "TCE-SP - ARTIGO: Impactos do Novo Regime de Precatórios (EC Nº 136/2025) sobre a gestão fiscal e financeira dos municípios",
-    "url": "https://www.tce.sp.gov.br/6524-artigo-impactos-novo-regime-precatorios-ec-1362025-sobre-gestao-fiscal-e-financeira-municipios",
-    "published_at": "2026-09-02"
-  },
-  {
-    "source": "TCE-SP",
     "title": "TCE-SP - Boletim de Atualização de Licitações e Contratos – Agosto 2026",
     "url": "https://www.tce.sp.gov.br/6524-boletim-atualizacao-licitacoes-e-contratos-agosto-2026",
     "published_at": "2026-09-01"
@@ -190,6 +184,12 @@
     "title": "TCE-SP - PodContas debate o Boletim de Atualização de Licitações e Contratos do TCESP em seu novo episódio",
     "url": "https://www.tce.sp.gov.br/6524-podcontas-debate-boletim-atualizacao-licitacoes-e-contratos-tcesp-seu-novo-episodio",
     "published_at": "2026-08-31"
+  },
+  {
+    "source": "TCE-SP",
+    "title": "TCE-SP - ARTIGO: Impactos do Novo Regime de Precatórios (EC Nº 136/2025) sobre a gestão fiscal e financeira dos municípios",
+    "url": "https://www.tce.sp.gov.br/6524-artigo-impactos-novo-regime-precatorios-ec-1362025-sobre-gestao-fiscal-e-financeira-municipios",
+    "published_at": "2026-08-27"
   },
   {
     "source": "TCE-MG",
@@ -267,19 +267,37 @@
     "source": "TCE-PE",
     "title": "TCE-PE - Jurisprudência",
     "url": "https://www.tcepe.tc.br/internet/index.php/inicio-jurisprudencia",
-    "published_at": "2026-09-02"
+    "published_at": "2026-09-03"
   },
   {
     "source": "TCE-PE",
     "title": "TCE-PE - Pesquisa de Jurisprudência",
     "url": "https://sistemas.tce.pe.gov.br/jurisprudencia/PesquisaJurisprudencia!home.action",
-    "published_at": "2026-09-02"
+    "published_at": "2026-09-03"
   },
   {
     "source": "TCE-PE",
     "title": "TCE-PE - Deliberações",
     "url": "https://portal.tcepe.tc.br/jurisprudencia/consulta/deliberacoes",
-    "published_at": "2026-09-02"
+    "published_at": "2026-09-03"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CONTRATAÇÃO DE EMPRESA PARA EXECUÇÃO DE SERVIÇOS DE PAVIMENTAÇÃO EM CONCRETO ARMADO DE VIAS URBANAS DO MUNICÍPIO DE CURUÁ/PA",
+    "url": "https://bnccompras.com/Process/ProcessView?param1=[gkz]ri_FToXbPcmhsHxQx3vZWDGaThc73__MyFrvZa0FZnqCp0XV9yZ/4vIiUzgxqVA4Vs44BFwfwc8qwVFu4I_kojXtlviGMq1vhKj6Fu0qJ0Y=",
+    "published_at": "2026-08-05"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de obra de engenharia para construção da 2ª Etapa do Campus Tartarugalzinho, conforme condições e exigências estabelecidas neste instrumento e no Termo de Referência",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=15815003000782026",
+    "published_at": "2026-08-05"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de empresa especializada para obra de Engenharia com o objetivo de Implantação de Unidade Básica de Saúde Indígena, Tipo II na Aldeia Panambizinho pertencente ao polo d",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=25703603000262026",
+    "published_at": "2026-08-05"
   },
   {
     "source": "TCM-GO",
