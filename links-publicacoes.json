@@ -13,6 +13,36 @@
   },
   {
     "source": "TCU",
+    "title": "TCU - ACÓRDÃO DE RELAÇÃO 4725/2026 ATA 30/2026 - SEGUNDA CÂMARA",
+    "url": "https://contas.tcu.gov.br/pesquisaJurisprudencia/#/detalhamento/11/*/KEY:%22ACORDAO-COMPLETO-2779878%22/DTRELEVANCIA%2520desc%252C%2520NUMACORDAOINT%2520desc/false/1/false",
+    "published_at": "2026-09-08"
+  },
+  {
+    "source": "TCU",
+    "title": "TCU - ACÓRDÃO DE RELAÇÃO 4724/2026 ATA 30/2026 - SEGUNDA CÂMARA",
+    "url": "https://contas.tcu.gov.br/pesquisaJurisprudencia/#/detalhamento/11/*/KEY:%22ACORDAO-COMPLETO-2779897%22/DTRELEVANCIA%2520desc%252C%2520NUMACORDAOINT%2520desc/false/1/false",
+    "published_at": "2026-09-08"
+  },
+  {
+    "source": "TCU",
+    "title": "TCU - ACÓRDÃO DE RELAÇÃO 4723/2026 ATA 30/2026 - SEGUNDA CÂMARA",
+    "url": "https://contas.tcu.gov.br/pesquisaJurisprudencia/#/detalhamento/11/*/KEY:%22ACORDAO-COMPLETO-2779930%22/DTRELEVANCIA%2520desc%252C%2520NUMACORDAOINT%2520desc/false/1/false",
+    "published_at": "2026-09-08"
+  },
+  {
+    "source": "TCU",
+    "title": "TCU - ACÓRDÃO DE RELAÇÃO 4722/2026 ATA 30/2026 - SEGUNDA CÂMARA",
+    "url": "https://contas.tcu.gov.br/pesquisaJurisprudencia/#/detalhamento/11/*/KEY:%22ACORDAO-COMPLETO-2779580%22/DTRELEVANCIA%2520desc%252C%2520NUMACORDAOINT%2520desc/false/1/false",
+    "published_at": "2026-09-08"
+  },
+  {
+    "source": "TCU",
+    "title": "TCU - ACÓRDÃO DE RELAÇÃO 4721/2026 ATA 30/2026 - SEGUNDA CÂMARA",
+    "url": "https://contas.tcu.gov.br/pesquisaJurisprudencia/#/detalhamento/11/*/KEY:%22ACORDAO-COMPLETO-2779579%22/DTRELEVANCIA%2520desc%252C%2520NUMACORDAOINT%2520desc/false/1/false",
+    "published_at": "2026-09-08"
+  },
+  {
+    "source": "TCU",
     "title": "TCU - ACÓRDÃO DE RELAÇÃO 4869/2026 ATA 29/2026 - PRIMEIRA CÂMARA",
     "url": "https://contas.tcu.gov.br/pesquisaJurisprudencia/#/detalhamento/11/*/KEY:%22ACORDAO-COMPLETO-2766663%22/DTRELEVANCIA%2520desc%252C%2520NUMACORDAOINT%2520desc/false/1/false",
     "published_at": "2026-09-01"
@@ -42,52 +72,22 @@
     "published_at": "2026-09-01"
   },
   {
-    "source": "TCU",
-    "title": "TCU - ACÓRDÃO DE RELAÇÃO 4864/2026 ATA 29/2026 - PRIMEIRA CÂMARA",
-    "url": "https://contas.tcu.gov.br/pesquisaJurisprudencia/#/detalhamento/11/*/KEY:%22ACORDAO-COMPLETO-2775965%22/DTRELEVANCIA%2520desc%252C%2520NUMACORDAOINT%2520desc/false/1/false",
-    "published_at": "2026-09-01"
-  },
-  {
-    "source": "TCU",
-    "title": "TCU - ACÓRDÃO DE RELAÇÃO 4863/2026 ATA 29/2026 - PRIMEIRA CÂMARA",
-    "url": "https://contas.tcu.gov.br/pesquisaJurisprudencia/#/detalhamento/11/*/KEY:%22ACORDAO-COMPLETO-2777161%22/DTRELEVANCIA%2520desc%252C%2520NUMACORDAOINT%2520desc/false/1/false",
-    "published_at": "2026-09-01"
-  },
-  {
-    "source": "TCU",
-    "title": "TCU - ACÓRDÃO DE RELAÇÃO 4862/2026 ATA 29/2026 - PRIMEIRA CÂMARA",
-    "url": "https://contas.tcu.gov.br/pesquisaJurisprudencia/#/detalhamento/11/*/KEY:%22ACORDAO-COMPLETO-2777610%22/DTRELEVANCIA%2520desc%252C%2520NUMACORDAOINT%2520desc/false/1/false",
-    "published_at": "2026-09-01"
-  },
-  {
-    "source": "TCU",
-    "title": "TCU - ACÓRDÃO DE RELAÇÃO 4861/2026 ATA 29/2026 - PRIMEIRA CÂMARA",
-    "url": "https://contas.tcu.gov.br/pesquisaJurisprudencia/#/detalhamento/11/*/KEY:%22ACORDAO-COMPLETO-2777609%22/DTRELEVANCIA%2520desc%252C%2520NUMACORDAOINT%2520desc/false/1/false",
-    "published_at": "2026-09-01"
-  },
-  {
-    "source": "TCU",
-    "title": "TCU - ACÓRDÃO DE RELAÇÃO 4860/2026 ATA 29/2026 - PRIMEIRA CÂMARA",
-    "url": "https://contas.tcu.gov.br/pesquisaJurisprudencia/#/detalhamento/11/*/KEY:%22ACORDAO-COMPLETO-2775514%22/DTRELEVANCIA%2520desc%252C%2520NUMACORDAOINT%2520desc/false/1/false",
-    "published_at": "2026-09-01"
-  },
-  {
     "source": "TCE-SP",
     "title": "TCE-SP - Boletim de Jurisprudência | Tribunal de Contas do Estado de São Paulo",
     "url": "https://www.tce.sp.gov.br/boletim-de-jurisprudencia",
-    "published_at": "2026-09-04"
+    "published_at": "2026-09-08"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - Pesquisa de Jurisprudência",
     "url": "https://www.tce.sp.gov.br/jurisprudencia",
-    "published_at": "2026-09-04"
+    "published_at": "2026-09-08"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - Comissão Permanente de Análise de Jurisprudência",
     "url": "https://www.tce.sp.gov.br/boletim-de-jurisprudencia/CPAJ",
-    "published_at": "2026-09-04"
+    "published_at": "2026-09-08"
   },
   {
     "source": "TCE-SP",
@@ -103,15 +103,9 @@
   },
   {
     "source": "TCE-SP",
-    "title": "TCE-SP - Desenvolvimento Sustentável nos municípios paulistas é tema do novo episódio do Programa Controle Externo",
-    "url": "https://www.tce.sp.gov.br/6524-desenvolvimento-sustentavel-municipios-paulistas-e-tema-novo-episodio-programa-controle",
-    "published_at": "2026-08-14"
-  },
-  {
-    "source": "TCE-SP",
     "title": "TCE-SP - Lei nº 14.133",
     "url": "https://www.tce.sp.gov.br/legislacao-comentada/lei-14133-1o-abril-2021",
-    "published_at": "2026-09-04"
+    "published_at": "2026-09-08"
   },
   {
     "source": "TCE-SP",
@@ -129,7 +123,13 @@
     "source": "TCE-SP",
     "title": "TCE-SP - ARTIGO: Impactos do Novo Regime de Precatórios (EC Nº 136/2025) sobre a gestão fiscal e financeira dos municípios",
     "url": "https://www.tce.sp.gov.br/6524-artigo-impactos-novo-regime-precatorios-ec-1362025-sobre-gestao-fiscal-e-financeira-municipios",
-    "published_at": "2026-08-28"
+    "published_at": "2026-08-31"
+  },
+  {
+    "source": "TCE-SP",
+    "title": "TCE-SP - Portal dos Conselhos Municipais | Tribunal de Contas do Estado de São Paulo",
+    "url": "https://www.tce.sp.gov.br/portal-conselhos-municipais",
+    "published_at": "2026-09-08"
   },
   {
     "source": "TCE-MG",
@@ -147,259 +147,85 @@
     "source": "TCE-SC",
     "title": "TCE-SC - Jurisprudência | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/content/jurisprudencia",
-    "published_at": "2026-08-28"
+    "published_at": "2026-09-08"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Denúncias e representações | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/denuncias-representacoes",
-    "published_at": "2026-08-28"
+    "published_at": "2026-09-08"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Informativos de Jurisprudência | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/informativo-de-jurisprud%C3%AAncia",
-    "published_at": "2026-08-28"
+    "published_at": "2026-09-08"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Informativos de Jurisprudência - Edições anteriores | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/informativo-de-jurisprud%C3%AAncia-edicoes-anteriores",
-    "published_at": "2026-08-28"
+    "published_at": "2026-09-08"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Informativos de Jurisprudência",
     "url": "https://www.tcesc.tc.br/informativo-de-jurisprudência",
-    "published_at": "2026-08-28"
+    "published_at": "2026-09-08"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Recolhimento de débitos e de multas | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/recolhimentos",
-    "published_at": "2026-08-28"
+    "published_at": "2026-09-08"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Fornecedores e Inovação | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/fornecedores-e-inovacao",
-    "published_at": "2026-08-28"
+    "published_at": "2026-09-08"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Licitações e Contratos | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/content/licitacoes_contratos",
-    "published_at": "2026-08-28"
+    "published_at": "2026-09-08"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Atendimento Virtual | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/atendimento-virtual",
-    "published_at": "2026-08-28"
+    "published_at": "2026-09-08"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Diário Oficial Eletrônico (DOTC-e) | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/content/dotc-e",
-    "published_at": "2026-08-28"
+    "published_at": "2026-09-08"
   },
   {
     "source": "TCE-PE",
     "title": "TCE-PE - Jurisprudência",
     "url": "https://www.tcepe.tc.br/internet/index.php/inicio-jurisprudencia",
-    "published_at": "2026-09-08"
+    "published_at": "2026-09-09"
   },
   {
     "source": "TCE-PE",
     "title": "TCE-PE - Pesquisa de Jurisprudência",
     "url": "https://sistemas.tce.pe.gov.br/jurisprudencia/PesquisaJurisprudencia!home.action",
-    "published_at": "2026-09-08"
+    "published_at": "2026-09-09"
   },
   {
     "source": "TCE-PE",
     "title": "TCE-PE - Deliberações",
     "url": "https://portal.tcepe.tc.br/jurisprudencia/consulta/deliberacoes",
+    "published_at": "2026-09-09"
+  },
+  {
+    "source": "TCM-GO",
+    "title": "TCM-GO - TCMGO lança novo sistema de jurisprudência com busca mais simples e linguagem acessível",
+    "url": "https://www.tcmgo.tc.br/site/2026/09/tcmgo-lanca-novo-sistema-de-jurisprudencia-com-busca-mais-simples-e-linguagem-acessivel/",
     "published_at": "2026-09-08"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Contratação direta, por Inexigibilidade de Licitação, nos termos do art. 74, inciso III, alínea “f”, da Lei nº 14.133, de 1º de abril de 2021, para treinamento e aperfeiçoamento de",
-    "url": "https://pncp.gov.br/app/editais/27834977000160-1-000056/2026",
-    "published_at": "2026-08-10"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Constitui objeto deste credenciamento a PERMISSÃO SEM OUTORGA ONEROSA PA-RA INSTITUIÇÕES RELIGIOSAS DE ALMIRANTE TAMANDARÉ, com base na Lei 14.133/2021, para a utilização de 1 (um)",
-    "url": "https://pncp.gov.br/app/editais/76105659000174-1-000211/2026",
-    "published_at": "2026-08-10"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - ADESÃO A ATA DE REGISTRO DE PREÇOS Nº 00002/2026 , REFERENTE AO PREGÃO ELETRÔNICO 00002/2026, PROCESSO ADMINISTRATIVO Nº 260312PE0002, QUE OBJETIVA A AQUISIÇÃO DE UM VEÍCULO (AMBUL",
-    "url": "https://pncp.gov.br/app/editais/08741399000173-1-000098/2026",
-    "published_at": "2026-08-10"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Pregão Eletrônico para Registro de Preços visando serviços de engenharia de desinstalação, fornecimento e instalação de sistemas de climatização do tipo split dutado e demais espec",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=78280205000332026",
-    "published_at": "2026-08-10"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - [Portal de Compras Públicas] - Pregão Eletrônico, pelo Sistema de Registro de Preços, visando a contratação de empresa especializada para confecção e fornecimento de UNIFORME ESCOL",
-    "url": "https://www.portaldecompraspublicas.com.br/processos/ES/Prefeitura-Municipal-de-Pancas-3304/PE-20-2026-2026-502120",
-    "published_at": "2026-08-10"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Registro de Preços para futura e eventual aquisição de óleo lubrificante, destinados à manutenção da frota municipal, referente aos itens fracassados (Pregão Eletrônico n.º 04/2026",
-    "url": "https://pncp.gov.br/app/editais/18244319000128-1-000056/2026",
-    "published_at": "2026-08-10"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - CONTRATAÇÃO DIRETA, POR DISPENSA DE LICITAÇÃO, PARA PRESTAÇÃO DE SERVIÇOS DE CONSERTO DE CADEIRA DE RODAS, COM FORNECIMENTO DAS PEÇAS NECESSÁRIAS, NOS TERMOS DO ART. 75, INCISO III",
-    "url": "https://pncp.gov.br/app/editais/11431615000199-1-000011/2026",
-    "published_at": "2026-08-10"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Edital do Pregão Eletrônico Conab 95007/2026 - Sureg/MG - Contratação de empresa para execução de serviço de pintura e manutenção das paredes externas do armazém, pintura das pared",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=13518205000392026",
-    "published_at": "2026-08-10"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - ATA de Registro de Preços para aquisição de cartuchos e toners, de acordo com as especificações contidas no ANEXO I – Termo de referência.",
-    "url": "https://pncp.gov.br/app/editais/67995027000132-1-000291/2026",
-    "published_at": "2026-08-10"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - [Portal de Compras Públicas] - CONCORRÊNCIA ELETRÔNICA PARA CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA EXECUÇÃO DE CERCAMENTO DA BACIA DE ACUMULAÇÃO DA CASA DE BOMBAS DO BAIRRO CANU",
-    "url": "https://www.portaldecompraspublicas.com.br/processos/RS/Prefeitura-Municipal-de-Novo-Hamburgo-43/CPMP-15-2026-2026-493539",
-    "published_at": "2026-08-10"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Aquisição de bens duráveis (equipamentos), a ser realizada na modalidade Pregão Eletrônico , destinados a atender às necessidades da Rede Hospitalar Municipal, incluindo o Hospital",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=92733705000942026",
-    "published_at": "2026-08-10"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Execução de serviços de construção de Campo Society no Município de Cajazeiras do Piauí – PI, conforme especificações constantes no Edital e seus anexos (Termo de Referência, Proj",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=98028603000022026",
-    "published_at": "2026-08-10"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - CREDENCIAMENTO DE EMISSORAS DE RÁDIO AM E FM, COM CANAL ABERTO, QUE SEJAM GERADORAS - COMERCIAIS OU EDUCATIVAS E QUE POSSUAM SINAL DE TRANSMISSÃO NO MUNICÍPIO DE LEME, COM ABRANGÊN",
-    "url": "https://pncp.gov.br/app/contratos/46362661000168/2026/1102",
-    "published_at": "2026-08-12"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Credenciamento para a contratação de empresas para o fornecimento de combustível e derivados destinado a abastecer a frota de veículos em trânsito (fora do Município), pertencente",
-    "url": "https://bnccompras.com/Process/ProcessView?param1=[gkz]pjB/DfgV6RtoTx8kdAyd1cRsvB0/b9pEF94SOwWw4EP_IKlbtJj5QliGd0cf25BP2IAORqAT8mYjIIdqDbg/lROHLHfFJiOv4WaTn82SvQU=",
-    "published_at": "2026-08-12"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - INEXIGIBILIDADE DE LICITAÇÃO PARA AQUISIÇÃO DE TESTES DE PROCALCITONINA, BETA HCG, TROPONINA E DIMERO D, PARA SUPRIR AS NECESSIDADES DOS LABORATORIOS DAS UNDIADES 24 HORAS ( HMU, U",
-    "url": "https://pncp.gov.br/app/editais/02056729000105-1-000565/2026",
-    "published_at": "2026-08-10"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - CONTRATO DE CREDENCIAMENTO ODONTOLOGICO COM JORDANA MONIKE BERLEZI DA SILVA CONFORME EDITAL 001/2026",
-    "url": "https://pncp.gov.br/app/editais/11924138000101-1-000535/2026",
-    "published_at": "2026-08-10"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - VALOR QUE SE EMPENHA PARRA ATENDER DESPESAS COM CONTRATO DE CREDENCIAMENTO DE ENFERMEIRO COM MONALIA CRISTINA MORAIS SILVA CONFORME EDITAL 001/2026",
-    "url": "https://pncp.gov.br/app/editais/11924138000101-1-000536/2026",
-    "published_at": "2026-08-10"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - CONTRATO DE CREDENCIAMENTO MEDICO COM VINICIUS VIEIRA COSTA CONFORME EDITAL 001/2026",
-    "url": "https://pncp.gov.br/app/editais/11924138000101-1-000537/2026",
-    "published_at": "2026-08-10"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - CONTRATO DE CREDENCIAMENTO DE TECNICA DE ENFERMAGEM COM KEILA SOUZA DA SILVA CONFORME EDITAL 001/2026",
-    "url": "https://pncp.gov.br/app/editais/11924138000101-1-000539/2026",
-    "published_at": "2026-08-10"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - CONTRATO DE CREDENCIAMENTO MEDICO COM BRUNA ARAUJO LUSTOSA VIEIRA LTDA CONFORME EDITAL 001/2026",
-    "url": "https://pncp.gov.br/app/editais/11924138000101-1-000541/2026",
-    "published_at": "2026-08-10"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - O Presente Procedimento Auxiliar de Credenciamento tem por objeto a Contratação de empresa a prestação de serviços de fisioterapia para atendimentos aos pacientes do município cons",
-    "url": "https://cismepi.nuvemsitcon.com.br/cismepi/frm_login.php",
-    "published_at": "2026-08-10"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Solicitacao de abertura de processo de credenciamento para contratacao de empresa especializada na prestacao de servicos medicos na area de oftalmologia especificamente para a rea",
-    "url": "https://pncp.gov.br/app/editais/94707627000120-1-000151/2025",
-    "published_at": "2026-08-10"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Credenciamento de empresas especializadas para coleta e destinacao final de descartes de residuos eletronicos no ambito do Municipio de Morro Reuter RS conforme as especificacoes",
-    "url": "https://pncp.gov.br/app/editais/94707627000120-1-000152/2025",
-    "published_at": "2026-08-10"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Formação de ata de registro de preços para futura e eventual aquisição de bens permanentes incluindo frigobares e torres de água quente, considerando o fracasso dos lotes n°04 e",
-    "url": "https://pregaobanrisul.com.br/editais/000011_2026/355146",
-    "published_at": "2026-08-10"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - O objeto da presente licitação é a escolha da proposta mais vantajosa para o Registro de Preços para eventual aquisição de Materiais de limpeza, higiene e descartáveis conforme con",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=78581005000112026",
-    "published_at": "2026-08-10"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - REGISTRO DE PREÇOS PARA EVENTUAL E FUTURA CONTRATAÇÃO DE SERVIÇOS DE CAPINA, ROÇADA E PODA DE ÁRVORES PARA MANUTENÇÃO E CONSERVAÇÃO DAS ÁREAS VERDES DO MUNICÍPIO DE PIRANGA/MG.",
-    "url": "https://app2.licitardigital.com.br/pesquisa/109804",
-    "published_at": "2026-08-10"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - [Portal de Compras Públicas] - A presente licitação objetiva o Registro de Preços para eventual e futura aquisição de veículos automotores novos, zero quilômetro, ano de fabricação",
-    "url": "https://www.portaldecompraspublicas.com.br/processos/RS/Prefeitura-Municipal-de-Nonoai-2726/RPE-014-2026-2026-502330",
-    "published_at": "2026-08-10"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - [Portal de Compras Públicas] - Registro de Preços para Execução de manutenção e implantação de pavimentação e infraestrutura viária em diversas ruas do Município de Itabaiana/PB.",
-    "url": "https://www.portaldecompraspublicas.com.br/processos/PB/Prefeitura-Municipal-de-Itabaiana-1884/RPE-00034-2026-2026-501839",
-    "published_at": "2026-08-10"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Registro de Preços para futura e eventual aquisição de gêneros alimentícios para atender as demandas das secretarias do município de Ingai/MG, conforme condições, quantidades e exi",
-    "url": "https://pncp.gov.br/app/editais/18244319000128-1-000055/2026",
-    "published_at": "2026-08-10"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - REGISTRO DE PREÇOS PARA FUTURA E EVENTUAL AQUISIÇÃO DE NOTEBOOKS NOVOS, DE PRIMEIRO USO, DESTINADOS AO ATENDIMENTO DAS NECESSIDADES DA SECRETARIA MUNICIPAL DE EDUCAÇÃO DO MUNICÍPIO",
-    "url": "https://app2.licitardigital.com.br/pesquisa/109526",
-    "published_at": "2026-08-10"
   },
   {
     "source": "TCM-GO",
