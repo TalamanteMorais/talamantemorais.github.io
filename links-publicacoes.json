@@ -79,9 +79,9 @@
   },
   {
     "source": "STJ",
-    "title": "STJ - Podcast discute jurisprudência sobre visão monocular e isenção de ICMS na compra de veículos",
-    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/26082026-Podcast-discute-jurisprudencia-sobre-visao-monocular-e-isencao-de-ICMS-na-compra-de-veiculos.aspx",
-    "published_at": "2026-08-26"
+    "title": "STJ - STJ amplia proteção dos gabinetes e rigor na apuração de possíveis irregularidades",
+    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/24092026-STJ-amplia-protecao-dos-gabinetes-e-rigor-na-apuracao-de-possiveis-irregularidades.aspx",
+    "published_at": "2026-09-24"
   },
   {
     "source": "STJ",
@@ -94,6 +94,12 @@
     "title": "STJ - Terceira Turma veda interrupção repentina de cobertura de tratamento a paciente com TDAH após resilição de contrato",
     "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/10092026-Terceira-Turma-veda-interrupcao-repentina-de-cobertura-de-tratamento-a-paciente-com-TDAH-apos-resilicao-de.aspx",
     "published_at": "2026-09-10"
+  },
+  {
+    "source": "STJ",
+    "title": "STJ - Terceira Seção decidirá se preso que pede para visitante levar drogas ao presídio responde por tráfico",
+    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/25092026-Terceira-Secao-decidira-se-preso-que-pede-para-visitante-levar-drogas-ao-presidio-responde-por-trafico.aspx",
+    "published_at": "2026-09-25"
   },
   {
     "source": "STJ",
@@ -124,12 +130,6 @@
     "title": "STJ - Informativo destaca tráfico privilegiado e critérios para busca veicular sem mandado judicial",
     "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/21092026-Informativo-destaca-trafico-privilegiado-e-criterios-para-busca-veicular-sem-mandado-judicial.aspx",
     "published_at": "2026-09-21"
-  },
-  {
-    "source": "STJ",
-    "title": "STJ - Tribunal mantém condenação de ex-deputada Flordelis a 50 anos de prisão e anulação de júri que absolveu outros três réus",
-    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/18092026-Tribunal-mantem-condenacao-de-ex-deputada-Flordelis-a-50-anos-de-prisao.aspx",
-    "published_at": "2026-09-18"
   },
   {
     "source": "TCE-SP",
@@ -279,37 +279,19 @@
     "source": "TCE-PE",
     "title": "TCE-PE - Jurisprudência",
     "url": "https://www.tcepe.tc.br/internet/index.php/inicio-jurisprudencia",
-    "published_at": "2026-09-24"
+    "published_at": "2026-09-25"
   },
   {
     "source": "TCE-PE",
     "title": "TCE-PE - Pesquisa de Jurisprudência",
     "url": "https://sistemas.tce.pe.gov.br/jurisprudencia/PesquisaJurisprudencia!home.action",
-    "published_at": "2026-09-24"
+    "published_at": "2026-09-25"
   },
   {
     "source": "TCE-PE",
     "title": "TCE-PE - Deliberações",
     "url": "https://portal.tcepe.tc.br/jurisprudencia/consulta/deliberacoes",
-    "published_at": "2026-09-24"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Contratação de empresa de engenharia para reforma da praça e canteiros centrais da Avenida Santa Terezinha, Município de Garanhuns.",
-    "url": "https://bnccompras.com/Process/ProcessView?param1=[gkz]F_EGJBLFX8I1l8DJL3ys/6VhySHjUTz231_wL6oa32ZnKV0BvTPNYzzuV6/bjAv4kzmpF1jGkvEOcLAapFGeqmqU4qUqI1FBVM8azxst9cg=",
-    "published_at": "2026-08-26"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Recuperação estrutural caixa d'água APS Patos/PB",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=51067703000632025",
-    "published_at": "2026-08-26"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Contratação de obras para execução dos projetos de acessibilidade e segurança contra incêndio e pânico do Instituto Federal do Ceará Juazeiro do Norte",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=15831603000652026",
-    "published_at": "2026-08-26"
+    "published_at": "2026-09-25"
   },
   {
     "source": "TCM-GO",
@@ -346,11 +328,5 @@
     "title": "TCM-GO - Conselheiro Daniel Goulart debate saneamento básico e os impactos na primeira infância no III ENAPI",
     "url": "https://www.tcmgo.tc.br/site/2026/08/conselheiro-daniel-goulart-debate-saneamento-basico-e-os-impactos-na-primeira-infancia-no-iii-enapi/",
     "published_at": "2026-08-27"
-  },
-  {
-    "source": "TCM-GO",
-    "title": "TCM-GO - TCMGO participa da abertura do III ENAPI e reforça compromisso com a primeira infância",
-    "url": "https://www.tcmgo.tc.br/site/2026/08/tcmgo-participa-da-abertura-do-iii-enapi-e-reforca-compromisso-com-a-primeira-infancia/",
-    "published_at": "2026-08-26"
   }
 ]
