@@ -97,6 +97,12 @@
   },
   {
     "source": "STJ",
+    "title": "STJ - A fiscalização ambiental e a responsabilidade compartilhada entre os entes federativos",
+    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/27092026-A-fiscalizacao-ambiental-e-a-responsabilidade-compartilhada-entre-os-entes-federativos.aspx",
+    "published_at": "2026-09-27"
+  },
+  {
+    "source": "STJ",
     "title": "STJ - Terceira Seção decidirá se preso que pede para visitante levar drogas ao presídio responde por tráfico",
     "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/25092026-Terceira-Secao-decidira-se-preso-que-pede-para-visitante-levar-drogas-ao-presidio-responde-por-trafico.aspx",
     "published_at": "2026-09-25"
@@ -124,12 +130,6 @@
     "title": "STJ - Repetitivo discute se protesto extrajudicial de dívida em programa de microcrédito interrompe prescrição",
     "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/22092026-Repetitivo-discute-se-protesto-extrajudicial-de-divida-em-programa-de-microcredito-interrompe-prescricao.aspx",
     "published_at": "2026-09-22"
-  },
-  {
-    "source": "STJ",
-    "title": "STJ - Informativo destaca tráfico privilegiado e critérios para busca veicular sem mandado judicial",
-    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/21092026-Informativo-destaca-trafico-privilegiado-e-criterios-para-busca-veicular-sem-mandado-judicial.aspx",
-    "published_at": "2026-09-21"
   },
   {
     "source": "TCE-SP",
@@ -279,19 +279,61 @@
     "source": "TCE-PE",
     "title": "TCE-PE - Jurisprudência",
     "url": "https://www.tcepe.tc.br/internet/index.php/inicio-jurisprudencia",
-    "published_at": "2026-09-26"
+    "published_at": "2026-09-27"
   },
   {
     "source": "TCE-PE",
     "title": "TCE-PE - Pesquisa de Jurisprudência",
     "url": "https://sistemas.tce.pe.gov.br/jurisprudencia/PesquisaJurisprudencia!home.action",
-    "published_at": "2026-09-26"
+    "published_at": "2026-09-27"
   },
   {
     "source": "TCE-PE",
     "title": "TCE-PE - Deliberações",
     "url": "https://portal.tcepe.tc.br/jurisprudencia/consulta/deliberacoes",
-    "published_at": "2026-09-26"
+    "published_at": "2026-09-27"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Execução de obra de engenharia destinada a instalação de nova rede elétrica da EMEI Leovegildo Alves Paiva, sito Rua Felipe Camarão, 835, Bairro Agrícola, no Município de São Luiz",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=98888103000322026",
+    "published_at": "2026-08-29"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de empresa especializada para execução das obras de reforma e ampliação da Unidade Básica de Saúde (UBS) Lua Nova, localizada na comunidade de Posto Fiscal, Município d",
+    "url": "https://pncp.gov.br/app/editais/01612559000135-1-000009/2026",
+    "published_at": "2026-08-30"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação para execução de obras para pavimentação em paralelepípedo em diversas ruas da Sede e do Povoado de Sambaíba, no Município de Canápolis - BA,",
+    "url": "http://www.licitanet.com.br/",
+    "published_at": "2026-08-30"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - [Portal de Compras Públicas] - CONTRATAÇÃO DE EMPRESA ESPECIALIZADA EM OBRAS DE ENGENHARIA CIVIL PARA CONSTRUÇÃO DE ARENA ESPORTIVA NO MUNICÍPIO DE MONTADAS/PB, CONFORME CONVÊNIO N",
+    "url": "https://www.portaldecompraspublicas.com.br/processos/PB/Prefeitura-Municipal-de-Montadas-1561/CPMP-8-2026-2026-507819",
+    "published_at": "2026-08-29"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Execução de obra de engenharia destinada a pavimentação com pedras irregulares no Rincão do Santana, Interior, no Município de São Luiz Gonzaga – RS.",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=98888103000342026",
+    "published_at": "2026-08-29"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de pessoa jurídica para prestação de serviços de engenharia e obra, no regime de Contratação semi-integrada, para realização do Projeto Executivo e Execução da Reforma",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=17005803000282026",
+    "published_at": "2026-08-31"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - [Portal de Compras Públicas] - Contratação de empresa especializada em engenharia civil para a execução das obras de urbanização do açude José Teodoro (açude velho) localizado na R",
+    "url": "https://www.portaldecompraspublicas.com.br/processos/RN/Prefeitura-Municipal-de-Angicos-1372/CPMP-005-2026-2026-507828",
+    "published_at": "2026-08-30"
   },
   {
     "source": "TCM-GO",
@@ -304,12 +346,6 @@
     "title": "TCM-GO - TCMGO conclui avaliação dos portais de transparência e resultados passam a integrar a análise das contas",
     "url": "https://www.tcmgo.tc.br/site/2026/09/tcmgo-conclui-avaliacao-dos-portais-de-transparencia-e-resultados-passam-a-integrar-a-analise-das-contas/",
     "published_at": "2026-09-23"
-  },
-  {
-    "source": "TCM-GO",
-    "title": "TCM-GO - TCMGO fiscaliza estrutura e funcionamento de Conselhos Tutelares",
-    "url": "https://www.tcmgo.tc.br/site/2026/08/tcmgo-fiscaliza-estrutura-e-funcionamento-de-conselhos-tutelares/",
-    "published_at": "2026-08-28"
   },
   {
     "source": "TCM-GO",
