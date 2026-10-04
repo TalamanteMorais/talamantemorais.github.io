@@ -115,6 +115,12 @@
   },
   {
     "source": "STJ",
+    "title": "STJ - Nota do presidente do STJ e do CJF, ministro Luis Felipe Salomão",
+    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/03102026Nota-do-presidente-do-STJ-e-do-CJF--ministro-Luis-Felipe-Salomao.aspx",
+    "published_at": "2026-10-03"
+  },
+  {
+    "source": "STJ",
     "title": "STJ - Primeira Turma mantém ação de improbidade contra servidor após reversão da demissão em PAD",
     "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/02102026-Primeira-Turma-mantem-acao-de-improbidade-contra-servidor-apos-reversao-da-demissao-em-PAD.aspx",
     "published_at": "2026-10-02"
@@ -124,12 +130,6 @@
     "title": "STJ - Rádio Decidendi discute repetitivo sobre audiência de retratação prevista na Lei Maria da Penha (Tema 1.167)",
     "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/01102026-Radio-Decidendi-discute-repetitivo-sobre-audiencia-de-retratacao-prevista-na-Lei-Maria-da-Penha--Tema-1-167-.aspx",
     "published_at": "2026-10-01"
-  },
-  {
-    "source": "STJ",
-    "title": "STJ - STJ apresenta à advocacia mudanças para aplicação do filtro da relevância",
-    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/29092026-STJ-apresenta-a-advocacia-mudancas-para-aplicacao-do-filtro-da-relevancia.aspx",
-    "published_at": "2026-09-29"
   },
   {
     "source": "TCE-SP",
@@ -279,19 +279,19 @@
     "source": "TCE-PE",
     "title": "TCE-PE - Jurisprudência",
     "url": "https://www.tcepe.tc.br/internet/index.php/inicio-jurisprudencia",
-    "published_at": "2026-10-03"
+    "published_at": "2026-10-04"
   },
   {
     "source": "TCE-PE",
     "title": "TCE-PE - Pesquisa de Jurisprudência",
     "url": "https://sistemas.tce.pe.gov.br/jurisprudencia/PesquisaJurisprudencia!home.action",
-    "published_at": "2026-10-03"
+    "published_at": "2026-10-04"
   },
   {
     "source": "TCE-PE",
     "title": "TCE-PE - Deliberações",
     "url": "https://portal.tcepe.tc.br/jurisprudencia/consulta/deliberacoes",
-    "published_at": "2026-10-03"
+    "published_at": "2026-10-04"
   },
   {
     "source": "TCM-GO",
