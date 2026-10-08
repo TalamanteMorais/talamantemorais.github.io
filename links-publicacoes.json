@@ -97,6 +97,12 @@
   },
   {
     "source": "STJ",
+    "title": "STJ - Repetitivo definirá limites de retenção em rescisão de contratos imobiliários antes e depois da Lei do Distrato",
+    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/08102026-Repetitivo-definira-limites-de-retencao-em-rescisao-de-contratos-imobiliarios-antes-e-depois-da-Lei-do-Distrato.aspx",
+    "published_at": "2026-10-08"
+  },
+  {
+    "source": "STJ",
     "title": "STJ - No empréstimo de dinheiro sem data de devolução, prescrição começa a correr 30 dias após o contrato",
     "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/07102026-No-emprestimo-de-dinheiro-sem-data-de-devolucao--prescricao-comeca-a-correr-30-dias-apos-o-contrato.aspx",
     "published_at": "2026-10-07"
@@ -126,40 +132,34 @@
     "published_at": "2026-10-07"
   },
   {
-    "source": "STJ",
-    "title": "STJ - Empresa da Zona Franca pode aproveitar créditos de PIS e Cofins sobre insumos desonerados se saída for tributada",
-    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/06102026-Empresa-da-Zona-Franca-pode-aproveitar-creditos-de-PIS-e-Cofins-sobre-insumos-desonerados-se-saida-for-tributada.aspx",
-    "published_at": "2026-10-06"
-  },
-  {
     "source": "TCE-SP",
     "title": "TCE-SP - Boletim de Jurisprudência | Tribunal de Contas do Estado de São Paulo",
     "url": "https://www.tce.sp.gov.br/boletim-de-jurisprudencia",
-    "published_at": "2026-10-06"
+    "published_at": "2026-10-08"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - Pesquisa de Jurisprudência",
     "url": "https://www.tce.sp.gov.br/jurisprudencia",
-    "published_at": "2026-10-06"
+    "published_at": "2026-10-08"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - Comissão Permanente de Análise de Jurisprudência",
     "url": "https://www.tce.sp.gov.br/boletim-de-jurisprudencia/CPAJ",
-    "published_at": "2026-10-06"
+    "published_at": "2026-10-08"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - ARTIGO: Ata de registro de preços não é “barriga de aluguel”",
     "url": "https://www.tce.sp.gov.br/6524-artigo-ata-registro-precos-nao-e-barriga-aluguel",
-    "published_at": "2026-09-29"
+    "published_at": "2026-09-30"
   },
   {
     "source": "TCE-SP",
-    "title": "TCE-SP - Lei nº 14.133",
+    "title": "TCE-SP - LEI Nº 14.133, DE 1º DE ABRIL DE 2021",
     "url": "https://www.tce.sp.gov.br/legislacao-comentada/lei-14133-1o-abril-2021",
-    "published_at": "2026-10-06"
+    "published_at": "2026-10-08"
   },
   {
     "source": "TCE-SP",
@@ -175,21 +175,21 @@
   },
   {
     "source": "TCE-SP",
-    "title": "TCE-SP - TCESP orienta municípios a fortalecerem bibliotecas públicas e ampliarem acesso a programas do Ministério da Cultura",
-    "url": "https://www.tce.sp.gov.br/6524-tcesp-orienta-municipios-fortalecerem-bibliotecas-publicas-e-ampliarem-acesso-programas",
-    "published_at": "2026-09-17"
-  },
-  {
-    "source": "TCE-SP",
     "title": "TCE-SP - Portal dos Conselhos Municipais | Tribunal de Contas do Estado de São Paulo",
     "url": "https://www.tce.sp.gov.br/portal-conselhos-municipais",
-    "published_at": "2026-10-06"
+    "published_at": "2026-10-08"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - Teletrabalho",
     "url": "https://www.tce.sp.gov.br/informacoes-teletrabalho",
-    "published_at": "2026-10-06"
+    "published_at": "2026-10-08"
+  },
+  {
+    "source": "TCE-SP",
+    "title": "TCE-SP - AUDESP | Tribunal de Contas do Estado de São Paulo",
+    "url": "https://www.tce.sp.gov.br/audesp",
+    "published_at": "2026-10-08"
   },
   {
     "source": "TCE-MG",
@@ -285,205 +285,43 @@
     "source": "TCE-PE",
     "title": "TCE-PE - Jurisprudência",
     "url": "https://www.tcepe.tc.br/internet/index.php/inicio-jurisprudencia",
-    "published_at": "2026-10-07"
+    "published_at": "2026-10-08"
   },
   {
     "source": "TCE-PE",
     "title": "TCE-PE - Pesquisa de Jurisprudência",
     "url": "https://sistemas.tce.pe.gov.br/jurisprudencia/PesquisaJurisprudencia!home.action",
-    "published_at": "2026-10-07"
+    "published_at": "2026-10-08"
   },
   {
     "source": "TCE-PE",
     "title": "TCE-PE - Deliberações",
     "url": "https://portal.tcepe.tc.br/jurisprudencia/consulta/deliberacoes",
-    "published_at": "2026-10-07"
+    "published_at": "2026-10-08"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - CONCORRÊNCIA ELETRÔNICA 90024/2026 - CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA CONSTRUÇÃO DE EDIFÍCIO GARAGEM NO MUNICÍPIO DE CUIABÁ/MT, DE ACORDO COM AS CONDIÇÕES, ESPECIFICAÇÕES",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=92662503001702026",
-    "published_at": "2026-09-08"
+    "title": "PNCP - CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA EXECUÇÃO DE OBRA DE MACRODRENAGEM, COM IMPLANTAÇÃO DE GALERIA DUPLA E DEMAIS SERVIÇOS DE ENGENHARIA, NO MUNICÍPIO DE CASEIROS/RS DE FORMA",
+    "url": "https://pregaobanrisul.com.br/editais/0010_2026/356473",
+    "published_at": "2026-09-09"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - CONCORRÊNCIA ELETRÔNICA Nº 100/2026 CONSTRUÇÃO PONTE SOBRE RIO LONGÁ - SÃO JOSÉ DO DIVINO -BATALHA/PI",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=93127303000562026",
-    "published_at": "2026-09-08"
+    "title": "PNCP - CONTRATAÇÃO DE EMPRESA ESPECIALIZADA EM ENGENHARIA E/OU ARQUITETURA PARA A ELABORAÇÃO DE PROJETO BÁSICO (ETAPA 1), PROJETO EXECUTIVO (ETAPA 2) E EXECUÇÃO DAS OBRAS DE DRENAGEM PLUV",
+    "url": "https://pregaobanrisul.com.br/editais/0009_2026/356511",
+    "published_at": "2026-09-09"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - ABERTURA DE CONCORRÊNCIA ELETRÔNICA PARA PAVIMENTAÇÃO ASFÁLTICA EM TRECHO DA RUA PEDRO DALLA COSTA.",
-    "url": "https://pregaobanrisul.com.br/editais/0023_2026/356513",
-    "published_at": "2026-09-08"
+    "title": "PNCP - A CONCESSÃO ONEROSA DE USO DE ESPAÇO PÚBLICO MUNICIPAL, PARA FINS DE INSTALAÇÃO E EXPLORAÇÃO COMERCIAL DE LANCHONETE NO QUIOSQUE DO RECANTO DO PARAÍSO, LOCALIZADO NA RUA BÉLGICA, N",
+    "url": "https://pregaobanrisul.com.br/editais/0014_2026/356456",
+    "published_at": "2026-09-09"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - ABERTURA DE CONCORRÊNCIA ELETRÔNICA PARA PAVIMENTAÇÃO ASFÁLTICA NA RUA JOÃO BUSNELLO E RUA VENCESLAU BITTENCURT.",
-    "url": "https://pregaobanrisul.com.br/editais/0028_2026/356525",
-    "published_at": "2026-09-08"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Contratação de empresa para execução de reforma e ampliação do imóvel onde se encontra a Câmara de Vereadores do Município de Mato Rico – Pr, em conformidade a planilha orçamentári",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=93395403000012026",
-    "published_at": "2026-09-08"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA REFORMA E READEQUAÇÕES DO MUSEU DE HISTÓRIA DO PANTANAL – MUPHAN, NO MUNICÍPIO DE CORUMBÁ/MS - CONTRATO DE REPASSE Nº 985092/2025/MTUR/CAI",
-    "url": "https://bllcompras.com/Process/ProcessView?param1=[gkz]v1teooRNdLkBqa4NYpbBgqw6_a84auOUiq0WB6GcqDNoZaRdz4i7U0dVb5Aj8A72zUXUMj1jjw3lifdDuPVcwwdbdTsWhvpg7uejzyPGnPE=",
-    "published_at": "2026-09-08"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - [LICITANET] - CONTRATAÇÃO DE EMPRESA NA AREA DE CONSTRUÇÃO CIVIL PARA IMPLANTAÇÃO DE UMA UNIDADE DE TRATAMENTO DE ESGOTO (ETE) NO MUNICÍPIO DE ESTREITO/MA, CONFORME CONTRATO DE REP",
-    "url": "https://licitanet.com.br/sessao/200249",
-    "published_at": "2026-09-08"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - CONTRATAÇÃO DOS SERVIÇOS DE ENGENHARIA PARA CONSTRUÇÃO DE CRECHE TIPO 2 NO MUNICÍPIO DE CRATO/CE, FIRMADO ENTRE O MUNICÍPIO DE CRATO E O GOVERNO FEDERAL ATRAVÉS DO CONVÊNIO N° 9794",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=98138503000962026",
-    "published_at": "2026-09-08"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - CONTRATAÇÃO DE EMPRESA DE ENGENHARIA PARA EXECUÇÃO DE OBRAS DE PAVIMENTAÇÃO EM (CONCRETO ARMADO E PAVIMENTO FLEXIVEL - CBUQ) E DRENAGEM PLUVIAL NA ESTRADA DO RIO PRETO NO MUNICÍPIO",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=92861503001212026",
-    "published_at": "2026-09-08"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - [Portal de Compras Públicas] - Contratação de empresa especializada para execução de obra de pavimentação em paralelepípedo e drenagem de ruas na zona urbana do Município de Teixei",
-    "url": "https://www.portaldecompraspublicas.com.br/processos/PB/Prefeitura-Municipal-de-Teixeira-1536/CPMP-009-2026-2026-508923",
-    "published_at": "2026-09-08"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - CONTRATAÇÃO DE EMPRESA ESPECIALIZADA DE ENGENHARIA PARA EXECUÇÃO DAS OBRAS DE MODERNIZAÇÃO DO ESTÁDIO MUNICIPAL MIRANDÃO, NO MUNICÍPIO DE CAPITÃO ANDRADE/MG – PLANOS DE AÇÃO Nº 090",
-    "url": "https://app2.licitardigital.com.br/pesquisa/112673",
-    "published_at": "2026-09-08"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA EXECUÇÃO DE RECAPEAMENTO E PAVIMENTAÇÃO ASFÁLTICA EM DIVERSAS RUAS NO DISTRITO DE SANTA DA PEDRA E NA SEDE DO MUNICÍPIO DE SÃO JOÃO DO PAC",
-    "url": "https://app2.licitardigital.com.br/pesquisa/112766",
-    "published_at": "2026-09-08"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - [Portal de Compras Públicas] - Constitui objeto da presente licitação a contratação de empresa especializada para a execução de obra de engenharia para construção de Praça Multiuso",
-    "url": "https://www.portaldecompraspublicas.com.br/processos/RS/Prefeitura-Municipal-de-Quarai-40/CPMP-009-2026-2026-509670",
-    "published_at": "2026-09-08"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - [LICITANET] - CONTRATAÇÃO DE EMPRESA PARA O SERVIÇOS DE REFORMAS E AMPLIAÇÕES DE 03 (TRÊS) ESCOLAS MUNICIPAIS DE EDUCAÇÃO INFANTIL, NO MUNICÍPIO DE CURUÇÁ, ESTADO DO PARÁ, CONFORME",
-    "url": "https://licitanet.com.br/sessao/200616",
-    "published_at": "2026-09-08"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA EXECUÇÃO DE OBRA E SERVIÇOS DE ENGENHARIA DESTINADOS Á PONTE PARREIRAS, EM ESTRUTURA MISTA DE CONCRETO E AÇO, NO MUNICÍPIO DE CRUCILÂNDIAM",
-    "url": "https://app2.licitardigital.com.br/pesquisa/112778",
-    "published_at": "2026-09-08"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - CONCESSÃO ONEROSA DO ESPAÇO PÚBLICO DO MUNICÍPIO, LOCALIZADO NO PARQUE MUNICIPAL DR. RONIE CARDOSO (PARQUE LACUSTRE), DESTINADA À EXPLORAÇÃO COMERCIAL DA ATIVIDADE RECREATIVA DE LO",
-    "url": "https://bllcompras.com/Process/ProcessView?param1=[gkz]7E5M/2MzCZ4bdWAR1kprxrW4mrqxp4SPgSFG1s6RNmG2rurZD8zBE/vvGgzE/aQMcL4r7MUji1Da88J1rDukaI3yuKy6mv_OuhbMOCCO7dA=",
-    "published_at": "2026-09-08"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - [Portal de Compras Públicas] - CONTRATAÇÃO DE EMPRESA PARA CONSTRUÇÃO DE AUDITÓRIO NA ESCOLA CENTRO EDUCACIONAL MUNICIPAL NOVO HORIZONTE/SC - CENHO DO MUNICÍPIO DE NOVO HORIZONTE/S",
-    "url": "https://www.portaldecompraspublicas.com.br/processos/SC/Municipio-de-Novo-Horizonte-1675/CPMP-CE6-2026-2026-509716",
-    "published_at": "2026-09-08"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Contratação de empresa para execução de manutenção preventiva e corretiva, e perfuração de poços tubulares profundos na sede do município de Guanhães e seus distritos, com fornecim",
-    "url": "https://app2.licitardigital.com.br/pesquisa/112780",
-    "published_at": "2026-09-08"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Contratação de empresa para execução da obra de Construção de 25 casas populares pelo programa Moradia Digna, município de Manoel Ribas, Estado do Paraná",
-    "url": "https://bllcompras.com/Process/ProcessView?param1=[gkz]BcyZFJfn6biee1FhCq6vVcvfTOlmFCzGLS4KhnYUfrCArncLE8GF74EYn8RebRd_9/S3UWgBkByL84pSxCCMB8jg/rPsv7LtgUvbaUaJZ6s=",
-    "published_at": "2026-09-08"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Contratação de empresa para execução de manutenção preventiva e corretiva, e perfuração de poços tubulares profundos na sede do município de Guanhães e seus distritos, com fornecim",
-    "url": "https://pncp.gov.br/app/editais/21250048000128-1-000062/2026",
-    "published_at": "2026-09-08"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Contratação de empresa para a execução da obra de 6.994,80 m² Pavimentação em Paralelepípedo, referente à zona urbana do município de PEDRO II- PI.",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=48001003000202026",
-    "published_at": "2026-09-08"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - [LICITANET] - CONSTRUÇÃO DE UNIDADE BÁSICA DE SAÚDE – PORTE TIPO III NO MUNICIPIO DE LAGOA DA CONFUSÃO -TO.",
-    "url": "https://licitanet.com.br/sessao/200119",
-    "published_at": "2026-09-08"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Contratação de empresa especializada de Engenharia para execução de Obra de Construção de uma praça e um campo de futebol no bairro Santa Luzia, no município de Manhuaçu-MG, confor",
-    "url": "https://app2.ammlicita.org.br/pesquisa/112247",
-    "published_at": "2026-09-08"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Contratação de empresa para execução de 7.031,28 M² de pavimentação em paralelepípedo no município de Caldeirão Grande do Piauí-PI.",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=92597303000392026",
-    "published_at": "2026-09-08"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Contratação de empresa de engenharia para execução de obra de pavimentação asfáltica na comunidade rural da Lagoa do Meio, município de Felixlândia/MG, em consonância com o Convêni",
-    "url": "https://app2.licitardigital.com.br/pesquisa/100934",
-    "published_at": "2026-09-08"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA EXECUÇÃO DE OBRA DE PAVIMENTO RÍGIDO, CONCRETO, NA RUA XAXIM, NA SEDE DO MUNICÍPIO DE TURVO",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=98845303000482026",
-    "published_at": "2026-09-08"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - CONTRATAÇÃO DE SERVIÇOS DE EMPRESA ESPECIALIZADA PARA EXECUÇÃO DA OBRA DE PAVIMENTAÇÃO ASFÁLTICO COM CBUQ E DRENAGEM NO LOTEAMENTO \"CHÁCARA SOL NASCENTE\" (ETAPA 02), NO MUNICÍPIO D",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=98671703000992026",
-    "published_at": "2026-09-08"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Contratação de empresa para execução de 6.144,00 M² de pavimentação em paralelepípedo no município de Cocal dos Alves-PI.",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=92597303000402026",
-    "published_at": "2026-09-08"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA EXECUÇÃO DE OBRA DE URBANIZAÇÃO E PAVIMENTAÇÃO ASFÁLTICA EM CBUQ DA RUA PROJETADA B, JARDIM DAS OLIVEIRAS, NO MUNICÍPIO DE JANDAIA DO SUL",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=98763503000362026",
-    "published_at": "2026-09-08"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - [Portal de Compras Públicas] - O objeto desta licitação é a “CONTRATAÇÃO DE EMPRESA ESPECIALIZADA NO RAMO DE ENGENHARIA PARA EXECUÇÃO DE LOMBOFAIXA ACESSÍVEL PARA PEDESTRES, EM SEG",
-    "url": "https://www.portaldecompraspublicas.com.br/processos/SP/Prefeitura-Municipal-de-Pariquera-Acu-3277/CPMP-CPE-NO-011-2026-2026-509675",
-    "published_at": "2026-09-08"
-  },
-  {
-    "source": "TCM-GO",
-    "title": "TCM-GO - TCMGO lança novo sistema de jurisprudência com busca mais simples e linguagem acessível",
-    "url": "https://www.tcmgo.tc.br/site/2026/09/tcmgo-lanca-novo-sistema-de-jurisprudencia-com-busca-mais-simples-e-linguagem-acessivel/",
-    "published_at": "2026-09-08"
+    "title": "PNCP - CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA EXECUÇÃO DE OBRAS DE ENGENHARIA PARA CONSTRUÇÃO DE ESCADA, RAMPA DE ACESSIBILIDADE E CALÇAMENTO EM PAVER PARA A BIBLIOTECA MUNICIPAL FERNA",
+    "url": "https://pregaobanrisul.com.br/editais/0009_2026/356471",
+    "published_at": "2026-09-09"
   },
   {
     "source": "TCM-GO",
