@@ -127,39 +127,45 @@
   },
   {
     "source": "STJ",
-    "title": "STJ - Podcast STJ No Seu Dia discute responsabilidade dos bancos em casos do golpe da falsa central de atendimento",
-    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/07102026-Podcast-STJ-No-Seu-Dia-discute-responsabilidade-dos-bancos-em-casos-do-golpe-da-falsa-central-de-atendimento.aspx",
-    "published_at": "2026-10-07"
+    "title": "STJ - Podcast STJ No Seu Dia aborda descumprimento contratual em serviços de saúde e proibição ao enriquecimento sem causa",
+    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/09102026-Podcast-STJ-No-Seu-Dia-aborda-descumprimento-contratual-em-servicos-de-saude-e-proibicao-ao-enriquecimento-sem.aspx",
+    "published_at": "2026-10-09"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - Boletim de Jurisprudência | Tribunal de Contas do Estado de São Paulo",
     "url": "https://www.tce.sp.gov.br/boletim-de-jurisprudencia",
-    "published_at": "2026-10-08"
+    "published_at": "2026-10-09"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - Pesquisa de Jurisprudência",
     "url": "https://www.tce.sp.gov.br/jurisprudencia",
-    "published_at": "2026-10-08"
+    "published_at": "2026-10-09"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - Comissão Permanente de Análise de Jurisprudência",
     "url": "https://www.tce.sp.gov.br/boletim-de-jurisprudencia/CPAJ",
-    "published_at": "2026-10-08"
+    "published_at": "2026-10-09"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - ARTIGO: Ata de registro de preços não é “barriga de aluguel”",
     "url": "https://www.tce.sp.gov.br/6524-artigo-ata-registro-precos-nao-e-barriga-aluguel",
-    "published_at": "2026-09-30"
+    "published_at": "2026-09-25"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - LEI Nº 14.133, DE 1º DE ABRIL DE 2021",
     "url": "https://www.tce.sp.gov.br/legislacao-comentada/lei-14133-1o-abril-2021",
-    "published_at": "2026-10-08"
+    "published_at": "2026-10-09"
+  },
+  {
+    "source": "TCE-SP",
+    "title": "TCE-SP - TCESP alerta jurisdicionados sobre regras de contratação de segurança privada e riscos da segurança clandestina",
+    "url": "https://www.tce.sp.gov.br/6524-tcesp-alerta-jurisdicionados-sobre-regras-contratacao-seguranca-privada-e-riscos-seguranca",
+    "published_at": "2026-10-09"
   },
   {
     "source": "TCE-SP",
@@ -177,19 +183,13 @@
     "source": "TCE-SP",
     "title": "TCE-SP - Portal dos Conselhos Municipais | Tribunal de Contas do Estado de São Paulo",
     "url": "https://www.tce.sp.gov.br/portal-conselhos-municipais",
-    "published_at": "2026-10-08"
+    "published_at": "2026-10-09"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - Teletrabalho",
     "url": "https://www.tce.sp.gov.br/informacoes-teletrabalho",
-    "published_at": "2026-10-08"
-  },
-  {
-    "source": "TCE-SP",
-    "title": "TCE-SP - AUDESP | Tribunal de Contas do Estado de São Paulo",
-    "url": "https://www.tce.sp.gov.br/audesp",
-    "published_at": "2026-10-08"
+    "published_at": "2026-10-09"
   },
   {
     "source": "TCE-MG",
@@ -216,112 +216,82 @@
     "published_at": "2026-09-22"
   },
   {
-    "source": "TCE-MG",
-    "title": "TCE-MG - Acessibilidade",
-    "url": "https://www.tce.mg.gov.br/Informativo-de-Jurisprudencia-n-336.html/Noticia/1111629148",
-    "published_at": "2026-09-09"
-  },
-  {
     "source": "TCE-SC",
     "title": "TCE-SC - Jurisprudência | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/content/jurisprudencia",
-    "published_at": "2026-10-06"
+    "published_at": "2026-10-08"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Denúncias e representações | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/denuncias-representacoes",
-    "published_at": "2026-10-06"
+    "published_at": "2026-10-08"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Informativos de Jurisprudência | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/informativo-de-jurisprud%C3%AAncia",
-    "published_at": "2026-10-06"
+    "published_at": "2026-10-08"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Informativos de Jurisprudência - Edições anteriores | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/informativo-de-jurisprud%C3%AAncia-edicoes-anteriores",
-    "published_at": "2026-10-06"
+    "published_at": "2026-10-08"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Informativos de Jurisprudência",
     "url": "https://www.tcesc.tc.br/informativo-de-jurisprudência",
-    "published_at": "2026-10-06"
+    "published_at": "2026-10-08"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Recolhimento de débitos e de multas | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/recolhimentos",
-    "published_at": "2026-10-06"
+    "published_at": "2026-10-08"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Fornecedores e Inovação | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/fornecedores-e-inovacao",
-    "published_at": "2026-10-06"
+    "published_at": "2026-10-08"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Licitações e Contratos | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/content/licitacoes_contratos",
-    "published_at": "2026-10-06"
+    "published_at": "2026-10-08"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Atendimento Virtual | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/atendimento-virtual",
-    "published_at": "2026-10-06"
+    "published_at": "2026-10-08"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Diário Oficial Eletrônico (DOTC-e) | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/content/dotc-e",
-    "published_at": "2026-10-06"
+    "published_at": "2026-10-08"
   },
   {
     "source": "TCE-PE",
     "title": "TCE-PE - Jurisprudência",
     "url": "https://www.tcepe.tc.br/internet/index.php/inicio-jurisprudencia",
-    "published_at": "2026-10-08"
+    "published_at": "2026-10-09"
   },
   {
     "source": "TCE-PE",
     "title": "TCE-PE - Pesquisa de Jurisprudência",
     "url": "https://sistemas.tce.pe.gov.br/jurisprudencia/PesquisaJurisprudencia!home.action",
-    "published_at": "2026-10-08"
+    "published_at": "2026-10-09"
   },
   {
     "source": "TCE-PE",
     "title": "TCE-PE - Deliberações",
     "url": "https://portal.tcepe.tc.br/jurisprudencia/consulta/deliberacoes",
-    "published_at": "2026-10-08"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA EXECUÇÃO DE OBRA DE MACRODRENAGEM, COM IMPLANTAÇÃO DE GALERIA DUPLA E DEMAIS SERVIÇOS DE ENGENHARIA, NO MUNICÍPIO DE CASEIROS/RS DE FORMA",
-    "url": "https://pregaobanrisul.com.br/editais/0010_2026/356473",
-    "published_at": "2026-09-09"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - CONTRATAÇÃO DE EMPRESA ESPECIALIZADA EM ENGENHARIA E/OU ARQUITETURA PARA A ELABORAÇÃO DE PROJETO BÁSICO (ETAPA 1), PROJETO EXECUTIVO (ETAPA 2) E EXECUÇÃO DAS OBRAS DE DRENAGEM PLUV",
-    "url": "https://pregaobanrisul.com.br/editais/0009_2026/356511",
-    "published_at": "2026-09-09"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - A CONCESSÃO ONEROSA DE USO DE ESPAÇO PÚBLICO MUNICIPAL, PARA FINS DE INSTALAÇÃO E EXPLORAÇÃO COMERCIAL DE LANCHONETE NO QUIOSQUE DO RECANTO DO PARAÍSO, LOCALIZADO NA RUA BÉLGICA, N",
-    "url": "https://pregaobanrisul.com.br/editais/0014_2026/356456",
-    "published_at": "2026-09-09"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA EXECUÇÃO DE OBRAS DE ENGENHARIA PARA CONSTRUÇÃO DE ESCADA, RAMPA DE ACESSIBILIDADE E CALÇAMENTO EM PAVER PARA A BIBLIOTECA MUNICIPAL FERNA",
-    "url": "https://pregaobanrisul.com.br/editais/0009_2026/356471",
-    "published_at": "2026-09-09"
+    "published_at": "2026-10-09"
   },
   {
     "source": "TCM-GO",
