@@ -73,12 +73,6 @@
   },
   {
     "source": "STJ",
-    "title": "STJ - Informativo de Jurisprudência completa 900 edições com destaque para dação em pagamento em acordo alimentar",
-    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/11092026-Informativo-de-Jurisprudencia-completa-900-edicoes-com-destaque-para-dacao-em-pagamento-em-acordo-alimentar.aspx",
-    "published_at": "2026-09-11"
-  },
-  {
-    "source": "STJ",
     "title": "STJ - Evento na FGV debate arbitragem e apresenta livro sobre jurisprudência do STJ",
     "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/29092026-Evento-na-FGV-debate-arbitragem-e-apresenta-livro-sobre-jurisprudencia-do-STJ.aspx",
     "published_at": "2026-09-29"
@@ -130,6 +124,12 @@
     "title": "STJ - Comunidade indígena do Rio de Janeiro será indenizada por reportagem que a associou ao tráfico de drogas",
     "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/09102026-Comunidade-indigena-do-Rio-de-Janeiro-sera-indenizada-por-reportagem-que-a-associou-ao-trafico-de-droga.aspx",
     "published_at": "2026-10-09"
+  },
+  {
+    "source": "STJ",
+    "title": "STJ - Podcast STJ No Seu Dia discute responsabilidade dos bancos em casos do golpe da falsa central de atendimento",
+    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/07102026-Podcast-STJ-No-Seu-Dia-discute-responsabilidade-dos-bancos-em-casos-do-golpe-da-falsa-central-de-atendimento.aspx",
+    "published_at": "2026-10-07"
   },
   {
     "source": "TCE-SP",
@@ -279,19 +279,19 @@
     "source": "TCE-PE",
     "title": "TCE-PE - Jurisprudência",
     "url": "https://www.tcepe.tc.br/internet/index.php/inicio-jurisprudencia",
-    "published_at": "2026-10-10"
+    "published_at": "2026-10-11"
   },
   {
     "source": "TCE-PE",
     "title": "TCE-PE - Pesquisa de Jurisprudência",
     "url": "https://sistemas.tce.pe.gov.br/jurisprudencia/PesquisaJurisprudencia!home.action",
-    "published_at": "2026-10-10"
+    "published_at": "2026-10-11"
   },
   {
     "source": "TCE-PE",
     "title": "TCE-PE - Deliberações",
     "url": "https://portal.tcepe.tc.br/jurisprudencia/consulta/deliberacoes",
-    "published_at": "2026-10-10"
+    "published_at": "2026-10-11"
   },
   {
     "source": "TCM-GO",
