@@ -49,26 +49,26 @@
   },
   {
     "source": "TCU",
+    "title": "TCU - ACÓRDÃO 2796/2026 ATA 39/2026 - PLENÁRIO",
+    "url": "https://contas.tcu.gov.br/pesquisaJurisprudencia/#/detalhamento/11/*/KEY:%22ACORDAO-COMPLETO-2782562%22/DTRELEVANCIA%2520desc%252C%2520NUMACORDAOINT%2520desc/false/1/false",
+    "published_at": "2026-10-07"
+  },
+  {
+    "source": "TCU",
     "title": "TCU - ACÓRDÃO 2795/2026 ATA 39/2026 - PLENÁRIO",
     "url": "https://contas.tcu.gov.br/pesquisaJurisprudencia/#/detalhamento/11/*/KEY:%22ACORDAO-COMPLETO-2769340%22/DTRELEVANCIA%2520desc%252C%2520NUMACORDAOINT%2520desc/false/1/false",
     "published_at": "2026-10-07"
   },
   {
     "source": "TCU",
-    "title": "TCU - ACÓRDÃO 2790/2026 ATA 39/2026 - PLENÁRIO",
-    "url": "https://contas.tcu.gov.br/pesquisaJurisprudencia/#/detalhamento/11/*/KEY:%22ACORDAO-COMPLETO-2775976%22/DTRELEVANCIA%2520desc%252C%2520NUMACORDAOINT%2520desc/false/1/false",
+    "title": "TCU - ACÓRDÃO 2794/2026 ATA 39/2026 - PLENÁRIO",
+    "url": "https://contas.tcu.gov.br/pesquisaJurisprudencia/#/detalhamento/11/*/KEY:%22ACORDAO-COMPLETO-2778198%22/DTRELEVANCIA%2520desc%252C%2520NUMACORDAOINT%2520desc/false/1/false",
     "published_at": "2026-10-07"
   },
   {
     "source": "TCU",
-    "title": "TCU - ACÓRDÃO 2789/2026 ATA 39/2026 - PLENÁRIO",
-    "url": "https://contas.tcu.gov.br/pesquisaJurisprudencia/#/detalhamento/11/*/KEY:%22ACORDAO-COMPLETO-2777452%22/DTRELEVANCIA%2520desc%252C%2520NUMACORDAOINT%2520desc/false/1/false",
-    "published_at": "2026-10-07"
-  },
-  {
-    "source": "TCU",
-    "title": "TCU - ACÓRDÃO 2788/2026 ATA 39/2026 - PLENÁRIO",
-    "url": "https://contas.tcu.gov.br/pesquisaJurisprudencia/#/detalhamento/11/*/KEY:%22ACORDAO-COMPLETO-2770675%22/DTRELEVANCIA%2520desc%252C%2520NUMACORDAOINT%2520desc/false/1/false",
+    "title": "TCU - ACÓRDÃO 2793/2026 ATA 39/2026 - PLENÁRIO",
+    "url": "https://contas.tcu.gov.br/pesquisaJurisprudencia/#/detalhamento/11/*/KEY:%22ACORDAO-COMPLETO-2767715%22/DTRELEVANCIA%2520desc%252C%2520NUMACORDAOINT%2520desc/false/1/false",
     "published_at": "2026-10-07"
   },
   {
@@ -115,6 +115,12 @@
   },
   {
     "source": "STJ",
+    "title": "STJ - Credor trabalhista tem legitimidade para propor ação declaratória de insolvência civil",
+    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/13102026-Credor-trabalhista-tem-legitimidade-para-propor-acao-declaratoria-de-insolvencia-civil.aspx",
+    "published_at": "2026-10-13"
+  },
+  {
+    "source": "STJ",
     "title": "STJ - Podcast STJ No Seu Dia aborda descumprimento contratual em serviços de saúde e proibição ao enriquecimento sem causa",
     "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/09102026-Podcast-STJ-No-Seu-Dia-aborda-descumprimento-contratual-em-servicos-de-saude-e-proibicao-ao-enriquecimento-sem.aspx",
     "published_at": "2026-10-09"
@@ -126,28 +132,22 @@
     "published_at": "2026-10-09"
   },
   {
-    "source": "STJ",
-    "title": "STJ - Podcast STJ No Seu Dia discute responsabilidade dos bancos em casos do golpe da falsa central de atendimento",
-    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/07102026-Podcast-STJ-No-Seu-Dia-discute-responsabilidade-dos-bancos-em-casos-do-golpe-da-falsa-central-de-atendimento.aspx",
-    "published_at": "2026-10-07"
-  },
-  {
     "source": "TCE-SP",
     "title": "TCE-SP - Boletim de Jurisprudência | Tribunal de Contas do Estado de São Paulo",
     "url": "https://www.tce.sp.gov.br/boletim-de-jurisprudencia",
-    "published_at": "2026-10-09"
+    "published_at": "2026-10-13"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - Pesquisa de Jurisprudência",
     "url": "https://www.tce.sp.gov.br/jurisprudencia",
-    "published_at": "2026-10-09"
+    "published_at": "2026-10-13"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - Comissão Permanente de Análise de Jurisprudência",
     "url": "https://www.tce.sp.gov.br/boletim-de-jurisprudencia/CPAJ",
-    "published_at": "2026-10-09"
+    "published_at": "2026-10-13"
   },
   {
     "source": "TCE-SP",
@@ -159,7 +159,7 @@
     "source": "TCE-SP",
     "title": "TCE-SP - LEI Nº 14.133, DE 1º DE ABRIL DE 2021",
     "url": "https://www.tce.sp.gov.br/legislacao-comentada/lei-14133-1o-abril-2021",
-    "published_at": "2026-10-09"
+    "published_at": "2026-10-13"
   },
   {
     "source": "TCE-SP",
@@ -183,13 +183,13 @@
     "source": "TCE-SP",
     "title": "TCE-SP - Portal dos Conselhos Municipais | Tribunal de Contas do Estado de São Paulo",
     "url": "https://www.tce.sp.gov.br/portal-conselhos-municipais",
-    "published_at": "2026-10-09"
+    "published_at": "2026-10-13"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - Teletrabalho",
     "url": "https://www.tce.sp.gov.br/informacoes-teletrabalho",
-    "published_at": "2026-10-09"
+    "published_at": "2026-10-13"
   },
   {
     "source": "TCE-MG",
@@ -279,19 +279,19 @@
     "source": "TCE-PE",
     "title": "TCE-PE - Jurisprudência",
     "url": "https://www.tcepe.tc.br/internet/index.php/inicio-jurisprudencia",
-    "published_at": "2026-10-12"
+    "published_at": "2026-10-13"
   },
   {
     "source": "TCE-PE",
     "title": "TCE-PE - Pesquisa de Jurisprudência",
     "url": "https://sistemas.tce.pe.gov.br/jurisprudencia/PesquisaJurisprudencia!home.action",
-    "published_at": "2026-10-12"
+    "published_at": "2026-10-13"
   },
   {
     "source": "TCE-PE",
     "title": "TCE-PE - Deliberações",
     "url": "https://portal.tcepe.tc.br/jurisprudencia/consulta/deliberacoes",
-    "published_at": "2026-10-12"
+    "published_at": "2026-10-13"
   },
   {
     "source": "PNCP",
@@ -343,18 +343,6 @@
   },
   {
     "source": "PNCP",
-    "title": "PNCP - Trata-se de processo referente a procedimento licitatório, na modalidade Pregão Eletrônico, tipo menor preço, com vistas à contratação de pessoa jurídica especializada na prestação",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=17017505000242026",
-    "published_at": "2026-09-14"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Aquisição de Produtos para Saúde (Material laboratorial - grupo 35 - cassetes histológicos) para o Hospital das Clinicas da UFG da Rede HU-Brasil na modalidade Pregão Eletrônico",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=15590405001272026",
-    "published_at": "2026-09-14"
-  },
-  {
-    "source": "PNCP",
     "title": "PNCP - CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA REFORMA E AMPLIAÇÃO DA CÂMARA DE VEREADORES DO MUNICIPIO DE MAJOR VIEIRA SC COM FORNECIMENTO DE TODO O MATERIAL E MÃO DE OBRA NECESSÁRIA,",
     "url": "https://pncp.gov.br/app/editais/83102392000127-1-000183/2026",
     "published_at": "2026-09-14"
@@ -367,38 +355,8 @@
   },
   {
     "source": "PNCP",
-    "title": "PNCP - Constitui o objeto da presente licitação o registro de preços para eventual e futura aquisição de peças para reposição em equipamentos de refrigeração com fornecimento de mão de ob",
-    "url": "https://pncp.gov.br/app/editais/83028415000109-1-000135/2026",
-    "published_at": "2026-09-14"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Constitui objeto da presente licitação a realização de registro de preços para eventual e futura contratação de serviço de mão de obra elétrica referente as instalações das decoraç",
-    "url": "https://pncp.gov.br/app/editais/83028415000109-1-000136/2026",
-    "published_at": "2026-09-14"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Registro de Preços para futura e eventual aquisição de pneus novos, câmaras de ar, protetores e itens correlatos, destinados à manutenção preventiva e corretiva da frota de veículo",
-    "url": "https://app2-compras.licitacarutaperama.com.br/pesquisa/8889",
-    "published_at": "2026-09-13"
-  },
-  {
-    "source": "PNCP",
     "title": "PNCP - CONTRATAÇÃO DE EMPRESA DE ENGENHARIA PARA PAVIMENTAÇÃO DE VIAS NAS ÁREAS URBANAS DOS MUNICIPIOS DA REGIÃO DE IRECÊ, CONFORME CONTRATO DE REPASSE Nº 998409/2026/MCIDADES/CAIXA.",
     "url": "https://bnccompras.com/Process/ProcessView?param1=[gkz]miNwtytWNP4yOWq2kPfpnCT/s6b3F3Nxb_FEQIHS/F23lCT5uzqQDLWHz0nCnsnKCXywJSl/4mrp2iRr7xO6/6qrLemHvzXl_aVjiK2PFWw=",
-    "published_at": "2026-09-14"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - O objeto da presente licitação é serviço de engenharia de manutenção de transformador, conforme condições, quantidades e exigências estabelecidas no Edital e seus anexos.",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=15306105003802026",
-    "published_at": "2026-09-14"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Registro de preços para aquisição de armários metálicos em aço, tipo locker, nos termos do edital e dos seus anexos.",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=10000105001312026",
     "published_at": "2026-09-14"
   },
   {
@@ -471,6 +429,48 @@
     "source": "PNCP",
     "title": "PNCP - CONTRATAÇÃO DE EMPRESA DE ENGENHARIA ESPECIALIZADA PARA “CONSTRUÇÃO DE PAVIMENTAÇÃO, COM DRENAGEM SUPERFICIAL, EM DIVERSAS RUAS DO MUNICÍPIO DE BOM JESUS/RN”, VINCULADA À EMENDA PA",
     "url": "https://pncp.gov.br/app/editais/08002404000126-1-000074/2026",
+    "published_at": "2026-09-14"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CONTRATAÇÃO DOS SERVIÇOS DE ENGENHARIA PARA CONSTRUÇÃO DO ESPAÇO ESPORTIVO COMUNITÁRIO NO MUNICÍPIO DO CRATO/CE, ATRAVÉS DO CONVÊNIO N° 987519 FIRMADO ENTRE O MUNICÍPIO DE CRATO E",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=98138503000972026",
+    "published_at": "2026-09-14"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de empresa de engenharia para construção de dois (02) postos de saúde, nas vilas CAPOEIRO e ARAPUÃ, zona rural deste município",
+    "url": "https://bnccompras.com/Process/ProcessView?param1=[gkz]5y9GFGGzxo1nWpWRlEZsfdoSbufyVCvuKB3rmfmseOiK5eLSAf8v69vojmbR/6PH4I762IFNXlEgE9lr8gHNRZ5L7WKsL9jM6ETEUsJARoU=",
+    "published_at": "2026-09-14"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - [Portal de Compras Públicas] - Contratação de empresa especializada para Construção do Centro de Referência de Assistência Social – CRAS- Município de Cametá-Pa.",
+    "url": "https://www.portaldecompraspublicas.com.br/processos/PA/Prefeitura-Municipal-de-Cameta-919/CPMP-11-2026-2026-506883",
+    "published_at": "2026-09-14"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CONTRATAÇÃO DE EMPRESA DE ENGENHARIA CIVIL DESTINADO À EXECUÇÃO DOS SERVIÇOS DE REFORMA DA PASSAGEM MOLHADA DO POVOADO SACO DOS POLIDÓRIOS, NO MUNICÍPIO DE BRASILEIRA - PI",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=45043603000312026",
+    "published_at": "2026-09-14"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CONTRATAÇAO DE EMPRESA DE ENGENHARIA PARA CONSTRUÇÃO DE UMA PRAÇA NO BAIRRO SANTA INES E OUTRA PRAÇA NO CENTRO DA CIDADE DO MUNICIPIO DE CACHOEIRINHA/PE, CONFORME EXEMPLIFICA O TER",
+    "url": "https://bnccompras.com/Process/ProcessView?param1=[gkz]gPHprKuBzOa4iQJOvNGRLZWn6n8SO1ELaU211OFWE3k9jlfZHfxxzZ_Iri47m8IkvjPtpF7emrdryTQBZLZ/Bas9kIueDqpNwYyP20/fs9Y=",
+    "published_at": "2026-09-14"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CONCLUSÃO DA CONSTRUÇÃO DA QUADRA DA ESCOLA MUNICIPAL DE ENSINO FUNDAMENTAL JOSÉ ROZENO NO MUNICIPIO DE CANINDÉ.",
+    "url": "http://precodereferencia.m2atecnologia.com.br/c/-bAR2p8DTz6brN3R8nLrQA.LNDuq-D6db_K/",
+    "published_at": "2026-09-14"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CONSTRUÇÃO DA NOVA UNIDADE DE PRONTO ATENDIMENTO (UPA) PORTE III NO MUNICIPIO DE BARRA MANSA/RJ",
+    "url": "https://www.gp.srv.br/transparencia_barramansa/servlet/licitacoes_v2?9",
     "published_at": "2026-09-14"
   },
   {
