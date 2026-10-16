@@ -121,51 +121,45 @@
   },
   {
     "source": "STJ",
-    "title": "STJ - Remessa ao exterior pela exploração de obras audiovisuais estrangeiras no Brasil tem alíquota de 15% de IR na fonte",
-    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/15102026-Remessa-ao-exterior-pela-exploracao-de-obras-audiovisuais-estrangeiras-no-Brasil-tem-aliquota-de-15--de-IR-na.aspx",
-    "published_at": "2026-10-15"
+    "title": "STJ - Terceira Turma aplica efeito retroativo à revogação da gratuidade de justiça",
+    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/16102026-Terceira-Turma-aplica-efeito-retroativo-a-revogacao-da-gratuidade-de-justica.aspx",
+    "published_at": "2026-10-16"
   },
   {
     "source": "STJ",
-    "title": "STJ - Terceira Seção reconhece relevância sobre fixação de valor mínimo para reparação de danos à Fazenda por crimes tributários",
-    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/15102026-Terceira-Secao-reconhece-relevancia-sobre-fixacao-de-valor-minimo-para-reparacao-de-danos-a-Fazenda-por-crimes.aspx",
+    "title": "STJ - STJ rejeita pedido para que jogo entre Vasco e Boca Juniors pela Sul-Americana não fosse realizado no Maracanã",
+    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/15102026-STJ-rejeita-pedido-para-que-jogo-entre-Vasco-e-Boca-Juniors-pela-Libertadores-nao-fosse-realizado-no-Maracana.aspx",
     "published_at": "2026-10-15"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - Boletim de Jurisprudência | Tribunal de Contas do Estado de São Paulo",
     "url": "https://www.tce.sp.gov.br/boletim-de-jurisprudencia",
-    "published_at": "2026-10-13"
+    "published_at": "2026-10-15"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - Pesquisa de Jurisprudência",
     "url": "https://www.tce.sp.gov.br/jurisprudencia",
-    "published_at": "2026-10-13"
+    "published_at": "2026-10-15"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - Comissão Permanente de Análise de Jurisprudência",
     "url": "https://www.tce.sp.gov.br/boletim-de-jurisprudencia/CPAJ",
-    "published_at": "2026-10-13"
-  },
-  {
-    "source": "TCE-SP",
-    "title": "TCE-SP - ARTIGO: Ata de registro de preços não é “barriga de aluguel”",
-    "url": "https://www.tce.sp.gov.br/6524-artigo-ata-registro-precos-nao-e-barriga-aluguel",
-    "published_at": "2026-09-30"
+    "published_at": "2026-10-15"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - ARTIGO: Administração Pública: o elo mais frágil da licitação",
     "url": "https://www.tce.sp.gov.br/6524-artigo-administracao-publica-elo-mais-fragil-licitacao",
-    "published_at": "2026-10-13"
+    "published_at": "2026-10-15"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - LEI Nº 14.133, DE 1º DE ABRIL DE 2021",
     "url": "https://www.tce.sp.gov.br/legislacao-comentada/lei-14133-1o-abril-2021",
-    "published_at": "2026-10-13"
+    "published_at": "2026-10-15"
   },
   {
     "source": "TCE-SP",
@@ -189,7 +183,13 @@
     "source": "TCE-SP",
     "title": "TCE-SP - Portal dos Conselhos Municipais | Tribunal de Contas do Estado de São Paulo",
     "url": "https://www.tce.sp.gov.br/portal-conselhos-municipais",
-    "published_at": "2026-10-13"
+    "published_at": "2026-10-15"
+  },
+  {
+    "source": "TCE-SP",
+    "title": "TCE-SP - Teletrabalho",
+    "url": "https://www.tce.sp.gov.br/informacoes-teletrabalho",
+    "published_at": "2026-10-15"
   },
   {
     "source": "TCE-MG",
@@ -219,97 +219,79 @@
     "source": "TCE-SC",
     "title": "TCE-SC - Jurisprudência | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/content/jurisprudencia",
-    "published_at": "2026-10-13"
+    "published_at": "2026-10-15"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Denúncias e representações | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/denuncias-representacoes",
-    "published_at": "2026-10-13"
+    "published_at": "2026-10-15"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Informativos de Jurisprudência | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/informativo-de-jurisprud%C3%AAncia",
-    "published_at": "2026-10-13"
+    "published_at": "2026-10-15"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Informativos de Jurisprudência - Edições anteriores | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/informativo-de-jurisprud%C3%AAncia-edicoes-anteriores",
-    "published_at": "2026-10-13"
+    "published_at": "2026-10-15"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Informativos de Jurisprudência",
     "url": "https://www.tcesc.tc.br/informativo-de-jurisprudência",
-    "published_at": "2026-10-13"
+    "published_at": "2026-10-15"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Recolhimento de débitos e de multas | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/recolhimentos",
-    "published_at": "2026-10-13"
+    "published_at": "2026-10-15"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Fornecedores e Inovação | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/fornecedores-e-inovacao",
-    "published_at": "2026-10-13"
+    "published_at": "2026-10-15"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Licitações e Contratos | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/content/licitacoes_contratos",
-    "published_at": "2026-10-13"
+    "published_at": "2026-10-15"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Atendimento Virtual | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/atendimento-virtual",
-    "published_at": "2026-10-13"
+    "published_at": "2026-10-15"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Diário Oficial Eletrônico (DOTC-e) | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/content/dotc-e",
-    "published_at": "2026-10-13"
+    "published_at": "2026-10-15"
   },
   {
     "source": "TCE-PE",
     "title": "TCE-PE - Jurisprudência",
     "url": "https://www.tcepe.tc.br/internet/index.php/inicio-jurisprudencia",
-    "published_at": "2026-10-15"
+    "published_at": "2026-10-16"
   },
   {
     "source": "TCE-PE",
     "title": "TCE-PE - Pesquisa de Jurisprudência",
     "url": "https://sistemas.tce.pe.gov.br/jurisprudencia/PesquisaJurisprudencia!home.action",
-    "published_at": "2026-10-15"
+    "published_at": "2026-10-16"
   },
   {
     "source": "TCE-PE",
     "title": "TCE-PE - Deliberações",
     "url": "https://portal.tcepe.tc.br/jurisprudencia/consulta/deliberacoes",
-    "published_at": "2026-10-15"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Contratação de empresa especializada para a Execução de Construção de Pontes e Obras de Arte Especiais na Rodovia BR-158/MT, Lote B, trecho: km 201,20 da BR-158/MT (fim das obras d",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=39302003000852026",
-    "published_at": "2026-09-16"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Contratação de concessão onerosa de uso do espaço físico destinado à implantação e exploração de serviços de lanchonete, com área total de 45,62 m², no Campus Reitor Edgard Santos",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=15871703002442026",
-    "published_at": "2026-09-16"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Contratação de empresa especializada para execução de obra de engenharia - construção de Passarela interligando o Bloco S à rua interna da UTFPR - Campus Cornélio Procópio.",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=15317603001822026",
-    "published_at": "2026-09-16"
+    "published_at": "2026-10-16"
   },
   {
     "source": "TCM-GO",
