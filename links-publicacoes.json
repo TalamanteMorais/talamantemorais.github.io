@@ -43,33 +43,33 @@
   },
   {
     "source": "TCU",
-    "title": "TCU - ACÓRDÃO DE RELAÇÃO 5685/2026 ATA 36/2026 - PRIMEIRA CÂMARA",
-    "url": "https://contas.tcu.gov.br/pesquisaJurisprudencia/#/detalhamento/11/*/KEY:%22ACORDAO-COMPLETO-2782758%22/DTRELEVANCIA%2520desc%252C%2520NUMACORDAOINT%2520desc/false/1/false",
-    "published_at": "2026-10-20"
+    "title": "TCU - ACÓRDÃO 2932/2026 ATA 41/2026 - PLENÁRIO",
+    "url": "https://contas.tcu.gov.br/pesquisaJurisprudencia/#/detalhamento/11/*/KEY:%22ACORDAO-COMPLETO-2782990%22/DTRELEVANCIA%2520desc%252C%2520NUMACORDAOINT%2520desc/false/1/false",
+    "published_at": "2026-10-21"
   },
   {
     "source": "TCU",
-    "title": "TCU - ACÓRDÃO DE RELAÇÃO 5684/2026 ATA 36/2026 - PRIMEIRA CÂMARA",
-    "url": "https://contas.tcu.gov.br/pesquisaJurisprudencia/#/detalhamento/11/*/KEY:%22ACORDAO-COMPLETO-2779218%22/DTRELEVANCIA%2520desc%252C%2520NUMACORDAOINT%2520desc/false/1/false",
-    "published_at": "2026-10-20"
+    "title": "TCU - ACÓRDÃO 2931/2026 ATA 41/2026 - PLENÁRIO",
+    "url": "https://contas.tcu.gov.br/pesquisaJurisprudencia/#/detalhamento/11/*/KEY:%22ACORDAO-COMPLETO-2705076%22/DTRELEVANCIA%2520desc%252C%2520NUMACORDAOINT%2520desc/false/1/false",
+    "published_at": "2026-10-21"
   },
   {
     "source": "TCU",
-    "title": "TCU - ACÓRDÃO DE RELAÇÃO 5683/2026 ATA 36/2026 - PRIMEIRA CÂMARA",
-    "url": "https://contas.tcu.gov.br/pesquisaJurisprudencia/#/detalhamento/11/*/KEY:%22ACORDAO-COMPLETO-2783407%22/DTRELEVANCIA%2520desc%252C%2520NUMACORDAOINT%2520desc/false/1/false",
-    "published_at": "2026-10-20"
+    "title": "TCU - ACÓRDÃO 2930/2026 ATA 41/2026 - PLENÁRIO",
+    "url": "https://contas.tcu.gov.br/pesquisaJurisprudencia/#/detalhamento/11/*/KEY:%22ACORDAO-COMPLETO-2782703%22/DTRELEVANCIA%2520desc%252C%2520NUMACORDAOINT%2520desc/false/1/false",
+    "published_at": "2026-10-21"
   },
   {
     "source": "TCU",
-    "title": "TCU - ACÓRDÃO DE RELAÇÃO 5682/2026 ATA 36/2026 - PRIMEIRA CÂMARA",
-    "url": "https://contas.tcu.gov.br/pesquisaJurisprudencia/#/detalhamento/11/*/KEY:%22ACORDAO-COMPLETO-2780906%22/DTRELEVANCIA%2520desc%252C%2520NUMACORDAOINT%2520desc/false/1/false",
-    "published_at": "2026-10-20"
+    "title": "TCU - ACÓRDÃO 2929/2026 ATA 41/2026 - PLENÁRIO",
+    "url": "https://contas.tcu.gov.br/pesquisaJurisprudencia/#/detalhamento/11/*/KEY:%22ACORDAO-COMPLETO-2779523%22/DTRELEVANCIA%2520desc%252C%2520NUMACORDAOINT%2520desc/false/1/false",
+    "published_at": "2026-10-21"
   },
   {
     "source": "TCU",
-    "title": "TCU - ACÓRDÃO DE RELAÇÃO 5681/2026 ATA 36/2026 - PRIMEIRA CÂMARA",
-    "url": "https://contas.tcu.gov.br/pesquisaJurisprudencia/#/detalhamento/11/*/KEY:%22ACORDAO-COMPLETO-2778649%22/DTRELEVANCIA%2520desc%252C%2520NUMACORDAOINT%2520desc/false/1/false",
-    "published_at": "2026-10-20"
+    "title": "TCU - ACÓRDÃO 2927/2026 ATA 41/2026 - PLENÁRIO",
+    "url": "https://contas.tcu.gov.br/pesquisaJurisprudencia/#/detalhamento/11/*/KEY:%22ACORDAO-COMPLETO-2762391%22/DTRELEVANCIA%2520desc%252C%2520NUMACORDAOINT%2520desc/false/1/false",
+    "published_at": "2026-10-21"
   },
   {
     "source": "STJ",
@@ -88,12 +88,6 @@
     "title": "STJ - STJ afasta servidores suspeitos de irregularidades e terá programa de confiança digital para mitigar novos riscos",
     "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/19102026-STJ-afasta-servidores-suspeitos-de-irregularidades-e-tera-programa-de-confianca-digital-para-mitigar-novos-riscos.aspx",
     "published_at": "2026-10-19"
-  },
-  {
-    "source": "STJ",
-    "title": "STJ - STJ amplia proteção dos gabinetes e rigor na apuração de possíveis irregularidades",
-    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/24092026-STJ-amplia-protecao-dos-gabinetes-e-rigor-na-apuracao-de-possiveis-irregularidades.aspx",
-    "published_at": "2026-09-24"
   },
   {
     "source": "STJ",
@@ -132,34 +126,46 @@
     "published_at": "2026-09-28"
   },
   {
+    "source": "STJ",
+    "title": "STJ - Enfam oferece duas vagas de mestrado em direito para candidatos de fora da carreira jurídica",
+    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/22102026-Enfam-oferece-duas-vagas-de-mestrado-em-direito-para-candidatos-de-fora-da-carreira-juridica.aspx",
+    "published_at": "2026-10-22"
+  },
+  {
     "source": "TCE-SP",
     "title": "TCE-SP - Boletim de Jurisprudência | Tribunal de Contas do Estado de São Paulo",
     "url": "https://www.tce.sp.gov.br/boletim-de-jurisprudencia",
-    "published_at": "2026-10-20"
+    "published_at": "2026-10-23"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - Pesquisa de Jurisprudência",
     "url": "https://www.tce.sp.gov.br/jurisprudencia",
-    "published_at": "2026-10-20"
+    "published_at": "2026-10-23"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - Comissão Permanente de Análise de Jurisprudência",
     "url": "https://www.tce.sp.gov.br/boletim-de-jurisprudencia/CPAJ",
-    "published_at": "2026-10-20"
+    "published_at": "2026-10-23"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - ARTIGO: Administração Pública: o elo mais frágil da licitação",
     "url": "https://www.tce.sp.gov.br/6524-artigo-administracao-publica-elo-mais-fragil-licitacao",
-    "published_at": "2026-10-13"
+    "published_at": "2026-10-15"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - LEI Nº 14.133, DE 1º DE ABRIL DE 2021",
     "url": "https://www.tce.sp.gov.br/legislacao-comentada/lei-14133-1o-abril-2021",
-    "published_at": "2026-10-20"
+    "published_at": "2026-10-23"
+  },
+  {
+    "source": "TCE-SP",
+    "title": "TCE-SP - 30º Ciclo de Debates do TCESP reúne mais de 8 mil agentes públicos em 20 municípios paulistas",
+    "url": "https://www.tce.sp.gov.br/6524-30o-ciclo-debates-tcesp-reune-mais-8-mil-agentes-publicos-20-municipios-paulistas",
+    "published_at": "2026-10-23"
   },
   {
     "source": "TCE-SP",
@@ -183,25 +189,19 @@
     "source": "TCE-SP",
     "title": "TCE-SP - Portal dos Conselhos Municipais | Tribunal de Contas do Estado de São Paulo",
     "url": "https://www.tce.sp.gov.br/portal-conselhos-municipais",
-    "published_at": "2026-10-20"
-  },
-  {
-    "source": "TCE-SP",
-    "title": "TCE-SP - Teletrabalho",
-    "url": "https://www.tce.sp.gov.br/informacoes-teletrabalho",
-    "published_at": "2026-10-20"
+    "published_at": "2026-10-23"
   },
   {
     "source": "TCE-MG",
     "title": "TCE-MG - Informativo de Jurisprudência",
     "url": "https://www.tce.mg.gov.br/Noticia/?cod_secao=1ISP&cod_secao_menu=5L&tipo=1&url=",
-    "published_at": "2026-10-23"
+    "published_at": "2026-10-24"
   },
   {
     "source": "TCE-MG",
     "title": "TCE-MG - Pesquisa de Jurisprudência TCJuris",
     "url": "https://tcjuris.tce.mg.gov.br/",
-    "published_at": "2026-10-23"
+    "published_at": "2026-10-24"
   },
   {
     "source": "TCE-SC",
@@ -267,19 +267,103 @@
     "source": "TCE-PE",
     "title": "TCE-PE - Jurisprudência",
     "url": "https://www.tcepe.tc.br/internet/index.php/inicio-jurisprudencia",
-    "published_at": "2026-10-23"
+    "published_at": "2026-10-24"
   },
   {
     "source": "TCE-PE",
     "title": "TCE-PE - Pesquisa de Jurisprudência",
     "url": "https://sistemas.tce.pe.gov.br/jurisprudencia/PesquisaJurisprudencia!home.action",
-    "published_at": "2026-10-23"
+    "published_at": "2026-10-24"
   },
   {
     "source": "TCE-PE",
     "title": "TCE-PE - Deliberações",
     "url": "https://portal.tcepe.tc.br/jurisprudencia/consulta/deliberacoes",
-    "published_at": "2026-10-23"
+    "published_at": "2026-10-24"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Concorrência Eletrônica visando a contratação de obras de engenharia de empresa especializada para elaboração de projeto executivo e construção do Parque de Tancagem, a fim de arma",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=78280203000732026",
+    "published_at": "2026-09-25"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - [Portal de Compras Públicas] - CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA EXECUÇÃO CONTÍNUA, INTEGRADA E COORDENADA DOS SERVIÇOS DE LIMPEZA PÚBLICA URBANA DO MUNICÍPIO DE ALEXANDRIA",
+    "url": "https://www.portaldecompraspublicas.com.br/processos/RN/Prefeitura-Municipal-de-Alexandria-1414/CPMP-00004-2026-2026-513533",
+    "published_at": "2026-09-25"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de serviços especializados para execução de levantamento topog´ráfico planialtimétrico",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=15316403004332026",
+    "published_at": "2026-09-25"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de obra de engenharia para construção do Ginásio poliesportivo do Centro de Ciências e Tecnologia Agroalimentar – CCTA, campus Pombal, da Universidade Federal de Campin",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=15819503002302026",
+    "published_at": "2026-09-25"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de empresa especializada para execução dos serviços técnicos de engenharia destinados à pavimentação de 04 (quatro) trechos das vias de serviço da Pequena Central Hidre",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=16800503002052026",
+    "published_at": "2026-09-25"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de serviço especial de engenharia de Reforma da Lavanderia do GSAU-CT para implantação das instalações do Centro de Atenção Integral à Saúde (CAIS)",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=12007203002182026",
+    "published_at": "2026-09-25"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de obras de Reforma e Ampliação do Sistema de Abastecimento de Água (SAA) em aldeias do DSEI VILHENA",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=25705003001212026",
+    "published_at": "2026-09-25"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de Empresa especializada para a reforma do prédio (86) anexo de pesquisas com abelhas do Instituto Nacional de Pesquisas da Amazônia – INPA",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=24010503000092025",
+    "published_at": "2026-09-25"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de serviços especial de engenharia para elaboração do programa de necessidades, estudos técnicos complementares, projetos básico e executivo de arquitetura e engenharia",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=15851703000922026",
+    "published_at": "2026-09-25"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Execução das obras de implantação das guaritas de vigilância e Barracões de destruição no PCVA da ALF/FOZ com elaboração de projeto básico e executivo. (Contratação Integrada).",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=17015603000132027",
+    "published_at": "2026-09-25"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação para a Construção do Pavilhão Multiuso do Centro de Instrução de Operações Especiais incluindo infraestrutura, em Goiânia/GO nos termos da tabela abaixo, conforme condi",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=16006603000222026",
+    "published_at": "2026-09-25"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - [Portal de Compras Públicas] - Pavimentação em blocos de concreto intertravado PVS, para as ruas do Loteamento Popular.",
+    "url": "https://www.portaldecompraspublicas.com.br/processos/RS/Prefeitura-Municipal-de-Fazenda-Vilanova-2490/CPMP-3-2026-2026-514095",
+    "published_at": "2026-09-25"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Elaboração dos projetos executivos e execução das obras de estabilização da encosta localizada na Rua Padre Argemiro Moreira no Setor 7 da Vila Beira Linha.",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=98412303000762026",
+    "published_at": "2026-09-25"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Reforma e Ampliação do Complexo do Teatro Universitário Florestan Fernandes para Adequação de Acessibilidade, na UFSCar campus São Carlos-SP",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=15404903001892026",
+    "published_at": "2026-09-25"
   },
   {
     "source": "TCM-GO",
@@ -292,6 +376,12 @@
     "title": "TCM-GO - Pleno julga 45 processos, com destaque para contratações temporárias na educação de Goiânia",
     "url": "https://www.tcmgo.tc.br/site/2026/10/pleno-julga-45-processos-com-destaque-para-contratacoes-temporarias-na-educacao-de-goiania/",
     "published_at": "2026-10-21"
+  },
+  {
+    "source": "TCM-GO",
+    "title": "TCM-GO - Enquadramento de profissionais da educação infantil exige análise de requisitos legais",
+    "url": "https://www.tcmgo.tc.br/site/2026/10/enquadramento-de-profissionais-da-educacao-infantil-exige-analise-de-requisitos-legais/",
+    "published_at": "2026-10-23"
   },
   {
     "source": "TCM-GO",
