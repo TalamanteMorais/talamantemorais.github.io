@@ -19,30 +19,6 @@
   },
   {
     "source": "TCU",
-    "title": "TCU - ACÓRDÃO DE RELAÇÃO 5689/2026 ATA 36/2026 - PRIMEIRA CÂMARA",
-    "url": "https://contas.tcu.gov.br/pesquisaJurisprudencia/#/detalhamento/11/*/KEY:%22ACORDAO-COMPLETO-2783160%22/DTRELEVANCIA%2520desc%252C%2520NUMACORDAOINT%2520desc/false/1/false",
-    "published_at": "2026-10-20"
-  },
-  {
-    "source": "TCU",
-    "title": "TCU - ACÓRDÃO DE RELAÇÃO 5688/2026 ATA 36/2026 - PRIMEIRA CÂMARA",
-    "url": "https://contas.tcu.gov.br/pesquisaJurisprudencia/#/detalhamento/11/*/KEY:%22ACORDAO-COMPLETO-2770852%22/DTRELEVANCIA%2520desc%252C%2520NUMACORDAOINT%2520desc/false/1/false",
-    "published_at": "2026-10-20"
-  },
-  {
-    "source": "TCU",
-    "title": "TCU - ACÓRDÃO DE RELAÇÃO 5687/2026 ATA 36/2026 - PRIMEIRA CÂMARA",
-    "url": "https://contas.tcu.gov.br/pesquisaJurisprudencia/#/detalhamento/11/*/KEY:%22ACORDAO-COMPLETO-2782763%22/DTRELEVANCIA%2520desc%252C%2520NUMACORDAOINT%2520desc/false/1/false",
-    "published_at": "2026-10-20"
-  },
-  {
-    "source": "TCU",
-    "title": "TCU - ACÓRDÃO DE RELAÇÃO 5686/2026 ATA 36/2026 - PRIMEIRA CÂMARA",
-    "url": "https://contas.tcu.gov.br/pesquisaJurisprudencia/#/detalhamento/11/*/KEY:%22ACORDAO-COMPLETO-2783199%22/DTRELEVANCIA%2520desc%252C%2520NUMACORDAOINT%2520desc/false/1/false",
-    "published_at": "2026-10-20"
-  },
-  {
-    "source": "TCU",
     "title": "TCU - ACÓRDÃO 2932/2026 ATA 41/2026 - PLENÁRIO",
     "url": "https://contas.tcu.gov.br/pesquisaJurisprudencia/#/detalhamento/11/*/KEY:%22ACORDAO-COMPLETO-2782990%22/DTRELEVANCIA%2520desc%252C%2520NUMACORDAOINT%2520desc/false/1/false",
     "published_at": "2026-10-21"
@@ -67,8 +43,32 @@
   },
   {
     "source": "TCU",
+    "title": "TCU - ACÓRDÃO 2928/2026 ATA 41/2026 - PLENÁRIO",
+    "url": "https://contas.tcu.gov.br/pesquisaJurisprudencia/#/detalhamento/11/*/KEY:%22ACORDAO-COMPLETO-2783165%22/DTRELEVANCIA%2520desc%252C%2520NUMACORDAOINT%2520desc/false/1/false",
+    "published_at": "2026-10-21"
+  },
+  {
+    "source": "TCU",
     "title": "TCU - ACÓRDÃO 2927/2026 ATA 41/2026 - PLENÁRIO",
     "url": "https://contas.tcu.gov.br/pesquisaJurisprudencia/#/detalhamento/11/*/KEY:%22ACORDAO-COMPLETO-2762391%22/DTRELEVANCIA%2520desc%252C%2520NUMACORDAOINT%2520desc/false/1/false",
+    "published_at": "2026-10-21"
+  },
+  {
+    "source": "TCU",
+    "title": "TCU - ACÓRDÃO 2926/2026 ATA 41/2026 - PLENÁRIO",
+    "url": "https://contas.tcu.gov.br/pesquisaJurisprudencia/#/detalhamento/11/*/KEY:%22ACORDAO-COMPLETO-2783376%22/DTRELEVANCIA%2520desc%252C%2520NUMACORDAOINT%2520desc/false/1/false",
+    "published_at": "2026-10-21"
+  },
+  {
+    "source": "TCU",
+    "title": "TCU - ACÓRDÃO 2925/2026 ATA 41/2026 - PLENÁRIO",
+    "url": "https://contas.tcu.gov.br/pesquisaJurisprudencia/#/detalhamento/11/*/KEY:%22ACORDAO-COMPLETO-2779522%22/DTRELEVANCIA%2520desc%252C%2520NUMACORDAOINT%2520desc/false/1/false",
+    "published_at": "2026-10-21"
+  },
+  {
+    "source": "TCU",
+    "title": "TCU - ACÓRDÃO 2924/2026 ATA 41/2026 - PLENÁRIO",
+    "url": "https://contas.tcu.gov.br/pesquisaJurisprudencia/#/detalhamento/11/*/KEY:%22ACORDAO-COMPLETO-2780320%22/DTRELEVANCIA%2520desc%252C%2520NUMACORDAOINT%2520desc/false/1/false",
     "published_at": "2026-10-21"
   },
   {
@@ -193,15 +193,21 @@
   },
   {
     "source": "TCE-MG",
-    "title": "TCE-MG - Informativo de Jurisprudência",
-    "url": "https://www.tce.mg.gov.br/Noticia/?cod_secao=1ISP&cod_secao_menu=5L&tipo=1&url=",
-    "published_at": "2026-10-25"
+    "title": "TCE-MG - Acessibilidade",
+    "url": "https://www.tce.mg.gov.br/Informativo-de-Jurisprudencia-n-339.html/Noticia/1111629266",
+    "published_at": "2026-10-21"
   },
   {
     "source": "TCE-MG",
-    "title": "TCE-MG - Pesquisa de Jurisprudência TCJuris",
-    "url": "https://tcjuris.tce.mg.gov.br/",
-    "published_at": "2026-10-25"
+    "title": "TCE-MG - Acessibilidade",
+    "url": "https://www.tce.mg.gov.br/DescomplicaJuris/",
+    "published_at": "2026-10-13"
+  },
+  {
+    "source": "TCE-MG",
+    "title": "TCE-MG - Acessibilidade",
+    "url": "https://www.tce.mg.gov.br/Informativo-de-Jurisprudencia-n-338.html/Noticia/1111629229",
+    "published_at": "2026-10-06"
   },
   {
     "source": "TCE-SC",
@@ -267,19 +273,199 @@
     "source": "TCE-PE",
     "title": "TCE-PE - Jurisprudência",
     "url": "https://www.tcepe.tc.br/internet/index.php/inicio-jurisprudencia",
-    "published_at": "2026-10-25"
+    "published_at": "2026-10-26"
   },
   {
     "source": "TCE-PE",
     "title": "TCE-PE - Pesquisa de Jurisprudência",
     "url": "https://sistemas.tce.pe.gov.br/jurisprudencia/PesquisaJurisprudencia!home.action",
-    "published_at": "2026-10-25"
+    "published_at": "2026-10-26"
   },
   {
     "source": "TCE-PE",
     "title": "TCE-PE - Deliberações",
     "url": "https://portal.tcepe.tc.br/jurisprudencia/consulta/deliberacoes",
-    "published_at": "2026-10-25"
+    "published_at": "2026-10-26"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Registro de preços para futura e eventual aquisição de material esportivo visando atender às necessidades do Município de Iguaí.",
+    "url": "https://bnccompras.com/Process/ProcessView?param1=[gkz]S1JRl4INwNrKKmTX/GuMd9pIJteGK34TnLw9C/aYY8AtHbyp9eb6PdSBa8tItn8fV73XuSbZB9cfLtmAyC/PukPvo1J2ZMV3Xk_Gi3Pwf14=",
+    "published_at": "2026-09-27"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Selecao de empresa especializada para execucao de obra de reforma da nova Camara de Vereadores do Municipio de Cidade Gaucha PR com area total de 417 37 m compreendendo a execuc",
+    "url": "https://pncp.gov.br/app/editais/01201556000109-1-000003/2026",
+    "published_at": "2026-09-28"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Constitui objeto deste Termo de Referência a concessão onerosa de uso temporário de área determinada do Parque da Cidade “João Orlandi Pagliusi”, no Município de Socorro/SP, para i",
+    "url": "https://pncp.gov.br/app/editais/46444063000138-1-000274/2026",
+    "published_at": "2026-09-28"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de empresa especializada para execução de serviços de pavimentação em paralelepípedo de vias públicas no Município de Iaçu-BA, vinculada ao Contrato de Repasse MCIDADES",
+    "url": "https://bnccompras.com/Process/ProcessView?param1=[gkz]PJPin0guHO5X_wbr0mNYxzizqks1pP/6H98PswtZPnVjVZ/a7RsAvhirb6e4c0QuytvxMlmXo5wuJBR9MTgeqlG1ia2BJp27XAdleFydtJ8=",
+    "published_at": "2026-09-28"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - [Portal de Compras Públicas] - CONTRATAÇÃO DE SERVIÇOS DE ENGENHARIA DESTINADOS A READEQUAÇÃO DO MIRANTE DO CRUZEIRO SÃO JOSÉ NO MUNICÍPIO DE PARARI (MINTUR/CEF - CONTRATO DE REPAS",
+    "url": "https://www.portaldecompraspublicas.com.br/processos/PB/Prefeitura-Municipal-de-Pedra-Lavrada-1535/CPMP-0011-2026-2026-514689",
+    "published_at": "2026-09-28"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - [Portal de Compras Públicas] - CONTRATAÇÃO DE SERVIÇOS DE ENGENHARIA DESTINADOS A IMPLANTAÇÃO DE PORTAL TURISCO NESTE MUNICIPIO DE PARARI. (MINTUR PLANO DE AÇÃO Nº 09032026-094418)",
+    "url": "https://www.portaldecompraspublicas.com.br/processos/PB/Prefeitura-Municipal-de-Pedra-Lavrada-1535/CPMP-0012-2026-2026-514697",
+    "published_at": "2026-09-28"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - [Portal de Compras Públicas] - CONTRATAÇÃO DE SERVIÇOS DE ENGENHARIA DESTINADOS A IMPLANTAÇÃO DE PORTAL TURISCO NESTE MUNICIPIO DE PARARI. (MINTUR PLANO DE AÇÃO Nº 09032026-094418)",
+    "url": "https://www.portaldecompraspublicas.com.br/processos/PB/Prefeitura-Municipal-de-Parari-2310/CPMP-0012-2026-2026-512066",
+    "published_at": "2026-09-28"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - [Portal de Compras Públicas] - CONTRATAÇÃO DE SERVIÇOS DE ENGENHARIA DESTINADOS A READEQUAÇÃO DO MIRANTE DO CRUZEIRO SÃO JOSÉ NO MUNICÍPIO DE PARARI (MINTUR/CEF - CONTRATO DE REPAS",
+    "url": "https://www.portaldecompraspublicas.com.br/processos/PB/Prefeitura-Municipal-de-Parari-2310/CPMP-0011-2026-2026-514699",
+    "published_at": "2026-09-28"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Execução de obra de construção de praça pública no Distrito de Bom Jesus, Município de Ipiranga de Goiás/GO, mediante contratação de empresa especializada em engenharia, sob o regi",
+    "url": "https://bllcompras.com/Process/ProcessView?param1=[gkz]ObtpRaP6NVzklUN8lNowoWpyGkHsuEIYLD7Z3Mqi2S0hwucGir2DPzrFgV1Ae3nPEj/Afs9jsiP4ABDPrnht0y48dFsshwrrHuv0sYgBS7Y=",
+    "published_at": "2026-09-29"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - [Portal de Compras Públicas] - Contratação de empresa especializada para execução da obra de reforma e ampliação da escola Joaquim Manoel, localizada no Município de Valença do Pia",
+    "url": "https://www.portaldecompraspublicas.com.br/processos/PI/Prefeitura-Municipal-de-Valenca-do-Piaui-2228/CPMP-083-2026-2026-514417",
+    "published_at": "2026-09-28"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - [Portal de Compras Públicas] - REGISTRO DE PREÇOS PARA EVENTUAL E FUTURA CONTRATAÇÃO DE EMPRESA ESPECIALIZADA NA CONSTRUÇÃO E RECUPERAÇÃO DE 4,00 KM DE CALÇAMENTO, 4,00 KM DE MEIO",
+    "url": "https://www.portaldecompraspublicas.com.br/processos/PA/Prefeitura-Municipal-de-Cameta-919/CPMP-14-2026-2026-513425",
+    "published_at": "2026-09-28"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA A PRESTAÇÃO DE SERVIÇOS DE GERENCIAMENTO INTEGRAL DO SISTEMA DE ILUMINAÇÃO PÚBLICA DO MUNICÍPIO DE TEJUÇUOCA/CE, COMPREENDENDO A OPERAÇÃO,",
+    "url": "https://licitamaisbrasil.com.br/detalhes-do-edital/SurJm4AnEWOgiFvG",
+    "published_at": "2026-09-28"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - A presente licitação tem por objetivo a contratação de empresa especializada para execução da obra de Construção de 20 unidades habitacionais de interesse social, no âmbito do Prog",
+    "url": "https://bllcompras.com/Process/ProcessView?param1=[gkz]tRFsFwWPo_bkqMh1hXcvBwu3pl9OmUGYCgiBhXStNhJQW/LkBy/_aZytjy7gA_7L3QWqSCNUrWyWPMABkA8udj/QqSDE_idMOtkxoRmBt6Q=",
+    "published_at": "2026-09-28"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CONTRATAÇÃO DE EMPRESA PARA CONSTRUÇÃO DA PRAÇA DE CHÃ DE CAMARÁ - ALIANÇA/PE",
+    "url": "https://bnccompras.com/Process/ProcessView?param1=[gkz]3S/6qBKrjcL_Rc8x5NhcvNFFgobdt49J/gZlrUv7SON4dFinToVtaQ68BX79pzIX8hZKehHV/_MWY/oIqJQnQ4_mz04c2WXuh/FRQE0StF0=",
+    "published_at": "2026-09-28"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - [Portal de Compras Públicas] - CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA A EXECUÇÃO DE OBRA DE CONSTRUÇÃO DE BANHEIROS E DEPÓSITO EXTERNOS NA EMEF REINALDO CHERUBINI NO MUNICÍPIO D",
+    "url": "https://www.portaldecompraspublicas.com.br/processos/RS/Prefeitura-Municipal-de-Nova-Prata-50/CPMP-016-2026-2026-514445",
+    "published_at": "2026-09-28"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - [Portal de Compras Públicas] - Contratação de empresa de engenharia para execução de serviços de recapeamento asfáltico e sinalização viária dos setores 3, 7, 8 e 9, no Município d",
+    "url": "https://www.portaldecompraspublicas.com.br/processos/GO/Prefeitura-Municipal-de-Aguas-Lindas-de-Goias-2994/CPMP-10-2026-2026-493439",
+    "published_at": "2026-09-28"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CONTRATACAO DE EMPRESA PARA REALIZACAO DE SERVICOS COM APLICACAO DE MATERIAL PARA REVITALIZACAO DO PAVIMENTO E DOS PASSEIOS NA RUA BERTULINO DA SILVA LOCALIZADAS NO MUNICIPIO DE",
+    "url": "https://pncp.gov.br/app/editais/88363189000128-1-000356/2026",
+    "published_at": "2026-09-28"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CONTRATACAO DE EMPRESA PARA REALIZACAO DE SERVICOS COM APLICACAO DE MATERIAL PARA PAVIMENTACAO DA RUA NATALINO LEAL RAMOS E DA TF 490 NO MUNICIPIO DE TRIUNFO RS",
+    "url": "https://pncp.gov.br/app/editais/88363189000128-1-000357/2026",
+    "published_at": "2026-09-28"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de empresa especializada em obras e serviços de engenharia para construção de Creche Infantil no Povoado de Maxixe, no Município de Miguel Calmon-Bahia.",
+    "url": "https://bnccompras.com/Process/ProcessView?param1=[gkz]zuWUCqvv4B5BeIJIjHOGafu/Bgtf3nilpqchNVLWXRxEOnYF1quCcjQKFYaSA4HbmphhMJiRixAEIaC8PCypNiCaI3oYSAQhrACqkAi2GCM=",
+    "published_at": "2026-09-28"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA EXECUÇÃO DE OBRAS DE REFORMA E AMPLIAÇÃO DE UNIDADES ESCOLARES NO MUNICÍPIO DE ALCÂNTARAS/CE, CONFORME PROJETOS, ESPECIFICAÇÕES TÉCNICAS E",
+    "url": "http://precodereferencia.m2atecnologia.com.br/c/9WKGC5NkTF-Z2EnKr3ixbA.3DFTFfZn2t4H/",
+    "published_at": "2026-09-28"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - [Portal de Compras Públicas] - CONTRATAÇÃO DE EMPRESA PARA EXECUÇÃO DOS SERVIÇOS DE URBANIZAÇÃO DO ACESSO NORTE (CALÇADÃO, CICLOVIA E ILUMINAÇÃO) NO MUNICÍPIO DE BOA VISTA - PB",
+    "url": "https://www.portaldecompraspublicas.com.br/processos/PB/Prefeitura-Municipal-de-Boa-Vista-2417/CPMP-3-2026-2026-514484",
+    "published_at": "2026-09-28"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - [LICITANET] - CONTRATAÇÃO DE EMPRESA ESPECIALIZIADA PARA A CONSTRUÇÃO E REVITALIZAÇÃO DA PASSAGEM MOLHADA DO SÍTIO ROSA BRANCA, MUNICÍPIO DE BARRA DE SANTANA/PB",
+    "url": "https://licitanet.com.br/sessao/199258",
+    "published_at": "2026-09-28"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CONTRATAÇÃO DE EMPRESA ESPECIALIZADA EM EXECUÇÃO DOS SERVIÇOS DE CAPEAMENTO ASFÁLTICO SOBRE CALÇAMENTO EM DIVERSAS RUAS DO MUNICÍPIO DE IPUBÍ/PE",
+    "url": "http://www.portaldeipubi.com.br",
+    "published_at": "2026-09-28"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - [Portal de Compras Públicas] - CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA CONSTRUÇÃO DA VILA DO COMÉRCIO NO MUNICIPIO DE CAXIAS – MA",
+    "url": "https://www.portaldecompraspublicas.com.br/processos/MA/Prefeitura-Municipal-de-Caxias-1212/CPMP-015-2026-2026-495711",
+    "published_at": "2026-09-28"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CONSTRUÇÃO DE 20 (VINTE) UNIDADES HABITACIONAIS PELO PROGRAMA MINHA CASA MINHA VIDA – MCMV, NO MUNICÍPIO DE ACORDO COM PROJETO DA SECRETARIA MUNICIPAL DE INFRAESTRUTURA DE PORTO DE",
+    "url": "https://bnccompras.com/Process/ProcessView?param1=[gkz]GvMVitTzA8ZMnFjXWgXfWFudOGiWVcBH0i1fukR72x0O_9ySMkggu3fB6qdYOYb/1FFf5CIeFdfd6KAP5QJM4fbJ8J_B3OhIVU5WzHmRU8g=",
+    "published_at": "2026-09-28"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CONSTRUÇÃO DE UMA PRAÇA NO CENTRO DO MUNICÍPIO DE ACORDO COM PROJETO DA SECRETARIA MUNICIPAL DE INFRAESTRUTURA DE PORTO DE PEDRAS – AL, conforme especificações constantes no Convên",
+    "url": "https://bnccompras.com/Process/ProcessView?param1=[gkz]pxVNehYhPOc_Iz3uOP9zyM3m6kONJq/55JaK/Yh0DKghie11Eslw9OPmOn8kZHem/LpAxMf0mNX2R4GrCUiOdXg9_an2PIr9b9Ql7QN/pNg=",
+    "published_at": "2026-09-28"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA A EXECUÇÃO DE OBRA DE CENTRO DE CONVIVÊNCIA COM ÁREA CONSTRUIDA DE 471,75 M², DESTINADO AO ATENDIMENTO DA POPULAÇÃO DO MUNICÍPIO DE APIACÁ",
+    "url": "https://pncp.gov.br/app/editais/01321850000154-1-000064/2026",
+    "published_at": "2026-09-28"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - [Portal de Compras Públicas] - Contratação de empresa de engenharia para executar obra pública de construção e recuperação de passagem molhada, e execução de bueira, no município d",
+    "url": "https://www.portaldecompraspublicas.com.br/processos/PB/Prefeitura-Municipal-de-Riachao-do-Bacamarte-2505/CPMP-13-2026-2026-514533",
+    "published_at": "2026-09-28"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de empresa especializada para a execução de obra de drenagem urbana da Rua José Monteiro, no distrito de Parajuru, do Município de Beberibe/CE.",
+    "url": "https://licitamaisbrasil.com.br/detalhes-do-edital/ZC-qy5zypLAEK6Nw",
+    "published_at": "2026-09-28"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - [Portal de Compras Públicas] - Contratação de empresa especializada para a execução de obras e serviços de reforma em praças públicas do Município de Ijuí/RS, conforme lotes, quant",
+    "url": "https://www.portaldecompraspublicas.com.br/processos/RS/Municipio-de-Ijui-Poder-Executivo-1164/CPMP-40-2026-2026-514600",
+    "published_at": "2026-09-28"
   },
   {
     "source": "TCM-GO",
