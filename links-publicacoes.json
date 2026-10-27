@@ -127,39 +127,45 @@
   },
   {
     "source": "STJ",
-    "title": "STJ - Enfam oferece duas vagas de mestrado em direito para candidatos de fora da carreira jurídica",
-    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/22102026-Enfam-oferece-duas-vagas-de-mestrado-em-direito-para-candidatos-de-fora-da-carreira-juridica.aspx",
-    "published_at": "2026-10-22"
+    "title": "STJ - Nancy Andrighi completa 50 anos de magistratura e 27 anos como ministra do STJ",
+    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/26102026-Nancy-Andrighi-completa-50-anos-de-magistratura-e-27-anos-como-ministra-do-STJ-.aspx",
+    "published_at": "2026-10-27"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - Boletim de Jurisprudência | Tribunal de Contas do Estado de São Paulo",
     "url": "https://www.tce.sp.gov.br/boletim-de-jurisprudencia",
-    "published_at": "2026-10-23"
+    "published_at": "2026-10-26"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - Pesquisa de Jurisprudência",
     "url": "https://www.tce.sp.gov.br/jurisprudencia",
-    "published_at": "2026-10-23"
+    "published_at": "2026-10-26"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - Comissão Permanente de Análise de Jurisprudência",
     "url": "https://www.tce.sp.gov.br/boletim-de-jurisprudencia/CPAJ",
-    "published_at": "2026-10-23"
+    "published_at": "2026-10-26"
+  },
+  {
+    "source": "TCE-SP",
+    "title": "TCE-SP - PodContas debate credenciamento nas contratações públicas e alerta para riscos de uso indevido do instituto",
+    "url": "https://www.tce.sp.gov.br/6524-podcontas-debate-credenciamento-contratacoes-publicas-e-alerta-para-riscos-uso-indevido",
+    "published_at": "2026-10-26"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - ARTIGO: Administração Pública: o elo mais frágil da licitação",
     "url": "https://www.tce.sp.gov.br/6524-artigo-administracao-publica-elo-mais-fragil-licitacao",
-    "published_at": "2026-10-15"
+    "published_at": "2026-10-16"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - LEI Nº 14.133, DE 1º DE ABRIL DE 2021",
     "url": "https://www.tce.sp.gov.br/legislacao-comentada/lei-14133-1o-abril-2021",
-    "published_at": "2026-10-23"
+    "published_at": "2026-10-26"
   },
   {
     "source": "TCE-SP",
@@ -186,22 +192,16 @@
     "published_at": "2026-10-05"
   },
   {
-    "source": "TCE-SP",
-    "title": "TCE-SP - Portal dos Conselhos Municipais | Tribunal de Contas do Estado de São Paulo",
-    "url": "https://www.tce.sp.gov.br/portal-conselhos-municipais",
-    "published_at": "2026-10-23"
+    "source": "TCE-MG",
+    "title": "TCE-MG - Acessibilidade",
+    "url": "https://www.tce.mg.gov.br/DescomplicaJuris/",
+    "published_at": "2026-10-26"
   },
   {
     "source": "TCE-MG",
     "title": "TCE-MG - Acessibilidade",
     "url": "https://www.tce.mg.gov.br/Informativo-de-Jurisprudencia-n-339.html/Noticia/1111629266",
     "published_at": "2026-10-21"
-  },
-  {
-    "source": "TCE-MG",
-    "title": "TCE-MG - Acessibilidade",
-    "url": "https://www.tce.mg.gov.br/DescomplicaJuris/",
-    "published_at": "2026-10-13"
   },
   {
     "source": "TCE-MG",
@@ -213,85 +213,85 @@
     "source": "TCE-SC",
     "title": "TCE-SC - Jurisprudência | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/content/jurisprudencia",
-    "published_at": "2026-10-22"
+    "published_at": "2026-10-26"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Denúncias e representações | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/denuncias-representacoes",
-    "published_at": "2026-10-22"
+    "published_at": "2026-10-26"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Informativos de Jurisprudência | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/informativo-de-jurisprud%C3%AAncia",
-    "published_at": "2026-10-22"
+    "published_at": "2026-10-26"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Informativos de Jurisprudência - Edições anteriores | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/informativo-de-jurisprud%C3%AAncia-edicoes-anteriores",
-    "published_at": "2026-10-22"
+    "published_at": "2026-10-26"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Informativos de Jurisprudência",
     "url": "https://www.tcesc.tc.br/informativo-de-jurisprudência",
-    "published_at": "2026-10-22"
+    "published_at": "2026-10-26"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Recolhimento de débitos e de multas | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/recolhimentos",
-    "published_at": "2026-10-22"
+    "published_at": "2026-10-26"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Fornecedores e Inovação | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/fornecedores-e-inovacao",
-    "published_at": "2026-10-22"
+    "published_at": "2026-10-26"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Licitações e Contratos | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/content/licitacoes_contratos",
-    "published_at": "2026-10-22"
+    "published_at": "2026-10-26"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Atendimento Virtual | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/atendimento-virtual",
-    "published_at": "2026-10-22"
+    "published_at": "2026-10-26"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Diário Oficial Eletrônico (DOTC-e) | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/content/dotc-e",
-    "published_at": "2026-10-22"
+    "published_at": "2026-10-26"
   },
   {
     "source": "TCE-PE",
     "title": "TCE-PE - Jurisprudência",
     "url": "https://www.tcepe.tc.br/internet/index.php/inicio-jurisprudencia",
-    "published_at": "2026-10-26"
+    "published_at": "2026-10-27"
   },
   {
     "source": "TCE-PE",
     "title": "TCE-PE - Pesquisa de Jurisprudência",
     "url": "https://sistemas.tce.pe.gov.br/jurisprudencia/PesquisaJurisprudencia!home.action",
-    "published_at": "2026-10-26"
+    "published_at": "2026-10-27"
   },
   {
     "source": "TCE-PE",
     "title": "TCE-PE - Deliberações",
     "url": "https://portal.tcepe.tc.br/jurisprudencia/consulta/deliberacoes",
-    "published_at": "2026-10-26"
+    "published_at": "2026-10-27"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - Registro de preços para futura e eventual aquisição de material esportivo visando atender às necessidades do Município de Iguaí.",
-    "url": "https://bnccompras.com/Process/ProcessView?param1=[gkz]S1JRl4INwNrKKmTX/GuMd9pIJteGK34TnLw9C/aYY8AtHbyp9eb6PdSBa8tItn8fV73XuSbZB9cfLtmAyC/PukPvo1J2ZMV3Xk_Gi3Pwf14=",
-    "published_at": "2026-09-27"
+    "title": "PNCP - Pregão Eletrônico SRP nº 900114/2026 para fins de Registro de Preço para aquisição de Tolvaptana, Quinidina, Estiripentol, Epinefrina e Diazóxido, para atendimento às demandas judi",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=25000505007092026",
+    "published_at": "2026-09-28"
   },
   {
     "source": "PNCP",
@@ -339,6 +339,18 @@
     "source": "PNCP",
     "title": "PNCP - Execução de obra de construção de praça pública no Distrito de Bom Jesus, Município de Ipiranga de Goiás/GO, mediante contratação de empresa especializada em engenharia, sob o regi",
     "url": "https://bllcompras.com/Process/ProcessView?param1=[gkz]ObtpRaP6NVzklUN8lNowoWpyGkHsuEIYLD7Z3Mqi2S0hwucGir2DPzrFgV1Ae3nPEj/Afs9jsiP4ABDPrnht0y48dFsshwrrHuv0sYgBS7Y=",
+    "published_at": "2026-09-29"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA EXECUÇÃO DE SERVIÇOS DE PAVIMENTAÇÃO ASFÁLTICA EM PMF EM DIVERSAS VIAS DO DISTRITO DE BURITIS DAS MULATAS, NO MUNICÍPIO DE VÁRZEA DA PALMA",
+    "url": "https://app2.ammlicita.org.br/pesquisa/114789",
+    "published_at": "2026-09-29"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de empresa especializada para execução da obra de Construção da Capela Mortuária no Distrito de Vila Formosa de Minas, Município de Rio do Prado/MG, com fornecimento de",
+    "url": "https://app2.ammlicita.org.br/pesquisa/114921",
     "published_at": "2026-09-29"
   },
   {
@@ -453,18 +465,6 @@
     "source": "PNCP",
     "title": "PNCP - [Portal de Compras Públicas] - Contratação de empresa de engenharia para executar obra pública de construção e recuperação de passagem molhada, e execução de bueira, no município d",
     "url": "https://www.portaldecompraspublicas.com.br/processos/PB/Prefeitura-Municipal-de-Riachao-do-Bacamarte-2505/CPMP-13-2026-2026-514533",
-    "published_at": "2026-09-28"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Contratação de empresa especializada para a execução de obra de drenagem urbana da Rua José Monteiro, no distrito de Parajuru, do Município de Beberibe/CE.",
-    "url": "https://licitamaisbrasil.com.br/detalhes-do-edital/ZC-qy5zypLAEK6Nw",
-    "published_at": "2026-09-28"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - [Portal de Compras Públicas] - Contratação de empresa especializada para a execução de obras e serviços de reforma em praças públicas do Município de Ijuí/RS, conforme lotes, quant",
-    "url": "https://www.portaldecompraspublicas.com.br/processos/RS/Municipio-de-Ijui-Poder-Executivo-1164/CPMP-40-2026-2026-514600",
     "published_at": "2026-09-28"
   },
   {
