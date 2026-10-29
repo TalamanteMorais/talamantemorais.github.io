@@ -79,12 +79,6 @@
   },
   {
     "source": "STJ",
-    "title": "STJ - Evento na FGV debate arbitragem e apresenta livro sobre jurisprudência do STJ",
-    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/29092026-Evento-na-FGV-debate-arbitragem-e-apresenta-livro-sobre-jurisprudencia-do-STJ.aspx",
-    "published_at": "2026-09-29"
-  },
-  {
-    "source": "STJ",
     "title": "STJ - STJ afasta servidores suspeitos de irregularidades e terá programa de confiança digital para mitigar novos riscos",
     "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/19102026-STJ-afasta-servidores-suspeitos-de-irregularidades-e-tera-programa-de-confianca-digital-para-mitigar-novos-riscos.aspx",
     "published_at": "2026-10-19"
@@ -127,9 +121,15 @@
   },
   {
     "source": "STJ",
-    "title": "STJ - Trabalho, estudo, leitura e amamentação: reportagem especial mostra como o STJ aplica a remição de pena",
-    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/28102026-Trabalho--estudo--leitura-e-amamentacao-reportagem-especial-mostra-como-o-STJ-aplica-a-remicao-de-pena-.aspx",
-    "published_at": "2026-10-28"
+    "title": "STJ - STJ realiza Encontro Nacional do Poder Judiciário sobre a Relevância da Questão de Direito Federal",
+    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/29102026-STJ-realiza-Encontro-Nacional-do-Poder-Judiciario-sobre-a-Relevancia-da-Questao-de-Direito-Federal.aspx",
+    "published_at": "2026-10-29"
+  },
+  {
+    "source": "STJ",
+    "title": "STJ - Rádio Decidendi debate direitos de militares transgênero nas Forças Armadas",
+    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/29102026-Radio-Decidendi-debate-direitos-de-militares-transgenero-nas-Forcas-Armadas.aspx",
+    "published_at": "2026-10-29"
   },
   {
     "source": "TCE-SP",
@@ -273,103 +273,133 @@
     "source": "TCE-PE",
     "title": "TCE-PE - Jurisprudência",
     "url": "https://www.tcepe.tc.br/internet/index.php/inicio-jurisprudencia",
-    "published_at": "2026-10-28"
+    "published_at": "2026-10-29"
   },
   {
     "source": "TCE-PE",
     "title": "TCE-PE - Pesquisa de Jurisprudência",
     "url": "https://sistemas.tce.pe.gov.br/jurisprudencia/PesquisaJurisprudencia!home.action",
-    "published_at": "2026-10-28"
+    "published_at": "2026-10-29"
   },
   {
     "source": "TCE-PE",
     "title": "TCE-PE - Deliberações",
     "url": "https://portal.tcepe.tc.br/jurisprudencia/consulta/deliberacoes",
-    "published_at": "2026-10-28"
+    "published_at": "2026-10-29"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - Execução de obra de construção de praça pública no Distrito de Bom Jesus, Município de Ipiranga de Goiás/GO, mediante contratação de empresa especializada em engenharia, sob o regi",
-    "url": "https://bllcompras.com/Process/ProcessView?param1=[gkz]ObtpRaP6NVzklUN8lNowoWpyGkHsuEIYLD7Z3Mqi2S0hwucGir2DPzrFgV1Ae3nPEj/Afs9jsiP4ABDPrnht0y48dFsshwrrHuv0sYgBS7Y=",
-    "published_at": "2026-09-29"
+    "title": "PNCP - A presente contratação corresponde à segunda etapa da implantação do Campus da Universidade Federal do Oeste do Pará (UFOPA) no município de Rurópolis, dando continuidade ao empree",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=15851503000372026",
+    "published_at": "2026-09-30"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA EXECUÇÃO DE SERVIÇOS DE PAVIMENTAÇÃO ASFÁLTICA EM PMF EM DIVERSAS VIAS DO DISTRITO DE BURITIS DAS MULATAS, NO MUNICÍPIO DE VÁRZEA DA PALMA",
-    "url": "https://app2.ammlicita.org.br/pesquisa/114789",
-    "published_at": "2026-09-29"
+    "title": "PNCP - Contratação de Empresa de Engenharia para Execução de Reforma e Ampliação da Unidade Básica de Saúde Indígena - Tipo III na Aldeia Buenos Aires, localizada no município de Sena Mad",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=25702203001112026",
+    "published_at": "2026-09-30"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - Contratação de empresa especializada para execução da obra de Construção da Capela Mortuária no Distrito de Vila Formosa de Minas, Município de Rio do Prado/MG, com fornecimento de",
-    "url": "https://app2.ammlicita.org.br/pesquisa/114921",
-    "published_at": "2026-09-29"
+    "title": "PNCP - Contratação de empresa especializada para elaboração e execução de solução expográfica destinada à implantação de Exposição Permanente no Memorial Madredeiense da Câmara Municipal",
+    "url": "https://pncp.gov.br/app/editais/04837539000150-1-000030/2026",
+    "published_at": "2026-09-30"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - Contratação de empresa especializada para a execução da obra de Pavimentação asfáltica e sinalização horizontal de ruas, e pavimentação em blocos intertravados de concreto em calça",
-    "url": "https://pncp.gov.br/app/editais/90936956000192-1-000119/2026",
-    "published_at": "2026-09-29"
+    "title": "PNCP - Contratação de empresa especializada para a prestação de serviços de perfuração de poços artesianos em diversas comunidades da zona rural do Municipio de Antônio Dias, sob o regime",
+    "url": "https://app2.ammlicita.org.br/pesquisa/114935",
+    "published_at": "2026-09-30"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - Construção da Segunda Etapa do Complexo Esportivo da UFTM, sendo: Blocos de Vestiários e Academia; Quadras de Futsal; Mini-Campo de Futebol; Quadra de Tênis; Quadras de areia e Qua",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=15303503002942026",
-    "published_at": "2026-09-29"
+    "title": "PNCP - [Portal de Compras Públicas] - CONTRATAÇÃO DE EMPRESA PARA REFORMA E EXECUÇÃO DE CERCAMENTO, DRENAGEM E MELHORIAS DO CEMITÉRIO MUNICIPAL ESQ. GAÚCHA MUNICÍPIO DE AUGUSTO PESTANA-RS",
+    "url": "https://www.portaldecompraspublicas.com.br/processos/RS/Prefeitura-Municipal-de-Augusto-Pestana-1344/CPMP-9-2026-2026-512596",
+    "published_at": "2026-09-30"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - Contratação de obra de reforma e adequação do prédio da nova sede da Reitoria do IFNMG",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=15812103001872026",
-    "published_at": "2026-09-29"
+    "title": "PNCP - Contratação de obra de engenharia para reforma da Casa de Acolhimento Feminino, localizada na Avenida Luís Pires Chaves, S/N, Bairro Saci, Teresina/PI, vinculada ao Contrato de Rep",
+    "url": "https://pncp.gov.br/app/editais/09579079000121-1-000005/2026",
+    "published_at": "2026-09-30"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - CONTRATAÇÃO DE EMPRESA PARA EXECUÇÃO DE OBRAS DE INFRAESTRUTURA CIVIL, ELÉTRICA, HIDROSSANITÁRIA E DEMAIS SERVIÇOS COMPLEMENTARES PARA IMPLANTAÇÃO DE UNIDADES MODULARES NO CAMPUS I",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=15674603000022026",
-    "published_at": "2026-09-29"
+    "title": "PNCP - Contratação de empresa de engenharia ou arquitetura para a execução dos serviços de REFORMA E AMPLIAÇÃO DO FÓRUM ELEITORAL DE BARREIRAS, localizado na Rua Padre Alfredo Hasler, s/n",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=07001303001402026",
+    "published_at": "2026-09-30"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - Contratação de empresa especializada na execução de obra para a ampliação do Restaurante Universitário (RU) e construção do Espaço de Convivência no Centro de Saúde e Tecnologia Ru",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=15819903000122026",
-    "published_at": "2026-09-29"
+    "title": "PNCP - Construção de entrada de Acesso para o campus Natal - Zona Norte, via Av. das Fronteiras",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=15836803000422026",
+    "published_at": "2026-09-30"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA A EXECUÇÃO DE REFORMA DAS QUADRAS POLIESPORTIVAS DAS ESCOLAS MUNICIPAIS GABRIEL NUNES DE AZEVEDO E ANTÔNIO MARQUES DOS SANTOS, LOCALIZADAS",
-    "url": "https://app2.ammlicita.org.br/pesquisa/114790",
-    "published_at": "2026-09-29"
+    "title": "PNCP - Contratação de empresa especializada para Execução dos Serviços do Programa CREMA para Recuperação e Manutenção na Rodovia BR-174/MT, Trecho: Porto Santo Antônio das Lendas - Div M",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=39302003001592026",
+    "published_at": "2026-09-30"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - Contratação de empresa especializada para execução de adequações na rede elétrica de baixa e média tensão do CCHE / CLCA do Campus de Jacarezinho – CJ,",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=45965103000242026",
-    "published_at": "2026-09-29"
+    "title": "PNCP - [LICITANET] - CONTRATAÇÃO DE EMPRESA ESPECIALIZADA DE ENGENHARIA, PARA FUTURA E EVENTUAL CONSTRUÇÃO DO COMPLEXO ESPORTIVO SITUADO NO CAMINHO 40, BAIRRO HERNANI.",
+    "url": "https://licitanet.com.br/sessao/203263",
+    "published_at": "2026-09-30"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - [Portal de Compras Públicas] - Construção de 9 bases estruturais em concreto armado para suspenção e instalação de esculturas artísticas de beija-flores.",
-    "url": "https://www.portaldecompraspublicas.com.br/processos/ES/Prefeitura-Municipal-de-Santa-Teresa-1219/CPMP-010-2026-2026-514709",
-    "published_at": "2026-09-29"
+    "title": "PNCP - Contratação de empresa especializada para execução de obra comum de engenharia, destinada à reforma e revitalização da Quadra Poliesportiva Municipal de São José das Palmeiras/PR,",
+    "url": "https://bllcompras.com/Process/ProcessView?param1=[gkz]KhOovlMJB7cPI4_eipjMaljaHP0AkyUEhy8IAJ4rpJyLbJR0H9ksr4YpSVJyQmyyFT0ctBW_kL1OMffe1orAScH7ZLIIgrhpT/Bsey88f3A=",
+    "published_at": "2026-09-30"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - Contratação de empresa especializada para construção de Unidade Básica de Saúde, no distrito de Fruta D’Antas, através de indicação Parlamentar: Indicação: 168338, Órgão repassador",
-    "url": "https://bnccompras.com/Process/ProcessView?param1=[gkz]K88OPLuhM9tPF3WR3TqJwlC2h089uiIHA6gDM8IwPcsAtKfJt1wy9y8KMvKaN8kL9mcstIn9XR7qkFtZdbFWBn_TrcLuVGiffFXGxd6ssS8=",
-    "published_at": "2026-09-29"
+    "title": "PNCP - Contratação de empresa para a execução de reforma e construção de Centro de Convivência para Idosos, na rua Ari de Almeida, nº 165, Sítio, Antônio Dias, sob o regime de empreitada",
+    "url": "https://app2.ammlicita.org.br/pesquisa/114940",
+    "published_at": "2026-09-30"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - [Portal de Compras Públicas] - Contratação de empresa especializada para execução de obras de pavimentação em paralelepípedos, pelo método convencional, com implantação de sistema",
-    "url": "https://www.portaldecompraspublicas.com.br/processos/RN/Prefeitura-Municipal-de-Santa-Cruz-1190/CPMP-7-2026-2026-514646",
-    "published_at": "2026-09-29"
+    "title": "PNCP - Contratação de empresa especializada para execução de obra de recapeamento asfáltico em CBUQ, incluindo serviços de sinalização horizontal e vertical, em novo trecho da Rua Dr. Ber",
+    "url": "https://app2.ammlicita.org.br/pesquisa/114966",
+    "published_at": "2026-09-30"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - Contratação de empresa especializada para execução da obra de Construção da Rampa de Acessibilidade e Garagem de Veículos Oficiais do Campus Sena Madureira do IFAC.",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=15815603000512026",
-    "published_at": "2026-09-29"
+    "title": "PNCP - Contratação de Empresa para recuperação de deck em madeira, execução de estrutura base e instalação de monumento no Celtra e instalação de monumento na Praça Santo Antônio",
+    "url": "https://bllcompras.com/Process/ProcessView?param1=%5bgkz%5dwYEctZbIhqc3eAU2rUBfWgN8CUaV0IthBN3GAvnfYp0pEUwRqOlHnGig8zRsLxCaIevPOSNxXvb4mlkPdA7iTDos7jImbtcl56ILBj37Tfo%3d",
+    "published_at": "2026-09-30"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de empresa especializada para execução de reforma dos banheiros do prédio da Prefeitura Municipal, em atendimento ao Plano de Trabalho pactuado na Indicação Parlamentar",
+    "url": "https://bnccompras.com/Process/ProcessView?param1=[gkz]I2W49FUZHocrxTGvyzmWy9dijEzyNnkAldh31Y8w6B2Iv5yOljd3yB2E_wt3puNc3Lu0S6uKggO69xhJYHVllJfKd_KCTa0l9Rk7uWFReWo=",
+    "published_at": "2026-09-30"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Aquisição de unidade móvel de medicina nuclear sobre chassi tipo baú",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=11320203006502026",
+    "published_at": "2026-09-30"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Execução de obra de engenharia, com fornecimento de materiais e insumos, para retomada e conclusão da Agência da Receita Federal do Brasil em Itanhaém/SP",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=17013303001212026",
+    "published_at": "2026-09-30"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - AQUISICAO EXECUCAO DE PARQUINHO SENSORIAL E BRINQUEDOS PARA O CASTEACOLHE ETAPA 01 e ETAPA 02 PARA ATENDIMENTO DA EMENDA 60 2026 V. GUSTAVO LUIS BALDISSERA E PARA ATENDIMENTO D",
+    "url": "https://pncp.gov.br/app/editais/87738530000110-1-001603/2026",
+    "published_at": "2026-09-30"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - [Portal de Compras Públicas] - AQUISIÇÃO/EXECUÇÃO DE PARQUINHO SENSORIAL E BRINQUEDOS PARA O CASTEACOLHE ETAPA 01 e ETAPA 02, PARA ATENDIMENTO DA EMENDA 60/2026, V. GUSTAVO LUIS",
+    "url": "https://www.portaldecompraspublicas.com.br/processos/RS/Municipio-de-Soledade-1846/CPMP-39-2026-2026-515067",
+    "published_at": "2026-09-30"
   },
   {
     "source": "TCM-GO",
