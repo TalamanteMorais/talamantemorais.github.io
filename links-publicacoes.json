@@ -135,25 +135,25 @@
     "source": "TCE-SP",
     "title": "TCE-SP - Boletim de Jurisprudência | Tribunal de Contas do Estado de São Paulo",
     "url": "https://www.tce.sp.gov.br/boletim-de-jurisprudencia",
-    "published_at": "2026-11-06"
+    "published_at": "2026-11-09"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - ARTIGO: O impacto do déficit na apreciação das contas anuais: um olhar à luz da jurisprudência do Tribunal de Contas do Estado de São Paulo",
     "url": "https://www.tce.sp.gov.br/6524-artigo-impacto-deficit-apreciacao-contas-anuais-olhar-luz-jurisprudencia-tribunal-contas",
-    "published_at": "2026-11-03"
+    "published_at": "2026-11-04"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - Pesquisa de Jurisprudência",
     "url": "https://www.tce.sp.gov.br/jurisprudencia",
-    "published_at": "2026-11-06"
+    "published_at": "2026-11-09"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - Comissão Permanente de Análise de Jurisprudência",
     "url": "https://www.tce.sp.gov.br/boletim-de-jurisprudencia/CPAJ",
-    "published_at": "2026-11-06"
+    "published_at": "2026-11-09"
   },
   {
     "source": "TCE-SP",
@@ -169,15 +169,9 @@
   },
   {
     "source": "TCE-SP",
-    "title": "TCE-SP - ARTIGO: Administração Pública: o elo mais frágil da licitação",
-    "url": "https://www.tce.sp.gov.br/6524-artigo-administracao-publica-elo-mais-fragil-licitacao",
-    "published_at": "2026-10-19"
-  },
-  {
-    "source": "TCE-SP",
     "title": "TCE-SP - LEI Nº 14.133, DE 1º DE ABRIL DE 2021",
     "url": "https://www.tce.sp.gov.br/legislacao-comentada/lei-14133-1o-abril-2021",
-    "published_at": "2026-11-06"
+    "published_at": "2026-11-09"
   },
   {
     "source": "TCE-SP",
@@ -190,6 +184,18 @@
     "title": "TCE-SP - 30º Ciclo de Debates do TCESP reúne mais de 8 mil agentes públicos em 20 municípios paulistas",
     "url": "https://www.tce.sp.gov.br/6524-30o-ciclo-debates-tcesp-reune-mais-8-mil-agentes-publicos-20-municipios-paulistas",
     "published_at": "2026-10-23"
+  },
+  {
+    "source": "TCE-SP",
+    "title": "TCE-SP - Portal dos Conselhos Municipais | Tribunal de Contas do Estado de São Paulo",
+    "url": "https://www.tce.sp.gov.br/portal-conselhos-municipais",
+    "published_at": "2026-11-09"
+  },
+  {
+    "source": "TCE-MG",
+    "title": "TCE-MG - Acessibilidade",
+    "url": "https://www.tce.mg.gov.br/Informativo-de-Jurisprudencia-n-340.html/Noticia/1111629314",
+    "published_at": "2026-11-09"
   },
   {
     "source": "TCE-MG",
@@ -207,79 +213,259 @@
     "source": "TCE-SC",
     "title": "TCE-SC - Jurisprudência | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/content/jurisprudencia",
-    "published_at": "2026-11-06"
+    "published_at": "2026-11-09"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Denúncias e representações | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/denuncias-representacoes",
-    "published_at": "2026-11-06"
+    "published_at": "2026-11-09"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Informativos de Jurisprudência | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/informativo-de-jurisprud%C3%AAncia",
-    "published_at": "2026-11-06"
+    "published_at": "2026-11-09"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Informativos de Jurisprudência - Edições anteriores | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/informativo-de-jurisprud%C3%AAncia-edicoes-anteriores",
-    "published_at": "2026-11-06"
+    "published_at": "2026-11-09"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Informativos de Jurisprudência",
     "url": "https://www.tcesc.tc.br/informativo-de-jurisprudência",
-    "published_at": "2026-11-06"
+    "published_at": "2026-11-09"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Recolhimento de débitos e de multas | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/recolhimentos",
-    "published_at": "2026-11-06"
+    "published_at": "2026-11-09"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Fornecedores e Inovação | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/fornecedores-e-inovacao",
-    "published_at": "2026-11-06"
+    "published_at": "2026-11-09"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Licitações e Contratos | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/content/licitacoes_contratos",
-    "published_at": "2026-11-06"
+    "published_at": "2026-11-09"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Atendimento Virtual | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/atendimento-virtual",
-    "published_at": "2026-11-06"
+    "published_at": "2026-11-09"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Diário Oficial Eletrônico (DOTC-e) | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/content/dotc-e",
-    "published_at": "2026-11-06"
+    "published_at": "2026-11-09"
   },
   {
     "source": "TCE-PE",
     "title": "TCE-PE - Jurisprudência",
     "url": "https://www.tcepe.tc.br/internet/index.php/inicio-jurisprudencia",
-    "published_at": "2026-11-08"
+    "published_at": "2026-11-09"
   },
   {
     "source": "TCE-PE",
     "title": "TCE-PE - Pesquisa de Jurisprudência",
     "url": "https://sistemas.tce.pe.gov.br/jurisprudencia/PesquisaJurisprudencia!home.action",
-    "published_at": "2026-11-08"
+    "published_at": "2026-11-09"
   },
   {
     "source": "TCE-PE",
     "title": "TCE-PE - Deliberações",
     "url": "https://portal.tcepe.tc.br/jurisprudencia/consulta/deliberacoes",
-    "published_at": "2026-11-08"
+    "published_at": "2026-11-09"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - FORMALIZAÇÃO DE ATA DE REGISTRO DE PREÇOS PARA EVENTUAL CONTRATAÇÃO DE EMPRESA ESPECIALIZADA EM SERVIÇOS DE ENGENHARIA PARA PAVIMENTAÇÃO ASFÁLTICA EM CBUQ NO MUNICÍPIO DE CAROLINA",
+    "url": "https://bnccompras.com/Process/ProcessView?param1=[gkz]1gXwlXF/CUFacK8YDDfEhehtmLiLlprh__P4UDP577cO_tmW/NIB0RsdsCYN9QINQUMxdXh_WMsinTUBEXCGb2iX7WbiOH8WfbyIenE/yvc=",
+    "published_at": "2026-10-13"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Concorrência Pública 017 - Contratação de empresa especializada para executar Obras de Engenharia para construção de portal e implantação de sinalização turística no povoado de Cap",
+    "url": "https://www.serro.mg.gov.br/portal/editais/0/1/1706",
+    "published_at": "2026-10-13"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CONSTITUE O OBJETO DA PRESENTE CONCORRENCIA ELETRÔNICA A CONTRATAÇÃO DE EMPRESA EM REGIME DE EMPREITADA INTEGRAL COM FORNECIMENTO DE MÃO DE OBRA E MATERIAIS DESTINADOS A CONSTRUÇÃO",
+    "url": "https://pncp.gov.br/app/editais/17884412000134-1-001265/2026",
+    "published_at": "2026-10-13"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CONSTITUE O OBJETO DA PRESENTE CONCORRENCIA ELETRÔNICA A CONTRATAÇÃO DE EMPRESA EM REGIME DE EMPREITADA INTEGRAL COM FORNECIMENTO DE MÃO DE OBRA E MATERIAIS DESTINADOS A CONSTRUÇÃO",
+    "url": "https://pncp.gov.br/app/editais/17884412000134-1-001266/2026",
+    "published_at": "2026-10-13"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Aquisição de materiais do Kit Rondonista na modalidade pregão eletrônico, conforme condições e exigências estabelecidas no Termo de Referêcia e seus anexos.",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=11040405001302026",
+    "published_at": "2026-10-13"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Formação de Ata de Registro de Preços para o atendimento das demandas de mobiliários das diversas unidades solicitantes da UFES.",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=15304605000712026",
+    "published_at": "2026-10-13"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Constitui objeto da presente licitação o Registro de Preços para o fornecimento de aparelhos condicionadores de ar do tipo SPLIT/CASSETE, tecnologia inverter, ciclo reverso, selo I",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=09002005001412026",
+    "published_at": "2026-10-13"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de empresa especializada para a execução de reforma e ampliação de grupos escolares da zona rural do Município de São Caetano/PE, Estado de Pernambuco, conforme edital",
+    "url": "https://bnccompras.com/Process/ProcessView?param1=[gkz]nEoMEmiVOiiCfqUFpeYWn2uKXI_XD/Y1Zq6WU_Yaw_akXFcAjJBdycUKou7MyQI9pbTkP3S3f/_fKilOsE6K__w3MbubtF6O0bPnaGRKH1M=",
+    "published_at": "2026-10-13"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - [Portal de Compras Públicas] - CONTRATAÇÃO DE SERVIÇOS DE ENGENHARIA DESTINADOS A READEQUAÇÃO DO MIRANTE DO CRUZEIRO SÃO JOSÉ NO MUNICÍPIO DE PARARI (MINTUR/CEF – CONTRATO DE REPAS",
+    "url": "https://www.portaldecompraspublicas.com.br/processos/PB/Prefeitura-Municipal-de-Parari-2310/CPMP-0013-2026-2026-517939",
+    "published_at": "2026-10-13"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Licitação do tipo MENOR PREÇO, modalidade PREGÃO, na forma ELETRÔNICA - SRP, a fim de selecionar a melhor proposta para contratação de serviços de Manutenção Predial na ENFERMARIA,",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=76230005000472026",
+    "published_at": "2026-10-13"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Aquisição de cortinas e persianas sob medida, com instalação, pelo Sistema de Registro de Preços (SRP).",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=06000105002432026",
+    "published_at": "2026-10-13"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de obras de contenção em diversas unidades do campus sede da UFJF, conforme especificado no Termo de Referência",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=15306103003882026",
+    "published_at": "2026-10-13"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - [LICITANET] - CONTRATAÇÃO DE EMPRESA ESPECIALIZADA EM ENGENHARIA PARA EXECUÇÃO DOS SERVIÇOS DE RECUPERAÇÃO DE ESTRADAS VICINAIS NA ZONA RURAL DO MUNICÍPIO DE SANTA MARIA DO TOCANTI",
+    "url": "https://licitanet.com.br/sessao/189617",
+    "published_at": "2026-10-13"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - [LICITANET] - CONTRATAÇÃO DE EMPRESA PARA PRESTAÇÃO DE SERVIÇOS DE REFORMA E ADEQUAÇÃO DA SEDE DA CÂMARA MUNICIPAL DE CONCEIÇÃO DAS ALAGOAS/MG (ETAPA 01), COM FORNECIMENTO DE MATER",
+    "url": "https://licitanet.com.br/sessao/204464",
+    "published_at": "2026-10-13"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de Empresa Especializada para a Prestação de Serviços de Obras de Construção de uma Praça no Entorno da Igreja da Comunidade dos Poltros – Zona Rural do Município",
+    "url": "https://bnccompras.com/Process/ProcessView?param1=[gkz]UxMzi01bkP6eabkJRj/W58kvj6R0QSWCGL7t92VPZvQ2KncJzwqdjjlNcSaDXs0ZCO_2kJ7mr3WL42raYr1w_9VL2HakcnIvnEzTKT7DeI0=",
+    "published_at": "2026-10-13"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de Empresa Especializada para a Prestação de Serviços de Obras de Reforma da Escola do Rio das Rãs 2 – Zona Rural do Município",
+    "url": "https://bnccompras.com/Process/ProcessView?param1=[gkz]ehP9BUwscm4EMd3PkJTYGbL6G8zQazxh8JHxX07VoC/4TlGa1bIeBRjc0vL4cXoiSGWZILVJMdKVp3RmhoeZf8YdOoNEBW5QCXdBLkRJzvk=",
+    "published_at": "2026-10-13"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de Empresa Especializada para a Prestação de Serviços de Obras de Reforma da Escola da Comunidade de Roça de Dentro – Zona Rural do Município",
+    "url": "https://bnccompras.com/Process/ProcessView?param1=[gkz]5cnPJbw_v0Li6X4QxQtIB4vfqVjMKJ6D1jUVuhWalGQxLk9Qbyb07rkQmLmhjYbFksJhq5DYoXYJNFb5B0D2wWl6l1LI12lB38Bv7b_MGz8=",
+    "published_at": "2026-10-13"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de Empresa Especializada para a Prestação de Serviços de Obras de Reforma da Escola da Comunidade do Bebedouro – Zona Rural do Município",
+    "url": "https://bnccompras.com/Process/ProcessView?param1=[gkz]6sPBIkf8y8yiPKdO9O78Q9RUyUa__H7I6t2/TMA_f9vpznoKNsM5AN2KTsmen42S5hKyRn0OR_rZYP3DiT6dnV66BxQ87hrtLPg1H61RLj4=",
+    "published_at": "2026-10-13"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de empresa especializada para a execução do passeio público da Rua Aguedina Dapper, no município de Rolante/RS, abrangendo a execução de 1.150,00m de passeio público, c",
+    "url": "https://pncp.gov.br/app/editais/90936956000192-1-000126/2026",
+    "published_at": "2026-10-13"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de empresa especializada em engenharia para execução dos serviços remanescentes de adequação das estradas vicinais do Município de Angelim/PE.",
+    "url": "https://bnccompras.com/Process/ProcessView?param1=[gkz]QTh_QrF/FZ4VOD8/uo6eiN3N4OQZ_mkwm_Xx1mIf1SvYNnbW7QO1JHB/h0k2G4JolBhIBuiH_UINf9kFjroYdhQS61qHK/WftJCtPHP9AGA=",
+    "published_at": "2026-10-13"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de empresa especializada para execução de obra de reforma, revitalização e ampliação da Praça Professor José Carlos Brito, localizada no Município de Carmo de Minas/MG",
+    "url": "https://app2.licitardigital.com.br/pesquisa/116195",
+    "published_at": "2026-10-13"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CONTRATAÇÃO DE EMPRESA DE ENGENHARIA DE PRESTAÇÃO DE SERVIÇOS DE PAVIMENTAÇÃO EM PARALELEPÍPEDO NA AVENIDA PIAUÍ NA ZONA URBANA DO MUNICÍPIO DE SÃO GONÇALO DO GURGUÉIA – PI, CONFO",
+    "url": "https://app2-compras.licitasaogoncalodogurgueia.com.br/pesquisa/9138",
+    "published_at": "2026-10-13"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CONTRATAÇÃO DE EMPRESA PARA A REVISÃO DO PLANO DIRETOR DE MACRODRENAGEM, CONFORME AS ESPECIFICAÇÕES E QUANTIDADES ESTABELECIDAS NO TERMO DE REFERÊNCIA",
+    "url": "https://pncp.gov.br/app/editais/46638714000120-1-000387/2026",
+    "published_at": "2026-10-13"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - REGISTRO DE PREÇOS PARA FUTURA E EVENTUAL PRESTAÇÃO DE SERVIÇOS DE ENGENHARIA PARA EXECUÇÃO DE SERVIÇOS DE PAVIMENTAÇÃO EM TRATAMENTO SUPERFICIAL DUPLO (TSD), APLICAÇÃO DE CAPA SEL",
+    "url": "https://pncp.gov.br/app/editais/01743335000162-1-000158/2026",
+    "published_at": "2026-10-13"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - [LICITANET] - Contratação de Empresa Especializada em Obras e Serviços de Engenharia para a prestação de Serviços de DRENAGEM URBANA NO MUNICÍPIO DE SÃO MIGUEL DO ALEIXO/SE no muni",
+    "url": "https://licitanet.com.br/sessao/204514",
+    "published_at": "2026-10-13"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de empresa para a execução da obra de construção de 1 CAMPO DE FUTEBOL no município de CURRALINHO- PI.",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=48001003000232026",
+    "published_at": "2026-10-13"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CONSTRUÇÃO DE GALPÃO PARA O TRANSBORDO MUNICIPAL, NO MUNICÍPIO DE SÃO JOSÉ DO VALE DO RIO PRETO - RJ, COM FORNECIMENTO DE MATERIAL E MÃO-DE-OBRA",
+    "url": "https://bllcompras.com/Process/ProcessView?param1=[gkz]jESNeoIxrQkzGZYKY/iw9hbT9sFz2rodCgI4SVYJiLtTYSlhl2FS__82YlPqnTYYQ6AinVrNsqzNztY1CF1OaDHJD78RMB1wzA539whGapw=",
+    "published_at": "2026-10-13"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de Empresa Especializada em recapeamento asfáltico para execução de serviços em vias públicas do Município de Ubarana/SP, em área total de 10.495,25 m² (dez mil, quatro",
+    "url": "https://www.ubarana.sp.gov.br/licitacao",
+    "published_at": "2026-10-13"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CONTRATAÇÃO DE EMPRESA ESPECIALIZADA EM ENGENHARIA PARA EXECUÇÃO DE REFORMA, ADEQUAÇÃO E AMPLIAÇÃO DA ESCOLA MUNICIPAL ALAÍDE DE OLIVEIRA SALES, NO MUNICÍPIO DE SARZEDO/MG, COM CON",
+    "url": "https://app2.licitardigital.com.br/pesquisa/116200",
+    "published_at": "2026-10-13"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de empresa de engenharia para execução de obra de construção de uma escola de ensino fundamental no distrito de Santo Antônio das Queimadas, Município de Jurema – PE.",
+    "url": "https://bnccompras.com/Process/ProcessView?param1=[gkz]QsEOgUTmPgW/QZRbWNyNCKxI/G9uVU/W5dlPeiOUIl2gUGJL7AzKAgr7ZslwTxtBJv/2zDFDOwKTV6U3BgycrigrVYk0TSk5roO9rWhxntE=",
+    "published_at": "2026-10-13"
   },
   {
     "source": "TCM-GO",
