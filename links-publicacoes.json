@@ -12,6 +12,72 @@
     "published_at": "2026-06-02"
   },
   {
+    "source": "TCU",
+    "title": "TCU - ACÓRDÃO DE RELAÇÃO 6024/2026 ATA 40/2026 - PRIMEIRA CÂMARA",
+    "url": "https://contas.tcu.gov.br/pesquisaJurisprudencia/#/detalhamento/11/*/KEY:%22ACORDAO-COMPLETO-2784965%22/DTRELEVANCIA%2520desc%252C%2520NUMACORDAOINT%2520desc/false/1/false",
+    "published_at": "2026-11-17"
+  },
+  {
+    "source": "TCU",
+    "title": "TCU - ACÓRDÃO DE RELAÇÃO 6023/2026 ATA 40/2026 - PRIMEIRA CÂMARA",
+    "url": "https://contas.tcu.gov.br/pesquisaJurisprudencia/#/detalhamento/11/*/KEY:%22ACORDAO-COMPLETO-2783403%22/DTRELEVANCIA%2520desc%252C%2520NUMACORDAOINT%2520desc/false/1/false",
+    "published_at": "2026-11-17"
+  },
+  {
+    "source": "TCU",
+    "title": "TCU - ACÓRDÃO DE RELAÇÃO 6022/2026 ATA 40/2026 - PRIMEIRA CÂMARA",
+    "url": "https://contas.tcu.gov.br/pesquisaJurisprudencia/#/detalhamento/11/*/KEY:%22ACORDAO-COMPLETO-2780241%22/DTRELEVANCIA%2520desc%252C%2520NUMACORDAOINT%2520desc/false/1/false",
+    "published_at": "2026-11-17"
+  },
+  {
+    "source": "TCU",
+    "title": "TCU - ACÓRDÃO DE RELAÇÃO 6021/2026 ATA 40/2026 - PRIMEIRA CÂMARA",
+    "url": "https://contas.tcu.gov.br/pesquisaJurisprudencia/#/detalhamento/11/*/KEY:%22ACORDAO-COMPLETO-2784694%22/DTRELEVANCIA%2520desc%252C%2520NUMACORDAOINT%2520desc/false/1/false",
+    "published_at": "2026-11-17"
+  },
+  {
+    "source": "TCU",
+    "title": "TCU - ACÓRDÃO DE RELAÇÃO 6020/2026 ATA 40/2026 - PRIMEIRA CÂMARA",
+    "url": "https://contas.tcu.gov.br/pesquisaJurisprudencia/#/detalhamento/11/*/KEY:%22ACORDAO-COMPLETO-2785470%22/DTRELEVANCIA%2520desc%252C%2520NUMACORDAOINT%2520desc/false/1/false",
+    "published_at": "2026-11-17"
+  },
+  {
+    "source": "TCU",
+    "title": "TCU - ACÓRDÃO DE RELAÇÃO 6019/2026 ATA 40/2026 - PRIMEIRA CÂMARA",
+    "url": "https://contas.tcu.gov.br/pesquisaJurisprudencia/#/detalhamento/11/*/KEY:%22ACORDAO-COMPLETO-2785329%22/DTRELEVANCIA%2520desc%252C%2520NUMACORDAOINT%2520desc/false/1/false",
+    "published_at": "2026-11-17"
+  },
+  {
+    "source": "TCU",
+    "title": "TCU - ACÓRDÃO DE RELAÇÃO 6018/2026 ATA 40/2026 - PRIMEIRA CÂMARA",
+    "url": "https://contas.tcu.gov.br/pesquisaJurisprudencia/#/detalhamento/11/*/KEY:%22ACORDAO-COMPLETO-2785328%22/DTRELEVANCIA%2520desc%252C%2520NUMACORDAOINT%2520desc/false/1/false",
+    "published_at": "2026-11-17"
+  },
+  {
+    "source": "TCU",
+    "title": "TCU - ACÓRDÃO DE RELAÇÃO 6017/2026 ATA 40/2026 - PRIMEIRA CÂMARA",
+    "url": "https://contas.tcu.gov.br/pesquisaJurisprudencia/#/detalhamento/11/*/KEY:%22ACORDAO-COMPLETO-2785326%22/DTRELEVANCIA%2520desc%252C%2520NUMACORDAOINT%2520desc/false/1/false",
+    "published_at": "2026-11-17"
+  },
+  {
+    "source": "TCU",
+    "title": "TCU - ACÓRDÃO DE RELAÇÃO 6016/2026 ATA 40/2026 - PRIMEIRA CÂMARA",
+    "url": "https://contas.tcu.gov.br/pesquisaJurisprudencia/#/detalhamento/11/*/KEY:%22ACORDAO-COMPLETO-2785451%22/DTRELEVANCIA%2520desc%252C%2520NUMACORDAOINT%2520desc/false/1/false",
+    "published_at": "2026-11-17"
+  },
+  {
+    "source": "TCU",
+    "title": "TCU - ACÓRDÃO DE RELAÇÃO 6015/2026 ATA 40/2026 - PRIMEIRA CÂMARA",
+    "url": "https://contas.tcu.gov.br/pesquisaJurisprudencia/#/detalhamento/11/*/KEY:%22ACORDAO-COMPLETO-2785164%22/DTRELEVANCIA%2520desc%252C%2520NUMACORDAOINT%2520desc/false/1/false",
+    "published_at": "2026-11-17"
+  },
+  {
+    "source": "STJ",
+    "title": "STJ - Entender Direito aborda evolução da jurisprudência do STJ sobre agravo de instrumento",
+    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/18112026-Entender-Direito-aborda-evolucao-da-jurisprudencia-do-STJ-sobre-agravo-de-instrumento.aspx",
+    "published_at": "2026-11-18"
+  },
+  {
     "source": "STJ",
     "title": "STJ - Informativo de Jurisprudência destaca uso de prompt injection em petições e cobertura de sensor de glicose",
     "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/17112026-Informativo-de-Jurisprudencia-destaca-uso-de-prompt-injection-em-peticoes-e-cobertura-de-sensor-de-glicose-.aspx",
@@ -22,12 +88,6 @@
     "title": "STJ - Consulta à página de jurisprudência do STJ ajuda a evitar citações falsas geradas por IA",
     "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/03112026-Consulta-a-pagina-de-jurisprudencia-do-STJ-ajuda-a-evitar-citacoes-falsas-geradas-por-IA.aspx",
     "published_at": "2026-11-03"
-  },
-  {
-    "source": "STJ",
-    "title": "STJ - STJ afasta servidores suspeitos de irregularidades e terá programa de confiança digital para mitigar novos riscos",
-    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/19102026-STJ-afasta-servidores-suspeitos-de-irregularidades-e-tera-programa-de-confianca-digital-para-mitigar-novos-riscos.aspx",
-    "published_at": "2026-10-19"
   },
   {
     "source": "STJ",
@@ -55,9 +115,9 @@
   },
   {
     "source": "STJ",
-    "title": "STJ - Repetitivo vai definir exigência de previsão expressa da taxa diária de juros em contrato bancário",
-    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/19102026-Repetitivo-vai-definir-exigencia-de-previsao-expressa-da-taxa-diaria-de-juros-em-contrato-bancario.aspx",
-    "published_at": "2026-10-19"
+    "title": "STJ - Desembargadora convocada Fátima Maranhão inicia trabalhos na Sexta Turma",
+    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/17112026-Desembargadora-convocada-Fatima-Maranhao-inicia-trabalhos-na-Sexta-Turma.aspx",
+    "published_at": "2026-11-17"
   },
   {
     "source": "STJ",
@@ -76,12 +136,6 @@
     "title": "TCE-SP - Boletim de Jurisprudência | Tribunal de Contas do Estado de São Paulo",
     "url": "https://www.tce.sp.gov.br/boletim-de-jurisprudencia",
     "published_at": "2026-11-17"
-  },
-  {
-    "source": "TCE-SP",
-    "title": "TCE-SP - ARTIGO: O impacto do déficit na apreciação das contas anuais: um olhar à luz da jurisprudência do Tribunal de Contas do Estado de São Paulo",
-    "url": "https://www.tce.sp.gov.br/6524-artigo-impacto-deficit-apreciacao-contas-anuais-olhar-luz-jurisprudencia-tribunal-contas",
-    "published_at": "2026-11-05"
   },
   {
     "source": "TCE-SP",
@@ -132,6 +186,12 @@
     "published_at": "2026-11-17"
   },
   {
+    "source": "TCE-SP",
+    "title": "TCE-SP - e-TCESP | Tribunal de Contas do Estado de São Paulo",
+    "url": "https://www.tce.sp.gov.br/etcesp",
+    "published_at": "2026-11-17"
+  },
+  {
     "source": "TCE-MG",
     "title": "TCE-MG - Acessibilidade",
     "url": "https://www.tce.mg.gov.br/DescomplicaJuris/",
@@ -153,199 +213,79 @@
     "source": "TCE-SC",
     "title": "TCE-SC - Jurisprudência | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/content/jurisprudencia",
-    "published_at": "2026-11-16"
+    "published_at": "2026-11-18"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Denúncias e representações | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/denuncias-representacoes",
-    "published_at": "2026-11-16"
+    "published_at": "2026-11-18"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Informativos de Jurisprudência | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/informativo-de-jurisprud%C3%AAncia",
-    "published_at": "2026-11-16"
+    "published_at": "2026-11-18"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Informativos de Jurisprudência - Edições anteriores | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/informativo-de-jurisprud%C3%AAncia-edicoes-anteriores",
-    "published_at": "2026-11-16"
+    "published_at": "2026-11-18"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Informativos de Jurisprudência",
     "url": "https://www.tcesc.tc.br/informativo-de-jurisprudência",
-    "published_at": "2026-11-16"
+    "published_at": "2026-11-18"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Recolhimento de débitos e de multas | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/recolhimentos",
-    "published_at": "2026-11-16"
+    "published_at": "2026-11-18"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Fornecedores e Inovação | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/fornecedores-e-inovacao",
-    "published_at": "2026-11-16"
+    "published_at": "2026-11-18"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Licitações e Contratos | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/content/licitacoes_contratos",
-    "published_at": "2026-11-16"
+    "published_at": "2026-11-18"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Atendimento Virtual | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/atendimento-virtual",
-    "published_at": "2026-11-16"
+    "published_at": "2026-11-18"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Diário Oficial Eletrônico (DOTC-e) | O Tribunal da Governança Pública Catarinense",
     "url": "https://www.tcesc.tc.br/content/dotc-e",
-    "published_at": "2026-11-16"
+    "published_at": "2026-11-18"
   },
   {
     "source": "TCE-PE",
     "title": "TCE-PE - Jurisprudência",
     "url": "https://www.tcepe.tc.br/internet/index.php/inicio-jurisprudencia",
-    "published_at": "2026-11-17"
+    "published_at": "2026-11-18"
   },
   {
     "source": "TCE-PE",
     "title": "TCE-PE - Pesquisa de Jurisprudência",
     "url": "https://sistemas.tce.pe.gov.br/jurisprudencia/PesquisaJurisprudencia!home.action",
-    "published_at": "2026-11-17"
+    "published_at": "2026-11-18"
   },
   {
     "source": "TCE-PE",
     "title": "TCE-PE - Deliberações",
     "url": "https://portal.tcepe.tc.br/jurisprudencia/consulta/deliberacoes",
-    "published_at": "2026-11-17"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - CONCORRÊNCIA ELETRÔNICA 90035/2026 - CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA CONSTRUÇÃO DE NOVA SEDE DAS PROMOTORIAS DE JUSTIÇA NO MUNICÍPIO DE BARRA DO BUGRES/MT, DE ACORDO COM",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=92662503002042026",
-    "published_at": "2026-10-19"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Edital de Concorrência Pública de forma Eletrônica para Contratação de Empresa especializada em Engenharia/Construção Civil para a Espaço Multiuso 1 integrante do conjunto do Santu",
-    "url": "https://bllcompras.com/Process/ProcessView?param1=[gkz]7oI6gKF5e5bo5_2CGIXfA1H2qjgNQSdkDJpXu40VHVBEoEeJ7qmlUiS0lip_x4iQwNV3igZAoFrAV4OwtHYWTZJGIKEKLagw4zTww9LQGQM=",
-    "published_at": "2026-10-19"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - DISPENSA DE LICITAÇÃO: AQUISIÇÃO DE MATERIAL HIDRAULICO PARA BEBDEDOUROS E PURIFICADORES USO DA SECRETARIA MUNICIPAL DE SAÚDE",
-    "url": "https://www.catanduva.sp.gov.br/portal/editais/4",
-    "published_at": "2026-10-19"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - TERMO DE UTILIZAÇÃO, PELO MUNICÍPIO DE JOÃO PINHEIRO/MG, NA CONDIÇÃO DE ENTE CONSORCIADO AO CONSÓRCIO INTERMUNICIPAL DE SAÚDE DO ALTO PARANAÍBA – CISALP À ATA DE REGISTRO DE PREÇOS",
-    "url": "https://app2.licitardigital.com.br/pesquisa/116709",
-    "published_at": "2026-10-19"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Concorrência para Contratação de empresa especializada em obra civil no regime de empreitada global para a execução de reforma e ampliação da cantina da EMEF Areno Martins Vieira,",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=98957103003442026",
-    "published_at": "2026-10-19"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - CONSTITUI O OBJETO DA PRESENTE CONCORRÊNCIA ELETRÔNICA A CONTRATAÇÃO DE EMPRESA EM REGIME DE EMPREITADA INTEGRAL COM FORNECIMENTO DE MATERIAIS E MÃO DE OBRA DESTINADA A PAVIMENTAÇÃ",
-    "url": "https://pncp.gov.br/app/editais/17884412000134-1-001277/2026",
-    "published_at": "2026-10-19"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Pregão eletrônico para aquisição de equipamentos de TIC e periféricos.",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=07001305001462026",
-    "published_at": "2026-10-19"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - A presente licitação tem por objeto Contratação de empresa especializada para a execução da cobertura metálica da garagem de viaturas do CBMSC no Município de Matos Costa/SC, com d",
-    "url": "https://bllcompras.com/Process/ProcessView?param1=[gkz]1WuMN23f60s8OpqctWMIHgYdvFsX6p7KSahVsKO6t9syUso8Dd6mpprcOhZOFRGAAZ6S_0X0TMB5sm9r2Y9BtbP0GcFnJc86Tr18NjOwlfM=",
-    "published_at": "2026-10-19"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Constitui objeto da presente licitação a contratação de empresa especializada para a execução da troca do telhado e outras reformas no prédio da Câmara de Vereadores de Itacurubi,",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=93054803000012026",
-    "published_at": "2026-10-19"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Execução de obra de instalação elétrica, climatização, revisão da cobertura, forro e pintura da Câmara Municipal, no município de Soure/PA.",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=92544603000082026",
-    "published_at": "2026-10-19"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Contratação de empresa sob o regime de empreitada por preço global, para a construção de uma Câmara Municipal com área total de 407,76m², no município de Santa Mônica-PR",
-    "url": "https://bllcompras.com/Process/ProcessView?param1=[gkz]hoipeUhD0nc2naBnCXWrsxYrmoQVIqE5401/0UAp6uWWQyNWOyXvo6_KPR5_4ILiehPS45x73y35CWeaRrNquXGGzTSzHwxucODXbIswrkY=",
-    "published_at": "2026-10-19"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - O objeto da presente licitação é a contratação de empresa de engenharia/arquitetura para execução de obra de reforma no imóvel do CREA/MT, localizado no município de Cuiabá/MT, com",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=38942503000162026",
-    "published_at": "2026-10-19"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Registro de preços para futuras e eventuais aquisições de areia média e pedra brita nº 1, para utilização pelas equipes de manutenção do SAAE, no município de Mogi Mirim/SP.",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=92607105000692026",
-    "published_at": "2026-10-19"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Registro de preços para futura e eventual aquisição de cimento CP-III, para reposição de estoque do almoxarifado do SAAE, no município de Mogi Mirim/SP.",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=92607105000702026",
-    "published_at": "2026-10-19"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Registro de Preços para futura e eventual SERVIÇOS CONTÍNUOS DE MANUTENÇÃO PREVENTIVA E CORRETIVA DA FROTA DE VEÍCULOS DO MUNICÍPIO COM REPOSIÇÃO DE PEÇAS E SERVIÇOS DE GUINCHO",
-    "url": "https://bnccompras.com/Process/ProcessView?param1=[gkz]cx9MsUC7pB9VELN3rUG/oTYkW8eOIwNuWvswclokltGLXlIBbB6lwB/rB/krUYvMcFvrxZ54kbyDMHG/6kEiOpV_8UBpK7pb5QkZxTYcwak=",
-    "published_at": "2026-10-19"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - CONTRATAÇÃO DE EMPRESA PARA EXECUÇÃO DE REVESTIMENTO ASFÁLTICO COM PMQ E CBUQ, para Secretaria de Obras e Viação, conforme descrito no Anexo I - Termo de Referência deste Edital, a",
-    "url": "https://pncp.gov.br/app/editais/87612826000190-1-001032/2026",
-    "published_at": "2026-10-19"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Registro de Preços para a aquisição de IMPRESSOS GRÁFICOS II a fim de atender às necessidades do Hospital Universitário de Sergipe HU-UFS/HU Brasil, Unidade Gestora (UG) 155017, pe",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=15501705000682026",
-    "published_at": "2026-10-19"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Registro de preços para eventual aquisição de mobiliário para os alojamentos do Com1Dn, conforme condições, quantidades, especificações e exigências estabelecidas no Edital e seus",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=78100005000872026",
-    "published_at": "2026-10-19"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - AQUISIÇÃO ESTIMADA ANUAL DE ESTETOSCÓPIO, DEVIDAMENTE ESPECIFICADO NO ANEXO I DO EDITAL, ATRAVÉS DE SISTEMA DE REGISTRO DE PREÇOS",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=98621905005022026",
-    "published_at": "2026-10-19"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - [Portal de Compras Públicas] - Licitação de casa de carnes e churrasqueira. Tal demanda atende a necessidade de que durante eventos tradicionais de nosso município, seja possível a",
-    "url": "https://www.portaldecompraspublicas.com.br/processos/RS/Prefeitura-Municipal-de-Capao-Bonito-do-Sul-973/CPMP-CE4-2026-2026-519284",
-    "published_at": "2026-10-19"
+    "published_at": "2026-11-18"
   },
   {
     "source": "PNCP",
@@ -355,57 +295,63 @@
   },
   {
     "source": "PNCP",
-    "title": "PNCP - Construção de Sistema de Abastecimento de Agua (SAA) , Aldeia Karugwa e Pyhau, município de Itaporanga / SP",
-    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=25704803001522026",
-    "published_at": "2026-10-19"
+    "title": "PNCP - RECAPEAMENTO ASFÁLTICO EM VIAS DO MUNICÍPIO DE PANORAMA/SP",
+    "url": "https://www.panorama.sp.gov.br/?pag=T0RZPU9EYz1PR009T1RrPU9EWT1PVEE9T1dFPQ==&view=LIST-LICIT&modalidade=&ano=2026&situacao=&notIn=&covid=&id=1243",
+    "published_at": "2026-10-20"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - Contratação de empresa técnica especializada em Engenharia para Obra de Reforma e Ampliação da Unidade Básica de Saúde do Distrito do Tanque, zona rural do município de Porteirinha",
-    "url": "https://app2.licitardigital.com.br/pesquisa/116719",
-    "published_at": "2026-10-19"
+    "title": "PNCP - Contratação de empresa especializada na execução de obra de engenharia para realização de serviços de reforma, sob regime de contratação de empreitada por preço unitário, contempla",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=15512403000652026",
+    "published_at": "2026-10-20"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - Contratação de Empresa especializada para a realização da Reforma de Banheiros, Fachada e Acesso do QCG/PMGO, no município de Goiânia - GO, com fornecimento de material, mão de obr",
-    "url": "https://pncp.gov.br/app/editais/01409580000138-1-001597/2026",
-    "published_at": "2026-10-19"
+    "title": "PNCP - Elaboração de Projetos Básicos e Executivos, Execução de Obras Civis, Fornecimentos, Montagens, Testes, Comissionamento e Operação Assistida da 1ª etapa do Ramal do Piancó, Trecho",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=53001303000012027",
+    "published_at": "2026-10-20"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - CONTRATAÇÃO DE EMPRESA ESPECIALIZADA EM ENGENHARIA PARA EXECUÇÃO DA OBRA DE CONSTRUÇÃO DE BLOCO ANEXO PARA BANHEIROS PADRÃO NA ESCOLA MUNICIPAL JOSÉ PIRES DE SOUZA, NO MUNICÍPIO DE",
-    "url": "https://pncp.gov.br/app/editais/00236968000111-1-000150/2026",
-    "published_at": "2026-10-19"
+    "title": "PNCP - Contratação de empresa especializada para execução da obra de Reforma do Campus Xapuri do Instituto Federal de Educação, Ciência e Tecnologia do Acre - IFAC",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=15815603000542026",
+    "published_at": "2026-10-20"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - Concessão de uso de espaço público, mediante título oneroso, para construção e exploração de 04 (quatro) pontos comerciais (quiosques) ao longo da Beira-Mar do Município",
-    "url": "https://pregaobanrisul.com.br/editais/0013_2026/358284",
-    "published_at": "2026-10-19"
+    "title": "PNCP - Contratação de empresa para prestação de serviços técnicos especializados em Segurança Contra Incêndio e Pânico – SCIP, por unidade/anexo do complexo hospitalar do HU-UFMA/HU Brasi",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=15501003000422026",
+    "published_at": "2026-10-20"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - Contratação de empresa especializada para modernização e ampliação do sistema de iluminação pública do Município de Capão Bonito/SP, com substituição de luminárias por tecnologia L",
-    "url": "https://pncp.gov.br/app/editais/46634259000195-1-000229/2026",
-    "published_at": "2026-10-19"
+    "title": "PNCP - Construção do Depósito de Resíduos do Quartel General Integrado do Comando Militar da Amazônia Oriental, em Belém/PA",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=16019603000492026",
+    "published_at": "2026-10-20"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - [Portal de Compras Públicas] - Contratação de empresa especializada para execução da obra de construção de Centro Esportivo, no Município de Vista Alegre/RS, em atendimento ao CONT",
-    "url": "https://www.portaldecompraspublicas.com.br/processos/RS/Prefeitura-Municipal-de-Vista-Alegre-1542/CPMP-Concorrencia-05-2026-2026-2026-511828",
-    "published_at": "2026-10-19"
+    "title": "PNCP - Contratação de empresa especializada para execução de obras e serviços comuns de engenharia, objetivando a Construção da Praça da Rodoviária com Espaço Esportivo, na Sede do Municí",
+    "url": "https://bnccompras.com/Process/ProcessView?param1=[gkz]51pvUMQhgNhJ9TU5/PQzapYfuXPVg/fVsv1QYfNheNa6CdBm32WImq3PsqhwgflmfYKCmhhHFQDpS9VYFQg7hGwM2TjLp0v7oQLHr7ywGNA=",
+    "published_at": "2026-10-20"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - [Portal de Compras Públicas] - CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA EXECUÇÃO DE OBRA DE REFORMA DA COBERTURA DO GINÁSIO DO PARQUE (CENTRO DE LAZER E CONVIVÊNCIA), NO MUNICÍPIO",
-    "url": "https://www.portaldecompraspublicas.com.br/processos/RS/Prefeitura-Municipal-de-Camargo-4498/CPMP-11-2026-2026-519230",
-    "published_at": "2026-10-19"
+    "title": "PNCP - Contratação de empresa especializada para a execução da OBRA DE ADEQUAÇÃO, RECUPERAÇÃO E MELHORIA DA ESTRUTURA FÍSICA EXISTENTE DA EMEIEF “DARLY NERTY VERVLOET”, localizada em Rua",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=98076403000202026",
+    "published_at": "2026-10-20"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - [LICITANET] - Contratação de empresa para prestação de serviços de Construção de ciclovia de acesso à Praça da Matriz no Município de São Vicente Ferrer/MA – 3ª etapa",
-    "url": "https://licitanet.com.br/sessao/205141",
-    "published_at": "2026-10-19"
+    "title": "PNCP - CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA EXECUÇÃO DE MANUTENÇÃO CORRETIVA NO SISTEMA DE COMBATE A INCENDIOS DO PAÇO MUNICIPAL DE LEME/SP.",
+    "url": "https://pncp.gov.br/app/editais/46362661000168-1-002225/2026",
+    "published_at": "2026-10-20"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CONTRATAÇÃO DE EMPRESA ESPECIALIZADA EM ENGENHARIA PARA CONSTRUÇÃO DO CENTRO INTERATIVO PEDAGÓGICO DE ESPORTES ANEXO À ESCOLA MUNICIPAL RECREAÇÃO BOA ESPERANÇA, DE INTERESSE DA SEC",
+    "url": "https://bnccompras.com/Process/ProcessView?param1=[gkz]Wifq0LXimERCcDWA2Q/mbS_x284Q62EZ0M7/1aG0LO6tDX/A9UdImhukw/xR4cyXNdhqqTe8BG_G19rUKPNfX5AHhbiDUQ6wwDCmzduWdWo=",
+    "published_at": "2026-10-20"
   },
   {
     "source": "TCM-GO",
@@ -442,11 +388,5 @@
     "title": "TCM-GO - Enquadramento de profissionais da educação infantil exige análise de requisitos legais",
     "url": "https://www.tcmgo.tc.br/site/2026/10/enquadramento-de-profissionais-da-educacao-infantil-exige-analise-de-requisitos-legais/",
     "published_at": "2026-10-23"
-  },
-  {
-    "source": "TCM-GO",
-    "title": "TCM-GO - Guia de Linguagem Simples do TCMGO ajuda a entender decisões e orientações",
-    "url": "https://www.tcmgo.tc.br/site/2026/10/guia-de-linguagem-simples-do-tcmgo-ajuda-a-entender-decisoes-e-orientacoes/",
-    "published_at": "2026-10-19"
   }
 ]
