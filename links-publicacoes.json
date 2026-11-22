@@ -109,6 +109,12 @@
   },
   {
     "source": "STJ",
+    "title": "STJ - Daniela Teixeira, Teodoro Silva Santos e Afrânio Vilela completam três anos no STJ",
+    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/19112026-Daniela-Teixeira--Teodoro-Silva-Santos-e-Afranio-Vilela-completam-tres-anos-no-STJ.aspx",
+    "published_at": "2026-11-22"
+  },
+  {
+    "source": "STJ",
     "title": "STJ - Ministro Marco Aurélio Bellizze passa a compor a Corte Especial",
     "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/18112026-Ministro-Marco-Aurelio-Bellizze-passa-a-compor-a-Corte-Especial.aspx",
     "published_at": "2026-11-18"
@@ -124,12 +130,6 @@
     "title": "STJ - STJ Notícias aborda responsabilização de preso por tráfico de drogas dentro de presídio",
     "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/17112026-STJ-Noticias-aborda-responsabilizacao-de-preso-por-trafico-de-drogas-dentro-de-presidio.aspx",
     "published_at": "2026-11-17"
-  },
-  {
-    "source": "STJ",
-    "title": "STJ - Sexta Turma afasta importunação sexual e confirma estupro de vulnerável contra vítima adulta incapaz de resistir à violência",
-    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/16112026-Sexta-Turma-afasta-importunacao-sexual-e-confirma-estupro-de-vulneravel-contra-vitima-adulta-incapaz.aspx",
-    "published_at": "2026-11-16"
   },
   {
     "source": "TCE-SP",
@@ -267,19 +267,19 @@
     "source": "TCE-PE",
     "title": "TCE-PE - Jurisprudência",
     "url": "https://www.tcepe.tc.br/internet/index.php/inicio-jurisprudencia",
-    "published_at": "2026-11-21"
+    "published_at": "2026-11-22"
   },
   {
     "source": "TCE-PE",
     "title": "TCE-PE - Pesquisa de Jurisprudência",
     "url": "https://sistemas.tce.pe.gov.br/jurisprudencia/PesquisaJurisprudencia!home.action",
-    "published_at": "2026-11-21"
+    "published_at": "2026-11-22"
   },
   {
     "source": "TCE-PE",
     "title": "TCE-PE - Deliberações",
     "url": "https://portal.tcepe.tc.br/jurisprudencia/consulta/deliberacoes",
-    "published_at": "2026-11-21"
+    "published_at": "2026-11-22"
   },
   {
     "source": "TCM-GO",
@@ -304,11 +304,5 @@
     "title": "TCM-GO - Falta de remédio cai, mas déficit de profissionais dispara na saúde de Goiânia, aponta TCMGO",
     "url": "https://www.tcmgo.tc.br/site/2026/11/falta-de-remedio-cai-mas-deficit-de-profissionais-dispara-na-saude-de-goiania-aponta-tcmgo/",
     "published_at": "2026-11-10"
-  },
-  {
-    "source": "TCM-GO",
-    "title": "TCM-GO - Enquadramento de profissionais da educação infantil exige análise de requisitos legais",
-    "url": "https://www.tcmgo.tc.br/site/2026/10/enquadramento-de-profissionais-da-educacao-infantil-exige-analise-de-requisitos-legais/",
-    "published_at": "2026-10-23"
   }
 ]
