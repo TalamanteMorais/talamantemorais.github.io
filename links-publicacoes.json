@@ -135,61 +135,61 @@
     "source": "TCE-SP",
     "title": "TCE-SP - Boletim de Jurisprudência | Tribunal de Contas do Estado de São Paulo",
     "url": "https://www.tce.sp.gov.br/boletim-de-jurisprudencia",
-    "published_at": "2026-11-20"
+    "published_at": "2026-11-23"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - Pesquisa de Jurisprudência",
     "url": "https://www.tce.sp.gov.br/jurisprudencia",
-    "published_at": "2026-11-20"
+    "published_at": "2026-11-23"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - Comissão Permanente de Análise de Jurisprudência",
     "url": "https://www.tce.sp.gov.br/boletim-de-jurisprudencia/CPAJ",
-    "published_at": "2026-11-20"
+    "published_at": "2026-11-23"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - LEI Nº 14.133, DE 1º DE ABRIL DE 2021",
     "url": "https://www.tce.sp.gov.br/legislacao-comentada/lei-14133-1o-abril-2021",
-    "published_at": "2026-11-20"
-  },
-  {
-    "source": "TCE-SP",
-    "title": "TCE-SP - Boletim de Atualização de Licitações e Contratos – Outubro 2026",
-    "url": "https://www.tce.sp.gov.br/6524-boletim-atualizacao-licitacoes-e-contratos-outubro-2026",
-    "published_at": "2026-11-04"
+    "published_at": "2026-11-23"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - ARTIGO: Dívida ativa e reforma tributária: uma agenda de responsabilidade fiscal municipal - a arrecadação de 2026, a transição do IBS e os desafios fiscais dos municípios",
     "url": "https://www.tce.sp.gov.br/6524-artigo-divida-ativa-e-reforma-tributaria-agenda-responsabilidade-fiscal-municipal-arrecadacao",
-    "published_at": "2026-11-20"
+    "published_at": "2026-11-23"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - Portal dos Conselhos Municipais | Tribunal de Contas do Estado de São Paulo",
     "url": "https://www.tce.sp.gov.br/portal-conselhos-municipais",
-    "published_at": "2026-11-20"
+    "published_at": "2026-11-23"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - Teletrabalho",
     "url": "https://www.tce.sp.gov.br/informacoes-teletrabalho",
-    "published_at": "2026-11-20"
+    "published_at": "2026-11-23"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - AUDESP | Tribunal de Contas do Estado de São Paulo",
     "url": "https://www.tce.sp.gov.br/audesp",
-    "published_at": "2026-11-20"
+    "published_at": "2026-11-23"
   },
   {
     "source": "TCE-SP",
     "title": "TCE-SP - e-TCESP | Tribunal de Contas do Estado de São Paulo",
     "url": "https://www.tce.sp.gov.br/etcesp",
-    "published_at": "2026-11-20"
+    "published_at": "2026-11-23"
+  },
+  {
+    "source": "TCE-SP",
+    "title": "TCE-SP - SisCAAWeb - Sistema de Controle de Admissão e Aposentadoria/Pensão - Internet",
+    "url": "https://www.tce.sp.gov.br/siscaaweb",
+    "published_at": "2026-11-23"
   },
   {
     "source": "TCE-MG",
@@ -267,19 +267,199 @@
     "source": "TCE-PE",
     "title": "TCE-PE - Jurisprudência",
     "url": "https://www.tcepe.tc.br/internet/index.php/inicio-jurisprudencia",
-    "published_at": "2026-11-22"
+    "published_at": "2026-11-23"
   },
   {
     "source": "TCE-PE",
     "title": "TCE-PE - Pesquisa de Jurisprudência",
     "url": "https://sistemas.tce.pe.gov.br/jurisprudencia/PesquisaJurisprudencia!home.action",
-    "published_at": "2026-11-22"
+    "published_at": "2026-11-23"
   },
   {
     "source": "TCE-PE",
     "title": "TCE-PE - Deliberações",
     "url": "https://portal.tcepe.tc.br/jurisprudencia/consulta/deliberacoes",
-    "published_at": "2026-11-22"
+    "published_at": "2026-11-23"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CONTRATAÇÃO DIRETA, POR DISPENSA DE LICITAÇÃO, NOS TERMOS DO ART. 75, INCISO II, DA LEI FEDERAL Nº 14.133/2021, PARA CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA A REALIZAÇÃO DE RECAR",
+    "url": "https://pncp.gov.br/app/editais/82892266000150-1-000036/2026",
+    "published_at": "2026-10-26"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CONTRATAÇÃO DIRETA, POR DISPENSA DE LICITAÇÃO, NOS TERMOS DO ART. 75, INCISO II, DA LEI FEDERAL Nº 14.133/2021, PARA CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA PLANEJAMENTO, ORGANIZ",
+    "url": "https://pncp.gov.br/app/editais/82892266000150-1-000037/2026",
+    "published_at": "2026-10-26"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CONTRATAÇÃO DIRETA, POR DISPENSA DE LICITAÇÃO, COM FUNDAMENTO NO ART. 75, INCISO II, DA LEI FEDERAL Nº 14.133/2021, PARA CONTRATAÇÃO DE EMPRESA ESPECIALIZADA NA PRESTAÇÃO DE SERVIÇ",
+    "url": "https://pncp.gov.br/app/editais/82892266000150-1-000038/2026",
+    "published_at": "2026-10-26"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CONTRATAÇÃO DIRETA, POR DISPENSA DE LICITAÇÃO, NOS TERMOS DO ART. 75, INCISO II, DA LEI FEDERAL Nº 14.133/2021, PARA CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA PRESTAÇÃO DE SERVIÇOS",
+    "url": "https://pncp.gov.br/app/editais/82892266000150-1-000039/2026",
+    "published_at": "2026-10-26"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Adesão à ATA DE REGISTRO DE PREÇOS CONSOLIDADA nº 5/2026, DECORRENTE DO PROCESSO LICITATÓRIO PREGÃO ELETRÔNICO nº 29/2025, REGISTRO DE PREÇO, PREFEITURA MUNICIPAL DE RIO BONITO, ES",
+    "url": "https://pncp.gov.br/app/editais/75352062000161-1-000164/2026",
+    "published_at": "2026-10-26"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Aquisição de Medicamentos (grupo 09) para o Hospital das Clinicas da UFG da Rede HU-Brasil na modalidade Pregão Eletrônico - Sistema de Registro de Preços.",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=15590405001672026",
+    "published_at": "2026-10-26"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CONTRATAÇÃO DIRETA, POR DISPENSA DE LICITAÇÃO, DE EMPRESA ESPECIALIZADA PARA AQUISIÇÃO DE TAÇAS, MEDALHAS E TROFÉUS DESTINADOS À PREMIAÇÃO DOS PARTICIPANTES E VENCEDORES DOS CAMPEO",
+    "url": "https://pncp.gov.br/app/editais/82892266000150-1-000040/2026",
+    "published_at": "2026-10-26"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - [Portal de Compras Públicas] - Contratação por dispensa de licitação para a aquisição de 20 (vinte) mesas refeitório conjugadas com 04 (quatro) bancos fixos e 06 (seis) conjuntos d",
+    "url": "https://www.portaldecompraspublicas.com.br/processos/TO/Prefeitura-Municipal-de-Paraiso-do-Tocantins-2465/DE-12-2026-2026-520984",
+    "published_at": "2026-10-26"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Dispensa de Licitação por Urgência para a contratação de empresa especializada para manutenção corretiva de equipamentos odontológicos para os consultórios odontológicos da Secreta",
+    "url": "https://pncp.gov.br/app/editais/87613022000105-1-000197/2026",
+    "published_at": "2026-10-26"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de empresa especializada para a prestação de serviços técnicos especializados de natureza predominantemente intelectual, consistentes na elaboração do Relatório de Cont",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=92628703001962026",
+    "published_at": "2026-10-26"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CONCORRÊNCIA ELETRÔNICA 011 2026 - CONTRATAÇÃO DE EMPRESA ESPECIALIZADA EM ENGENHARIA PARA EXECUÇÃO DE OBRAS DE CONSTRUÇÃO DE JAZIGOS NO CEMITÉRIO MUNICIPAL SANTÍSSIMO REDENTOR, MU",
+    "url": "http://www.compraspotim.com.br",
+    "published_at": "2026-10-26"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CONCORRÊNCIA ELETRÔNICA DESTINADA À CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA PRESTAÇÃO DE SERVIÇOS TÉCNICOS MULTIDISCIPLINARES DE REGULARIZAÇÃO FUNDIÁRIA URBANA – REURB, CONSISTEN",
+    "url": "https://pncp.gov.br/app/editais/01612781000138-1-000136/2026",
+    "published_at": "2026-10-26"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA A PRESTAÇÃO DE SERVIÇOS TÉCNICOS ESPECIALIZADOS DE NATUREZA PREDOMINANTEMENTE INTELECTUAL NA ÁREA AMBIENTAL, DESTINADOS A ATENDER ÀS NECES",
+    "url": "https://bllcompras.com/Process/ProcessView?param1=[gkz]VH85A8vP1D129j6AOjChaUQDyb4z1wXsrLuu3JKoXqnE/HAXNT2U1sNmmkJpiQx0LNXqKmxpOL9jRA3wlmfLPWhcdnWVvTTcSRopRao4CKA=",
+    "published_at": "2026-10-26"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - RELANÇAMENTO DOS ITENS QUE RESTARAM FRACASSADOS E DESERTOS NO PREGÃO ELETRÔNICO Nº 90079/2026 - MATERIAL PENSO CIRÚRGICO PARA O DEPÓSITO DE MATERIAL CIRÚRGICO.",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=16032205000742026",
+    "published_at": "2026-10-26"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Pregão eletrônico Nº 25/2026 para aquisição de Insumos e Materiais Laboratoriais para uso na Unidade de Análises Clínicas e Anatomia Patológica para a Maternidade Escola Januário C",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=15501505000252026",
+    "published_at": "2026-10-26"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Credenciamento de pessoas físicas e juridicas para a prestação de serviços de transporte de passageiros em viagens eventuais, dentro e fora do Município de Itatuba/PB, com disponib",
+    "url": "https://pncp.gov.br/app/editais/08865628000161-1-000058/2026",
+    "published_at": "2026-10-28"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - contratação direta mediante Inexigibilidade de Licitação da Federação de Atletismo de Mato Grosso do Sul – FAMS",
+    "url": "https://pncp.gov.br/app/editais/03342920000186-1-000083/2026",
+    "published_at": "2026-10-26"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CONTRATAÇÃO POR INEXIGIBILIDADE DE LICITAÇÃO EM NOME DE IRAN SOUZA DE FRANÇA , INSCRITO NO CPF/MF SOB O Nº 235.359.384-49 , PARA A LOCAÇÃO DE IMÓVEL NÃO RESIDENCIAL, SITUADO NA AV.",
+    "url": "http://portaldecompras.recife.pe.gov.br/",
+    "published_at": "2026-10-26"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CREDENCIAMENTO DE EMPRESA(S)ESPECIALIZADA(S) PARA PROCEDIMENTOS CIRÚRGICOS – CASTRAÇÃO DE ANIMAIS (CANINOS E FELINOS), MACHOS E FÊMEAS DO MUNICÍPIO DE LAJEADO/RS.",
+    "url": "https://pregaobanrisul.com.br/editais/0005_2026/358375",
+    "published_at": "2026-10-26"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - O objeto da presente licitação é contratação de empresa para construção de Praça no Bairro Jurema e Ponto de Taxi, no Município de Tanhaçu/BA., conforme projetos, memoriais descrit",
+    "url": "https://bnccompras.com/Process/ProcessView?param1=[gkz]a0JUoV_BZFblBKcTcMhHOVYXXmpZUp9maGI3EWzRJ0lsNvU9gbqg7fUTneJq2ZeSZP7Vm8VR_FOAR3HfnY_Q84PTjCs0Qfzt//L_kr3UbZA=",
+    "published_at": "2026-10-26"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Aquisição de subscrição de serviços de videoconferência em nuvem do Zoom, através do Sistema de Registro de Preços, conforme especificações estipuladas no Termo de Referência - An",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=09002805001232026",
+    "published_at": "2026-10-26"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Registro de preços para futura e eventual aquisição de material de limpeza e descartáveis, visando atender às necessidades da Câmara Municipal do Cabo de Santo Agostinho, conforme",
+    "url": "https://bnccompras.com/Process/ProcessView?param1=[gkz]doa9hAJJt4hjSfbNIBhBRIwd_rjv7tOTSuuslFMz4F_IGTcijFSptMnry6JQaYY/xtKvCdxurvFVucdZIMrFUaA5lIzzOdjNRemCKFi1wb0=",
+    "published_at": "2026-10-26"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - REGISTRO DE PRECOS PARA CONTRATACAO DE EMPRESA PARA PRESTACAO DE SERVICOS DE PEQUENOS REPAROS EVENTUAIS PARA O MUNICIPIO DE TRES BARRAS DO PARANA",
+    "url": "https://pncp.gov.br/app/editais/78121936000168-1-000089/2026",
+    "published_at": "2026-10-26"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Registro de preços para o fornecimento de inseticida MICROENCAPSULADO LAMBDA-CIALOTRINA 10CS COM TECNOLOGIA ICAP® para o controle de escorpiões nos municípios consorciados ao CONSÓ",
+    "url": "https://bnccompras.com/Process/ProcessView?param1=[gkz]i91ATBZz6c7kw1NTDJowNON7yXJhL_RTPi2DRMVexGAKUZ_1xEoLHFWCU479ynMJjJJsjHlHoK3OuELuYHj3n5qYb4xH33BPhvhyhKIfxhY=",
+    "published_at": "2026-10-26"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CREDENCIAMENTO PARA A PRESTAÇÃO DE SERVIÇOS MÉDICOS ESPECIALIZADOS, EM REGIME DE PLANTÃO, NAS UNIDADES DE SAÚDE DO MUNICÍPIO DE LUCAS DO RIO VERDE/MT.",
+    "url": "https://pncp.gov.br/app/editais/24772246000140-1-000151/2026",
+    "published_at": "2026-10-29"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de Credenciamento de Empresa para Prestação de Serviços Medicos Especialistas, conforme previsão contida no edital de chamamento para credenciamento nº 001/2025",
+    "url": "https://transparencia.chupinguaia.ro.gov.br/novo/LEGISLATIVO/compras-licitacoes/licitacao/2026/6535/3?perPage=10&page=1",
+    "published_at": "2026-10-28"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - [LICITANET] - CREDENCIAMENTO DE EMPRESA PARA FORNECIMENTO DE REFEIÇÕES E BEBIDAS SEM ALCOOL DESTINADO A AUTORIDADES E SERVIDORES DESTE MUNICIPIO CONFORME AUTORIZAÇÃO DO SETOR RESPO",
+    "url": "https://licitanet.com.br/sessao/206035",
+    "published_at": "2026-10-27"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CREDENCIAMENTO DE RESTAURANTES PARA FORNECIMENTO DE MARMITEX (ALMOÇO E JANTAR), DEVIDAMENTE PREPARADOS E PRONTOS PARA CONSUMO, DESTINADOS AO ATENDIMENTO DAS NECESSIDADES DA CÂMARA",
+    "url": "https://app2.licitardigital.com.br/pesquisa/117406",
+    "published_at": "2026-10-26"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de empresa especializada em Capacitação de pessoal: Curso de Dispensa e Inexigibilidade de Licitação na Prática",
+    "url": "https://transparencia.agilicloud.com.br/camipiranganorte-mt/licitacoes/licitacao?id=335",
+    "published_at": "2026-10-26"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de serviço de treinamento e aperfeiçoamento de pessoal, consistente na inscrição de servidores no curso presencial\"SRP, CREDENCIAMENTO e E-MARKETPLACE NAS COMPRAS PÚBLI",
+    "url": "https://bnccompras.com/DirectBuy/DirectBuyView?param1=[gkz]a3Anf5YGl4w/ndgK4vC0DH_w8gSZdLH_OPMVu/vHQR3zMPxKgIhrAbjtMBCThIxlNPepyWlScydKomd57Wh72Nrvr4cj8jQYjPyChDribpo=",
+    "published_at": "2026-10-26"
   },
   {
     "source": "TCM-GO",
