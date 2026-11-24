@@ -73,6 +73,12 @@
   },
   {
     "source": "STJ",
+    "title": "STJ - STJ recebe nova denúncia contra desembargadora do TJBA no âmbito da Operação Faroeste",
+    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/24112026-STJ-recebe-nova-denuncia-contra-desembargadora-do-TJBA-no-ambito-da-Operacao-Faroeste.aspx",
+    "published_at": "2026-11-24"
+  },
+  {
+    "source": "STJ",
     "title": "STJ - Entender Direito aborda evolução da jurisprudência do STJ sobre agravo de instrumento",
     "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/18112026-Entender-Direito-aborda-evolucao-da-jurisprudencia-do-STJ-sobre-agravo-de-instrumento.aspx",
     "published_at": "2026-11-18"
@@ -109,27 +115,21 @@
   },
   {
     "source": "STJ",
-    "title": "STJ - Daniela Teixeira, Teodoro Silva Santos e Afrânio Vilela completam três anos no STJ",
-    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/19112026-Daniela-Teixeira--Teodoro-Silva-Santos-e-Afranio-Vilela-completam-tres-anos-no-STJ.aspx",
-    "published_at": "2026-11-22"
+    "title": "STJ - Em artigo, ministro Teodoro Santos analisa competência para julgar homicídios cometidos por organizações criminosas",
+    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/24112026-Ministro-Teodoro-Santos-analisa-competencia-para-julgar-homicidios-cometidos-por-organizacoes-criminosas-em-artigo.aspx",
+    "published_at": "2026-11-24"
   },
   {
     "source": "STJ",
-    "title": "STJ - Ministro Marco Aurélio Bellizze passa a compor a Corte Especial",
-    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/18112026-Ministro-Marco-Aurelio-Bellizze-passa-a-compor-a-Corte-Especial.aspx",
-    "published_at": "2026-11-18"
+    "title": "STJ - Duplicidade de intimações e vale-transporte em dinheiro na base de cálculo do FGTS são destaques do Informativo",
+    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/24112026-Duplicidade-de-intimacoes-e-vale-transporte-em-dinheiro-na-base-de-calculo-do-FGTS-sao-destaques-do-Informativo.aspx",
+    "published_at": "2026-11-24"
   },
   {
     "source": "STJ",
-    "title": "STJ - Desembargadora convocada Fátima Maranhão inicia trabalhos na Sexta Turma",
-    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/17112026-Desembargadora-convocada-Fatima-Maranhao-inicia-trabalhos-na-Sexta-Turma.aspx",
-    "published_at": "2026-11-17"
-  },
-  {
-    "source": "STJ",
-    "title": "STJ - STJ Notícias aborda responsabilização de preso por tráfico de drogas dentro de presídio",
-    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/17112026-STJ-Noticias-aborda-responsabilizacao-de-preso-por-trafico-de-drogas-dentro-de-presidio.aspx",
-    "published_at": "2026-11-17"
+    "title": "STJ - Pesquisa Pronta destaca tese sobre retratação da vítima e absolvição em revisão criminal",
+    "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/24112026-Pesquisa-Pronta-destaca-tese-sobre-retratacao-da-vitima-e-absolvicao-em-revisao-criminal.aspx",
+    "published_at": "2026-11-24"
   },
   {
     "source": "TCE-SP",
@@ -194,6 +194,12 @@
   {
     "source": "TCE-MG",
     "title": "TCE-MG - Acessibilidade",
+    "url": "https://www.tce.mg.gov.br/Informativo-de-Jurisprudencia-n-341.html/Noticia/1111629355",
+    "published_at": "2026-11-24"
+  },
+  {
+    "source": "TCE-MG",
+    "title": "TCE-MG - Acessibilidade",
     "url": "https://www.tce.mg.gov.br/DescomplicaJuris/",
     "published_at": "2026-11-17"
   },
@@ -205,134 +211,44 @@
   },
   {
     "source": "TCE-SC",
-    "title": "TCE-SC - Jurisprudência | O Tribunal da Governança Pública Catarinense",
+    "title": "TCE-SC - Jurisprudência",
     "url": "https://www.tcesc.tc.br/content/jurisprudencia",
-    "published_at": "2026-11-19"
-  },
-  {
-    "source": "TCE-SC",
-    "title": "TCE-SC - Denúncias e representações | O Tribunal da Governança Pública Catarinense",
-    "url": "https://www.tcesc.tc.br/denuncias-representacoes",
-    "published_at": "2026-11-19"
-  },
-  {
-    "source": "TCE-SC",
-    "title": "TCE-SC - Informativos de Jurisprudência | O Tribunal da Governança Pública Catarinense",
-    "url": "https://www.tcesc.tc.br/informativo-de-jurisprud%C3%AAncia",
-    "published_at": "2026-11-19"
-  },
-  {
-    "source": "TCE-SC",
-    "title": "TCE-SC - Informativos de Jurisprudência - Edições anteriores | O Tribunal da Governança Pública Catarinense",
-    "url": "https://www.tcesc.tc.br/informativo-de-jurisprud%C3%AAncia-edicoes-anteriores",
-    "published_at": "2026-11-19"
+    "published_at": "2026-11-24"
   },
   {
     "source": "TCE-SC",
     "title": "TCE-SC - Informativos de Jurisprudência",
-    "url": "https://www.tcesc.tc.br/informativo-de-jurisprudência",
-    "published_at": "2026-11-19"
+    "url": "https://www.tcesc.tc.br/informativo-de-jurisprud%C3%AAncia",
+    "published_at": "2026-11-24"
   },
   {
     "source": "TCE-SC",
-    "title": "TCE-SC - Recolhimento de débitos e de multas | O Tribunal da Governança Pública Catarinense",
-    "url": "https://www.tcesc.tc.br/recolhimentos",
-    "published_at": "2026-11-19"
-  },
-  {
-    "source": "TCE-SC",
-    "title": "TCE-SC - Fornecedores e Inovação | O Tribunal da Governança Pública Catarinense",
-    "url": "https://www.tcesc.tc.br/fornecedores-e-inovacao",
-    "published_at": "2026-11-19"
-  },
-  {
-    "source": "TCE-SC",
-    "title": "TCE-SC - Licitações e Contratos | O Tribunal da Governança Pública Catarinense",
-    "url": "https://www.tcesc.tc.br/content/licitacoes_contratos",
-    "published_at": "2026-11-19"
-  },
-  {
-    "source": "TCE-SC",
-    "title": "TCE-SC - Atendimento Virtual | O Tribunal da Governança Pública Catarinense",
-    "url": "https://www.tcesc.tc.br/atendimento-virtual",
-    "published_at": "2026-11-19"
-  },
-  {
-    "source": "TCE-SC",
-    "title": "TCE-SC - Diário Oficial Eletrônico (DOTC-e) | O Tribunal da Governança Pública Catarinense",
-    "url": "https://www.tcesc.tc.br/content/dotc-e",
-    "published_at": "2026-11-19"
+    "title": "TCE-SC - Jurisprudência selecionada - e-Papyrus",
+    "url": "https://epapyrus.tce.sc.gov.br/",
+    "published_at": "2026-11-24"
   },
   {
     "source": "TCE-PE",
     "title": "TCE-PE - Jurisprudência",
     "url": "https://www.tcepe.tc.br/internet/index.php/inicio-jurisprudencia",
-    "published_at": "2026-11-23"
+    "published_at": "2026-11-24"
   },
   {
     "source": "TCE-PE",
     "title": "TCE-PE - Pesquisa de Jurisprudência",
     "url": "https://sistemas.tce.pe.gov.br/jurisprudencia/PesquisaJurisprudencia!home.action",
-    "published_at": "2026-11-23"
+    "published_at": "2026-11-24"
   },
   {
     "source": "TCE-PE",
     "title": "TCE-PE - Deliberações",
     "url": "https://portal.tcepe.tc.br/jurisprudencia/consulta/deliberacoes",
-    "published_at": "2026-11-23"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - CONTRATAÇÃO DIRETA, POR DISPENSA DE LICITAÇÃO, NOS TERMOS DO ART. 75, INCISO II, DA LEI FEDERAL Nº 14.133/2021, PARA CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA A REALIZAÇÃO DE RECAR",
-    "url": "https://pncp.gov.br/app/editais/82892266000150-1-000036/2026",
-    "published_at": "2026-10-26"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - CONTRATAÇÃO DIRETA, POR DISPENSA DE LICITAÇÃO, NOS TERMOS DO ART. 75, INCISO II, DA LEI FEDERAL Nº 14.133/2021, PARA CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA PLANEJAMENTO, ORGANIZ",
-    "url": "https://pncp.gov.br/app/editais/82892266000150-1-000037/2026",
-    "published_at": "2026-10-26"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - CONTRATAÇÃO DIRETA, POR DISPENSA DE LICITAÇÃO, COM FUNDAMENTO NO ART. 75, INCISO II, DA LEI FEDERAL Nº 14.133/2021, PARA CONTRATAÇÃO DE EMPRESA ESPECIALIZADA NA PRESTAÇÃO DE SERVIÇ",
-    "url": "https://pncp.gov.br/app/editais/82892266000150-1-000038/2026",
-    "published_at": "2026-10-26"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - CONTRATAÇÃO DIRETA, POR DISPENSA DE LICITAÇÃO, NOS TERMOS DO ART. 75, INCISO II, DA LEI FEDERAL Nº 14.133/2021, PARA CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA PRESTAÇÃO DE SERVIÇOS",
-    "url": "https://pncp.gov.br/app/editais/82892266000150-1-000039/2026",
-    "published_at": "2026-10-26"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Adesão à ATA DE REGISTRO DE PREÇOS CONSOLIDADA nº 5/2026, DECORRENTE DO PROCESSO LICITATÓRIO PREGÃO ELETRÔNICO nº 29/2025, REGISTRO DE PREÇO, PREFEITURA MUNICIPAL DE RIO BONITO, ES",
-    "url": "https://pncp.gov.br/app/editais/75352062000161-1-000164/2026",
-    "published_at": "2026-10-26"
+    "published_at": "2026-11-24"
   },
   {
     "source": "PNCP",
     "title": "PNCP - Aquisição de Medicamentos (grupo 09) para o Hospital das Clinicas da UFG da Rede HU-Brasil na modalidade Pregão Eletrônico - Sistema de Registro de Preços.",
     "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=15590405001672026",
-    "published_at": "2026-10-26"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - CONTRATAÇÃO DIRETA, POR DISPENSA DE LICITAÇÃO, DE EMPRESA ESPECIALIZADA PARA AQUISIÇÃO DE TAÇAS, MEDALHAS E TROFÉUS DESTINADOS À PREMIAÇÃO DOS PARTICIPANTES E VENCEDORES DOS CAMPEO",
-    "url": "https://pncp.gov.br/app/editais/82892266000150-1-000040/2026",
-    "published_at": "2026-10-26"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - [Portal de Compras Públicas] - Contratação por dispensa de licitação para a aquisição de 20 (vinte) mesas refeitório conjugadas com 04 (quatro) bancos fixos e 06 (seis) conjuntos d",
-    "url": "https://www.portaldecompraspublicas.com.br/processos/TO/Prefeitura-Municipal-de-Paraiso-do-Tocantins-2465/DE-12-2026-2026-520984",
-    "published_at": "2026-10-26"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - Dispensa de Licitação por Urgência para a contratação de empresa especializada para manutenção corretiva de equipamentos odontológicos para os consultórios odontológicos da Secreta",
-    "url": "https://pncp.gov.br/app/editais/87613022000105-1-000197/2026",
     "published_at": "2026-10-26"
   },
   {
@@ -373,30 +289,6 @@
   },
   {
     "source": "PNCP",
-    "title": "PNCP - Credenciamento de pessoas físicas e juridicas para a prestação de serviços de transporte de passageiros em viagens eventuais, dentro e fora do Município de Itatuba/PB, com disponib",
-    "url": "https://pncp.gov.br/app/editais/08865628000161-1-000058/2026",
-    "published_at": "2026-10-28"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - contratação direta mediante Inexigibilidade de Licitação da Federação de Atletismo de Mato Grosso do Sul – FAMS",
-    "url": "https://pncp.gov.br/app/editais/03342920000186-1-000083/2026",
-    "published_at": "2026-10-26"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - CONTRATAÇÃO POR INEXIGIBILIDADE DE LICITAÇÃO EM NOME DE IRAN SOUZA DE FRANÇA , INSCRITO NO CPF/MF SOB O Nº 235.359.384-49 , PARA A LOCAÇÃO DE IMÓVEL NÃO RESIDENCIAL, SITUADO NA AV.",
-    "url": "http://portaldecompras.recife.pe.gov.br/",
-    "published_at": "2026-10-26"
-  },
-  {
-    "source": "PNCP",
-    "title": "PNCP - CREDENCIAMENTO DE EMPRESA(S)ESPECIALIZADA(S) PARA PROCEDIMENTOS CIRÚRGICOS – CASTRAÇÃO DE ANIMAIS (CANINOS E FELINOS), MACHOS E FÊMEAS DO MUNICÍPIO DE LAJEADO/RS.",
-    "url": "https://pregaobanrisul.com.br/editais/0005_2026/358375",
-    "published_at": "2026-10-26"
-  },
-  {
-    "source": "PNCP",
     "title": "PNCP - O objeto da presente licitação é contratação de empresa para construção de Praça no Bairro Jurema e Ponto de Taxi, no Município de Tanhaçu/BA., conforme projetos, memoriais descrit",
     "url": "https://bnccompras.com/Process/ProcessView?param1=[gkz]a0JUoV_BZFblBKcTcMhHOVYXXmpZUp9maGI3EWzRJ0lsNvU9gbqg7fUTneJq2ZeSZP7Vm8VR_FOAR3HfnY_Q84PTjCs0Qfzt//L_kr3UbZA=",
     "published_at": "2026-10-26"
@@ -427,38 +319,110 @@
   },
   {
     "source": "PNCP",
-    "title": "PNCP - CREDENCIAMENTO PARA A PRESTAÇÃO DE SERVIÇOS MÉDICOS ESPECIALIZADOS, EM REGIME DE PLANTÃO, NAS UNIDADES DE SAÚDE DO MUNICÍPIO DE LUCAS DO RIO VERDE/MT.",
-    "url": "https://pncp.gov.br/app/editais/24772246000140-1-000151/2026",
-    "published_at": "2026-10-29"
+    "title": "PNCP - [LICITANET] - Registro de preços para futura e eventual aquisição de medicamentos com a finalidade de suprir as demandas do Município de Brotas de Macaúbas/Bahia",
+    "url": "https://licitanet.com.br/sessao/205860",
+    "published_at": "2026-10-26"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - Contratação de Credenciamento de Empresa para Prestação de Serviços Medicos Especialistas, conforme previsão contida no edital de chamamento para credenciamento nº 001/2025",
-    "url": "https://transparencia.chupinguaia.ro.gov.br/novo/LEGISLATIVO/compras-licitacoes/licitacao/2026/6535/3?perPage=10&page=1",
-    "published_at": "2026-10-28"
+    "title": "PNCP - [Portal de Compras Públicas] - Constitui objeto da presente licitação o Registro de Preços, pelo período de 12 (doze) meses, para fornecimento futuro, eventual e parcelado de Medic",
+    "url": "https://www.portaldecompraspublicas.com.br/processos/RS/Prefeitura-Municipal-de-Quarai-40/PE-065-2026-2026-521004",
+    "published_at": "2026-10-26"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - [LICITANET] - CREDENCIAMENTO DE EMPRESA PARA FORNECIMENTO DE REFEIÇÕES E BEBIDAS SEM ALCOOL DESTINADO A AUTORIDADES E SERVIDORES DESTE MUNICIPIO CONFORME AUTORIZAÇÃO DO SETOR RESPO",
-    "url": "https://licitanet.com.br/sessao/206035",
+    "title": "PNCP - [LICITANET] - contratação de empresa para a execução de serviço de urbanização da orla do Lago da Prainha 2ª etapa no município de Zé Doca/Ma - CR 989710/2025/MTUR/CAIXA - CONTRATO",
+    "url": "https://licitanet.com.br/sessao/205926",
+    "published_at": "2026-10-26"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CONTRATAÇÃO DA EMPRESA PARA EXECUÇÃO DE CAPINA, VARRIÇÃO, CAIAÇÃO E COLETA E TRANSPORTE DE LIXO DOMICILIAR NA ZONA URBANA NO MUNÍCIPIO DE BOCAINA - PI, CONFORME EDITAL E PLANILHA O",
+    "url": "https://bnccompras.com/Process/ProcessView?param1=[gkz]pbDbqfa2qIfHTQlhOzTJnLqoiHmaacRkHjliX5VJZAC0d5TP1_gw2acgpY9UcQT5iVqliM2W7ToJ2uaFyx6KFvsRgz0KYM2rHwx8ZEarQ9A=",
+    "published_at": "2026-10-26"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de empresa especializada para a execução de serviços de recuperação e manutenção de estrada vicinal no Município de São Nicolau/RS, compreendendo: 03 pontos de embueira",
+    "url": "https://pncp.gov.br/app/editais/87612966000168-1-000019/2026",
     "published_at": "2026-10-27"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - CREDENCIAMENTO DE RESTAURANTES PARA FORNECIMENTO DE MARMITEX (ALMOÇO E JANTAR), DEVIDAMENTE PREPARADOS E PRONTOS PARA CONSUMO, DESTINADOS AO ATENDIMENTO DAS NECESSIDADES DA CÂMARA",
-    "url": "https://app2.licitardigital.com.br/pesquisa/117406",
+    "title": "PNCP - Contratação de empresa especializada para implantação de melhorias sanitárias domiciliares em áreas rurais do Municipio de Cajati/SP (Bairro Vila Paraiso – Cajati/SP), atraves do C",
+    "url": "https://pncp.gov.br/app/editais/64037815000128-1-000351/2026",
     "published_at": "2026-10-26"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - Contratação de empresa especializada em Capacitação de pessoal: Curso de Dispensa e Inexigibilidade de Licitação na Prática",
-    "url": "https://transparencia.agilicloud.com.br/camipiranganorte-mt/licitacoes/licitacao?id=335",
+    "title": "PNCP - [Portal de Compras Públicas] - CONTRATAÇÃO DE EMPRESA PARA EXECUÇÃO DA CONSTRUÇÃO DE SALAS DE AULA NA ESCOLA MUNICIPAL JOAQUIM BRAZ RIBEIRO, LOCALIZADA NO MUNICÍPIO DE VARGEM GRAND",
+    "url": "https://www.portaldecompraspublicas.com.br/processos/MG/Prefeitura-Municipal-de-Vargem-Grande-do-Rio-Pardo-4253/CPMP-005-2026-2026-520941",
     "published_at": "2026-10-26"
   },
   {
     "source": "PNCP",
-    "title": "PNCP - Contratação de serviço de treinamento e aperfeiçoamento de pessoal, consistente na inscrição de servidores no curso presencial\"SRP, CREDENCIAMENTO e E-MARKETPLACE NAS COMPRAS PÚBLI",
-    "url": "https://bnccompras.com/DirectBuy/DirectBuyView?param1=[gkz]a3Anf5YGl4w/ndgK4vC0DH_w8gSZdLH_OPMVu/vHQR3zMPxKgIhrAbjtMBCThIxlNPepyWlScydKomd57Wh72Nrvr4cj8jQYjPyChDribpo=",
+    "title": "PNCP - [LICITANET] - Contratação de empresa especializada para execução de obra de drenagem pluvial no Loteamento Mundo Novo, neste Município de Piumhi/MG.",
+    "url": "https://licitanet.com.br/sessao/205936",
+    "published_at": "2026-10-26"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de empresa especializada em Construção Civil para execução de PAVIMENTAÇÃO ASFALTICA EM VIA URBANA, COM DRENAGEM E CALÇADAS, no município de JI-PARANÁ/RO, com fornecime",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=98000503001832026",
+    "published_at": "2026-10-26"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de empresa especializada para execução das obras e serviços de engenharia destinados à construção do Centro Administrativo do Município de Juripiranga/PB, no qual resul",
+    "url": "https://bnccompras.com/Process/ProcessView?param1=[gkz]TZv/2h5N2jes2OPw9sFeZXdIMjX6Ho0kvjwSmwmFgZlVbZEriDpnL8YjG3reCQxoyObcxp7zbckyu_c5JfcKR3XK8hB46G5SbUEh/Ap0Ekw=",
+    "published_at": "2026-10-26"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de empresa especializada para execução de obra de engenharia destinada ao recapeamento e à recuperação da pavimentação asfáltica de vias urbanas do Município de Dois Vi",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=98754103005832026",
+    "published_at": "2026-10-26"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA EXECUÇÃO DE REFORMA DA QUADRA POLIESPORTIVA DO BAIRRO NOSSA SENHORA APARECIDA NO MUNICÍPIO DE CAPITÓLIO – MG, CONFORME PROJETOS, MEMORIAL",
+    "url": "https://pncp.gov.br/app/editais/16726028000140-1-000094/2026",
+    "published_at": "2026-10-26"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - REFORMA DAS INSTALAÇÕES ELÉTRICAS E DE SEGURANÇA CONTRA INCÊNDIO E PÂNICO DO INSTITUTO PENAL, NO MUNICÍPIO DE CAMPO GRANDE/MS.",
+    "url": "https://www.ekronos.ms.gov.br/licitacao_agesul/publico/licitacao_publica.aspx?processo=312560552025&lic=7146",
+    "published_at": "2026-10-26"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de empresa especializada para construção de creche na av: Lucas Nogueira Garcez, visando atender às demandas da Secretaria Municipal de Educação do Município de Poá.",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=45333003000392026",
+    "published_at": "2026-10-26"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - CONTRATAÇÃO DE EMPRESA PARA PAVIMENTAÇÃO POLIÉDRICA EM ESTRADAS VICINAIS, NA ZONA RURAL DO MUNICÍPIO DE COMERCINHO/MG TRECHO 12 - LADEIRA DO ESPIGÃO III TRECHO 15 - LADEIRA DO CAB",
+    "url": "https://app2.licitardigital.com.br/pesquisa/117283",
+    "published_at": "2026-10-26"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - [LICITANET] - Registro de preços para futura e eventual contratação de serviços comuns de engenharia padronizados para entes consorciados ao CICANASTRA.",
+    "url": "https://licitanet.com.br/sessao/203459",
+    "published_at": "2026-10-26"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - Contratação de empresa especializada para execução da obra de reforma do Auditório da Casa da Cultura do Município de Pinhal de São Bento–PR, com fornecimento de materiais e mão de",
+    "url": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=98549503000272026",
+    "published_at": "2026-10-26"
+  },
+  {
+    "source": "PNCP",
+    "title": "PNCP - A presente licitação tem por objetivo a contratação de empresa do ramo pertinente para o “Fornecimento de mão de obra na execução de pavimentação com blocos retangulares de concret",
+    "url": "https://pncp.gov.br/app/editais/17243084000197-1-000155/2026",
     "published_at": "2026-10-26"
   },
   {
